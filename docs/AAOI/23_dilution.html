@@ -1,0 +1,743 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/style.css"><title>增发/稀释瀑布 · AAOI</title>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+</script></head><body><main><p class="nav"><a href="index.html">🏠 AAOI 首页</a> · <a href="report.html">📊 整合报告</a> · <a href="CHANGELOG.html">📜 更新日志</a></p><p class="meta">数据截止：FY2025 10-K (2026-02-26) + Q1-2026 10-Q (2026-05-07)　·　最后更新：2026-05-30　·　版本：v2.0　·　来源：SEC EDGAR</p><h1 id="aaoi--capital-raising--dilution-waterfall-2023--q1-2026">AAOI —
+Capital-Raising &amp; Dilution Waterfall (2023 – Q1 2026)</h1>
+<p><strong>Applied Optoelectronics, Inc.</strong> | CIK 0001158114 |
+Nasdaq: AAOI Sources: SEC EDGAR 424B5 prospectus supplements, 8-Ks
+(Items 1.01/2.03), FY2023/FY2024/FY2025 10-Ks, Q1-2026 10-Q, S-8 fee
+tables. Legend: ★ = filing fact (cited) · ◆ = computed by analyst.</p>
+<hr />
+<h2 id="0-key-takeaway">0. Key takeaway</h2>
+<p>AAOI ran an aggressive, near-continuous equity-issuance machine from
+2023–Q1 2026, primarily through <strong>ATM (at-the-market)
+programs</strong> sold by Raymond James (later joined by Needham),
+supplemented by one registered-direct deal and a convertible-note chain.
+Shares outstanding nearly <strong>tripled</strong> in two years (28.6M
+YE2022 → 79.0M Q1-2026). The single largest dilution wave was 2025, when
+the company sold **23.7M ATM shares for ~<span
+class="math inline">519<em>M</em><em>n</em><em>e</em><em>t</em> * *<em>w</em><em>h</em><em>i</em><em>l</em><em>e</em><em>t</em><em>h</em><em>e</em><em>s</em><em>t</em><em>o</em><em>c</em><em>k</em><em>r</em><em>e</em> − <em>r</em><em>a</em><em>t</em><em>e</em><em>d</em><em>f</em><em>r</em><em>o</em><em>m</em> </span>13
+to ~$30 on the AI/Amazon datacenter thesis.</p>
+<hr />
+<h2 id="1-chronological-capital-raising-table">1. Chronological
+capital-raising table</h2>
+<table>
+<thead>
+<tr>
+<th>Date (★ filing)</th>
+<th>Instrument</th>
+<th>Program / capacity</th>
+<th>Shares issued</th>
+<th>Wtd. avg price</th>
+<th>Gross proceeds</th>
+<th>Net proceeds</th>
+<th>Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023-03-24 ★424B5</td>
+<td>ATM Equity Distribution Agmt</td>
+<td><span class="math inline">35<em>M</em>(→</span>70M on
+2023-09-12)</td>
+<td>— (see below)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Raymond James</td>
+</tr>
+<tr>
+<td>2023 (Feb–Nov) ★10-K</td>
+<td>ATM takedowns (2023 program)</td>
+<td>under <span class="math inline">35<em>M</em>→</span>70M ATM</td>
+<td><strong>7,808,000</strong> ◆</td>
+<td>~$8.84 ◆</td>
+<td>~$70.5M ◆</td>
+<td><strong>$69.06M</strong></td>
+<td>Raymond James</td>
+</tr>
+<tr>
+<td>2023-12-05 ★8-K</td>
+<td>2026 Conv. Notes (5.25%)</td>
+<td>$80.2M principal</td>
+<td>(note, not equity)</td>
+<td>conv. $15.24</td>
+<td>$80.2M</td>
+<td>$76.2M</td>
+<td>(private exchange)</td>
+</tr>
+<tr>
+<td>2024-03-13 ★424B5/8-K</td>
+<td>ATM Equity Distribution Agmt</td>
+<td><span class="math inline">25<em>M</em>(→</span>60M on 2024-08-06;
+terminated 2024-11-06)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Raymond James</td>
+</tr>
+<tr>
+<td>2024-11-07 ★424B5/8-K</td>
+<td>2nd ATM Equity Distribution Agmt</td>
+<td>$55M</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Raymond James</td>
+</tr>
+<tr>
+<td>2024 (Mar–Nov) ★10-K</td>
+<td>ATM takedowns (both 2024 programs)</td>
+<td>under $60M + $55M ATMs</td>
+<td><strong>7,442,000</strong> ◆</td>
+<td>~$15.13 ◆</td>
+<td>~$114.9M ◆</td>
+<td><strong>$112.6M</strong></td>
+<td>Raymond James</td>
+</tr>
+<tr>
+<td>2024-12-23 ★10-K/8-K</td>
+<td>Registered Direct Offering</td>
+<td>off S-3ASR (333-283905)</td>
+<td><strong>1,036,458</strong></td>
+<td>$33.97</td>
+<td>$35.2M ◆</td>
+<td><strong>$33.7M</strong></td>
+<td>Raymond James (placement)</td>
+</tr>
+<tr>
+<td>2024-12-23 ★8-K</td>
+<td>2030 Conv. Notes (2.75%) + exchange</td>
+<td>$125M principal</td>
+<td>+1,487,874 sh (exchange)</td>
+<td>conv. $43.31</td>
+<td>$125M</td>
+<td>~$30M new cash ◆</td>
+<td>(private exchange)</td>
+</tr>
+<tr>
+<td>2025 (Mar–Dec) ★10-K</td>
+<td>ATM takedowns (4 programs)</td>
+<td><span class="math inline">100<em>M</em>+</span>100M+<span
+class="math inline">150<em>M</em>+</span>180M ATMs</td>
+<td><strong>23,749,971</strong></td>
+<td>~$24.16 ◆</td>
+<td>~$530M ◆</td>
+<td><strong>$519.4M</strong></td>
+<td>Raymond James + Needham</td>
+</tr>
+<tr>
+<td>2025-07-30 ★10-K</td>
+<td>2026 Notes final exchange</td>
+<td>—</td>
+<td>+239,404 sh</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>(note settlement)</td>
+</tr>
+<tr>
+<td>2026-02-26 ★424B5</td>
+<td>ATM / offering (post-FY)</td>
+<td>off S-3ASR</td>
+<td>(Q1-26 issuance)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Raymond James + Needham</td>
+</tr>
+<tr>
+<td>2026-03-12 ★424B5</td>
+<td>ATM / offering (post-FY)</td>
+<td>off S-3ASR</td>
+<td>(Q1-26 issuance)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Raymond James + Needham</td>
+</tr>
+<tr>
+<td>2026-05-14 ★424B5</td>
+<td>offering (post-Q1)</td>
+<td>off S-3ASR</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ATM detail — 2023 program</strong> (★FY2023 10-K, <span
+class="math inline">35<em>M</em>→</span>70M cap, Raymond James):</p>
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Avg price</th>
+<th>Shares</th>
+<th>Net proceeds ($000)</th>
+<th>Agent comp ($000)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feb-23</td>
+<td>$2.811</td>
+<td>158,000</td>
+<td>436</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Jun-23</td>
+<td>$4.036</td>
+<td>2,497,000</td>
+<td>9,879</td>
+<td>202</td>
+</tr>
+<tr>
+<td>Aug-23</td>
+<td>$11.645</td>
+<td>1,150,000</td>
+<td>13,124</td>
+<td>268</td>
+</tr>
+<tr>
+<td>Sep-23</td>
+<td>$10.184</td>
+<td>892,000</td>
+<td>8,901</td>
+<td>182</td>
+</tr>
+<tr>
+<td>Oct-23</td>
+<td>$11.003</td>
+<td>1,043,000</td>
+<td>11,244</td>
+<td>229</td>
+</tr>
+<tr>
+<td>Nov-23</td>
+<td>$12.572</td>
+<td>2,068,000</td>
+<td>25,473</td>
+<td>520</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>7,808,000</strong></td>
+<td><strong>$69,057</strong></td>
+<td><strong>$1,410</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>ATM detail — 2024 programs</strong> (★FY2024 10-K; <span
+class="math inline">25<em>M</em>→</span>60M "First ATM" + $55M "Second
+ATM", Raymond James):</p>
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Avg price</th>
+<th>Shares</th>
+<th>Net proceeds ($000)</th>
+<th>Agent comp ($000)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mar-24</td>
+<td>$14.81</td>
+<td>270,000</td>
+<td>3,920</td>
+<td>80</td>
+</tr>
+<tr>
+<td>May-24</td>
+<td>$12.10</td>
+<td>719,000</td>
+<td>8,519</td>
+<td>174</td>
+</tr>
+<tr>
+<td>Jun-24</td>
+<td>$10.30</td>
+<td>760,000</td>
+<td>7,669</td>
+<td>157</td>
+</tr>
+<tr>
+<td>Aug-24</td>
+<td>$9.07</td>
+<td>2,923,000</td>
+<td>25,976</td>
+<td>530</td>
+</tr>
+<tr>
+<td>Sep-24</td>
+<td>$12.80</td>
+<td>1,006,000</td>
+<td>12,618</td>
+<td>257</td>
+</tr>
+<tr>
+<td>Nov-24</td>
+<td>$31.17</td>
+<td>1,764,000</td>
+<td>53,900</td>
+<td>1,100</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>7,442,000</strong></td>
+<td><strong>$112,602</strong></td>
+<td><strong>$2,298</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>ATM detail — 2025 programs</strong> (★FY2025 10-K;
+"First"=<span class="math inline">$100M Raymond James 2025-02-28,
+"Second"=$</span>100M + Needham 2025-05-28, "Third"=<span
+class="math inline">$150M 2025-08-27, "Fourth"=$</span>180M
+2025-11-07):</p>
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Avg price</th>
+<th>Shares</th>
+<th>Net proceeds ($000)</th>
+<th>Agent comp ($000)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mar-25</td>
+<td>$20.71</td>
+<td>3,535,650</td>
+<td>71,755</td>
+<td>1,464</td>
+</tr>
+<tr>
+<td>Apr-25</td>
+<td>$12.69</td>
+<td>2,110,057</td>
+<td>26,245</td>
+<td>536</td>
+</tr>
+<tr>
+<td>Jun-25</td>
+<td>$17.46</td>
+<td>5,725,948</td>
+<td>98,000</td>
+<td>2,000</td>
+</tr>
+<tr>
+<td>Sep-25</td>
+<td>$26.41</td>
+<td>5,680,235</td>
+<td>147,000</td>
+<td>3,000</td>
+</tr>
+<tr>
+<td>Nov-25</td>
+<td>$23.15</td>
+<td>2,778,564</td>
+<td>63,050</td>
+<td>1,287</td>
+</tr>
+<tr>
+<td>Dec-25</td>
+<td>$29.51</td>
+<td>3,919,517</td>
+<td>113,350</td>
+<td>2,313</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>23,749,971</strong></td>
+<td><strong>$519,400</strong></td>
+<td><strong>$10,600</strong></td>
+</tr>
+</tbody>
+</table>
+<p>★ Cash-flow confirmation (FY2025 10-K, financing activities): "<span
+class="math inline">$518.9 million of net proceeds from our ATM
+offerings" in 2025; "$</span>113 million ... ATM offerings, and around
+<span class="math inline">$30 million from the 2030 Notes" in 2024;
+"$</span>69.0 million ... ATM offering, <span
+class="math inline">76.1<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em><em>f</em><em>r</em><em>o</em><em>m</em><em>t</em><em>h</em><em>e</em>2026<em>N</em><em>o</em><em>t</em><em>e</em><em>s</em>, <em>o</em><em>f</em><em>f</em><em>s</em><em>e</em><em>t</em><em>b</em><em>y</em><em>r</em><em>e</em><em>p</em><em>a</em><em>y</em><em>m</em><em>e</em><em>n</em><em>t</em><em>o</em><em>f</em><em>t</em><em>h</em><em>e</em>2024<em>N</em><em>o</em><em>t</em><em>e</em><em>s</em>(</span>80.2M)"
+in 2023.</p>
+<hr />
+<h2 id="2-atm-program-ladder-escalating-capacity">2. ATM-program ladder
+(escalating capacity)</h2>
+<table>
+<thead>
+<tr>
+<th>Agreement date ★</th>
+<th>Program label</th>
+<th>Capacity</th>
+<th>Agent(s)</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023-03-24</td>
+<td>2023 ATM (orig.)</td>
+<td>$35M</td>
+<td>Raymond James</td>
+<td>Amended up 2023-09-12</td>
+</tr>
+<tr>
+<td>2023-09-12</td>
+<td>2023 ATM (amended)</td>
+<td>$70M</td>
+<td>Raymond James</td>
+<td>Completed Nov 2023; $69.06M net / 7.81M sh</td>
+</tr>
+<tr>
+<td>2024-03-13</td>
+<td>"First ATM" 2024</td>
+<td>$25M</td>
+<td>Raymond James</td>
+<td>Amended up 2024-08-06; terminated 2024-11-06; $58.7M net</td>
+</tr>
+<tr>
+<td>2024-08-06</td>
+<td>First ATM Amendment No.1</td>
+<td>$60M</td>
+<td>Raymond James</td>
+<td>(cap raise)</td>
+</tr>
+<tr>
+<td>2024-11-07</td>
+<td>"Second ATM" 2024</td>
+<td>$55M</td>
+<td>Raymond James</td>
+<td>Completed 2024-11-22; $53.9M net / 1.8M sh</td>
+</tr>
+<tr>
+<td>2025-02-28</td>
+<td>"First ATM" 2025</td>
+<td>$100M</td>
+<td>Raymond James</td>
+<td>Completed 2025-04-08; $26M net / 2.1M sh</td>
+</tr>
+<tr>
+<td>2025-05-28</td>
+<td>"Second ATM" 2025</td>
+<td>$100M</td>
+<td>Raymond James + Needham</td>
+<td>Completed 2025-06-18; $98M net / 5.7M sh</td>
+</tr>
+<tr>
+<td>2025-08-27</td>
+<td>"Third ATM" 2025</td>
+<td>$150M</td>
+<td>Raymond James + Needham</td>
+<td>Completed 2025-09-22; $147M net / 5.7M sh</td>
+</tr>
+<tr>
+<td>2025-11-07</td>
+<td>"Fourth ATM" 2025</td>
+<td>$180M</td>
+<td>Raymond James + Needham</td>
+<td>Completed by 2025-12-23; $176M net / 6.7M sh</td>
+</tr>
+</tbody>
+</table>
+<p>◆ Capacity trajectory: $35M (Mar-23) → $70M → $25M → $60M → $55M →
+$100M → $100M → $150M → <span class="math inline">$180M. The task's
+"$</span>600M" figure ◆ corresponds to the cumulative authorized ATM
+capacity across the 2025 programs ($100+100+150+180 = $530M) plus prior,
+not a single agreement; the largest <em>single</em> agreement was the
+$180M Fourth ATM. All 2025 ATMs sit under the S-3ASR shelf (File
+333-283905, effective 2024-12-18 ★).</p>
+<hr />
+<h2 id="3-convertible-notes-chain">3. Convertible-notes chain</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>2024 Notes ★</th>
+<th>2026 Notes ★</th>
+<th>2030 Notes ★</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Issued</td>
+<td>2019-03-05</td>
+<td>2023-12-05</td>
+<td>2024-12-23</td>
+</tr>
+<tr>
+<td>Principal</td>
+<td>$80.5M</td>
+<td>~$80.2M</td>
+<td>$125.0M</td>
+</tr>
+<tr>
+<td>Coupon</td>
+<td>5.000%</td>
+<td>5.250%</td>
+<td>2.750%</td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td>2024-03-15</td>
+<td>2026-12-15</td>
+<td>2030-01-15</td>
+</tr>
+<tr>
+<td>Conversion rate</td>
+<td>n/a</td>
+<td>65.6276 / $1,000</td>
+<td>23.0884 / $1,000</td>
+</tr>
+<tr>
+<td>Conversion price</td>
+<td>n/a</td>
+<td><strong>$15.24</strong></td>
+<td><strong>$43.31</strong> (27.5% premium to $33.97 ref)</td>
+</tr>
+<tr>
+<td>Interest pay dates</td>
+<td>—</td>
+<td>Jun 15 / Dec 15</td>
+<td>Jan 15 / Jul 15</td>
+</tr>
+<tr>
+<td>Status now</td>
+<td>Retired</td>
+<td><strong>Fully retired</strong></td>
+<td><strong>$125M outstanding</strong></td>
+</tr>
+<tr>
+<td>If-converted shares</td>
+<td>—</td>
+<td>0 (retired)</td>
+<td>◆ <strong>~2.886M</strong> ($125M / $43.31)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Chain mechanics (★FY2023–FY2025 10-Ks):</strong></p>
+<ul>
+<li><strong>2024 → 2026:</strong> On 2023-12-05 AAOI issued $80.2M of
+2026 Notes and used the proceeds (plus <span
+class="math inline">81.1<em>M</em><em>c</em><em>a</em><em>s</em><em>h</em><em>i</em><em>n</em><em>c</em><em>l</em>.<em>i</em><em>n</em><em>t</em><em>e</em><em>r</em><em>e</em><em>s</em><em>t</em> + 466, 368<em>s</em><em>h</em><em>a</em><em>r</em><em>e</em><em>s</em>)<em>t</em><em>o</em><em>e</em><em>x</em><em>c</em><em>h</em><em>a</em><em>n</em><em>g</em><em>e</em>/<em>r</em><em>e</em><em>p</em><em>u</em><em>r</em><em>c</em><em>h</em><em>a</em><em>s</em><em>e</em> </span>80.2M
+of the 2024 Notes. Remaining $0.29M of 2024 Notes paid off
+2024-03-15.</li>
+<li><strong>2026 → 2030:</strong> On 2024-12-23 AAOI issued <span
+class="math inline">125.0<em>M</em><em>o</em><em>f</em>2030<em>N</em><em>o</em><em>t</em><em>e</em><em>s</em><em>a</em><em>n</em><em>d</em><em>e</em><em>x</em><em>c</em><em>h</em><em>a</em><em>n</em><em>g</em><em>e</em><em>d</em> </span>76.6M
+principal of 2026 Notes for the 2030 Notes + <strong>1,487,874
+shares</strong> + ~<span
+class="math inline">0.9<em>M</em><em>c</em><em>a</em><em>s</em><em>h</em>.<em>R</em><em>e</em><em>c</em><em>o</em><em>r</em><em>d</em><em>e</em><em>d</em><em>a</em> * *</span>112.0M
+debt-extinguishment loss**. Left $3.5M of 2026 Notes.</li>
+<li><strong>2026 final cleanup:</strong> On 2025-07-30 AAOI retired the
+final <span
+class="math inline">3.5<em>M</em><em>o</em><em>f</em>2026<em>N</em><em>o</em><em>t</em><em>e</em><em>s</em><em>f</em><em>o</em><em>r</em> * *239, 404<em>s</em><em>h</em><em>a</em><em>r</em><em>e</em><em>s</em> * * + <em>c</em><em>a</em><em>s</em><em>h</em><em>i</em><em>n</em><em>t</em><em>e</em><em>r</em><em>e</em><em>s</em><em>t</em>.2026<em>N</em><em>o</em><em>t</em><em>e</em><em>s</em><em>b</em><em>a</em><em>l</em><em>a</em><em>n</em><em>c</em><em>e</em><em>n</em><em>o</em><em>w</em> * *</span>0**.</li>
+<li><strong>2030 Notes carrying value</strong> (★FY2025 10-K): principal
+$125.0M + $8.376M issuance premium − <span
+class="math inline">3.547<em>M</em><em>i</em><em>s</em><em>s</em><em>u</em><em>a</em><em>n</em><em>c</em><em>e</em><em>c</em><em>o</em><em>s</em><em>t</em><em>s</em> = **</span>129.829M**
+net.</li>
+<li><strong>Conversion settlement:</strong> cash, shares, or combination
+at company election. Convertible only on conditions before 2029-10-15;
+freely thereafter. Company-redeemable from 2027-01-15 if stock &gt; 130%
+of conversion price.</li>
+<li>▽ No capped-call / bond-hedge disclosed in the 10-Ks (none filed
+alongside the 2026 or 2030 Notes); dilution is therefore unhedged.</li>
+</ul>
+<hr />
+<h2 id="4-amazon-customer-warrant--fy2025-10-k-issued-2025-03-13">4.
+Amazon Customer Warrant ★ (FY2025 10-K; issued 2025-03-13)</h2>
+<ul>
+<li>Holder: a wholly-owned subsidiary of <strong>Amazon.com,
+Inc.</strong></li>
+<li>Max shares: <strong>7,945,399</strong> common shares ("Warrant
+Shares")</li>
+<li>Exercise price: <strong>$23.6956</strong> per share | Term:
+<strong>10 years</strong></li>
+<li><strong>Vesting:</strong> 1,324,233 shares exercisable at issuance;
+remaining <strong>6,621,166</strong> vest over 10 years tied to Amazon
+(+ affiliates) purchasing <strong>$4 billion</strong> of AAOI
+product.</li>
+<li>Accounting: equity-classified share-based <strong>consideration to a
+customer</strong>; grant-date fair value <strong>$12.64/share</strong>
+(Black-Scholes; 80% vol, 10-yr term, 4.23% rf, $15.87 share ref).
+Recognized as a reduction of Amazon revenue as goods/services transfer.
+$33.1M revenue tied to warrant arrangements recognized in FY2025; $1.0M
+current + $15.0M noncurrent asset booked for the vested tranche.</li>
+<li>◆ <strong>Potential dilution:</strong> up to 7,945,399 shares =
+<strong>~10.1% of Q1-2026 shares (78.97M)</strong>; near-term (vested)
+tranche 1,324,233 ≈ 1.7%.</li>
+</ul>
+<hr />
+<h2 id="5-share-count-progression--reconciliation">5. Share-count
+progression &amp; reconciliation</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Shares o/s (★ balance sheet)</th>
+<th>Δ vs prior</th>
+<th>Primary drivers ◆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YE 2022</td>
+<td><strong>28,622,000</strong> ★</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>YE 2023</td>
+<td><strong>38,148,000</strong> ★</td>
+<td>+9.53M</td>
+<td>+7.81M ATM (2023 program); +0.47M 2024-Note exchange shares; ~+1.25M
+options/RSU/ESPP</td>
+</tr>
+<tr>
+<td>YE 2024</td>
+<td><strong>49,393,000</strong> ★</td>
+<td>+11.25M</td>
+<td>+7.44M ATM (2024 programs); +1.04M registered direct; +1.49M
+2030-Note exchange; ~+1.28M options/RSU</td>
+</tr>
+<tr>
+<td>YE 2025</td>
+<td><strong>74,998,000</strong> ★</td>
+<td>+25.61M</td>
+<td>+23.75M ATM (2025 programs); +0.24M final 2026-Note exchange; +1.32M
+Amazon warrant vested tranche; ~+0.30M options/RSU</td>
+</tr>
+<tr>
+<td>Q1 2026</td>
+<td><strong>78,971,000</strong> ★</td>
+<td>+3.97M</td>
+<td>Q1-2026 ATM/offering takedowns (424B5 dated 2026-02-26 &amp;
+2026-03-12) + equity-plan issuance</td>
+</tr>
+</tbody>
+</table>
+<p>◆ Two-year+ dilution: 28.6M → 79.0M = <strong>+50.3M shares,
++176%</strong> (≈2.76×).</p>
+<h3 id="fully-diluted-pro-forma-as-of-q1-2026">Fully-diluted pro-forma
+(as of Q1-2026)</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Shares (M) ◆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic shares o/s (Q1-2026) ★</td>
+<td>78.97</td>
+</tr>
+<tr>
+<td>+ 2030 Notes if-converted ($125M / $43.31)</td>
+<td>+2.89</td>
+</tr>
+<tr>
+<td>+ Amazon Customer Warrant (full 7,945,399)</td>
+<td>+7.95</td>
+</tr>
+<tr>
+<td>+ RSUs outstanding (★FY2025 antidilutive table, 2,335K)</td>
+<td>+2.34</td>
+</tr>
+<tr>
+<td><strong>Fully-diluted pro-forma</strong></td>
+<td><strong>≈ 92.1</strong></td>
+</tr>
+</tbody>
+</table>
+<p>◆ Total potential overhang above basic Q1-2026 count ≈ <strong>13.2M
+shares (~16.7% of basic)</strong>, of which the Amazon warrant is the
+largest single piece (7.95M / ~60% of the overhang). Note: FY2025
+antidilutive table ★ lists 5,361K total antidilutive shares (RSUs 2,335
++ 2026 Notes 140 + 2030 Notes 2,886) — the Amazon warrant is reported
+separately as customer consideration, not in the EPS antidilutive
+table.</p>
+<hr />
+<h2 id="6-s-8-employee-equity-registrations--fee-tables">6. S-8
+employee-equity registrations ★ (fee tables)</h2>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Plan</th>
+<th>Shares registered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023-06-26</td>
+<td>2021 Equity Incentive Plan</td>
+<td><strong>2,800,000</strong></td>
+</tr>
+<tr>
+<td>2023-08-03</td>
+<td>Employee Stock Purchase Plan (ESPP)</td>
+<td><strong>800,000</strong></td>
+</tr>
+<tr>
+<td>2025-04-10</td>
+<td>2021 Equity Incentive Plan</td>
+<td><strong>2,000,000</strong></td>
+</tr>
+<tr>
+<td><strong>Total 2023–2026</strong></td>
+<td></td>
+<td><strong>5,600,000</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-narrative-summary">7. Narrative summary</h2>
+<p><strong>Total capital raised 2023–Q1 2026 (equity + new convert
+cash):</strong></p>
+<ul>
+<li>ATM equity net proceeds: $69.06M (2023) + $112.60M (2024) + <span
+class="math inline">519.40<em>M</em>(2025) = ** </span>701.1M** ◆</li>
+<li>Registered direct (2024-12): <strong>$33.7M</strong> net ★</li>
+<li>New cash from converts: ~<span
+class="math inline">76.2<em>M</em>(2026<em>N</em><em>o</em><em>t</em><em>e</em><em>s</em>, 2023)+ </span>30M
+new cash (2030 Notes, 2024) = **~$106M** ◆ (the rest of the convert
+issuances were refinancing exchanges, not new cash)</li>
+<li><strong>Grand total ≈ <span
+class="math inline">840<em>M</em> * *◆<em>o</em><em>f</em><em>w</em><em>h</em><em>i</em><em>c</em><em>h</em> * * </span>734M
+was straight common-equity dilution</strong> and ~$106M was net new
+convert cash.</li>
+</ul>
+<p><strong>Average issuance price vs. current:</strong> Blended ATM
+realized price ◆ ≈ $8.84 (2023) → $15.13 (2024) → $24.16 (2025); the
+registered direct cleared $33.97 and the Dec-25 ATM tranche hit <span
+class="math inline">29.51.<em>T</em><em>h</em><em>e</em><em>c</em><em>a</em><em>p</em><em>i</em><em>t</em><em>a</em><em>l</em> − <em>r</em><em>a</em><em>i</em><em>s</em><em>i</em><em>n</em><em>g</em><em>f</em><em>o</em><em>l</em><em>l</em><em>o</em><em>w</em><em>e</em><em>d</em><em>t</em><em>h</em><em>e</em><em>s</em><em>t</em><em>o</em><em>c</em><em>k</em><sup>′</sup><em>s</em><em>A</em><em>I</em>/<em>d</em><em>a</em><em>t</em><em>a</em><em>c</em><em>e</em><em>n</em><em>t</em><em>e</em><em>r</em><em>r</em><em>e</em> − <em>r</em><em>a</em><em>t</em><em>e</em>—<em>t</em><em>h</em><em>e</em><em>c</em><em>o</em><em>m</em><em>p</em><em>a</em><em>n</em><em>y</em><em>s</em><em>o</em><em>l</em><em>d</em><em>t</em><em>h</em><em>e</em><em>b</em><em>u</em><em>l</em><em>k</em><em>o</em><em>f</em><em>d</em><em>o</em><em>l</em><em>l</em><em>a</em><em>r</em><em>s</em>(2025<sup>′</sup><em>s</em> </span>519M)
+into the strongest tape, a textbook opportunistic ATM cadence.</p>
+<p><strong>Total potential overhang:</strong> beyond the ~50.3M shares
+already issued 2023→Q1-2026, the remaining forward overhang is **~13.2M
+shares (~16.7% of basic)** — Amazon warrant 7.95M (largest), 2030 Notes
+if-converted ~2.89M, RSUs ~2.34M, plus 5.6M of S-8-registered plan
+capacity (partially issued). The 2030 Notes ($125M, 2.75%, $43.31
+strike, unhedged) are the only convert left; both prior series are fully
+retired.</p>
+<p><strong>Dilution waterfall (one line):</strong> 28.6M (YE22) → +9.5M
+(2023 ATM+converts) → 38.1M → +11.3M (2024 ATM+RD+converts) → 49.4M →
++25.6M (2025 ATM mega-raise) → 75.0M → +4.0M (Q1-26) → <strong>79.0M
+basic → ~92.1M fully diluted</strong>.</p>
+<p class="disc">免责声明：本文基于 SEC EDGAR 公开文件，纯属个人学习研究，不构成任何投资建议。
+来源标注 ★SEC直接披露 ◆公式计算 ◇第三方 ▽推算。数据可能过时，请以最新 filing 为准。</p>
+</main></body></html>

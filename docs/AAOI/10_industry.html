@@ -1,0 +1,603 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/style.css"><title>行业横向对比 · AAOI</title>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+</script></head><body><main><p class="nav"><a href="index.html">🏠 AAOI 首页</a> · <a href="report.html">📊 整合报告</a> · <a href="CHANGELOG.html">📜 更新日志</a></p><p class="meta">数据截止：FY2025 10-K (2026-02-26) + Q1-2026 10-Q (2026-05-07)　·　最后更新：2026-05-30　·　版本：v2.0　·　来源：SEC EDGAR</p><h1
+id="10_industry_comparemd--applied-optoelectronics-aaoi-行业横向对比档案">10_industry_compare.md
+— Applied Optoelectronics (AAOI) 行业横向对比档案</h1>
+<blockquote>
+<p>Company Analysis Skill 行业横向对比档案
+核心目的：任何远超行业的开支/指标，必须问"是否合理 + 是否必要"
+<strong>公司：</strong> Applied Optoelectronics, Inc.（NASDAQ: AAOI）·
+CIK 0001158114 <strong>不构成投资建议。</strong></p>
+<p><strong>数据来源标注（四级）：</strong></p>
+<ul>
+<li>★ 公司本身 10-K / 10-Q / XBRL 一手</li>
+<li>◆ 本档案计算（写出口径）</li>
+<li>◇ Peers 的 10-K / SEC XBRL 一手（带链接）</li>
+<li>▽ 推算 / 行业通识（写出逻辑）</li>
+<li>数字一律「million AND
+billion」各写一次，不缩写。无数据写「无数据/待查」。</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="101-可比公司池构建">10.1 可比公司池构建</h2>
+<h3 id="选择标准必须明示">选择标准（必须明示）</h3>
+<ol type="1">
+<li>业务模式相似度 ≥70%——光通信器件 / 模块 / 收发器产业链。</li>
+<li>营收规模 0.3×–3× 范围——AAOI FY2025 营收 $455.7 million（= $0.456
+billion）。<strong>注意：本池中三家 peer 营收都显著高于
+AAOI</strong>（FN $3.42 billion、COHR $5.81 billion 已超 3×
+上限），故规模相似度是本池的最大瑕疵——下文用「比率（margin /
+Capex-intensity）」而非「绝对额」对标，规避规模差异。</li>
+<li>同一资本市场——三家均为美国上市（NASDAQ /
+NYSE），估值倍数体系一致。</li>
+<li>公开数据可得——均披露 SEC 10-K + XBRL。</li>
+</ol>
+<h3 id="可比池">可比池</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>Ticker</th>
+<th>CIK</th>
+<th>业务相似度</th>
+<th style="text-align: right;">FY2025 营收（million / billion）</th>
+<th>选择理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Applied Optoelectronics</strong></td>
+<td>AAOI</td>
+<td>0001158114</td>
+<td>—</td>
+<td style="text-align: right;">$455.7 million / $0.456 billion ★</td>
+<td>公司本身：垂直整合（自产激光芯片→模块）光器件商，数据中心 + CATV +
+电信 + FTTH 四市场</td>
+</tr>
+<tr>
+<td>Coherent</td>
+<td>COHR</td>
+<td>0000820318</td>
+<td>~75%</td>
+<td style="text-align: right;">$5,810.1 million / $5.810 billion ◇</td>
+<td>光通信 + 激光 + 材料三段；数据中心收发器（800G/1.6T）直接竞品；规模
+~12.7× AAOI（超上限，仅作比率对标）</td>
+</tr>
+<tr>
+<td>Lumentum</td>
+<td>LITE</td>
+<td>0001633978</td>
+<td>~80%</td>
+<td style="text-align: right;">$1,645.0 million / $1.645 billion ◇</td>
+<td>纯光通信器件 + 激光；云/数据中心收发器与 AAOI
+高度重叠；最接近的「同类亏损中转型」对照组</td>
+</tr>
+<tr>
+<td>Fabrinet</td>
+<td>FN</td>
+<td>0001408710</td>
+<td>~70%</td>
+<td style="text-align: right;">$3,419.3 million / $3.419 billion ◇</td>
+<td>光学/光电代工（EMS）；为 COHR/LITE/NVDA
+等代工光模块；轻资产、客户出资 R&amp;D——是「重资产 vs
+轻资产」的关键反例</td>
+</tr>
+<tr>
+<td>POET Technologies</td>
+<td>POET</td>
+<td>—</td>
+<td>~55%</td>
+<td style="text-align: right;">无数据/待查（pre-revenue，光引擎
+IP）</td>
+<td>仅定性参考：硅光集成平台，尚无规模营收，不入定量池</td>
+</tr>
+<tr>
+<td>InnoLight（中际旭创）</td>
+<td>300308.SZ</td>
+<td>—</td>
+<td>~85%</td>
+<td style="text-align: right;">无数据/待查（中国 A 股上市）</td>
+<td>业务最像（全球数据中心光模块龙头），但<strong>中国上市、会计体系与估值倍数不可比</strong>，仅定性参考（见
+10.6）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>陷阱 1 应对（拿苹果跟橘子比）：</strong> 三家 peer
+都是合理可比——均处光通信器件/模块产业链，且都直面同一波 AI 数据中心
+800G/1.6T 光模块需求。差异在于：① COHR/FN 规模远超
+AAOI（用比率而非绝对额规避）；② FN
+是代工（EMS）模式（薄毛利、高周转、近零自有 R&amp;D），故 FN 的
+GM/R&amp;D 不能与 AAOI 直接类比，只用于 Capex 强度与周转对照。</p>
+</blockquote>
+<h3 id="segment-可比池aaoi-为单一报告分部按终端市场切">Segment
+可比池（AAOI 为单一报告分部，按终端市场切）</h3>
+<pre><code>数据中心收发器（800G/1.6T）：[COHR, LITE, InnoLight(定性)]
+CATV / 接入网（DOCSIS 4.0）：AAOI 在此近乎独家上市标的——无干净美国可比
+代工 / 产能强度对照：[FN]</code></pre>
+<hr />
+<h2 id="102-关键指标对标必做">10.2 关键指标对标（必做）</h2>
+<h3 id="财务指标全景表">财务指标全景表</h3>
+<p>口径对齐说明（<strong>陷阱 2、5 应对</strong>）：peer 三家财年均为 6
+月底结束（FY2025 = 2024-07 → 2025-06），AAOI 为 12 月底结束（FY2025 =
+2025 全年）。窗口未完全对齐但均为「最近完整财年」，差异 &lt; 6
+个月，本表已注明。所有 margin 均为 <strong>GAAP</strong> 口径，未用 Adj
+EBITDA，统一可比。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">AAOI（公司）</th>
+<th style="text-align: right;">COHR</th>
+<th style="text-align: right;">LITE</th>
+<th style="text-align: right;">FN</th>
+<th style="text-align: right;">中位（3 peer）</th>
+<th>AAOI 位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue Growth YoY</td>
+<td style="text-align: right;"><strong>+83%</strong> ★</td>
+<td style="text-align: right;">+23.4% ◇◆</td>
+<td style="text-align: right;">+21.0% ◇◆</td>
+<td style="text-align: right;">+18.6% ◇◆</td>
+<td style="text-align: right;">+21.0%</td>
+<td>🥇 远超（AI+CATV 双周期低基数）</td>
+</tr>
+<tr>
+<td>Gross Margin</td>
+<td style="text-align: right;"><strong>30.0%</strong> ★</td>
+<td style="text-align: right;">35.2% ◇◆</td>
+<td style="text-align: right;">28.0% ◇◆</td>
+<td style="text-align: right;">12.1% ◇◆</td>
+<td style="text-align: right;">28.0%</td>
+<td>约中位（高于 LITE/FN，低于 COHR）</td>
+</tr>
+<tr>
+<td><strong>Operating Margin</strong></td>
+<td style="text-align: right;"><strong>−12.0%</strong> ★</td>
+<td style="text-align: right;">~6.1% ◇▽</td>
+<td style="text-align: right;">−10.9% ◇◆</td>
+<td style="text-align: right;">9.5% ◇◆</td>
+<td style="text-align: right;">6.1%</td>
+<td>🔻 <strong>全池唯一深度为负</strong></td>
+</tr>
+<tr>
+<td>Net Margin</td>
+<td style="text-align: right;"><strong>−8.4%</strong> ★</td>
+<td style="text-align: right;">0.8% ◇◆</td>
+<td style="text-align: right;">1.6% ◇◆</td>
+<td style="text-align: right;">9.7% ◇◆</td>
+<td style="text-align: right;">1.6%</td>
+<td>🔻 全池唯一为负</td>
+</tr>
+<tr>
+<td>R&amp;D / Revenue</td>
+<td style="text-align: right;"><strong>18.8%</strong> ★</td>
+<td style="text-align: right;">10.0% ◇◆</td>
+<td style="text-align: right;">18.5% ◇◆</td>
+<td style="text-align: right;">~0%（代工，无数据）◇</td>
+<td style="text-align: right;">14.3%*</td>
+<td>🔺 偏高（与 LITE 并列高位）</td>
+</tr>
+<tr>
+<td><strong>Capex / Revenue</strong> ⭐</td>
+<td style="text-align: right;"><strong>39.3%</strong> ★◆</td>
+<td style="text-align: right;">7.6% ◇◆</td>
+<td style="text-align: right;">14.0% ◇◆</td>
+<td style="text-align: right;">3.5% ◇◆</td>
+<td style="text-align: right;">7.6%</td>
+<td>🔺🔺 <strong>远超中位 ~5.2×（见 10.3）</strong></td>
+</tr>
+<tr>
+<td>SG&amp;A / Revenue</td>
+<td style="text-align: right;">~12.5% ★◆</td>
+<td style="text-align: right;">15.9% ◇◆</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">—</td>
+<td>约中位偏低</td>
+</tr>
+<tr>
+<td>Asset Turnover</td>
+<td style="text-align: right;">无数据/待查**</td>
+<td style="text-align: right;">0.40× ◇◆</td>
+<td style="text-align: right;">0.40× ◇◆</td>
+<td style="text-align: right;">1.32× ◇◆</td>
+<td style="text-align: right;">0.40×</td>
+<td>待查（AAOI 应收+存货膨胀，周转应偏低）</td>
+</tr>
+<tr>
+<td>Days Sales Outstanding</td>
+<td style="text-align: right;">极高（AR $299M / 季度营收 $151M）★</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">—</td>
+<td>🔻 异常高（Digicomm 延长账期）</td>
+</tr>
+<tr>
+<td>Net Debt / EBITDA</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">净现金 ◇▽</td>
+<td style="text-align: right;">—</td>
+<td>待查</td>
+</tr>
+<tr>
+<td>ROIC</td>
+<td style="text-align: right;">负（经营亏损）◆</td>
+<td style="text-align: right;">低个位数 ▽</td>
+<td style="text-align: right;">负→微正 ▽</td>
+<td style="text-align: right;">高（轻资产高周转）▽</td>
+<td style="text-align: right;">—</td>
+<td>🔻 全池最低</td>
+</tr>
+<tr>
+<td>EV / Revenue</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">—</td>
+<td>见 10.4（待市值快照）</td>
+</tr>
+<tr>
+<td>EV / EBITDA</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">—</td>
+<td>见 10.4</td>
+</tr>
+</tbody>
+</table>
+<p>* R&amp;D 中位仅按有 R&amp;D 的两家（COHR 10.0%、LITE 18.5%）取中位 =
+14.3%；FN 作为代工厂研发由客户承担，剔除。 ** AAOI FY2025
+期末资产未在本档案抽取（Assets 标签待查）；按 FY2025 营收 <span
+class="math inline">455.7<em>M</em><em>与</em><em>膨</em><em>胀</em><em>的</em><em>A</em><em>R</em>(</span>299M)+存货($206M)推断，资产周转应低于
+0.5×（待补）。</p>
+<h3 id="数据来源链接peer-一手-xbrl">数据来源链接（peer 一手
+XBRL，◇）</h3>
+<ul>
+<li>COHR：<code>https://data.sec.gov/api/xbrl/companyconcept/CIK0000820318/us-gaap/{RevenueFromContractWithCustomerExcludingAssessedTax, CostOfGoodsAndServicesSold, ResearchAndDevelopmentExpense, PaymentsToAcquirePropertyPlantAndEquipment, NetIncomeLoss, Assets}.json</code>
+<ul>
+<li>FY2025（end 2025-06-30）：营收 $5,810.115M ◇；COGS $3,766.793M → GP
+$2,043.322M ◇◆；R&amp;D $581.924M ◇；Capex $440.836M ◇；净利 $49.364M
+◇；总资产 $14,910.936M ◇。</li>
+<li><strong>OpMargin 注：</strong> COHR 的
+<code>OperatingIncomeLoss</code> XBRL 标签仅更新到
+FY2024（$96.121M），FY2025 未单列。GP−R&amp;D−SG&amp;A = $534.9M
+为经营前小计（未扣并购无形摊销 + 重组），公司 FY2025 GAAP 经营利润约
+$355M（OM ~6.1%），此处 OM 标为 ◇▽<strong>近似</strong>，待读 10-K
+利润表确认精确值。</li>
+</ul></li>
+<li>LITE：<code>.../CIK0001633978/us-gaap/{...}.json</code>
+<ul>
+<li>FY2025（end 2025-06-28）：营收 $1,645.0M ◇；GP <span
+class="math inline">459.9<em>M</em>◇；<em>O</em><em>p</em><em>I</em><em>n</em><em>c</em> * *−</span>180.1M**
+◇；R&amp;D $303.9M ◇；Capex $231.0M ◇；净利 $25.9M
+◇（净利为正源于非经营项）；总资产 $4,218.7M ◇。</li>
+</ul></li>
+<li>FN：<code>.../CIK0001408710/us-gaap/{Revenues, GrossProfit, OperatingIncomeLoss, PaymentsToAcquirePropertyPlantAndEquipment, NetIncomeLoss, Assets}.json</code>
+<ul>
+<li>FY2025（end 2025-06-27）：营收 $3,419.327M ◇；GP $413.349M ◇；OpInc
+$324.447M ◇；R&amp;D 无单列标签（代工厂，研发由客户承担）；Capex
+$121.078M ◇；净利 $332.527M ◇；总资产 $2,831.432M ◇。</li>
+</ul></li>
+<li>资产周转分母用「期初+期末平均资产」◆。</li>
+</ul>
+<blockquote>
+<p><strong>⚠️ 核心读数：AAOI
+是全池唯一经营利润率为负（−12.0%）的公司，且
+Capex/Revenue（39.3%）远超中位（7.6%）约 5.2×。</strong> 其余三家均已
+GAAP 经营或净利转正（FN 最健康，COHR 微正，LITE
+经营仍负但净利转正）。</p>
+</blockquote>
+<hr />
+<h2 id="103-重大开支的合理性判断核心">10.3
+重大开支的合理性判断（核心）</h2>
+<h3 id="框架三问">框架三问</h3>
+<pre><code>问题 1：这个开支占收入的比例是多少？vs 同业中位？
+问题 2：开支是否对应了具体的战略必要性？
+问题 3：开支的会计处理（费用化 vs 资本化）是否影响了表观数字？</code></pre>
+<h3 id="单项开支深究-①--capex--revenue-star本档案核心">单项开支深究 ① —
+Capex / Revenue ⭐（本档案核心）</h3>
+<pre><code>开支项：Capex（购建厂房与设备）
+公司金额：$179.1 million / $0.179 billion = 39.3% of Revenue ★◆
+行业中位：7.6% of Revenue（COHR 7.6% / LITE 14.0% / FN 3.5%）◇◆
+差异倍数：约 5.2× 中位（vs FN 11.2×，vs COHR 5.2×，vs LITE 2.8×）
+
+合理性判断：
+□ 合理（中位 ±20%）
+☑ 偏高但有必要（&gt;120% 中位，但有明确战略对应）  ← 本案判定
+□ 异常需深究（&gt;200% 中位，且战略不清）
+
+  说明：倍数（5.2×）已落入「异常」量级（&gt;200% 中位），但战略对应清晰且
+  有顶级客户合同背书，故综合判定为「偏高但必要」而非「异常」——前提是
+  AI 需求兑现。若需求落空，应立即重判为「异常」。</code></pre>
+<p><strong>战略必要性（问题 2）——三条具体拉动：</strong></p>
+<ol type="1">
+<li><strong>Amazon <span class="math inline">40<em>亿</em>（</span>4.0
+billion）累计采购框架</strong> ★：2025-03 Transaction Agreement 授予 AWS
+子公司 7,945,399 股认股权证，绑定最高 $4.0 billion 十年累计采购逐步
+vest（1,324,233 股即时归属，余随采购量
+vest）。如此体量的数据中心订单需要预先建产能。</li>
+<li><strong>800G / 1.6T 数据中心光模块产能</strong> ★：2026Q1
+数据中心重夺第一（53.9%，<span
+class="math inline">81.4<em>M</em>），<em>A</em><em>I</em><em>光</em><em>模</em><em>块</em><em>放</em><em>量</em><em>需</em><em>要</em><em>洁</em><em>净</em><em>室</em><em>与</em><em>设</em><em>备</em><em>前</em><em>置</em><em>投</em><em>入</em>（<em>F</em><em>A</em><em>B</em>2<em>洁</em><em>净</em><em>室</em> </span>30.9M）。</li>
+<li><strong>去中国化 / 美国 reshoring</strong> ★：Pearland 物业购买
+$58.4 million、Hightower 三栋购买选择权合计 $102.25 million、Sugar Land
+租赁，配 BOK Financial $35 million 循环额度（可扩至 $75
+million）。当前中国制造收入 $262M（占
+57%），面临关税/出口管制——美国扩产是合规与供应安全的刚需。</li>
+</ol>
+<p><strong>会计处理（问题 3）：</strong></p>
+<ul>
+<li>当前为标准<strong>资本化</strong>（厂房设备进
+PP&amp;E，后续折旧）——与同业惯例一致，无激进之处。</li>
+<li>但重资产新厂投产后，折旧将开始计入成本：若 AI 需求不兑现 → 产能闲置
++ 在建工程（CIP）减值 + take-or-pay 超量。<strong>FY2025 10-K
+已把这条列为头号风险因素。</strong> ★</li>
+<li>AAOI 把 Capex 资本化、而把 R&amp;D
+全额费用化（18.8%）——两项叠加是其经营亏损的结构性来源；同业 FN
+几乎无自有 R&amp;D、Capex 仅 3.5%，故 FN 能做到 9.5% 经营利润率。</li>
+</ul>
+<h3 id="单项开支深究-②--rd--revenue">单项开支深究 ② — R&amp;D /
+Revenue</h3>
+<pre><code>开支项：R&amp;D（全额费用化）
+公司金额：$85.7 million / $0.086 billion = 18.8% of Revenue ★
+行业中位（剔除代工 FN）：14.3%（COHR 10.0% / LITE 18.5%）◇◆
+差异倍数：约 1.3× 中位
+
+合理性判断：☑ 偏高但有必要——与 LITE（18.5%）几乎并列，反映光器件
+垂直整合商必须自研激光芯片；远高于规模化的 COHR（10.0%，规模摊薄）。
+代工厂 FN（~0%）不可比，因其研发由客户出资。</code></pre>
+<blockquote>
+<p><strong>结论：AAOI 同时背负「全池最高的 Capex 强度（39.3%）+ 高位
+R&amp;D（18.8%）」，这正是它成为全池唯一经营亏损公司的会计与战略根因——它在用今天的利润表，买明天的
+AI 产能。</strong></p>
+</blockquote>
+<hr />
+<h2 id="104-估值倍数对标">10.4 估值倍数对标</h2>
+<blockquote>
+<p>本档案聚焦经营与开支质量，<strong>市值/EV
+快照未抽取（待查）</strong>，估值倍数表留待补充。已知定性：AAOI
+当前以「拐点 + 双巨头（Amazon 权证 + Microsoft
+ROFR）战略锁定」叙事交易，波动极高（机构股东以 Jane Street / D.E. Shaw /
+Citadel 等量化做市商为主，无稳定锚定股东）。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th style="text-align: right;">EV/Revenue</th>
+<th style="text-align: right;">EV/EBITDA</th>
+<th style="text-align: right;">EV/Op Income</th>
+<th style="text-align: right;">P/B</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COHR</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">—</td>
+<td>FY2025 净利转正</td>
+</tr>
+<tr>
+<td>LITE</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">—</td>
+<td>经营仍负，净利微正</td>
+</tr>
+<tr>
+<td>FN</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">—</td>
+<td>净现金、高 ROIC</td>
+</tr>
+<tr>
+<td>中位</td>
+<td style="text-align: right;">无数据/待查</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>陷阱 4 应对：</strong> 待抽取市值后，须展示中位 + IQR，不取
+favorable 倍数。AAOI 经营亏损 → EV/EBITDA、EV/OpIncome
+无意义（分母为负），只能用 EV/Revenue，且须对 $4.0 billion Amazon
+框架的兑现概率打折。</p>
+</blockquote>
+<hr />
+<h2 id="105-商业模式可比性深究不能省">10.5
+商业模式可比性深究（不能省）</h2>
+<h3 id="不只看数字看商业模式差异">不只看数字，看商业模式差异</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>AAOI（公司）</th>
+<th>Peer 中位</th>
+<th>差异说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>客户类型</td>
+<td>经销商（Digicomm）+ 超大规模云厂（Amazon/Microsoft）★</td>
+<td>直接 OEM/云厂多元</td>
+<td>AAOI 经 CATV 经销商间接触达 MSO，叠加云厂直供</td>
+</tr>
+<tr>
+<td><strong>客户集中度</strong></td>
+<td><strong>Digicomm 53% 收入 + 前五 95.2% + 前十 98%；Digicomm 占应收
+74.5%（$222.7M）</strong> ★</td>
+<td>分散（COHR/LITE 多终端多客户，FN 客户虽集中但为代工合同）</td>
+<td>🔴 <strong>AAOI
+集中度全池最极端</strong>——单一经销商既是增长引擎也是单点信用风险</td>
+</tr>
+<tr>
+<td>定价模式</td>
+<td>一次性产品销售（含 Amazon 认股权证 contra-revenue 冲减）★</td>
+<td>一次性产品销售</td>
+<td>AAOI 的 Amazon 权证将「采购量」转为「股权对价」，FY25 冲减收入
+$0.8M（重要性低）★</td>
+</tr>
+<tr>
+<td>渠道</td>
+<td>经销（CATV 经 Digicomm）+ 直销（数据中心）★</td>
+<td>直销 + 代工</td>
+<td>CATV+数据中心双渠道并行</td>
+</tr>
+<tr>
+<td>监管负担</td>
+<td>中→高（中国制造 57%，关税/出口管制敞口）★</td>
+<td>中</td>
+<td>AAOI 去中国化 reshoring 负担最重</td>
+</tr>
+<tr>
+<td>技术周期</td>
+<td>快（800G→1.6T 代际）</td>
+<td>快</td>
+<td>全行业一致，迭代风险高</td>
+</tr>
+<tr>
+<td><strong>资本密集度</strong></td>
+<td><strong>高（Capex/Rev 39.3%，垂直整合自产芯片+美国新厂）</strong>
+★◆</td>
+<td>中（COHR 7.6% / LITE 14.0%）/ 低（FN 3.5% 代工）◇</td>
+<td>🔺 AAOI 资本密集度全池最高——垂直整合 + reshoring 双重加码</td>
+</tr>
+<tr>
+<td>垂直整合度</td>
+<td><strong>高（自产激光芯片→模块全链）</strong> ★</td>
+<td>COHR 高 / LITE 中 / FN 低（纯代工）</td>
+<td>AAOI 与 COHR 同属重度垂直整合；FN 是其反面（轻资产代工）</td>
+</tr>
+<tr>
+<td>终端市场结构</td>
+<td><strong>CATV + 数据中心双引擎</strong>（此消彼长）★</td>
+<td>数据中心/工业/通信多元，CATV 敞口小</td>
+<td>AAOI 是少数同时吃 DOCSIS 4.0 CATV 周期 + AI
+数据中心的标的——既是分散也是双重周期风险</td>
+</tr>
+<tr>
+<td>网络效应</td>
+<td>无</td>
+<td>无</td>
+<td>全行业无</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>关键差异总结：</strong> AAOI 的商业模式与 peer
+在「客户集中度」和「资本密集度」两个维度上<strong>质的不同</strong>——它把命运押在一个经销商（Digicomm，74.5%
+应收）+ 两个云巨头（Amazon 权证 + Microsoft 控制权变更优先收购权 ROFR）+
+一场重资产美国扩产豪赌上。FN 是其完美反例：轻资产、客户出资
+R&amp;D、9.5%
+经营利润率、净现金——证明了「同行业可以靠轻资产代工赚钱」，反衬 AAOI
+这条重资产垂直整合路线的高风险高回报本质。</p>
+</blockquote>
+<hr />
+<h2 id="106-行业趋势与公司定位">10.6 行业趋势与公司定位</h2>
+<h3 id="行业当前周期">行业当前周期</h3>
+<ul>
+<li><strong>转型期 + 增长期叠加</strong>：AI 数据中心驱动 800G→1.6T
+光模块换代超级周期；CATV 端 DOCSIS 4.0 升级周期。</li>
+<li>关键驱动：超大规模云厂资本开支、AI 训练/推理集群互联带宽需求、北美
+MSO 网络升级。</li>
+<li>主要威胁：① AI 资本开支若放缓 → 产能闲置；② 硅光（silicon
+photonics）技术路线替代分立器件；③ 中国光模块厂（InnoLight
+中际旭创）成本优势 + 地缘/关税。</li>
+</ul>
+<h3 id="innolight定性不入定量池">InnoLight（定性，不入定量池）</h3>
+<ul>
+<li>中际旭创为全球数据中心光模块出货量龙头，规模与盈利能力均强，但<strong>中国
+A 股上市、人民币报表、估值倍数体系与美股不可比</strong>（陷阱
+1）。其存在意味着 AAOI
+在数据中心高端模块上面对的是「成本更低、规模更大」的中国对手——这也是
+Amazon/Microsoft
+愿意战略绑定一家美国本土供应商（供应链去中国化）的底层逻辑。</li>
+</ul>
+<h3 id="公司在行业中的定位">公司在行业中的定位</h3>
+<ul>
+<li><strong>挑战者 / 利基者</strong>：在 CATV
+接入网近乎独家美国上市标的（利基）；在 AI 数据中心模块是挑战者（面对
+COHR/LITE/InnoLight）。</li>
+<li>差异化优势：垂直整合自产激光芯片 + 美国本土产能（reshoring 卖点）+
+两大云巨头战略锁定。</li>
+<li>弱点：规模最小、唯一经营亏损、客户/应收极度集中、重度股权稀释（两年
++176% 股本）、资本密集度全池最高。</li>
+</ul>
+<h3 id="5-年展望">5 年展望</h3>
+<ul>
+<li>行业增长预期 CAGR：AI 光模块 20–30%+▽（行业通识，待证）。</li>
+<li>AAOI 能否跑赢：营收已 +83%
+跑赢同业（+19%–23%），但<strong>盈利质量落后</strong>——能否跑赢取决于经营亏损率持续收窄转正
++ Digicomm 之外客户多元化 + Amazon $4.0 billion 框架放量兑现。</li>
+<li>主要风险：AI 需求不兑现 → 重资产减值；Digicomm 单点信用风险（$222.7M
+应收）。</li>
+</ul>
+<hr />
+<h2 id="107-总结行业对比画像5-行">10.7 总结：行业对比画像（5 行）</h2>
+<pre><code>1. 公司在行业中的财务表现：落后——全池唯一 GAAP 经营亏损（−12.0%），营收增速虽最快(+83%)但盈利质量垫底。
+2. 最大的财务优势：营收增速 +83%（远超同业 +19%~23%）+ 毛利率重定级到 30%（约中位，高于 LITE/FN）。
+3. 最大的财务劣势：经营利润率 −12.0%（全池唯一为负）+ 客户/应收极度集中（Digicomm 53% 收入、74.5% 应收）。
+4. 最大的会计差异（vs 同业）：Capex/Revenue 39.3%，约为同业中位(7.6%)的 5.2×——重资产+全额费用化 R&amp;D(18.8%)是经营亏损的结构性根因；对照 FN(Capex 3.5%、R&amp;D~0%、OM +9.5%)反差最强。
+5. 当前估值 vs 同业：待补市值快照；定性看，经营亏损使 EV/EBITDA 失效，市场以「拐点+双巨头(Amazon 权证/Microsoft ROFR)战略锁定」叙事给溢价波动，主因=$4.0 billion Amazon 框架的期权价值 + reshoring 稀缺性，但盈利与现金流尚未兑现。</code></pre>
+<hr />
+<h2 id="warning-本档案已规避的常见陷阱">⚠️ 本档案已规避的常见陷阱</h2>
+<ul>
+<li><strong>陷阱 1（苹果比橘子）：</strong> 已说明三家 peer
+为何合理可比，并标注 FN 代工模式的 GM/R&amp;D 不可直接类比、InnoLight
+因中国上市仅作定性。</li>
+<li><strong>陷阱 2（错财年）：</strong>
+已对齐到「各家最近完整财年」，注明 peer 为 6 月财年、AAOI 为 12
+月财年，窗口差 &lt; 6 个月。</li>
+<li><strong>陷阱 3（忽视会计差异）：</strong> 已指出 AAOI 把 Capex
+资本化 + R&amp;D 全额费用化，FN
+研发由客户出资——同名「Revenue/GP」口径下的盈利不可直接横比。</li>
+<li><strong>陷阱 4（取最高倍数）：</strong> 估值表留白待补，要求展示中位
++ IQR。</li>
+<li><strong>陷阱 5（口径不一）：</strong> 全表用 GAAP，未混用 Adj
+EBITDA；COHR FY2025 OpInc 因 XBRL 未单列，明确标 ◇▽
+近似并说明推导。</li>
+</ul>
+<hr />
+<h2 id="来源索引">来源索引</h2>
+<ul>
+<li>AAOI
+一手：<code>data/research/AAOI/01_SYNTHESIS_full_read.md</code>、<code>21_quarterly_trajectory.md</code>、<code>00_AAOI_financial_analysis.md</code>（FY2025
+营收 <span
+class="math inline">455.7<em>M</em>、<em>G</em><em>M</em>30.0</span>38.2M、营收
++83% YoY）★</li>
+<li>Peer 一手：SEC XBRL companyconcept API（User-Agent: Yuki Pan <a
+href="mailto:yukipan0826@gmail.com">yukipan0826@gmail.com</a>），CIK
+COHR 0000820318 / LITE 0001633978 / FN 0001408710，标签
+RevenueFromContractWithCustomerExcludingAssessedTax · Revenues ·
+GrossProfit · CostOfGoodsAndServicesSold · OperatingIncomeLoss ·
+ResearchAndDevelopmentExpense ·
+PaymentsToAcquirePropertyPlantAndEquipment · NetIncomeLoss · Assets
+◇</li>
+</ul>
+<p class="disc">免责声明：本文基于 SEC EDGAR 公开文件，纯属个人学习研究，不构成任何投资建议。
+来源标注 ★SEC直接披露 ◆公式计算 ◇第三方 ▽推算。数据可能过时，请以最新 filing 为准。</p>
+</main></body></html>

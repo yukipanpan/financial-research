@@ -1,0 +1,393 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/style.css"><title>运营资产/产能/800G/Amazon · AAOI</title>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+</script></head><body><main><p class="nav"><a href="index.html">🏠 AAOI 首页</a> · <a href="report.html">📊 整合报告</a> · <a href="CHANGELOG.html">📜 更新日志</a></p><p class="meta">数据截止：FY2025 10-K (2026-02-26) + Q1-2026 10-Q (2026-05-07)　·　最后更新：2026-05-30　·　版本：v2.0　·　来源：SEC EDGAR</p><h1
+id="applied-optoelectronics-aaoi--operating-asset--data-center-deep-dive">Applied
+Optoelectronics (AAOI) — Operating-Asset / Data-Center Deep Dive</h1>
+<p><strong>Company:</strong> Applied Optoelectronics, Inc. (NASDAQ:
+AAOI) · CIK 0001158114 · HQ Sugar Land, TX <strong>Primary
+sources:</strong> FY2025 10-K (filed 2026-02-26, period end 2025-12-31)
+and Q1-2026 10-Q (filed 2026-05-07, period end 2026-03-31), cached at
+<code>data/raw/_adhoc/aaoi20251231_10k.htm.txt</code> and
+<code>data/raw/_adhoc/aaoi20260331_10q.htm.txt</code>. Earnings-release
+commentary (Item 2.02 / Exhibit 99.1) is <strong>not</strong> captured —
+those 8-K bodies are cover pages only. <strong>Legend:</strong> ★ =
+stated directly in an SEC filing (filing + date tagged) · ◇ = press
+release / third-party · ◆ = computed by us.</p>
+<hr />
+<h2 id="a-data-center-product-roadmap-800g--16t">A. Data-Center Product
+Roadmap (800G / 1.6T)</h2>
+<h3 id="a1-what-the-filings-actually-disclose">A.1 What the filings
+actually disclose</h3>
+<p>AAOI does <strong>not</strong> publish unit volumes or per-product
+revenue by speed grade. The roadmap detail below is the
+<em>entirety</em> of what the FY2025 10-K and Q1-2026 10-Q reveal —
+everything more granular (per-customer SKU mix, qualification dates,
+exact ship dates) is <strong>Not disclosed / confidential</strong>.</p>
+<ul>
+<li>★ <strong>Speed-grade roadmap guidance (the single most concrete
+statement):</strong> "We expect continued sales of our <strong>40 Gbps,
+100 Gbps, and 400 Gbps</strong> products in 2026, and we expect that
+sales of <strong>800 Gbps products will likely exceed sales of 400 Gbps
+products later in 2026</strong>. However, quarter-to-quarter results may
+show considerable variability as is usual in a period of technology
+transition." — FY2025 10-K, 2026-02-26.
+<ul>
+<li>◆ Read-through: <strong>400G is the current volume workhorse; 800G
+is ramping and projected to overtake 400G in 2H-2026.</strong> 1.6T is
+not yet a revenue product.</li>
+</ul></li>
+<li>★ R&amp;D is funding <strong>"100 Gbps, 200/400/800/1,600 Gbps data
+center products"</strong> plus DOCSIS 4.0 / 1.8 GHz CATV. "During 2025,
+we experienced increased interest in new technologies like <strong>800G
+and 1.6T</strong> among our data center customers. Supporting customer
+testing and qualification for these new opportunities materially
+increased our R&amp;D expenditures." — FY2025 10-K, 2026-02-26. (R&amp;D
+rose **<span
+class="math inline">30.6<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em>, +55.6</span>11.7M
+/ +44.4%-ish QoQ trend continues into Q1-26 with R&amp;D of $25.7M.) ★
+<ul>
+<li>◆ So <strong>1.6T is explicitly still in the customer-testing /
+qualification stage</strong> as of FY2025 — i.e. design-in, not volume
+shipment. 800G is described as both shipping ("our 800G products in
+particular are used to interconnect AI compute infrastructure") and
+still attracting new qualification interest — consistent with an
+early-ramp product.</li>
+</ul></li>
+<li>★ <strong>800G = the AI product.</strong> "Our products are used to
+interconnect network elements within data centers generally, and our
+<strong>800G products in particular are used to interconnect AI compute
+infrastructure.</strong>" — FY2025 10-K, 2026-02-26. The AI thesis rests
+on 800G+ (and the future 1.6T).</li>
+<li>★ Market framing: optical transport "typically providing speeds from
+10 Gbps to <strong>1.6 Tbps</strong>"; AI "driving the need for faster
+(<strong>800Gbps and higher</strong>)" optics — FY2025 10-K &amp;
+Q1-2026 10-Q. Industry tailwind language only; not a shipment
+claim.</li>
+</ul>
+<h3 id="a2-design-wins-a-proxy-for-product-traction">A.2 Design wins (a
+proxy for product traction)</h3>
+<ul>
+<li>★ "In 2025, 2024 and 2023, we had <strong>9, 8 and 6 design
+wins</strong>, respectively." — FY2025 10-K, 2026-02-26. A design win =
+customer has tested and committed to purchase. AAOI cautions design-win
+<strong>count does not map cleanly to revenue</strong> ("some design
+wins result in significant revenue and some do not").
+<ul>
+<li>◆ Modest absolute growth (6 → 8 → 9); the revenue surge is driven
+more by volume/scale on existing wins than by a wave of new wins.</li>
+</ul></li>
+</ul>
+<h3 id="a3-which-products-tie-to-microsoft-vs-amazon">A.3 Which products
+tie to Microsoft vs Amazon</h3>
+<ul>
+<li>★ <strong>Microsoft is the named data-center customer</strong>, not
+Amazon. The two Microsoft Statements of Work (SOW No.1 Foundry, eff.
+12/16/2022; SOW No.2 Design &amp; Assembly, eff. 6/21/2023; 8-Ks
+2023-05-03 / 2023-06-21) cover <strong>laser manufacturing +
+design/assembly</strong> — i.e. AAOI builds lasers/transceivers to
+Microsoft spec. Dollar size redacted in the 8-K bodies. Microsoft =
+<strong>28.8% of FY2025 revenue</strong> (was 43.7%/46.6% in 2024,
+18.4%/46.6% in 2023 — the 10-K gives slightly different 2023/2024
+figures in different sections). ★ FY2025 10-K.</li>
+<li>★ <strong>Amazon's product tie is NOT specified by speed grade
+anywhere in the filings.</strong> The Amazon relationship is documented
+only through the Customer Warrant (see §B) — "purchases by or on behalf
+of Amazon and its affiliates ... of the Company's products." The filings
+never state whether Amazon is buying 400G, 800G, or 1.6T. <strong>Not
+disclosed.</strong> Given the AI framing and that 800G is "used to
+interconnect AI compute infrastructure," 800G is the <em>likely</em>
+Amazon/AWS product, but the filing does not confirm it.</li>
+<li>◆ Net: <strong>the disclosed product-to-customer map is
+thin.</strong> Microsoft = lasers/transceivers (SOW-defined, redacted
+$). Amazon = unspecified "products" tied to a $4B warrant. The bulk of
+the 2025 revenue surge actually came from <strong>CATV via
+Digicomm</strong>, a distributor — not a hyperscaler product line.</li>
+</ul>
+<hr />
+<h2
+id="b-amazon-customer-warrant--vesting-progress-is-amazon-buying-yet">B.
+Amazon Customer Warrant — Vesting Progress ("Is Amazon buying
+yet?")</h2>
+<h3 id="b1-the-instrument">B.1 The instrument</h3>
+<ul>
+<li>★ Issued <strong>March 13, 2025</strong> to <strong>Amazon.com NV
+Investment Holdings LLC</strong> (an Amazon subsidiary). Warrant for up
+to <strong>7,945,399 shares</strong>, exercise price
+<strong>$23.6956</strong>, 10-year term (expires 3/13/2035). — FY2025
+10-K &amp; Q1-2026 10-Q.</li>
+<li>★ <strong>1,324,233 shares vested immediately at issuance.</strong>
+The remaining <strong>6,621,166 shares "may vest over the next 10 years,
+dependent on aggregate purchases by or on behalf of Amazon and its
+affiliates of $4 billion (four billion dollars) of the Company's
+products over this time period."</strong> — FY2025 10-K, 2026-02-26
+&amp; Q1-2026 10-Q, 2026-05-07.</li>
+<li>★ Grant-date fair value <strong>$12.64/share</strong>
+(Black-Scholes-Merton; 80% vol, 10-yr term, 4.23% risk-free, $15.87
+share price at grant). — FY2025 10-K.</li>
+</ul>
+<h3
+id="b2-how-much-has-vested-beyond-the-initial-tranche---zero-additional-shares">B.2
+How much has vested beyond the initial tranche? → ★ ZERO additional
+shares</h3>
+<p>This is the load-bearing finding, and it is
+<strong>negative</strong>:</p>
+<ul>
+<li>★ <strong>As of December 31, 2025</strong>, AAOI carried the warrant
+as an asset of <strong>$1.0 million (other current) + <span
+class="math inline">15.0<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em>(<em>o</em><em>t</em><em>h</em><em>e</em><em>r</em><em>n</em><em>o</em><em>n</em><em>c</em><em>u</em><em>r</em><em>r</em><em>e</em><em>n</em><em>t</em>)= </span>16.0
+million</strong>, explicitly "representing the aggregate grant-date fair
+value of <strong>1,324,233 Warrant Shares vested at the
+issuance</strong>." — FY2025 10-K. → still <strong>only the initial
+tranche</strong> vested.</li>
+<li>★ <strong>As of March 31, 2026</strong>, the corresponding assets
+are <strong>$3.9 million (other current) + <span
+class="math inline">12.6<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em>(<em>o</em><em>t</em><em>h</em><em>e</em><em>r</em><em>n</em><em>o</em><em>n</em><em>c</em><em>u</em><em>r</em><em>r</em><em>e</em><em>n</em><em>t</em>)= </span>16.5
+million</strong> — still tied to the original 1,324,233 shares. —
+Q1-2026 10-Q.</li>
+<li>★ <strong>The Q1-2026 dilution table confirms it:</strong> the
+"Amazon warrant" line counts only <strong>1,324 (thousand)</strong> =
+1,324,233 shares as in-the-money/dilutive — exactly the initial tranche,
+<strong>no incremental vesting</strong>. — Q1-2026 10-Q EPS
+footnote.</li>
+<li>◆ <strong>Conclusion: through Q1-2026, none of the
+performance-vesting 6,621,166 shares have vested.</strong> Amazon has
+not yet bought enough to trigger any milestone. The $4 billion ramp is,
+on the evidence of the filings, <strong>barely started</strong>.</li>
+</ul>
+<h3 id="b3-is-amazon-actually-buying--and-the-331m--380m-figure">B.3 Is
+Amazon actually buying — and the $33.1M / $38.0M figure</h3>
+<ul>
+<li>★ "For the year ended December 31, 2025, the Company recognized
+approximately <strong><span class="math inline">$33.1 million** of
+revenue associated with customer arrangements that included the issuance
+of warrants." (FY2025 10-K) and "For the three months ended March 31,
+2026 ... approximately **$</span>38.0 million</strong> of revenue
+associated with customer arrangements that included the issuance of
+warrants." (Q1-2026 10-Q).
+<ul>
+<li>◆ <strong>Interpretation (with a caveat — the phrasing is
+deliberately opaque):</strong> these are the <em>gross revenue dollars
+from the warrant-linked (Amazon) arrangement</em> against which the
+warrant fair value is amortized as a <strong>reduction of revenue
+(contra-revenue)</strong>. The accounting is: recognize grant-date FV
+"as a reduction of revenue from Amazon as the related goods or services
+are transferred." So <strong>yes, Amazon is buying</strong> — roughly
+<strong>$33.1 million (FY2025, ~9.5 months) and $38.0 million (Q1-2026
+alone)</strong> of gross product. The QoQ acceleration (Q1-26 single
+quarter &gt; full FY25) signals <strong>Amazon purchases ramped sharply
+into early 2026</strong>.</li>
+</ul></li>
+<li>★ BUT Amazon is <strong>not</strong> large enough to appear in the
+customer-concentration table: in FY2025 only <strong>Digicomm (53.1%)
+and Microsoft (28.8%)</strong> exceed 10%; in 2024, Microsoft / Digicomm
+/ Oracle. <strong>Amazon is never listed as a &gt;10% customer</strong>
+→ its ~$33M (FY25) is ~7% of $455.7M revenue. ★</li>
+<li>◆ <strong>Reconciling against the <span
+class="math inline">4<em>B</em><em>t</em><em>a</em><em>r</em><em>g</em><em>e</em><em>t</em> : * * <em>a</em><em>t</em><em>a</em><em>c</em><em>u</em><em>m</em><em>u</em><em>l</em><em>a</em><em>t</em><em>i</em><em>v</em><em>e</em> </span>33M
+(2025) + ~<span
+class="math inline">38<em>M</em>(<em>Q</em>1 − 26) ≈ ** </span>71
+million of Amazon purchases to date</strong>, AAOI is roughly **1.8% of
+the way to the <span
+class="math inline">4.0<em>b</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em> * *<em>t</em><em>h</em><em>a</em><em>t</em><em>f</em><em>u</em><em>l</em><em>l</em><em>y</em><em>v</em><em>e</em><em>s</em><em>t</em><em>s</em><em>t</em><em>h</em><em>e</em><em>w</em><em>a</em><em>r</em><em>r</em><em>a</em><em>n</em><em>t</em>.<em>C</em><em>u</em><em>m</em><em>u</em><em>l</em><em>a</em><em>t</em><em>i</em><em>v</em><em>e</em><em>A</em><em>m</em><em>a</em><em>z</em><em>o</em><em>n</em><em>p</em><em>u</em><em>r</em><em>c</em><em>h</em><em>a</em><em>s</em><em>e</em><em>s</em><em>t</em><em>o</em><em>d</em><em>a</em><em>t</em><em>e</em><em>a</em><em>r</em><em>e</em> * *<em>n</em><em>o</em><em>t</em><em>d</em><em>i</em><em>s</em><em>c</em><em>l</em><em>o</em><em>s</em><em>e</em><em>d</em><em>a</em><em>s</em><em>a</em><em>n</em><em>e</em><em>x</em><em>p</em><em>l</em><em>i</em><em>c</em><em>i</em><em>t</em><em>r</em><em>u</em><em>n</em><em>n</em><em>i</em><em>n</em><em>g</em><em>t</em><em>o</em><em>t</em><em>a</em><em>l</em> * *—<em>t</em><em>h</em><em>e</em> </span>71M
+is ◆ our sum of the two disclosed period figures, and the company has
+<strong>not</strong> stated a cumulative tally.</li>
+<li>★ The actual contra-revenue (warrant amortization) hitting the
+P&amp;L is immaterial: the company states "the impact of these
+arrangements on the Company's consolidated financial statements was
+<strong>not material</strong> for the periods presented," and the
+warrant asset only moved ~<span
+class="math inline">16.0<em>M</em>→ </span>16.5M. <strong>Not
+disclosed</strong> as a discrete contra-revenue line; it is buried in
+net revenue.</li>
+</ul>
+<blockquote>
+<p><strong>Bottom line on the warrant:</strong> Amazon has started
+buying (≈<span
+class="math inline">33<em>M</em><em>i</em><em>n</em>2025, ≈</span>38M in
+Q1-2026, accelerating), but cumulative purchases (~$71M ◆) are &lt;2% of
+the $4B trigger, and <strong>zero</strong> performance shares beyond the
+initial 1,324,233 have vested as of 3/31/2026. The Amazon relationship
+is real but still nascent; the headline 7.9M-share / $4B figure is
+almost entirely <em>unearned optionality</em>, not realized
+commitment.</p>
+</blockquote>
+<hr />
+<h2 id="c-data-center-revenue-trajectory--management-guidance">C.
+Data-Center Revenue Trajectory &amp; Management Guidance</h2>
+<h3 id="c1-annual-fy--from-10-k-major-product-category-table-">C.1
+Annual (FY) — from 10-K major-product-category table ★</h3>
+<table>
+<thead>
+<tr>
+<th>FY</th>
+<th>Data Center $</th>
+<th>DC % of rev</th>
+<th>CATV $</th>
+<th>CATV %</th>
+<th>Total Rev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023</td>
+<td>$141.213 million</td>
+<td>64.9%</td>
+<td>$59.942 million</td>
+<td>27.5%</td>
+<td>$217.646 million</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>$148.525 million</td>
+<td>59.5%</td>
+<td>$87.713 million</td>
+<td>35.2%</td>
+<td>$249.365 million</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>$195.651 million</td>
+<td>42.9%</td>
+<td>$245.124 million</td>
+<td>53.8%</td>
+<td>$455.715 million</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>◆ FY2025 total revenue <strong>+82.8% YoY</strong> ($249.4M → <span
+class="math inline">455.7<em>M</em>).<em>D</em><em>a</em><em>t</em><em>a</em><em>c</em><em>e</em><em>n</em><em>t</em><em>e</em><em>r</em><em>g</em><em>r</em><em>e</em><em>w</em> * * + 31.7</span>148.5M
+→ <span
+class="math inline">195.7<em>M</em>)<em>b</em><em>u</em><em>t</em><em>i</em><em>t</em><em>s</em> * <em>s</em><em>h</em><em>a</em><em>r</em><em>e</em><em>f</em><em>e</em><em>l</em><em>l</em> * <em>t</em><em>o</em>42.9</span>87.7M
+→ $245.1M) and became the #1 market. ★ FY2025 10-K: the 82.8% increase
+"was driven primarily by increased demands both for our CATV products
+and internet data center products ... arising from demand for products
+necessary for new data center construction along with data center
+upgrades to enable new technologies like AI."</li>
+</ul>
+<h3 id="c2-quarterly-data-center-revenue-m---of-total-">C.2 Quarterly
+Data-Center revenue ($M / % of total) ★</h3>
+<p>(From the 10-Q end-market tables; cross-referenced with
+<code>21_quarterly_trajectory.md</code>.)</p>
+<table>
+<thead>
+<tr>
+<th>Quarter</th>
+<th>Data Center $M</th>
+<th>DC % of rev</th>
+<th>Total Rev $M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023Q1</td>
+<td>20.4</td>
+<td>38.4%</td>
+<td>53.0</td>
+</tr>
+<tr>
+<td>2023Q2</td>
+<td>27.6</td>
+<td>66.2%</td>
+<td>41.6</td>
+</tr>
+<tr>
+<td>2023Q3</td>
+<td>48.8</td>
+<td>78.0%</td>
+<td>62.5</td>
+</tr>
+<tr>
+<td>2024Q1</td>
+<td>29.0</td>
+<td>71.2%</td>
+<td>40.7</td>
+</tr>
+<tr>
+<td>2024Q2</td>
+<td>34.4</td>
+<td>79.4%</td>
+<td>43.3</td>
+</tr>
+<tr>
+<td>2024Q3</td>
+<td>40.9</td>
+<td>62.8%</td>
+<td>65.2</td>
+</tr>
+<tr>
+<td>2025Q1</td>
+<td>32.0</td>
+<td>32.1%</td>
+<td>99.9</td>
+</tr>
+<tr>
+<td>2025Q2</td>
+<td>44.8</td>
+<td>43.5%</td>
+<td>103.0</td>
+</tr>
+<tr>
+<td>2025Q3</td>
+<td>43.9</td>
+<td>37.0%</td>
+<td>118.6</td>
+</tr>
+<tr>
+<td><strong>2026Q1</strong></td>
+<td><strong>81.4</strong></td>
+<td><strong>53.9%</strong></td>
+<td><strong>151.1</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>★ <strong>Q1-2026 is the data-center inflection:</strong> Data
+Center $81.404 million (53.9%) vs Q1-2025 <span
+class="math inline">32.049<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em>(32.1</span>49.4
+million, +154.0% YoY** (Q1-2026 10-Q MD&amp;A). Data center re-took the
+#1 spot from CATV. Total revenue +51.4% YoY to $151.144 million.</li>
+<li>★ Q1-2026 MD&amp;A attribution: "the volume increase was primarily
+attributable to <strong>stronger customer demand and increased purchases
+from large data center customers to support ongoing capacity expansion
+and network infrastructure upgrades.</strong> ... management expects
+these demand trends to continue for the foreseeable future, subject to
+customer deployment timing, supply chain conditions..."</li>
+</ul>
+<h3 id="c3-management-guidance-on-data-center--ai-demand">C.3 Management
+guidance on data-center / AI demand</h3>
+<ul>
+<li>★ FY2025 10-K: "Based on customer forecasts and order backlog we
+believe that this <strong>elevated data center demand will likely
+continue into 2026.</strong> We also believe that sales in our CATV
+market will increase in 2026." Plus the 800G-overtakes-400G "later in
+2026" call (§A.1).</li>
+<li>★ Q1-2026 10-Q: demand trends "expected to continue for the
+foreseeable future" — but flags <strong>tariff / trade-policy /
+geopolitical risk</strong> that "may adversely affect customer demand,
+including demand from hyperscale data center customers, and could result
+in delays or reductions in customer orders" (new risk language vs the
+10-K).</li>
+<li>◇ / Not disclosed: no explicit forward revenue dollar guidance
+appears in the 10-K/10-Q (quarterly guidance lives in the furnished
+earnings-release exhibits, which are not cached here).</li>
+</ul>
+<h3 id="c4-caveat--quality-of-the-data-center-ai-story">C.4 Caveat /
+quality of the data-center "AI" story</h3>
+<ul>
+<li>◆ Despite the AI narrative, <strong>2025's growth engine was
+CATV/Digicomm, not hyperscaler optics.</strong> Data-center revenue grew
+a respectable +31.7% in FY2025 but its share <em>fell</em>; the
+explosive line was CATV. Only in <strong>Q1-2026</strong> did data
+center re-accelerate hard (+154% YoY). The single biggest balance-sheet
+risk remains <strong>Digicomm</strong> ($222.7M of $299.0M AR = 74.5% at
+3/31/2026), a CATV distributor — not the AI/hyperscaler story the
+multiple implies. ★</li>
+</ul>
+<p class="disc">免责声明：本文基于 SEC EDGAR 公开文件，纯属个人学习研究，不构成任何投资建议。
+来源标注 ★SEC直接披露 ◆公式计算 ◇第三方 ▽推算。数据可能过时，请以最新 filing 为准。</p>
+</main></body></html>

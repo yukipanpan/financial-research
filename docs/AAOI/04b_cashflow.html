@@ -1,0 +1,565 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/style.css"><title>现金流/应收/存货深度 · AAOI</title>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+</script></head><body><main><p class="nav"><a href="index.html">🏠 AAOI 首页</a> · <a href="report.html">📊 整合报告</a> · <a href="CHANGELOG.html">📜 更新日志</a></p><p class="meta">数据截止：FY2025 10-K (2026-02-26) + Q1-2026 10-Q (2026-05-07)　·　最后更新：2026-05-30　·　版本：v2.0　·　来源：SEC EDGAR</p><h1 id="aaoi--cash-flow--working-capital-deep-read">AAOI — Cash Flow
+&amp; Working-Capital DEEP Read</h1>
+<p><strong>Applied Optoelectronics, Inc. (AAOI) · CIK 1158114</strong>
+Source filings (cached full text):</p>
+<ul>
+<li>FY2025 10-K — <code>data/raw/_adhoc/aaoi20251231_10k.htm.txt</code>
+(period ended Dec 31, 2025)</li>
+<li>Q1-2026 10-Q — <code>data/raw/_adhoc/aaoi20260331_10q.htm.txt</code>
+(period ended Mar 31, 2026)</li>
+<li>FY2024 10-K — <code>data/raw/_adhoc/aaoi20241231_10k.htm.txt</code>
+(period ended Dec 31, 2024)</li>
+</ul>
+<p>Legend: ★ = stated in filing (filing + Note tagged) · ◆ = computed by
+analyst (formula shown) · "Not disclosed" = genuinely absent. All
+dollars stated in full. (One reference conversion: $222.7 million =
+$0.2227 billion.)</p>
+<hr />
+<h2
+id="task-1--accounts-receivable-credit-risk--the-digicomm-concentration">TASK
+1 — Accounts Receivable, Credit Risk &amp; the Digicomm
+Concentration</h2>
+<h3 id="11-gross--net-ar-and-the-allowance-for-credit-losses">1.1 Gross
+/ net AR and the allowance for credit losses</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>FY2023</th>
+<th>FY2024</th>
+<th>FY2025</th>
+<th>Q1-2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accounts receivable, net (balance sheet)</td>
+<td><span class="math inline">48, 071<em>K</em>(</span>48.1M) ★</td>
+<td><span class="math inline">116, 801<em>K</em>(</span>116.8M) ★</td>
+<td><span class="math inline">244, 404<em>K</em>(</span>244.4M) ★</td>
+<td><span class="math inline">298, 996<em>K</em>(</span>299.0M) ★</td>
+</tr>
+<tr>
+<td>Allowance for credit losses (balance)</td>
+<td>$3K ★</td>
+<td>$1K ★</td>
+<td>Not separately disclosed in FY25 BS ▽</td>
+<td>Not separately disclosed ▽</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>★ FY2024 10-K balance sheet: "Accounts receivable — trade,
+<strong>net of allowance of $1 and <span class="math inline">$3**,
+respectively" (FY2024 / FY2023). So the allowance balance is essentially
+de minimis — **$</span>1 thousand at Dec 31, 2024</strong> and
+<strong>$3 thousand at Dec 31, 2023</strong>.</li>
+<li>▽ The FY2025 10-K balance sheet line reads simply "Accounts
+receivable, net 244,404" without an inline allowance figure; the Q1-2026
+10-Q likewise shows "Accounts receivable, net 298,996 / 244,404" with no
+inline allowance. The allowance is so small it rounds away at the
+$-thousand presentation level. <strong>Gross AR is therefore effectively
+equal to net AR</strong> for FY2025 and Q1-2026 (allowance ≈
+$0–1K).</li>
+<li>★ Accounting policy (FY2025 10-K Note 7, "Accounts Receivable /
+Allowance for Doubtful Accounts" + Note 8 Concentration): "The Company
+carries its accounts receivable at the net amount that it estimates to
+be collectible… estimates its allowance for the credit losses based on
+historical collection, the age of outstanding receivables of the
+customer, existing economic conditions and reasonable forecasts."</li>
+</ul>
+<h3
+id="12-bad-debt-expense--write-offs-cash-flow-statement-add-back">1.2
+Bad-debt expense / write-offs (cash-flow statement add-back)</h3>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Allowance for credit losses / bad-debt (CF add-back)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2023</td>
+<td>$(24)K ★ (recovery)</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td>$(2)K ★ (recovery)</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td>$4K ★ (expense)</td>
+</tr>
+<tr>
+<td>Q1-2025</td>
+<td>$0 ★</td>
+</tr>
+<tr>
+<td>Q1-2026</td>
+<td>$8K ★</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>★ FY2025 10-K cash-flow statement: "Allowance for credit losses
+<strong>4</strong> (2) (24)" for FY2025/FY2024/FY2023 (in $
+thousands).</li>
+<li>★ Q1-2026 10-Q cash-flow statement: "Allowance for bad debt
+<strong>8</strong> —" (Q1-2026 / Q1-2025), i.e. $8K expense vs $0.</li>
+<li><strong>Interpretation:</strong> despite an AR book that ballooned
+from $116.8M to $299.0M, recognized bad-debt expense is trivial
+(low-single-digit $ thousands). ★ FY2025 10-K Note 8: "The historical
+amount of losses on uncollectible accounts has been within the Company's
+estimates." No write-offs of receivables disclosed.</li>
+</ul>
+<h3 id="13-customer-concentration--digicomm-international-inc">1.3
+Customer concentration — Digicomm International Inc.</h3>
+<p><strong>Revenue concentration ★:</strong></p>
+<ul>
+<li>FY2025 (10-K Note 8): Digicomm = <strong>53.1%</strong> of revenue;
+Microsoft = <strong>28.8%</strong>; top-five customers =
+<strong>95.2%</strong>.</li>
+<li>FY2024 (10-K Note 8): Microsoft = <strong>43.7%</strong>; Digicomm =
+<strong>35.1%</strong>; Oracle = <strong>12.4%</strong>; top-five =
+<strong>92.9%</strong>.</li>
+<li>FY2023: Microsoft 46.6%, ATX 15.6%, Digicomm 11.3%; top-five
+85.6%.</li>
+<li>Q1-2026 (10-Q MD&amp;A): revenues from Digicomm ≈ <strong>$66.7
+million, ≈ 44.1% of consolidated revenue</strong>, "primarily
+attributable to the CATV product category." Top-ten customers =
+<strong>98%</strong> of revenue (vs 97% in Q1-2025).</li>
+</ul>
+<p><strong>AR concentration ★:</strong></p>
+<ul>
+<li>Dec 31, 2025 (FY2025 10-K Note 8): Digicomm = <strong>71.6%</strong>
+of total AR; Microsoft = <strong>13.9%</strong>; five largest receivable
+balances = <strong>94.0%</strong> of total AR.</li>
+<li>Dec 31, 2024: Digicomm = <strong>66.6%</strong> of total AR;
+Microsoft = <strong>16.8%</strong>; five largest =
+<strong>95.5%</strong>.</li>
+<li>Dec 31, 2023: Digicomm = <strong>35.2%</strong>; ATX =
+<strong>21.4%</strong>; five largest = <strong>75.4%</strong>.</li>
+<li><strong>Mar 31, 2026 (Q1-2026 10-Q Note 9, Customer Concentration):
+"$222.7 million was due from Digicomm International Inc." out of total
+AR of $299.0 million → Digicomm ≈ 74.5% of total accounts
+receivable.</strong> ★</li>
+</ul>
+<p>◆ Digicomm AR / total AR (Q1-2026) = 222.7 / 299.0 =
+<strong>74.5%</strong> (matches filing's stated 74.5% ★ — cross-check
+passes).</p>
+<h3 id="14-payment-terms--digicomm-is-on-extended-terms-confirmed-">1.4
+Payment terms — Digicomm IS on EXTENDED terms (confirmed ★)</h3>
+<ul>
+<li>★ Q1-2026 10-Q Note 9 (Customer Concentration), verbatim:
+"<strong>Management has extended longer than typical payment terms to
+Digicomm</strong> in order to ensure Digicomm has adequate inventory on
+hand to quickly provide products to customers when needed for their
+network builds. The Company has a multi-year history with Digicomm and
+over this period the Company's collection experience has been good.
+Digicomm's payment history has generally been relatively consistent over
+time… Management expects Accounts Receivable concentration with Digicomm
+to decline" as data-center customers grow. "The Company… does not
+believe this concentration will create a material credit-risk."</li>
+<li>The specific net-X day count (net 30/60/90) for Digicomm or any
+customer is <strong>Not disclosed</strong> numerically — the filing only
+characterizes them qualitatively as "longer than typical." The company
+"generally does not require deposits or collateral to support customer
+receivables" ★ (FY2025 10-K Note 8).</li>
+</ul>
+<h3 id="15-dso-days-sales-outstanding---computed">1.5 DSO (days sales
+outstanding) — ◆ computed</h3>
+<p>◆ <strong>Q1-2026 DSO = AR ÷ quarterly revenue × 91 = $298.996M ÷
+$151.144M × 91 = 180.0 days.</strong></p>
+<p>Decomposition (◆, using Digicomm sub-figures):</p>
+<ul>
+<li>◆ Digicomm-only DSO = $222.7M ÷ $66.7M × 91 = <strong>≈ 304
+days</strong> (AR is ~3.3× one quarter of Digicomm revenue — consistent
+with the "extended terms" admission).</li>
+<li>◆ Non-Digicomm DSO = ($299.0M − <span
+class="math inline">222.7<em>M</em>) ÷ (</span>151.144M − $66.7M) × 91 =
+$76.3M ÷ $84.4M × 91 = <strong>≈ 82 days</strong> (normal-ish).</li>
+<li>◆ FY2025 annual DSO = $244.404M ÷ $455.715M × 365 = <strong>≈ 196
+days</strong>; ◆ FY2024 = $116.801M ÷ $249.365M × 365 = <strong>≈ 171
+days</strong>.</li>
+</ul>
+<p><strong>Takeaway:</strong> the blended 180-day Q1-2026 DSO is almost
+entirely a Digicomm artifact — receivables from Digicomm equate to
+roughly three quarters of sales to that customer, while the rest of the
+book turns in ~82 days. This is a vendor-financing-like arrangement
+(AAOI funds Digicomm's channel inventory) booked as ordinary trade
+AR.</p>
+<h3 id="16-factoring--receivables-financing">1.6 Factoring / receivables
+financing</h3>
+<ul>
+<li><strong>None disclosed.</strong> Searches for "factor", "pledge",
+"assign receivable", "securitiz" return no receivables-financing
+arrangement in the FY2025 10-K. (Note: the company does pledge
+<strong>bank deposits</strong> as collateral for <em>bank acceptance
+notes issued to vendors</em> — that is a payables/AP-side item, not AR
+financing.) "Not disclosed / none" for AR factoring.</li>
+</ul>
+<hr />
+<h2
+id="task-2--depreciation-timing-construction-in-progress-cip--capacity">TASK
+2 — Depreciation Timing, Construction-in-Progress (CIP) &amp;
+Capacity</h2>
+<h3
+id="21-ppe-detail-in--thousands---fy2025-10-k-note-property-plant--equipment-q1-2026-10-q-note-8">2.1
+PP&amp;E detail (in $ thousands) ★ — FY2025 10-K Note (Property, Plant
+&amp; Equipment); Q1-2026 10-Q Note 8</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>FY2023</th>
+<th>FY2024</th>
+<th>FY2025</th>
+<th>Q1-2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Land improvements</td>
+<td>806</td>
+<td>806</td>
+<td>806</td>
+<td>806</td>
+</tr>
+<tr>
+<td>Buildings &amp; improvements</td>
+<td>86,534</td>
+<td>118,648</td>
+<td>138,163</td>
+<td>140,694</td>
+</tr>
+<tr>
+<td>Machinery &amp; equipment</td>
+<td>257,842</td>
+<td>275,617</td>
+<td>404,145</td>
+<td>439,701</td>
+</tr>
+<tr>
+<td>Furniture &amp; fixtures</td>
+<td>5,449</td>
+<td>5,150</td>
+<td>6,974</td>
+<td>7,265</td>
+</tr>
+<tr>
+<td>Computer equipment &amp; software</td>
+<td>12,059</td>
+<td>13,369</td>
+<td>17,180</td>
+<td>18,113</td>
+</tr>
+<tr>
+<td>Transportation equipment</td>
+<td>673</td>
+<td>647</td>
+<td>786</td>
+<td>854</td>
+</tr>
+<tr>
+<td><strong>Gross depreciable PP&amp;E</strong></td>
+<td>363,363</td>
+<td>414,237</td>
+<td>568,054</td>
+<td>607,433</td>
+</tr>
+<tr>
+<td>Less accumulated depreciation</td>
+<td>(194,086)</td>
+<td>(204,500)</td>
+<td>(232,913)</td>
+<td>(241,018)</td>
+</tr>
+<tr>
+<td>Depreciable PP&amp;E, net</td>
+<td>169,277</td>
+<td>209,737</td>
+<td>335,141</td>
+<td>366,415</td>
+</tr>
+<tr>
+<td><strong>Construction in progress (CIP)</strong></td>
+<td><strong>29,939</strong></td>
+<td><strong>8,397</strong></td>
+<td><strong>39,808</strong></td>
+<td><strong>51,487</strong></td>
+</tr>
+<tr>
+<td>Land</td>
+<td>1,101</td>
+<td>1,101</td>
+<td>1,101</td>
+<td>1,101</td>
+</tr>
+<tr>
+<td><strong>Total PP&amp;E, net</strong></td>
+<td><strong>200,317</strong></td>
+<td><strong>219,235</strong></td>
+<td><strong>376,050</strong></td>
+<td><strong>419,003</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>★ CIP FY2025 = <strong><span
+class="math inline">39, 808<em>K</em>(</span>39.8M)</strong> (matches
+synthesis ~<span
+class="math inline">39.8<em>M</em>); <em>F</em><em>Y</em>2024 = **</span>8,397K
+(<span
+class="math inline">8.4<em>M</em>) * *; <em>u</em><em>p</em><em>f</em><em>u</em><em>r</em><em>t</em><em>h</em><em>e</em><em>r</em><em>t</em><em>o</em> * *</span>51,487K
+($51.5M)** at Mar 31, 2026.</li>
+<li>★ Total net PP&amp;E: FY2024 <span
+class="math inline">219, 235<em>K</em>(</span>219.2M) → FY2025 <span
+class="math inline">376, 050<em>K</em>(</span>376.1M) → Q1-2026 <span
+class="math inline">419, 003<em>K</em>(</span>419.0M).</li>
+<li>★ Gross depreciable PP&amp;E: FY2024 $414,237K → FY2025 <span
+class="math inline">568, 054<em>K</em>(+</span>153.8M of additions
+placed in service).</li>
+</ul>
+<h3 id="22-when-depreciation-starts--cip-is-not-yet-depreciating">2.2
+When depreciation starts — CIP is NOT yet depreciating</h3>
+<ul>
+<li>★ FY2025 10-K (PP&amp;E accounting policy): "Construction in
+progress represents property, plant and equipment under construction or
+being installed… <strong>Construction in progress is transferred to the
+appropriate fixed asset account and depreciation commences when the
+asset has been substantially completed and placed in
+service.</strong>"</li>
+<li><strong>Therefore the $39.8M (FY2025) / $51.5M (Q1-2026) of CIP
+carries zero accumulated depreciation and is NOT yet hitting the
+P&amp;L.</strong> ◆ CIP = 6.5% of gross PP&amp;E at FY2025 (39.808 /
+(568.054 + 39.808 + 1.101)). As this CIP is placed in service,
+depreciation expense will step up — a forward drag on gross margin not
+yet reflected in current D&amp;A.</li>
+<li>★ No capitalized interest in FY2025/FY2024/FY2023 ("there was no
+capitalized interest").</li>
+</ul>
+<h3 id="23-depreciation--amortization">2.3 Depreciation &amp;
+amortization</h3>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>PP&amp;E depreciation expense ★</th>
+<th>D&amp;A in cash-flow statement ★</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2022</td>
+<td>$22.6M</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td>$19.7M</td>
+<td><span class="math inline">20, 427<em>K</em>(</span>20.4M)</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td>$20.2M</td>
+<td><span class="math inline">20, 649<em>K</em>(</span>20.6M)</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td>$27.2M</td>
+<td><span class="math inline">27, 696<em>K</em>(</span>27.7M)</td>
+</tr>
+<tr>
+<td>Q1-2025</td>
+<td>$5.6M</td>
+<td><span class="math inline">5, 725<em>K</em>(</span>5.7M)</td>
+</tr>
+<tr>
+<td>Q1-2026</td>
+<td>$9.1M</td>
+<td><span class="math inline">9, 229<em>K</em>(</span>9.2M)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>★ FY2025 10-K: "depreciation expense of property, plant and
+equipment was **$27.2 million, $20.2 million and <span
+class="math inline">$19.7 million**" (FY2025/24/23). Q1-2026 10-Q:
+"$</span>9.1 million and $5.6 million" (Q1-26/Q1-25) — D&amp;A roughly
++63% YoY as the recent capex base begins depreciating.</li>
+</ul>
+<h3
+id="24-capacity-utilization--fixed-overhead-absorption-commentary">2.4
+Capacity utilization / fixed-overhead absorption commentary</h3>
+<ul>
+<li>★ FY2025 10-K (Risk Factors): "We have a <strong>high fixed cost
+base due to our vertically integrated business model</strong>, including
+the fact that <strong>4,116 of our employees as of December 31, 2025
+were employed in manufacturing and R&amp;D</strong>… Our gross profit
+and gross margin are greatly affected by our sales volume and volatility
+on a quarterly basis and the <strong>corresponding absorption of fixed
+manufacturing overhead expenses.</strong> … insufficient demand… may
+subject us to the risk of high inventory carrying costs and increased
+inventory obsolescence."</li>
+<li>★ FY2025 gross-margin MD&amp;A (the <em>positive</em> absorption
+story): the improvement in gross margin FY2024→FY2025 "was primarily
+driven by <strong>larger scale production of our CATV products, which
+resulted in improved manufacturing efficiencies and lower cost
+variances.</strong>" → operating leverage / better fixed-overhead
+absorption as CATV volume scaled.</li>
+<li>★ Margin trajectory (income statement): gross margin <strong>24.8%
+(FY2024) → 30.0% (FY2025)</strong>; COGS as % of revenue 75.2% → 70.0%.
+Q1-2026 gross margin <strong>29.1%</strong> vs Q1-2025
+<strong>30.6%</strong> (slight sequential give-back; COGS 70.9% vs
+69.4%).</li>
+<li>★ COGS bridge FY2024→FY2025: "+$131.2M, or 70.0%… primarily
+attributable to higher direct material and direct labor costs associated
+with increased revenue volumes, <strong>as well as an increase in
+inventory reserves</strong>… consistent with the higher inventory levels
+and overall business expansion."</li>
+<li>No explicit numeric "% capacity utilization" metric is disclosed.
+"Not disclosed" for a quantified utilization rate; commentary is
+qualitative (absorption tied to volume).</li>
+</ul>
+<hr />
+<h2 id="task-3--inventory-detail">TASK 3 — Inventory Detail</h2>
+<h3
+id="31-inventory-by-category-in--thousands---fy2025-10-k-note-9-q1-2026-10-q-note-7">3.1
+Inventory by category (in $ thousands) ★ — FY2025 10-K Note 9; Q1-2026
+10-Q Note 7</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>FY2023</th>
+<th>FY2024</th>
+<th>FY2025</th>
+<th>Q1-2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raw materials</td>
+<td>22,128</td>
+<td>50,379</td>
+<td>85,740</td>
+<td>98,672</td>
+</tr>
+<tr>
+<td>Work in process &amp; sub-assemblies</td>
+<td>33,792</td>
+<td>35,716</td>
+<td>95,538</td>
+<td>120,482</td>
+</tr>
+<tr>
+<td>Finished goods</td>
+<td>22,452</td>
+<td>17,291</td>
+<td>18,822</td>
+<td>6,555</td>
+</tr>
+<tr>
+<td><strong>Allowance for inventory (reserve)</strong></td>
+<td><strong>(14,506)</strong></td>
+<td><strong>(15,251)</strong></td>
+<td><strong>(16,995)</strong></td>
+<td><strong>(19,463)</strong></td>
+</tr>
+<tr>
+<td><strong>Total inventories, net</strong></td>
+<td><strong>63,866</strong></td>
+<td><strong>88,135</strong></td>
+<td><strong>183,105</strong></td>
+<td><strong>206,246</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>★ Inventory more than doubled FY2024→FY2025 ($88.1M → <span
+class="math inline">183.1<em>M</em>), <em>d</em><em>r</em><em>i</em><em>v</em><em>e</em><em>n</em><em>b</em><em>y</em><em>r</em><em>a</em><em>w</em><em>m</em><em>a</em><em>t</em><em>e</em><em>r</em><em>i</em><em>a</em><em>l</em><em>s</em>(+</span>35.4M)
+and WIP/sub-assemblies (+<span
+class="math inline">59.8<em>M</em>).<em>A</em><em>t</em><em>Q</em>1 − 2026, <em>W</em><em>I</em><em>P</em>(</span>120.5M)
+now exceeds raw materials (<span
+class="math inline">98.7<em>M</em>)<em>a</em><em>n</em><em>d</em><em>d</em><em>w</em><em>a</em><em>r</em><em>f</em><em>s</em><em>f</em><em>i</em><em>n</em><em>i</em><em>s</em><em>h</em><em>e</em><em>d</em><em>g</em><em>o</em><em>o</em><em>d</em><em>s</em>(</span>6.6M)
+— consistent with a heavy production ramp feeding the Digicomm CATV
+channel and data-center demand rather than building finished-goods
+stock.</li>
+</ul>
+<h3 id="32-excess--obsolete-reserve-and-write-downs-">3.2 Excess &amp;
+obsolete reserve and write-downs ★</h3>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>E&amp;O reserve charge expensed ★</th>
+<th>Direct inventory write-offs (scrap/discontinued/damaged) ★</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2022</td>
+<td>$4.9M</td>
+<td>$10.4M</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td>$8.7M</td>
+<td>$10.6M</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td>$3.4M</td>
+<td>$3.8M</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td>$9.7M</td>
+<td>$9.4M</td>
+</tr>
+<tr>
+<td>Q1-2025</td>
+<td>$1.9M</td>
+<td>$0.9M</td>
+</tr>
+<tr>
+<td>Q1-2026</td>
+<td>$2.4M</td>
+<td>$2.3M</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>★ FY2025 10-K Note 9: "we recorded excess and obsolete inventory
+reserve charges of <strong>$9.7 million, $3.4 million and <span
+class="math inline">$8.7 million**" (FY2025/24/23); "direct inventory
+write-offs related to scrap, discontinued products and damaged
+inventories were **$</span>9.4 million, $3.8 million and $10.6
+million.</strong>"</li>
+<li>★ Q1-2026 10-Q Note 7: inventory reserve adjustment expensed =
+<strong>$2.4M (Q1-26) vs <span
+class="math inline">1.9<em>M</em>(<em>Q</em>1 − 25) * *; <em>d</em><em>i</em><em>r</em><em>e</em><em>c</em><em>t</em><em>w</em><em>r</em><em>i</em><em>t</em><em>e</em> − <em>o</em><em>f</em><em>f</em><em>s</em> = **</span>2.3M
+vs $0.9M</strong>.</li>
+<li>Cash-flow add-back "Inventory reserve adjustment" ★: FY2025 $7,799K,
+FY2024 $3,434K, FY2023 $8,728K; Q1-2026 $2,436K, Q1-2025 $1,872K.</li>
+<li>★ Policy (FY2025 10-K Note 9): inventory at "lower of cost
+(average-cost method) or net realizable value"; WIP and finished goods
+"include materials, labor and <strong>allocated overhead</strong>."
+Reserve built from product-lifespan analysis, historical write-off/scrap
+review, and engineer obsolescence assessment.</li>
+</ul>
+<hr />
+<p><em>Computed (◆) figures use full-precision balance-sheet inputs in $
+millions; rounding shown. Cross-checks: Digicomm AR % (◆74.5% vs ★74.5%)
+and PP&amp;E roll-forward (gross + CIP + land = net) both tie
+out.</em></p>
+<p class="disc">免责声明：本文基于 SEC EDGAR 公开文件，纯属个人学习研究，不构成任何投资建议。
+来源标注 ★SEC直接披露 ◆公式计算 ◇第三方 ▽推算。数据可能过时，请以最新 filing 为准。</p>
+</main></body></html>

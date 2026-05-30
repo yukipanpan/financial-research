@@ -1,0 +1,524 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/style.css"><title>术语表 + 产业链地图 · AAOI</title>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+</script></head><body><main><p class="nav"><a href="index.html">🏠 AAOI 首页</a> · <a href="report.html">📊 整合报告</a> · <a href="CHANGELOG.html">📜 更新日志</a></p><p class="meta">数据截止：FY2025 10-K (2026-02-26) + Q1-2026 10-Q (2026-05-07)　·　最后更新：2026-05-30　·　版本：v2.0　·　来源：SEC EDGAR</p><h1
+id="17_glossary_value_chainmd--aaoi-术语表--产业链地图档案">17_glossary_value_chain.md
+— AAOI 术语表 + 产业链地图档案</h1>
+<blockquote>
+<p>Company Analysis Skill 强制档案（对应铁律 9） 公司：Applied
+Optoelectronics, Inc.（AAOI）· CIK 1158114
+目的：分析正文里出现的每个专业术语都「科普 + 定位产业链 +
+说清对本公司的意义」；并画出本公司在产业链中的位置。 来源标注：★ = SEC
+filings 直接披露（FY2025 10-K：<a
+href="https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm）；▽">https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm）；▽</a>
+= 行业知识判断。 <strong>不构成投资建议。</strong></p>
+</blockquote>
+<hr />
+<h2 id="part-1--术语表每个术语三件套">Part 1 —
+术语表（每个术语三件套）</h2>
+<blockquote>
+<p>三件套 = (a) 大白话科普　(b) 产业链环节（上游/中游/下游 +
+上下游是谁）　(c) 对本公司的意义（钱从哪进 / 成本在哪 /
+形成什么壁垒）。</p>
+</blockquote>
+<h3 id="a-光学--技术类">A. 光学 / 技术类</h3>
+<table>
+<thead>
+<tr>
+<th>术语 / 缩写</th>
+<th>全称</th>
+<th>(a) 大白话是什么</th>
+<th>(b) 产业链环节（上游/中游/下游）</th>
+<th>(c) 对 AAOI 的意义</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>光模块 / Optical Transceiver</td>
+<td>光收发模块</td>
+<td>一个能把电信号转成激光、再把收到的激光转回电信号的小盒子，插在交换机/服务器上让数据走光纤而不是铜线</td>
+<td>中游成品。上游=激光芯片/InP/GaAs
+晶圆、DSP；下游=云厂商/电信/有线运营商</td>
+<td><strong>AAOI
+的主力产品</strong>，营收主体。卖给数据中心/CATV/电信</td>
+<td>★ 10-K Item 1</td>
+</tr>
+<tr>
+<td>VCSEL</td>
+<td>Vertical-Cavity Surface-Emitting Laser（垂直腔面发射激光器）</td>
+<td>一种从芯片表面垂直发光的小激光器，便宜、易量产，多用于短距离（机房内）</td>
+<td>上游芯片，AAOI 自产</td>
+<td>AAOI 自有晶圆厂能造，是垂直整合的一环，省外购成本</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>DFB Laser</td>
+<td>Distributed Feedback Laser（分布反馈激光器）</td>
+<td>发出单一纯净波长的激光器，适合中长距离传输，比 VCSEL 走得远</td>
+<td>上游芯片，AAOI 自产</td>
+<td>中长距数据中心/电信模块的核心料件，自产=控成本+控供应</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>EML</td>
+<td>Electro-absorption Modulated Laser（电吸收调制激光器）</td>
+<td>把激光器和「调制器」做在一颗芯片上，能高速开关光、跑超高速率（800G/1.6T
+关键料）</td>
+<td>上游芯片，高端料；AAOI 在自研/自产</td>
+<td>高速光模块（AI 数据中心）的命门料件，谁有 EML 谁吃 800G/1.6T
+红利</td>
+<td>★ 10-K + ▽</td>
+</tr>
+<tr>
+<td>800G / 1.6T</td>
+<td>800 Gigabit / 1.6 Terabit per second</td>
+<td>模块的传输速率档位，数字越大单根光纤每秒能传越多数据；AI
+训练集群正从 400G→800G→1.6T 升级</td>
+<td>产品代际，跨上下游</td>
+<td>AAOI 数据中心业务能否吃到 AI 红利的关键，对应 Amazon/Microsoft
+放量节奏</td>
+<td>★ 10-K + ▽</td>
+</tr>
+<tr>
+<td>PAM4</td>
+<td>Pulse-Amplitude Modulation 4-level（四电平脉冲幅度调制）</td>
+<td>一种「一次发 2 个比特」的编码方式，让同样的激光跑出双倍速率，是
+800G+ 的标配技术</td>
+<td>技术口径，落在芯片/DSP 层</td>
+<td>决定 AAOI 高速模块的技术竞争力门槛</td>
+<td>▽</td>
+</tr>
+<tr>
+<td>DSP</td>
+<td>Digital Signal Processor（数字信号处理器）</td>
+<td>模块里的「大脑」芯片，负责把高速信号纠错、整形，保证长距离不失真</td>
+<td>上游芯片，<strong>通常外购</strong>（Marvell/Broadcom 等）</td>
+<td>AAOI 多需外采，是少数仍受制于上游的料件 → 议价权弱项</td>
+<td>▽</td>
+</tr>
+<tr>
+<td>Laser Chip / Die</td>
+<td>激光芯片 / 裸晶</td>
+<td>还没封装的激光器小方块（从晶圆上切下来的），是光模块最贵、最难做的核心</td>
+<td>上游，AAOI 自产</td>
+<td><strong>AAOI
+垂直整合的核心</strong>：自己造芯片再封装，毛利与差异化都在这</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>垂直整合</td>
+<td>Vertical Integration</td>
+<td>一家公司把「造芯片」和「封装模块」两个环节都自己做，不依赖外部芯片供应商</td>
+<td>商业模式，跨上游+中游</td>
+<td><strong>AAOI
+最大差异化</strong>：相对只做组装的同行，掌握芯片=控成本/控供应/护城河</td>
+<td>★ 10-K + ▽</td>
+</tr>
+<tr>
+<td>Foundry</td>
+<td>代工厂</td>
+<td>帮别人按图纸生产芯片/模块的工厂；这里指 Microsoft 把设计交给 AAOI
+代工</td>
+<td>商业关系，AAOI 充当中游代工方</td>
+<td>Microsoft Foundry SOW（2022）= 锁定订单的代工关系</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>Hyperscaler</td>
+<td>超大规模云厂商</td>
+<td>自建巨型数据中心的科技巨头（亚马逊、微软、谷歌、甲骨文），买光模块的最大金主</td>
+<td>下游最终客户</td>
+<td>AAOI 数据中心收入的付钱方；议价权极强（少数大买家）</td>
+<td>★ 10-K + ▽</td>
+</tr>
+<tr>
+<td>DCI</td>
+<td>Data Center Interconnect（数据中心互联）</td>
+<td>把分散在不同楼/不同城市的数据中心用光纤连起来的中长距光链路</td>
+<td>应用场景，需中长距模块（DFB/相干）</td>
+<td>AAOI 中长距产品的应用市场之一</td>
+<td>▽</td>
+</tr>
+<tr>
+<td>CATV</td>
+<td>Cable Television（有线电视网络）</td>
+<td>有线电视/宽带网络（同轴电缆 + 光纤混合）；AAOI
+给它供光发射/接收器件</td>
+<td>下游应用市场。客户=有线运营商(MSO)，渠道=经销商</td>
+<td><strong>2025 第一大收入引擎（53.8%）</strong>，由 DOCSIS 4.0
+升级周期驱动</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>DOCSIS 4.0</td>
+<td>Data Over Cable Service Interface Specification 4.0</td>
+<td>有线宽带的最新技术标准，让旧的有线电视网也能跑超高速上下行，运营商要换设备</td>
+<td>行业升级周期，拉动 CATV 器件需求</td>
+<td>AAOI 2025 CATV 爆发的根本驱动；周期一旦退潮收入会回落</td>
+<td>★ 10-K + ▽</td>
+</tr>
+<tr>
+<td>MSO</td>
+<td>Multiple System Operator（多系统有线运营商）</td>
+<td>同时运营多个城市有线电视/宽带网的大公司（如 Comcast、Charter），CATV
+的真实终端买家</td>
+<td>下游最终客户，AAOI 多经 Digicomm 间接触达</td>
+<td>AAOI 的 CATV 需求最终取决于 MSO
+的资本开支，但中间隔着经销商，可见度低</td>
+<td>★ 10-K + ▽</td>
+</tr>
+<tr>
+<td>FTTH</td>
+<td>Fiber To The Home（光纤到户）</td>
+<td>把光纤直接拉到每家每户的宽带接入方式</td>
+<td>下游应用市场（占比很小）</td>
+<td>AAOI 四大终端市场之一，但 2025 仅占 ~0.3%，非重点</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>5G Fronthaul / Transceiver</td>
+<td>5G 前传 / 收发器</td>
+<td>5G 基站里把天线和处理单元用光纤连起来的那段链路用的光模块</td>
+<td>下游电信应用市场</td>
+<td>对应 AAOI「电信」终端市场（2025 ~3%），目前小</td>
+<td>▽</td>
+</tr>
+<tr>
+<td>CPO</td>
+<td>Co-Packaged Optics（共封装光学）</td>
+<td>把光引擎直接封到交换芯片旁边（不再做成可插拔模块）的下一代技术，降功耗</td>
+<td>前沿技术趋势，可能颠覆「可插拔模块」格局</td>
+<td>▽ 既是机会（自有芯片利于 CPO）也是威胁（若行业转
+CPO，传统模块需求受冲击）</td>
+<td>▽</td>
+</tr>
+<tr>
+<td>MOCVD</td>
+<td>Metal-Organic Chemical Vapor Deposition（金属有机化学气相沉积）</td>
+<td>在晶圆上一层层「长」出半导体薄膜的设备/工艺，是造激光芯片的关键产线设备</td>
+<td>上游设备/工艺</td>
+<td>AAOI 自产芯片必须的核心设备，是其 Capex 重资产的一部分</td>
+<td>▽</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b-客户--渠道类">B. 客户 / 渠道类</h3>
+<table>
+<thead>
+<tr>
+<th>术语 / 缩写</th>
+<th>全称</th>
+<th>(a) 大白话是什么</th>
+<th>(b) 产业链环节</th>
+<th>(c) 对 AAOI 的意义</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digicomm</td>
+<td>Digicomm International</td>
+<td>AAOI 把 CATV
+器件卖给它、再由它转卖给有线运营商的<strong>经销商</strong>（中间商）</td>
+<td>下游渠道（非最终客户）</td>
+<td><strong>2025 占收入 53.1%、占应收
+71.6%（$222.7M）</strong>——最大收入来源 + 最大单点信用风险</td>
+<td>★ 10-K / Q1-26 10-Q</td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td>—</td>
+<td>超大规模云厂商，AAOI 数据中心大客户</td>
+<td>下游最终客户</td>
+<td>两份 5 年 SOW（2022 Foundry + 2023 Design/Assembly）；★
+<strong>持有控制权变更时的优先收购权(ROFR)</strong></td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>Amazon (AWS)</td>
+<td>—</td>
+<td>超大规模云厂商，2025 新签框架的数据中心大客户</td>
+<td>下游最终客户</td>
+<td>2025-03 Transaction Agreement：授予 794 万股认股权证，绑定最高
+<strong>$40 亿</strong> 累计采购逐步 vest</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>ATX Networks</td>
+<td>—</td>
+<td>CATV 设备商，2023 曾是 AAOI 第二大客户（15.6%）</td>
+<td>下游/渠道（CATV 链）</td>
+<td>历史 CATV 大客户，2024 后占比退出前列</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td>—</td>
+<td>超大规模云厂商，2024 曾占 12.4%</td>
+<td>下游最终客户</td>
+<td>数据中心客户之一，体现大客户来回轮动、集中度高</td>
+<td>★ 10-K</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c-财务--会计类">C. 财务 / 会计类</h3>
+<table>
+<thead>
+<tr>
+<th>术语 / 缩写</th>
+<th>全称</th>
+<th>(a) 大白话是什么</th>
+<th>(b) 产业链/财务环节</th>
+<th>(c) 对 AAOI 的意义</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ASC 606</td>
+<td>Accounting Standards Codification 606（收入确认准则）</td>
+<td>规定「什么时候、确认多少收入」的会计规则——必须在「控制权转移给客户」时确认</td>
+<td>财务口径</td>
+<td>AAOI 大多在<strong>发货时点</strong>确认收入；规则也管 Amazon
+权证如何冲减收入</td>
+<td>★ 10-K + ▽</td>
+</tr>
+<tr>
+<td>Contra-revenue</td>
+<td>冲减收入项</td>
+<td>不是费用，而是「从收入里直接扣掉」的项目；Amazon
+权证的成本就这样冲减销售额</td>
+<td>财务口径</td>
+<td>Amazon 认股权证按 <strong>equity-classified contra-revenue</strong>
+处理，FY25 仅冲减 $0.8M（immaterial）</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>Customer Warrant</td>
+<td>客户认股权证</td>
+<td>给大客户的「按约定价买公司股票的权利」，用来换取大额长期采购承诺（以股换单）</td>
+<td>财务/股权工具</td>
+<td>Amazon 794 万股 @ $23.6956、10 年期，随累计采购至 $40 亿逐步 vest →
+数据中心收入的看涨期权 + 未来稀释来源</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>Convertible Senior Notes</td>
+<td>可转换优先票据</td>
+<td>一种债：到期还钱，但债主也可选择按约定价换成股票；利率比普通债低</td>
+<td>资本结构（融资工具）</td>
+<td>仅剩 <strong>2030 Notes $125M（票息 2.75%，转股价
+$43.31）</strong>；2024/2026 Notes 已赎清。深度价内→未来转股稀释</td>
+<td>★ 10-K / Q1-26 10-Q</td>
+</tr>
+<tr>
+<td>ATM Offering</td>
+<td>At-the-Market Offering（随行就市增发）</td>
+<td>公司像散户一样在公开市场上「随时按市价」零碎卖新股融资，不搞集中大额发行</td>
+<td>资本结构（股权融资工具）</td>
+<td>AAOI <strong>累计 ATM ~$701M</strong>（均价 <span
+class="math inline">8.84→</span>15.13→$24.16），是股本两年 +176%
+的主因；额度已升至 $600M</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>Black-Scholes</td>
+<td>布莱克-斯科尔斯（期权定价模型）</td>
+<td>一个给「期权/权证」算理论价值的数学公式</td>
+<td>财务计量方法</td>
+<td>用于给 Amazon 权证、可转债转股权、股权激励定公允价值</td>
+<td>▽</td>
+</tr>
+<tr>
+<td>ICFR Material Weakness</td>
+<td>Internal Control over Financial Reporting Material
+Weakness（财务报告内控重大缺陷）</td>
+<td>公司内部「防做错账」的机制有大漏洞，可能导致财报出错</td>
+<td>财务治理</td>
+<td>2024 曾出现，<strong>2025 已 remediate（修复），并升级到 PwC（Big
+4）审计</strong>——已转绿</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>Point-in-Time Revenue Recognition</td>
+<td>时点法收入确认</td>
+<td>收入「一锤子」在某个时刻全确认（发货时），而非随时间分摊</td>
+<td>财务口径</td>
+<td>AAOI 多采时点法（发货确认）→ 收入随出货波动大，季度起伏明显</td>
+<td>★ 10-K + ▽</td>
+</tr>
+<tr>
+<td>RPO / Backlog</td>
+<td>Remaining Performance Obligations / 订单储备</td>
+<td>已签约但还没确认成收入的金额 = 「锁定的未来收入」</td>
+<td>财务口径，跨环节</td>
+<td>反映未来收入能见度；AAOI 客户集中 + 时点确认下，backlog
+质量取决于少数大客户</td>
+<td>▽</td>
+</tr>
+<tr>
+<td>Capex</td>
+<td>Capital Expenditure（资本开支）</td>
+<td>公司花在买地、建厂、买设备上的钱（不是日常费用）</td>
+<td>财务/重资产</td>
+<td><strong>FY25 Capex $179M、Capex/营收 39%</strong>（同业 3–8%）= 为
+AI 产能 + 去中国化的重资产豪赌</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>FCF</td>
+<td>Free Cash Flow（自由现金流）</td>
+<td>经营赚到的现金 − 资本开支 = 真正能自由支配的钱</td>
+<td>财务口径</td>
+<td><strong>三年累计 FCF −$484M</strong>；靠融资续命，是核心风险</td>
+<td>★ 10-K + ◆</td>
+</tr>
+<tr>
+<td>DSO</td>
+<td>Days Sales Outstanding（应收账款周转天数）</td>
+<td>卖出货后平均要多少天才收到钱；越长占用现金越多</td>
+<td>财务口径</td>
+<td>AR 暴涨（Q1-26 $299M，Digicomm 占 $222.7M）= DSO
+拉长、营运资金吞现金</td>
+<td>★ Q1-26 10-Q + ▽</td>
+</tr>
+<tr>
+<td>OCF</td>
+<td>Operating Cash Flow（经营现金流）</td>
+<td>公司日常经营实际收进/付出的现金净额</td>
+<td>财务口径</td>
+<td>FY25 −$174M，但几乎全是营运资金扩张（AR+存货），非经营失血</td>
+<td>★ 10-K</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-2--产业链地图光网络器件产业链红框--aaoi-所处环节">Part 2 —
+产业链地图（光网络器件产业链，红框 = AAOI 所处环节）</h2>
+<blockquote>
+<p>链条：上游（原材料 / 晶圆 / 设备）→ 中游（AAOI =
+垂直整合：自产激光芯片 + 封装模块）→ 下游（云厂商 / 有线运营商 /
+电信）。</p>
+</blockquote>
+<pre class="mermaid">flowchart LR
+    subgraph UP["上游 · 原材料 / 设备 / 外购芯片"]
+        U1["GaAs / InP 晶圆 / 衬底<br/>(造激光芯片的基底)"]
+        U2["MOCVD 外延设备<br/>+ 芯片制造工具"]
+        U3["DSP 芯片 (外购)<br/>Marvell / Broadcom"]
+        U4["黄金 / 封装元件 / PCB"]
+    end
+
+    subgraph MID["★ 中游 · AAOI 所处环节 — 垂直整合"]
+        direction TB
+        M1["【AAOI · CIK 1158114】<br/>★ 自产激光芯片 VCSEL / DFB / EML<br/>★ 自有晶圆厂 (FAB) + MOCVD<br/>★ 封装成光收发模块 800G / 1.6T<br/>—— 差异化 = 拥有激光芯片，<br/>而非只做模块组装 ——"]
+    end
+
+    subgraph COMP["同环节竞争对手 (▽)"]
+        C1["Coherent (COHR) · 垂直整合"]
+        C2["Lumentum (LITE) · 偏芯片"]
+        C3["InnoLight 中际旭创 / <br/>Eoptolink 新易盛 (中国) · 模块组装"]
+        C4["Fabrinet (FN) · 纯代工组装"]
+    end
+
+    subgraph DOWN["下游 · 最终客户（谁付钱）"]
+        D1["数据中心 Hyperscalers<br/>Microsoft / Amazon / Oracle<br/>(2025 ~42.9% 收入)"]
+        D2["CATV 有线运营商 MSO<br/>经 Digicomm 经销商转售<br/>(2025 ~53.8% 收入, Digicomm 53.1%)"]
+        D3["电信运营商<br/>5G 前传 (~3%)"]
+        D4["FTTH 光纤到户 (~0.3%)"]
+    end
+
+    U1 --> M1
+    U2 --> M1
+    U3 --> M1
+    U4 --> M1
+    M1 --> D1
+    M1 --> D2
+    M1 --> D3
+    M1 --> D4
+    C1 -.竞争.- M1
+    C2 -.竞争.- M1
+    C3 -.竞争.- M1
+    C4 -.竞争.- M1
+
+    style M1 fill:#ffe6e6,stroke:#cc0000,stroke-width:4px
+    style MID fill:#fff5f5,stroke:#cc0000,stroke-width:2px</pre>
+<p><strong>文字骨架对照：</strong></p>
+<pre><code>[上游] GaAs/InP 晶圆衬底 + MOCVD 外延设备 + 外购 DSP + 黄金/封装件
+   │  卖给 AAOI 什么：晶圆、设备、DSP 大脑芯片、封装材料
+   │  占成本：原材料+人工为主；DSP 是少数仍受制于外部供应的料件 ▽
+   ▼
+[中游 / AAOI 所处环节] ★ AAOI：自产激光芯片(VCSEL/DFB/EML) → 封装成光模块
+   │  AAOI 做的增值：芯片设计+晶圆制造+模块封装一条龙（垂直整合）
+   │  主要竞争对手：Coherent、Lumentum、中际旭创/新易盛、Fabrinet
+   ▼
+[下游] 数据中心(Microsoft/Amazon/Oracle) + CATV(经 Digicomm 卖给 MSO) + 电信 + FTTH
+      AAOI 卖给他们什么：光收发模块、CATV 光器件
+      占收入：CATV ~53.8% / 数据中心 ~42.9% / 电信 ~3% / FTTH ~0.3%（2025）★</code></pre>
+<h3 id="本公司在链条中的位置判断">本公司在链条中的位置判断</h3>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>回答</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>处于上游 / 中游 / 下游？</td>
+<td><strong>中游（光器件/模块制造），但向上游延伸——自产激光芯片</strong>，因此跨「上游芯片
++ 中游模块」两环</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>议价权偏向上游还是下游？（谁卡谁脖子）</td>
+<td><strong>偏向下游（被客户卡脖子）</strong>：前五大客户 95.2%、前十
+98%，单一经销商 Digicomm 占收入 53% + 应收 72%；超大云厂商体量碾压
+AAOI。上游中 DSP 受制于
+Marvell/Broadcom，但激光芯片自给削弱了上游依赖</td>
+<td>▽ 判断 + ★ 集中度数据</td>
+</tr>
+<tr>
+<td>是否试图向上/下游延伸（垂直整合）？</td>
+<td><strong>是，且是核心战略</strong>：向上游延伸自产激光芯片(VCSEL/DFB/EML)+自有晶圆厂；下游通过
+Microsoft Foundry SOW、Amazon 权证「以股换单」深度绑定</td>
+<td>★ 10-K</td>
+</tr>
+<tr>
+<td>链条里最赚钱的环节是不是 AAOI 这一环？</td>
+<td><strong>不是。</strong>
+激光芯片(上游)和云厂商(下游)毛利更高；中游模块封装是「夹心层」，AAOI
+毛利率 30% 低于 Coherent ~35%，且连续 8
+年经营亏损——垂直整合理论上能提毛利，但规模杠杆尚未跑通</td>
+<td>▽ + ★ 毛利率</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-3--产业链一句话总结">Part 3 — 产业链一句话总结</h2>
+<pre><code>1. 这条产业链是：
+   上游（GaAs/InP 晶圆 + MOCVD 设备 + 外购 DSP 芯片）
+   → 中游（激光芯片制造 + 光模块封装）
+   → 下游（数据中心云厂商 / CATV 有线运营商 / 电信 / FTTH）
+
+2. AAOI 处在「中游光模块制造」环节，并向上游延伸自产激光芯片(垂直整合)；
+   靠「卖光收发模块 + CATV 光器件」赚钱；
+   主要成本来自上游晶圆/设备/外购 DSP + 自有晶圆厂的高固定成本与折旧。
+
+3. 它的议价权 **弱**，因为：
+   - 下游极度集中（前五大 95%、Digicomm 一家 53% 收入 + 72% 应收），大客户说了算；
+   - 上游 DSP 仍需外购，受制于 Marvell/Broadcom；
+   - 唯一加分项是自产激光芯片削弱了对上游芯片厂的依赖，并形成对模块组装同行(Fabrinet 等)的差异化。
+
+4. 对外行的一句话：
+   这家公司本质上是「一家自己造激光芯片、再把芯片封装成光模块的『光纤数据搬运管道厂』——
+   它给 AI 数据中心和有线电视网卖『把电变成光、把光变成电』的小盒子；
+   技术上它比同行更全（连芯片都自己造），但生意上它被几个超级大客户死死攥住，
+   还在靠不断增发股票烧钱扩厂，赌 AI 把订单填满。」</code></pre>
+<p class="disc">免责声明：本文基于 SEC EDGAR 公开文件，纯属个人学习研究，不构成任何投资建议。
+来源标注 ★SEC直接披露 ◆公式计算 ◇第三方 ▽推算。数据可能过时，请以最新 filing 为准。</p>
+</main></body></html>

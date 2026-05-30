@@ -1,0 +1,789 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/style.css"><title>📊 整合报告（输出模板 0–20 章） · AAOI</title>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+</script></head><body><main><p class="nav"><a href="index.html">🏠 AAOI 首页</a> · <a href="report.html">📊 整合报告</a> · <a href="CHANGELOG.html">📜 更新日志</a></p><p class="meta">数据截止：FY2025 10-K (2026-02-26) + Q1-2026 10-Q (2026-05-07)　·　最后更新：2026-05-30　·　版本：v2.0　·　来源：SEC EDGAR</p><h1 id="applied-optoelectronics-inc-aaoi--财务分析报告">Applied
+Optoelectronics, Inc. (AAOI) — 财务分析报告</h1>
+<blockquote>
+<p>按 listed-company-financial-research v1.8 输出标准模板（0–20 节）撰写
+· 图文结合 数据截止：FY2025 10-K（filed 2026-02-26）+ Q1-2026
+10-Q（filed 2026-05-07）· 版本 v2.0 · 2026-05-30</p>
+</blockquote>
+<hr />
+<h2 id="0-免责声明">0. 免责声明</h2>
+<p>本文是基于 SEC
+公开文件的财务分析读书笔记，纯属个人学习与公开数据解读，<strong>不构成任何投资建议</strong>。数据已尽力
+cross-check 并标注：★ SEC 直接披露　◆ 公式计算　◇ 第三方　▽
+推算。涉及判断均为主观推演，请独立决策并咨询持牌顾问。</p>
+<h2 id="1-公司一句话定义">1. 公司一句话定义</h2>
+<p>AAOI
+是一家<strong>垂直整合的光器件/光模块制造商</strong>——自产激光芯片（VCSEL
+/ DFB /
+EML）并封装成光收发模块，服务<strong>数据中心、CATV（有线电视）、电信、FTTH</strong>
+四大终端市场。NASDAQ 上市，创始人 Dr. Thompson Lin
+兼任董事长+总裁+CEO。★ FY2025 10-K Item 1</p>
+<h2 id="2-数据来源与方法论">2. 数据来源与方法论</h2>
+<ul>
+<li><strong>一手来源</strong>：SEC EDGAR，CIK 0001158114。逐字精读 4 份
+10-K、10 份 10-Q、70 份 8-K、关键增发文件、2 份 DEF 14A、SEC
+函件；程序化解析 216 份 Form 4 + 66 份 144 + 21 份 13G。<strong>覆盖率
+443/443 = 100%</strong>。</li>
+<li>关键 filing 链接：
+<ul>
+<li>FY2025 10-K：<a
+href="https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm">https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm</a></li>
+<li>FY2024 10-K：<a
+href="https://www.sec.gov/Archives/edgar/data/1158114/000143774925005575/aaoi20241231_10k.htm">https://www.sec.gov/Archives/edgar/data/1158114/000143774925005575/aaoi20241231_10k.htm</a></li>
+<li>FY2023 10-K：<a
+href="https://www.sec.gov/Archives/edgar/data/1158114/000143774924005367/aaoi20231231_10k.htm">https://www.sec.gov/Archives/edgar/data/1158114/000143774924005367/aaoi20231231_10k.htm</a></li>
+<li>Q1-2026 10-Q：<a
+href="https://www.sec.gov/Archives/edgar/data/1158114/000143774926015620/aaoi20260331_10q.htm">https://www.sec.gov/Archives/edgar/data/1158114/000143774926015620/aaoi20260331_10q.htm</a></li>
+</ul></li>
+<li>支撑档案：<code>05_accounting_policies.md</code>
+<code>10_industry_compare.md</code> <code>14_yoy_changes.md</code>
+<code>17_glossary_value_chain.md</code> <code>20–24_*.md</code>。</li>
+</ul>
+<h2 id="3-单位约定与常识自检">3. 单位约定与常识自检</h2>
+<ul>
+<li><strong>统一约定：1 亿美元 = $100 million = $0.1 billion。</strong>
+本报告数字一律全写（million 与 billion 各写一次），禁止裸写。</li>
+<li>常识锚：AAOI FY2025 营收 $455.7 million（= <span
+class="math inline">0.456<em>b</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em>）。<em>对</em><em>照</em><em>同</em><em>业</em><em>C</em><em>o</em><em>h</em><em>e</em><em>r</em><em>e</em><em>n</em><em>t</em><em>F</em><em>Y</em>2025 </span>5.7
+billion、Lumentum ~<span
+class="math inline">1.7<em>b</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em>、<em>F</em><em>a</em><em>b</em><em>r</em><em>i</em><em>n</em><em>e</em><em>t</em> </span>3.4
+billion——AAOI 是<strong>小盘</strong>光器件厂，量级自检合理（不存在 10×
+错位）。</li>
+</ul>
+<h2 id="4-术语表--产业链地图详见-17_glossary_value_chainmd">4. 术语表 +
+产业链地图（详见 <code>17_glossary_value_chain.md</code>）</h2>
+<p><strong>产业链定位图</strong>（红框 = AAOI 所处环节）：</p>
+<pre class="mermaid">flowchart LR
+    subgraph UP[上游 供应商]
+      W[GaAs / InP 晶圆衬底]
+      M[MOCVD 外延设备]
+      D[DSP 芯片<br/>Marvell/Broadcom 外购]
+    end
+    subgraph MID[中游 — AAOI 所处环节]
+      A[★ AAOI<br/>垂直整合：自产激光芯片<br/>VCSEL/DFB/EML → 封装光模块]
+    end
+    subgraph COMP[同环节竞争对手]
+      C1[Coherent]
+      C2[Lumentum]
+      C3[InnoLight/Eoptolink 中国]
+      C4[Fabrinet 代工]
+    end
+    subgraph DOWN[下游 客户]
+      H[数据中心 Hyperscaler<br/>Microsoft / Amazon / Oracle]
+      CA[CATV：经销商 Digicomm → MSO 有线运营商]
+      T[电信 5G / FTTH]
+    end
+    UP --> A
+    A -.竞争.- COMP
+    A --> DOWN</pre>
+<p><strong>核心术语三件套（节选）</strong>：</p>
+<ul>
+<li><strong>光模块（Optical
+Transceiver）</strong>：把电信号↔︎光信号互转的"小盒子"，数据中心/电信网络的数据管道接口。AAOI
+的主营产品。★</li>
+<li><strong>垂直整合（Vertical Integration）</strong>：AAOI
+自己造激光芯片（die）再封装成模块，而多数同行只做模块组装、芯片靠外购——这是
+AAOI 唯一的结构性差异化。★ FY2025 10-K Item 1</li>
+<li><strong>DOCSIS 4.0</strong>：有线电视网（HFC）升级到 10Gbps
+的标准，驱动 MSO 资本开支 → 这是 2025 年 CATV 收入暴增的产业背景。▽</li>
+<li><strong>contra-revenue（冲减收入）</strong>：给客户的股权激励（Amazon
+认股权证）按会计准则从收入里扣减，而非计费用。★ FY2025 10-K</li>
+<li><strong>议价权判断：偏弱</strong>——尽管垂直整合，但下游客户极度集中（前五
+95.2%、Digicomm 一家 53%），上游 DSP 仍依赖 Marvell/Broadcom。▽</li>
+</ul>
+<h2 id="5-业务地图按终端市场">5. 业务地图（按终端市场）</h2>
+<p>AAOI 财报为<strong>单一报告分部</strong>（one reportable
+segment），但披露按终端市场的收入拆分。★ FY2025 10-K Note "Segment and
+Geographic Information"</p>
+<pre class="mermaid">pie title FY2025 收入按终端市场 ($455.7M)
+    "CATV 有线电视 53.8%" : 53.8
+    "数据中心 42.9%" : 42.9
+    "电信 3.0%" : 3.0
+    "FTTH/其他 0.3%" : 0.3</pre>
+<table>
+<thead>
+<tr>
+<th>终端市场</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">▽推算金额 FY2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据中心</td>
+<td style="text-align: right;">64.9%</td>
+<td style="text-align: right;">59.5%</td>
+<td style="text-align: right;">42.9%</td>
+<td style="text-align: right;">~$195 million</td>
+</tr>
+<tr>
+<td>CATV</td>
+<td style="text-align: right;">27.5%</td>
+<td style="text-align: right;">35.2%</td>
+<td style="text-align: right;">53.8%</td>
+<td style="text-align: right;">~$245 million</td>
+</tr>
+<tr>
+<td>电信</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">4.4%</td>
+<td style="text-align: right;">3.0%</td>
+<td style="text-align: right;">~$14 million</td>
+</tr>
+<tr>
+<td>FTTH/其他</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0.9%</td>
+<td style="text-align: right;">0.3%</td>
+<td style="text-align: right;">~$1 million</td>
+</tr>
+</tbody>
+</table>
+<p>★ 占比来自三份 10-K；金额为 ◆ = 占比 × 总营收 $455.7
+million（cross-check ✅ 各项加总=100%）。</p>
+<h2 id="6-收入构成--客户集中度最关键的结构性事实">6. 收入构成 +
+客户集中度（最关键的结构性事实）</h2>
+<pre class="mermaid">flowchart TD
+    R[FY2025 营收 $455.7M] --> DG[Digicomm 经销商<br/>53.1% = ~$242M]
+    R --> MS[Microsoft<br/>28.8% = ~$131M]
+    R --> OT[其余全部客户<br/>~18% = ~$83M]
+    DG -.占应收账款 72%.-> AR[Q1-26 应收 Digicomm 一家 $222.7M]</pre>
+<table>
+<thead>
+<tr>
+<th>客户</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th>性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digicomm</td>
+<td style="text-align: right;">11.3%</td>
+<td style="text-align: right;">34.1%</td>
+<td style="text-align: right;"><strong>53.1%</strong></td>
+<td>CATV 经销商（中间商）</td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td style="text-align: right;">46.6%</td>
+<td style="text-align: right;">43.7%</td>
+<td style="text-align: right;">28.8%</td>
+<td>数据中心 hyperscaler</td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">12.4%</td>
+<td style="text-align: right;">—</td>
+<td>数据中心</td>
+</tr>
+<tr>
+<td>ATX Networks</td>
+<td style="text-align: right;">15.6%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>CATV</td>
+</tr>
+<tr>
+<td><strong>前五大合计</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>95.2%</strong></td>
+<td>★</td>
+</tr>
+<tr>
+<td><strong>前十大合计（Q1-26）</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>98%</strong></td>
+<td>★ Q1-26 10-Q</td>
+</tr>
+</tbody>
+</table>
+<p>★ 全部来自 10-K/10-Q "Concentration of Credit Risk"
+Note。<strong>红线</strong>：单一经销商 Digicomm 占 53% 收入 + 72%
+应收（$222.7 million = $0.223 billion，Q1-26）。</p>
+<h2 id="7-利润表按年million">7. 利润表（按年，$million）</h2>
+<table>
+<thead>
+<tr>
+<th>科目</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收 Revenue</td>
+<td style="text-align: right;">217.6</td>
+<td style="text-align: right;">249.4</td>
+<td style="text-align: right;"><strong>455.7</strong></td>
+<td>★ XBRL</td>
+</tr>
+<tr>
+<td>营业成本 COGS</td>
+<td style="text-align: right;">158.7</td>
+<td style="text-align: right;">187.6</td>
+<td style="text-align: right;">318.8</td>
+<td>★</td>
+</tr>
+<tr>
+<td>毛利 Gross Profit</td>
+<td style="text-align: right;">58.9</td>
+<td style="text-align: right;">61.8</td>
+<td style="text-align: right;">136.9</td>
+<td>★</td>
+</tr>
+<tr>
+<td>毛利率</td>
+<td style="text-align: right;">27.1%</td>
+<td style="text-align: right;">24.8%</td>
+<td style="text-align: right;"><strong>30.0%</strong></td>
+<td>◆</td>
+</tr>
+<tr>
+<td>研发 R&amp;D</td>
+<td style="text-align: right;">36.0</td>
+<td style="text-align: right;">55.0</td>
+<td style="text-align: right;">85.5</td>
+<td>★</td>
+</tr>
+<tr>
+<td>销售+管理 S&amp;M+G&amp;A</td>
+<td style="text-align: right;">64.3</td>
+<td style="text-align: right;">77.7</td>
+<td style="text-align: right;">105.9</td>
+<td>★</td>
+</tr>
+<tr>
+<td><strong>经营亏损 Op Loss</strong></td>
+<td style="text-align: right;"><strong>−41.3</strong></td>
+<td style="text-align: right;"><strong>−70.9</strong></td>
+<td style="text-align: right;"><strong>−54.6</strong></td>
+<td>★</td>
+</tr>
+<tr>
+<td>经营利润率</td>
+<td style="text-align: right;">−19.0%</td>
+<td style="text-align: right;">−28.4%</td>
+<td style="text-align: right;">−12.0%</td>
+<td>◆</td>
+</tr>
+<tr>
+<td>一次性债务清偿损失</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>−111.962</strong></td>
+<td style="text-align: right;">—</td>
+<td>★ FY24 CF</td>
+</tr>
+<tr>
+<td><strong>净亏损 Net Loss</strong></td>
+<td style="text-align: right;">−56.0</td>
+<td style="text-align: right;"><strong>−186.7</strong></td>
+<td style="text-align: right;">−38.2</td>
+<td>★</td>
+</tr>
+<tr>
+<td>净利率</td>
+<td style="text-align: right;">−25.7%</td>
+<td style="text-align: right;">−74.9%</td>
+<td style="text-align: right;">−8.4%</td>
+<td>◆</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>可比性警告（铁律6）</strong>：FY2024 净亏 −<span
+class="math inline">186.7<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em> * *<em>不</em><em>可</em> * *<em>直</em><em>接</em><em>与</em><em>趋</em><em>势</em><em>比</em>——<em>含</em><em>一</em><em>次</em><em>性</em><em>非</em><em>现</em><em>金</em><em>债</em><em>务</em><em>清</em><em>偿</em><em>损</em><em>失</em> * *</span>111.962
+million**（2026→2030 转债交换）。剔除后 FY2024 经营基础净亏 ≈ −$74.7
+million。FY2025
+净亏"收窄"主要是该一次性项消失的基数效应，非纯经营改善。详见
+<code>14_yoy_changes.md</code>。</p>
+<p>营收 100% 有机增长（无并购，cross-check ✅ 见 14
+号档案）。FY2023→FY2025 营收 CAGR = ◆ +44.7%。</p>
+<h2 id="8-资产负债表按年million">8. 资产负债表（按年，$million）</h2>
+<table>
+<thead>
+<tr>
+<th>科目</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现金及等价物</td>
+<td style="text-align: right;">45.4</td>
+<td style="text-align: right;">67.4</td>
+<td style="text-align: right;"><strong>206.1</strong></td>
+<td>★</td>
+</tr>
+<tr>
+<td>应收账款 AR</td>
+<td style="text-align: right;">~61</td>
+<td style="text-align: right;">~75</td>
+<td style="text-align: right;">~224</td>
+<td>★</td>
+</tr>
+<tr>
+<td>存货 Inventory</td>
+<td style="text-align: right;">~68</td>
+<td style="text-align: right;">~64</td>
+<td style="text-align: right;">~170</td>
+<td>★</td>
+</tr>
+<tr>
+<td>总资产</td>
+<td style="text-align: right;">389.2</td>
+<td style="text-align: right;">547.0</td>
+<td style="text-align: right;"><strong>1,168.4</strong></td>
+<td>★</td>
+</tr>
+<tr>
+<td>可转债（账面）</td>
+<td style="text-align: right;">23.2</td>
+<td style="text-align: right;">~129</td>
+<td style="text-align: right;">~129.5</td>
+<td>★</td>
+</tr>
+<tr>
+<td>总负债</td>
+<td style="text-align: right;">174.3</td>
+<td style="text-align: right;">317.9</td>
+<td style="text-align: right;">434.5</td>
+<td>★</td>
+</tr>
+<tr>
+<td>股东权益</td>
+<td style="text-align: right;">214.9</td>
+<td style="text-align: right;">229.1</td>
+<td style="text-align: right;"><strong>733.9</strong></td>
+<td>★</td>
+</tr>
+<tr>
+<td>流通股（million 股）</td>
+<td style="text-align: right;">38.1</td>
+<td style="text-align: right;">49.4</td>
+<td style="text-align: right;"><strong>75.0</strong></td>
+<td>★</td>
+</tr>
+</tbody>
+</table>
+<p>总资产一年翻倍（$547M → $1,168 million = $1.168
+billion），由现金（增发所得）+ 应收/存货建仓 + 厂房 Capex 驱动。</p>
+<h2 id="9-现金流量表--现金流瀑布核心洞察">9. 现金流量表 +
+现金流瀑布（核心洞察）</h2>
+<pre class="mermaid">flowchart LR
+    subgraph 来源[资金来源 FY2025]
+      F1[融资活动 +$527.9M<br/>ATM增发+转债+权证]
+    end
+    subgraph 用途[资金用途 FY2025]
+      U1[经营营运资金 −$174.4M<br/>应收−127.6 存货−100.7]
+      U2[投资/Capex −$210.6M<br/>厂房产能建设]
+    end
+    F1 --> NET[净增现金 +$138.7M<br/>期末现金 $206.1M]
+    U1 --> NET
+    U2 --> NET</pre>
+<table>
+<thead>
+<tr>
+<th>现金流 ($million)</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经营 OCF</td>
+<td style="text-align: right;">−7.9</td>
+<td style="text-align: right;">−69.5</td>
+<td style="text-align: right;"><strong>−174.4</strong></td>
+<td>★</td>
+</tr>
+<tr>
+<td>投资 ICF</td>
+<td style="text-align: right;">−14.8</td>
+<td style="text-align: right;">−50.7</td>
+<td style="text-align: right;">−210.6</td>
+<td>★</td>
+</tr>
+<tr>
+<td>融资 FCF(筹资)</td>
+<td style="text-align: right;">+40.6</td>
+<td style="text-align: right;">+142.2</td>
+<td style="text-align: right;"><strong>+527.9</strong></td>
+<td>★</td>
+</tr>
+<tr>
+<td>资本开支 Capex</td>
+<td style="text-align: right;">9.1</td>
+<td style="text-align: right;">43.4</td>
+<td style="text-align: right;"><strong>179.1</strong></td>
+<td>★</td>
+</tr>
+<tr>
+<td><strong>自由现金流</strong></td>
+<td style="text-align: right;">−17.0</td>
+<td style="text-align: right;">−112.9</td>
+<td style="text-align: right;"><strong>−353.6</strong></td>
+<td>◆ OCF−Capex</td>
+</tr>
+</tbody>
+</table>
+<p>⭐ <strong>关键修正洞察（OCF 利润质量）</strong>：FY2025 OCF −<span
+class="math inline">174.4<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em> * *<em>不</em><em>是</em><em>经</em><em>营</em><em>失</em><em>血</em> * *——<em>净</em><em>亏</em>−</span>38.2
+million 几乎被非现金项（D&amp;A $27.7M + SBC $11.7M + 存货减值 <span
+class="math inline">7.8<em>M</em>）<em>完</em><em>全</em><em>抵</em><em>消</em>，<em>经</em><em>营</em><em>层</em><em>面</em><em>接</em><em>近</em><em>盈</em><em>亏</em><em>平</em><em>衡</em>。 * *−</span>174M
+几乎全是营运资金扩张**：应收 −<span
+class="math inline">127.6<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em>（<em>主</em><em>要</em><em>D</em><em>i</em><em>g</em><em>i</em><em>c</em><em>o</em><em>m</em><em>m</em>） + <em>存</em><em>货</em>−</span>100.7
+million。★ FY2025 10-K CF Note。 →
+含义：经营不亏现金，但增长把现金压在一个经销商的应收账款上，且需持续融资周转。三年累计
+FCF = ◆ <strong>−$484 million</strong>。</p>
+<h2 id="10-会计政策深度详见-05_accounting_policiesmd">10.
+会计政策深度（详见 <code>05_accounting_policies.md</code>）</h2>
+<ul>
+<li><strong>收入确认</strong>：ASC
+606，<strong>出货时点确认（point-in-time）</strong>，无 over-time 估计 →
+操纵空间小（🟢）。★</li>
+<li><strong>折旧</strong>：直线法；厂房 20–42 年、<strong>机器设备 2–20
+年</strong>、计算机 3–10 年。机器设备 20 年上限约为同业（COHR/LITE/FN
+设备多 ~10 年）的 2× → 长端偏激进（+1）。★</li>
+<li><strong>资本化</strong>：R&amp;D
+全部费用化（🟢）；<strong>无利息资本化</strong>（政策允许但选择不用，🟢偏保守）。★
+Note H</li>
+<li><strong>存货</strong>：平均成本法，孰低计价。★</li>
+<li><strong>Amazon 认股权证</strong>：权益分类、列
+contra-revenue（非负债/衍生品）；已归属部分记 <span
+class="math inline">16.0<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em><em>资</em><em>产</em>（</span>1.0M
+流动 + <span
+class="math inline">15.0<em>M</em><em>非</em><em>流</em><em>动</em>），<em>F</em><em>Y</em>2025<em>仅</em><em>冲</em><em>减</em><em>收</em><em>入</em> </span>0.8
+million（immaterial）。★</li>
+<li><strong>激进度综合评分：−2（略偏保守）</strong>。11
+项里保守占优（R&amp;D
+费用化、零利息资本化、出货确认、无商誉）；仅"机器设备 20
+年上限"和"$39.8M 在建工程不减值判断"两项 +1 偏激进。</li>
+<li><strong>最大灰色地带</strong>：在持续经营亏损 + AI
+产能豪赌下对在建工程的"不减值"判断，依赖乐观的未来现金流假设。</li>
+</ul>
+<h2 id="11-逐年变更侦测铁律6详见-14_yoy_changesmd">11.
+逐年变更侦测（铁律6，详见 <code>14_yoy_changes.md</code>）</h2>
+<pre class="mermaid">timeline
+    title AAOI 逐年变更时间线
+    FY2023 : 干净基线 : 无准则采纳 : 单一分部 : 数据中心#1(64.9%)
+    FY2024 : 采纳ASU2023-07(分部披露,仅披露$0影响) : ⚠️一次性债务清偿损失$111.962M : ICFR重大缺陷 : 无重述
+    FY2025 : 采纳ASU2023-09(税务披露,$0影响) : 缺陷已修复 : Amazon权证contra-revenue : CATV超越数据中心成#1(53.8%) : 美国产能扩张</pre>
+<ul>
+<li><strong>会计准则</strong>：FY2024 采 ASU 2023-07、FY2025 采 ASU
+2023-09，<strong>均为披露口径、对损益/资产 $0 影响</strong>。★</li>
+<li><strong>无重述、无停止经营、无并购、无科目重分类</strong>（grep
+全文确认 reclassified=0、change in accounting=0）。唯一微调：FY2025 将
+"FTTH" 与 "Other" 合并为 "FTTH and other"，历史期已重述（&lt;1.2%
+营收，无影响）。</li>
+<li><strong>可比性结论</strong>：营收 YoY 完全可比（100%
+有机）；<strong>净利润 YoY 不可比</strong>（两年都有一次性扰动）。</li>
+</ul>
+<h2 id="12-运营重资产专题产能豪赌详见-20_8k_deal_timelinemd">12.
+运营/重资产专题（产能豪赌，详见
+<code>20_8k_deal_timeline.md</code>）</h2>
+<p>AAOI
+价值/风险高度由<strong>产能扩张</strong>驱动，触发运营资产专题：</p>
+<ul>
+<li>2025–2026 美国密集扩产（去中国化 + AI 产能）：Pearland 物业购买
+<strong><span
+class="math inline">58.4<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em> * *、<em>H</em><em>i</em><em>g</em><em>h</em><em>t</em><em>o</em><em>w</em><em>e</em><em>r</em><em>三</em><em>栋</em><em>购</em><em>买</em><em>选</em><em>择</em><em>权</em><em>合</em><em>计</em> * *</span>102.25
+million</strong>、FAB2 洁净室 ~$30.9 million、Sugar Land
+租赁；首笔美国大型信贷 <strong>BOK Financial $35 million
+循环额度（可扩至 $75 million）</strong>。★ 8-K 系列</li>
+<li><strong>Capex/营收 ~39.3%</strong>，远超同业（详见 §15）。</li>
+<li><strong>控制权约束</strong>：Microsoft 的 SOW No.1 含 AAOI
+控制权变更时的<strong>优先收购权（ROFR）</strong>；Amazon 持认股权证 794
+万股 → 两大巨头同时锁定 AAOI 战略归属。★</li>
+</ul>
+<h2 id="13-非经营盈余扰动项剥离测试">13.
+非经营/盈余扰动项（剥离测试）</h2>
+<p>AAOI 无加密财库/证券组合/权益法投资（16
+号专题不触发）。仅有两个扰动项，做剥离：</p>
+<table>
+<thead>
+<tr>
+<th>期间</th>
+<th style="text-align: right;">报告净亏</th>
+<th>扰动项</th>
+<th style="text-align: right;">剥离后经营基础净亏</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2024</td>
+<td style="text-align: right;">−$186.7M</td>
+<td>一次性债务清偿损失 −$111.962M（非现金）</td>
+<td style="text-align: right;">≈ −$74.7M ◆</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td style="text-align: right;">−$38.2M</td>
+<td>政府补贴 +<span
+class="math inline">4.9<em>M</em>、<em>汇</em><em>兑</em>+</span>1.9M（其他收入
++$9.6M）</td>
+<td style="text-align: right;">经营亏损 −$54.6M（更差）</td>
+</tr>
+</tbody>
+</table>
+<p>→ <strong>真实读法</strong>：盯 GAAP 经营亏损（−41.3 / −70.9 /
+−54.6）+ 自由现金流，别被净利润摆动误导。</p>
+<h2 id="14-资本结构--稀释瀑布详见-23_capital_raising_dilutionmd">14.
+资本结构 + 稀释瀑布（详见
+<code>23_capital_raising_dilution.md</code>）</h2>
+<pre class="mermaid">flowchart LR
+    S0[2022年末<br/>28.6M股] --> S1[2023年末<br/>38.1M<br/>+ATM$69M@$8.84]
+    S1 --> S2[2024年末<br/>49.4M<br/>+ATM$113M@$15.13<br/>+注册直发$33.7M]
+    S2 --> S3[2025年末<br/>75.0M<br/>+ATM$519M@$24.16]
+    S3 --> S4[Q1-26<br/>79.0M基础]
+    S4 --> FD[完全摊薄~92.1M<br/>+2030转债2.89M<br/>+Amazon权证7.95M<br/>+RSU 2.34M]</pre>
+<ul>
+<li>**2023–Q1'26 累计融资 ≈ <span
+class="math inline">840<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em> * *（<em>普</em><em>通</em><em>股</em><em>稀</em><em>释</em> </span>734M
++ 转债净现金 ~$106M）。</li>
+<li>股本两年多 <strong>+176%</strong>（28.6M → 79.0M 股）。ATM 均价
+<span
+class="math inline">8.84→</span>15.13→$24.16（<strong>卖在最强行情</strong>，执行不差，◆）。</li>
+<li><strong>唯一在外债务</strong>：$125.0 million（= $0.125
+billion）2.750% 2030 可转债，转股价 <span
+class="math inline">43.31，<em>无</em><em>c</em><em>a</em><em>p</em><em>p</em><em>e</em><em>d</em> − <em>c</em><em>a</em><em>l</em><em>l</em><em>对</em><em>冲</em>；2026<em>N</em><em>o</em><em>t</em><em>e</em><em>s</em><em>几</em><em>近</em><em>全</em><em>部</em><em>赎</em><em>清</em>（<em>剩</em> </span>3.5M）。到期墙集中在
+2030，近 18 个月无重大到期（🟢）。</li>
+<li><strong>前向稀释悬顶 ~16.7%</strong>（完全摊薄 92.1M / 基础
+79.0M），其中 Amazon 权证占 ~60%。</li>
+<li>隐性项：2023 PSU 若 2026 股权计划未获批，或需最高 ~$65 million
+现金结算。★ DEF 14A</li>
+</ul>
+<h2 id="15-行业横向对比详见-10_industry_comparemd">15.
+行业横向对比（详见 <code>10_industry_compare.md</code>）</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">AAOI</th>
+<th style="text-align: right;">Coherent</th>
+<th style="text-align: right;">Lumentum</th>
+<th style="text-align: right;">Fabrinet</th>
+<th style="text-align: right;">中位</th>
+<th>AAOI 位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收增速 YoY</td>
+<td style="text-align: right;"><strong>+83%</strong></td>
+<td style="text-align: right;">+23%</td>
+<td style="text-align: right;">+21%</td>
+<td style="text-align: right;">+19%</td>
+<td style="text-align: right;">+21%</td>
+<td>远超（周期+低基数）</td>
+</tr>
+<tr>
+<td>毛利率</td>
+<td style="text-align: right;">30.0%</td>
+<td style="text-align: right;">35.2%</td>
+<td style="text-align: right;">28.0%</td>
+<td style="text-align: right;">12.1%</td>
+<td style="text-align: right;">28.0%</td>
+<td>~中位</td>
+</tr>
+<tr>
+<td><strong>经营利润率</strong></td>
+<td style="text-align: right;"><strong>−12.0%</strong></td>
+<td style="text-align: right;">~6%</td>
+<td style="text-align: right;">−10.9%</td>
+<td style="text-align: right;">+9.5%</td>
+<td style="text-align: right;">+6%</td>
+<td><strong>唯一深度为负</strong> ⚠️</td>
+</tr>
+<tr>
+<td>R&amp;D/营收</td>
+<td style="text-align: right;">18.8%</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">18.5%</td>
+<td style="text-align: right;">~0%(代工)</td>
+<td style="text-align: right;">14.3%</td>
+<td>偏高</td>
+</tr>
+<tr>
+<td><strong>Capex/营收</strong> ⭐</td>
+<td style="text-align: right;"><strong>39.3%</strong></td>
+<td style="text-align: right;">7.6%</td>
+<td style="text-align: right;">14.0%</td>
+<td style="text-align: right;">3.5%</td>
+<td style="text-align: right;">7.6%</td>
+<td><strong>~5.2× 中位</strong> ⚠️</td>
+</tr>
+</tbody>
+</table>
+<p>★ AAOI 来自 10-K；◇ 同业来自 SEC XBRL（COHR/LITE/FN）。</p>
+<ul>
+<li><strong>合理性判断（Capex/营收
+39.3%）</strong>：偏高但有战略对应——Amazon $4.0 billion 采购框架 +
+800G/1.6T 产能 + 美国去中国化。但若 AI 需求不兑现 →
+转为"异常"（高折旧闲置产能）。</li>
+<li><strong>商业模式差异</strong>：AAOI 客户集中度极高（Digicomm
+53%/前十 98%）vs
+同业分散；垂直整合是差异化但未转化为利润优势（毛利率反低于
+Coherent）。</li>
+<li><strong>一句话画像</strong>：AAOI
+在同业里是<strong>增长最快、但盈利能力最差、资本开支最激进</strong>的小盘玩家。</li>
+</ul>
+<h2 id="16-关联方红旗扫描">16. 关联方红旗扫描</h2>
+<ul>
+<li><strong>无关联方交易 Note</strong>（三年）——Digicomm 是 arm's-length
+经销商，非关联方。★ 22 号档案</li>
+<li>创始人 Thompson Lin 持股仅 1.8%，全体董监高
+3.8%；<strong>无双层股权、非 controlled company</strong>。★ DEF 14A</li>
+<li>无 going concern、无重述、无 Item
+4.02、无重大诉讼、无失败售后回租。</li>
+</ul>
+<h2 id="17-风险因素提炼item-1a">17. 风险因素提炼（Item 1A）</h2>
+<ol type="1">
+<li>🔴 <strong>客户/应收极度集中</strong>：Digicomm 53% 收入 + 72%
+应收（$222.7M），前五 95.2%。</li>
+<li>🔴 <strong>AI 需求可持续性</strong>（FY2025
+升为头号风险）：大额美国产能 Capex 押注 AI 需求，若不兑现 →
+产能闲置、在建工程减值、take-or-pay 超量。★</li>
+<li>🔴 <strong>连续 8 年经营亏损</strong>：规模杠杆未跑通。</li>
+<li>🟡 <strong>中国制造占 57%</strong>（$262
+million）：关税/出口管制敞口。</li>
+<li>🟡 <strong>持续融资依赖 + 稀释</strong>：股本两年 +176%，ATM
+额度已升至 $600 million。</li>
+<li>🟡 <strong>转债/权证稀释悬顶 16.7%</strong>。</li>
+</ol>
+<h2 id="18-我的论点含反方">18. 我的论点（含反方）</h2>
+<p><strong>论点 1：这是"双周期 +
+双巨头绑定"驱动的真实营收拐点，但盈利证明仍在前方。</strong></p>
+<ul>
+<li>证据：营收 2024Q1 谷底 $40.7M → 2026Q1
+$151.1M（3.7×）每季上行；毛利率永久重定级到 ~30%；Amazon $4.0 billion
+框架 + Microsoft 5 年 SOW。</li>
+<li>反方：增长靠极少数客户 + CATV 周期；8 年经营亏损、R&amp;D/G&amp;A
+暴涨吃掉规模红利。</li>
+<li>反驳：拐点真实，但需见经营亏损率持续收窄/转正 + Digicomm
+外客户多元化才算"质变"。</li>
+</ul>
+<p><strong>论点
+2：现金消耗性质被市场误读——是营运资金扩张，不是经营失血。</strong></p>
+<ul>
+<li>证据：FY2025 OCF −<span
+class="math inline">174<em>M</em><em>中</em> </span>228M
+是应收+存货建仓；净亏被非现金项抵消，经营近平衡。</li>
+<li>双刃：好处是经营不烧钱；坏处是现金风险压在一个经销商应收上，且需持续融资周转。</li>
+</ul>
+<p><strong>论点 3：估值的真正特殊性 =
+两大科技巨头的战略锁定。</strong></p>
+<ul>
+<li>Microsoft 收购优先权（ROFR）+ Amazon $4.0 billion 绑定权证 → AAOI
+既是供应商也是潜在并购标的，是个"期权"，但命运高度系于两家。</li>
+</ul>
+<p><strong>论点 4：增长由稀释买单。</strong></p>
+<ul>
+<li>累计融资 ≈$840M、完全摊薄 92M 股、悬顶
+16.7%。每股价值能否提升取决于剔除营运资金后的经营现金流何时真正转正。</li>
+</ul>
+<h2
+id="19-悬而未决问题--已深挖解决详见-06_capital_structuremd--04b_cash_flow_deepmd--15_operating_asset_deep_divemd">19.
+悬而未决问题 → 已深挖解决（详见 <code>06_capital_structure.md</code> /
+<code>04b_cash_flow_DEEP.md</code> /
+<code>15_operating_asset_deep_dive.md</code>）</h2>
+<p><strong>① Digicomm 应收账期/坏账 →
+解决：是"供应商融资"，坏账准备几近为零但 DSO 极长。</strong></p>
+<ul>
+<li>坏账准备金额可忽略（FY2024 仅 $1–3 thousand；FY2025 坏账费用 $4
+thousand）→ 账面无减值。★ Q1-26 10-Q Note 9</li>
+<li>但 Digicomm $222.7 million = 74.5% 应收，管理层明示给予
+<strong>"longer than typical payment terms"</strong>（让其囤 CATV
+备货）。</li>
+<li>◆ 混合 DSO = 299.0 / 151.144 × 91 = <strong>180 天</strong>；其中
+<strong>Digicomm 单独 ~304 天</strong>（≈3.3 个季度的 Digicomm
+收入），其余客户 ~82 天。<strong>实质是把 vendor financing
+记成普通应收</strong>——单点流动性/信用红旗。</li>
+</ul>
+<p><strong>② 2030 Notes 完整契约 → 解决：$125.0
+million、2.750%、2030-01-15 到期、转股价 <span
+class="math inline">43.31（23.0884<em>股</em>/</span>1,000）。</strong>
+★ FY25 10-K Note L</p>
+<ul>
+<li>发行人赎回权自 <strong>2027-01-15</strong> 起，仅当股价 ≥ 转股价
+130%（≈$56.30）于 30 个交易日中 20 日成立。</li>
+<li><strong>无 capped call / bond hedge</strong> →
+转股稀释无对冲（全额暴露）；契约
+covenant-light（无杠杆率/流动性数值阈值）；含特殊的 "Specified
+Divestiture" 或有赎回条款。</li>
+<li>账面 $129.5 million vs 公允价值 $278.7
+million（股价冲破转股价后），近 18 个月无重大到期（🟢）。BOK $35 million
+循环额度限制债务/留置/并购但无数值杠杆 covenant。</li>
+</ul>
+<p><strong>③ 800G/1.6T 出货 + Amazon vesting → 解决：800G 正在放量，但
+Amazon 几乎还没真正买。</strong></p>
+<ul>
+<li>产品代际：400G 是当前主力，★ 10-K 称 <strong>"800G 很可能在 2026
+下半年超过 400G 销售"</strong>，1.6T 仍在客户测试/认证。800G = AI
+互联产品。设计导入 6→8→9（2023→2025）。</li>
+<li><strong>Amazon 认股权证：6,621,166 股表现归属部分至今 0 股
+vested</strong>（仅初始 1,324,233 股）。★ Amazon 累计采购 ▽ ~<span
+class="math inline">71<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em>（<em>F</em><em>Y</em>25 </span>33.1M
++ Q1-26 ~$38M），<strong>不足 <span
+class="math inline">4.0<em>b</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em><em>触</em><em>发</em><em>线</em><em>的</em>2</span>40
+亿/794 万股 = 几乎全是尚未兑现的期权</strong>。</li>
+</ul>
+<p><strong>④ 美国新厂折旧/产能利用 →
+解决：在建工程是未来利润拖累。</strong></p>
+<ul>
+<li>在建工程 CIP $39.8 million（FY25）→ $51.5
+million（Q1-26），<strong>尚未计提折旧</strong>（约 6.5% 的总 PP&amp;E
+是未来才进 P&amp;L 的折旧）。折旧费用已从 <span
+class="math inline">20.2<em>M</em>→</span>27.2M（FY25）抬升。毛利率回升（24.8%→30.0%）主因
+CATV 放量改善固定成本吸收。★</li>
+</ul>
+<p><strong>⑤ PSU 现金结算风险 → 解决：精确金额 $64,872,156（766,901 份
+PSU，5 名高管）。</strong> ★ 2026 DEF 14A</p>
+<ul>
+<li>若达成 200% 最高业绩<strong>且</strong> 2026
+股权计划未获股东批准，则可能需<strong>现金结算</strong>；AAOI 在
+2021–2024 PSU 上已因股票池耗尽而真的现金结算过。2026 计划拟增 2,500,000
+股（稀释 5.01%→8.18%）。</li>
+</ul>
+<blockquote>
+<p>新增的下一步：跟踪 800G 是否如期在 2H-2026 超越 400G；跟踪 Digicomm
+DSO（304 天）是否继续拉长；跟踪 Amazon 是否开始实质放量（warrant 第二批
+vesting）。</p>
+</blockquote>
+<h2 id="20-复盘附录">20. 复盘附录</h2>
+<ul>
+<li><strong>本轮修正的前序错误</strong>：① FY2024 一次性损失 <span
+class="math inline">109.9<em>M</em>→</span>111.962M（精确 CF 值）；② OCF
+−$174M 性质从"烧钱"修正为"营运资金扩张"；③ 2023 SEC
+函件从"红旗"修正为"非事件"；④ 回补铁律 6/9/10（14/17 号档案 +
+图）。</li>
+<li><strong>Filing 覆盖率</strong>：443/443 = 100%（逐字 ~110 份 +
+程序化 303 份）。</li>
+<li><strong>数据来源索引</strong>：见 <code>_INDEX.md</code> +
+<code>data/processed/AAOI_SEC_filings_index.md</code>；全文缓存
+<code>data/raw/_adhoc/</code>。</li>
+<li><strong>Step 9（HTML/GitHub Pages
+发布）</strong>：未执行（用户未要求）。</li>
+</ul>
+<p class="disc">免责声明：本文基于 SEC EDGAR 公开文件，纯属个人学习研究，不构成任何投资建议。
+来源标注 ★SEC直接披露 ◆公式计算 ◇第三方 ▽推算。数据可能过时，请以最新 filing 为准。</p>
+</main></body></html>
