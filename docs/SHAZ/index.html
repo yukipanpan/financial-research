@@ -1,36 +1,812 @@
-<!doctype html><html lang="zh"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SharonAI 财务研究 · SHAZ</title>
+<!DOCTYPE html>
+<html lang="zh"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SharonAI Holdings (SHAZ) — 财务深度分析 + 通俗科普(合订版)</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
-body{font-family:-apple-system,"Noto Sans CJK SC","PingFang SC",sans-serif;max-width:780px;margin:0 auto;padding:40px 22px;color:#1a1a1a;line-height:1.7}
-h1{border-bottom:3px solid #0b66c3;padding-bottom:.3em}
-h2{margin-top:1.6em}
-a{color:#0b66c3;text-decoration:none}a:hover{text-decoration:underline}
-.meta{font-size:.85em;color:#555}
-.nav{font-size:.9em}
-blockquote{background:#f2f6fa;border-left:4px solid #0b66c3;margin:1em 0;padding:12px 18px;border-radius:0 6px 6px 0}
-ul{padding-left:1.3em}li{margin:6px 0}
-.disc{font-size:.82em;color:#666;border-top:1px solid #e2e2e2;margin-top:30px;padding-top:12px}
-</style></head><body><main>
-<h1>SharonAI Holdings (SHAZ) 财务研究</h1>
-<p>澳大利亚 <b>Neocloud / GPU 算力出租公司</b>——作为 NVIDIA Cloud Partner,把英伟达显卡装进 NEXTDC/Equinix 机房,用 <b>take-or-pay(照付不议)</b>长约向企业/政府/hyperscaler 出租 AI 算力。NASDAQ 上市(2026-02,经 Roth CH de-SPAC 借壳)。</p>
-<p class="meta">数据截止:10-K FY2025 (2026-03-31) + 10-Q Q1-2026 (2026-05-15)　·　最后更新:2026-05-31　·　版本:v1.0
-　·　Filing 覆盖率:EDGAR 全量 70 份登记分类,核心分析性 filing ~100%　·　来源:SEC EDGAR + 公司 IR　·　标注 ★◆◇▽</p>
-<p class="nav"><a href="../index.html">← 返回全部公司</a></p>
-<blockquote>本站提供两个版本:<b>📊 严谨版报告</b>(★◆◇▽ 来源标签、20 节完整财务分析、9 张图表/SVG)与
-<b>🎓 通俗科普版</b>(面向外行、第一性原理讲懂公司,不含估值/买卖结论,8000+ 字)。外行建议先读科普版。</blockquote>
 
-<h2>报告</h2>
-<ul>
-  <li><a href="report.html">📊 严谨版:财务与战略深度分析(输出模板 0–20 章)</a></li>
-  <li><a href="explainer.html">🎓 通俗科普版:30 分钟讲懂 SharonAI(外行向,8000+ 字)</a></li>
+:root{--bg:#0f1419;--panel:#161c24;--panel2:#1c242e;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a323d;--accent:#4f9cf9;--accentd:#2563eb;--good:#3fb950;--warn:#d29922;--bad:#f85149;--chip:#222c38}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;font-size:15px}
+.wrap{display:flex;max-width:1400px;margin:0 auto}
+nav{position:sticky;top:0;align-self:flex-start;height:100vh;overflow-y:auto;width:250px;padding:24px 16px;border-right:1px solid var(--line);font-size:13px;flex-shrink:0}
+nav h3{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut);margin:18px 0 8px}
+nav a{display:block;color:var(--mut);text-decoration:none;padding:4px 8px;border-radius:6px;margin:1px 0}
+nav a:hover{background:var(--panel2);color:var(--ink)}
+main{flex:1;min-width:0;padding:40px 48px 120px;max-width:1100px}
+h1{font-size:30px;line-height:1.25;margin:0 0 6px}
+h2{font-size:23px;margin:48px 0 8px;padding-top:14px;border-top:2px solid var(--line)}
+h3{font-size:18px;margin:26px 0 6px;color:#cdd9e5}
+h4{font-size:15px;margin:18px 0 4px;color:var(--accent)}
+p{margin:8px 0}
+.sub{color:var(--mut);font-size:14px}
+.lead{font-size:16px;color:#cdd9e5}
+.tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:4px;font-weight:600;vertical-align:middle}
+.t-sec{background:#13371f;color:#5fd47a}
+.t-calc{background:#1a2f4d;color:#7cb3ff}
+.t-third{background:#3a2f12;color:#e0b34d}
+.t-est{background:#3a1f12;color:#e08d4d}
+.ck-ok{color:var(--good)} .ck-warn{color:var(--warn)} .ck-bad{color:var(--bad)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px;background:var(--panel);border-radius:8px;overflow:hidden}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left}
+th{background:var(--panel2);font-weight:600;color:#cdd9e5}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.neg{color:var(--bad)} .pos{color:var(--good)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
+.card.warn{border-left:4px solid var(--warn)}
+.card.bad{border-left:4px solid var(--bad)}
+.card.good{border-left:4px solid var(--good)}
+.card.info{border-left:4px solid var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:16px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.kpi .v{font-size:24px;font-weight:700;line-height:1.2}
+.kpi .l{font-size:12px;color:var(--mut);margin-top:2px}
+.fig{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;margin:18px 0}
+.fig .cap{font-size:12px;color:var(--mut);margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+.fig h4{margin-top:0}
+.chartbox{position:relative;height:340px}
+.chartbox.tall{height:420px}
+.unit{font-size:12px;color:var(--mut);font-weight:400}
+.src{font-size:12px;color:var(--mut)}
+.src a{color:var(--accent)}
+a{color:var(--accent)}
+.pill{display:inline-block;background:var(--chip);border:1px solid var(--line);border-radius:20px;padding:2px 10px;font-size:12px;margin:2px}
+.legend-tag{font-size:12px;color:var(--mut);margin:4px 0}
+hr{border:none;border-top:1px solid var(--line);margin:30px 0}
+.svgwrap{width:100%;overflow-x:auto}
+.disc{font-size:12.5px;color:var(--mut);background:var(--panel2);border-radius:8px;padding:14px 18px}
+.toc-num{color:var(--accent);font-weight:600;margin-right:6px}
+ul.tight li{margin:3px 0}
+.banner{background:linear-gradient(135deg,#1c242e,#161c24);border:1px solid var(--line);border-radius:12px;padding:24px 28px;margin-bottom:8px}
+
+#exp{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.85;font-size:16px}
+#exp main{max-width:820px;margin:0 auto;padding:48px 28px 120px}
+#exp h1{font-size:30px;line-height:1.3}
+#exp h2{font-size:24px;margin:54px 0 6px;border-left:5px solid var(--accent);padding-left:14px}
+#exp h3{font-size:18px;margin:28px 0 6px;color:#cdd9e5}
+#exp p{margin:12px 0}
+#exp .lead{font-size:18px;color:#cdd9e5}
+#exp .sub{color:var(--mut);font-size:14px}
+#exp .step{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+#exp .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:18px 0}
+#exp .card.q{border-left:4px solid var(--accent)}
+#exp .card.warn{border-left:4px solid var(--warn)}
+#exp .card.key{border-left:4px solid var(--good);background:var(--panel2)}
+#exp .tag{font-size:12px;color:var(--mut)}
+#exp .v{color:var(--good)}
+#exp .s{color:var(--accent)}
+#exp .i{color:var(--warn)}
+#exp .u{color:var(--bad)}
+#exp table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px;background:var(--panel);border-radius:8px;overflow:hidden}
+#exp th,#exp td{border:1px solid var(--line);padding:8px 11px;text-align:left}
+#exp th{background:var(--panel2)}
+#exp .fig{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px;margin:20px 0}
+#exp .fig .cap{font-size:12.5px;color:var(--mut);margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+#exp .big{font-size:21px;font-weight:700}
+#exp a{color:var(--accent)}
+#exp .disc{font-size:13px;color:var(--mut);background:var(--panel2);border-radius:8px;padding:16px 20px;margin-top:40px}
+#exp .nav{font-size:13px;color:var(--mut);margin-bottom:8px}
+#exp .svgwrap{width:100%;overflow-x:auto}
+#exp .quote{font-size:20px;line-height:1.5;color:#cdd9e5;border-left:4px solid var(--mut);padding-left:18px;margin:24px 0;font-style:italic}
+
+#toggle-bar{position:sticky;top:0;z-index:1000;display:flex;gap:8px;justify-content:center;padding:12px;background:rgba(15,20,25,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+#toggle-bar button{font:inherit;font-size:14px;font-weight:600;padding:8px 20px;border-radius:22px;border:1px solid var(--line);background:#1c242e;color:#9aa7b4;cursor:pointer}
+#toggle-bar button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+#exp{max-width:860px;margin:0 auto}
+@media(max-width:900px){#view-report nav{display:none}}
+
+</style></head><body>
+<div id="toggle-bar">
+  <button id="btn-report" class="active" onclick="showView('report')">📊 严谨财务报告</button>
+  <button id="btn-exp" onclick="showView('exp')">🎓 通俗科普版</button>
+</div>
+<div id="view-report" style="display:flex">
+<div class="wrap">
+<nav>
+<div style="font-weight:700;font-size:16px;margin-bottom:2px">SHAZ 深度分析</div>
+<div class="sub" style="font-size:11px">SharonAI Holdings · NASDAQ</div>
+<h3>导航</h3>
+<a href="#disc">0 · 免责声明</a>
+<a href="#def">1 · 一句话定义</a>
+<a href="#method">2 · 方法论与来源</a>
+<a href="#units">3 · 单位约定</a>
+<a href="#glossary">4 · 术语 + 产业链</a>
+<a href="#bizmap">5 · 业务地图</a>
+<a href="#rev">6 · 收入构成 + 客户</a>
+<a href="#is">7 · 利润表</a>
+<a href="#bs">8 · 资产负债表</a>
+<a href="#cf">9 · 现金流</a>
+<a href="#acct">10 · 会计政策</a>
+<a href="#yoy">11 · 逐年变更</a>
+<a href="#asset">12 · 运营资产/产能</a>
+<a href="#distort">13 · 非经营扰动项</a>
+<a href="#cap">14 · 资本结构+控制权</a>
+<a href="#financing">14b · 融资全景 + PR核对</a>
+<a href="#peer">15 · 行业对比</a>
+<a href="#related">16 · 关联方红旗</a>
+<a href="#risk">17 · 风险因素</a>
+<a href="#thesis">18 · 论点</a>
+<a href="#open">19 · 悬而未决</a>
+<a href="#appendix">20 · 来源索引</a>
+<h3>另见</h3>
+<a href="javascript:void(0)" onclick="showView('exp')">📖 通俗科普版</a>
+</nav>
+<main>
+<div class="banner">
+<h1>SharonAI Holdings Inc.<span class="unit"> (NASDAQ: SHAZ · CIK 0002068385)</span></h1>
+<p class="lead">澳洲 Neocloud / GPU 算力运营商 — 一份基于 SEC 一手文件的财务与战略深度分析</p>
+<p class="sub">数据截止 2026-05-31 · 最后更新 2026-05-31 · 版本 v1.0 · 数据源:SEC EDGAR(10-K FY2025 / 10-Q Q1'26 / S-4 / 8-K 系列)+ 公司 IR</p>
+<p class="sub">标识:<span class="tag t-sec">★ SEC 直接</span> <span class="tag t-calc">◆ 计算</span> <span class="tag t-third">◇ 第三方</span> <span class="tag t-est">▽ 推算</span> · 交叉验证:<span class="ck-ok">✅吻合</span> <span class="ck-warn">⚠️有差异</span> <span class="ck-bad">❌无法验证</span></p>
+</div>
+
+<div class="grid">
+<div class="kpi"><div class="v neg">−$39.8M</div><div class="l">FY2025 净亏损 <span class="tag t-sec">★</span></div></div>
+<div class="kpi"><div class="v">$1.57M</div><div class="l">FY2025 营收 <span class="tag t-sec">★</span></div></div>
+<div class="kpi"><div class="v">~$2.2B</div><div class="l">合同积压 TCV(未确认)<span class="tag t-sec">★</span></div></div>
+<div class="kpi"><div class="v neg">−$10.1M</div><div class="l">FY2025 末股东权益 <span class="tag t-sec">★</span></div></div>
+<div class="kpi"><div class="v">81.8%</div><div class="l">内部人投票权(双层股权)<span class="tag t-sec">★</span></div></div>
+<div class="kpi"><div class="v">$164.3M</div><div class="l">现金 @2026-03-31 <span class="tag t-sec">★</span></div></div>
+</div>
+
+<!-- 0 -->
+<h2 id="disc">0 · 免责声明</h2>
+<div class="disc">
+本文是一篇基于 SEC 公开文件的财务分析读书笔记,纯属个人学习心得与公开数据解读,<b>不构成任何投资建议</b>。文中数据已尽力 cross-check 并标注来源(★ SEC 直接 / ◆ 公式计算 / ◇ 第三方 / ▽ 推算)。涉及判断均为主观推演,仅供研究参考,不应作为买卖任何证券的依据。读者请独立判断并咨询持牌金融顾问。本文作者及发布平台不对任何投资决策承担责任。
+</div>
+
+<!-- 1 -->
+<h2 id="def">1 · 公司一句话定义</h2>
+<p class="lead">SharonAI 是一家<b>澳洲 Neocloud(新型 AI 云)运营商</b>,作为 <b>NVIDIA Cloud Partner</b>,通过托管在 NEXTDC/Equinix 数据中心的 NVIDIA GPU 集群,以 <b>GPU-as-a-Service + AI PaaS + 高性能存储</b> 的形式、用 <b>take-or-pay(照付不议)</b> 合同向企业/政府/hyperscaler 出租 AI 算力。</p>
+<p>公司 2026 年 2 月通过 <b>de-SPAC(壳公司 Roth CH Acquisition 反向并购)</b> 登陆纳斯达克。<span class="tag t-sec">★</span> 当前处于 <b>「巨额合同已签、收入尚未启动」</b> 的极早期阶段:FY2025 实际营收仅 $1.57M,却已签下约 $2.2B 的 5 年期合同积压。</p>
+
+<!-- 2 -->
+<h2 id="method">2 · 数据来源与方法论</h2>
+<p>严格按 <i>listed-company-financial-research</i> 方法论:Phase 0 建立初始印象 → 全量 filing 并行精读(5 个并行 agent)→ 三表/会计政策/逐年变更/专题深挖 → 行业对比 → 论点。</p>
+<p><b>Filing 覆盖率</b> <span class="tag t-calc">◆</span>:EDGAR 全量 70 份 filing 已全部登记并分类;深度精读覆盖全部 10-K / 10-Q / S-4(并购招股)/ 关键 8-K(1.01/2.03/3.02/Super 8-K)/ 治理与持股(Form 3/4、13D/13G、S-8、8-A12B)。Form 3/4 与 13D/13G 中重复披露的逐条交易明细按代表性抽样精读。</p>
+<div class="card info"><b>一手 vs 故事口径</b>:公司 IR 的 <a href="#distort">投资者 deck</a> 自我声明 "unaudited、不符合 Reg S-X、非 GAAP"。本报告一律以 <b>SEC 法定 filing</b> 为锚,deck/新闻稿仅作叙事对照,差异处标 <span class="ck-warn">⚠️</span>。</div>
+
+<!-- 3 -->
+<h2 id="units">3 · 单位约定与常识自检</h2>
+<p>本报告货币单位统一 <b>USD</b>。换算锚:<b>1 亿 USD = $100M = $0.1B</b>。常识对照:Microsoft 年收入 ~$245B、AWS ~$108B、NVIDIA ~$60B+。</p>
+<p class="sub">SharonAI 全部数字处于 <b>百万(M)级</b>(营收 $1.57M、净亏 $39.8M),合同积压为 <b>十亿(B)级 TCV</b>($2.2B)——二者量级差约 <b>1,400 倍</b>,是本案最核心的张力,后文反复出现,务必不要把 TCV 当作营收。</p>
+
+<!-- 4 -->
+<h2 id="glossary">4 · 术语表 + 产业链地图</h2>
+<table>
+<tr><th>术语(全称)</th><th>大白话</th><th>对 SharonAI 的意义</th></tr>
+<tr><td><b>Neocloud</b></td><td>专门做 AI/GPU 算力的新型云,不做通用云(区别于 AWS/Azure 全家桶)</td><td>SHAZ 的身份定位;同业 = CoreWeave/Nebius</td></tr>
+<tr><td><b>GPUaaS</b>(GPU-as-a-Service)</td><td>把 GPU 算力按小时/按月租给你,你不用自己买卡</td><td>核心收入模式</td></tr>
+<tr><td><b>NCP</b>(NVIDIA Cloud Partner)</td><td>英伟达官方认证的云伙伴,能优先拿到卡</td><td>护城河 + GPU 货源命脉(2024-12 获认证)<span class="tag t-sec">★</span></td></tr>
+<tr><td><b>Take-or-pay</b>(照付不议)</td><td>客户预订了产能,不管用不用都得按月付钱</td><td>合同模式;deck 称"上线后 100% 利用率"</td></tr>
+<tr><td><b>TCV</b>(Total Contract Value)/ <b>RPO</b>(剩余履约义务)</td><td>合同 5 年总金额 / 还没确认成收入的部分(积压)</td><td>$2.2B 是 TCV,<b>不是</b>当期收入 ⚠️</td></tr>
+<tr><td><b>FVO</b>(Fair Value Option, ASC 825)</td><td>选择把可转债按"公允价值"记账,每期波动进损益</td><td>制造了 FY25 −$26M、Q1'26 −$70.2M 的非现金巨亏</td></tr>
+<tr><td><b>de-SPAC</b></td><td>私营公司借壳 SPAC 上市</td><td>SHAZ 上市路径(借 Roth CH 壳)</td></tr>
+</table>
+<div class="fig">
+<h4>图 4.1 · 产业链地图 <span class="unit">(红框=SharonAI 所处环节)</span></h4>
+<div class="svgwrap"><svg viewBox="0 0 1000 230" width="100%" font-family="sans-serif" font-size="13">
+<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa7b4"/></marker></defs>
+<text x="10" y="20" fill="#9aa7b4" font-size="11">上游(供应)</text>
+<text x="430" y="20" fill="#9aa7b4" font-size="11">中游(算力运营)</text>
+<text x="820" y="20" fill="#9aa7b4" font-size="11">下游(客户)</text>
+<!-- upstream -->
+<rect x="10" y="40" width="150" height="34" rx="6" fill="#1c242e" stroke="#2a323d"/><text x="85" y="62" fill="#e6edf3" text-anchor="middle">NVIDIA(GPU)</text>
+<rect x="10" y="84" width="150" height="34" rx="6" fill="#1c242e" stroke="#2a323d"/><text x="85" y="106" fill="#e6edf3" text-anchor="middle">NEXTDC/Equinix(机房)</text>
+<rect x="10" y="128" width="150" height="34" rx="6" fill="#1c242e" stroke="#2a323d"/><text x="85" y="150" fill="#e6edf3" text-anchor="middle">Lenovo/WWT(集成)</text>
+<rect x="10" y="172" width="150" height="34" rx="6" fill="#1c242e" stroke="#2a323d"/><text x="85" y="194" fill="#e6edf3" text-anchor="middle">Cisco(网络)</text>
+<!-- mid (SHAZ) -->
+<rect x="410" y="95" width="180" height="60" rx="8" fill="#13243f" stroke="#f85149" stroke-width="2.5"/><text x="500" y="120" fill="#fff" text-anchor="middle" font-weight="700">SharonAI</text><text x="500" y="140" fill="#9aa7b4" text-anchor="middle" font-size="11">GPUaaS / AI PaaS / 存储</text>
+<!-- downstream -->
+<rect x="840" y="40" width="150" height="30" rx="6" fill="#1c242e" stroke="#2a323d"/><text x="915" y="60" fill="#e6edf3" text-anchor="middle">ESDS($1.25B)</text>
+<rect x="840" y="78" width="150" height="30" rx="6" fill="#1c242e" stroke="#2a323d"/><text x="915" y="98" fill="#e6edf3" text-anchor="middle">未具名($950M)</text>
+<rect x="840" y="116" width="150" height="30" rx="6" fill="#1c242e" stroke="#2a323d"/><text x="915" y="136" fill="#e6edf3" text-anchor="middle">Canva / GMI</text>
+<rect x="840" y="154" width="150" height="30" rx="6" fill="#1c242e" stroke="#2a323d"/><text x="915" y="174" fill="#e6edf3" text-anchor="middle">企业/政府/hyperscaler</text>
+<line x1="160" y1="57" x2="408" y2="115" stroke="#9aa7b4" marker-end="url(#arr)"/>
+<line x1="160" y1="101" x2="408" y2="122" stroke="#9aa7b4" marker-end="url(#arr)"/>
+<line x1="160" y1="145" x2="408" y2="128" stroke="#9aa7b4" marker-end="url(#arr)"/>
+<line x1="160" y1="189" x2="408" y2="135" stroke="#9aa7b4" marker-end="url(#arr)"/>
+<line x1="592" y1="120" x2="838" y2="55" stroke="#9aa7b4" marker-end="url(#arr)"/>
+<line x1="592" y1="124" x2="838" y2="93" stroke="#9aa7b4" marker-end="url(#arr)"/>
+<line x1="592" y1="128" x2="838" y2="131" stroke="#9aa7b4" marker-end="url(#arr)"/>
+<line x1="592" y1="135" x2="838" y2="169" stroke="#9aa7b4" marker-end="url(#arr)"/>
+</svg></div>
+<div class="cap">来源:★ 10-K FY2025 / S-4 业务描述 / 8-K(ESDS 4/1、$950M 5/14)。SHAZ 处中游,<b>命脉同时握在上游(NVIDIA 配额、NEXTDC 单一机房依赖)和下游(3 客户占 82% 收入)两端</b>。</div>
+</div>
+
+<!-- 5 -->
+<h2 id="bizmap">5 · 业务地图</h2>
+<p><span class="tag t-sec">★</span> 10-K FY2025 报告 <b>单一经营/报告分部(HPC)</b>,CODM = CEO,无澳洲/美国分拆。业务两条线:</p>
+<ul class="tight">
+<li><b>① AI/HPC 云计算(GPU IaaS + 存储)</b> — 唯一在产生收入的业务。按 GPU/CPU-小时 + 按 TB 存储计价,on-demand 或 reserved take-or-pay。收入按周/over-time 确认(设备对客户可用即确认)。<span class="tag t-sec">★ Note 2</span></li>
+<li><b>② 数据中心开发(TCDC)</b> — 无收入业务,已于 2026-01 出售 50% 权益退出(见 <a href="#distort">§13</a>)。</li>
+<li><b>③ Filecoin 挖矿</b> — 历史业务,<b>2025 Q2 已停止</b>。<span class="tag t-sec">★</span></li>
+</ul>
+<div class="card warn"><b>5W 深挖缺口</b> <span class="ck-warn">⚠️</span>:10-K <b>未披露 RPO/backlog/deferred revenue 余额</b>,也<b>无量化的客户集中度 Note</b>(仅在风险因素提到"~82% 收入来自 3 客户")。对一家以 take-or-pay 讲故事的公司,这两项缺失是重要的信息透明度红旗。</div>
+
+<!-- 6 -->
+<h2 id="rev">6 · 收入构成 + 客户集中度</h2>
+<div class="fig">
+<h4>图 6.1 · 营收 vs 合同积压(对数轴)<span class="unit"> 单位 USD</span></h4>
+<div class="chartbox"><canvas id="cRevBacklog"></canvas></div>
+<div class="cap">★ 营收:10-K(FY23 DSS 前身 $1.29M / FY24 $438K / FY25 $1.57M);★ 积压:ESDS $1.25B(8-K 4/1)+ 未具名 $950M(8-K 5/14)。<b>积压/营收 ≈ 1,400×</b> ◆。注意对数轴——线性轴下营收几乎贴地。</div>
+</div>
+<h4>客户集中度 <span class="tag t-sec">★ 10-K Item 1A</span></h4>
+<p>风险因素披露:<b>2025 年约 82% 收入来自 3 个客户</b>,且预期持续。已签大单的对手方:</p>
+<table>
+<tr><th>客户</th><th>合同额</th><th>期限/结构</th><th>规模</th><th>状态</th></tr>
+<tr><td><b>ESDS Software Solutions</b></td><td class="num">~$1.25B TCV</td><td>5 年 + 2 年期权(MSA 7 年)</td><td>~8,200 颗 B300 + 17.8PB 存储</td><td>2026-09 前交付,收入未启动</td></tr>
+<tr><td><b>未具名全球科技公司</b>(亚太)</td><td class="num">~$950M</td><td>5 年</td><td>NEXTDC 机房 + Vast Data OS</td><td>收入预计 2026 Q3/Q4</td></tr>
+<tr><td>Canva / GMI Computing</td><td class="num">未披露</td><td>—</td><td>—</td><td>仅叙事"赢单",无独立合同 8-K <span class="ck-warn">⚠️</span></td></tr>
+</table>
+<div class="card bad"><b>核心认知</b>:$2.2B 是 <b>5 年合同总额(TCV)</b>,按公司自己的合同生命周期,收入<b>只在 GPU 部署上线后(约第 5 个月起)按月确认</b>。因此 FY2025 仅录得 $1.57M,Q1'26 甚至 <b>同比下滑</b>($294K vs $325K)。<b>把 $2.2B 当成营收 = 量级错 1,000 倍以上。</b></div>
+
+<!-- 7 -->
+<h2 id="is">7 · 利润表 <span class="unit">(USD,合并)</span></h2>
+<table>
+<tr><th>科目</th><th class="num">FY2024</th><th class="num">FY2025</th><th class="num">Q1'25</th><th class="num">Q1'26</th></tr>
+<tr><td>营收</td><td class="num">438,292</td><td class="num">1,566,631</td><td class="num">325,092</td><td class="num">294,014</td></tr>
+<tr><td>营业成本</td><td class="num">(719,993)</td><td class="num">(1,465,824)</td><td class="num">(313,382)</td><td class="num">(525,816)</td></tr>
+<tr><td>毛利</td><td class="num neg">(281,701)</td><td class="num pos">100,807</td><td class="num pos">11,710</td><td class="num neg">(231,802)</td></tr>
+<tr><td>SG&A</td><td class="num">(2,368,745)</td><td class="num">(12,116,600)</td><td class="num">(1,007,430)</td><td class="num">(4,015,219)</td></tr>
+<tr><td><b>经营亏损</b></td><td class="num neg">(4,029,985)</td><td class="num neg">(13,785,941)</td><td class="num neg">(1,161,248)</td><td class="num neg">(2,819,223)</td></tr>
+<tr><td>可转债公允价值变动</td><td class="num">—</td><td class="num neg">(26,030,635)</td><td class="num">—</td><td class="num neg">(70,227,754)</td></tr>
+<tr><td>TCDC 出售利得</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num pos">65,919,712</td></tr>
+<tr><td>所得税(费用)</td><td class="num">—</td><td class="num">—</td><td class="num">62,582</td><td class="num neg">(13,518,652)</td></tr>
+<tr><td><b>净亏损</b></td><td class="num neg">(3,923,998)</td><td class="num neg">(39,815,021)</td><td class="num neg">(1,432,580)</td><td class="num neg">(19,915,764)</td></tr>
+<tr><td>每股亏损(基本)</td><td class="num">(0.77)</td><td class="num">(4.04)</td><td class="num">—</td><td class="num">—</td></tr>
+</table>
+<p class="src">来源:★ 10-K FY2025(R 报表)、★ 10-Q Q1'26、XBRL companyfacts。交叉验证:三表内部勾稽 ✅;deck 完全不提净亏/经营亏损/毛利 ⚠️。</p>
+<div class="fig">
+<h4>图 7.1 · Q1'26 净亏损桥 <span class="unit">单位 $M — 两个非现金巨项几乎对冲</span></h4>
+<div class="chartbox tall"><canvas id="cWaterfall"></canvas></div>
+<div class="cap">★ 10-Q Q1'26 损益表。<b>看点</b>:经营亏损仅 −$2.8M;但可转债公允价值 −$70.2M(非现金)与 TCDC 利得 +$65.9M(非现金)<b>几乎对冲</b>;再叠加异常的 −$13.5M 所得税 → GAAP 净亏 −$19.9M。<b>三个数字(−$2.8M / −$19.9M / 对冲后)都要看,别被任一单一数字误导。</b></div>
+</div>
+
+<!-- 8 -->
+<h2 id="bs">8 · 资产负债表 <span class="unit">(USD)</span></h2>
+<table>
+<tr><th>科目</th><th class="num">2024-12-31</th><th class="num">2025-12-31</th><th class="num">2026-03-31</th></tr>
+<tr><td>现金及等价物</td><td class="num">4,424,805</td><td class="num">71,073,024</td><td class="num">164,288,288</td></tr>
+<tr><td>总资产</td><td class="num">32,146,452</td><td class="num">133,140,150</td><td class="num">—</td></tr>
+<tr><td>可转债(公允价值,流动)</td><td class="num">—</td><td class="num">129,017,286</td><td class="num">199,358,226</td></tr>
+<tr><td>总负债</td><td class="num">2,237,506</td><td class="num">143,288,407</td><td class="num">—</td></tr>
+<tr><td><b>股东权益</b></td><td class="num pos">29,908,945</td><td class="num neg">(10,148,257)</td><td class="num">—</td></tr>
+</table>
+<div class="fig">
+<h4>图 8.1 · 资产 / 负债 / 权益演变 <span class="unit">单位 $M</span></h4>
+<div class="chartbox"><canvas id="cBS"></canvas></div>
+<div class="cap">★ 10-K FY2025。<b>红旗</b>:FY2025 末 <b>股东权益转负 −$10.1M</b>——尽管手握 $71M 现金。主因是可转债以公允价值记为 $129M 负债 + 累计赤字。商誉 $18M(DSS 收购)占资产 ~14%。</div>
+</div>
+
+<!-- 9 -->
+<h2 id="cf">9 · 现金流 <span class="unit">(USD)</span></h2>
+<table>
+<tr><th>FY2025 现金流</th><th class="num">金额</th></tr>
+<tr><td>经营活动(OCF)</td><td class="num neg">(2,638,947)</td></tr>
+<tr><td>投资活动(含 Capex −$10.95M)</td><td class="num neg">(13,805,595)</td></tr>
+<tr><td>融资活动(主要 Pre-IPO 可转债 +$89.2M)</td><td class="num pos">83,044,339</td></tr>
+</table>
+<div class="fig">
+<h4>图 9.1 · Q1'26 现金桥 <span class="unit">单位 $M — 增量几乎全来自 IPO</span></h4>
+<div class="chartbox tall"><canvas id="cCashbridge"></canvas></div>
+<div class="cap">★ 10-Q Q1'26 现金流量表。现金 $71.1M → $164.3M(+$93.2M)◆。流入:IPO 净 +$119.5M、可转债 +$15.2M。<b>TCDC 的 $70M 不进现金桥</b>(对价为票据+股权,非现金;$50M 票据期后才现金偿还)。倒推经营/资本开支净流出 ≈ −$41.5M ◆。</div>
+</div>
+
+<!-- 10 -->
+<h2 id="acct">10 · 关键会计政策深度解析 <span class="unit">(铁律 3)</span></h2>
+<h4>10.1 收入确认(ASC 606)<span class="tag t-sec">★ Note 2</span></h4>
+<p>GPU IaaS 按 <b>over-time(按周)</b>确认——"当设备对客户可用时"。提供 usage-based 与 term-based take-or-pay 两种。历史 Filecoin 挖矿为 point-in-time(WinningPoSt 验证时),已停。</p>
+<h4>10.2 折旧</h4>
+<p>PP&E 使用寿命 <b>1–20 年</b> <span class="tag t-sec">★</span>;<b>无利息资本化</b>。GPU 折旧寿命是行业关键变量(同业多用 5–6 年),寿命拉长会美化当期利润——SHAZ 的 1–20 年区间宽泛,需在未来 10-K 关注 GPU 类资产的具体取值。</p>
+<h4>10.3 可转债公允价值期权(ASC 825)— 最关键 <span class="tag t-sec">★</span></h4>
+<p>公司对可转债<b>选用公允价值期权</b>,每期重估进损益。这制造了 FY25 −$26.0M、Q1'26 −$70.2M 的非现金损失。机制:<b>公司股权价值上升 → 可转债负债公允价值上升 → 损益录得损失</b>(且不可抵税)。这是"越被看好、账面越亏"的 FVO 悖论。</p>
+<div class="card">
+<h4>10.4 激进度评分</h4>
+<table>
+<tr><th>维度</th><th>SharonAI 选择</th><th>评分</th></tr>
+<tr><td>收入确认(over-time/可用即确认)</td><td>中性偏稳健</td><td class="num">0</td></tr>
+<tr><td>可转债 FVO(自愿选用)</td><td>透明但波动大、放大账面亏</td><td class="num">−1(保守方向)</td></tr>
+<tr><td>无利息资本化</td><td>稳健</td><td class="num">−1</td></tr>
+<tr><td>商誉不摊销 + $18M 占比高</td><td>标准但减值风险</td><td class="num">+1</td></tr>
+<tr><td>RPO/集中度披露缺失</td><td>透明度不足</td><td class="num">+1</td></tr>
+<tr><td><b>综合</b></td><td>会计本身不激进,但<b>披露透明度偏低</b></td><td class="num"><b>~0</b></td></tr>
+</table>
+</div>
+
+<!-- 11 -->
+<h2 id="yoy">11 · 逐年变更侦测 <span class="unit">(铁律 6)</span></h2>
+<div class="fig">
+<h4>图 11.1 · 关键变更时间线</h4>
+<div class="svgwrap"><svg viewBox="0 0 1000 200" width="100%" font-family="sans-serif" font-size="12">
+<line x1="40" y1="60" x2="960" y2="60" stroke="#2a323d" stroke-width="2"/>
+<g text-anchor="middle">
+<circle cx="110" cy="60" r="6" fill="#4f9cf9"/><text x="110" y="40" fill="#e6edf3">2024</text><text x="110" y="90" fill="#9aa7b4" font-size="11">收购 SAIPL+DSS</text><text x="110" y="105" fill="#9aa7b4" font-size="11">商誉 $18M</text>
+<circle cx="320" cy="60" r="6" fill="#4f9cf9"/><text x="320" y="40" fill="#e6edf3">2025 Q1</text><text x="320" y="90" fill="#9aa7b4" font-size="11">TCDC JV 成立</text>
+<circle cx="500" cy="60" r="6" fill="#d29922"/><text x="500" y="40" fill="#e6edf3">2025 Q2</text><text x="500" y="90" fill="#9aa7b4" font-size="11">停止 Filecoin 挖矿</text><text x="500" y="105" fill="#9aa7b4" font-size="11">(业务转型)</text>
+<circle cx="680" cy="60" r="6" fill="#f85149"/><text x="680" y="40" fill="#e6edf3">2025-12</text><text x="680" y="90" fill="#9aa7b4" font-size="11">de-SPAC 完成</text><text x="680" y="105" fill="#9aa7b4" font-size="11">1-for-50 反向拆股</text>
+<circle cx="830" cy="60" r="6" fill="#f85149"/><text x="830" y="40" fill="#e6edf3">2026-01</text><text x="830" y="90" fill="#9aa7b4" font-size="11">出售 TCDC 50%</text><text x="830" y="105" fill="#9aa7b4" font-size="11">换审计师→HoganTaylor</text>
+<circle cx="940" cy="60" r="6" fill="#3fb950"/><text x="930" y="40" fill="#e6edf3">2026 Q1</text><text x="930" y="130" fill="#9aa7b4" font-size="11">Nasdaq 上市</text><text x="930" y="145" fill="#9aa7b4" font-size="11">$2.2B 合同</text>
+</g>
+</svg></div>
+<div class="cap">★ 10-K/10-Q/8-K。三类变更均命中:<b>业务转型</b>(停挖矿→纯 AI 云、出售 TCDC 退出数据中心开发)、<b>并表范围</b>(收购 SAIPL/DSS、TCDC 由权益法持有后出售)、<b>资本结构重组</b>(de-SPAC + 反向拆股,EPS 不可简单跨期比较)。审计师 12 个月内 Marcum→CBIZ→HoganTaylor。</div>
+</div>
+
+<!-- 12 -->
+<h2 id="asset">12 · 运营资产 / GPU 产能专题 <span class="unit">(触发器:产能驱动)</span></h2>
+<table>
+<tr><th>维度</th><th>内容</th><th>来源</th></tr>
+<tr><td>资产核算</td><td>GPU 计入 PP&E(at cost $17.4M @3/31/26),累计折旧 $2.6M;机房为<b>租赁</b>(ROU 资产)</td><td><span class="tag t-sec">★ 10-Q Note 9</span></td></tr>
+<tr><td>控制权</td><td>GPU 全资自有;机房依赖 <b>NEXTDC/Equinix</b>(单一供应商集中)</td><td><span class="tag t-sec">★</span></td></tr>
+<tr><td>当前机群</td><td>S-4 时 >430 颗(H100/L40S/A40/MI300X);路线图升级至数千颗 NVIDIA <b>B300</b></td><td><span class="tag t-sec">★ S-4</span></td></tr>
+<tr><td>产能指引</td><td>预期数据中心容量 50MW → 70MW → <b>100MW(2027 初)</b></td><td><span class="tag t-third">◇ deck</span></td></tr>
+<tr><td>交付管线</td><td>ESDS ~8,200 颗 B300(2026-09 前);$950M 单 2026 H2 起</td><td><span class="tag t-sec">★ 8-K</span></td></tr>
+</table>
+<div class="card warn"><b>注意</b>:50/70/100MW 为 deck 的 "expected/guidance" 口径 <span class="ck-warn">⚠️</span>,非已建成产能;且公司同日把 70MW 上调到 100MW,指引变动较随意。实际产能取决于 NEXTDC 机柜 + NVIDIA B300 配额 + 调试上线三个环节,全部在收入之前。</div>
+
+<!-- 13 -->
+<h2 id="distort">13 · 非经营 / 盈余扰动项专题 <span class="unit">(触发器:扭曲 headline 利润)</span></h2>
+<p>本案最重要的专题:多个非经营、非现金项严重扭曲 headline 利润,必须做<b>剥离测试</b>还原真实经营。</p>
+<div class="fig">
+<h4>图 13.1 · 剥离测试 — Q1'26 报告净亏 vs 真实经营 <span class="unit">单位 $M</span></h4>
+<div class="chartbox"><canvas id="cStrip"></canvas></div>
+<div class="cap">★ 10-Q。剔除两个非现金扰动项后,真实经营亏损 ≈ <b>−$2.8M</b>(经营亏损口径);GAAP 净亏 −$19.9M 主要由"出售税负 + 可转债 FVO 损失不可抵税"驱动。</div>
+</div>
+<h4>13.1 TCDC 出售的口径核对 <span class="ck-ok">✅ 已厘清(此前误判已更正)</span></h4>
+<table>
+<tr><th>口径/时点</th><th>金额</th><th>说明</th></tr>
+<tr><td>原定(2025-12 / 2026-01 公告 + 10-K/10-Q 申报时)</td><td class="num">$70M</td><td><b>$50M 可转债票据 + $10M 现金 + $10M NUAI 股权</b></td></tr>
+<tr><td>最终(2026-04-14 PR)</td><td class="num">$74M</td><td>NUAI 于 <b>4/10 提前赎回</b> $50M 票据(现金)+ 追加 <b>true-up 股份</b> → 比原定多 <b>$4M</b></td></tr>
+<tr><td>损益体现(Q1'26)</td><td class="num pos">+$65.9M gain</td><td>一次性、非现金(现金流量表中剔除)</td></tr>
+</table>
+<p>★ 10-Q Note 7/8 + ★ 2026-04-14 PR:$50M 票据(10% 票息、原 2026-06-30 到期、NUAI 担保)被 <b>NUAI 提前(4/10 Optional Redemption)全额现金偿还</b>,另发 true-up 股份补足,使总对价由 $70M 升至 <b>$74M</b>。<b>更正:此前曾把 deck 的 $74M 误判为"虚高 ~6%";实际 $74M 是 true-up 后的最终准确数,10-K/10-Q 的 $70M 只是申报时点的原定数。</b>但要点不变:该利得为<b>一次性、非现金</b>,Q1 现金到账有限,"recycled capital" 主要在 Q2 才变现。</p>
+<div class="card info"><b>TCDC 演化(全量新闻稿还原)</b>:得州 JV 并非一直是"250MW"。轨迹:2024-11 与 New Era Helium 签 <b>90MW</b> 净零数据中心 LOI → 2025-01 敲定 <b>250MW</b> JV(TCDC 成立)→ 2025-09/10 购地至 438 英亩、选 Ramboll 工程、分两期 → 升级为 <b>"up to 1GW+"</b> 巨型园区 → 2026-01 以 $74M 出售 50% 退出。对手方 New Era Helium(NASDAQ: NEHC)期间更名 <b>New Era Energy & Digital(NASDAQ: NUAI)</b>。即公司把该项目从 90MW 一路做到 1GW+,再"高位套现"回笼资金转投澳洲主业。</div>
+<h4>13.2 可转债公允价值损失</h4>
+<p>FY25 −$26.0M + Q1'26 −$70.2M 均为 FVO 下的<b>非现金</b>损失(详见 §10.3)。Q1'26 末可转债公允价值 $199.4M,全列<b>流动负债</b>。</p>
+
+<!-- 14 -->
+<h2 id="cap">14 · 资本结构 + 控制权 + 到期墙</h2>
+<div class="fig">
+<h4>图 14.1 · 双层股权与控制结构 <span class="unit">内部人 ~81.8% 投票权</span></h4>
+<div class="svgwrap"><svg viewBox="0 0 1000 250" width="100%" font-family="sans-serif" font-size="12">
+<rect x="360" y="10" width="280" height="44" rx="8" fill="#13243f" stroke="#4f9cf9"/><text x="500" y="30" fill="#fff" text-anchor="middle" font-weight="700">SharonAI Holdings Inc. (SHAZ)</text><text x="500" y="46" fill="#9aa7b4" text-anchor="middle" font-size="11">Class A=1票 · Class B=160票</text>
+<!-- founders -->
+<rect x="30" y="110" width="270" height="70" rx="8" fill="#1c242e" stroke="#f85149"/><text x="165" y="132" fill="#e6edf3" text-anchor="middle" font-weight="600">创始人三人(经家族信托)</text><text x="165" y="150" fill="#9aa7b4" text-anchor="middle" font-size="11">Manning / Leece / Hughes-Jones</text><text x="165" y="167" fill="#f85149" text-anchor="middle" font-size="11">各 45,447 股 Class B 超级投票</text>
+<!-- passive -->
+<rect x="360" y="110" width="280" height="70" rx="8" fill="#1c242e" stroke="#2a323d"/><text x="500" y="132" fill="#e6edf3" text-anchor="middle" font-weight="600">被动机构(13G)</text><text x="500" y="150" fill="#9aa7b4" text-anchor="middle" font-size="11">Oaktree 6.25% · Millennium 5.4%</text><text x="500" y="167" fill="#9aa7b4" text-anchor="middle" font-size="11">无活跃股东 / 无控制计划</text>
+<!-- public -->
+<rect x="700" y="110" width="270" height="70" rx="8" fill="#1c242e" stroke="#2a323d"/><text x="835" y="132" fill="#e6edf3" text-anchor="middle" font-weight="600">公众 Class A</text><text x="835" y="150" fill="#9aa7b4" text-anchor="middle" font-size="11">流通极低(de-SPAC 后)</text><text x="835" y="167" fill="#9aa7b4" text-anchor="middle" font-size="11">~18.2% 投票权(全体非内部人)</text>
+<line x1="165" y1="110" x2="430" y2="56" stroke="#f85149" stroke-width="2"/><text x="250" y="88" fill="#f85149" font-size="11">81.8% 投票权</text>
+<line x1="500" y1="110" x2="500" y2="56" stroke="#9aa7b4"/>
+<line x1="835" y1="110" x2="570" y2="56" stroke="#9aa7b4"/>
+</svg></div>
+<div class="cap">★ S-4 / Form 3/4 / 13D/13G。<b>红旗</b>:Class B 超级投票(160:1)使三位创始人以少量经济权益掌控 ~81.8% 投票权;无日落条款确认;可能适用 controlled-company 豁免。被动机构(Oaktree/Millennium)仅财务持有,无外部活跃股东。</div>
+</div>
+<div class="fig">
+<h4>图 14.2 · 债务到期墙 <span class="unit">单位 $M(本金)</span></h4>
+<div class="chartbox"><canvas id="cMaturity"></canvas></div>
+<div class="cap">★ 8-K。2027:~$100M(上限 $200M)可转债(12%→15%,Canaccord);2031:$350M(6.00%,Oaktree+Two Seas 领投,转股价 ~$48.24)。注意 10-Q 中可转债以公允价值 $199.4M 列流动负债 = 近期再融资/转股压力。另:$50M NUAI 票据为<b>应收</b>(期后已收回)。</div>
+</div>
+
+<!-- 14b -->
+<h2 id="financing">14b · 融资全景 + 新闻稿(IR)vs SEC 逐条核对</h2>
+<p>把公司全部 ~40 篇新闻稿(经 WordPress API 全量拉取,非媒体页 UI 的 10 条)逐条对 SEC。<b>结构性事实</b>:SHAZ 2025-12 de-SPAC 后才成为美国申报主体,之前(得州 JV、NEXTDC 扩容、平台发布等)按设计无 8-K,仅见于 S-4。</p>
+<div class="card bad">
+<h4>⚠️ 三条之前未覆盖、且仅以"furnished/叙事"披露的重大事项</h4>
+<ul class="tight">
+<li><b>USD.AI 高达 $500M 债务额度</b>(PR 2026-01-23)— 由 Permian Labs 的 <b>USD.AI 协议(USDai 稳定币)</b>提供的<b>加密/链上、非追索、GPU 资产抵押</b>融资,不占资产负债表;初始拟提 ~$65M。SEC 仅以 <b>8-K 2026-01-22(000444,7.01 furnished)</b>附新闻稿披露,<b>非 1.01 具结合同</b> → 属"已批额度",非已签已动用。🆕 引入<b>加密/稳定币/DeFi 融资依赖</b>这一全新风险维度。</li>
+<li><b>Digital Alpha 高达 $200M 股权+收入分成投资</b>(PR 2026-01-20,Cisco 三方)— SEC 仅 <b>8-K 4/1(014405,7.01)+ 10-K 期后事项</b>叙事披露。"收入分成"结构会分流未来收入。</li>
+<li><b>得州数据中心从 90MW→250MW→1GW+ 园区再整体出售</b> — TCDC 实为一度做到 1GW+ 的巨型园区(再购地、选 Ramboll、两期工程),2026-01 高位 $70M 套现退出。比 deck"250MW"叙事完整得多。</li>
+</ul>
+</div>
+<div class="fig">
+<h4>图 14b.1 · 融资全景:宣称"可用"额度 vs 已动用 <span class="unit">单位 $M</span></h4>
+<div class="chartbox"><canvas id="cFinancing"></canvas></div>
+<div class="cap">★ 8-K/10-K/PR。公司排了 <b>~$1.27B+ 的"宣称可用"融资</b>(Pre-IPO/$100M 可转债 + USD.AI $500M + Digital Alpha $200M + IPO $125M + $350M 可转债),但其中 USD.AI/Digital Alpha 多为"up to"已批额度(furnished 披露),<b>实际已动用远小于宣称额</b>。读财报时务必区分"facility/approved"与"drawn/committed"。</div>
+</div>
+<h4>核对结论</h4>
+<ul class="tight">
+<li><b>上市后的重大事件基本都能在 8-K 找到对应</b>(de-SPAC Super 8-K、$100M/$350M 可转债、TCDC 出售、IPO 定价、高管/董事变动、ESDS $1.25B、$950M 合同)✅。</li>
+<li><b>两笔大额融资(USD.AI $500M、Digital Alpha $200M)仅 7.01 furnished/叙事披露</b>,未作 1.01 具结合同 ⚠️——这本身是信号:公司未将其作为已签订的约束性重大合同。</li>
+<li><b>ESDS $1.25B 有 8-K(1.01)却无独立新闻稿;Canva/GMI 有新闻叙事却无 8-K</b>——IR 叙事与法定披露不完全对称。</li>
+<li>上市前 ~17 篇新闻稿(得州 JV + 产品里程碑)无 8-K,符合"当时非美国申报主体"的设计。</li>
+</ul>
+<p class="src">完整逐条矩阵见 <code>data/research/SHAZ/raw/F_pr_vs_sec_crosscheck.md</code>(全量 40 篇 PR × SEC)。</p>
+
+<!-- 15 -->
+<h2 id="peer">15 · 行业横向对比</h2>
+<p>可比池 = neocloud / GPUaaS / AI 数据中心(含 AI 转型矿工)。指标为最近一期 FY/LTM。</p>
+<table>
+<tr><th>指标</th><th class="num">CRWV</th><th class="num">NBIS</th><th class="num">IREN</th><th class="num">APLD</th><th class="num">中位</th><th class="num">SHAZ</th></tr>
+<tr><td>营收</td><td class="num">$5,131M</td><td class="num">$530M</td><td class="num">$501M</td><td class="num">$144M</td><td class="num">~$368M</td><td class="num neg">~$1.6M</td></tr>
+<tr><td>营收增速 YoY</td><td class="num">168%</td><td class="num">351%</td><td class="num">168%</td><td class="num">~84%</td><td class="num">~107%</td><td class="num">前收入期</td></tr>
+<tr><td>经营利润率</td><td class="num">−1%</td><td class="num">−115%</td><td class="num">+3%</td><td class="num">−12%</td><td class="num">~−63%</td><td class="num neg">深度为负</td></tr>
+<tr><td>合同积压</td><td class="num">$99B</td><td class="num">~$3B</td><td class="num">—</td><td class="num">$16B</td><td class="num">~$8-16B</td><td class="num">~$2.2B</td></tr>
+<tr><td>积压/营收</td><td class="num">~19×</td><td class="num">~6×</td><td class="num">—</td><td class="num">~110×</td><td class="num">~30×</td><td class="num bad">~1,400×</td></tr>
+<tr><td>市值(约)</td><td class="num">~$43B</td><td class="num">~$20B</td><td class="num">~$12B</td><td class="num">~$4B</td><td class="num">~$8-12B</td><td class="num">~$1.1B</td></tr>
+</table>
+<p class="src">来源:★ 各公司 SEC 10-K/20-F + XBRL(CRWV/NBIS/IREN/APLD);◇ 积压/市值取自公司 IR/新闻;▽ 市值约值。</p>
+<div class="fig">
+<h4>图 15.1 · 营收规模对比(对数轴)<span class="unit">单位 $M</span></h4>
+<div class="chartbox"><canvas id="cPeerRev"></canvas></div>
+<div class="cap">SHAZ 营收较同业中位低 ~230×,较 CoreWeave 低 ~3,200×。</div>
+</div>
+<div class="card warn"><b>合理性判断</b>:整个 neocloud 板块都"先有积压、后有收入、靠资本开支堆产能",方向一致。但 SHAZ 处于<b>最投机、去风险程度最低的极端</b>:几乎零交付收入对应 $2.2B 照付不议承诺,靠可转债融资,执行(NEXTDC 产能 + NVIDIA B300 交付 + 调试 + 客户转化)全部尚未发生。最接近的类比是早期 AI 转型矿工(WULF/HUT),但它们至少有 $150–235M 真实收入和运营资产基底。SHAZ 更像"<b>套着公众股票外壳的 pre-revenue 项目融资</b>"。</div>
+
+<!-- 16 -->
+<h2 id="related">16 · 关联方红旗扫描</h2>
+<ul class="tight">
+<li><span class="ck-bad">🔴</span> <b>双层股权 + controlled company</b>:创始人 160:1 超级投票,~81.8% 控制权,少数股东经济权益。<span class="tag t-sec">★</span></li>
+<li><span class="ck-bad">🔴</span> <b>关联方可转债</b>:部分可转债由 Manning/Leece/Hughes-Jones 旗下实体持有(向创始人借款)。<span class="tag t-sec">★</span></li>
+<li><span class="ck-warn">🟡</span> <b>高管股权经家族信托间接持有</b>(MG/Strat Cap/Inbocalupo No.1)。<span class="tag t-sec">★</span></li>
+<li><span class="ck-warn">🟡</span> <b>客户集中度 82%(3 客户)</b> + 单一机房依赖 NEXTDC。<span class="tag t-sec">★</span></li>
+<li><span class="ck-warn">🟡</span> <b>审计师 12 个月三换</b>(Marcum→CBIZ→HoganTaylor)。<span class="tag t-sec">★</span></li>
+<li><span class="ck-warn">🟡</span> <b>NUAI 对手方风险</b>:TCDC 对价含 $50M NUAI 票据 + $10M NUAI 股权(已部分变现)。<span class="tag t-sec">★</span></li>
 </ul>
 
-<h2>一句话结论</h2>
-<blockquote>一家"先签下 ~$22 亿 5 年照付不议大单(ESDS $1.25B + 未具名科技公司 $950M)、却几乎还没开始收钱"的极早期澳洲 AI 算力公司:
-FY2025 真实营收仅 $1.57M、账面净亏 $39.8M(大半为可转债 FVO 非现金损失)、股东权益转负 −$10.1M、客户 3 家占 82%、命脉两头被卡(上游 NVIDIA 配额 + 单一机房 NEXTDC)、双层股权创始人控盘 81.8%。
-估值几乎全部押注那 $22 亿订单能否按时/按价/按量兑现——而这一步尚未发生。</blockquote>
+<!-- 17 -->
+<h2 id="risk">17 · 风险因素提炼 <span class="unit">(10-K Item 1A,Top 10)</span></h2>
+<ol class="tight">
+<li><b>流动性 / 可转债依赖</b> — 风险因素含 going-concern 措辞(注:审计意见本身为干净无保留);$350M+$103M 可转债 vs 微薄收入。</li>
+<li><b>客户集中度</b> — 2025 年 ~82% 收入来自 3 客户,预期持续。</li>
+<li><b>单一机房依赖 NEXTDC</b> — 其延迟/困境可能"同时影响几乎全部运营"。</li>
+<li><b>take-or-pay 执行 / 部署时点</b> — 整个 $2.2B 积压依赖"GPU 基础设施及时到位"。</li>
+<li><b>NVIDIA GPU 供应与配额</b> — 配额"可能不受公司控制";Blackwell 售罄、英伟达定价权。</li>
+<li><b>背靠背保护缺口</b> — 客户合同与供应商(Lenovo/NEXTDC)终止权不匹配,供应商退出时公司仍担责。</li>
+<li><b>可转债稀释 / 股权悬顶</b>。</li>
+<li><b>双层股权控制</b> — 可能"阻退机构投资者"。</li>
+<li><b>NUAI 对手方信用</b> — TCDC 票据收回依赖 NUAI 偿付能力。</li>
+<li><b>GPU 过时 + AUD/USD 汇率</b> — 代际更替致机群资本搁浅;澳元运营 vs 美元债务。</li>
+<li>🆕 <b>加密/稳定币融资依赖</b> — 高达 $500M 的 USD.AI 额度依赖 USDai 稳定币 + 链上信贷协议(Permian Labs),引入稳定币脱锚、协议偿付、链上 GPU 抵押估值等非传统金融风险;且为"已批额度"非具结债务。</li>
+</ol>
 
-<p class="disc">免责声明:本文基于 SEC EDGAR 公开文件,纯属个人学习研究,不构成任何投资建议。
-来源标注 ★SEC直接披露 ◆公式计算 ◇第三方 ▽推算。数据可能过时,请以最新 filing 为准。</p>
-</main></body></html>
+<!-- 18 -->
+<h2 id="thesis">18 · 我的论点 <span class="unit">(含反方)</span></h2>
+<div class="card info">
+<h4>论点 1:这是一笔"项目融资型"的 pre-revenue 押注,不是一家已验证的云公司</h4>
+<p><b>证据</b>:① FY25 营收 $1.57M、Q1 同比下滑;② $2.2B 积压/营收 ~1,400× 远超同业 ~30×;③ 收入靠 NEXTDC 产能 + B300 交付 + 客户转化三重未发生事件。<br><b>反方</b>:已是 NVIDIA NCP、已签两个十亿级 take-or-pay、$350M 资金到位,执行兑现即可快速放量。<br><b>我的反驳</b>:NCP 与签约降低但未消除执行风险;1,400× 的积压/收入比意味着估值几乎全部押注"按时、按价、按量交付",任一环节滑点都直接证伪。</p>
+</div>
+<div class="card info">
+<h4>论点 2:GAAP headline 亏损被非现金项严重扭曲,真实经营亏损要小得多——但这把双刃剑两头都不利</h4>
+<p><b>证据</b>:Q1'26 经营亏损仅 −$2.8M,但可转债 FVO −$70.2M 与 TCDC 利得 +$65.9M 对冲后 + 出售税负 → −$19.9M。<br><b>反方</b>:剥离非现金项后经营层面亏损可控。<br><b>我的反驳</b>:FVO 损失虽非现金,却反映可转债真实的转股稀释/再融资义务($199.4M 列流动);经营亏损小是因为收入还没启动、规模成本尚未发生,不代表盈利能力已验证。</p>
+</div>
+<div class="card info">
+<h4>论点 3:治理结构对少数股东不友好</h4>
+<p><b>证据</b>:160:1 双层股权、~81.8% 内部人控制、关联方可转债、公众流通极低、审计师频繁更换。<br><b>反方</b>:创始人控制在早期高增长公司常见,利于长期决策。<br><b>我的反驳</b>:控制权集中 + 关联方借款 + 低透明度(无 RPO/集中度量化)叠加,放大了少数股东的信息与治理风险。</p>
+</div>
+
+<!-- 19 -->
+<h2 id="open">19 · 悬而未决问题(保留诚实)</h2>
+<ul class="tight">
+<li>TCDC 总对价 $70M(SEC)vs $74M(deck)的 ~$4M 差额具体来源?(待 Q2 10-Q / 完整对价附注)</li>
+<li>$2.2B 积压的 RPO / deferred revenue 何时、以何节奏在表内体现?10-K 为何未披露 RPO?</li>
+<li>GPU 类资产的具体折旧寿命(1–20 年区间内取值)?直接影响未来毛利。</li>
+<li>客户集中度的逐客户占比与关联方判定(ESDS/未具名科技公司是否与内部人有关联)?</li>
+<li>$199.4M 流动可转债的转股/再融资路径,与 $350M 新债的叠加偿付计划?</li>
+<li>controlled-company 豁免是否实际启用?董事会独立性现状?</li>
+</ul>
+
+<!-- 20 -->
+<h2 id="appendix">20 · 来源索引与覆盖率</h2>
+<p><b>主要 SEC filings(一手)</b>:</p>
+<ul class="tight">
+<li>★ <a href="https://www.sec.gov/Archives/edgar/data/2068385/000149315226014068/form10-k.htm">10-K FY2025</a>(期间 2025-12-31)</li>
+<li>★ <a href="https://www.sec.gov/Archives/edgar/data/2068385/000149315226023769/form10-q.htm">10-Q Q1 FY2026</a>(期间 2026-03-31)</li>
+<li>★ <a href="https://www.sec.gov/Archives/edgar/data/2068385/000182912625008996/rothchholdings_424b3.htm">424B3 并购招股说明书</a> / S-4 系列</li>
+<li>★ <a href="https://www.sec.gov/Archives/edgar/data/2068385/000182912625010236/sharonaiholdings_8k.htm">Super 8-K(de-SPAC 完成,2025-12-22)</a></li>
+<li>★ <a href="https://www.sec.gov/Archives/edgar/data/2068385/000149315226014475/form8-k.htm">8-K ESDS $1.25B(2026-04-01)</a> · <a href="https://www.sec.gov/Archives/edgar/data/2068385/000149315226022897/form8-k.htm">8-K $950M(2026-05-14)</a></li>
+<li>★ <a href="https://www.sec.gov/Archives/edgar/data/2068385/000149315226024865/form8-k.htm">8-K $350M 可转债完成(2026-05-21)</a></li>
+</ul>
+<p><b>覆盖率自检</b> <span class="tag t-calc">◆</span>:EDGAR 全量 70 份 filing 全部登记分类(见 <code>SHAZ_filings.csv</code>);深度精读覆盖全部周期报告 + 并购文件 + 全部 1.01/2.03/3.02/2.01 8-K + 治理持股文件。未逐字精读项:重复的 Form 3 初始持股(11 份,按代表性抽样)、生效通知 EFFECT/CERT(程序性,无分析价值)——已说明可不读理由。</p>
+<p class="src">配套档案:<code>data/research/SHAZ/raw/A–E_*.md</code>(5 个并行 agent 精读笔记)· <code>SHAZ_deck_vs_10Q_reconciliation.md</code>(口径核对)· <code>ir_docs/deck/1Q26-deck-transcription.md</code>(deck 全文)。</p>
+
+<hr>
+<p class="sub">SharonAI Holdings (SHAZ) 财务与战略分析 · 基于 SEC EDGAR 一手文件 · 仅供研究,不构成投资建议 · 生成于 2026-05-31</p>
+</main>
+</div>
+
+</div>
+<div id="exp" style="display:none">
+<div class="nav"><a href="javascript:void(0)" onclick="showView('report')">← 返回严谨财务报告</a></div>
+<h1>30 分钟讲懂 SharonAI(NASDAQ: SHAZ)</h1>
+<p class="lead">一家"先签下 22 亿美元订单、却还几乎没开始收钱"的澳洲 AI 算力公司,到底是怎么回事?</p>
+<p class="sub">面向完全不懂金融的读者 · 从零讲起 · 只讲懂公司,不给买卖建议 · 数据全部来自公司向美国证监会(SEC)提交的正式文件</p>
+<p class="tag">标注约定:<span class="v">[已验证]</span>=SEC 文件直接写明 · <span class="s">[公司说法]</span>=公司自己的宣传材料 · <span class="i">[推断]</span>=根据数据推理 · <span class="u">[待确认]</span>=暂时存疑</p>
+
+<!-- 1 冷开场 -->
+<h2>① 先看一个怪现象</h2>
+<p>想象你开了一家"算力出租公司":你买一大堆超级显卡(GPU),然后把它们的计算能力按月租给那些要训练人工智能的大公司。听起来很像"算力界的二房东"。</p>
+<p>现在,这家公司告诉全世界:"我已经签了两笔大单,加起来超过 <span class="big">22 亿美元</span>!" <span class="v">[已验证]</span></p>
+<p>可当你翻开它的财务报表,却发现它<b>去年一整年的真实收入只有 157 万美元</b>——连订单金额的零头的零头都不到。<span class="v">[已验证]</span></p>
+<div class="quote">22 亿美元的订单,157 万美元的收入。两个数字之间差了大约 1400 倍。</div>
+<p>这不是写错了,也不是骗局。这正是理解 SharonAI 这家公司的钥匙。这篇文章要带你彻底搞懂:为什么会出现这种"订单巨大、收入极小"的怪现象?这家公司到底在做什么?它的钱从哪来、花到哪去?以及,看它的财报时最容易被哪些数字误导?</p>
+<p>读完之后,你不需要有任何金融背景,也能把这家公司讲给别人听。我们不下任何"该不该买"的结论——那不是这篇文章的目的;我们的目标只有一个:<b>把这家公司讲清楚</b>。</p>
+
+<!-- 2 一句话 -->
+<h2>② 一句话讲清这家公司</h2>
+<div class="card key">
+<p class="big">SharonAI 是一家澳大利亚的"AI 算力出租公司"。它把英伟达的高端显卡装进别人的数据中心机房里,然后用"长期包月、用不用都得付钱"的合同,把这些显卡的算力租给需要跑人工智能的大客户。</p>
+</div>
+<p>这种公司在行业里有个专门的名字,叫 <b>Neocloud(新型云)</b>。<span class="tag">("Neo" 是"新"的意思)</span></p>
+<p>它和你熟悉的亚马逊 AWS、微软 Azure 那种"什么云服务都做"的通用云不一样。SharonAI <b>只做一件事:AI 和高性能计算需要的 GPU 算力</b>。就像在"综合性大超市"之外,开了一家"只卖一种高端商品的专卖店"。这种专卖店最近几年特别火,因为全世界都在抢着训练 AI,而 AI 最缺的就是 GPU 算力。</p>
+<p>它在 2026 年 2 月刚刚在美国纳斯达克上市,股票代码 SHAZ。<span class="v">[已验证]</span> 上市的方式比较特殊(借壳上市),我们在第 7 节会专门讲。</p>
+
+<!-- 3 卖什么 -->
+<h2>③ 它到底"卖"什么?</h2>
+<p>SharonAI 卖的不是看得见摸得着的东西,而是"算力的使用权"。具体拆成三样:</p>
+<table>
+<tr><th>产品</th><th>大白话</th><th>谁会买</th></tr>
+<tr><td><b>GPU 即服务</b><br>(GPUaaS)</td><td>"按小时/按月租显卡算力给你",你不用自己花几千万买卡、建机房</td><td>要训练或运行 AI 模型的公司</td></tr>
+<tr><td><b>AI 平台</b><br>(AI PaaS)</td><td>不只是租裸显卡,还配好一整套软件环境,客户拎包入住直接跑 AI</td><td>没有专业运维团队的企业</td></tr>
+<tr><td><b>高性能存储</b></td><td>AI 训练要吃海量数据,配套提供超快的数据仓库</td><td>所有大模型客户</td></tr>
+</table>
+<p>这里有个关键的"上游命脉":SharonAI 自己<b>不生产显卡</b>。它的显卡全部来自 <b>英伟达(NVIDIA)</b>。而且它是英伟达官方认证的"云伙伴"(NCP,NVIDIA Cloud Partner)。<span class="v">[已验证,2024 年 12 月获认证]</span></p>
+<div class="card q"><b>为什么"英伟达认证"这么重要?</b><br>因为现在全世界的高端 AI 显卡都供不应求,英伟达说给谁、给多少,谁就能赚钱。拿到官方认证,意味着 SharonAI 在"抢卡大战"里排在了前面。但反过来说,这也意味着<b>它的命脉一半攥在英伟达手里</b>——英伟达涨价、断供、或者优先供货给更大的客户,SharonAI 都很被动。</p></div>
+<p>它的显卡装在哪儿?装在<b>别人的机房</b>里——主要是澳大利亚一家叫 <b>NEXTDC</b> 的数据中心公司,以及 Equinix。<span class="v">[已验证]</span> SharonAI 自己不盖机房,而是"租机柜、放显卡"。这是它"轻资产、快扩张"的打法,但也带来另一个命脉问题:<b>几乎所有显卡都放在 NEXTDC 一家手里</b>,万一 NEXTDC 出问题,SharonAI 的业务会"几乎全部同时受影响"——这句话是公司自己在风险提示里写的。<span class="v">[已验证]</span></p>
+
+<!-- 4 行业 -->
+<h2>④ 这个行业是怎么运转的?</h2>
+<p>要看懂 SharonAI,得先看懂整条"AI 算力产业链"。我们用一个简单的比喻:这就像一条"做菜、开餐厅、招待客人"的链条。</p>
+<div class="fig">
+<h3>AI 算力产业链(从上游到下游)</h3>
+<div class="svgwrap"><svg viewBox="0 0 800 250" width="100%" font-family="sans-serif" font-size="13">
+<rect x="20" y="30" width="220" height="190" rx="10" fill="#161c24" stroke="#2a323d"/>
+<text x="130" y="55" fill="#9aa7b4" text-anchor="middle" font-size="12">上游(供货的)</text>
+<text x="130" y="90" fill="#e6edf3" text-anchor="middle">🟩 英伟达 = 卖"炉子"(显卡)</text>
+<text x="130" y="125" fill="#e6edf3" text-anchor="middle">🟩 NEXTDC = 出租"厨房"(机房)</text>
+<text x="130" y="160" fill="#e6edf3" text-anchor="middle">🟩 Cisco/联想 = 卖"厨具"</text>
+<text x="130" y="195" fill="#e6edf3" text-anchor="middle">(网络、组装、运维)</text>
+<rect x="290" y="80" width="220" height="90" rx="10" fill="#13243f" stroke="#f85149" stroke-width="2.5"/>
+<text x="400" y="115" fill="#fff" text-anchor="middle" font-weight="700" font-size="15">SharonAI</text>
+<text x="400" y="140" fill="#9aa7b4" text-anchor="middle" font-size="12">= 开餐厅的(中游)</text>
+<text x="400" y="158" fill="#9aa7b4" text-anchor="middle" font-size="11">租厨房+买炉子→对外卖"算力大餐"</text>
+<rect x="560" y="30" width="220" height="190" rx="10" fill="#161c24" stroke="#2a323d"/>
+<text x="670" y="55" fill="#9aa7b4" text-anchor="middle" font-size="12">下游(吃饭的客人)</text>
+<text x="670" y="95" fill="#e6edf3" text-anchor="middle">🟦 ESDS(印度云公司)</text>
+<text x="670" y="130" fill="#e6edf3" text-anchor="middle">🟦 一家未具名科技巨头</text>
+<text x="670" y="165" fill="#e6edf3" text-anchor="middle">🟦 Canva、GMI 等</text>
+<text x="670" y="195" fill="#e6edf3" text-anchor="middle">→ 都是要跑 AI 的企业</text>
+<line x1="240" y1="125" x2="288" y2="125" stroke="#9aa7b4" stroke-width="2"/>
+<line x1="512" y1="125" x2="558" y2="125" stroke="#9aa7b4" stroke-width="2"/>
+</svg></div>
+<div class="cap">SharonAI 处在"中游"——它本身不造显卡、不盖机房,而是把上游的东西组装起来,变成"算力服务"卖给下游客户。它的利润空间,夹在"上游成本"和"下游租金"之间。</div>
+</div>
+<p>这个行业最近为什么这么热?因为 2023 年以来全世界都在做大语言模型(就是 ChatGPT 那种 AI),而训练和运行这些模型需要天文数字般的 GPU 算力。需求暴涨、显卡又不够,于是冒出一批像 SharonAI 这样的"算力专卖店"。行业里最大的几家叫 CoreWeave、Nebius,它们和 SharonAI 干的是同一件事,只是规模大得多(我们第 8 节会对比)。</p>
+<p>这个行业有几道很高的"门槛",也正是 SharonAI 反复强调自己的优势所在:</p>
+<ul>
+<li><b>能不能拿到显卡</b>——英伟达的卡是硬通货,拿不到就开不了张;</li>
+<li><b>能不能找到电和机房</b>——AI 显卡极其耗电,高密度机房稀缺;</li>
+<li><b>数据合规</b>——很多国家要求数据不能出境,所以"本地化的算力"有价值;</li>
+<li><b>钱和人</b>——买显卡、建集群要烧大量资本,还要懂行的工程师。</li>
+</ul>
+<p>SharonAI 主打的差异化是:<b>"澳大利亚本地、低延迟、合规"</b>的算力。对那些数据必须留在澳洲、或者需要服务亚太地区的客户来说,这是个卖点。<span class="s">[公司说法]</span></p>
+<p>它的另一个策略是"绑大腿"——不自己什么都做,而是和一串行业巨头结盟:英伟达供显卡、NEXTDC 供机房、思科(Cisco)供网络、联想(Lenovo)和 World Wide Technology(WWT)负责采购组装和交付。<span class="v">[已验证]</span> 比如它和思科合作搞了个所谓"澳大利亚首个安全 AI 工厂",卖点就是"所有数据处理都留在本国境内",迎合澳洲的国家 AI 战略和数据主权要求。这种"抱团"的好处是能快速搭起一套专业能力、增加可信度;坏处是利润要和这些伙伴分,而且任何一个关键伙伴掉链子,都会影响整条链条的交付。说到底,SharonAI 的核心能力是"<b>整合者</b>"——把别人的顶尖组件拼成一套能跑 AI 的服务,而不是某个环节的原创技术拥有者。</p>
+
+<h3>为什么"电"是这门生意里被低估的命门?</h3>
+<p>很多人以为 AI 算力的瓶颈只是"显卡够不够",其实<b>电力同样关键,甚至更难解决</b>。一颗高端 AI 显卡满负荷运行时极其耗电,成千上万颗显卡堆在一起,用电量相当于一个小镇。这带来两个现实问题:</p>
+<ul>
+<li><b>机房要有足够的高密度供电和散热能力</b>——普通机房根本扛不住 AI 集群的功率密度,所以能提供"高密度电力"的机房本身就是稀缺资源;</li>
+<li><b>电费是长期的大头成本</b>——显卡是一次性采购,但电费是天天烧的,电价高低直接决定这门生意的毛利。</li>
+</ul>
+<p>行业里常用"兆瓦(MW)"来衡量一家算力公司的"产能"——它说的不是显卡数量,而是<b>这家公司能稳定供给多少电力来跑显卡</b>。SharonAI 说自己的预期产能要从 50 兆瓦,提升到 70 兆瓦,再到 2027 年初的 100 兆瓦。<span class="s">[公司说法]</span> 但请注意一个词:<b>"预期"</b>。这是个目标/指引,不是已经建成通电的产能。而且公司在同一天就把 70 兆瓦的目标上调到了 100 兆瓦,说明这个数字本身有一定的"叙事弹性",听的时候要打个问号。<span class="i">[推断]</span></p>
+<p>它早年那段"在美国得州自己建数据中心(TCDC 项目)"的经历,本质上就是想自己掌控"电"这个环节——因为得州有便宜的天然气可以就地发电。但后来它把这个项目卖掉了,选择回到"轻资产、租别人机房"的路线。这个取舍很关键:<b>租机房能跑得快,但把"电力命脉"交给了 NEXTDC;自建能掌控成本,但要砸重金、耗时间。</b>SharonAI 选了前者。</p>
+
+<!-- 5 怎么赚钱 -->
+<h2>⑤ 它打算怎么赚钱?(理解那个"1400 倍"之谜)</h2>
+<p>现在我们回到开头那个怪现象:22 亿订单 vs 157 万收入。要解开它,必须搞懂 SharonAI 的合同模式,叫 <b>"照付不议"(take-or-pay)</b>。</p>
+<div class="card key"><b>什么是"照付不议"?</b><br>客户提前预订一大块算力产能,签一个 5 年的长合同。<b>不管客户实际用了多少,每个月都得照样付钱。</b>就像你包了一整层楼的健身房会员,办了 5 年卡,去不去都得交月费。这种模式对 SharonAI 的好处是:收入非常稳定、可预测,产能一旦上线就等于"100% 满租"。</p></div>
+<p>那为什么签了 22 亿,去年只收到 157 万?关键在<b>收入确认的时间点</b>。我们看一下一笔合同的完整生命周期:</p>
+<div class="fig">
+<h3>一笔订单从签约到收钱,要走过这些月份</h3>
+<div class="svgwrap"><svg viewBox="0 0 800 170" width="100%" font-family="sans-serif" font-size="12.5">
+<line x1="40" y1="80" x2="760" y2="80" stroke="#2a323d" stroke-width="3"/>
+<g text-anchor="middle">
+<circle cx="90" cy="80" r="7" fill="#4f9cf9"/><text x="90" y="55" fill="#e6edf3">第 1 月</text><text x="90" y="110" fill="#9aa7b4" font-size="11">签合同+预付定金</text>
+<circle cx="280" cy="80" r="7" fill="#d29922"/><text x="280" y="55" fill="#e6edf3">第 3 月</text><text x="280" y="110" fill="#9aa7b4" font-size="11">采购+安装显卡</text>
+<circle cx="470" cy="80" r="7" fill="#3fb950"/><text x="470" y="55" fill="#e6edf3">第 5 月起</text><text x="470" y="110" fill="#9aa7b4" font-size="11">✅算力上线,开始按月收入</text>
+<circle cx="720" cy="80" r="7" fill="#3fb950"/><text x="720" y="55" fill="#e6edf3">第 5–64 月</text><text x="720" y="130" fill="#9aa7b4" font-size="11">持续按月收钱(3–5 年)</text>
+</g>
+</svg></div>
+<div class="cap">公司自己的投资者材料画的合同生命周期。重点:<b>收入只在第 5 个月、显卡真正上线之后才开始一个月一个月地确认</b>。前面签约、预付、装机这几个月,账面收入几乎是零。<span class="s">[公司说法]</span></div>
+</div>
+<p>明白了吗?那 22 亿,是<b>未来 5 年加起来的合同总金额</b>(行业叫 TCV,Total Contract Value,合同总值),不是已经赚到的钱。这些订单大多是 2026 年才刚签的,显卡还没装好、还没上线,所以<b>它们贡献的收入目前几乎是零</b>。这就是 1400 倍差距的真相。</p>
+<div class="card warn"><b>最容易被误导的地方</b>:新闻标题最爱写"SharonAI 签下 22 亿美元大单!"——这话没错,但如果你以为这是它的收入或利润,就被带偏了。<b>22 亿是"未来可能收到的合同总额",157 万才是"已经真实收到的钱"。</b>这两个数,差着一整个"执行风险"——也就是说,这些合同能不能、何时、按什么价格真正变成收入,全都还是未知数。</p></div>
+
+<h3>算一笔账:这门生意到底怎么赚钱?</h3>
+<p>我们用一个简化的例子,把"照付不议"的账算给你看(数字仅为示意,帮助理解逻辑):</p>
+<p>假设 SharonAI 花一大笔钱买了一批显卡,装进 NEXTDC 的机房。它跟客户签了 5 年照付不议合同。从第 5 个月开始,客户每个月固定付一笔"租金"。这笔租金要覆盖三样东西:① 显卡的折旧(显卡会逐年贬值,要把成本摊进每个月);② 机房的租金和电费;③ SharonAI 自己的利润。</p>
+<p>这门生意的核心逻辑是:<b>用一份长达 5 年的稳定合同,去覆盖一笔前期的大额显卡投入。</b>只要合同期内客户老老实实按月付钱(这正是"照付不议"要保障的),SharonAI 就能在显卡报废之前把成本收回来并赚到差价。理论上,显卡的物理寿命还能比合同更长,合同到期后还能"二次出租"或转去做别的,继续榨取价值。</p>
+<p>但这套逻辑成立有几个隐含前提,每一个都是风险:</p>
+<ul>
+<li><b>显卡得能按时拿到、按时上线</b>——拿不到英伟达的卡,合同就只能干等着,前期还得垫钱;</li>
+<li><b>显卡不能太快过时</b>——AI 显卡换代很快,如果新一代显卡很快让旧卡贬值,SharonAI 可能还没回本,手里的卡就"搁浅"了;</li>
+<li><b>客户得真的撑满 5 年</b>——照付不议合同写得再硬,如果客户自己倒闭或赖账,照样收不到钱;</li>
+<li><b>电费和机房成本要可控</b>——成本端一涨,夹在中间的利润就被挤掉。</li>
+</ul>
+<p>所以你会发现,SharonAI 现在讲的全是"我签了多少合同",但<b>真正决定它能不能赚钱的,是上面这几个"执行环节",而这些目前都还没经受过考验</b>。这就是为什么我们反复强调:订单是承诺,执行才是答案。</p>
+
+<!-- 6 客户 -->
+<h2>⑥ 客户为什么需要它?他们都是谁?</h2>
+<p>客户找 SharonAI,本质上是因为:<b>自己买显卡、建机房太贵太慢,不如直接租。</b>尤其是在澳大利亚和亚太地区,既要算力又要数据合规的客户,选择不多。</p>
+<p>目前已知的几个大客户:</p>
+<table>
+<tr><th>客户</th><th>是谁</th><th>合同规模</th><th>状态</th></tr>
+<tr><td><b>ESDS Software</b></td><td>一家云服务公司</td><td><b>约 12.5 亿美元</b> / 5 年</td><td>约 8200 颗英伟达 B300 显卡,2026 年 9 月前交付,收入还没开始 <span class="v">[已验证]</span></td></tr>
+<tr><td><b>一家未具名的全球科技巨头</b></td><td>有重大亚太业务</td><td><b>约 9.5 亿美元</b> / 5 年</td><td>收入预计 2026 下半年起 <span class="v">[已验证]</span></td></tr>
+<tr><td>Canva、GMI Computing</td><td>设计独角兽、AI 推理云</td><td>未披露</td><td>公司宣传里提到"赢单",但没有正式合同文件 <span class="i">[推断:可能规模较小]</span></td></tr>
+</table>
+<p>这里要注意两个"信息缺口":第一,最大的两个客户里,有一个<b>没有公开名字</b>;第二,Canva 和 GMI 只是出现在宣传材料里,SharonAI <b>没有为它们单独提交正式的合同披露文件</b>,所以它们的金额和分量目前无法核实。<span class="i">[推断]</span></p>
+<div class="card warn"><b>一个重要的隐患:客户太集中。</b>公司在风险提示里承认,<b>2025 年大约 82% 的收入来自仅仅 3 个客户</b>。<span class="v">[已验证]</span> 这意味着,只要有一个大客户出问题,公司收入就会大幅波动。对一家还在早期的公司来说,这是个需要持续盯着的风险点。</p></div>
+
+<!-- 6b 管理层 -->
+<h2>⑥-b 谁在管这家公司?</h2>
+<p>看一家早期公司,管理层几乎和业务一样重要,因为生意还没跑通,很大程度上是"赌人"。SharonAI 的核心是三位澳大利亚创始人,其中 <b>James Manning</b> 是董事长兼 CEO(他此前有过另一家在美股上市的算力/挖矿公司的经历)。<span class="v">[已验证]</span> 公司还在 2026 年请来 <b>Andrew Penn</b> 出任董事长——他是澳洲电信巨头的前任 CEO,属于澳洲商界的重量级人物,这一步明显是想给公司增加分量和公信力。<span class="v">[已验证]</span></p>
+<p>有一个细节值得留意:三位创始人的股份,都是通过<b>各自的家族信托</b>间接持有的,而且公司借的部分可转债,债主就是这几位创始人旗下的实体。<span class="v">[已验证]</span> 也就是说,创始人既是公司的控股股东,又是公司的债主之一。这种"既是老板又是债主"的安排在创业公司里不算违规,但属于典型的"关联方交易",是看这家公司时需要额外留个心眼的地方——因为它牵涉到利益是否完全一致的问题。</p>
+
+<!-- 7 发展到哪步 -->
+<h2>⑦ 这家公司发展到哪一步了?</h2>
+<p>SharonAI 的历史很短,但事件很密集。我们按时间捋一遍:</p>
+<table>
+<tr><th>时间</th><th>发生了什么</th></tr>
+<tr><td>2024 年</td><td>通过收购两家小公司(SAIPL、DSS)起步,形成 1800 万美元商誉。早期甚至还做过"Filecoin 挖矿"(一种加密货币业务)</td></tr>
+<tr><td>2025 年 1 月</td><td>和美国的 New Era 公司成立合资公司 TCDC,计划在美国得州建一个 250 兆瓦的数据中心</td></tr>
+<tr><td>2025 年中</td><td><b>停止挖矿业务</b>,彻底转型专注 AI 云</td></tr>
+<tr><td>2025 年底</td><td>通过"借壳"方式准备上市,做了 1 拆 50 的反向并股</td></tr>
+<tr><td>2026 年 1 月</td><td><b>把 TCDC 那个美国数据中心的 50% 股权卖掉了</b>,换回约 7000 万美元,专注澳洲主业;同时更换了审计师</td></tr>
+<tr><td>2026 年 2 月</td><td><b>正式登陆纳斯达克</b>,募资约 1.25 亿美元</td></tr>
+<tr><td>2026 年上半年</td><td>密集签下 ESDS、未具名科技巨头等大单;发行 3.5 亿美元可转债融资</td></tr>
+</table>
+<div class="card q"><b>什么是"借壳上市"(de-SPAC)?</b><br>正常上市要排很久的队、做很多审查。"借壳"是一条捷径:市场上有一种"空壳公司"(SPAC),它本身没有业务,只是个already上市的空架子,口袋里装着投资人的钱,专门等着去"装"一家真公司进来。SharonAI 就是被装进了一个叫 "Roth CH" 的空壳里,从而快速变成了上市公司。<br>这条路快,但也有代价:往往股权结构复杂、公众实际能买到的流通股很少。</p></div>
+<p>顺便解释一下那笔"卖掉美国数据中心"的交易,因为它在财报里制造了一个很大的"假象利润"。SharonAI 把 TCDC 的一半股权卖了,账面上一下子记了 <b>6590 万美元的"出售利得"</b>。<span class="v">[已验证]</span> 听起来像是大赚一笔?但要注意两点:第一,这是<b>一次性</b>的,不是主业赚的钱;第二,对方付的钱<b>大部分不是现金</b>,而是一张 5000 万美元的欠条(票据)+ 1000 万美元对方公司的股票 + 1000 万现金,合计原定 7000 万。换句话说,这笔"利润"在当时几乎没给 SharonAI 带来现金。</p>
+<p>这里有个细节很能说明"看财报要扒细节":买家是美股上市的 New Era(代码 NUAI)。原定对价 7000 万里,有 6000 万是"对方的欠条 + 对方的股票"。后来到了 4 月,NUAI <b>提前用现金还清了那 5000 万欠条,还补发了一笔"找零"股份</b>,使最终总对价升到了 <b>7400 万</b>(比原定多 400 万)。<span class="v">[已验证]</span> 所以你会在不同材料里看到"7000 万"和"7400 万"两个数——它们不矛盾:7000 万是签约时的原定数,7400 万是最终结清后的实际数。这正说明:同一笔交易在不同时点、不同文件里的数字会变,必须看清"这是哪个时点、什么口径"。</p>
+<p>还有个更大的背景:这个美国数据中心项目并不小。它从最初的 9000 万瓦(90MW)规划,一路放大到 2.5 亿瓦(250MW),最后甚至规划成 <b>"超过 100 万千瓦(1GW+)"的超级园区</b>(买了 438 英亩地、请了专业工程公司)。SharonAI 等于是把这个项目"养大"之后,在 2026 年初把自己那一半<b>高位卖掉、套现走人</b>,把钱挪回澳洲主业。<span class="v">[已验证]</span></p>
+<p>另外提一句:公司在一年内<b>换了三次审计师</b>(从 Marcum 换到 CBIZ,再换到 HoganTaylor)。<span class="v">[已验证]</span> 借壳上市、业务重组的公司换审计师不算罕见,但短期内频繁更换会计师事务所,通常是值得多问一句"为什么"的信号。好消息是,最终出具的 2025 年审计意见是"干净无保留"的——也就是审计师没有对财报的可靠性提出保留意见。</p>
+
+<h3>"借壳"的代价:反向拆股和极低的流通盘</h3>
+<p>SharonAI 借壳上市时,做了一个 <b>"1 拆 50 的反向并股"</b>——简单说,就是把每 50 股老股合并成 1 股新股。<span class="v">[已验证]</span> 这通常是为了把股价从几毛钱拉到一个像样的水平,好满足交易所的挂牌要求。但它带来一个副作用:<b>不同时期的"每股"数字没法直接比较</b>——比如你看到"每股亏损 4 美元",不能简单和拆股前的每股数字对照,否则会得出错误结论。</p>
+<p>更重要的是,借壳完成后,<b>真正在市场上自由流通、由公众持有的股份非常少</b>——绝大部分股份握在创始人和原始股东手里。流通盘小,意味着股价容易被少量买卖大幅波动,这也是这类"借壳 + 双层股权"公司常见的特征。对想理解这家公司的人来说,这是个必须知道的结构性事实。</p>
+
+<!-- 7b 钱从哪来 -->
+<h2>⑦-b 它的钱从哪来?(看懂"可转债"这个关键词)</h2>
+<p>一家还没怎么赚钱的公司,要买几千万美元的显卡、要扩张,钱从哪来?SharonAI 主要靠三个渠道:<b>上市募资、卖掉资产、借"可转债"</b>。前两个好理解,重点说说第三个,因为它在财报里制造了最大的"看不懂"。</p>
+<div class="card q"><b>什么是"可转债"(Convertible Note)?</b><br>它是一种特殊的借钱方式:本质是债(到期要还本付息),但附带一个"转换权"——债主可以选择在未来某个时点,<b>把这张欠条按约定价格换成公司的股票</b>。<br>对公司来说,可转债的好处是利息通常比普通借债低(因为债主看中了未来转股升值的机会);坏处是,一旦转股,会<b>稀释</b>老股东的股份(蛋糕没变大,但切的人变多了)。</p></div>
+<p>SharonAI 借了好几批可转债。最大的一笔是 2026 年的 <b>3.5 亿美元、年息 6%、2031 年到期</b>的可转债,由橡树资本(Oaktree)等机构领投,转股价大约 48 美元。<span class="v">[已验证]</span> 此外还有一批约 1 亿美元、2027 年到期的可转债,利息高达 12%(如果不及时上市还会跳到 15%)。<span class="v">[已验证]</span></p>
+<p>这些债加起来,就是为什么我们说它"靠借债撑着扩张"。把它们画成一面"到期墙",你会看到 2027 年和 2031 年各有一座要还钱(或转股)的大山。这也是为什么公司的现金虽然有 1.64 亿,但不能简单理解为"很安全"——因为后面还有几亿的债等着处理。</p>
+<div class="card warn"><b>一个容易被"大数字"唬住的地方:"宣称可用" ≠ "已经拿到"。</b><br>SharonAI 还宣布了两笔很吸睛的融资额度:一笔来自 <b>USD.AI 的"高达 5 亿美元"</b>额度,一笔来自 <b>Digital Alpha 的"高达 2 亿美元"</b>投资。<span class="v">[已验证]</span> 听起来又是十几亿到账?并不是。这些都是<b>"额度上限/意向框架"</b>,不是已经打进账户的钱——比如那笔 5 亿的额度,公司说初期也就先用 6500 万。把这些"up to(高达)"的数字简单加总,会严重高估它手里的真金白银。<b>看到"高达 X 亿"这种措辞,要立刻反应:这是天花板,不是已到手。</b></div>
+<div class="card q"><b>顺便一个有意思的细节:那笔 5 亿额度是"加密货币式"的融资。</b><br>USD.AI 不是传统银行,而是一个<b>区块链上的借贷协议</b>:它用一种稳定币(USDai)放贷,抵押物是 SharonAI 那些"已验证的 GPU"——相当于"拿显卡在链上做抵押借钱"。好处是不占用公司资产负债表、放款快;但也<b>引入了加密世界特有的风险</b>(稳定币会不会脱锚、协议本身靠不靠谱、链上抵押怎么估值)。这是 SharonAI 一个很非主流、值得单独留意的融资来源。<span class="v">[已验证]</span></div>
+<p>另外值得一提:在 2026 年 2 月正式登陆纳斯达克<b>之前</b>,SharonAI 其实已经先在场外市场(OTC Markets,代码 SHAZ)交易了一段时间——上面这些 1 月的融资公告,落款都还写着"OTC Markets"。这是借壳上市公司常见的过渡状态。<span class="v">[已验证]</span></p>
+<p>更绕的是前面提过的那个"越被看好、账面越亏"的会计现象,根子就在这批可转债上。因为公司选择了按"公允价值"给可转债记账,当大家觉得 SharonAI 的股票更值钱(转股更划算)时,这批债对公司的账面"负担"就变重,于是要记一笔非现金的损失。2026 年第一季度,光这一项就记了 <b>7020 万美元</b>的损失——比公司这个季度真实的经营亏损(约 280 万)大了 25 倍。<span class="v">[已验证]</span> <b>所以,看到 SharonAI 的"巨额亏损",第一反应应该是去问:这里面有多少是这种可转债的非现金噪音?</b></p>
+
+<!-- 8 误解 -->
+<h2>⑧ 看这家公司,最容易踩的几个"坑"</h2>
+<p>这一节是全文最重要的部分。SharonAI 的财报有几个数字特别容易让外行(甚至一些媒体)误读。我们逐个拆穿。</p>
+
+<h3>坑 1:把"订单"当成"收入"</h3>
+<p>前面讲过了:22 亿是 5 年合同总额,157 万才是去年真实收入。<b>看到"签约""合同总值""积压订单"这类词,要立刻提醒自己:这是未来的承诺,不是已经到手的钱。</b></p>
+
+<h3>坑 2:被"巨额亏损"吓到,或者被"经营还行"骗到</h3>
+<p>SharonAI 2025 年账面净亏损高达 <b>3980 万美元</b>。<span class="v">[已验证]</span> 看起来很吓人。但拆开看,这个亏损里<b>有 2600 万是一笔"非现金"的会计损失</b>,跟它实际经营好不好关系不大。</p>
+<div class="card q"><b>这笔"非现金损失"是怎么来的?(有点烧脑,但很重要)</b><br>SharonAI 借了一批"可转债"(可以转换成股票的债)。它选择了一种特殊记账法:每个季度按这批债的"市场公允价值"重新估值。结果出现一个反直觉的现象——<b>当市场更看好 SharonAI、它的股权更值钱时,这批"可转债"对公司而言的负担(公允价值)也变大,于是账面上就要记一笔损失。</b><br>这就是"越被看好、账面越亏"的怪圈。这笔损失不花一分钱现金,但会把净利润数字砸得很难看。2025 年砸了 2600 万,2026 年第一季度更猛,砸了 7020 万。<span class="v">[已验证]</span></p></div>
+<p>那反过来,是不是把这些会计噪音剔掉,公司经营就很健康了呢?<b>也不能这么乐观。</b>剔掉所有一次性、非现金的项目后,2026 年第一季度真实的"经营亏损"大约是 <b>280 万美元</b>。<span class="v">[已验证]</span> 这个数字看起来温和,但那只是因为<b>大规模收入还没开始、对应的大规模成本也还没发生</b>。它说明的是"还没开张",而不是"已经证明能赚钱"。</p>
+<div class="card key"><b>记住这组数(2026 年 Q1):</b><br>• 账面净亏损:<b>1990 万美元</b>(被会计噪音放大)<br>• 真实经营亏损:<b>约 280 万美元</b>(规模还没起来)<br>• 中间的差额,主要来自"卖数据中心的一次性利得 + 可转债的非现金损失 + 一笔异常的税"三者交织。<br><b>三个数字都要看,任何单看一个都会被误导。</b></p></div>
+
+<h3>坑 3:看到"账上 1.6 亿现金"就以为很有钱、很安全</h3>
+<p>截至 2026 年 3 月底,SharonAI 账上有 <b>1.64 亿美元现金</b>,确实比一年前多了很多。<span class="v">[已验证]</span> 但这些钱<b>几乎全部来自上市募资</b>,不是经营赚来的。而且,公司的<b>股东权益已经是负数(约 −1010 万美元)</b>——也就是说,如果此刻把所有资产卖掉还债,理论上还不够还。<span class="v">[已验证]</span> 同时它还背着 2027 年到期的约 1 亿、2031 年到期的 3.5 亿美元可转债。所以"现金多"和"财务稳健"在这里不能划等号。</p>
+
+<h3>坑 3.5:看到"持续经营"四个字就以为公司要倒了</h3>
+<p>在 SharonAI 的风险提示里,出现过"持续经营能力"(going concern)这种听起来很吓人的措辞。很多人一看到就觉得"公司是不是快破产了"。这里要分清两件事:<b>风险因素</b>里提到这种风险,是公司在尽到"丑话说前头"的披露义务;而真正权威的判断,来自<b>审计师的意见</b>。SharonAI 2025 年的审计意见是<b>"干净无保留"</b>的,审计师<b>没有</b>专门加上"对持续经营存在重大疑虑"的段落。<span class="v">[已验证]</span> 所以准确的理解是:公司自己提示了流动性风险(毕竟收入还小、还在烧钱),但审计师并未据此对其存续能力打问号。两者并存,不矛盾——读财报要能区分"风险提示"和"审计结论"这两种分量不同的话。</p>
+
+<h3>坑 4:以为买了股票就能参与公司决策</h3>
+<p>SharonAI 用的是"双层股权"结构:创始人手里的是"超级投票股",<b>1 股顶 160 票</b>;普通投资者手里的是 1 股 1 票。结果是三位创始人虽然经济上的持股不算特别多,却掌握了大约 <b>81.8% 的投票权</b>。<span class="v">[已验证]</span> 也就是说,公司的重大决策基本由创始人说了算,外部股东话语权很小。这种结构在创业公司里不罕见,但对小股东来说是个需要知道的事实。</p>
+
+<h3>坑 5:把它和 CoreWeave 这种大公司直接对标</h3>
+<p>同样是"算力出租",SharonAI 和行业龙头根本不在一个量级:</p>
+<table>
+<tr><th></th><th>CoreWeave(龙头)</th><th>SharonAI</th></tr>
+<tr><td>去年营收</td><td>约 51 亿美元</td><td>约 160 万美元</td></tr>
+<tr><td>订单/营收倍数</td><td>约 19 倍</td><td>约 1400 倍</td></tr>
+</table>
+<p>整个行业都"先有订单后有收入",但 SharonAI 把这个特征推到了<b>最极端</b>:几乎没有已交付的收入,却背着 22 亿订单,靠借债撑着。<span class="i">[推断]</span> 用一句话总结它的本质:<b>它更像一个"套着上市公司外壳的、还没开张的大型项目"</b>,而不是一家已经被验证的成熟云公司。</p>
+<p>和它最像的,其实是另一类公司:原本做"加密货币挖矿"、后来转型做 AI 算力的矿工(比如美股的 TeraWulf、Hut 8)。它们也是"订单/收入倍数很高、利润为负、靠融资扩张"。但即便是这些转型矿工,也至少已经有<b>一两亿美元的真实收入</b>和一批实打实在运转的资产基底——而 SharonAI 连这个都还没有。所以在整个"算力出租"光谱里,SharonAI 站在<b>最早期、最依赖未来兑现、去风险程度最低</b>的那一端。这不一定是坏事(早期公司本就如此),但你必须清楚自己看的是哪个阶段的公司:它现在卖的是"未来的可能性",而不是"已经验证的盈利能力"。</p>
+<p>最后强调一个常见的数据陷阱:有些资料里会出现另一个"22 亿(A$2.2B)"的数字,那其实是另一家叫 Megaport 的澳洲公司的市值,被 10-K 顺带引用过,<b>和 SharonAI 的合同积压完全是两码事</b>。<span class="v">[已验证]</span> SharonAI 自己的 22 亿,指的就是 ESDS 的 12.5 亿加上那家未具名科技公司的 9.5 亿这两笔照付不议合同之和。看资料时别把这两个"22 亿"搞混了。</p>
+
+<!-- 8b 实操 -->
+<h2>⑧-b 实操:以后怎么读懂它的下一份财报?</h2>
+<p>既然 SharonAI 是一家"等着把订单变成收入"的公司,那么以后每出一份季报,你只要盯住下面这几个问题,就能快速判断"故事兑现到哪一步了":</p>
+<table>
+<tr><th>看什么</th><th>为什么重要</th></tr>
+<tr><td><b>① 真实收入有没有开始放量?</b>(看营收那一行,环比是不是大幅增长)</td><td>这是检验 22 亿订单"开始落地"的唯一硬指标。只要收入还停在几百万的量级,就说明大单还没真正上线。</td></tr>
+<tr><td><b>② 显卡装了多少、产能上线了多少?</b>(看固定资产、产能兆瓦数)</td><td>收入放量的前提是显卡到位、机房通电。产能数字是收入的"先行指标"。</td></tr>
+<tr><td><b>③ 把可转债的非现金损益剔掉后,经营亏损是扩大还是收窄?</b></td><td>这才反映主业的真实健康度,不被会计噪音干扰。</td></tr>
+<tr><td><b>④ 现金还能烧多久?</b>(现金余额 ÷ 每季度净流出)</td><td>在收入起来之前,公司是"净烧钱"的。要看它的现金跑道够不够撑到收入放量。</td></tr>
+<tr><td><b>⑤ 有没有新发债、新增稀释?</b></td><td>如果不断靠发可转债/增发续命,老股东会被持续稀释。</td></tr>
+<tr><td><b>⑥ 客户集中度有没有改善?</b></td><td>从"3 家占 82%"这种高度集中,慢慢分散,才是更健康的信号。</td></tr>
+</table>
+<p>一句话:<b>别看它又签了多少新订单(那是承诺),要看它的"真实收入"和"产能上线"——这两个数字开始同步往上走,才是这家公司从"故事"走向"生意"的真正拐点。</b></p>
+
+<!-- 总结 -->
+<h2>⑨ 一页纸总结</h2>
+<div class="card key">
+<p><b>它是什么:</b>澳大利亚的 AI 算力出租公司(Neocloud),把英伟达显卡装进 NEXTDC 的机房,用"照付不议"的长约租给企业客户。</p>
+<p><b>它的故事:</b>已签 22 亿美元 5 年大单(ESDS 12.5 亿 + 未具名科技巨头 9.5 亿),刚上市、刚融到钱、刚拿到英伟达认证,等着把订单变成收入。</p>
+<p><b>它的现实:</b>去年真实收入仅 157 万,账面巨亏 3980 万(大半是会计噪音),股东权益为负,客户高度集中(3 家占 82%),命脉两头被卡(上游靠英伟达、机房靠 NEXTDC)。</p>
+<p><b>它的关键变量:</b>那 22 亿订单能不能<b>按时、按价、按量</b>真正变成收入——这取决于显卡能不能到位、机房产能够不够、客户会不会变卦。这件事还完全没发生。</p>
+<p><b>看财报别踩的坑:</b>订单≠收入;巨额亏损里大半是非现金噪音;现金多≠安全;小股东话语权小;别和龙头直接对标。</p>
+</div>
+
+<div class="disc">
+<b>边界说明:</b>这篇科普只为"讲懂这家公司",刻意<b>不涉及</b>任何估值、目标价、买卖或仓位建议。文中数据来自公司向 SEC 提交的公开文件(10-K 年报、10-Q 季报、8-K 临时公告、S-4 并购文件等)与公司投资者材料,已尽力交叉核对并标注来源性质。所有判断仅供学习理解,不构成投资建议。请独立判断并咨询持牌金融顾问。生成于 2026-05-31。
+</div>
+<p class="nav" style="margin-top:24px"><a href="javascript:void(0)" onclick="showView('report')">→ 想看带完整财务报表、图表和来源链接的严谨版?点这里</a></p>
+</div>
+<script>
+Chart.defaults.color='#9aa7b4';Chart.defaults.borderColor='#2a323d';Chart.defaults.font.family="-apple-system,Segoe UI,PingFang SC,sans-serif";
+const RED='#f85149',GRN='#3fb950',BLU='#4f9cf9',ORG='#d29922',GRY='#6b7785',PUR='#a371f7';
+
+// 6.1 Revenue vs backlog (log)
+new Chart(document.getElementById('cRevBacklog'),{type:'bar',
+ data:{labels:['FY23 营收','FY24 营收','FY25 营收','合同积压 TCV'],
+ datasets:[{data:[1.29,0.438,1.567,2200],backgroundColor:[BLU,BLU,BLU,RED]}]},
+ options:{plugins:{legend:{display:false}},scales:{y:{type:'logarithmic',title:{display:true,text:'USD (百万,对数轴)'}}}}});
+
+// 7.1 Q1'26 net loss waterfall
+new Chart(document.getElementById('cWaterfall'),{type:'bar',
+ data:{labels:['经营亏损','可转债FV','TCDC利得','利息净','税前亏损','所得税','净亏损'],
+ datasets:[{label:'$M',
+   data:[[0,-2.8],[-2.8,-73.0],[-73.0,-7.1],[-7.1,-6.5],[0,-6.5],[-6.5,-20.0],[0,-19.9]],
+   backgroundColor:[RED,RED,GRN,GRN,GRY,RED,'#b3263a']}]},
+ options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const v=c.raw;return (v[1]-v[0]).toFixed(1)+' $M'}}}},scales:{y:{title:{display:true,text:'累计 $M'}}}}});
+
+// 8.1 Balance sheet
+new Chart(document.getElementById('cBS'),{type:'bar',
+ data:{labels:['2024-12-31','2025-12-31'],
+ datasets:[
+  {label:'总资产',data:[32.1,133.1],backgroundColor:BLU},
+  {label:'总负债',data:[2.2,143.3],backgroundColor:ORG},
+  {label:'股东权益',data:[29.9,-10.1],backgroundColor:c=>c.raw<0?RED:GRN}]},
+ options:{scales:{y:{title:{display:true,text:'USD $M'}}}}});
+
+// 9.1 Cash bridge Q1'26
+new Chart(document.getElementById('cCashbridge'),{type:'bar',
+ data:{labels:['期初现金','+IPO净','+可转债','−经营/资本开支','期末现金'],
+ datasets:[{label:'$M',
+   data:[[0,71.1],[71.1,190.6],[190.6,205.8],[205.8,164.3],[0,164.3]],
+   backgroundColor:[GRY,GRN,GRN,RED,'#2563eb']}]},
+ options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const v=c.raw;return (v[1]-v[0]).toFixed(1)+' $M'}}}},scales:{y:{title:{display:true,text:'累计 $M'}}}}});
+
+// 13.1 Strip test
+new Chart(document.getElementById('cStrip'),{type:'bar',
+ data:{labels:['GAAP 净亏损','+可转债FV(非现金)','−TCDC利得(非现金)','+出售税负影响','真实经营亏损(约)'],
+ datasets:[{label:'$M',data:[[0,-19.9],[-19.9,50.3],[50.3,-15.6],[-15.6,-2.8],[0,-2.8]],
+   backgroundColor:['#b3263a',GRN,RED,GRN,ORG]}]},
+ options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const v=c.raw;return (v[1]-v[0]).toFixed(1)+' $M'}}}},scales:{y:{title:{display:true,text:'累计 $M(示意)'}}}}});
+
+// 14.2 Maturity wall
+new Chart(document.getElementById('cMaturity'),{type:'bar',
+ data:{labels:['2027','2031'],
+ datasets:[{label:'可转债本金 $M',data:[100,350],backgroundColor:[ORG,RED]}]},
+ options:{plugins:{legend:{display:false}},scales:{y:{title:{display:true,text:'USD $M(本金)'}}}}});
+
+// 14b.1 Financing capacity vs drawn
+new Chart(document.getElementById('cFinancing'),{type:'bar',
+ data:{labels:['Pre-IPO/$100M 可转债','USD.AI 额度','Digital Alpha','IPO','$350M 可转债'],
+ datasets:[
+  {label:'宣称可用 $M',data:[200,500,200,125,350],backgroundColor:'#3a4a5e'},
+  {label:'已动用/已发 $M(约)',data:[103,65,0,119.5,350],backgroundColor:RED}]},
+ options:{plugins:{legend:{position:'top'}},scales:{y:{title:{display:true,text:'USD $M'}}}}});
+
+// 15.1 Peer revenue (log)
+new Chart(document.getElementById('cPeerRev'),{type:'bar',
+ data:{labels:['CRWV','NBIS','IREN','APLD','SHAZ'],
+ datasets:[{label:'营收 $M',data:[5131,530,501,144,1.6],backgroundColor:[GRY,GRY,GRY,GRY,RED]}]},
+ options:{plugins:{legend:{display:false}},scales:{y:{type:'logarithmic',title:{display:true,text:'营收 $M(对数轴)'}}}}});
+</script>
+<script>
+function showView(v){
+  document.getElementById('view-report').style.display = v==='report'?'flex':'none';
+  document.getElementById('exp').style.display = v==='exp'?'block':'none';
+  document.getElementById('btn-report').classList.toggle('active', v==='report');
+  document.getElementById('btn-exp').classList.toggle('active', v==='exp');
+  window.scrollTo(0,0);
+}
+</script>
+</body></html>
