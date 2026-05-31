@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>分部深挖 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># 02_business_segments_DEEP.md — IREN Limited 业务分段深度档案
+
+> CIK 0001878848 · FY ends June 30 · $ thousands unless noted（正文换算 M/B）
+> 来源标签：★ SEC直接披露 / ◆ 公式计算 / ◇ 第三方 / ▽ 推算
+> 出处：10-K FY2025 Note (Segment) + 10-Q Q3FY26 Note 3/5 + 8-K Q3FY26 earnings release（本地 raw/）
+> ⚠️ 公司只披露**段收入 + 段成本(ex-D&A) + 段毛利**；D&A、SG&A、减值**不分摊到段**（作为 reconciling items）。因此段毛利 = pre-D&A 毛利。真实毛利需自行扣折旧（见各段 1.4）。
+
+---
+
+## 0. 总览速查（Q3FY26，季度，$M）
+
+| 业务 | 收入 | 占比 | 段毛利(ex-D&A) | 段毛利率(ex-D&A) | YoY(单季) | 评级 |
+|---|---:|---:|---:|---:|---:|---|
+| Bitcoin Mining | 111.2 ★ | 76.8% | 75.8 ◆ | 68.2% | −21.3% | 💰现金牛(退潮) |
+| AI Cloud Services | 33.6 ★ | 23.2% | 29.0 ◆ | 86.3% | +839% | 📈增长引擎 |
+| **合计** | **144.8** | 100% | **104.9** ★ | 72.4% | −0.02% | |
+
+> YoY 对比基准 = Q3FY25：Mining 141.2、AI Cloud 3.6（★ 10-Q）。注意总收入 YoY 几乎持平，但**环比**（vs Q2FY26 184.7）下滑 −21.6%。
+
+### 三个核心判断
+
+```
+1. 推动收入增长的核心业务（历史）：Bitcoin Mining — FY23→FY25 从 75.5M→484.6M，贡献几乎全部增量。
+   但 FY26 起它在崩塌（Q1 232.9 → Q3 111.2，半年腰斩）。
+2. 最耗钱的业务：AI Cloud — 9M FY26 capex 主体（GPU $685.8M 计算机硬件 + 液冷数据中心建设），
+   段毛利率高（86%）但 D&A/折旧吞噬尚未体现在段口径里。
+3. 发展最快的业务：AI Cloud — Q3FY26 收入环比 +94%、YoY +839%，
+   推动其增长的子因素：GPU 上线交付（早期合同）+ 11/2 微软协议的非交付期预付转化（详见 1.5）。
+```
+
+---
+
+# 📌 业务一：Bitcoin Mining
+
+## 1.1 收入构成 ★
+
+### 段内总收入：Q3FY26 = $111.2M ★ | FY2025 = $484.6M ★ [出处：10-Q Q3FY26 Note Segment / 10-K Segment Note]
+
+驱动 = 自营算力（EH/s）× BTC 价格 × 网络份额，扣全网难度。无单一客户（挖矿奖励来自区块链协议）。
+
+| 期间 | Mining 收入 ($M) | QoQ | 来源 |
+|---|---:|---:|---|
+| Q4FY25 | 180.3 | — | ★ |
+| Q1FY26 | 232.9 | +29.2% | ★ |
+| Q2FY26 | 167.4 | −28.1% | ★ |
+| Q3FY26 | 111.2 | −33.6% | ★ |
+
+**关键问答**：收入半年腰斩，主因 = (a) 2024-04 减半后 BTC 区块奖励减少全网摊薄，(b) 公司**主动把 Childress 数据中心从 ASIC 矿机切换成 GPU**（10-Q：「expects all Bitcoin mining operations at Childress to cease over time」★）→ 挖矿算力被自我蚕食。
+
+## 1.2 成本构成 ★
+
+### 段内 COGS(ex-D&A)：Q3FY26 = $35.3M ★ | FY2025 = $157.7M ★
+
+主要为现金成本：**电力**（最大头）+ 矿机运维 + 站点运营人工。具体电力/人工拆分公司未在段注披露（▽ 需查 10-K MD&A）。
+⚠️ 隐藏成本：**矿机折旧不在段 COGS 里** — 计入合并 D&A（Q3FY26 全公司 D&A $121.2M ★，未分段）。所以段毛利率 68% 是 **pre-D&A**，扣折旧后真实经营利润远低。
+
+## 1.3 财务确认逻辑
+
+- **收入确认**：Point-in-time，每日 BTC 挖矿奖励按取得当日公允价值确认 ★（IFRS/ASC 606 数字资产惯例）。无递延。
+- **成本确认**：电力/人工按发生配比；矿机折旧 units-of-production 或直线（在合并 D&A）。
+
+## 1.4 段层独立 Income Statement（Q3FY26，$M）
+
+| 项目 | 金额 | 占段收入% | 来源 |
+|---|---:|---:|---|
+| Revenue | 111.2 | 100% | ★ |
+| (−) COGS (ex-D&A) | (35.3) | 31.8% | ★ |
+| **= 段毛利 (ex-D&A)** | 75.8 | 68.2% | ◆ |
+| (−) 分摊 D&A | 无法精确分段 ▽ | | — |
+| **真实段 Op Income** | <75.8（扣折旧后大幅缩水）▽ | | ▽ |
+
+- 评级：💰现金牛但**退潮中**。仍是公司当期现金利润主要来源，但收入趋势向下。
+
+## 1.5 增长驱动
+
+```
+Mining 收入 QoQ：232.9 → 167.4 → 111.2（持续负增长）
+└── 量驱动：算力被转去做 GPU（自我蚕食）+ BTC 减半后奖励稀释
+└── 价驱动：BTC 价格波动（外生）
+关键观察：这是管理层主动的战略撤退（Childress 由 ASIC 转 GPU），不是被动衰退。
+```
+
+---
+
+# 📌 业务二：AI Cloud Services
+
+## 1.1 收入构成 ★
+
+### 段内总收入：Q3FY26 = $33.6M ★ | FY2025 = $16.4M ★ | 9M FY26 = $58.3M ★
+
+| 期间 | AI Cloud 收入 ($M) | QoQ | 来源 |
+|---|---:|---:|---|
+| FY2024 | 3.1（全年） | — | ★ |
+| FY2025 | 16.4（全年） | — | ★ |
+| Q1FY26 | 7.3 | — | ★ |
+| Q2FY26 | 17.3 | +135% | ★ |
+| Q3FY26 | 33.6 | +94% | ★ |
+
+**关键问答**：增长极快但绝对值极小（Q3FY26 仅 $33.6M/季 ≈ $134M 年化 run-rate）。客户集中度高（微软为最大未来客户，但当期收入主要来自更早期的较小 GPU 租赁合同 + Prince George 部署）。
+
+## 1.2 成本构成 ★
+
+### 段内 COGS(ex-D&A)：Q3FY26 = $4.6M ★ | FY2025 = $1.3M ★
+
+现金成本极低（电力 + 运维）。⚠️ **真正的大头是 GPU 折旧**，但同样不在段 COGS — 计入合并 D&A。9M FY26 计算机硬件 capex $685.8M ★，这些 GPU 的折旧会在未来吞噬段利润。**段毛利率 86% 是 pre-D&A 的虚高数。**
+
+## 1.3 财务确认逻辑（H1 核心）★
+
+- **收入确认**：GPU/HPC 服务按 over-time（服务期 ratable）确认 ★。
+- **递延收入**：BS 3/31/26 deferred revenue = $120.4M ★（curr $21.8M + non-curr $98.6M），9M 增 $119.5M ★ — 来自 AI Cloud 合同预付（含微软合同 20% 预付）。这是**负债**，不是已确认收入。
+- **RPO（Remaining Performance Obligations）= $710.3M ★**（3/31/26）：未来 12 个月仅释放 $308.0M ★，13–24 个月 $265.2M ★，25–60 个月剩余 $137.1M ◆。
+- **微软 $9.7bn：截至 3/31/26 已交付并验收 tranche = NIL（零）★** → $0 计入 RPO，$0 确认收入。「Consideration related to future tranches is not included in unsatisfied RPO」★。
+
+## 1.4 段层独立 Income Statement（Q3FY26，$M）
+
+| 项目 | 金额 | 占段收入% | 来源 |
+|---|---:|---:|---|
+| Revenue | 33.6 | 100% | ★ |
+| (−) COGS (ex-D&A) | (4.6) | 13.7% | ★ |
+| **= 段毛利 (ex-D&A)** | 29.0 | 86.3% | ◆ |
+| (−) GPU 折旧（未分段）| 大额 ▽ | | — |
+| **真实段 Op Income** | 可能为负（GPU 折旧 + 减值后）▽ | | ▽ |
+
+- 评级：📈增长引擎，但当期为净投入期（capex 巨大、折旧未充分体现）。
+
+## 1.5 增长驱动（H1 关键）
+
+```
+AI Cloud 收入 QoQ：7.3 → 17.3 → 33.6
+└── 来自 GPU 上线交付（早期较小合同 + Prince George）
+└── 微软 $9.7bn 合同对当期收入贡献 ≈ $0（tranche 交付=NIL），仅在 BS 沉淀为 deferred revenue 预付
+关键观察：增长质量"中"——是合同制 over-time 收入（好），
+但当前 run-rate（年化 ~$134M）距 $3.1bn ARR 目标差 ~23 倍，距 $3.7bn 差 ~28 倍。
+ARR 实现完全取决于未来 GPU 交付/调试/投运，存在执行风险。
+```
+
+---
+
+# 📌 跨段对比与排名
+
+## A. 收入贡献排名（Q3FY26）
+
+| 排名 | 业务 | 收入占比 | 是否核心 |
+|---|---|---:|---|
+| 🥇 #1 | Bitcoin Mining | 76.8% | 核心 ✓（但退潮）|
+| 🥈 #2 | AI Cloud Services | 23.2% | 未来核心 |
+
+## B. 增长引擎排名
+
+| 排名 | 业务 | QoQ 增速 | 评 |
+|---|---|---:|---|
+| 🥇 #1 | AI Cloud | +94% | 唯一增长源 |
+| 🥉 #2 | Bitcoin Mining | −34% | 负增长 |
+
+## C. 烧钱排名（9M FY26 capex 视角）
+
+| 排名 | 业务 | Capex 主体 | 说明 |
+|---|---|---|---|
+| 🔥 #1 | AI Cloud | 计算机硬件 $685.8M + 部分 PP&E ★ | GPU + 液冷数据中心 |
+| 🔥 #2 | Bitcoin Mining → 转型 | PP&E $1,669.2M（含数据中心，部分将服务 AI）★ | 站点改造 |
+
+> capex 公司不严格分段，$1.67B PP&E 含为 AI Cloud 建设的 Childress Horizon 数据中心 ▽。
+
+## D. 真实盈利能力排名（扣 D&A 后）
+
+| 排名 | 业务 | 段毛利率(ex-D&A) | 扣 D&A 后是否还赚钱？ |
+|---|---|---:|---|
+| 🥇 #1 | AI Cloud | 86.3% | 待查——GPU 折旧 3–4 年急速摊销，可能转负 ▽ |
+| 🥈 #2 | Bitcoin Mining | 68.2% | 全公司 Q3 已亏损；矿机折旧后段利润大幅缩水 ▽ |
+
+> 全公司 Q3FY26 GAAP 经营亏损 $(233.5)M ★ ——两段 pre-D&A 毛利合计 $104.9M 被 D&A $121.2M + 减值 $140.4M + SG&A $81.8M 全部吞掉。
+
+---
+
+## 📝 三段总结
+
+```
+1. 核心业务（占收入大头）：Bitcoin Mining
+   - 过去 3 年演化：75.5M→184.1M→484.6M（FY25），但 FY26 起腰斩（Q3 仅 111.2M）
+   - 真实毛利率：报表段毛利 68%(ex-D&A)，扣矿机折旧后实际低得多
+   - 是否仍在加速？否——管理层主动把算力转为 GPU，挖矿在受控退潮
+
+2. 增长引擎：AI Cloud Services
+   - 增长来自：(a) 早期 GPU 租赁合同上线 (b) Prince George 部署 (c) 合同预付
+   - 是否可持续？取决于微软/NVIDIA 合同 GPU 交付执行——当前微软交付=NIL
+   - 增长质量：over-time 订阅式收入（质量好），但绝对规模仍 1/30 于 ARR 目标
+
+3. 烧钱黑洞：AI Cloud capex（9M FY26 计算机硬件 $685.8M + 数据中心建设）
+   - 商业化时间表：管理层称 CY2026 底达 $3.7bn ARR；微软合同平均 19 个月起、5 年
+   - 战略必要性：明确（从挖矿转向更高价值 AI 算力）
+
+4. 隐藏成本扫描结果：
+   - 最大隐藏成本 = GPU/矿机折旧不进段 COGS（全部进合并 D&A，Q3 $121.2M）
+     → 段毛利率 68%/86% 系统性虚高，真实段经营利润可能为负
+   - 利息资本化：可转债融资 $3.30B，部分利息可能资本化进在建数据中心 ▽（需查 PP&E 注）
+   - 核心会计判断点：(a) D&A 是否分段 (b) GPU 折旧年限是否激进 (c) $140.4M 减值的资产范围
+```
+
+---
+
+## 5. H1 专答 — $3.1bn ARR-under-contract vs $144.8M 实际季度收入
+
+| 口径 | 金额 | 性质 | 来源 |
+|---|---:|---|---|
+| Q3FY26 AI Cloud **GAAP 已确认收入** | $33.6M/季（年化 ~$134M） | 真实 | ★ |
+| Deferred revenue（已收预付，未确认） | $120.4M（BS 余额） | 负债 | ★ |
+| RPO（有合同支撑的未确认履约义务） | $710.3M（其中 12 月内 $308.0M） | 合同 backlog | ★ |
+| 微软 $9.7bn 合同已确认 | **$0**（已交付 tranche = NIL） | 远期 | ★ |
+| "$3.1bn ARR-under-contract" | 微软 $1.9bn + NVIDIA $0.7bn + Prince George $0.5bn 的**预期年化收入** | 营销/远期 | ★ |
+| "$3.7bn ARR target" | $3.1bn + 内部假设的 ~74k GPU 部署增量 | 目标/非合同 | ★ |
+
+**H1 结论：实际确认的 AI Cloud 收入仅 ~$134M 年化 run-rate，是 $3.1bn ARR 的约 1/23、$3.7bn 目标的约 1/28。**
+$3.1bn/$3.7bn 是**未来预期年化收入**，公司明确披露"包含尚未产生收入的金额，直到相关 GPU 交付、调试并投入服务"★。微软 $9.7bn 合同当期贡献 GAAP 收入 = $0。**ARR ≠ GAAP 收入，二者相差约 23–28 倍，且实现取决于尚未发生的 GPU 交付执行。**
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

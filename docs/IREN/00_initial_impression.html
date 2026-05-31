@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>初始印象 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># 00_initial_impression.md — Phase 0 阅读策略产出
+
+> 单位：1 亿 USD = $100M = $0.1B。数字带 ★◆◇▽ + 链接。
+
+---
+
+# Part 1 — 0.1 初始印象（读最新一期后）
+
+### 读了哪些
+| 文件 | 期间 | 链接 |
+|---|---|---|
+| 最新 10-Q | FY26 Q3（截至 2026-03-31）| ★ https://www.sec.gov/Archives/edgar/data/1878848/000187884826000026/iren-20260331.htm |
+| Earnings Presentation (deck) | Q3 FY26（2026-05-07, 35pp）| ◇ 本地 `external/IREN_Q3FY26_Earnings_Presentation.pdf`（源 iren-corporate-website S3）|
+| Earnings Release (8-K EX-99.1) | Q3 FY26 | ★ https://www.sec.gov/Archives/edgar/data/1878848/000187884826000025/irenreportsq3fy26results.htm |
+| FY2025 10-K（年报基线）| FY25（截至 2025-06-30）| ★ https://www.sec.gov/Archives/edgar/data/1878848/000187884825000063/iren-20250630.htm |
+
+### (a) 一句话业务骨架
+```
+公司一句话定义：垂直整合的 AI Cloud（GPU 数据中心）provider，由比特币矿企转型而来；
+                自有「电网接入土地+电力」横跨北美/欧洲/APAC，自建数据中心并出租 GPU 算力。
+主要分部 / 业务线：① Bitcoin Mining（萎缩中，仍是当前收入主体）② AI Cloud（GPU 租赁，ramp 中）
+                  ③ 数据中心/电力开发平台（底层资产）
+主要收入来源：当前=比特币挖矿；未来=AI Cloud（Microsoft $9.7bn / NVIDIA $3.4bn 合同驱动）
+```
+
+### (b) 初始逻辑：管理层这季度想让你看什么
+| 观察项 | 内容 | 我的解读 / 警觉 |
+|---|---|---|
+| 叙事锚（被反复强调）| $9.7bn Microsoft 合同；$3.4bn NVIDIA 合同；5GW NVIDIA 合作 + $2.1bn 认股权；$3.1bn→$3.7bn ARR；2026→2028 产能阶梯 | 全是**前瞻/合同**口径，不是已实现收入。管理层在卖「未来 ramp」 |
+| 讲故事用的口径 | ARR（非 GAAP 前瞻）、Adj EBITDA（非 GAAP）| ⚠️ 回避 GAAP 收入/毛利；ARR 含「尚未产生收入」部分 |
+| 今年首次出现 / 改口径 | Adj EBITDA **FY26 起改定义**（剔除 debt conversion inducement expense）；ARR 拆分口径 | ⚠️ 制造可比性断层 → 联动档案 14 |
+| 被弱化 / 缺席 | GAAP 收入 $144.8m（**降** 39.9m）；净亏 $(247.8)m（**扩大**）；Adj EBITDA $59.5m（**降**）| ⚠️ 收入在转型期下滑，亏损扩大 — 与「高增长」叙事矛盾 |
+| Risk/Subsequent 矛盾线索 | 近期 capex 靠「现有现金 $2.6bn + 经营现金流 + GPU 融资 + 其他融资」覆盖；多项融资 underway | ⚠️ 巨额产能扩张高度依赖**持续外部融资**；执行/交付/融资三重风险 |
+
+### 待验证假设清单（后续历史精读逐条回答）
+| # | 假设 | 来源/触发点 | 派给 | 状态 |
+|---|---|---|---|---|
+| H1 | $3.1bn「ARR under contract」与实际季度收入 $144.8m 差距巨大 → AI Cloud 实际已确认收入有多少？收入确认时点（GPU 交付/调试/在役）如何？ | Release 脚注 ★ | Agent A+D | 待验证 |
+| H2 | 收入下滑+净亏扩大主要由比特币挖矿萎缩+硬件减值驱动 → 拆分两段（Mining vs AI Cloud）各自收入/毛利趋势 | Release ★ | Agent A | 待验证 |
+| H3 | FY2024 发生过**财务重述**（20-F/A + 6-K/A + 3 封 SEC 问询函）→ 改了什么科目？影响可比性多少？ | EDGAR filing 史 ★ | Agent B | 待验证 |
+| H4 | Adj EBITDA FY26 改定义 + 多个非 GAAP 口径 → 剥离非经营扰动项后真实经营利润如何？（减值 $140.4m、capped call $23.7m）| Release ★ | Agent B+D | 待验证 |
+| H5 | 5GW/1,210MW 产能阶梯的**控制权与交付管线**：哪些自有/合资/租赁？已交付 vs 计划？利用率？ | Deck/Release ◇ | Agent D | 待验证 |
+| H6 | 资本结构：可转债 + capped call + NVIDIA $70 认股权（30M 股）+ GPU 融资 → 到期墙 + 摊薄 + 现金跑道能否撑到 ramp？ | Release ★ | Agent C | 待验证 |
+| H7 | Microsoft $9.7bn / NVIDIA $3.4bn 合同的**法律实质**（8-K Item 1.01 原文）：期限、最低承诺、终止条款、对手方集中度？ | 8-K 1.01 ★ | Agent C+E | 待验证 |
+| H8 | 收购 Nostrum（西班牙 490MW）+ Mirantis（软件）→ 对价、并表范围、商誉、整合风险 | Release ◇ + 后续 8-K | Agent E | 待验证 |
+
+---
+
+# Part 2 — 0.2 并行 agent 输出块（各 agent 写入下方对应文件，摘要回填此处）
+
+> 见 `agent_A_finance.md` / `agent_B_accounting.md` / `agent_C_capital.md` / `agent_D_deepdive.md` / `agent_E_risk.md`
+
+（待并行 agent 回填）
+
+---
+
+# Part 3 — 0.2 收口 / Merge
+
+（待 agent 跑完后填）
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

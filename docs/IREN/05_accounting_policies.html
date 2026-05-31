@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>会计政策 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># 05 — IREN Limited 会计政策档案（Accounting Policies）
+
+> Agent B 交付件 | 标的：IREN Limited (NASDAQ: IREN, CIK 0001878848, FY 截止 6/30)
+> 数据源四级标注：★ SEC 一手 / ◆ 计算 / ◇ 第三方 / ▽ 估算 | 单位写全
+> 主源：FY2025 10-K（首份 US GAAP 年报，域内申报人）
+> ★ [10-K FY2025 (filed 2025, period 2025-06-30)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001878848&type=10-K) — 本地 `data/research/IREN/raw/10K_FY2025.htm`
+> ★ [Q3 FY26 8-K earnings (period 2026-03-31)](https://www.sec.gov/Archives/edgar/data/1878848/000114036125043599/) — 本地 `8K_Q3FY26_earnings_release.htm`
+
+**重要口径切换提示**：FY2024 及以前用 **IFRS**（外国私人发行人 20-F）；FY2025 起转 **US GAAP**（域内申报人 10-K）。这是整套报表最大的可比性断点，详见档案 14。
+
+---
+
+## 5.1 收入确认（Revenue Recognition）
+
+### 数据来源
+- 出处：10-K FY2025 Note 2（Significant Accounting Policies）+ CORRESP 2024-12-18 ★
+- 标签：★ SEC 直接披露
+
+### 各业务段收入确认方法
+
+| 业务 | 合同性质 | 确认方法 | 确认时点 | 可操纵风险 ★ |
+|---|---|---|---|---|
+| **Bitcoin Mining** | 与矿池（Antpool / Foundry）的算力服务合同，**非现金对价**（赚取无形资产 Bitcoin）| Point-in-time（按日）| 当日向矿池提供 hash 计算服务、获得 BTC 时确认；BTC 入账=取得日公允价值 | 🟡 中 — 非现金对价计量依赖当日 BTC 公允价值 |
+| **AI Cloud Services** | 提供云端 GPU 算力（H100/H200）给第三方做 AI 训练/推理；合同 on-demand 至 3 年；新增 5 年 $3.4bn NVIDIA 合同 | Over-time（按使用/期间）| 随服务交付期间确认 | 🟡 中 — 长期合同+预付，关注递延收入 |
+| **Other / Colocation**（powered shell / build-to-suit）| 尚在发展中 | — | — | 🟢 低（金额小）|
+
+> SEC 评论关键点（★ CORRESP 2024-12-18）：原招股/年报把履约义务描述为"提供 hashrate（速度）"，SEC 要求改为 **"为矿池执行 hash 计算的服务"** 才精确。公司同意在未来 filing 修正。这是表述/披露层面修订，不改金额。
+
+### Deferred Revenue / Backlog
+- AI Cloud 长约（含 $3.4bn / 5 年 NVIDIA、目标 FY2026 ARR $3.7bn ◇ 公司口径）会产生递延收入与 backlog——**10-K FY2025 期末该业务仍在爬坡，递延收入金额：待查（建议 Agent A 从 BS 拉取）**。
+- Backlog / RPO：$3.4bn NVIDIA 合同为 5 年 ★（8-K Q3 FY26 头条）；12 个月内确认比例：待查。
+
+### ⚠️ 高风险方法警觉
+- BTC 挖矿用非现金对价（NCC），计量=取得日 BTC 公允价值，**持有 < 4 小时即变现**（★ CORRESP：日均持有 < 4h，当日在 Kraken 手动清算）——价格操纵空间极小，但 BTC 价格波动直接进收入。
+- AI Cloud 长约无 cost-to-cost 完工法迹象（GPU 算力按期间），cumulative catch-up 风险低。
+
+---
+
+## 5.2 负债确认（Liability Recognition）
+
+### 数据来源
+- 出处：10-K FY2025 Note（Debt）+ Q3 FY26 8-K 现金流 ★
+- 标签：★ SEC 直接披露 / 待查（细表交 Agent A/C）
+
+### 债务工具清单（关键项）
+
+| 工具 | 金额 | 备注 | 来源 |
+|---|---:|---|---|
+| 2030 Convertible Notes | 发行净额 ~$3,299.6m（FY26 上半年现金流"proceeds from convertible notes"）| 含 capped call 交易（支付 $252.3m）；Q2 FY26 发生 **诱导转股**（induced conversion）部分 2030 可转债 → debt conversion inducement expense **$111.8m** ★ | ★ [8-K Q3FY26 p.16-17] |
+| Capped call | 交易成本 $252.3m（FY26 上半年支付）| 对冲可转债稀释；其**未实现公允价值变动**计入损益（Q3 FY26 unrealized loss $(23.7)m）| ★ |
+| 借款交易成本 | $48.8m（FY26 上半年支付）| | ★ |
+| 经营/融资租赁 | GPU 部分通过 equipment leasing 取得；FY26 Q3 偿还租赁负债 $17.6m | 租赁加权剩余年限从 21.53 年（FY24）降至 ~4 年 ★（口径转换+续约结构变化）| ★ [10-K FY25] |
+
+### Failed Sale-Leaseback（隐性债务）
+- 是否存在：**未在 FY2025 10-K 检索到 "failed sale-leaseback" 字样** → 暂判 **否 / 待查**。历史上有 Non-Recourse SPV（2023-02 去合并），属另一性质。
+
+### 其他特殊负债
+- 关联方借款：待查
+- 递延税负债：待查（FY26 Q3 出现大额所得税 benefit $182.5m（Q2）/$6.3m（Q3），暗示递延税资产/负债波动大）★
+
+### 到期墙（Maturity Schedule）
+- 待查（交 Agent A/C 从 Note Debt 拉取）。关键墙体=2030 可转债。
+
+---
+
+## 5.3 折旧政策（Depreciation Policies）★ 核心
+
+### 数据来源
+- 出处：10-K FY2025 Note 2（PP&E）+ Note 12 ★
+- 方法：**直线法**（straight-line），残值/寿命/方法每报告日复核
+
+### PP&E 寿命表（必填，全部为 ★ 直接披露）
+
+| 资产类别 | 公司选择（年）| 行业可比（年）| 我的判断 |
+|---|---:|---:|---|
+| Buildings（建筑）| **20** | 20–40（数据中心壳体）| 偏保守—中性 |
+| Plant and equipment（电气基础设施）| **3–10** | 7–15 | 中性偏保守 |
+| **Mining hardware — S19j Pros** | **2**（FY2024 起从 4 年下调）| 4–5（ASIC 普遍）| **保守**（主动缩短，加速折旧）|
+| Mining hardware — 其他型号（T21 等）| **4** | 3–5 | 中性 |
+| **HPC / AI hardware（GPU H100/H200）** | **5** | 3–6（CoreWeave 6 / Nebius 4–5 / 超大厂 5–6）| **中性偏激进**（见下）|
+| Leasehold improvements | 租期与改良寿命孰短 | 同 | 中性 |
+| Development assets（在建数据中心）| **不折旧**，至投入使用 | 同惯例 | 中性 |
+
+> ★ 原文："estimated useful lives ... generally as follows: Buildings 20; Plant and equipment 3–10; Mining hardware – S19j Pros 2; Mining hardware – all other models 4; HPC hardware 5; Leasehold improvements lesser of lease/improvement life."
+
+### 特殊折旧 / 重大估计变更
+- **FY2024：S19j Pro 寿命 4 年 → 2 年**（★ Note 12）。理由：该型号预计仅运行至 2024-10-01（被新机替换），残值=二手市价。这是**会计估计变更（prospective）**，加速折旧、压低当期利润——保守动作。
+- Q3 FY26 **$140.4m 资产减值**（★ 8-K）= 退役挖矿硬件减值，与挖矿→AI 转型一致；这是减值非折旧，但同源于硬件寿命/用途骤变。
+
+### GPU 5 年寿命行业横向对比（最大单项未来资产）
+
+| 公司 | GPU/服务器折旧寿命 | 来源 |
+|---|---:|---|
+| **IREN** | **5 年** | ★ 10-K FY25 |
+| CoreWeave | 6 年 | ◇ CRWV 10-K |
+| Nebius | 4–5 年 | ◇ |
+| 超大规模厂（MSFT/GOOG/AMZN）| 5–6 年（近年从 4→5→6 延长）| ◇ |
+| **行业中位** | **~5–6 年** | ◇ |
+
+→ IREN GPU 5 年 **落在行业偏短端**：相对保守/中性。与超大厂"延长寿命美化利润"的方向相反。**正面信号**。
+
+### 敏感性（公司披露口径）
+- 10-K 明确："If actual useful lives are shorter than originally estimated, depreciation expense will increase"，并将"useful lives of assets"列为**关键估计/审计重点（Critical Accounting Estimate）**★。未给定量 ±1 年→OpInc 表。**定量敏感性：待查/未披露具体金额**。
+
+---
+
+## 5.4 资本化 vs 费用化（Capitalization Rules）
+
+| 项目 | 当前处理 | 行业惯例 | 我的判断 |
+|---|---|---|---|
+| R&D | **费用化**（"research and development expenses"，无资本化政策）| ASC 730 费用化 | 保守/合规 |
+| 软件开发 | 未单列资本化政策 → 推定费用化/并入 PP&E | ASC 350-40 | 待查 |
+| **在建工程利息（borrowing costs）** | **资本化**（"the non-recoverable amount is capitalized as part of the asset's cost" 用于在建；FY 现金流见"amortization of capitalized borrowing costs $1,038k"（早年）+ "borrowing/finance costs $1,400k"）| ASC 835 资本化合规 | 中性 — **未来 D&A 会因大规模数据中心建设而上升** ⚠️ |
+| 测试硬件 | 待查 | | |
+| 数字资产（BTC）| 计为**无形资产**（IFRS 期）→ US GAAP 下按 **ASC 350-60 公允价值**计量 | 见 5.1 / 档案 14 | — |
+
+### 资本化利息
+- 在建数据中心（Development assets）为 qualifying assets，借款成本资本化。**金额逐年明细：待查**（建议 Agent A 拉 cash flow "capitalized borrowing costs"行）。
+- ⚠️ 风险：1.9GW+ 在建（★ 10-K）+ 5GW NVIDIA 战略 → 投产后 **D&A 与资本化利息转费用化将集中上升**，未来 GAAP 利润承压。
+
+### 商业化转折点
+- 挖矿→AI Cloud 转型即转折：AI Cloud 2024 上线，FY2026 目标 ARR $3.7bn ◇。会计影响=新分部收入起量 + 旧挖矿硬件减值（$140.4m）。属**真实业务转型**，非单纯会计美化。
+
+---
+
+## 5.5 费用构成（Expenses Decomposition）
+
+### Bitcoin Mining COGS
+```
+├── 直接电费（最大项；Childress 扩产驱动电费 +$30.4m YoY，含 $7.2m 一次性退场清算）★
+├── 挖矿硬件折旧（S19/T21，2–4 年直线）
+├── 矿池费用（Antpool/Foundry）
+└── 站点运营/人工
+```
+
+### AI Cloud COGS
+```
+├── 电费（归属 AI Cloud 部分）
+├── GPU 折旧（5 年直线）
+├── 数据中心运营 + 网络
+└── 部分 GPU 经营租赁费
+```
+
+### SG&A / R&D
+```
+SG&A ├── 管理/财法/IT 人员 + SBC（FY25 SBC $42,642k ★，FY24 $23,636k，FY23 $14,356k — 逐年翻倍）
+     └── 上市/合规/专业费（含 SEC 评论应对、Davis Polk 顾问）
+R&D  └── 全部费用化；优化运营环境/能效
+```
+
+### D&A 分布
+| 项目 | FY2025 | 来源 |
+|---|---:|---|
+| Total D&A（合并）| 待查（Q3 FY26 单季 $121.2m ★）| ★ |
+| 主要落点 | Mining COGS + AI Cloud COGS | ◆ |
+
+> SBC 三年：$14.4m → $23.6m → $42.6m ★，**逐年近翻倍**，是 Adj EBITDA 最大加回项之一（Q3 FY26 单季 $31.5m）。
+
+---
+
+## 5.6 激进度评分（Aggressiveness Score）
+
+| 维度 | 公司选择 | 行业可比 | 评分 |
+|---|---|---|---:|
+| GPU/HPC 折旧寿命 | 5 年 | 5–6 年 | **0**（中性，略偏保守端）|
+| 挖矿硬件折旧寿命 | S19j Pro 2 年 / 其他 4 年 | 4–5 年 | **−1**（保守，主动加速）|
+| 建筑折旧寿命 | 20 年 | 20–40 年 | **−1**（保守）|
+| 收入确认（cost-to-cost 占比）| 无 cost-to-cost | — | **0** |
+| R&D 资本化 | 全费用化 | 费用化 | **−1**（保守/合规）|
+| 利息资本化 | 在建工程资本化 | 合规 | **0** |
+| Failed sale-leaseback | 未见 | — | **0** |
+| Crypto 资产计量 | ASC 350-60 公允价值（FY25 起）| 准则强制 | **0** |
+| 减值频率 | 主动确认（Q3 FY26 $140.4m）| — | **−1**（不拖延，及时减值）|
+| SBC | 当期费用化（未一次性资本化）| — | **0** |
+| **综合评分** | | | **−5 / 总 ~10 项 → 均值 −0.5** |
+
+### 结论
+- 综合倾向：**整体偏保守**（折旧寿命短、及时减值、R&D 费用化、收入无激进完工法）。
+- 唯一需盯防的不是"激进"而是**未来 D&A 跳升**：1.9GW+ 在建 + 资本化利息将在投产后集中转费用化。
+- 无投行红旗级激进项。
+
+---
+
+## 5.7 关键假设敏感性 & Critical Accounting Estimates
+
+### 公司列为关键会计估计（★ 10-K MD&A "Critical Accounting Estimates"）
+| 项目 | 是否列为关键估计 | 影响 |
+|---|---|---|
+| **资产寿命估计**（Estimation of useful lives of assets）| ✅ 是 | 寿命缩短→折旧↑（未给定量）|
+| **长寿资产可回收性/减值**（recoverability of long-lived assets）| ✅ 是 | 减值=账面 − 公允价值；Q3 FY26 已确认 $140.4m ★ |
+| **Level 3 衍生品/金融资产公允价值**（capped call 等）| ✅ 是 | Q3 FY26 未实现损失 $(23.7)m ★ |
+
+### 最坏情景（前 3 大假设）
+```
+1. GPU 5 年寿命：若 AI 硬件加速迭代→实际 3 年 → 折旧大增、可能进一步减值（参照挖矿硬件 $140.4m 先例）。
+2. 挖矿硬件残值：BTC 价格/二手机价崩 → 追加减值。
+3. Capped call / 可转债公允价值：BTC 与股价波动 → 损益剧烈波动（已见 $(23.7)m / $(107.4)m）。
+```
+- 定量 ±1 单位敏感性：**公司未披露金额（待查/未披露）**。
+
+---
+
+## 总结：IREN 的会计画像
+
+```
+IREN 会计政策整体偏【保守—中性】：
+- 保守点：挖矿硬件 2–4 年短寿命、主动加速折旧、Q3 FY26 及时确认 $140.4m 退役硬件减值、R&D 全费用化、收入无 cost-to-cost 完工法操纵空间（BTC 持有 <4h）。
+- 中性点：GPU 5 年落在行业 5–6 年偏短端，未走超大厂"延长寿命美化利润"路线。
+- 最大灰色地带 / 敏感性：在建工程利息资本化 + 1.9GW+ 在建产能 → 投产后 D&A 与利息集中转费用化，未来 GAAP 利润承压；capped call/可转债 Level-3 公允价值令损益剧烈波动。
+
+对分析的影响：
+- 当 GAAP 净亏损巨大（Q3 FY26 −$247.8m）时，真实经营状况更好——其中 $140.4m 减值 + $23.7m 公允价值损失为非现金/非经营项；剔除后 Adj EBITDA 仍为正 $59.5m。
+- 关键风险：未来 D&A 跳升 + Level-3 公允价值波动 + 历史 ICFR 重大缺陷（见档案 14 / 审计师变更）。
+- 关键机会：保守折旧意味着账面资产质量被低估，AI Cloud 起量后利润弹性可观。
+```
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

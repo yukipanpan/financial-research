@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>资本结构 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># IREN Limited — 06 Capital Structure (Debt / Converts / Leases / Liquidity)
+
+> Agent C deliverable. CIK 0001878848. FY ends June 30. Unit rule: 1亿USD = $100M = $0.1B.
+> Primary period: Q3 FY26 10-Q (quarter ended **March 31, 2026**), plus post-quarter 8-Ks.
+> Source legend: ★ primary filing (exact figure) · ◆ derived from primary · ◇ secondary · ▽ my estimate.
+
+---
+
+## 0. Snapshot (as of March 31, 2026 unless noted)
+
+| Item | Value | Source |
+|---|---:|---|
+| Cash & cash equivalents | **$2,213.3M ($2.2B)** | ★ [10-Q BS](data/research/IREN/raw/10Q_2026-03-31.htm) |
+| Convertible notes payable (carrying) | **$3,687.8M ($3.7B)** | ★ 10-Q Note 16 |
+| Finance lease liability (curr + non-curr) | $122.2M + $152.1M = **$274.3M** | ★ 10-Q BS |
+| Operating lease liability | $0.5M + $2.3M = $2.8M | ★ 10-Q BS |
+| Total debt (converts + finance leases) | **≈ $3,962.1M ($4.0B)** | ◆ sum |
+| **Net debt** (total debt − cash) | **≈ $1,748.8M ($1.7B)** | ◆ |
+| Total stockholders' equity | $2,664.5M | ★ 10-Q BS |
+| Total assets / liabilities | $7,264.9M / $4,600.4M | ★ 10-Q BS |
+| Deferred revenue (customer prepay, c+nc) | $120.4M | ★ 10-Q |
+| Cash AFTER post-quarter $3.0B note | ~$2.6B reported at Apr 30 2026 (mgmt) | ◇ Phase-0 brief / 8-K 2026-05-14 |
+
+Note: convertible notes are **senior unsecured**. There is **no traditional secured term loan / revolver**. GPU purchases are financed by (a) finance leases (Dell Financial Services et al.) and (b) customer prepayments (Microsoft 20% upfront).
+
+---
+
+## 1. Convertible Notes — full terms (★ 10-Q Note 16 key-terms table)
+
+| Series | 2030 Notes | 2029 Notes | 2031 Notes | 2032 Notes | 2033 Notes |
+|---|---|---|---|---|---|
+| Issuance date | Dec 6, 2024 | Jun 13, 2025 | Oct 14, 2025 | Dec 8, 2025 | Dec 8, 2025 |
+| Maturity | Jun 15, 2030 | Dec 15, 2029 | Jul 1, 2031 | Jun 1, 2032 | Jun 1, 2033 |
+| **Remaining principal (Mar 31 26)** | $212.3M | $233.4M | $1,000.0M | $1,150.0M | $1,150.0M |
+| Original principal | $440.0M | $550.0M | $1,000.0M | $1,150.0M | $1,150.0M |
+| Stated coupon | 3.25% | 3.50% | 0.00% | 0.25% | 1.00% |
+| Effective rate | 3.87% | 4.22% | 0.37% | 0.45% | 1.18% |
+| Conversion price | $16.81 | $13.64 | $85.63 | $51.40 | $51.40 |
+| Conversion rate /$1,000 | 59.4919 | 73.3299 | 11.6784 | 19.4553 | 19.4553 |
+| Net proceeds | $311.6M | $392.4M | $927.3M | $1,033.2M | $1,040.8M |
+
+**Total carrying convertible debt at Mar 31, 2026 = $3,687.8M** (★). All classified non-current; **$0 due within one year**.
+
+### Post-quarter (subsequent event): **2033B Notes**
+- May 14, 2026: issued **$3.0B** of **1.00% Convertible Senior Notes due Dec 1, 2033** (incl. $400M greenshoe). Conversion price **$73.07** (rate 13.6848/$1,000). Net proceeds ≈ $2.96B; $201.3M used for capped calls. ★ [8-K 2026-05-14](data/research/IREN/raw/8k/8K_2026-05-14_nvidia.htm)
+- This roughly **doubles** convertible principal to **≈ $6.7B** (3.7B carrying + 3.0B new).
+
+### Dec 2025 induced conversion / repurchase (★ Note 16)
+- Repurchased **$544.3M** principal of 2030 + 2029 Notes for **$1,632.4M cash** (accounted as induced conversion). Recorded **$111.8M inducement expense** + $981.0M charge to APIC. This is why 2030/2029 principal collapsed from $440M/$550M → $212M/$233M.
+
+### Key indenture terms (common across series; ★ 8-Ks)
+- Senior unsecured; **no financial maintenance covenants** (only customary merger/asset-sale and reporting covenants).
+- Cross-default trigger: defaults on other borrowed-money debt ≥ **$125M**.
+- Company can settle conversions in cash, shares, or a mix (cash-settlement flexibility reduces forced dilution).
+- Fundamental-change put at par; make-whole on early redemption.
+
+---
+
+## 2. Capped Call Transactions (★ 10-Q Note "Capped Call")
+
+Purpose: reduce dilution / offset excess cash payment on conversion, up to a cap.
+
+| Linked to | Cap (short strike) | Long strike (= conv. price) | Cost | Status Mar 31 26 |
+|---|---:|---:|---:|---|
+| 2030 Notes | $25.86 | $16.81 | $44.4M | Reclassified to equity Nov 2025 |
+| 2029 Notes | $20.98 | $13.64 | $53.8M | Reclassified to equity Nov 2025 |
+| 2031 Notes | $120.18 | $85.63 | $56.7M | Derivative asset $29.7M |
+| 2032 Notes | $82.24 | $51.40 | $104.3M | Derivative asset $83.6M |
+| 2033 Notes | $82.24 | $51.40 | $96.7M | Derivative asset $78.7M |
+| **2033B Notes** (post-Q) | $110.30 | $73.07 | $201.3M | New (8-K May-14) |
+
+- Capped-call **derivative asset on BS = $192.0M** at Mar 31 26 (2031+2032+2033).
+- **Q3 FY26 unrealized loss on capped calls = $(23.7)M** (share price fell to $34.28 vs strikes) — reconciles to brief.
+- 2030/2029 capped calls + 2030/2029 prepaid forwards were reclassified to equity (−$259.6M and −$665.4M to APIC) after Nov 19 2025 shareholder approval. This is the source of the **negative APIC of −$1,728.4M**.
+
+---
+
+## 3. Prepaid Forward Share Purchase Contracts (★ Note)
+- 2030 Prepaid Forward: 5.7M shares, exp Aug 15 2030, $73.7M.
+- 2029 Prepaid Forward: 8.818M shares, exp Feb 15 2030, $92.5M.
+- Reclassified to equity at fair value $665.4M (Nov 19 2025). These effectively pre-bought shares to neutralize convert dilution.
+
+---
+
+## 4. GPU / Equipment Financing (finance leases) (★ 10-Q Note 9 & MD&A)
+- Group entered **lease financing for 100% of GPU purchase price**, structured as **24-month and 36-month finance leases** with $1 purchase option (treats as ownership; ROU asset in PP&E).
+- **Dell Financial Services facility (Nov 5, 2025): $199.8M, 24-month lease, $1 buyout, parent guarantee.** ★ MD&A
+- Finance lease ROU assets = $301.8M gross; finance lease liabilities = **$274.3M** total at Mar 31 26.
+- Additions to ROU assets in exchange for lease liability (9M FY26): **$291.6M** (non-cash). ★ CF
+- This is the "GPU financing" funding leg referenced in Phase-0.
+
+---
+
+## 5. MATURITY WALL (principal due) ★/◆
+
+| Calendar year | Instrument | Principal due |
+|---|---|---:|
+| 2026 | (converts) none | $0 |
+| 2027 | (converts) none | $0 |
+| **2029** (Dec 15) | 2029 Notes | **$233.4M** |
+| **2030** (Jun 15) | 2030 Notes | **$212.3M** |
+| **2031** (Jul 1) | 2031 Notes | **$1,000.0M** |
+| **2032** (Jun 1) | 2032 Notes | **$1,150.0M** |
+| **2033** (Jun 1) | 2033 Notes | **$1,150.0M** |
+| **2033** (Dec 1) | 2033B Notes (post-Q) | **$3,000.0M** |
+| **Convert total** | | **≈ $6,745.7M** |
+| Finance leases | 24/36-mo, rolling 2026–2029 | $274.3M (+ growing as GPUs commence) |
+
+**Observation:** No near-term wall before late 2029. **The wall is heavily back-loaded to 2031–2033 (~$6.3B of $6.7B due in 2031–33).** Both 2033 tranches ($1.15B + $3.0B) mature in the same year. Refinancing/conversion concentration risk in 2031–2033 is the single biggest structural item.
+
+---
+
+## 6. Liquidity & Runway math (★ 10-Q MD&A + ◆ derived)
+
+- Cash Mar 31 26: **$2,213.3M**; + post-quarter $3.0B note net ≈ $2.96B; + ATM issuance. Mgmt reports **~$2.6B cash at Apr 30 2026** (◇ brief).
+- **9M FY26 operating cash flow: +$289.3M** (positive). ★
+- **9M FY26 investing outflow: −$2,608.9M** (capex: $1,669.2M PP&E + $685.8M computer hardware + $107.6M intangibles). ★ — this is the real burn.
+- 9M FY26 financing inflow: +$3,968.8M (converts $3,299.6M + share issuance $2,630.8M − induced conversion $1,623.5M − capped calls $252.3M). ★
+
+**Runway logic (▽ my framing):** Operations are roughly cash-neutral-to-positive; the cash drain is **capex**, not opex. Required GPU capex is enormous: Microsoft = ~$5.8B GPU capex; NVIDIA $3.4B contract needs ~$1.6B Dell GPUs; Dell purchase commitments $5.8B (Nov) + $2.3B + $1.2B (Mar) + $1.6B (May). Total announced GPU/Dell purchase obligations ≈ **$10–12B+** vs ~$2.6B cash + $6.7B converts already raised.
+- **Conclusion:** Cash on hand alone cannot fund the 5GW build. Runway depends entirely on **continued capital-markets access** (ATM up to $6.0B, more converts, GPU finance leases) **plus Microsoft/NVIDIA prepayments**. Management explicitly says it is "actively exploring alternative financings" and that future financings "could be material" — i.e., **further dilution/leverage is planned, not optional**.
+
+---
+
+## 7. Funding sources catalog
+| Source | Capacity / status | Source |
+|---|---|---|
+| Cash | ~$2.6B (Apr 30 26) | ◇ |
+| Operating cash flow | +$289M/9M (positive) | ★ |
+| ATM equity facility | up to **$6.0B** (replaced $1.0B on Mar 4 26); $1.06B issued by Apr 30 26 | ★ MD&A |
+| Convertible notes | $6.7B issued; capacity = market appetite | ★ |
+| GPU finance leases | Dell FS $199.8M + portfolio leases; scalable | ★ |
+| Customer prepayments | Microsoft 20% upfront; deferred rev $120.4M | ★ |
+| NVIDIA $70 investment right | up to **$2.1B** cash if 30M shares exercised | ★ 10-Q Note 17 |
+
+---
+
+## 8. Red flags (capital structure)
+1. **Back-loaded $6.3B maturity wall 2031–2033**, with $4.15B in 2033 alone (two tranches same year).
+2. Convertible **conversion prices ($73–86) sit well above the Mar 31 26 share price ($34.28)** → notes are deeply out-of-the-money; if stock stays low, these become **cash repayment** obligations (refinancing risk), not equity conversions.
+3. Funding is **serial equity + equity-linked dilution** (ATM $6B, $6.7B converts, NVIDIA right) — see 13_equity_options_vesting.md.
+4. Capex obligations (~$10–12B announced) **dwarf** current cash; execution depends on uninterrupted market access.
+5. $111.8M one-off inducement expense + $1.6B cash spent buying back cheap 2029/2030 converts — expensive de-leveraging of in-the-money notes.
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

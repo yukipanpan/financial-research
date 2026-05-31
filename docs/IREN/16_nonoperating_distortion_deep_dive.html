@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>非经营剥离 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># 16 — IREN Limited 非经营 / 盈余扰动项专题档案（Non-Operating Distortion Deep Dive）
+
+> Agent D 交付件 | 标的：IREN Limited (NASDAQ: IREN, CIK 0001878848, FY 截止 6/30)
+> 数据源四级标注：★ SEC 一手 / ◆ 计算 / ◇ 第三方 / ▽ 估算 | 单位写全（USD thousands 除非注明），10× 复核
+> 主源：
+> - ★ [10-K FY2025](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001878848&type=10-K) — 本地 `data/research/IREN/raw/10K_FY2025.htm`（审计 IS：lines 2303-2441）
+> - ★ [10-Q Q3 FY26](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001878848&type=10-Q) — 本地 `data/research/IREN/raw/10Q_2026-03-31.htm`（IS lines 379-529；FV note 1636-1922）
+
+---
+
+## 0. 一页纸速查 — IREN 的扰动项清单
+
+| 扰动项 | 类型 | 首现 | IS 落点 | 现金? | 一次性? | FY25 影响 | 9M FY26 影响 | 来源 |
+|---|---|---|---|---|---|---:|---:|---|
+| **Unrealized FV gain/loss on financial instruments**（Capped Call + Prepaid Forward）| 衍生品/金融资产公允价值变动 | FY2024 | **经营外**（Other income）| **非现金** | 持续（每期重估）| **+$77,518k** | **+$533,942k** | ★ |
+| Realized gain/loss on financial assets（Childress 电力转售）| 金融资产 | FY2024 | 经营外 | 现金 | 持续 | $(4,215)k | $(8,666)k | ★ |
+| Increase/(decrease) in FV of assets held for sale（待售矿机）| 持有待售资产 | FY2025 | 经营外 | 非现金 | 持续 | $(2,160)k | $(8,484)k | ★ |
+| **Impairment of assets**（被 displaced 的矿机/IT/电气）| 减值 | FY2023 | **经营内** | 非现金 | "经常性"（转型代价）| $(7,223)k | **$(188,423)k**（Q3 单季 $(140,411)k）| ★ |
+| **Debt conversion inducement expense**（诱导转股 2030 可转债）| 一次性损益 | 9M FY26 | 经营外 | 非现金 | 一次性 | — | **$(111,799)k** | ★ |
+| Gain on partial extinguishment of financial liabilities | 一次性损益 | FY2025 | 经营外 | 非现金 | 一次性 | +$9,093k | — | ★ |
+| Foreign exchange gain/loss | 外汇 | 历史 | 经营外 | 多为非现金 | 持续 | $(1,339)k | $(5,369)k | ★ |
+| **Bitcoin / 数字资产财库** | — | — | — | — | — | **不存在**（每日清算，BS 持有 = $0）| ★ 10-K p.311；10-Q line 3224 |
+
+> **重要**：IREN **没有加密货币财库扰动**（与 MSTR/XRP-treasury 类公司根本不同）。它每日把挖到的 BTC 全部清算（Kraken），FY25 末与 Q3 FY26 末 BS 上 Bitcoin = $0。BTC 价格只通过「当日挖矿收入」影响 P&L（已在营收内），不形成持有重估扰动。**真正的扰动是衍生品/金融工具的公允价值变动**（capped call + prepaid forward），由可转债发行结构产生。
+
+---
+
+## 16.1 识别 + 分类（核心扰动项：Unrealized FV on financial instruments）★
+
+| 问题 | 回答 | 来源 |
+|---|---|---|
+| 是什么、为何 material | 可转债配套的 **Capped Call Transactions**（对冲稀释）+ **Prepaid Forward Transactions（2029/2030）** 的公允价值变动。9M FY26 +$533.9m **>> 净利润绝对值**（净亏 $18.6m），是单一最大 P&L 项。| ★ 10-K Note 10/14；10-Q Note 8/10 |
+| BS 科目 / 计量基础 | 衍生金融工具，**公允价值计量**（Level 2，解析式定价：股价/无风险利率/股息率）| ★ 10-Q line 1684-1695 |
+| 适用准则 | ASC 815（衍生品）/ ASC 825 公允价值选择权；可转债本身按 US GAAP（FY25 起从 IFRS 转 GAAP，见档案 14 断层）| ★ |
+| 经营 vs 非经营 | **非经营**（IS 上在「Other (expense) income」区，营业利润线之下）✓ 未塞进营业利润 | ★ |
+| 现金 vs 非现金 | **非现金**（9M OCF 间接法里 $(533,942)k 被完整冲回）✓ | ★ 10-Q OCF |
+| 一次性 vs 持续 | 持续（每期按股价重估，随 IREN 股价涨跌剧烈双向波动）| ★ |
+
+**9M FY26 +$533.9m unrealized 的拆解（◆ 计算自 10-Q FV 明细）**：
+
+| 来源 | 工具 | 9M FY26 | 来源 |
+|---|---|---:|---|
+| 金融资产 | 2030 Prepaid forward contract | +$178,183k | ★ 10-Q line 1655 |
+| 金融资产 | 2029 Prepaid forward contract | +$275,600k | ★ line 1662 |
+| 衍生品 | Capped call 2030 | +$57,500k | ★ line 1900 |
+| 衍生品 | Capped call 2029 | +$80,000k | ★ line 1906 |
+| 衍生品 | Capped call 2031 | $(25,582)k | ★ line 1912 |
+| 衍生品 | Capped call 2032 | $(18,202)k | ★ line 1918 |
+| 衍生品 | Capped call 2033 | $(18,202)k〜区间 | ★ line 1920+ |
+| 衍生品 | Bitcoin purchase option | +$2,910k | ★ line 1894 |
+| **合计 unrealized** | | **+$533,942k** ◆勾稽 IS line 488 ✓ | ★ |
+
+> 🔴 这些 gain 是 IREN **自家股价大涨**推高 capped call / prepaid forward 公允价值的结果 —— 纯纸面、与主业经营能力无关。Agent A 已指出 FY25 的 $77.5m「净利润」同理是非现金幻象。
+
+---
+
+## 16.2 对损益的影响 + 剥离测试（CARVE-OUT TEST）★
+
+### IS 关键行（USD thousands；★ 全部 SEC 直接披露）
+
+| 行项 | FY2023 | FY2024 | FY2025 | 9M FY26 | Q3 FY26(3M) |
+|---|---:|---:|---:|---:|---:|
+| Total revenue | 75,509 | 187,192 | 501,023 | 569,782 | 144,795 |
+| Total cost of revenue | (39,419) | (87,067) | (158,992) | (186,369) | (39,933) |
+| D&A | (30,673) | (50,470) | (181,136) | (305,647) | (121,245) |
+| Impairment of assets | (105,172) | — | (7,223) | (188,423) | (140,411) |
+| **Operating (loss) income** | **(157,241)** | **(27,234)** | **17,327** | **(426,331)** | **(233,523)** |
+| Unrealized gain/(loss) FV instruments | — | (3,448) | **77,518** | **533,942** | (23,700) |
+| Realized gain/(loss) financial assets | — | 4,121 | (4,215) | (8,666) | — |
+| FV of assets held for sale | — | — | (2,160) | (8,484) | (2,035) |
+| Debt conversion inducement | — | — | — | (111,799) | — |
+| Gain on partial extinguishment | — | — | 9,093 | — | — |
+| **Net income (loss)** | **(171,827)** | **(28,920)** | **86,941** | **(18,622)** | **(247,827)** |
+
+### 剥离测试（CARVE-OUT TEST）★ + ◆
+
+**FY2025（报告净利 +$86.9m 的"水分"还原）**：
+```
+报告净利润 (Net income)                              = +$86,941k   ★
+减：Unrealized FV gain（非现金，非经营）              − $77,518k   ★
+减：Gain on partial extinguishment（一次性，非现金）  − $9,093k    ★
+加回：Impairment of assets（非现金损失，转型代价）    + $7,223k    ★
+= 剔除主要扰动后的"真实"经营性净利润                 ≈ +$7,553k   ◆
+  （若也剔除 realized loss $4,215k、AHFS $2,160k、FX $1,339k，则更接近盈亏平衡 / 微利）
+→ 结论：FY2025 报告的 $86.9m 净利润中约 90% 是非现金公允价值幻象。
+  剥离后主业仅约 +$7.6m（利润率仅 1.5%），勉强打平。Operating income $17.3m 含 D&A 后已很薄。
+```
+
+**9M FY26（报告净亏仅 $18.6m，但实际经营巨亏）**：
+```
+报告净亏损 (Net loss)                                 = $(18,622)k  ★
+减：Unrealized FV GAIN（非现金，非经营，撑住了表面）  − $533,942k  ★
+  → 剔除后                                            = $(552,564)k ◆
+加回：Debt conversion inducement（一次性，非现金）    + $111,799k  ★
+加回：Impairment of assets（非现金，转型代价）        + $188,423k  ★
+= 剔除上述后                                          ≈ $(252,342)k ◆
+对照：报告 Operating loss（已在营业线，未含上述非营业项）= $(426,331)k ★
+→ 结论：9M FY26 报告净亏只有 $18.6m，但这是 +$533.9m 非现金 FV gain 硬撑的结果。
+  真实经营亏损达 $(426.3)m（营业亏损线），即使加回非现金减值/诱导转股仍亏 $(252)m。
+  主业（含巨额 D&A $305.6m + 转型减值 $188.4m）在 AI 转型期严重亏损。
+```
+
+**Q3 FY26 单季（双向扭曲反例）**：报告净亏 $(247.8)m，其中 impairment $(140.4)m + 营业亏损 $(233.5)m + unrealized FV LOSS $(23.7)m。这一季 FV 项转为亏损，叠加大额减值，把净亏放大 —— 与 9M 的 FV gain 撑住表面方向相反，印证「FV 项双向剧烈扭曲 headline」。
+
+```
+关键问答自检：
+□ 非经营项是否被塞进 Operating Income？→ 否。Unrealized FV、inducement、extinguishment 均在营业线之下 ✓
+   但 Impairment 在营业线之内（Operating），且金额巨大（9M $188m）→ 营业亏损本身已含转型减值。
+□ 占净利润比例？FY25：unrealized FV 占净利 89%（$77.5m / $86.9m）◆。9M FY26：FV gain $533.9m vs 净亏 $18.6m，
+   即无此 gain 则净亏会扩大 29 倍 ◆。→ 利润质量极低。
+□ 现金 vs 纸面？全部主要扰动（unrealized FV、impairment、inducement、extinguishment）均非现金。
+□ 靠扰动撑利润掩盖主业亏损？→ 是（FY25 靠 FV gain 把微利包装成 $86.9m"盈利";
+   9M FY26 靠 FV gain 把 $426m 营业亏损包装成仅 $18.6m 净亏）。🔴 这是最大红旗。
+```
+
+---
+
+## 16.3 对现金流的影响 ★
+
+| 现金流活动 | CF 段 | 9M FY26 (USD thousands) | 来源 |
+|---|---|---:|---|
+| Unrealized FV gain（非现金）| OCF 间接法冲回 | $(533,942)k（从净亏中扣除）| ★ 10-Q OCF |
+| Impairment（非现金）| OCF 加回 | +$188,423k | ★ |
+| Debt conversion inducement（非现金）| OCF 加回 | +$111,799k | ★ |
+| Realized loss / AHFS / FX（部分非现金）| OCF 加回 | +$8,666 / +$8,484 / +$6,961k | ★ |
+| D&A + SBC（非现金）| OCF 加回 | +$305,647k + $162,123k | ★ |
+| **Net cash from operating activities 9M FY26** | OCF | **+$289,326k** ★ | ★ 10-Q |
+| Capped call 购买成本（支付 ~$252.3m）| Financing CF（FY26 上半年）| 现金流出 | ★（档案 05/06）|
+| Prepaid forward（预付）| Financing/Investing | 现金 | ★ |
+
+```
+□ 资金来源：可转债发行（2029/2030/2031/2032/2033 多笔）+ 股票增发（NVIDIA 5 年 30m 股期权 @ $70，最高 $2.1bn ◇ deck p.6）。
+□ non-cash FV 变动在 OCF 间接法里被正确冲掉 ✓（$(533,942)k 减回）→ OCF +$289.3m 是真实现金（主要靠挖矿 + AI Cloud 现金毛利 + deferred revenue 预收 +$119.5m）。
+□ 「一边稀释股东（NVIDIA 期权/可转债 capped call）一边产生 FV beta」：capped call 的 FV 暴涨正是 IREN 股价暴涨的镜像 →
+   纸面利润本质是把「股权稀释对冲工具」的市值波动计入了 P&L。必须向读者点明这与经营无关。
+```
+
+---
+
+## 16.4 明细 + 控制 ★
+
+| 期末 | 主要扰动构成 | 计量 | 来源 |
+|---|---|---|---|
+| FY2024 | Unrealized FV $(3.4)m（Childress 电力固定价合同）；尚无 capped call | 公允价值 | ★ 10-K p.1933 |
+| FY2025 | Unrealized FV +$77.5m（**全部来自 Capped Call + Prepaid Forward** 公允价值变动）| Level 2 公允价值 | ★ 10-K p.1894, Note 10/14 |
+| 9M FY26 | Unrealized FV +$533.9m（2029/2030 prepaid forward +$453.8m + capped call 2029/2030 +$137.5m，部分被 2031/32/33 capped call 亏损抵消）| Level 2 | ★ 10-Q line 1636-1922 |
+
+```
+□ 勾稽自检：金融资产 +$453,783k + 衍生品净额（capped call 各期 + BTC option +$2,910k）≈ +$533,942k ✓◆
+□ 控制/对手方：capped call 与对手金融机构对冲可转债稀释；prepaid forward 同。无质押/借出风险披露。
+□ 数字资产财库：不存在（每日清算，BS=$0）→ 无 BTC 持有扰动。
+□ Bitcoin purchase option（嵌入式衍生品）：截至 2025-12-31 已到期未行权，账面价值减记至 nil（★ 10-Q line 2170）。
+```
+
+---
+
+## 📝 非经营/扰动项专题总结
+
+```
+1. IREN 的扰动项（逐个）：
+   · Unrealized FV on financial instruments（capped call + prepaid forward）— 非经营、非现金、持续、双向剧烈
+     【最大扰动】FY25 +$77.5m / 9M FY26 +$533.9m / Q3 FY26 单季 −$23.7m
+   · Impairment of assets — 经营内、非现金、转型"经常性" — 9M FY26 −$188.4m（Q3 −$140.4m，矿机被 displaced）
+   · Debt conversion inducement — 非经营、非现金、一次性 — 9M FY26 −$111.8m
+   · Gain on partial extinguishment — 非经营、非现金、一次性 — FY25 +$9.1m
+   · 无加密货币财库扰动（每日清算 BTC，BS=$0）
+
+2. 剥离测试结论：
+   · FY2025：报告净利 +$86.9m → 剔除 unrealized FV +$77.5m、extinguish +$9.1m、加回减值 +$7.2m
+     → 真实经营净利 ≈ +$7.6m ◆。报告利润"水分" ≈ $79m，占报告净利约 91%。主业勉强打平、微利。
+   · 9M FY26：报告净亏 $(18.6)m → 剔除 +$533.9m FV gain → $(552.6)m；加回非现金减值/诱导转股
+     → ≈ $(252)m ◆；对照营业亏损线 $(426.3)m。主业在 AI 转型期严重亏损，被 FV gain 包装成"几乎打平"。
+
+3. 对现金流：主要扰动全为非现金，OCF 间接法已正确冲回；9M FY26 OCF 仍 +$289.3m（真实现金，
+   靠挖矿/AI Cloud 现金毛利 + deferred revenue 预收 +$119.5m）。资金来源 = 多笔可转债 + 股权（NVIDIA 期权）。
+
+4. 准则断层：FY2024 IFRS（20-F）→ FY2025 US GAAP（10-K），可转债与租赁分类口径变更（见档案 14）。
+
+5. 最大红旗 🔴：靠 capped call / prepaid forward 的非现金公允价值变动（本质是自家股价波动的镜像）
+   双向扭曲 headline 净利润 —— FY25 把微利包装成 $86.9m"盈利"，9M FY26 把 $426m 营业亏损包装成 $18.6m 净亏。
+   叠加反复的大额转型减值（9M $188m），真实主业在 AI 转型期为巨额经营亏损。
+   投资者必须看 Operating loss 与 OCF，绝不能看 headline Net income。
+```
+
+---
+> **验证 H4/H16**：✅ 成立。报告净利润被非经营、非现金的金融工具公允价值变动严重扭曲（双向）。
+> FY25 真实经营净利仅 ~+$7.6m（剥离 $79m 水分）；9M FY26 真实经营亏损 $(252)m〜$(426)m（被 +$533.9m FV gain 掩盖）。
+> IREN 无加密财库扰动；核心扰动来自可转债配套的 capped call + prepaid forward 衍生品。
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

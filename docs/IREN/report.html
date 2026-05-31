@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>严谨财务报告 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html" class="active">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># IREN Limited (NASDAQ: IREN) — 财务研究报告
+
+> 数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 **v1.1**（新增官网 169 条公告 vs SEC 全量核对，见 `11_news_crosscheck.md`）
+> v1.1 更正：① ARR 目标 $3.7bn→**$4.4bn**（2026-05-26 8-K，新签 $1.6bn Dell 风冷 Blackwell 采购）；② 点明早期 AI Cloud 客户为**未具名 AI 公司**（非仅 Microsoft/NVIDIA）；③ 补 GPU 部署爬坡 2.4k→23k→150k；④ 收购 Awaken（品牌，非重大）。SEC 列表确认**已刷新至今日**。
+> **v1.2 全量补全（应要求逐份读完全部 filing，含 2021 IPO 至今 276 份）**：① 查出**最早具名 AI 客户 = Poolside AI**（2024-02）；② 查实**创始人 2025-09 各减持 200 万股 ≈ 各 $58.6m**；③ GPU 机队从 248 H100 起的完整演进；④ ATM 额度扩至 **$6.0bn**、2025-12 直接增发 39.7M 股≈$1.63bn。完整逐份清单见 `filinglog_part1/2/3` 与发布站「全量 Filing 清单」页。
+> 方法论：listed-company-financial-research v2.0（Phase 0 + Step 1–8 全程执行）
+> 配套档案：本报告每节均引自 `data/research/IREN/` 下的 01–17 号深度档案
+
+---
+
+## 0. 免责声明
+
+本文是一篇**基于 SEC 公开文件的财务分析读书笔记**，纯属个人学习心得与公开数据解读，**不构成任何投资建议**。文中数据已尽力 cross-check 并标注：★ SEC 直接披露｜◆ 公式计算｜◇ 第三方报道（带链接）｜▽ 推算（注明逻辑）。涉及判断均为主观推演，不应作为买卖任何证券的依据。请独立判断并咨询持牌顾问。
+
+---
+
+## 1. 公司一句话定义
+
+> **IREN Limited 本质上是一个「把便宜的电力和土地，改造成 AI 算力的重资产二房东」**——它由比特币矿企转型为垂直整合的 AI Cloud（GPU 数据中心）provider，用比特币挖矿的现金流 + 持续举债/增发的资金，赌未来满租 Microsoft 与 NVIDIA。NASDAQ 上市，澳洲创立，财年截至 6 月 30 日。
+
+---
+
+## 2. 数据来源与方法论
+
+- **一手来源**：SEC EDGAR（CIK 0001878848）全量 168 份 filing（2024-01-01 起），清单见 `data/processed/IREN_filings.csv`。核心精读：FY2025 10-K ★、Q3 FY26 10-Q ★、Q3 FY26 业绩稿 8-K EX-99.1 ★、FY2024 20-F + 20-F/A ★、各类 8-K Item 1.01/2.03/4.01 ★、SEC 问询函 UPLOAD/CORRESP ★、DEF 14A ★。
+- **补充**：Q3/Q2 FY26 投资者 deck ◇（公司 IR，非 SEC filed）。
+- **filing 覆盖率**：核心财务/合同/治理/重述相关 filing 已全部精读；168 份中余下多为月度更新 6-K（FY2024 期）与 Form 3/4/13G（持股），已按主题抽样登记，未做逐份三表级深挖（理由：内容与已读年报/季报重叠或非财务实质）。
+- **并行精读**：Phase 0.2 派 5 个 agent 按主题（财务分部 / 会计政策与逐年变更 / 资本结构关联方 / 运营资产与非经营扰动专题 / 风险治理）并行读全量 filing，统一输出契约后收口。
+
+---
+
+## 3. 单位约定与常识自检
+
+- **单位铁律：1 亿 USD = $100M = $0.1B**。本文数字一律配全额货币单位（M 与 B 双写）。
+- 常识锚：Microsoft FY24 营收 ~$245B、AWS ~$108B、NVIDIA FY24 ~$60.9B。IREN FY2025 营收 **$501.0m（= $0.5bn = 5.01 亿美元）** —— 量级合理（约为 NVIDIA 的 0.8%、CoreWeave 的 10%），无 10× 错位风险。
+
+---
+
+## 4. 术语表 + 产业链地图（详见 `17_glossary_value_chain.md`）
+
+**产业链定位**：IREN 处**中游**（数据中心 + 算力运营），并向上游（电力/土地）与下游（自营 AI Cloud + Mirantis 软件）双向垂直整合。
+
+```mermaid
+flowchart LR
+  subgraph UP[上游 ⚙️]
+    P[电力+土地<br/>PPA/并网]
+    N[NVIDIA<br/>GPU 芯片]
+    D[Dell<br/>GPU 服务器]
+  end
+  subgraph MID[中游 ★ IREN 所处环节]
+    I["IREN：锁电锁地 → 自建数据中心(风冷/液冷)<br/>→ 装 GPU → 自营 AI Cloud 出租算力<br/>(Mirantis 补编排/运维软件)"]
+  end
+  subgraph DOWN[下游 💰]
+    M["Microsoft $9.7bn / 200MW (至2031)"]
+    NV["NVIDIA $3.4bn (至2032)"]
+    E[AI 实验室 / 企业]
+  end
+  P -->|电=最大经营成本| I
+  N -->|芯片(稀缺)| I
+  D -->|~$5.8bn 服务器| I
+  I -->|AI 算力小时| M
+  I --> NV
+  I --> E
+  style I fill:#5fdd9d,stroke:#0a3,stroke-width:3px
+```
+> ⚠️ 议价权偏上游（NVIDIA 芯片稀缺，且 NVIDIA 同时是客户+供应商+股东 → 循环）；下游高度集中（两大客户 + 同一 Childress(TX) 园区）。来源 ★10-K / ◇deck。
+
+---
+
+## 5. 业务地图（详见 `02_business_map.md` / `02_business_segments_DEEP.md`）
+
+两个报告分部：**① Bitcoin Mining（当前收入主体，主动萎缩）② AI Cloud（增长引擎，ramp 中）**。第三层是底层的「数据中心 + 电力开发平台」。
+
+**分部收入与毛利（★ SEC，单位 $M；GM 为 D&A 前口径——见 §10 警示）**：
+
+| 期间 | Mining 收入 | Mining GM% | AI Cloud 收入 | AI Cloud GM% | 总收入 | cross-check |
+|---|---:|---:|---:|---:|---:|---|
+| FY2023 | 75.5 | 47.8% | 0.0 | — | 75.5 | ✅ ★10-K |
+| FY2024 | 184.1 | 52.9% | 3.1 | 87.8% | 187.2 | ✅ ★ |
+| FY2025 | 484.6 | 67.5% | 16.4 | 92.0% | **501.0** | ✅ ★10-K FY25 |
+| Q1 FY26 | 232.9 | 65.7% | 7.3 | 90.1% | 240.3 | ✅ ★ |
+| Q2 FY26 | 167.4 | 62.1% | 17.3 | 86.2% | 184.7 | ✅ ★ |
+| Q3 FY26 | **111.2** | 68.2% | **33.6** | 86.3% | **144.8** | ✅ ★10-Q |
+
+```mermaid
+flowchart LR
+  subgraph 收入构成演变["总收入 & 转型（$M）"]
+    direction TB
+    A["FY25: Mining 484.6 (97%) + AI 16.4 (3%) = 501.0"]
+    B["Q1 FY26: 240.3 ↘"]
+    C["Q2 FY26: 184.7 ↘"]
+    D["Q3 FY26: Mining 111.2 (77%) + AI 33.6 (23%) = 144.8 ↘↘"]
+    A-->B-->C-->D
+  end
+```
+> **关键事实**：总收入**连续两季下滑**（240.3→184.7→144.8）——Mining 萎缩快于 AI Cloud 增长。AI Cloud 环比 +94%（17.3→33.6）但仅占 23%。**跨段排名**：核心=Mining（在退场）；增长引擎=AI Cloud；真实盈利能力=两段 D&A 前看着都赚，但全公司 Q3 GAAP 经营亏损 $(233.5)m（D&A 121.2 + 减值 140.4 + SG&A 81.8 吞掉段毛利 104.9）。
+
+---
+
+## 6. 收入构成与客户集中度（详见 `03_customers.md`）
+
+- **Mining**：FY2025 **97% 收入经 3 个矿池**（Antpool/Foundry 等），随时可终止。★
+- **AI Cloud（两类客户）**：
+  - **具名锚定客户**：**Microsoft（$9.7bn / 200MW，至 2031）+ NVIDIA（$3.4bn，至 2032）= ~$13.1bn**，都落在同一个 Childress(TX) 园区。◇/★8-K
+  - **最早的具名客户（v1.2 补，全量 filing 读出）**：**Poolside AI SAS** ——IREN 首个 AI Cloud 客户，2024-02-08 签 248 颗 H100，2024-04-08 增至 504 颗。★ 6-K 2024-02-08/2024-04-08。另有 WEKA 存储合作（2023-10）、Morgan Stanley 受聘 AI 数据中心变现顾问（2024-07）。
+  - **早期未具名客户**（v1.1 补）：2025 下半年起与**「未具名的 leading AI companies」**签多年期 AI Cloud 合同——2025-10-07 公告 23k GPU 中已签约 11k ≈ **$225m ARR**，部署在 Prince George(BC) + Childress Horizon 1&2。◇ GlobeNewswire 2025-10-07。对应 Q3 release 口径里 ARR-under-contract 中的「Prince George $0.5bn」。
+- **GPU 机队演进（v1.2 补，全量 6-K 读出）**：248 H100（2023-08，首次涉 AI）→ +568 H100（2024-02）→ +1,080 H200（$43.9m，2024-09）→ 机队 1,896 颗 → 2.4k Blackwell（2025-07）→ 8.5k→10.9k→23k（2025）→ **150k 目标（2026-03）**。
+- **单位经济（v1.1 补）**：◇ 公司称新签 Blackwell GPU「平均合同期 ~2 年、~2 年收入回本（payback）」——这是其敢举债买卡的核心假设。
+- **GPU 部署爬坡（v1.1 补）**：2.4k(Jul'25) → 8.5k(Aug'25) → 10.9k(Aug'25，获 NVIDIA "Preferred Partner") → 23k(Sep'25) → **150k(Mar'26 目标)**。
+- **NVIDIA 三重身份**：客户（$3.4bn 合同）+ 供应商（独家 GPU，含 2026-05-19 新签 **$1.6bn Dell 风冷 Blackwell 采购协议** ★8-K）+ 未来股东（30M 股 $70 认股权，随交付 600k GPU 归属）→ **circular vendor financing** 红旗。
+
+---
+
+## 7. 损益表（按分部，详见 `04_financial_statements.md`）
+
+**Q3 FY26（季度，截至 2026-03-31，★ 10-Q）**：
+
+```mermaid
+flowchart TB
+  R["总收入 $144.8m"] --> GP["段毛利(D&A前) ~$104.9m"]
+  GP --> DA["− D&A $121.2m"]
+  DA --> IMP["− 减值 $140.4m(退役矿机)"]
+  IMP --> SGA["− SG&A $81.8m"]
+  SGA --> OL["= 经营亏损 $(233.5)m"]
+  OL --> FV["− capped call 未实现损失 $23.7m 等"]
+  FV --> NL["= 净亏损 $(247.8)m"]
+  style NL fill:#ff6b6b,stroke:#a00,stroke-width:2px
+  style OL fill:#ffb86b
+```
+> 对照：Adj EBITDA $59.5m（非 GAAP，41% margin）vs GAAP 净亏 $(247.8)m。**两者差 $307m，主要是 D&A $121m + 减值 $140m + SBC $32m 被加回**——这正是 §13 剥离测试要处理的扭曲。✅ cross-check：8-K release p12 recon ★。
+
+**年度趋势**：FY2025 报告净利润 +$86.9m，但其中约 91% 是非现金公允价值收益（见 §13）。FY2023/24 为亏损。
+
+---
+
+## 8. 资产负债表（关键科目，★ 10-Q 2026-03-31）
+
+| 科目 | 金额 | cross-check |
+|---|---:|---|
+| 现金及等价物 | **$2,213.3m（= $2.21bn）** | ✅ = CF 期末现金 |
+| 可转债（账面）| $3,687.8m（= $3.69bn）| ★ Note |
+| 融资租赁 | $274.3m | ★ |
+| 总债务 ≈ | **~$4.0bn** | ◆ 加总 |
+| 净债务 ≈ | **~$1.75bn**（4.0 − 2.21）| ◆ |
+| 额外实收资本(APIC) | **$(1.73bn)（负值！）** | ⚠️ ★ — capped call + 诱导转股的权益工程所致，异常 |
+| 递延收入 | $120.4m | ★（Microsoft 20% 预付）|
+
+> ⚠️ **负 APIC** 是股权工程（capped call 权益分类 + 诱导转股）的会计结果，量级异常，已在 `06_capital_structure.md` 深挖。现金 $2.21bn（3/31）vs 业绩稿口径 $2.6bn（4/30，含后续融资）——口径不同，✅ 解释一致。
+
+---
+
+## 9. 现金流量表（来源 vs 用途，详见 `04b_cash_flow_DEEP.md`）
+
+**9M FY26（★ 10-Q）**：
+
+```mermaid
+flowchart LR
+  subgraph 来源["💧 资金来源 (9M)"]
+    OCF["经营 OCF +$289.3m<br/>(含非现金加回 $767.9m)"]
+    CN["可转债 +$3,299.6m"]
+    EQ["增发股票 +$2,630.8m"]
+  end
+  subgraph 用途["🔥 资金用途 (9M)"]
+    CAPEX["投资(主要 capex) −$2,608.9m"]
+  end
+  来源 ==> 用途
+```
+> **FCF（9M）≈ −$2,253m（= −$2.25bn）；年化烧钱 ~−$3.0bn；裸现金跑道 ~8.8 个月**。OCF 仅覆盖 capex 的 ~11%；Capex/D&A ≈ 8.3×。**生存高度依赖持续再融资**（$6.0bn ATM、更多可转债、GPU 融资租赁、Microsoft/NVIDIA 预付）。✅ CF 期末现金 = BS 现金（勾稽通过）。
+
+---
+
+## 10. 关键会计政策（详见 `05_accounting_policies.md`）
+
+- **收入确认（ASC 606 服务费，非 ASC 842 租金）**：Mining 按日 point-in-time；AI Cloud over-time，含大额预付。
+- **折旧寿命表（★ 10-K FY25）**：建筑 20y｜厂房设备 3–10y｜**矿机 S19j Pro 2y（FY24 由 4y 下调）**｜其他矿机 4y｜**HPC/GPU 5y**。GPU 5y 处行业**短端**（CoreWeave 6y、hyperscaler 5–6y）。
+- **⚠️ 折旧不计入 COGS**——单列。所以分部「~67% 毛利率」**虚高**，真正要看经营亏损 + OCF。
+- **激进度评分：保守偏中性（综合 ~−0.5）**——矿机寿命短、退役即时减值、R&D 全费用化、无 cost-to-cost。无激进红旗。真正的 watch-item 是 1.9GW+ 在建产能未来带来的 D&A / 资本化利息跳升。
+
+---
+
+## 11. 逐年变更侦测（铁律 6，详见 `14_yoy_changes.md`）
+
+```mermaid
+timeline
+  title IREN 逐年变更 / 重大事件时间线
+  2024-02 : 改名 Iris Energy → IREN
+  2024-08 : FY2024 20-F (going-concern + ICFR 重大缺陷)
+  2024-11→2025-02 : SEC 加密资产办公室 3 轮问询 (现金流分类)
+  2025-03-20 : 重述 — 6-K notice + 6-K/A + 20-F/A (现金流重分类)
+  2025-06-30 : 重大缺陷称已修复 ; IFRS→US GAAP 切换
+  2025-11 : 审计师 RCGT → KPMG
+  2026 FY : Adj EBITDA 改定义(剔除 debt conversion inducement)
+```
+- **重述（H3，已确认）**：仅**现金流量表重分类**——把「出售已挖比特币的收入」从**经营**移到**投资**活动（IAS 7.16(b)，BTC=无形资产）。SEC 三轮问询后 IREN 让步。**对损益/资产/权益/期末现金零影响**，只是历史经营现金流被调低。★ [6-K](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000027/irenlimited-6krestatemento.htm)
+- **可比性陷阱**：① FY2025 起 IFRS→US GAAP，FY25 数字不能直接接原 20-F；② 历史经营现金流须用重述后口径。
+- **Adj EBITDA 改定义（H4）**：FY26 起剔除「debt conversion inducement expense」（Q2 FY26 = $111.8m）。属合理一次性加回，但制造可比性断层。
+
+---
+
+## 12. 运营资产 / 产能专题（详见 `15_operating_asset_deep_dive.md`）
+
+**产能阶梯（★10-K / ◇deck；所有站点 100% 自有 freehold，GPU 经融资租赁 SPV 母公司担保，无 JV/权益法/VIE）**：
+
+| 站点 | secured/计划 MW | FY25 运营 MW | 控制权 |
+|---|---:|---:|---|
+| Childress, TX | 750 | 650 | 100% 自有 |
+| Sweetwater 1+2, TX | 2,000 | 0（SW1 变电站已按期通电）| 100% 自有 |
+| Prince George, BC（AI Cloud GPU 站）| 50 | 50 | 100% |
+| Mackenzie / Canal Flats, BC | 110 | 110 | 100% |
+| Kiowa, OK | 1,600 | 0（2028 ramp）| 开发权，未并表 |
+| Nostrum, 西班牙 | 490 | 0 | **待收购，未并表** |
+| **阶梯目标** | 480MW/2026（150k GPU，ARR 目标 **$4.4bn**，v1.1 上调自 $3.7bn）→ 1,210MW/2027 → **5GW/2028+** | ~810 | — |
+
+```mermaid
+flowchart LR
+  Y26["2026: 480MW<br/>150k GPU<br/>目标 $4.4bn ARR"] --> Y27["2027: 1,210MW<br/>(+730MW)<br/>Childress H5-6 / Sweetwater1"] --> Y28["2028+: 5GW secured<br/>Sweetwater/Kiowa/Nostrum"]
+  style Y26 fill:#5fdd9d
+  style Y27 fill:#ffd166
+  style Y28 fill:#ef476f,color:#fff
+```
+> 控制权干净（全 freehold + GPU 融资租赁自持），收入/折旧确认清晰。但 1,210MW/5GW 是 **2027–2028 前瞻目标，未经验证**；矿转 AI 的腾笼换鸟**减值是经常性**（FY23 $105m、FY25 $7m、9M FY26 $188m），非一次性；GPU 5y 寿命在 Blackwell 迭代下有进一步减值风险。
+
+---
+
+## 13. 非经营 / 盈余扰动项专题 + 剥离测试（详见 `16_nonoperating_distortion_deep_dive.md`）
+
+**核心洞察：headline 净利润被可转债/capped call/预付远期的公允价值波动严重扭曲——两个方向都扭曲。**
+
+**剥离测试（CARVE-OUT TEST，★ SEC，$ 千）**：
+
+| 期间 | 报告净利 | 剔除非经营扰动 | = 真实经营结果 |
+|---|---:|---|---:|
+| **FY2025** | **+$86,941** | − 未实现 FV 收益 $77,518 − 清偿收益 $9,093 + 加回减值 $7,223 | **≈ +$7,553**（~91% 是非现金幻觉）|
+| **9M FY26** | **−$18,622** | − 未实现 FV **收益** $533,942 → $(552,564)；+ 诱导费 $111,799 + 减值 $188,423 | **≈ −$252,342**（vs 报告经营亏损 $(426,331)）|
+
+```mermaid
+flowchart TB
+  subgraph FY25
+    A1["报告净利 +$86.9m"] -->|剔除非现金 FV +$77.5m 等| A2["真实经营 ≈ +$7.6m"]
+  end
+  subgraph 9M_FY26["9M FY26"]
+    B1["报告净亏 −$18.6m<br/>(被 +$533.9m FV 收益掩盖)"] -->|还原| B2["真实经营亏损 ≈ −$252m<br/>(经营口径 −$426m)"]
+  end
+  style A2 fill:#ffd166
+  style B2 fill:#ff6b6b,color:#fff
+```
+> $533.9m 非现金 FV 收益来自 2029/2030 预付远期 +$453.8m 与 capped call 净 +$93.7m——**全是 IREN 自家股价上涨的镜像**。**无比特币财库**（每日清算，BS=$0）。9M FY26 OCF 仍 +$289.3m（真现金，含递延收入 +$119.5m）。**结论：投资者必须看「经营亏损 + OCF + capex」，不能看净利润或 Adj EBITDA。**
+
+---
+
+## 14. 资本结构 + 到期墙（详见 `06_capital_structure.md` / `13_equity_options_vesting.md`）
+
+- **可转债 5 个系列**（票息 3.25% / 3.50% / 0% / 0.25% / 1.00%），转股价 **$13.64–$85.63**；3/31/26 账面 $3,687.8m；**post-May-2026 加 $3.0bn(1.00%, 2033) → 本金 ~$6.75bn**。
+- **到期墙后置**：2029 前 $0；2029 $233m｜2030 $212m｜2031 $1.0bn｜2032 $1.15bn｜**2033 $4.15bn**。
+
+```mermaid
+flowchart LR
+  Y29["2029<br/>$233m"] --- Y30["2030<br/>$212m"] --- Y31["2031<br/>$1.0bn"] --- Y32["2032<br/>$1.15bn"] --- Y33["2033<br/>$4.15bn ⚠️"]
+  style Y33 fill:#ff6b6b,color:#fff
+```
+- **Dec 2025 诱导转股**：以 $1.63bn 现金回购 $544.3m 2029/2030 债，诱导费 $111.8m。
+- **Capped calls**：strike $20.98–$120.18，限制稀释；3/31 衍生资产 $192m；Q3 未实现损失 $(23.7)m。
+- **NVIDIA 认股权**（10-Q Note 17）：30,000,000 股 @ **$70**，至多 **$2.1bn**，**随交付至多 600,000 颗 NVIDIA GPU 归属**，可行权至 2031-05-07；摊薄 **~7.7–8.4%**；行权价 $70 ≈ 3/31 股价 $34.28 的 2 倍。
+- **结论（H6 确认）**：高度依赖可转债 + 增发（9M 增 ~99M 股，SBC 占收入 28%）；2031–33 后置墙 $6.3bn；股价 $34 下可转债深度价外 → 再融资风险。
+
+---
+
+## 15. 行业横向对比（详见 `10_industry_compare.md`）
+
+**单位 $M（★ IREN / 各 peer SEC；估值倍数为 ◇ 或 待查）**：
+
+| 指标 | **IREN** | CoreWeave | Nebius | Applied Digital | Core Scientific | TeraWulf | Cipher |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| FY25 收入 | **501.0** | 5,131 | 529.8 | 144.4 | 319 | 224 | 224 |
+| 收入增速 YoY | **+167%** | +127%◇ | +351% | +198% | −22% | +73% | +56% |
+| Capex/收入 | **~2.2×**▽ | 2.01× | 7.67× | ~10×▽ | 2.29× | 2.18× | 2.18× |
+| 净债务 | **~4,540** | 15,068 | 净现金+425 | 净现金 | 57 | 3,662 | 3,662 |
+| 运营 MW | **~810** | n/a | ~300▽ | ~400▽ | ~590▽ | ~245 | ~330▽ |
+| AI 合同 backlog | **$13.1bn** | RPO~$30bn◇ | $1bn+ ARR◇ | ~$11bn◇ | ~$10bn◇ | ~$3.7bn◇ | multi-yr◇ |
+
+> peer 中位 FY25 收入 $277m，中位 Capex/收入 ~2.2×。
+**三点判断**：
+1. **Capex 不是异类，backlog-vs-收入差距才是**：IREN Capex/收入(~2.2×)正好是中位；真正的 standout 是 $13.1bn 合同 vs $501m 已确认收入（26×），季度 AI 收入仅 $33.6m。但此 gap 在转型同业里属**中段**（APLD 76×、CORZ 31×）——合理且必要，风险在**时点/通电**，不在花钱多少。
+2. **融资结构是 IREN 最差的一轴**：~$6.75bn 近乎纯可转债，convert 依赖度全组最高；CoreWeave 用合同现金流支撑的定期贷款，NBIS/HUT 轻杠杆。摊薄+再融资悬顶是 IREN 独有的负面。
+3. **转型曲线中后段，但 backlog 质量最佳**：AI 仅占收入 ~23%，落后 CORZ/APLD，与 WULF/CIFR 持平，领先纯矿企；但对手方质量最高（Microsoft + NVIDIA 直签 vs 同业经 Fluidstack/CoreWeave 转手）。
+
+---
+
+## 16. 关联方红旗扫描（详见 `07_related_parties.md`）
+
+| 红旗 | 说明 | 程度 |
+|---|---|---|
+| **NVIDIA 三重身份** | 客户 + 独家 GPU 供应商 + 未来股东（认股权随交付归属）= 循环 vendor financing | 🔴 |
+| **创始人控制权** | Roberts 兄弟经 15× B 类股 = **43.5% 投票权**（10-K 另处称 35.4%，~8pp 差距未对平），控股至 2033 | 🔴 |
+| **Co-CEO 薪酬** | 各 **$72.6m**（993:1），93% 权益；**2025-05 移除 PRSU 价格门槛（$20–$50）改为时间归属** | 🟡 |
+| 创始人减持（v1.2 已查实）| 两位 Co-CEO（Roberts 兄弟，经 Awassi Capital Trusts）**各**于 2025-09-05 卖 1,000,000 股（50 万 @$25.49 + 50 万 @$23.51）+ 2025-09-11 卖 1,000,000 股 @$33.131 ≈ **各 ~$58.6m**，各余 13,989,696 股。★ Form 4 | 🟡 |
+| 自我交易/关联借款 | **未发现**——RPT 卫生良好 | 🟢 |
+
+---
+
+## 17. 风险因素（详见 `08_risk_factors.md`，按重要性排序）
+
+1. **融资/再融资与摊薄**：~$6.75bn 可转债 + 持续增发；裸跑道 ~8.8 月；5GW 建设需 ~$10–12bn，远超当前流动性。
+2. **执行/交付**：1,210MW/5GW、150k–600k GPU 的通电与调试时点；任何延迟直接推迟收入 ramp。
+3. **客户集中**：两客户 + 同一园区；Microsoft 自身也是 hyperscaler（客户即潜在对手）。
+4. **比特币价格**：当前现金流主体仍是挖矿，BTC 跌价直接打击过渡期现金流（Q3 收入降即因币价 + 退役矿机）。
+5. **电力/电网**：ERCOT 大负荷接入审批、电价、curtailment。
+6. **治理/控制**：创始人 43.5% 控制 + 移除业绩门槛 + 分类董事会至 2032。
+7. **控制与审计史**：going-concern（FY24）+ 重大缺陷 + 重述 + 换审计师 = 治理/控制红旗簇（虽多已修复，仍需跟踪 KPMG 首份审计）。
+8. **NVIDIA 依赖与循环**：芯片供给、认股权稀释、对手方循环。
+
+---
+
+## 18. 我的论点（含反方观点）
+
+### 论点 1 — 这是「按已签约 ARR 定价、收入尚未 ramp」的高确信度 AI 基建期权，但全部价值押在 2026–2028 的完美执行上
+**证据**：① $13.1bn Microsoft+NVIDIA 合同是真实签署的 MDA（★8-K Item 1.01）；② 但 RPO 仅 $710.3m（非 $13.1bn），季度 AI 收入仅 $33.6m，差距 26×（◆）；③ 5GW secured power + 全 freehold 站点是真护城河（★10-K）。
+**反方**：「Microsoft+NVIDIA 背书 + 5GW 电力 = 稳了，ARR 会随通电兑现」。**我的反驳**：合同真，但「secured power ≠ delivered revenue」；RPO 才是法律口径的未来收入，只有 $0.71bn；执行+融资风险前置。
+
+### 论点 2 — GAAP headline 在两个方向都是幻觉，真实经营仍在亏损/勉强打平
+**证据**：① FY25 报告净利 +$86.9m 中 ~91% 是非现金 FV 收益，真实经营 ≈ +$7.6m（◆剥离测试）；② 9M FY26 报告净亏仅 $(18.6)m，却掩盖经营亏损 $(426)m（★）；③ 折旧不入 COGS，使分部毛利率虚高（★10-K）。
+**反方**：「Adj EBITDA $59.5m / 41% margin 说明单位经济好」。**我的反驳**：Adj EBITDA 加回了真实的 D&A、减值、SBC；硬件密集型公司应看 GAAP 经营利润 + OCF + capex。
+
+### 论点 3 — 融资与摊薄是约束性瓶颈，也是同业里最差的一轴；生存 = 持续资本市场准入
+**证据**：① ~$6.75bn 可转债（convert 依赖度全组最高，§15）；② 裸跑道 ~8.8 月、年化烧 ~$3.0bn（◆）；③ 负 APIC $(1.73bn)、9M 增 ~99M 股、NVIDIA 循环认股权（★）；④ 创始人控制 + 移除业绩门槛（★DEF 14A）。
+**反方**：「可转债票息 0–1%、后置到 2033；现金 $2.6bn + Microsoft 20% 预付 + GPU 融资足够」。**我的反驳**：$34 股价下可转债深度价外 → 若股价低迷即变再融资风险；建设需 $10–12bn，远超当前流动性。
+
+---
+
+## 19. 悬而未决问题（详见 `12_open_questions.md`，保留诚实）
+
+1. 单客户 AI 收入占比（FY2025 后合同，未披露明细）。
+2. RPO/递延收入未来 12 个月的转化节奏。
+3. Nostrum / Mirantis 的 PPA、商誉与并表结果（交易未完成，会计未定）。
+4. 43.5% vs 35.4% 投票权口径 ~8pp 差异的对平。
+5. ~~创始人 2025-09 精确减持数量~~ **（v1.2 已查实：各卖 2,000,000 股 ≈ 各 $58.6m，见 §16）**；是否 10b5-1 计划仍待查。
+6. ~$5.8bn Microsoft 相关 GPU(Dell) capex 的资金桥如何搭。
+7. NVIDIA $70 认股权的具体会计处理（负债 vs 权益、是否按 ASC 815 重估）。
+
+---
+
+## 20. 复盘附录
+
+- **数据来源索引**：核心 filing 链接见各节 ★；全量清单 `data/processed/IREN_filing_index.md`（168 份分类） + `data/processed/IREN_filings.csv`。
+- **filing 覆盖率**：财务/合同/治理/重述类核心 filing 100% 精读；月度更新 6-K（FY24）与 Form 3/4/13G 抽样登记（理由见 §2）。
+- **第一次读错并修正的点**：① 误以为「重述」是损益/资产错报 → 实为现金流重分类（零 P&L 影响），cross-check SEC 问询函原文纠正；② 误以为 NVIDIA 认股权在 5-14 的 8-K → 实在 10-Q Note 17（5-7 SPA），Agent C 纠正；③ 误读分部 67% 毛利为真实盈利 → 折旧不入 COGS，Agent D 纠正。
+- **跨表勾稽**：✅ CF 期末现金 = BS 现金；✅ 分部收入之和 = 合并收入；✅ 剥离测试与三表对平。
+
+---
+
+*（本报告为 Step 1–8 产出；通俗科普版见 `18_plain_explainer.md`，发布站见 `site/`——Step 9–10 进行中。）*
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

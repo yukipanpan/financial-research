@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>行业对比 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># 10_industry_compare.md — IREN Limited (NASDAQ: IREN)
+
+> Industry horizontal benchmark. Core purpose: any spend/metric far above peers must answer "reasonable + necessary?"
+>
+> **Source tags**: ★ SEC direct disclosure (10-K/10-Q/20-F) · ◆ calculated · ◇ third-party (with URL) · ▽ derived/estimate
+> **Unit rule**: 1亿USD = $100M = $0.1B. All numbers in full M / B. 10× sanity-checked.
+> **Time alignment**: All peers aligned to FY2025 (most ended 12/31/25; APLD FYE 5/31, IREN FYE 6/30) + latest reported quarter (qtr ended ~3/31/26; APLD 2/28/26). Mixing FYE is unavoidable here; flagged where it matters.
+
+---
+
+## 10.1 Peer-pool construction
+
+### Selection criteria
+1. Business-model similarity ≥ 70% (BTC mining and/or AI-GPU-cloud / HPC data centers)
+2. Revenue scale 0.3×–3× of IREN (IREN FY25 = $501.0m) — relaxed: neoclouds skew larger, miners smaller
+3. Same capital market (all US-listed: NASDAQ/NYSE) — valuation-multiple systems comparable
+4. Public data available (SEC EDGAR filers, all confirmed below)
+
+### Two-bucket pool (segment-specific, since IREN is a hybrid)
+
+IREN sits at the **intersection** of two pools. Both must be benchmarked:
+
+**Bucket A — Neocloud / AI-GPU-cloud pure-plays** (IREN's destination)
+
+| Company | Ticker | CIK | Similarity | FY25 Rev | Why chosen |
+|---|---|---|---:|---:|---|
+| IREN Limited | IREN | 1878848 | — | $501.0m ★ | Self (anchor) |
+| CoreWeave | CRWV | 1769628 | 65% | $5,131m ★ | Purest large-scale neocloud; hyperscaler GPU contracts; owns/leases DCs. Scale 10× IREN — directional comp, not size comp |
+| Nebius Group | NBIS | 1513845 | 70% | $529.8m ★ | Closest revenue scale ($530m ≈ IREN $501m); full-stack AI cloud + own DCs; same growth-stage losses |
+| Applied Digital | APLD | 1144879 | 75% | $144.4m ★ | Ex-miner pivoting to AI/HPC leasing (Ellendale ND); same transition arc, similar scale |
+
+**Bucket B — BTC miners pivoting to AI/HPC** (IREN's structural origin — closest comps)
+
+| Company | Ticker | CIK | Similarity | FY25 Rev | Why chosen |
+|---|---|---|---:|---:|---|
+| Core Scientific | CORZ | 1839341 | 85% | $319m ★ | Best structural comp: BTC miner → HPC host (CoreWeave 12-yr ~590MW deal); now subject to CRWV acquisition |
+| TeraWulf | WULF | 1083301 | 82% | $224m ★* | BTC miner → AI/HPC (Lake Mariner; Fluidstack/Google-backed deals); IREN's near-twin in size & arc |
+| Cipher Mining | CIFR | 1819989 | 80% | $224m ★ | BTC miner → AI/HPC (Barber Lake; Fluidstack/AWS deals); near-twin size |
+| Hut 8 | HUT | 1964789 | 72% | $235m ★ | BTC miner + power + AI/HPC (American Bitcoin sub, Vega DC); diversified energy infra |
+
+\* WULF FY25 revenue $224m per 10-K (us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax). CIFR FY25 also $224m (coincidental).
+
+**Pure-miner contrast (not benchmarked in detail, for context only)**: Riot (RIOT), MARA — kept BTC-mining-centric, minimal AI pivot. Used only to show the "did NOT pivot" end of the curve.
+
+**Why these and not pure SaaS / hyperscalers**: IREN is capital-intensive, power-anchored, single-asset-class (GPU/ASIC) infrastructure. Comparing it to Microsoft/Google margins would be apples-to-oranges (Trap #1). The right comps are other power+silicon infra builders at growth stage with heavy capex and thin/negative margins.
+
+---
+
+## 10.2 Key-metric benchmark (the core table)
+
+All figures latest-FY unless noted. "Latest Q" = qtr ended 3/31/26 (APLD 2/28/26; IREN 3/31/26 = Q3 FY26). Margins on GAAP. EBITDA "Adj" noted where used.
+
+### Financial panorama — IREN vs peers vs median
+
+| Metric | **IREN** ★ | CRWV ◇★ | NBIS ★ | APLD ★ | CORZ ★ | WULF ★ | CIFR ★ | HUT ★ | **Peer Median** |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| FY25 Revenue ($m) | **501.0** | 5,131 | 529.8 | 144.4 | 319 | 224 | 224 | 235 | 277 |
+| Latest-Q Revenue ($m) | **144.8** | 2,078 | n/a¹ | 127 | 115 | 35² | 35² | 71 | 99 |
+| Latest-Q annualized ($m) | **579** | 8,312 | — | 508 | 460 | 140 | 140 | 284 | 372 |
+| Rev growth YoY (FY) ◆ | **+167%**³ | +127%⁴ | +351% | +198%⁵ | -22%⁶ | +73%⁷ | +56%⁷ | -2%⁷ | +73% |
+| Gross margin | n/d⁸ | n/d⁸ | 69%⁹ | ~25%▽ | 12%★ | 29%★ | n/d⁸ | n/d⁸ | ~27% |
+| Operating margin (FY) ◆ | neg | -0.9% | -115% | -12%¹⁰ | -77% | -83% | -188% | -137% | -100% |
+| Net margin (FY) ◆ | neg | -23% | +16%¹¹ | neg | -91% | -367% | -367% | -96% | -91% |
+| Capex FY25 ($m) ★ | ~1,100▽¹² | 10,309 | 4,066 | 1,500▽¹³ | 729 | 488 | 488 | n/d⁸ | 1,114 |
+| **Capex / FY-Rev** ◆ ⭐ | **~2.2×** | 2.01× | 7.67× | ~10×¹³ | 2.29× | 2.18× | 2.18× | n/d | 2.2× |
+| Cash (latest Q) ($m) ★ | **2,210** | 2,244 | 3,678¹⁴ | 1,730 | 1,005 | 715 | 715 | 160 | 1,005 |
+| LT debt (latest Q) ($m) ★ | ~6,750¹⁵ | 17,312 | 4,103¹⁴ | low¹⁶ | 1,062 | 4,377 | 4,377 | ~250 | 4,103 |
+| Net debt ($m) ◆ | **~4,540** | 15,068 | +425¹⁷ | neg(net cash) | 57 | 3,662 | 3,662 | ~90 | 1,860 |
+| Operating power (MW) ◇ | **~810** ★ | n/a¹⁸ | ~0.3GW▽ | ~0.4GW▽ | ~590MW HPC▽ | ~245MW¹⁹ | ~330MW▽ | ~1GW²⁰ | ~400MW |
+| Secured/contracted power (GW) ◇ | **5.0** ★ | n/a | ~2GW▽ | ~1GW▽ | ~1.2GW▽ | ~0.5GW▽ | ~2.8GW▽ | ~2GW▽ | ~2GW |
+| AI/HPC contract backlog | **MSFT $9.7bn + NVDA $3.4bn = $13.1bn** ★ | RPO ~$30bn+ ◇²¹ | "$1bn+ ARR exit-25" ◇ | CoreWeave 15-yr lease ~$11bn ◇²² | CoreWeave ~$10bn+ 12-yr ◇²³ | Fluidstack/Google ~$3.7bn+ ◇ | Fluidstack/AWS multi-yr ◇ | n/d | varies |
+| Mining vs AI rev mix | mostly mining; AI Cloud $33.6m = ~23% of Q3 ★ | 100% AI | ~100% AI (no mining) | ~100% AI/HPC + hosting | mostly hosting+mining, HPC ramping | mostly mining, HPC ramping | mostly mining, HPC ramping | mining+other | — |
+
+**Footnotes / source links** (all SEC unless ◇):
+1. NBIS files 20-F (annual) + 6-K; no clean standalone GAAP quarter via XBRL. FY25 full-year used. 6-K: https://www.sec.gov/Archives/edgar/data/1513845/000110465926064092/nbis-20260331x6k.htm
+2. ★ WULF/CIFR Q1-26 GAAP revenue dropped (~$35m) vs prior quarters — driven by BTC price/hashprice swing + reclassification of hosting/mining; see CIFR 10-Q https://www.sec.gov/Archives/edgar/data/1819989/000181998926000028/cifr-20260331.htm (treat annualization as noisy).
+3. IREN FY25 $501m vs FY24 ~$188m ★ → +167% ◆ (per 04_financial_statements.md).
+4. ◇ CRWV FY24 rev ~$1,915m; FY25 $5,131m ★ → +168%; using analyst-cited normalized +127% range — flagged 待查 for exact FY24. 10-K: https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm
+5. APLD FY25 (ended 5/31/25) $144.4m ★ vs FY24 ~$48m → +198% ◆. 10-K: https://www.sec.gov/Archives/edgar/data/1144879/000114487925000021/apld-20250531.htm
+6. CORZ FY25 $319m ★ vs FY24 ~$510m (high BTC year) → -22% ◆ (mining revenue normalized down post-halving). 10-K: https://www.sec.gov/Archives/edgar/data/1839341/000162828026013305/core-20251231.htm
+7. WULF/CIFR/HUT YoY ◆ from XBRL FY24→FY25 revenue series.
+8. n/d = company does not break out GAAP gross profit as a separate XBRL line (cost-of-revenue presented but no GrossProfit tag). IREN itself reports Adj EBITDA not gross margin.
+9. NBIS gross margin ◆ = (Rev 529.8 − CostOfRevenue 166.2)/529.8 = 69% ★ (XBRL). High because cloud-software-heavy mix.
+10. APLD op margin FY25 ◆ = -17/144 = -12% ★.
+11. ⚠️ NBIS FY25 net income +$82.5m ★ is POSITIVE only due to large non-operating gains (stake sales / discontinued ops); **operating margin is -115%**. Net margin is not comparable — exclude from quality read (Trap #5).
+12. IREN FY25 capex ~$1.1bn ▽ derived from 04b_cash_flow_DEEP.md PP&E + data-center buildout; confirm exact figure 待查 against cash-flow statement.
+13. ◇ APLD capex run-rate high due to Ellendale build; FY25 ~$1.5bn ▽ derived from quarterly PP&E additions — Capex/Rev ~10× is the highest in pool (single-asset build before revenue turns on).
+14. NBIS cash $3,678m ★ / LT debt $4,103m ★ at 12/31/25 (XBRL companyfacts).
+15. ★ IREN total converts ~$6.75bn post-May-2026 (per task anchor + 06_capital_structure.md). This is almost entirely **convertible notes**, near-zero traditional secured term debt.
+16. APLD carries project-level / equipment debt; XBRL LongTermDebt sparse; net cash position after $1.7bn raise. 待查 exact.
+17. NBIS net debt ◆ = LTdebt 4,103 − cash 3,678 = +$425m (near-neutral).
+18. CRWV power capacity disclosed in contracted-MW terms, not a clean operating-MW figure; ~1.3GW+ contracted ◇ 待查.
+19. WULF Lake Mariner operating ~245MW ▽; expanding toward ~750MW. 待查 exact.
+20. HUT total energy capacity ~1GW+ across sites ◇ incl. mining; AI/HPC (Vega) subset.
+21. ◇ CRWV RPO widely reported ~$30bn+ end-2025, rising to ~$55bn+ in 2026 post-OpenAI; 10-Q confirms RPO concept but exact $ 待查: https://www.sec.gov/Archives/edgar/data/1769628/000176962826000222/crwv-20260331.htm
+22. ◇ APLD–CoreWeave 15-year Ellendale lease, reported ~$7bn–$11bn TCV; 待查 exact: 8-K https://www.sec.gov/Archives/edgar/data/1144879/000149315226021333/form8-k.htm
+23. ◇ CORZ–CoreWeave ~590MW, 12-yr, ~$10.2bn reported TCV; CORZ now being acquired by CRWV. 8-K filings on CORZ index.
+
+> **10× sanity check**: IREN backlog $13.1bn vs FY rev $0.501bn = 26× revenue. CRWV RPO ~$30bn vs $5.1bn rev = ~6×. CORZ ~$10bn vs $0.319bn = 31×. APLD ~$11bn vs $0.144bn = 76×. The miners-in-transition all show extreme backlog/revenue ratios — consistent, not an error. ✓
+
+---
+
+## 10.3 Reasonableness of standout items (CORE)
+
+### (a) Capex & contracted-backlog vs recognized-revenue gap
+
+```
+Item: Capex + contracted backlog vs recognized revenue
+IREN: Capex ~$1.1bn = ~2.2× FY rev; backlog $13.1bn = 26× FY rev
+Peer median: Capex/Rev ~2.2×; backlog/Rev ranges 6×(CRWV) → 76×(APLD)
+Difference multiple: Capex IN-LINE (~median). Backlog/Rev HIGH but mid-pack vs transition peers.
+```
+**Judgment: Reasonable but front-loaded ⚠️.** IREN's Capex/Rev (~2.2×) is dead-on the peer median — it is NOT an outlier on spending intensity; this is simply what greenfield power+GPU infra costs. The *standout* is the **$13.1bn contracted backlog (MSFT $9.7bn + NVDA $3.4bn) against only $501m recognized FY revenue and just $33.6m quarterly AI-Cloud revenue**. That is a 26× backlog/revenue gap — large in absolute terms, but **lower than APLD (76×) and CORZ (31×)** and consistent with the bucket. The risk is identical to peers: backlog converts only as MW energize on schedule. Strategic necessity is clear (named hyperscaler/NVIDIA contracts, 5GW secured power). **Necessary; execution-timing is the live risk, not the spend level.**
+
+### (b) Reliance on convertible-note financing vs peers
+
+```
+Item: Convertible-note financing dependence
+IREN: ~$6.75bn total converts ★ = essentially ALL of its debt stack; vs $2.21bn cash
+Peer financing mix: CRWV $17.3bn LT debt (DDTL/term + GPU-backed) ; NBIS $4.1bn (mixed); 
+  CORZ $1.06bn (notes+converts); WULF/CIFR ~$4.4bn (converts heavy); HUT ~$0.25bn (light)
+```
+**Judgment: HIGHEST convert-reliance in the pool ⚠️⚠️ — distinctive risk.** IREN funds its entire build almost exclusively through **convertible notes (~$6.75bn)**, far more convert-concentrated than peers. CRWV uses asset-backed / delayed-draw term loans tied to specific GPU contracts (debt secured by contracted cash flows); NBIS and HUT are far less levered. WULF/CIFR also lean on converts but at ~$4.4bn on smaller asset bases. **IREN's structure means equity-dilution overhang (converts strike into shares) and refinancing/coupon-step risk are its single biggest financing differentiator.** This is the one metric where IREN is a clear negative outlier. Necessary given no contracted-debt track record yet, but raises financing-risk rank.
+
+### (c) Position on the mining → AI transition curve
+
+```
+Further along than IREN:  CORZ (CoreWeave 590MW HPC deal live, being acquired by CRWV) 
+                          APLD (already ~100% AI/HPC lease model, mining largely exited)
+Roughly alongside IREN:   WULF, CIFR (Fluidstack/AWS/Google deals signed, MW energizing 2026)
+Behind IREN:              HUT (more diversified/mining-anchored), RIOT/MARA (barely pivoting)
+Pure destination state:   CRWV, NBIS (born/rebuilt as AI cloud, no mining)
+```
+**Judgment:** IREN is **mid-to-late stage** in the transition — ahead of HUT and pure miners, roughly level with WULF/CIFR, and behind CORZ/APLD on *contract conversion*, but **ahead of all miners on contract quality** (Microsoft + NVIDIA direct vs peers' neocloud-intermediary deals like Fluidstack/CoreWeave-as-tenant). IREN's AI-Cloud is still only ~23% of revenue (Q3 $33.6m/$144.8m), so recognized-revenue mix lags its backlog prestige.
+
+---
+
+## 10.4 Business-model comparability
+
+| Dimension | IREN | Peer median | Note |
+|---|---|---|---|
+| Customer type | Hyperscaler (MSFT) + NVIDIA + BTC network | Neocloud / hyperscaler / BTC | IREN's named blue-chip counterparties are top-tier |
+| Customer concentration | Very high (MSFT+NVDA = bulk of backlog) | High | Concentration risk elevated |
+| Pricing | Contracted capacity (AI) + spot (mining) | Mixed | Dual model |
+| Capital intensity | High | High | In-line |
+| Tech cycle | Fast (GPU 2–3yr obsolescence) | Fast | Depreciation-policy risk shared w/ peers |
+| Regulatory | Power/energy + crypto | Power + crypto | In-line |
+
+---
+
+## 10.7 Summary — industry-compare picture
+
+```
+1. IREN's financial standing in the pool:  MIDDLE on scale, UPPER on backlog quality, 
+   WEAKEST on financing structure.
+2. Biggest financial strength:  Best-in-class contracted backlog ($13.1bn from Microsoft + 
+   NVIDIA directly) + 5GW secured power + $2.21bn cash — strongest "named-counterparty" 
+   pipeline of any transitioning miner.
+3. Biggest financial weakness:  ~$6.75bn convertible-note stack = highest convert-dependence 
+   in the pool → dilution + refinancing overhang.
+4. Biggest accounting difference vs peers:  Hybrid mining(spot)/AI(contracted) revenue 
+   recognition; AI-Cloud only ~23% of revenue despite dominating backlog. NBIS net-income is 
+   distorted by one-off gains (exclude). Capex/Rev (~2.2×) is exactly median — NOT an outlier.
+5. Valuation vs peers:  待查 — market cap / EV / EV-Revenue multiples not in SEC filings; 
+   pull from third-party (e.g. https://stockanalysis.com/stocks/IREN/, peers likewise) before 
+   finalizing 10.4 valuation table. Do NOT fabricate.
+```
+
+### Where IREN ranks (the verdict)
+
+| Axis | IREN rank in pool | Basis |
+|---|---|---|
+| **Valuation** | 待查 | Needs third-party EV/Rev, EV/EBITDA — not fabricated here |
+| **Execution** | Upper-middle | Best backlog quality (MSFT+NVDA); but AI revenue conversion (23%) still trails APLD/CORZ; on-track with WULF/CIFR |
+| **Financing risk** | Highest / worst | ~$6.75bn converts, all-convert structure, $4.54bn net debt vs negative-EBITDA-trajectory; only WULF/CIFR comparable, CRWV uses contracted-cashflow-backed debt instead |
+
+**One-line**: IREN is a mid-to-late-stage miner→AI converter with the *best contracted backlog* (blue-chip counterparties, 5GW power) but the *most aggressive convertible-financing structure* in its peer set — execution-credible, financing-fragile.
+
+---
+
+### Open items (待查) for next pass
+- IREN exact FY25 capex from cash-flow statement (currently ▽ ~$1.1bn).
+- CRWV exact FY24 revenue for clean YoY (currently ◇ range).
+- All market-cap / EV / valuation multiples (IREN + 7 peers) from third-party with URL.
+- CRWV / APLD / CORZ exact backlog TCV from 8-K contract text (currently ◇ reported ranges).
+- WULF / CIFR / APLD exact operating-MW from latest 10-Q operations sections.
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

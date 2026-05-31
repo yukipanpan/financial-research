@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>现金流深挖 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># 04b_cash_flow_DEEP.md — IREN Limited 现金流深度档案
+
+> CIK 0001878848 · FY ends June 30 · $ thousands（正文换算 M/B）
+> 来源标签：★ SEC直接披露 / ◆ 公式计算 / ◇ 第三方 / ▽ 推算
+> 出处：10-K FY2025 CF + 10-Q Q3FY26 (9M) CF（本地 raw/）
+
+---
+
+## 0. 三段现金流总览（$M）
+
+| 现金流类型 | FY2024 ★ | FY2025 ★ | 9M FY26 ★ | 备注 |
+|---|---:|---:|---:|---|
+| Operating CF (OCF) | 52.2 | 245.9 | 289.3 | 经营产出（含非现金大额加回）|
+| Investing CF | (498.5) | (1,380.5) | (2,608.9) | 重资本扩张 |
+| Financing CF | 782.6 | 1,294.7 | 3,968.8 | 融资填洞（极度依赖）|
+| **净增现金** | 336.4 | 160.1 | 1,649.2 | = 三者加总 ✓ |
+| 期初现金 | 68.9 | 404.6 | 564.5 | |
+| 期末现金 | 404.6 | 564.5 | **2,213.3** | |
+
+### 三个核心判断（红绿灯）
+
+```
+□ OCF 是否覆盖 Capex？   ❌ 否（9M FY26：OCF $289.3M vs Capex $2.6B）→ 严重不能自给
+□ Financing CF 是否 >0？ ✅ 是（融资为主，9M +$3.97B）→ 靠资本市场输血
+□ FCF 是否 >0？          ❌ 否（9M FY26 FCF ≈ −$2.32B）→ 烧钱
+```
+
+---
+
+# ① Operating Cash Flow 深度拆解
+
+## 1.1 OCF 从 Net Income 推导（间接法，$M）★
+
+| 项目 | 9M FY26 | 9M FY25 | FY2025 | 来源 |
+|---|---:|---:|---:|---|
+| **Net income (loss)** | (18.6) | (89.7) | 86.9 | ★ |
+| + Depreciation & amortization | 305.6 | 117.3 | 181.1 | ★ |
+| + Impairment of assets | 188.4 | 6.9 | 7.2 | ★ |
+| + Stock-based compensation | 162.1 | 23.9 | 42.6 | ★ |
+| + Debt conversion inducement expense | 111.8 | — | — | ★（非现金/诱导转股）|
+| + Unrealized (gain) loss fin. instr | (533.9) | 70.2 | (77.5) | ★（非现金，减项）|
+| + Realized loss / FV held-for-sale / FX / 其他 | ~24.1 | ~13.0 | ~(0.6) | ★ |
+| ─ 营运资本变动 ─ | | | | |
+| Δ Accounts receivable | (92.4) | (8.2) | (9.7) | ★（AI Cloud 应收↑，消耗现金）|
+| Δ Accounts payable & accrued | 6.9 | 10.2 | — | ★ |
+| Δ Deferred revenue | +119.5 | (0.9) | — | ★（客户预付↑，释放现金）|
+| Δ Other liabilities | 44.8 | 10.0 | — | ★ |
+| Δ Prepayments & deposits | (32.0) | (25.7) | — | ★ |
+| **= OCF** | **289.3** | **142.7** | **245.9** | ★ |
+
+### 关键洞察
+
+```
+□ OCF($289.3M) vs Net loss($-18.6M) 差异 ≈ +$308M
+  几乎全部来自非现金加回：D&A 305.6 + Impairment 188.4 + SBC 162.1 + 诱导转股 111.8
+  抵消掉 unrealized gain −533.9（非现金减项）+ AR −92.4。
+  → OCF 为正完全是"折旧+减值+SBC 在撑"，不是经营造血。
+
+□ 营运资本：Deferred revenue +$119.5M 释放现金（AI Cloud 客户预付，含微软 20% 预付）
+  vs AR −$92.4M 消耗现金（AI Cloud 应收账款）→ 基本对冲。
+
+□ 利润质量：OCF/Net income 因净利接近 0 而失真。
+  更有意义的是：Non-cash 加回(D&A+减值+SBC+诱导) = $767.9M 远超 OCF $289.3M
+  → 这家公司本质上是"非现金项目在撑现金流表"，真实经营造血能力弱。
+```
+
+---
+
+# ② Investing Cash Flow 深度拆解
+
+## 2.1 投资 CF 各项（9M FY26，$M）★
+
+| 项目 | 9M FY26 | 9M FY25 | FY2025 | 来源 |
+|---|---:|---:|---:|---|
+| Payments for PP&E (net of hardware) | (1,669.2) | (389.3) | (573.5) | ★ |
+| Payments for computer hardware (GPU/ASIC) | (685.8) | (625.4) | (799.2) | ★ |
+| Payments for intangible assets | (107.6) | — | — | ★ |
+| Payments for other prepayments & deposits | (159.1) | (6.0) | (19.5) | ★ |
+| Proceeds from disposal of PP&E | 22.8 | 10.0 | 11.2 | ★ |
+| Deposits paid for ROU assets | (10.2) | — | — | ★ |
+| **Net Investing CF** | **(2,608.9)** | **(1,010.3)** | **(1,380.5)** | ★ |
+
+### Capex 按用途拆（9M FY26）
+
+| 用途 | 金额 ($M) | 占总 Capex % | 说明 |
+|---|---:|---:|---|
+| PP&E（数据中心/电力/站点，含 AI 液冷建设）| 1,669.2 | 65.7% | ★ Childress Horizon 等 |
+| 计算机硬件（GPU + ASIC 矿机）| 685.8 | 27.0% | ★ AI Cloud GPU 主体 |
+| 无形资产 | 107.6 | 4.2% | ★ |
+| 预付款/押金 | 159.1 | 6.3% | ★ |
+| **核心 Capex 合计** | **~2,542.6** | 100% | ◆ |
+
+### ⚠️ 关键警觉点
+
+```
+□ Capitalized Interest：可转债 $3.30B 融资，部分利息可能资本化进在建数据中心 ▽
+  （需查 PP&E 注与利息资本化政策——本档标待查）
+□ Capex / D&A = 2,542.6 / 305.6 ≈ 8.3× → 极端重资本扩张期（远超稳态 1.0×）
+□ 大额 M&A：无传统并购；扩张全为自建 capex
+□ 公司不严格按段拆 capex：$1.67B PP&E 含为 AI Cloud 建的数据中心 ▽
+```
+
+---
+
+# ③ Financing Cash Flow 深度拆解 ⭐
+
+## 3.1 融资 CF 全项目（9M FY26，$M）★
+
+| 项目 | 9M FY26 | 流入/流出 | 来源 |
+|---|---:|---|---|
+| Proceeds from convertible notes | 3,299.6 | 流入 | ★ |
+| Proceeds from issuance of Ordinary shares | 2,630.8 | 流入 | ★ |
+| Proceeds from exercise of options | 6.6 | 流入 | ★ |
+| Proceeds from loan funded shares | 0.7 | 流入 | ★ |
+| Payment for induced conversion of conv. notes | (1,623.5) | 流出 | ★ |
+| Payment of capped call transactions | (252.3) | 流出 | ★ |
+| Payment of borrowing transaction costs | (51.5) | 流出 | ★ |
+| Payment of offering costs (share issuance) | (24.0) | 流出 | ★ |
+| Repayment of lease liabilities | (17.6) | 流出 | ★ |
+| **Net Financing CF** | **3,968.8** | 流入 | ★ |
+
+### 加总验证 ✓
+3,299.6 + 2,630.8 + 6.6 + 0.7 − 1,623.5 − 252.3 − 51.5 − 24.0 − 17.6 = **3,968.8** ✓ 对上。
+
+## 3.2 来源 vs 用途分类
+
+### 🔵 流入（总流入 ≈ $5,937.7M）
+
+| 来源 | 金额 ($M) | 占总流入 % | 观察 |
+|---|---:|---:|---|
+| 🥇 可转债 | 3,299.6 | 55.6% | 债务，稀释隐性（转股）+ 利息 |
+| 🥈 发行普通股 | 2,630.8 | 44.3% | 直接稀释（股数 +32%）|
+| 其他（期权/loan shares）| 7.3 | 0.1% | |
+
+### 🔴 流出（总流出 ≈ $1,968.9M）
+
+| 用途 | 金额 ($M) | 占总流出 % | 观察 |
+|---|---:|---:|---|
+| 🥇 诱导转股付款 | 1,623.5 | 82.5% | 加速可转债转股，付现金诱导 |
+| 🥈 Capped call | 252.3 | 12.8% | 对冲转股稀释 |
+| 借款成本/发行成本 | 75.5 | 3.8% | |
+| 偿还租赁 | 17.6 | 0.9% | |
+
+```
+最大单笔流入：可转债 $3,299.6M
+最大单笔流出：诱导转股 $1,623.5M（把旧可转债换成股，付现金诱导）
+净流量 = 5,937.7 − 1,968.9 = $3,968.8M
+```
+
+## 3.3 ⚠️ 流量 vs 存量
+
+```
+✅ CF 流量：9M FY26 可转债现金流入 +$3,299.6M（当期提取）
+✅ BS 存量：3/31/26 可转债余额 $3,687.8M（时点，含早期累积 + 诱导转股后净额）
+   期间变化 ΔBS = 3,687.8 − 962.8(6/30/25) = +$2,725.0M（与诱导转股/转股抵消有关，≠ 现金流入额）
+```
+
+---
+
+# ④ FCF 真实烧钱计算
+
+## 4.1 FCF（9M FY26，$M）
+
+| FCF 定义 | 公式 | 金额 | 评论 |
+|---|---|---:|---|
+| **FCF（基础版）** | OCF − Capex(含硬件/无形) | 289.3 − 2,542.6 = **(2,253.3)** | 严重负 |
+| FCF（仅 PP&E+硬件）| 289.3 − 2,355.0 | (2,065.7) | 仍深度负 |
+
+## 4.2 跑道计算
+
+```
+现金 + 等价物 (3/31/26) = $2,213.3M ★
+（8-K 另披露 4/30/26 unaudited preliminary 现金更高 — 持续融资中）
+9M FY26 FCF 烧速 ≈ −$2,253M / 9 月 ≈ −$250M/月 ≈ −$3.0B/年（▽ 年化，capex 高度前置不线性）
+
+裸跑道（现金 / 烧速）≈ 2,213 / 250 ≈ 8.8 个月（若不再融资且 capex 维持）
+但实际公司持续高频融资（可转债 + ATM 发股），跑道由"再融资能力"决定，不由现金存量决定。
+→ 极度依赖资本市场；BTC 价格 + 股价 + 信用利差任一恶化都会卡住扩张。
+```
+
+---
+
+# ⑤ 跨表勾稽 ✓
+
+```
+✅ CF 期末现金 $2,213,274K = BS 现金 $2,213,274K（3/31/26）完全一致
+✅ OCF 289,326 + ICF (2,608,931) + FCF 3,968,769 = 1,649,164 = 净增现金 ✓
+✅ Net income (IS 9M) (18,622) = Net income (CF 起点) (18,622) ✓
+```
+
+---
+
+# 📝 现金流总结
+
+```
+1. 钱从哪儿来？
+   🥇 可转债 $3,299.6M（占流入 55.6%）
+   🥈 发行普通股 $2,630.8M（占流入 44.3%，股数 +32% 稀释）
+   🥉 期权行权等 $7.3M
+
+2. 钱去哪儿了？
+   🔥 Capex $2,542.6M（PP&E 1,669.2 + GPU/硬件 685.8 + 无形 107.6）— 建 AI 数据中心
+   🔥 诱导转股付款 $1,623.5M
+   🔥 Capped call $252.3M
+
+3. 现金质量：
+   - OCF 为正($289.3M)但靠 D&A+减值+SBC+诱导转股 $767.9M 非现金加回撑起
+   - FCF = −$2,253M（9M），年化约 −$3.0B，深度烧钱
+   - 裸跑道 ~8.8 个月；实际靠持续再融资续命
+
+4. 警觉点：
+   □ Capitalized interest：可转债利息是否部分资本化进在建数据中心 — 待查 ▽
+   □ 股权+可转债 / 总融资 ≈ 100%（无内生现金）→ 稀释速度快
+   □ Additional paid-in capital 变负 $(1.73B)（capped call + 诱导转股会计）— 异常，需专题
+   □ CF vs BS 已对上 ✓
+
+5. 关键判断：
+   - 能否自给自足？❌ 否。OCF 仅覆盖 capex 的 ~11%。
+   - 靠什么填洞？可转债 + ATM 发股，融资额是 capex 的 1.56×。
+   - 多久必须再融资？已在持续融资；任何一次资本市场关门都会立即卡住扩张节奏。
+```
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

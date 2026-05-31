@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>业务地图 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># 02_business_map.md — IREN Limited 业务地图
+
+> CIK 0001878848 · NASDAQ: IREN · FY ends June 30
+> 来源：FY2025 10-K + 10-Q Q1/Q2/Q3 FY26 + 8-K Q3FY26 earnings release（本地 raw/）
+
+## 两个 reportable segments（公司官方口径）★
+
+```
+IREN Limited
+├── 业务一：Bitcoin Mining（比特币挖矿）          ← 现金牛，但收入正在崩塌（退潮中）
+│     · 自营 ASIC 矿机，垂直整合：自建电力 + 数据中心
+│     · 主力站点：Childress (TX), Canal Flats / Prince George / MacKenzie (BC, Canada)
+│     · FY25 收入 $484.6M（占总收入 96.7%）★
+│     · Q3FY26 收入已降至 $111.2M（环比 −33.6%）★
+│
+└── 业务二：AI Cloud Services（GPU 云 / HPC）      ← 增长引擎，但绝对规模仍极小
+      · NVIDIA GPU 集群对外出租（GPUaaS），液冷数据中心
+      · 关键合同：微软 $9.7bn（19个月起、5年期，截至3/31/26 已交付 tranche=NIL）、
+        NVIDIA $3.4bn（5年、Blackwell）、Prince George GPU 部署
+      · FY25 收入 $16.4M（占总收入 3.3%）★
+      · Q3FY26 收入 $33.6M（环比 +94.4%，但只占总收入 23.2%）★
+```
+
+## 收入占比演变（转型可视化，$M）★
+
+| 期间 | Mining | AI Cloud | AI Cloud 占比 | 总收入 |
+|---|---:|---:|---:|---:|
+| FY2023 | 75.5 | 0.0 | 0.0% | 75.5 |
+| FY2024 | 184.1 | 3.1 | 1.7% | 187.2 |
+| FY2025 | 484.6 | 16.4 | 3.3% | 501.0 |
+| Q1FY26 | 232.9 | 7.3 | 3.1% | 240.3 |
+| Q2FY26 | 167.4 | 17.3 | 9.4% | 184.7 |
+| Q3FY26 | 111.2 | 33.6 | **23.2%** | 144.8 |
+
+**判断**：账面上 IREN 今天（Q3FY26）仍是 **77% 比特币挖矿公司**。AI Cloud 占比刚过 23%，且增长还赶不上挖矿收入下滑的速度 → 总收入连续两季环比下滑。管理层叙事（$9.7bn / $3.4bn / $3.1bn ARR）是对 **CY2026–2028 的预期**，与当期报表脱节约 1–2 个量级。
+
+详细分段损益/成本/确认逻辑见 `02_business_segments_DEEP.md`。
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

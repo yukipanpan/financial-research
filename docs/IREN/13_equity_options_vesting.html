@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>股权期权 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># IREN Limited — 13 Equity / Options / Vesting
+
+> Agent C deliverable. Sources: 10-Q (Mar 31 2026), 10-K FY2025, DEF 14A (Oct 6 2025), 8-Ks.
+> Legend: ★ primary · ◆ derived · ◇ secondary · ▽ estimate. Unit rule: 1亿USD=$100M=$0.1B.
+
+---
+
+## 0. Capital structure overview
+
+### Share classes (★ 10-Q Note 17 / BS)
+| Class | Votes/share | Issued & outstanding | Note |
+|---|---:|---:|---|
+| Ordinary shares (no par) | 1 | **340,979,966** (Mar 31 26); **357,378,674** (Apr 30 26) | NASDAQ: IREN |
+| B Class shares (no par) | **15** | **2** (1 per Co-CEO) | Founder super-voting; sunset Nov 17 2033 |
+
+- June 30 2025: 258,103,209 ordinary shares (incl. loan-funded). **+99M shares in 9 months** via ATM, equity offering, converts repurchase, RSU/options.
+- No authorized-share limit; Australian law → no par value. ★
+
+### Voting concentration (★ DEF 14A, as of Aug 31 2025)
+| Holder | Ordinary % | B Class % | Total voting power |
+|---|---:|---:|---:|
+| Daniel Roberts | 2.3% | 50.0% | **21.8%** |
+| William Roberts | 2.3% | 50.0% | **21.8%** |
+| All directors & officers (group) | 4.6% | 100% | **43.5%** |
+| Principal (>5%) shareholders | None disclosed | | |
+
+→ Founders ~43.5% combined = **blocking minority / practical control**, not >50%. Dual-class. Not a "controlled company".
+
+### Convertible / equity-linked instruments (potential dilution)
+| Instrument | Underlying shares | Conv./exercise price | Source |
+|---|---:|---:|---|
+| 2030 Notes | ~12.6M | $16.81 | ★ |
+| 2029 Notes | ~17.1M | $13.64 | ★ |
+| 2031 Notes | ~11.7M | $85.63 | ★ |
+| 2032 Notes | ~22.4M | $51.40 | ★ |
+| 2033 Notes | ~22.4M | $51.40 | ★ |
+| 2033B Notes (post-Q $3.0B) | ~41.1M | $73.07 | ★ 8-K May-14 |
+| **NVIDIA Investment Right** | **30,000,000** | **$70.00** | ★ 10-Q Note 17 |
+| Capped calls | offset (reduce dilution) | caps $82–120 | ★ |
+
+---
+
+## ① The NVIDIA 30M-share $70 Investment Right ⭐ (★ 10-Q Note 17, 8-K context)
+
+| Term | Detail |
+|---|---|
+| Instrument | "Investment Rights" (warrant-like) via Securities Purchase Agreement, **May 7, 2026** |
+| Counterparty | NVIDIA Corporation (the "Purchaser") |
+| Shares | **30,000,000 ordinary shares** (subject to adjustment) |
+| Exercise price | **$70.00 per share** |
+| Max gross proceeds to IREN | **up to ~$2.1 billion** (if fully exercised) |
+| Vesting | **In tranches, vesting on delivery of up to 600,000 NVIDIA GPUs** |
+| Exercisability | Any time on/after issue date, through **May 7, 2031** (5-yr) |
+| Lock-up | 6-month transfer restriction on shares per vested tranche |
+| Exemption | Private placement, Sec 4(a)(2) / Reg D Rule 506 |
+
+**Dilution if fully exercised:** 30.0M new shares ÷ (357.4M Apr-30 + 30.0M) = **+8.4% of post-issue ordinary shares** (◆). On basic Mar-31 base of 341.0M: 30/341 = **+8.8%** (◆).
+- IREN receives **$2.1B cash** in exchange — accretive to cash, dilutive to ownership. Strike $70 vs Mar-31 price $34.28 → **~2× above market**, so only exercised if shares roughly double (good for existing holders) AND NVIDIA hits 600k-GPU delivery volume.
+- **Substance:** NVIDIA gets equity upside calibrated to how many of its own GPUs IREN buys/deploys — vendor financing aligned to throughput (see 07_related_parties.md).
+
+---
+
+## ② Employee equity — options / RSU pool
+
+### 2.1 Option & RSU pools (★ 10-Q Note 18)
+| Award type | Outstanding Mar 31 26 | WA price / GDFV | Note |
+|---|---:|---:|---|
+| Stock options | **5,508,450** | WA exercise **$65.98** | 640,266 vested; WA life 7.07 yr; **0 granted in 9M FY26** |
+| Service-condition RSUs | **14,751,852** | GDFV $11.47 | 379,741 vested; intrinsic $505.7M |
+| Market-condition RSUs | **5,614,987** | GDFV $7.81 | vest 3-yr on TSR vs Russell 2000 |
+| **RSU subtotal** | **~20.37M** | | |
+| **Options + RSU total** | **~25.9M** | | ~7.5% of shares |
+
+- **2023 LTIP: 0 shares left** for future issuance. **2025 Omnibus Plan: 17.5M shares reserved** (approved Nov 2025). ★
+- Loan-funded shares: 521,206 (treated as options).
+
+### 2.2 SBC trend (★ 10-Q Note 18)
+| Period | Stock options | Service RSUs | Perf RSUs | **Total SBC** | SBC/Revenue |
+|---|---:|---:|---:|---:|---:|
+| Q3 FY26 (3mo) | $2.2M | $25.9M | $3.5M | **$31.5M** | 21.7% |
+| 9M FY26 | $23.4M | $102.5M | $36.2M | **$162.1M** | **28.4%** (of $569.8M rev) |
+| 9M FY25 | $9.4M | $13.1M | $1.4M | **$23.9M** | 7.6% |
+
+→ **SBC up ~6.8× YoY** (9M); now **~28% of revenue** — very high, reflects aggressive equity comp during AI pivot. All SBC booked in SG&A (none capitalized).
+- Plus **$43.5M payroll taxes on SBC** (9M FY26) in SG&A — a real cash cost of the equity machine.
+
+### 2.3 Vesting (★ 10-Q)
+- 2023 LTIP RSUs: 3 tranches — 2 time-based + 1 performance-based.
+- Service RSUs: $86.2M unrecognized, ~1.19 yr remaining. Market RSUs: $29.6M unrecognized, ~1.65 yr. Options: $38.2M unrecognized, ~4.40 yr.
+- Market-condition RSUs (3.73M granted FY26) vest after 3 yr on TSR vs Russell 2000.
+
+---
+
+## ④ Executive compensation (★ DEF 14A, Fiscal 2025)
+
+| NEO | Salary | Stock Awards | Cash Incentive | All Other | **Total** |
+|---|---:|---:|---:|---:|---:|
+| William Roberts (Co-CEO) | $964,350 | $69,695,744 | $1,968,000 | $19,650 | **$72,647,744** |
+| Daniel Roberts (Co-CEO) | $964,350 | $69,695,744 | $1,968,000 | $19,650 | **$72,647,744** |
+| Belinda Nucifora (former CFO) | $303,363 | $1,611,511 | $387,216 | $19,317 | $2,321,407 |
+
+- **Each Co-CEO ~$72.6M FY2025 total, ~96% equity** (vs ~$6.7M in FY2024 — ~11× jump). Driven by mega RSU grants: 2.4M PRSUs (5/19/25), 1.84M RSUs + 1.84M PRSUs (6/23/25). ★
+- 93% of Co-CEO target pay is at-risk/variable. ★
+- Legacy option: W. Roberts 2.4M options @ **$75 strike**, expiring 8/18/33 (performance/price-hurdle). ★
+- Non-employee director comp: $195k–$323k each. ★
+
+---
+
+## ⑤ Insider transactions (★ filings index)
+- Sep 2025: Co-CEO Form 4 disposals + paired Form 144 (open-market sells while stock elevated). Sizes 待查 (raw XML).
+- Jul 2025: Form 3/4 cluster = US domestication mechanics.
+- Each Roberts holds ~6.25M ordinary shares (2.3%) + 1 B share.
+
+---
+
+## ⑥ Diluted share-count projection ◆/▽
+
+### Current (Mar 31 2026)
+| Component | Shares (M) |
+|---|---:|
+| Basic ordinary outstanding | 341.0 |
+| + Options outstanding | 5.5 |
+| + RSUs (anti-dilutive, per Note 19) | ~19.7–24.9 |
+| + Convertible notes (if-converted) | ~86.2 (anti-dilutive count, Note 19) |
+| + Prepaid forwards | ~14.5 |
+| Reported diluted WA (Q3, loss) | 333.7 (basic=diluted, net loss) |
+
+Note: in a **net-loss** quarter all converts/options/RSUs are **anti-dilutive** → reported diluted EPS uses basic share count $(0.74) Q3.
+
+### Forward dilution stack (▽ if all in-the-money / exercised)
+| Source | Potential new shares (M) |
+|---|---:|
+| Apr-30 base | 357.4 |
+| Converts (all 6 series if-converted, ▽) | ~127 |
+| NVIDIA right | 30.0 |
+| Options + RSUs | ~26 |
+| ATM $6.0B (at ~$40 ▽) | ~150 (capacity, partly used) |
+| **Illustrative fully-loaded** | **~690M+** |
+
+→ Potential dilution from converts + NVIDIA right + equity comp alone ≈ **+50% over current share count** before counting remaining ATM capacity. **Dilution is the core financing mechanism** for the 5GW build.
+
+---
+
+## 📝 Summary
+1. **Concentration:** Founder brothers control 43.5% voting via 15× B-class; sunset 2033. Not controlled company.
+2. **SBC burn:** ~28% of revenue, +6.8× YoY; Co-CEOs $72.6M each (96% equity) FY25 — generous.
+3. **Dilution speed:** +99M shares in 9 months (29%↑); converts ($6.7B) + NVIDIA right (30M @ $70) + $6B ATM = structural, ongoing.
+4. **NVIDIA right:** 30M shares @ $70 (~$2.1B), vests on 600k-GPU deliveries, exp 2031 → +8.4% dilution, vendor-aligned.
+5. **Warning signs:** ✅ no repricing; 🟡 mega-grants to Co-CEOs; 🟡 founder Sep-25 sells; 🟠 serial dilution + negative APIC (−$1.73B) from convert/forward equity engineering.
+6. **Alignment:** Co-CEO pay is ~all equity and price-hurdled ($75 options, TSR PRSUs) → reasonably aligned with shareholders, but absolute quantum is large.
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

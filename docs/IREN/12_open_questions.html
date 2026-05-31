@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>悬而未决 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># IREN Limited — Open Questions & Low-Confidence Items
+
+Honest list of what is **not resolved** from primary SEC filings as of this research pass (data through Q3 FY26 10-Q / 8-Ks to 2026-05-26). Tier: ★ SEC · ◆ derived · ▽ external/estimate.
+
+---
+
+## A. Concentration / customers (Agent E scope)
+
+1. **Per-customer AI revenue % (Microsoft vs NVIDIA vs other)** — NOT disclosed; 10-K only says "small number of customers." The $9.7bn/$3.4bn contracts post-date FY2025, so no realised-revenue split exists yet. **待查** until a 10-Q/10-K reports segment customer %.
+2. **Deferred revenue & RPO/backlog quantification** — Microsoft prepays 20%/tranche; how much deferred revenue is on the BS and what % of the $13.1bn contracted book converts within 12 months is **待查** (sibling 05_accounting_policies flagged for Agent A; sibling cites company ARR target ~$3.7bn FY2026 ◇ but that is IR guidance, not SEC).
+3. **NVIDIA investment-rights accounting** — how IREN accounts for the 30M $70 warrants (liability vs equity, vesting-on-GPU-delivery) and the resulting dilution path is **待查** (likely Agent C/B).
+
+## B. Acquisitions (H8)
+
+4. **Mirantis & Nostrum purchase-price allocation / goodwill / intangibles** — explicitly "not yet finalized" by the company; goodwill, customer intangibles, and any bargain element **待查** pending a future filing. Only an unrelated **$1.2M** goodwill is recorded today.
+5. **Mirantis strategic rationale depth** — is it primarily software/orchestration IP, an acqui-hire of cloud engineers, or a customer book? Filings describe "cloud software and services provider" but give no revenue/headcount. **待查 / low confidence.**
+6. **Nostrum 490MW deliverability** — Spanish pipeline maturity, grid-connection status, permitting, and whether the 490MW is operating vs greenfield is **待查** (10-Q calls it a "developer," implying mostly pipeline). First European jurisdiction = unquantified regulatory risk.
+7. **Will either deal close?** Mirantis outside date Aug 3, 2026 + HSR; Nostrum customary conditions. Closing not confirmed in available filings. **待查.**
+
+## C. Governance / control
+
+8. **Founder voting power: 43.5% (DEF 14A, Aug 31 2025) vs 35.4% (10-K, Aug 15 2025)** — the ~8pp gap two weeks apart is unreconciled; most likely differing inclusion of exercisable options/vested RSUs. **待查** (would need the proxy ownership-table footnotes line-by-line).
+9. **Founder Sept-2025 open-market sells** — Form 4 + Rule 144 sells confirmed by sibling 07, but **exact share counts, prices, and 10b5-1 plan status are 待查** (XSL-rendered Form 4s lacked machine-readable tags; need raw `.xml`).
+10. **Controlled-company Nasdaq exemptions** — DEF 14A does not name Rule 5615(c) "controlled company" exemptions; control is constitutional (B-shares) under Australian law. Whether IREN claims any Nasdaq governance exemptions (e.g., compensation-committee independence) is **待查 / low confidence**.
+
+## D. Controls / accounting (cross-agent)
+
+11. **Material-weakness specifics** — FY2025 10-K confirms the FY2024 weakness (per 20-F/A 2025-03-20) is **remediated as of 6/30/25**, but the precise *nature* of the original weakness (which controls failed) and the remediation steps are summarized, not detailed. Worth reading the 20-F/A Item 15 in full. **partially 待查.**
+12. **Cash-flow restatement magnitude** — the 2025-03-20 20-F/A reclassified mined-BTC sale proceeds operating↔investing per SEC Office of Crypto Assets; the $ amount reclassified per year is **待查** (sibling 04b_cash_flow flagged capitalized-interest and PP&E items for Agent A).
+13. **GPU depreciation life & impairment risk** — sibling 02/05 flag GPU 3–4yr depreciation could turn AI segment margins negative; quantitative useful-life sensitivity is **company-undisclosed / 待查**.
+
+## E. Financing / capital (cross-agent — Agents B/C)
+
+14. **Total funding gap vs ~$5.8bn Microsoft GPU capex + Nostrum cash + GPU leases** — how IREN bridges the capex (converts, ATM, NVIDIA $2.1bn rights, Dell/other GPU leases) and the resulting net leverage is **待查** (Agent B capital structure).
+15. **2030 convertible notes terms / covenants** — sibling 05/06 flag the convertibles as the key debt wall; covenant detail **待查** (Agent C from Debt note).
+
+---
+
+### Confidence summary
+- **High confidence (★ direct SEC):** corporate timeline, dual-class 15× B-share control, B-share sunset Nov 17 2033, $72.6M Co-CEO pay & 993:1 ratio, PRSU hurdle removal, going-concern→remediated arc, RCGT→KPMG change, Microsoft $9.7bn / NVIDIA $3.4bn contract values + NVIDIA 30M $70 rights, Mirantis ~$625M-stock / Nostrum ~EUR165M deal terms, 97% mining-pool revenue concentration.
+- **Medium / derived (◆):** founder ~2.3% economic stake, Nostrum USD conversion, segment margin concern.
+- **Low / 待查:** per-customer AI revenue %, PPA/goodwill on pending deals, exact founder sell sizes, 43.5%-vs-35.4% voting reconciliation, restatement $ magnitude.
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>三表 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># 04_financial_statements.md — IREN Limited 三大报表
+
+> CIK 0001878848 · NASDAQ: IREN · FY ends June 30 · presentation currency USD (thousands)
+> 单位规则：1亿USD = $100M = $0.1B。本档默认表内单位 = $ thousands（千美元）；正文换算到 M / B。
+> 来源标签：★ SEC直接披露 / ◆ 公式计算 / ◇ 第三方 / ▽ 推算
+> 主要出处链接：
+> - FY2025 10-K (period 2025-06-30): https://www.sec.gov/Archives/edgar/data/1878848/000187884825000064/iren-20250630.htm （本地 raw/10K_FY2025.htm）
+> - 10-Q Q3 FY26 (2026-03-31): https://www.sec.gov/Archives/edgar/data/1878848/000187884826000022/iren-20260331.htm （本地 raw/10Q_2026-03-31.htm）
+> - 10-Q Q2 FY26 (2025-12-31): https://www.sec.gov/Archives/edgar/data/1878848/000187884826000015/iren-20251231.htm
+> - 10-Q Q1 FY26 (2025-09-30): https://www.sec.gov/Archives/edgar/data/1878848/000187884825000081/iren-20250930.htm
+> - 8-K Q3 FY26 earnings release (filed 2026-05-07): https://www.sec.gov/Archives/edgar/data/1878848/ （本地 raw/8K_Q3FY26_earnings_release.htm）
+
+---
+
+## 0. 一句话定调
+
+IREN 是一家**比特币矿企正在转型为 AI Cloud（GPU 数据中心）服务商**的公司。
+GAAP 现实（Q3 FY26，季度截至 2026-03-31）：总收入 **$144.8M ($0.145B)** ★、净亏损 **$(247.8)M** ★、Adj EBITDA **$59.5M** ★、其中非现金减值 **$(140.4)M** ★。
+管理层对外讲的 $9.7bn 微软合同 / $3.4bn NVIDIA 合同 / $3.1bn ARR-under-contract 全部是**未来预期数**，与当期 GAAP 收入是两个量级（详见 H1，第 5 节）。
+
+---
+
+## 1. 利润表（Income Statement）
+
+### 1.1 年度（Years ended June 30，$ thousands）★
+
+| 项目 | FY2023 | FY2024 | FY2025 | FY24 YoY | FY25 YoY | 来源 |
+|---|---:|---:|---:|---:|---:|---|
+| Bitcoin Mining Revenue | 75,509 | 184,087 | 484,629 | +143.8% | +163.3% | ★ 10-K |
+| AI Cloud Services Revenue | — | 3,105 | 16,394 | n/m | +428% | ★ 10-K |
+| **Total revenue** | **75,509** | **187,192** | **501,023** | +147.9% | +167.7% | ★ |
+| Cost of revenue — Mining (ex-D&A) | (39,419) | (86,688) | (157,673) | | | ★ |
+| Cost of revenue — AI Cloud (ex-D&A) | — | (379) | (1,319) | | | ★ |
+| **Total cost of revenue (ex-D&A)** | (39,419) | (87,067) | (158,992) | | | ★ |
+| **Segment gross profit (ex-D&A)** | 36,090 | 100,125 | 342,031 | | | ◆ |
+| SG&A | (49,004) | (70,424) | (136,458) | | | ★ |
+| Depreciation & amortization | (30,673) | (50,470) | (181,136) | | | ★ |
+| Impairment of assets | (105,172) | — | (7,223) | | | ★ |
+| Other operating (net) | (1,854)* | (8,031)* | 113* | | | ★ |
+| **Operating income (loss)** | (157,241) | (27,234) | 17,327 | | | ★ |
+| Total other income (expense) | (12,196) | 1,767 | 76,173 | | | ★ |
+| └ Unrealized gain (loss) on fin. instruments | — | (3,448) | 77,518 | | | ★ |
+| Income (loss) before taxes | (169,437) | (25,467) | 93,501 | | | ★ |
+| Income tax (provision) benefit | (2,390) | (3,453) | (6,560) | | | ★ |
+| **Net income (loss)** | **(171,827)** | **(28,920)** | **86,941** | | | ★ |
+
+*Other operating = gain/loss on disposal + other op expenses + other op income, netted.
+
+**10× sanity check**: FY25 total revenue $501.0M ≈ $0.50B ✓（不是 $5B 也不是 $50M）。FY25 净利 $86.9M（≈$0.087B）由 $77.5M 非现金 unrealized gain 撑起 — 经营性利润很薄。
+
+### 1.2 季度（最近 6 个季度，$ thousands）★
+
+| 项目 | Q4FY25 (6/30/25) | Q1FY26 (9/30/25) | Q2FY26 (12/31/25) | Q3FY26 (3/31/26) | 来源 |
+|---|---:|---:|---:|---:|---|
+| Bitcoin Mining Revenue | 180,330 | 232,948 | 167,394 | 111,160 | ★ |
+| AI Cloud Services Revenue | 6,963 | 7,347 | 17,298 | 33,635 | ★ |
+| **Total revenue** | **187,293** | **240,295** | **184,692** | **144,795** | ★ |
+| Total cost of revenue (ex-D&A) | (52,887) | (80,673) | (65,763) | (39,933) | ★ |
+| **Segment gross profit (ex-D&A)** | 134,406 | 159,622 | 118,929 | 104,862 | ★/◆ |
+| SG&A | (53,297) | (138,359) | (100,755) | (81,750) | ★ |
+| D&A | (63,815) | (85,226) | (99,176) | (121,245) | ★ |
+| Impairment of assets | 2,396 | (16,257) | (31,755) | (140,411) | ★ |
+| **Operating income (loss)** | 20,570 | (185,279)▽ | (124,765)▽ | (233,523) | ★/▽ |
+| Unrealized gain (loss) fin. instruments | 147,718 | ~558,000▽ | (107,400) | (23,700) | ★/▽ |
+| **Net income (loss)** | 176,868 | **+384,605** ▽ | **(155,400)** | **(247,827)** | ★/▽ |
+
+- Q1FY26 净利 +$384.6M ▽（= 9mo 净亏 $(18,622) − Q2 $(155,400) − Q3 $(247,827)），由巨额 unrealized gain on financial instruments 驱动（9mo 共 +$533.9M ★，绝大部分落在 Q1），**非经营性、非现金**。
+- Q2 净亏 $(155.4)M ★（8-K Adj EBITDA recon），其中含 debt conversion inducement expense $(111.8)M（一次性）。
+- Q3 净亏 $(247.8)M ★，其中含 impairment $(140.4)M ★（非现金）。
+
+**关键观察**：总收入连续 2 个季度环比下滑 240.3 → 184.7 → 144.8（M），原因是**比特币挖矿收入崩塌**（233 → 167 → 111），AI Cloud（7.3 → 17.3 → 33.6）增量远不足以抵消。这是"转型阵痛期"的典型 J 曲线左侧。
+
+### 1.3 Adj EBITDA（非 GAAP，$M）★
+
+| | Q2FY26 (12/31/25) | Q3FY26 (3/31/26) | 来源 |
+|---|---:|---:|---|
+| Net income (loss) | (155.4) | (247.8) | ★ 8-K |
+| + D&A | 99.2 | 121.2 | ★ |
+| + Impairment | 31.8 | 140.4 | ★ |
+| + Unrealized (gain) loss fin instr | 107.4 | 23.7 | ★ |
+| + SBC | 58.2 | 31.5 | ★ |
+| + Debt conversion inducement | 111.8 | — | ★ |
+| + finance exp / − interest income / tax / FX / other | ... | ... | ★ |
+| **= Adjusted EBITDA** | **75.3** | **59.5** | ★ |
+| Adj EBITDA margin | 41% | 41% | ★ |
+
+⚠️ Adj EBITDA 加回了 **D&A $121M + 减值 $140M + SBC $32M** = $293M 的真实/非现金成本来"美化"成 $59.5M 正数。GAAP 净亏 $(247.8)M 才是经济现实。Adj EBITDA "41% margin" 掩盖了重资产折旧吞噬。
+
+---
+
+## 2. 资产负债表（Balance Sheet，$ thousands）★
+
+| 项目 | 6/30/24 (20-F) | 6/30/25 (10-K) | 3/31/26 (10-Q) | 来源 |
+|---|---:|---:|---:|---|
+| Cash and cash equivalents | 404,601 | 564,526 | **2,213,274** | ★ |
+| Accounts receivable, net | 152 | 1,564 | 69,087 | ★ |
+| Total current assets | 452,385 | 641,173 | 2,424,486 | ★ |
+| Property, plant & equipment, net | 441,371 | 1,930,567 | **4,369,862** | ★ |
+| Intangible assets, net | — | — | 108,803 | ★ |
+| Total non-current assets | 700,434 | 2,299,150 | 4,840,411 | ★ |
+| **Total assets** | **1,152,819** | **2,940,323** | **7,264,897** | ★ |
+| Deferred revenue (curr + non-curr) | — | 884 | **120,388** | ★ |
+| Convertible notes payable | — | 962,765 | **3,687,832** | ★ |
+| Finance lease liability (non-curr) | — | — | 152,088 | ★ |
+| Total liabilities | 55,346 | 1,122,835 | **4,600,369** | ★ |
+| Additional paid-in capital | — | 88,672 | **(1,728,367)** | ★ |
+| Accumulated deficit | (683,110) | (596,167) | (614,790) | ★ |
+| **Total stockholders' equity** | 1,097,471 | 1,817,488 | **2,664,528** | ★ |
+| Ordinary shares issued | 187,864,454 | 258,103,209 | **340,979,966** | ★ |
+
+**关键观察**：
+- 9 个月内总资产从 $2.94B → $7.26B（+147%）★，靠**可转债 $3.69B**（从 $0.96B 暴增）+ 发新股（股数 258M→341M，+32%稀释）。
+- PP&E 净额 $1.93B → $4.37B ★ — 重资本扩张（GPU + 数据中心）。
+- Deferred revenue 跳增到 $120.4M ★ = AI Cloud 客户预付（其中很大部分是微软合同 20% 预付）。
+- Additional paid-in capital 变成 **负 $(1.73B)** ★ — capped call 交易 + 诱导转股的会计处理，异常项，需在专题档跟踪。
+
+---
+
+## 3. 现金流量表（Cash Flow，$ thousands）★
+
+### 3.1 年度（Years ended June 30）★
+
+| 项目 | FY2023 | FY2024 | FY2025 | 来源 |
+|---|---:|---:|---:|---|
+| **Net cash from operating activities (OCF)** | 5,729 | 52,219 | 245,886 | ★ |
+| **Net cash from investing activities** | (71,467) | (498,466) | (1,380,487) | ★ |
+| **Net cash from financing activities** | 28,558 | 782,626 | 1,294,735 | ★ |
+| **Net increase (decrease) in cash** | (37,182) | 336,379 | 160,134 | ★ |
+| Cash at beginning | 109,970 | 68,894 | 404,601 | ★ |
+| Cash at end | 68,894 | 404,601 | 564,526 | ★ |
+
+### 3.2 9 个月（Nine months ended March 31）★
+
+| 项目 | 9M FY25 | 9M FY26 | 来源 |
+|---|---:|---:|---|
+| Net income (loss) | (89,735) | (18,622) | ★ |
+| + D&A | 117,319 | 305,647 | ★ |
+| + Impairment | 6,942 | 188,423 | ★ |
+| + SBC | 23,929 | 162,123 | ★ |
+| + Unrealized (gain) loss fin instr | 70,200 | (533,942) | ★ |
+| + Debt conversion inducement | — | 111,799 | ★ |
+| + Δ Deferred revenue | (887) | +119,504 | ★ |
+| + Δ AR | (8,210) | (92,361) | ★ |
+| **OCF** | 142,745 | **289,326** | ★ |
+| **Investing CF** | (1,010,311) | **(2,608,931)** | ★ |
+| **Financing CF** | 648,811 | **3,968,769** | ★ |
+| Net increase in cash | (218,755) | 1,649,164 | ★ |
+| **Cash at end of period** | 184,333 | **2,213,274** | ★ |
+
+**跨表勾稽 ✓**：CF 期末现金 $2,213,274K = BS 现金 $2,213,274K（3/31/26）★ 完全一致。
+OCF+ICF+FCF = 289,326 − 2,608,931 + 3,968,769 = 1,649,164 = 净增现金 ✓。
+
+详见 `04b_cash_flow_DEEP.md`。
+
+---
+
+## 4. 三年趋势总结
+
+```
+收入：75.5M (FY23) → 187.2M (FY24) → 501.0M (FY25) → 9M FY26 已 569.8M  ← 比特币挖矿驱动的高增长
+但季度环比已掉头：240.3 → 184.7 → 144.8 (Q1→Q2→Q3 FY26)   ← 挖矿收入崩 + 转型断档
+净利：(171.8M) → (28.9M) → +86.9M → Q3FY26 单季 (247.8M)   ← GAAP 仍深亏，正数年靠非现金 unrealized gain
+重资产化：PP&E 0.44B → 1.93B → 4.37B   ← 烧钱建 GPU/数据中心
+融资填洞：9M FY26 融资净流入 $3.97B（可转债 $3.30B + 发股 $2.63B）  ← 极度依赖资本市场
+```
+
+---
+
+## 5. H1 速答 — $3.1bn ARR vs $144.8M 实际季度收入
+
+见 `02_business_segments_DEEP.md` 第 5 节与 `04b_cash_flow_DEEP.md`。核心：
+- **RPO（已确认履约义务）= $710.3M ★**（仅此为有合同支撑的口径），其中未来 12 个月仅 $308.0M ★。
+- **微软 $9.7bn 合同：截至 3/31/26 已交付并验收 tranche = NIL（零）★** → $0 计入 RPO，$0 确认收入。
+- $3.1bn ARR-under-contract 是"未来预期年化收入"，公司自己注明"包含尚未产生收入的金额，直到相关 GPU 交付、调试并投入服务"★。**这是远期营销指标，不是 GAAP 收入。**
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

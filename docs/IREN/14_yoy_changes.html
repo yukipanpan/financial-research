@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>逐年变更 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># 14 — IREN Limited 逐年变更侦测档案（YoY Changes / Accounting Detection）
+
+> Agent B 交付件 | 铁律 6：做任何 YoY 对比前，先剥离「会计/口径/结构」变更
+> ★ SEC 一手 / ◆ 计算 / ◇ 第三方 / ▽ 估算
+
+```
+表观 YoY 变化 = 真实经营变化 + 会计准则变更 + 口径/重分类 + 并表范围变化
+```
+
+**IREN 的两个最大可比性断点**：
+1. **IFRS → US GAAP 口径切换**（FY2024 及前用 IFRS / 20-F；FY2025 起 US GAAP / 10-K，因 2025 转域内申报人）。
+2. **现金流量表重述（H3）**：BTC 销售收款 经营活动 → 投资活动（IAS 7.16(b)）。
+
+---
+
+## 1. 数据来源（带链接）
+
+| 来源 | 链接 | 标签 |
+|---|---|---|
+| 重述通知 6-K（2025-03-20）| ★ [irenlimited-6krestatemento.htm](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000027/irenlimited-6krestatemento.htm) | ★ |
+| 重述后 20-F/A（FY2024）| ★ [iren-20240630.htm](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000020/iren-20240630.htm) | ★ |
+| 重述后 6-K/A（2024-12-31 中期）| ★ [iren-20241231.htm](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000025/iren-20241231.htm) | ★ |
+| 原始 20-F（FY2024）| ★ [iren-20240630.htm (orig)](https://www.sec.gov/Archives/edgar/data/1878848/000162828024038677/iren-20240630.htm) | ★ |
+| SEC 第 1 轮评论函 UPLOAD（2024-11-19）| ★ [filename1.pdf](https://www.sec.gov/Archives/edgar/data/1878848/000000000024012765/filename1.pdf) | ★ |
+| 公司第 1 轮回复 CORRESP（2024-12-18）| ★ [filename1.htm](https://www.sec.gov/Archives/edgar/data/1878848/000114036124049827/filename1.htm) | ★ |
+| SEC 第 2 轮评论函 UPLOAD（2025-02-20）| ★ [filename1.pdf](https://www.sec.gov/Archives/edgar/data/1878848/000000000025001990/filename1.pdf) | ★ |
+| 公司第 2 轮回复 CORRESP（2025-03-20）| ★ [filename1.htm](https://www.sec.gov/Archives/edgar/data/1878848/000114036125009535/filename1.htm) | ★ |
+| 审计师变更 8-K Item 4.01（2025-11-28）| ★ [ef20060170_8k.htm](https://www.sec.gov/Archives/edgar/data/1878848/000114036125043599/ef20060170_8k.htm) | ★ |
+| FY2025 10-K（首份 US GAAP）| 本地 `raw/10K_FY2025.htm` | ★ |
+| Q3 FY26 8-K（Adj EBITDA 重定义）| 本地 `raw/8K_Q3FY26_earnings_release.htm` | ★ |
+
+---
+
+## 14.1 会计准则 / 政策变更
+
+### 逐年扫描表
+
+| 财年 | 变更内容 | 准则编号 | 采纳方式 | 影响科目 | 影响金额 | 来源 |
+|---|---|---|---|---|---:|---|
+| **FY2024** | **挖矿硬件 S19j Pro 寿命 4 年→2 年**（会计估计变更）| ASC 360 / IAS 16 | **未来适用（prospective）** | 折旧、PP&E、净亏损 | 折旧↑（加速；具体额待查）| ★ 10-K Note 12 |
+| **FY2025** | **整体 IFRS → US GAAP 转换**（域内申报人）| 框架切换 | 追溯（重述比较期为 US GAAP）| 全表 | 多处重分类（金额待 Agent A 逐行核）| ★ 10-K FY25 |
+| **FY2025** | **采纳 ASU 2023-08 / ASC 350-60（加密资产公允价值）** | ASU 2023-08 / ASC 350-60 | 采纳（US GAAP 下 BTC 按公允价值，变动入损益；现金流按持有期分类）| 数字资产、其他收益、留存收益 | 待查（FY25 期末 BTC 持有量小，日内清算）| ★ 10-K FY25 |
+| **FY2026** | **Adj EBITDA 非 GAAP 定义变更**（剔除 debt conversion inducement expense）| 非 GAAP（非准则）| 未来适用，前期无影响 | Adj EBITDA（仅非 GAAP）| 前期 $0 影响（公司称 prior periods 无该费用计入）| ★ 8-K Q3FY26 |
+
+**对每条变更的 3 问**：
+```
+S19j Pro 寿命：prospective → FY24 起折旧出现断层，加速折旧压低当期；让利润「变难看」（保守）。
+IFRS→US GAAP：FY25 比较期已按 US GAAP 重述 → FY25 vs FY24(US GAAP) 可比；但 FY25 10-K 数字 ≠ 原 20-F IFRS 数字，跨框架对比须标注 ⚠️。
+ASC 350-60：US GAAP 下 BTC 公允价值变动入损益（IFRS 下为无形资产成本模式），未来 BTC 持仓若放大会引入损益波动；目前日内清算故影响小。
+```
+
+### 自愿政策变更
+| 财年 | 改了什么 | 旧→新 | 对利润影响 | 公司理由 | 判断 |
+|---|---|---|---:|---|---|
+| FY2024 | S19j Pro 折旧寿命 | 4 年 → 2 年 | 折旧↑（利润↓）| 该型号预计 2024-10 退役、残值=二手价 | 🟡 中性偏保守（基于真实退役计划）|
+| FY2026 | Adj EBITDA 定义 | 含 inducement → 剔除 inducement | 仅美化非 GAAP（剔 $111.8m 一次性费用，Q2 FY26）| 一次性、非经营 | 🟡 中性—轻微美化（见 H4）|
+
+---
+
+## 14.2 业务分类 / 分部重分类（含 H3 重述）★★★
+
+### 报告分部口径
+| 财年 | 报告分部 | 变化 | 历史是否 restated | 来源 |
+|---|---|---|---|---|
+| FY2023 | 单一报告分部（Bitcoin mining 为主）| 基准 | — | ★ |
+| FY2024 | Bitcoin Mining + 新增 AI Cloud Services（2024 上线）| 新增 AI Cloud 业务线 | — | ★ |
+| FY2025 | Bitcoin Mining / AI Cloud Services（US GAAP 口径）| 维持 | 比较期按 US GAAP 重述 | ★ 10-K |
+
+> 地理收入归属（★ SEC 评论 #6）：原披露按"服务提供地"（北美），SEC 要求改为按"集团内签约实体所在地"（澳大利亚母公司，100% 挖矿收入归母）——披露口径修订，不改总额。
+
+### ★★ H3 — 财务重述（THE RESTATEMENT）
+
+**性质**：纯**现金流量表分类重述**（reclassification），**非差错性数字更正**，**不动**损益表、资产负债表、权益变动表、期末现金。
+
+| 项目 | 内容 | 来源 |
+|---|---|---|
+| **重述了什么** | 将"出售已挖 Bitcoin 的收款（proceeds from sales of Bitcoin mined）"从 **经营活动现金流** 重分类为 **投资活动现金流** | ★ 6-K 2025-03-20 |
+| **为什么** | SEC（Division of Corporation Finance, **Office of Crypto Assets**, Mark Brunhofer/Michelle Miller）认定：IREN 主营是"向矿池提供 hash 计算服务、换取非现金对价无形资产 Bitcoin"，**后续出售该无形资产属投资活动**，符合 **IAS 7.16(b)**（出售无形资产的现金流入=投资活动）| ★ UPLOAD 2025-02-20 |
+| **重述哪些期间** | FY2024、FY2023、FY2022（年报）+ 2024-09-30、2024-12-31（中期）| ★ 6-K |
+| **影响科目** | 仅现金流量表：经营活动净现金流 ↓、投资活动净现金流 ↑（金额相等抵消）| ★ |
+| **对损益/BS/权益/期末现金的影响** | **零**（"does not impact ... statements of profit or loss ..., financial position, ... changes in equity, or cash and cash equivalents at the end"）| ★ 6-K 原文 |
+| **量级方向** | 等于各期 BTC 挖矿收款全额（FY24 挖矿收款重大、占经营现金流大头）→ 重述后**经营现金流由正转负/大幅缩水**。例：CORRESP 披露 2024-09-30 季度经营现金流原为 −$3.8m；BTC 收款一旦移出，经营现金流进一步恶化。**精确重述前后金额：见 20-F/A，待 Agent A 逐期填表** | ★/待查 |
+
+**博弈时间线**（3 轮评论）：
+```
+2024-11-19  SEC 第 1 轮评论函（prior comment 4）：质疑 BTC 收款为何放经营活动；点名 IAS 7.16(b)。★ UPLOAD
+2024-12-18  公司第 1 轮回复：抗辩——援引 IAS 7.14/7.15（经营=主营收入活动）、IAS 7.6，主张 BTC 是
+            「整个经营循环不可分割部分、日内 <4h 即变现、类似卖货」，坚持经营活动分类。★ CORRESP
+2025-02-20  SEC 第 2 轮评论函：不接受抗辩，明确「the subsequent sale of that bitcoin is an investing
+            activity consistent with IAS 7.16(b). Please revise your financial statements accordingly.」★ UPLOAD
+2025-03-20  公司第 2 轮回复：投降，承诺在 20-F/A 重分类为投资活动；同日董事会(经审计与风险委员会建议)
+            结论历史报表应重述，并发 6-K 重述通知 + 6-K/A + 20-F/A。★ CORRESP + 6-K
+```
+
+### 科目重分类（不改历史可比性的「真重述」）
+| 财年 | 从 | 到 | 金额 | 影响比率 | 来源 |
+|---|---|---|---:|---|---|
+| FY22/23/24 + 2 个中期 | 经营活动现金流（BTC 收款）| → 投资活动现金流 | = 各期 BTC 挖矿收款全额（待精确填）| 经营现金流被大幅下修；OCF/收入、自由现金流口径变差 | ★ 20-F/A |
+
+**关键问答**：
+```
+☑ 重分类后历史期同步调整 → 是（全 Restatement Periods 同步重述）→ 真 YoY 可比（同口径内）。
+☑ 是否掩盖经营恶化 → 反向：重述让经营现金流「变难看」，是 SEC 强制、非公司主动美化。
+⚠️ 但跨"重述前 vs 重述后"看历史经营现金流必失真：必须用重述后口径。
+⚠️ 损益/净亏损完全不受此重述影响——别误把"经营现金流变差"当成经营恶化。
+```
+
+---
+
+## 14.3 业务转型 / 重大商业模式变化（Mining → AI）
+
+| 财年 | 事件 | 类型 | 三表体现 | 来源 |
+|---|---|---|---|---|
+| FY2024 | AI Cloud Services 上线（NVIDIA H100/H200 GPU）| 新业务线 | 新增 AI Cloud 分部收入 + GPU PP&E + Capex 跳升 | ★ 10-K |
+| FY2025 | AI Cloud 扩张（Prince George ~10.9k GPU）；首份 US GAAP 年报 | 转型加速 | AI Cloud 收入起量；在建数据中心激增（1.9GW+）| ★ 10-K |
+| FY2026 | **挖矿→AI 决定性转向**：签 5 年 **$3.4bn NVIDIA AI Cloud 合同** + 5GW 战略合作；目标 ARR **$3.7bn**；收购 Mirantis | 主业切换 | Q3 FY26 总收入降至 $144.8m（vs Q2 $184.7m，挖矿产能缩减）；**退役挖矿硬件减值 $140.4m**；AI Cloud 收入↑ | ★ 8-K Q3FY26 |
+
+```
+□ 收入变化拆解：Q3 FY26 总收入下滑主要因 Bitcoin mining 产能缩减（主动减），AI Cloud 收入上升但未完全抵消 → 转型期阵痛，非经营崩塌。◆
+□ $140.4m 减值 = 转型的会计成本（退役旧矿机），属一次性非现金，不代表持续盈利能力。
+```
+
+### 并表范围变化
+| 财年 | 对象 | 并表/出表 | 来源 |
+|---|---|---|---|
+| 2023-02 | Non-Recourse SPV（持有部分矿机）| 去合并（deconsolidated）| ★ CORRESP（历史背景）|
+| FY2026 | 收购 Mirantis（强化 AI Cloud 交付）| 新并表 | ★ 8-K（金额待查）|
+
+---
+
+## 14.4 逐年变更时间线（一页纸）
+
+```
+FY2022 (截止 2022-06-30)：
+  - 会计：IFRS；BTC 收款=经营活动（后被重述）
+  - 业务：纯 Bitcoin mining
+  → 可比性：原报表经营现金流口径已被 2025 重述推翻
+
+FY2023 (截止 2023-06-30)：
+  - 会计：IFRS；FY23 录得 $91.6m 减值（矿机+开发资产，部分关 SPV）
+  - 业务：纯挖矿；2023-02 去合并 Non-Recourse SPV
+  → 可比性：减值 + 并表范围变化双重扰动
+
+FY2024 (截止 2024-06-30)：
+  - 会计：IFRS（原 20-F）；**S19j Pro 寿命 4→2 年（加速折旧）**；审计意见含**持续经营(going concern)解释段落** + **ICFR 重大缺陷**
+  - 分类：新增 AI Cloud 业务线
+  - 业务：AI Cloud 上线
+  → 可比性：⚠️ 原 20-F 经营现金流后被重述（BTC 收款移出）；折旧口径变；走 SEC 评论流程
+
+FY2025 (截止 2025-06-30)：
+  - 会计：**IFRS → US GAAP（首份 10-K）**；采纳 **ASU 2023-08 / ASC 350-60**（BTC 公允价值）
+  - 分类：BTC 收款已按投资活动/持有期分类（重述落地）
+  - 业务：AI Cloud 扩张，挖矿仍为主
+  → 可比性：⚠️⚠️ 跨框架（IFRS→US GAAP）+ 重述落地，FY25 数字不可直接接 原 20-F
+
+FY2026 (进行中, Q3=2026-03-31)：
+  - 会计：**Adj EBITDA 重定义（剔 debt conversion inducement）**
+  - 业务：**主业切换 AI（$3.4bn NVIDIA 合同）**；$140.4m 退役矿机减值；$23.7m capped call 公允价值损失
+  - 审计：2025-11-26 RCGT 被解聘 → 2025-11-27 KPMG 接任
+  → 可比性：⚠️ 非 GAAP 口径变；转型期收入/利润剧烈波动
+```
+
+### 给读者的可比性警告清单（必读）
+```
+做以下对比时务必小心：
+☑ FY2024 vs FY2025 全部数字：跨 IFRS→US GAAP 框架，不可直接比；用 FY25 10-K 内的 US GAAP 重述比较期。
+☑ 任何年度「经营活动现金流」历史对比：必须用 2025 重述后口径（BTC 收款已移入投资活动），
+  否则把 SEC 强制重分类误读为经营恶化。⚠️ 但损益/净亏损完全不受重述影响。
+☑ Q3/Q4 FY26 vs 早期的 Adjusted EBITDA：FY26 起剔除了 debt conversion inducement expense，口径不同；
+  公司称对 prior periods Adj EBITDA「无影响」，因前期未将该费用纳入加回——须按公司 reconciliation 核。
+☑ FY26 净亏损 −$247.8m（Q3）含 $140.4m 非现金减值 + $23.7m capped call 公允价值损失，
+  并非经营崩塌；真实可比口径应看 Adjusted EBITDA（Q3 仍 +$59.5m，margin 41%）。
+
+【审计师变更红旗】★ 8-K 2025-11-28 Item 4.01：
+  - RCGT（自 2023-05-19 任职）于 2025-11-26 被解聘；KPMG 于 2025-11-27 接任。
+  - 无「disagreement」（会计原则分歧）。
+  - 唯一「reportable event」= RCGT 曾就 FY2024 20-F 披露的 **ICFR 重大缺陷（material weakness）** 向公司沟通。
+  - FY2024 审计报告含 **going concern 解释段落**（持续经营重大疑虑，彼时）。
+  → 综合：重述 + ICFR 重大缺陷 + going concern 段落 + 转型期换大所(KPMG) = 内控/治理需持续监控的红旗组合。
+```
+
+---
+
+## H3 / H4 结论
+
+**H3（重述）— 证实**：确有 2025-03-20 同日 6-K 重述通知 + 6-K/A + 20-F/A，源于 SEC Office of Crypto Assets 3 轮评论。**重述实质 = 现金流量表分类**（BTC 销售收款 经营→投资，IAS 7.16(b)），**不影响损益/BS/权益/期末现金**；量级=各期 BTC 收款全额，使历史经营现金流大幅下修。公司先抗辩（IAS 7.14/7.15）后投降。**不是利润/资产造假级重述，但伴随 FY24 going concern 段落 + ICFR 重大缺陷**。
+
+**H4（Adj EBITDA）— 证实**：FY2026 起 Adj EBITDA 定义剔除 debt conversion inducement expense（Q2 FY26 该项 $111.8m），公司称对前期无影响。
+
+### H4 — Adjusted EBITDA Reconciliation（★ 8-K Q3FY26 p.17，US$m）
+
+| 行项 | Q3 FY26 (2026-03-31) | Q2 FY26 (2025-12-31) | 说明 |
+|---|---:|---:|---|
+| Net income (loss) | (247.8) | (155.4) | GAAP 起点 |
+| − Income tax (expense) benefit | (6.3) | (182.5) | 加回 |
+| = Income (loss) before tax | (254.1) | (337.9) | |
+| + Finance expense | 14.8 | 10.7 | |
+| − Interest income | (21.8) | (15.8) | |
+| + Depreciation & amortization | 121.2 | 99.2 | |
+| + Unrealized (gain) loss on financial instruments | 23.7 | 107.4 | 含 capped call 公允价值损失 |
+| + Stock-based compensation | 31.5 | 58.2 | |
+| + Impairment of assets | 140.4 | 31.8 | Q3 退役矿机减值 |
+| + (Gain) loss on disposal of PP&E | (0.2) | (0.0) | |
+| + (Incr) decr in FV of assets held for sale | 2.0 | 6.4 | |
+| + **Debt conversion inducement expense** | **—** | **111.8** | ⚠️ **FY26 新加回项（定义变更）** |
+| + Foreign exchange (gain) loss | 1.9 | (1.9) | |
+| + Other expense items | 0.0 | 5.5 | |
+| **= Adjusted EBITDA** | **59.5** | **75.3** | |
+| **Adjusted EBITDA Margin** | **41%** | **41%** | =Adj EBITDA / 总收入 |
+
+**重定义影响判读**：debt conversion inducement expense 是诱导可转债持有人提前转股付出的一次性、非现金（或准非现金）代价（Q2 FY26 $111.8m，对应 2030 可转债部分诱导转换）。剔出后：
+- Q2 FY26 Adj EBITDA 因此项加回从原口径抬升（若不加回会更低）→ 该重定义**对 FY26 表观 Adj EBITDA 有美化作用**，但属合理的"一次性/非经营"剔除，非激进操纵。
+- 公司声称对 prior periods（FY25 及前）Adj EBITDA「无影响」，因前期无此费用入账——**跨年 Adj EBITDA 仍可比，但须知 FY26 口径多剔一项**。
+- 其他常规非 GAAP 调整（ARR、Adjusted EBITDA margin）口径未变。ARR/SoSoValue 类运营指标由 Agent 另档。
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

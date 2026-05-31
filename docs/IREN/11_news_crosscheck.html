@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>新闻↔SEC核对 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># 11_news_crosscheck.md — IREN 新闻 / 公告 vs SEC Filings 核对
+
+> 方法：把 iren.com/investors/news 全量公告（169 条，截至 2026-05-31，用浏览器逐条读取）逐条与 SEC EDGAR filing（CIK 0001878848，已刷新至 2026-05-31）核对。
+> cross-check 三态：✅ 吻合 ｜ ⚠️ 有差异/需更新 ｜ ❌ 无法验证。
+> SEC 全量 filing **已刷新至今日（2026-05-31）**：最新一份为 2026-05-26 8-K（周日无新增），故本研究的 SEC 覆盖**截止到今天**。
+
+---
+
+## A. 核对结论（先看这里）
+
+**好消息**：所有**重大**交易（Microsoft / NVIDIA 合同、可转债、收购 Nostrum/Mirantis、NVIDIA 认股权）都既有新闻稿、也有对应 SEC 8-K/10-Q，互相印证 ✅。SEC 列表确认**已到今天**，无遗漏的已申报材料。
+
+**补漏（我此前报告未覆盖或需更新的 6 项）**：
+1. ⚠️ **ARR 目标已从 $3.7bn 上调至 $4.4bn**（2026-05-26 8-K），原因是新签 **$1.6bn Dell 风冷 Blackwell 采购协议**（2026-05-19）。我的 REPORT v1.0 用的是 $3.7bn → **已在 v1.1 更正**。
+2. ⚠️ **早期 AI Cloud 客户是「未具名的 leading AI companies」**，不止 Microsoft/NVIDIA。2025-10-07 公告：23k GPU 中已签约 11k ≈ **$225m ARR**，~2 年合同、**~2 年收入回本（payback）**，部署在 Prince George(BC) + Childress Horizon 1&2。这条**未单独 8-K 申报**（个别合同未达 Item 1.01 重大性），只在新闻稿/10-Q。
+3. ⚠️ **GPU 部署爬坡序列**（此前报告压缩处理）：2.4k(Jul'25) → 8.5k(Aug'25) → 10.9k(Aug'25，获 NVIDIA "Preferred Partner" 地位) → 23k(Sep'25，ARR 目标>$500m) → 150k(Mar'26 目标)。
+4. 🟢 **2026-05-18 收购 Awaken**（"support global brand growth"）——**无 8-K，属非重大品牌/营销 tuck-in**，不影响财务分析；登记备查。
+5. 🟢 **管理层任命**：CFO **Anthony Lewis**（2025-09-08，对应 8-K Item 5.02）；Chief Innovation Officer **John Gross**（2026-02-17）。
+6. 🟢 **2026-02-13 纳入 MSCI USA Index**——被动资金事件，非基本面，备查。
+
+**单位回本是关键新数据点**：◇ 公司说法「~2-year revenue payback」——即一颗 GPU 的合同收入约 2 年收回其采购成本。这是理解 AI Cloud 单位经济与「为何敢大举举债买卡」的核心。
+
+---
+
+## B. 全量公告 → SEC 核对表（2025-07 至 2026-05 AI 时代；更早为月度更新/AGM，对应 6-K，从略登记）
+
+| 日期 | 新闻稿 | 对应 SEC filing | 我报告 v1.0 是否覆盖 | 核对 |
+|---|---|---|---|---|
+| 2026-05-27/26 | Targets **$4.4bn ARR** with Blackwell at Childress | ★ 8-K 2026-05-26（Item 1.01 **Dell $1.6bn 采购** + 7.01 PR）| ❌（用了 $3.7bn）| ⚠️ 已更正 v1.1 |
+| 2026-05-18 | Acquires **Awaken**（品牌）| 无（非重大）| ❌ | 🟢 备查，免 8-K |
+| 2026-05-15 | Closes **$3.0bn** converts | ★ 8-K 2026-05-14 | ✅（$6.75bn 总额）| ✅ |
+| 2026-05-12 | Prices upsized $2.6bn→$3.0bn converts | ★ 8-K | ✅ | ✅ |
+| 2026-05-11 | Proposed converts | ★ 8-K | ✅ | ✅ |
+| 2026-05-08 | **NVIDIA $3.4bn** AI Cloud 合同 | ★ 8-K + 10-Q | ✅ | ✅ |
+| 2026-05-08 | Q3 FY26 业绩 | ★ 8-K + 10-Q | ✅ | ✅ |
+| 2026-05-08 | **Nostrum** 收购（西班牙 490MW）| ★ 8-K/10-Q | ✅ | ✅ |
+| 2026-05-07 | NVIDIA **5GW 战略合作** + 认股权 | ★ 10-Q Note 17 | ✅ | ✅ |
+| 2026-05-05 | **Mirantis** 收购 | ★ 8-K | ✅ | ✅ |
+| 2026-05-02 | **Sweetwater 1 通电（energization）** | ◇（10-Q 提及里程碑）| ✅ | ✅ |
+| 2026-03-05 | AI Cloud 扩至 **150,000 GPU** | ◇ deck | ✅ | ✅ |
+| 2026-02-17 | CIO **John Gross** 任命 | ◇（治理）| ❌ | 🟢 备查 |
+| 2026-02-13 | 纳入 **MSCI USA Index** | 无 | ❌ | 🟢 备查（被动资金）|
+| 2026-02-06 | Q2 FY26 业绩 | ★ 8-K + 10-Q | ✅ | ✅ |
+| 2025-12 (多条) | $2.3bn converts + 增发回购旧债 | ★ 8-K 2025-12-08 | ✅（诱导转股 $111.8m）| ✅ |
+| 2025-11-03 | **Microsoft $9.7bn** AI Cloud 合同 | ★ 8-K 2025-11-03 | ✅ | ✅ |
+| 2025-10-15/09/08 | $1.0bn / $875m converts | ★ 8-K 2025-10-14 | ✅ | ✅ |
+| 2025-10-07 | **Secures New Multi-Year AI Cloud Contracts**（未具名 AI 客户，11k/23k GPU≈$225m ARR，~2yr payback）| ❌ **未单独 8-K**（仅 PR / 10-Q）| ❌（未点出早期客户）| ⚠️ 已补 v1.1 |
+| 2025-09-22 | Doubles to **23k GPU**，ARR 目标>$500m | 无（PR/10-Q）| 部分 | ⚠️ 已补 GPU 爬坡 |
+| 2025-09-08 | CFO **Anthony Lewis** 任命 | ★ 8-K Item 5.02 | 部分 | 🟢 备查 |
+| 2025-08-29 | 扩至 **10.9k GPU** + **NVIDIA Preferred Partner** | 无（PR）| ❌ | ⚠️ 已补 |
+| 2025-08-25 | 购 4.2k Blackwell，扩至 **8.5k GPU** | 无（PR）| ❌ | ⚠️ 已补 |
+| 2025-07-03 | AI Cloud 扩至 **2.4k Blackwell GPU**（爬坡起点）| 无（PR）| ❌ | ⚠️ 已补 |
+
+> 说明：2025-07 之前的公告多为「月度比特币产量更新 / AGM / 早期融资」，对应已编目的 6-K（FY24 期），与年报/季报内容重叠，不构成新客户或交付事件，从略登记（见 `data/processed/IREN_filings.csv` 全量 168 份）。
+
+---
+
+## C. 来源
+- 全量公告：◇ https://iren.com/investors/news （169 条，浏览器逐条读取，2026-05-31）
+- $4.4bn ARR + Dell $1.6bn：★ https://www.sec.gov/Archives/edgar/data/1878848/000187884826000030/iren-20260519.htm
+- 早期 AI Cloud 合同（未具名客户）：◇ https://www.globenewswire.com/news-release/2025/10/07/3162322/0/en/IREN-Secures-New-Multi-Year-AI-Cloud-Contracts.html ｜ ◇ https://iren.gcs-web.com/news-releases/news-release-details/iren-secures-new-multi-year-ai-cloud-contracts
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

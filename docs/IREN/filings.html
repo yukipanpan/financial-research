@@ -1,0 +1,429 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>全量Filing清单 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html" class="active">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># IREN Limited — 全量 SEC Filing 逐份清单（Complete Filing Log）
+
+> 应要求**逐份读取**自 2021 年 IPO 至 2026-05-31 的**全部 SEC filing（276 份已编目，无遗漏）**，每份给出内容摘要 + 链接。
+> 数据来源：SEC EDGAR（CIK 0001878848）。单位 1亿=$100M=$0.1B。本清单为附录，材料级深读见各专题档案 01–17 与 REPORT。
+
+## 第一部分 — 8-K 事件报告 + 定期报告（10-K / 10-Q / 20-F / ARS / 委托书）
+
+# IREN Limited (CIK 0001878848) — SEC Filing Log: 8-K + Periodic Reports
+
+子集范围：8-K, 10-K, 10-Q, 20-F, 20-F/A, ARS, DEF 14A, PRE 14A, DEFA14A。共 **37 份**（2022-09 至 2026-05），按时间倒序，无遗漏。
+User-Agent: Yuki Pan yukipan0826@gmail.com。金额按披露原文。
+
+## ⭐ 值得注意（最重大 / 意外）
+
+- **2025-11-03｜微软 $9.7bn AI Cloud 合同（核心催化）**：与 Microsoft 签 5 年期 GPU 云服务合同（NVIDIA GB300），总额 ~$9.7bn 至 2031 年，含 20% 预付，部署在 Childress, TX（Horizon 1-4，200MW）。**首个超大规模客户落地**。
+- **2025-11-03 / 2026-03-04 / 2026-05-26｜Dell 采购协议三连**：为履约微软合同向 Dell 采购 GPU——Nov 2025 ~$5.8bn；Mar 2026 Dell Canada ~$2.3bn + Dell USA（合计扩到 15 万 GPU）；May 2026 再签 ~$1.6bn（指向 $3.4bn managed services AI cloud 合同，Childress）。
+- **可转债融资狂潮（稀释/杠杆信号）**：$550M(Jun25, 提及) → $1.0bn(Oct25, 0% coupon) → $2.3bn(Dec25, 0.25%/1.00%) → **$3.0bn(May26, 1.00%)**。FY26 至今披露 $9.2bn 融资 + Microsoft 预付 $1.9bn + $3.6bn GPU 融资(6% p.a.)。
+- **2025-11-28｜审计师变更（Item 4.01）**：聘任 KPMG LLP 为独立审计师（无分歧/无保留）。
+- **2025-03-20｜20-F/A 财报重述（红旗）**：应 SEC 评论函，将"出售已挖比特币的收入现金流"从经营活动重分类至投资活动，重述 FY22/23/24 现金流量表。
+- **2025-07-01 → 09-08｜CFO 任命**：Anthony Lewis（前 Macquarie Co-Treasurer）7/1 任 Chief Capital Officer，9/8 升任 CFO。
+- **GPU/产能交付节点**：Jun 2025 算力达 50EH/s、AI 云扩至 ~4.3k GPU；2026 年目标 15 万 GPU、$3.7bn ARR；新增 Oklahoma 1.6GW 园区（电力 2028 起爬坡，总锁定电力 4.5GW）。
+
+## 表格
+
+| 日期 | Form | Items | 内容摘要(带$与对手方) | 链接 |
+|---|---|---|---|---|
+| 2026-05-26 | 8-K | 1.01,7.01,9.01 | **Dell 采购协议**：子公司 IE US Hardware 4 与 Dell Marketing L.P. 签 GPU 采购，总额 ~$1.6bn，分批装运后 30 天内付款；GPU 部署于 Childress, TX 以服务此前公布的 **$3.4bn managed services AI cloud 合同**。IREN 提供无条件担保。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884826000030/iren-20260519.htm) |
+| 2026-05-14 | 8-K | 1.01,2.03,3.02,8.01,9.01 | **$3.0bn 可转债收盘**：发行 1.00% 2033 年到期可转换优先票据 $3.0bn（$2.6bn + 全额行使 $400M 绿鞋），净收益 ~$2.96bn，其中 $201.3M 用于 capped call。转换溢价 32.5%。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036126021285/ef20073507_8k.htm) |
+| 2026-05-12 | 8-K | 8.01,9.01 | **可转债定价**：上调至 $2.6bn 1.00% 2033 票据（原 $2bn），转换溢价 32.5%，含 $400M 绿鞋；净收益约 $2.57bn / $2.96bn（全额行使）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036126020669/ef20073131_8k.htm) |
+| 2026-05-11 | 8-K | 8.01,9.01 | **可转债发行启动**：拟发 $2bn 2033 年到期可转优先票据（Rule 144A QIB），另设 $300M 绿鞋；部分收益用于 capped call，其余作一般用途/营运资金。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036126020370/ef20072983_8k.htm) |
+| 2026-05-11 | 8-K | 2.02,9.01 | **Q3 FY26 电话会议记录**：5/7 财报电话会 transcript 作为 Exhibit 99.1（截至 2026-03-31 季度）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884826000028/iren-20260508.htm) |
+| 2026-05-08 | 10-Q | — | **Q3 FY26（截至 2026-03-31）**：总营收 **$144.8M**（去年同期 $144.8M），净亏损 **$(247.8)M**（vs $(16.1)M）；九个月营收 $569.8M，净亏损 $(18.6)M。亏损主因金融工具未实现损失。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884826000026/iren-20260331.htm) |
+| 2026-05-08 | 8-K | 2.02,9.01 | **Q3 FY26 业绩**：5/7 公布截至 2026-03-31 季度财务结果，press release 为 Exhibit 99.1。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884826000025/iren-20260507.htm) |
+| 2026-03-04 | 8-K | 8.01,9.01 | **ATM 增发扩容**：在 A&R At-Market 销售协议中加入 Citizens JMP、Goldman Sachs、Jefferies 为代理；新提交招股说明书补充，可售至 **$6.0bn** 普通股。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036126007919/ny20064909x2_8k.htm) |
+| 2026-03-04 | 8-K | 1.01,7.01,9.01 | **Dell 采购协议(加美双签)**：IE CA Leasing 与 Dell Canada 签 ~$2.3bn；IE US Hardware 4 与 Dell USA 签购买协议；采购 5 万+ NVIDIA B300 GPU，2026 H2 分批交付，**总机队扩至 15 万 GPU**，支撑 2026 年底 $3.7bn ARR（部署于 Mackenzie BC + Childress TX）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036126007905/ny20064909x3_8k.htm) |
+| 2026-02-05 | 10-Q | — | **Q2 FY26（截至 2025-12-31）**：总营收 **$184.7M**（vs $116.1M），季度净亏损 **$(155.4)M**（vs $(21.9)M）；上半年营收 $425.0M，净利润 $229.2M。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884826000015/iren-20251231.htm) |
+| 2026-02-05 | 8-K | 2.02,9.01 | **Q2 FY26 业绩 + 重大更新**：已为微软合同锁定 **$3.6bn GPU 融资**（6% p.a.，加上 $1.9bn 预付覆盖 95% GPU capex）；14 万 GPU 扩张按计划交付 $3.4bn ARR；新签 **Oklahoma 1.6GW** 园区（锁定电力增至 4.5GW，2028 起供电）；现金 $2.8bn；FY 至今融资 $9.2bn。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884826000014/iren-20260205.htm) |
+| 2025-12-08 | 8-K | 1.01,2.03,3.02,8.01,9.01 | **$2.3bn 可转债收盘 + 回购**：发行 $1.15bn 0.25% 2032 票据 + $1.15bn 1.00% 2033 票据（含 $300M 全额行使绿鞋）；回购约 **$544.3M** 现有可转债（2029/2030）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125044888/ef20060782_8k.htm) |
+| 2025-12-03 | 8-K | 8.01,9.01 | **可转债定价 $2bn + 股票定价**：$1bn 0.25% 2032 票据（25% 溢价）+ $1bn 1.00% 2033 票据（25% 溢价）；同时定价 **39,699,102 股普通股 @$41.12**（注册直接发行）用于回购旧可转债。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125044095/ny20060080x4_8k.htm) |
+| 2025-12-01 | 8-K | 8.01,9.01 | **可转债发行启动 + 股票发行**：拟发 $1bn 2032 + $1bn 2033 可转票据（各 $150M 绿鞋）；并启动普通股注册直接发行，用于回购现有 2029（转股价 $13.64）/2030（$16.81）可转债。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125043803/ny20060080x2_8k.htm) |
+| 2025-11-28 | 8-K | 4.01,9.01 | **审计师变更**：11/27 经审计与风险委员会推荐、董事会批准，聘任 **KPMG LLP** 为独立注册会计师事务所；无会计分歧、无保留意见。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125043599/ef20060170_8k.htm) |
+| 2025-11-24 | 8-K | 3.03,5.02,5.07,9.01 | **2025 AGM（11/19）结果**：股东批准修改公司章程（Nasdaq 法定人数、每年董事选举、法院选择条款、普遍代理通知）；通过 **2025 Omnibus Incentive Plan**；含 Item 5.07 投票结果。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125043142/ef20059594_8k.htm) |
+| 2025-11-06 | 10-Q | — | **Q1 FY26（截至 2025-09-30）**：总营收 **$240.3M**（vs $52.8M），净利润 **$384.6M**（vs $(51.7)M）；高利润含递延税资产确认与金融工具公允价值收益。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000081/iren-20250930.htm) |
+| 2025-11-06 | 8-K | 2.02,9.01 | **Q1 FY26 业绩**：公布截至 2025-09-30 季度财务结果，press release 为 Exhibit 99.1。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000079/iren-20251106.htm) |
+| 2025-11-03 | 8-K | 1.01,7.01,9.01 | **★微软 $9.7bn 合同**：子公司 IE US Hardware 3 与 **Microsoft Corporation** 签 Partner SOW，5 年期提供 NVIDIA GB300 GPU 云服务，总额 **~$9.7bn 至 2031**（每批 20% 预付）；同时与 **Dell** 签 ~$5.8bn GPU 采购；部署于 Childress, TX 750MW 园区（Horizon 1-4，200MW IT 负载）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125040072/ef20058139_8k.htm) |
+| 2025-10-14 | 8-K | 1.01,2.03,3.02,8.01,9.01 | **$1.0bn 可转债收盘**：发行 0.00% 2031 票据 $1.0bn（$875M + 全额行使 $125M 绿鞋），净收益 ~$979.0M，转换溢价 42.5%，含 capped call（上限价 $120.18）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125038083/ef20056955_8k.htm) |
+| 2025-10-09 | 8-K | 8.01,9.01 | **$875M 可转债定价**：0.00% coupon、42.5% 转换溢价，capped call 上限价 $120.18（较股价 100% 溢价）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125037753/ef20056800_8k.htm) |
+| 2025-10-07 | 8-K | 8.01,9.01 | **可转债发行启动**：拟发 $875M 2031 年到期可转优先票据（QIB），另 $125M 绿鞋；高级无担保。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125037488/ef20056749_8k.htm) |
+| 2025-10-06 | ARS | — | **年度报告(ARS)**：随委托书一并提供的 FY25 年度报告（PDF），供 2025 AGM 使用。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125037386/ny20053824x4_ars.pdf) |
+| 2025-10-06 | DEFA14A | — | **附加委托材料**：配合 DEF 14A 的补充代理征集材料（2025 AGM）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125037384/ny20053824x3_defa14a.htm) |
+| 2025-10-06 | DEF 14A | — | **正式委托书（2025 AGM）**：9 项提案——章程修订(P1-5)、**2025 Omnibus Incentive Plan(P6)**、按 Prepaid Forward 回购股份(P7)、按 Capped Call 回购股份(P8)、薪酬咨询投票(P9)。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125037383/ny20053824x2_def14a.htm) |
+| 2025-09-22 | PRE 14A | — | **初步委托书**：与 DEF 14A 同一组 9 项提案的初步版本（章程修订、激励计划、回购授权、薪酬咨询投票）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125035738/ny20053824x1_pre14a.htm) |
+| 2025-09-08 | 8-K | 5.02,7.01,9.01 | **CFO 任命**：**Anthony Lewis**（49 岁，原 Macquarie Group Co-Treasurer，2025-07-01 任 Chief Capital Officer）升任 **Chief Financial Officer**；无关联交易/亲属关系。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125034232/ef20055281_form8k.htm) |
+| 2025-08-28 | 10-K | — | **FY25 年报（截至 2025-06-30，US GAAP 首份 10-K）**：总营收 **$501.0M**（vs FY24 $187.2M），净利润 **$86.9M**（vs FY24 净亏损 $(28.9)M；FY23 $(171.8)M）。比特币挖矿为主、AI 云起步。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000063/iren-20250630.htm) |
+| 2025-08-28 | 8-K | 2.02,9.01 | **FY25 全年/Q4 业绩**：公布截至 2025-06-30 财年结果，press release 为 Exhibit 99.1。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000062/iren-20250828.htm) |
+| 2025-07-07 | 8-K | 7.01,9.01 | **6 月月报**：810MW 数据中心容量、**50EH/s** 算力（年中目标达成）；月营收 $68M、硬件利润 $51M（记录新高）；AI 云扩至 ~2.4k Blackwell；$550M 可转债超额认购；620 BTC 挖出。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125024971/ef20051646_8k.htm) |
+| 2025-07-03 | 8-K | 8.01 | **转为美国国内发行人**：自 2025-07-01 起须以美国国内发行人表格申报（10-K/10-Q/8-K），此前为外国私人发行人(FPI)。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008477/dp231112_8k.htm) |
+| 2025-07-03 | 8-K | 7.01,9.01 | **AI 云扩张**：采购 **2.4k NVIDIA Blackwell B200/B300 GPU，~$130M**（含装配），全部现金支付；安装于 Prince George BC 园区，机队扩至 ~4.3k GPU（含 1.9k Hopper）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125024747/ef20051566_8k.htm) |
+| 2025-07-01 | 8-K | 8.01,9.01 | **任命 Chief Capital Officer**：**Anthony Lewis**（22 年 Macquarie 经验）出任新设 CCO，主导资本市场与融资战略，支持 AI 基础设施投资。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125024305/ef20051444_8k.htm) |
+| 2025-03-20 | 20-F/A | — | **★FY24 年报修订（重述）**：应 SEC 评论函，将"出售已挖比特币所得"现金流由经营活动重分类为投资活动，重述 FY22/23/24 现金流量表（Affected Periods）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000020/iren-20240630.htm) |
+| 2024-08-28 | 20-F | — | **FY24 年报（截至 2024-06-30，IFRS / FPI）**：营收 **$188.8M**（vs FY23 $81.9M*）；税后亏损。比特币挖矿为主营业务。*(注：该列含其他口径) | [link](https://www.sec.gov/Archives/edgar/data/1878848/000162828024038677/iren-20240630.htm) |
+| 2023-09-13 | 20-F | — | **FY23 年报（截至 2023-06-30，IFRS）**：营收 **$75.5M**（vs FY22 $59.0M）；税后亏损 **$(171.9)M**（vs FY22 $(419.8)M）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123043816/brhc20058647_20f.htm) |
+| 2022-09-13 | 20-F | — | **FY22 年报（截至 2022-06-30，IFRS，首份 20-F）**：营收 **$59.0M**（vs FY21 $7.9M）；税后亏损 **$(419.8)M**（vs FY21 $(60.4)M）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122033208/brhc10041484_20f.htm) |
+
+---
+
+## 第二部分 — 6-K（外国私人发行人期间，2021–2025；月度更新/季报/业务更新/重述）
+
+# IREN Limited (CIK 0001878848) — 6-K / 6-K/A 备案目录
+
+公司主体为 **外国私人发行人 (Foreign Private Issuer)** 期间 (2021-12 → 2025-06)，故全部业务/财务披露以 6-K 提交。2025-07-01 起转为美国境内发行人 (US domestic issuer)，此后改用 8-K/10-Q/10-K。
+
+- 收录范围：`form_type` = **6-K 或 6-K/A**，共 **125** 份（含 2 份 6-K/A 重述）。无遗漏。
+- 数据来源：SEC EDGAR 主文档 + EX-99.1 附件正文（curl + strip HTML 读取实际内容）。
+- 公司 2024-02 由 "Iris Energy" 更名为 "IREN"。
+
+---
+
+## ⭐ 值得注意 (非例行：财报 / 融资 / GPU / 客户 / 产能 / 重述 / AGM)
+
+- **2025-06-30** — 达成 **50 EH/s** 自挖矿目标（30 个月内 ~50x 扩张）；下一阶段转向 AI：Horizon 1（50MW 液冷 AI 数据中心）Q4 2025 交付。
+- **2025-06-13 / 06-11 / 06-10** — **$550,000,000 3.50% 可转债 (2029 到期)** 发行全过程：launch ($450M) → 定价上调至 $500M → 完成发行 $550M（含全额行使 $50M 增发权）；净收益约 $534,900,000。
+- **2025-05-14** — Q3 FY25 财报（截至 2025-03-31）：季度比特币挖矿收入 $141,242,000、AI 云收入 $3,581,000。
+- **2025-03-31** — 业务/战略更新：重心转向 AI（AI Cloud + AI Data Center）；资本策略转向客户预付款 + 债务融资 + ATM 兜底。
+- **2025-03-20** — **重述 6-K** + 2 份 **6-K/A**（截至 2024-09-30 及 2024-12-31 期间财报重述）：将"出售已挖比特币所得"由经营性现金流重分类为**投资性现金流**（IAS 7.16(b)），不影响损益/业务。SEC 审查 FY24 20-F 触发。
+- **2025-03-17** — **Sweetwater 2**：与 AEP Texas 签 **600MW 并网协议**；非退还连接费 $4,100,000 + 可退还押金 $26,900,000；预计 2027 年末通电。West Texas 合计 2.75GW 全部锁定。
+- **2025-01-21** — 启动 **$1,000,000,000 ATM 股票发行**；目标 H2 2025 达 57 EH/s；推进直接芯片液冷 + Sweetwater 1.4GW 变电站（2026-04 通电）。
+- **2024-12-06 / 12-04 / 12-03** — **$440,000,000 3.25% 可转债 (2030 到期)**：launch $300M → 上调定价 $400M → 完成 $440M（含增发权）。
+- **2024-11-26** — Q1 FY25 财报（截至 2024-09-30）：加速 50 EH/s 至 H1 2025；提及 2025 潜在股东分红 + 计划转美国境内发行人。
+- **2024-10-16** — AI 业务规模化：816 颗 H100 接近满载，Q4 2024 增 1,080 颗 H200；预计 2024 年底 AI 云年化硬件利润约 $32,000,000（约占整体收益 10%）。
+- **2024-09-16** — **购买额外 1,080 颗 NVIDIA H200 GPU，$43,900,000**，Q4 2024 交付/调试；GPU 总数增至 1,896 颗 (H100+H200)。
+- **2024-08-28** — FY24 全年财报：**调整后 EBITDA 创纪录 $54,700,000**；AI 业务策略更新。
+- **2024-07-24** — Childress 新增 150MW 即时可用电力（ERCOT 批准 + AEP 协议），并网电力总量增至 **2,310MW**。
+- **2024-07-16** — 任命 **Morgan Stanley** 为 AI 数据中心货币化顾问。
+- **2024-04-08** — **Poolside AI** 合约扩容并延期：H100 GPU 从 248 → 504 颗。
+- **2024-02-14** — 购买额外 568 颗 H100 GPU，$22,000,000，AI 云扩至 816 颗。
+- **2024-02-08** — 与 **Poolside AI SAS** 启动 GPU 云服务（首 248 颗 H100，3+3 月）。
+- **2024-02-15** — Q2 FY24 财报 + 正式更名 Iris Energy → IREN。
+- **2024-01-16** — 与 Bitmain 签协议，$14/TH 固定价锁定 10 EH/s T21 矿机路径（增购 1 EH/s + 期权 9.1 EH/s）。
+- **2023-08-29** — 首次购买 **248 颗 NVIDIA H100 GPU，约 $10,000,000**，进军生成式 AI（IREN AI 业务起点）。
+- **2023-10-24** — 与 **WEKA** 合作（生成式 AI 存储方案）。
+- **2023-08-11** — 法院裁定：已挖比特币非有限追索设备融资的抵押物，无母公司担保（胜诉）。
+- **2022-11-02 / 11-07** — 两笔有限追索设备融资被发出**违约与加速通知**（SPV 层级，无母公司担保）。
+- **2022-09-23** — 与 B. Riley 签 **$100M 普通股购买协议 (ATM/SEPA)**。
+- **2022-03-28** — 与 **NYDIG** 签 **$71,000,000** 设备融资（第三笔，抵押 19,800 台 S19j Pro）。
+- **2022-01-21** — **变革性 600MW AEP Texas 并网协议**，电力增至 765MW (~22 EH/s)；付 $19M 押金/连接费（Childress 起点）。
+- **2021-12-09** — 完成 **$232,000,000 纳斯达克 IPO**（JPM/Canaccord/Citi 主承销）。
+
+---
+
+## 全部 6-K (newest first)
+
+| 日期 | Form | 期间 | 内容摘要 | 链接 |
+|---|---|---|---|---|
+| 2025-06-30 | 6-K | 2025-06-30 | ⭐业务更新：达成 50 EH/s 自挖矿里程碑（750MW Childress 站点支撑 650MW 运营），全球最高效比特币矿企之一；下一阶段转向 AI 基础设施，Horizon 1 (50MW 液冷 AI 数据中心) Q4 2025 交付；上季全成本 $41k/BTC。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000047/irenlimited-6kbusinessupda.htm) |
+| 2025-06-13 | 6-K | 2025-06-13 | ⭐可转债收尾：完成发行 **$550,000,000 3.50% 可转债 (2029)**（含全额行使 $50M 增发权），与 U.S. Bank 签 Indenture；净收益约 $534,900,000，其中 $53,800,000 用于 capped call、$92,500,000 用于 prepaid forward。附 capped call ISDA 确认书。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125022454/ef20050570_6k.htm) |
+| 2025-06-11 | 6-K | 2025-06-11 | ⭐可转债定价：上调发行规模至 **$500,000,000 3.50% 可转债 (2029)**（30% 转换溢价，转换价约 $13.64）；capped call cap 价 $20.98（100% 溢价）；6/13 交割。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125022117/ef20050462_6k.htm) |
+| 2025-06-11 | 6-K | 2025-06-10 | ⭐可转债启动：宣布 **$450,000,000 可转债 (2029)** 私募发行 (Rule 144A)，含 $50M 增发权；用途含 capped call、prepaid forward 及一般公司用途。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125022103/ef20050459_6k.htm) |
+| 2025-06-05 | 6-K | 2025-06-30 | 月度更新 (2025-05)：挖矿 627 BTC，平均算力 38.4 EH/s，收入 $64,700,000，硬件利润 $47,800,000（创纪录）；AI 云收入 $2,200,000（margin 98%）；6/30 前达 50 EH/s 目标；Horizon 1 Q4'25 交付；7/1 转美国境内发行人。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000045/form6-kmay2025monthlyupdate.htm) |
+| 2025-05-14 | 6-K | 2025-03-31 | ⭐Q3 FY25 财报（截至 2025-03-31）：季度比特币挖矿收入 $141,242,000（去年同期 $53,383,000）、AI 云收入 $3,581,000；九个月挖矿收入 $304,300,000、AI 云 $9,431,000；折旧 $47,448,000，电费 $39,401,000。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000043/iren-20250331.htm) |
+| 2025-05-06 | 6-K | 2025-05-06 | 月度更新 (2025-04)：挖矿 579 BTC，收入 $50,100,000，硬件利润 $36,000,000；AI 云收入 $2,000,000；月中算力增至 40 EH/s，6/30 前达 50 EH/s；矿机在 90 天对等关税暂停期内从东南亚发运；Horizon 1 H2 2025 交付。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000037/form6-kapril2025monthlyupd.htm) |
+| 2025-04-16 | 6-K | 2025-04-16 | 业务更新：自挖矿算力由 37 EH/s 增至 **40 EH/s**（15 J/TH），Childress Phase 4 (150MW) 投产；向 50 EH/s 目标推进。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000034/irenlimited-6kbusinessupda.htm) |
+| 2025-04-04 | 6-K | 2025-03-31 | 月度更新 (2025-03)：挖矿 533 BTC，收入 $45,300,000，硬件利润 $34,400,000；AI 云 $1,600,000；运营数据中心容量增至 **660MW**，算力 37 EH/s；在 52 EH/s 暂停挖矿扩张转向 AI/HPC；签新 **600MW 并网协议**；West Texas 数据中心已锁定 2.75GW。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000031/form6-kmarch2025monthlyupd.htm) |
+| 2025-03-31 | 6-K | 2025-03-31 | ⭐业务/战略更新：重心转向 AI（AI Cloud Services + AI Data Center）；资本策略优先客户预付款 + 债务融资，ATM 作为交付确定性兜底；强调 AI Cloud/AI Data Center 商务洽谈。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000029/irenlimited-6kbusinessupda.htm) |
+| 2025-03-20 | 6-K | 2025-03-20 | ⭐重述公告：因 SEC 审查 FY24 20-F，董事会决定重述 FY2022/23/24 及 2024-09-30、2024-12-31 期间财报，将"出售已挖比特币所得"由经营性现金流改为**投资性现金流** (IAS 7.16(b))；不影响损益/业务/经营表现。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000027/irenlimited-6krestatemento.htm) |
+| 2025-03-20 | 6-K/A | 2024-12-31 | ⭐重述财报 (截至 2024-12-31)：现金流表重分类后版本；季度挖矿收入 $113,483,000、AI 云 $2,660,000；六个月挖矿 $163,058,000、AI 云 $5,850,000。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000025/iren-20241231.htm) |
+| 2025-03-20 | 6-K/A | 2024-09-30 | ⭐重述财报 (截至 2024-09-30)：重分类后版本；季度挖矿收入 $49,575,000、AI 云 $3,189,000；折旧 $34,009,000，电费 $29,822,000。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000023/iren-20240930.htm) |
+| 2025-03-17 | 6-K | 2025-03-17 | ⭐Sweetwater 2：与 AEP Texas 签 **600MW 并网协议**，推进 2GW Sweetwater hub；非退还连接费 $4,100,000 + 可退还押金 $26,900,000；预计 2027 年末通电；West Texas 2.75GW 全部合约锁定。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000013/irenlimited-6ksweetwater2m.htm) |
+| 2025-03-06 | 6-K | 2025-02-28 | 月度更新 (2025-02)：挖矿 459 BTC，收入 $43,900,000，硬件利润 $30,900,000（margin 70%）；AI 云 $1,200,000；未来 4 个月升至 50 EH/s；AI 云月底接近满载；Horizon 1 客户尽调进行中；Sweetwater 1 (1.4GW) 开工，2026-04 通电；敲定 Sweetwater 2 600MW 协议。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000011/form6-kfeb2025monthlyupdate.htm) |
+| 2025-02-12 | 6-K | 2024-12-31 | Q2 FY25 财报（截至 2024-12-31，原始版，后被重述）：季度挖矿收入 $113,483,000、AI 云 $2,660,000；六个月挖矿 $163,058,000、AI 云 $5,850,000；折旧 $36,198,000。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000009/iren-20241231.htm) |
+| 2025-02-06 | 6-K | 2025-02-06 | 月度更新 (2025-01)：挖矿 521 BTC，收入 $52,000,000，硬件利润 $39,200,000；AI 云 $800,000；5 个月内达 50 EH/s；为 AI/HPC 安装直接芯片液冷；Sweetwater 1.4GW 在建；持有 **1,896 颗 H100 & H200 GPU**；510MW 容量。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000005/form6-kjan2025monthlyupdate.htm) |
+| 2025-01-21 | 6-K | 2025-01-21 | ⭐启动 **$1,000,000,000 ATM 股票发行**（多家承销商 Sales Agreement）；用途：H2 2025 扩至 57 EH/s（H1 达 50 EH/s）、数据中心直接芯片液冷、Sweetwater 1,400MW 变电站（2026-04 通电）、多 GW 开发管线。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036125001477/ny20037451x2_6k.htm) |
+| 2025-01-07 | 6-K | 2025-01-07 | 月度更新 (2024-12)：12 月挖矿 529 BTC，硬件利润 $40,000,000；全年 2024 共挖 **3,984 BTC**；持 **1,896 颗 H100 & H200 GPU**；510MW 运营，H1 2025 达 810MW；已达 31 EH/s 年终目标（原目标 20 EH/s）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000003/form6-kdec2024monthlyupdate.htm) |
+| 2024-12-23 | 6-K | 2024-12-23 | 业务更新：提前达成年终 **31 EH/s** 目标（超原 20 EH/s）；年初 20MW → 350MW 运营（17 倍增长）；500+ 现场团队；下一里程碑 H1 2025 达 50 EH/s。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000045/a6-kcover23dec24.htm) |
+| 2024-12-06 | 6-K | 2024-12-06 | 月度更新 (2024-11)：挖矿 379 BTC，2.96 c/kWh 电价，28 EH/s（+33%）；H200 GPU 客户测试中，为 Blackwell GPU 装液冷；460MW 运营（+28%）；Sweetwater 1.4GW 2026-04 通电；$440M 可转债（由 $300M 上调）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000043/form6-knovmonthlyupdate.htm) |
+| 2024-12-06 | 6-K | 2024-12-06 | ⭐可转债收尾：完成发行 **$440,000,000 3.25% 可转债 (2030)**，与 U.S. Bank 签 Indenture；附 capped call ISDA 确认书。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124048698/ef20039649_6k.htm) |
+| 2024-12-04 | 6-K | 2024-12-04 | ⭐可转债启动+定价：12/3 launch **$300,000,000 可转债 (2030)** → 12/4 上调定价至 **$400,000,000 3.25% 可转债 (2030)** (Rule 144A)，含 $45M 增发权。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124048343/ef20039452_6k.htm) |
+| 2024-12-02 | 6-K | 2024-12-02 | 业务更新：Childress Phase 3 变电站通电，自挖矿容量 +33% 至 **28 EH/s**（15 J/TH）；本月内达 31 EH/s；4 栋数据中心已通电运行，剩余 2 栋本月完工。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000041/a6-kcover2dec24.htm) |
+| 2024-11-29 | 6-K | 2024-11-29 | ⭐2024 年度股东大会 (AGM) 结果（11/20 召开）：各项决议通过，含任命 Byrons Audit 为澳洲审计师；附更新后公司章程 (Constitution)。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000039/a6-kcoveragmresult29nov2024.htm) |
+| 2024-11-26 | 6-K | 2024-09-30 | ⭐Q1 FY25 财报（截至 2024-09-30，原始版，后被重述）：聚焦低成本挖矿 + 经营现金流 + 股东回报；加速 50 EH/s 至 H1 2025（原 H2）；提潜在 2025 投资者分红 + 转美国境内发行人。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000036/iren-20240930.htm) |
+| 2024-11-06 | 6-K | 2024-11-06 | 月度更新 (2024-10)：挖矿 439 BTC，21 EH/s（16 J/TH），Q4 达 31 EH/s；**增 1,080 颗 H200 GPU 调试中**，为 Blackwell GPU 备液冷；AI 云收入 $1,000,000（margin 97%）；与多家 hyperscaler 洽谈货币化结构；Sweetwater 1.4GW 通电延至 2026-04。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000029/form6-koctmonthlyupdate.htm) |
+| 2024-10-16 | 6-K | 2024-10-16 | ⭐AI 运营扩张：AI 云预计 2024 年底年化硬件利润约 **$32,000,000**（约占整体收益 10%）；816 颗 H100 接近满载（待定合约覆盖余量）；Q4 增 1,080 颗 H200（AI 容量翻倍+）；1.4GW 项目通电延至 2026-04。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000026/a6-kcover16oct24.htm) |
+| 2024-10-10 | 6-K | 2024-10-10 | 2024 AGM 通知/委托材料：AGM 于 2024-11-20（ET）虚拟召开。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000023/form6-kagm2024.htm) |
+| 2024-10-04 | 6-K | 2024-10-04 | 月度更新 (2024-09)：挖矿 347 BTC，21 EH/s（16 J/TH），Q4 达 31 EH/s；**1,896 颗 H100 & H200 GPU**，预计年底贡献约 10% run-rate 收益；360MW 运营（2024 内 510MW）；货币化洽谈进行中。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000017/form6-ksepmonthlyupdate.htm) |
+| 2024-09-23 | 6-K | 2024-09-23 | 业务更新：提前达成 **20 EH/s** 里程碑（16 J/TH），即将增至 21 EH/s；Q4 2024 达 31 EH/s 仍在轨；Childress Phase 3 (150MW) 在建（约 430 人）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000014/a6-kcover.htm) |
+| 2024-09-16 | 6-K | 2024-09-16 | ⭐**购买额外 1,080 颗 NVIDIA H200 GPU，$43,900,000**，Q4 2024 交付/调试；GPU 总数增至 **1,896 颗 H100 & H200**；预计 AI 云占 IREN 收益约 10%（年底），参与 NVIDIA Cloud Partner Program。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000012/a6-knvidiah200purchase.htm) |
+| 2024-09-09 | 6-K | 2024-09-09 | 提交截至 2024-06-30 的合并年度财务报告 (澳洲法定 Annual Report)；含董事会报告。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000009/form6-kirenfy24australiana.htm) |
+| 2024-09-05 | 6-K | 2024-09-05 | 月度更新 (2024-08)：挖矿 245 BTC，16 EH/s（9/4），9 月达 20 EH/s、Q4 达 30 EH/s；816 颗 H100 服务多客户；300MW 运营（2024 内 510MW）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000187884824000005/form6-kaugustmonthlyupdate.htm) |
+| 2024-08-28 | 6-K | 2024-08-28 | ⭐FY24 全年财报（截至 2024-06-30）：**调整后 EBITDA 创纪录 $54,700,000**；2024 内达 30 EH/s 在轨；AI 业务策略更新（含 Texas Tier 3 数据中心设计）。附管理层演示。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000162828024038679/form6-kcoverfy24results.htm) |
+| 2024-08-06 | 6-K | 2024-08-06 | 月度更新 (2024-07)：挖矿 222 BTC，10.5 EH/s，Q3 达 20 EH/s、Q4 达 30 EH/s；816 颗 H100；260MW 运营（2024 内 510MW）；Childress 电力容量由 600MW 增至 **750MW**；任命 Morgan Stanley 为财务顾问。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000162828024034967/form6-kjulymonthlyupdate6a.htm) |
+| 2024-07-24 | 6-K | 2024-07-24 | ⭐业务更新：Childress 新增 **150MW** 即时可用电力（ERCOT 批准 + AEP 协议），并网电力总量增至 **2,310MW**；2024 510MW、2025 910MW、2026 West Texas 1,400MW。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000162828024032690/form6-kcover24july24vs.htm) |
+| 2024-07-23 | 6-K | 2024-07-23 | 发布 Nasdaq 纽约 Analyst & Investor Day 演示文稿（含 Texas Tier 3、Prince George 改造、GPU 部署、AI 云/colocation 单位经济性示意）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000162828024032505/form6-kcover23july24vs.htm) |
+| 2024-07-16 | 6-K | 2024-07-16 | ⭐业务更新：任命 **Morgan Stanley & Co. LLC** 为评估 AI 数据中心市场货币化机会的财务顾问；816 颗 H100（AI 云 2024 起步）；260MW 运营，2024 内 30 EH/s。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000162828024031927/form6-kcover16july24vs.htm) |
+| 2024-07-05 | 6-K | 2024-07-05 | 月度更新 (2024-06)：挖矿 233 BTC，Q3 达 20 EH/s、Q4 达 30 EH/s；816 颗 H100 服务 **Poolside AI** 等客户；260MW 运营；2024 扩张已全额融资；$425,300,000 现金、无债务。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000162828024031225/form6-kjunemonthlyupdate5j.htm) |
+| 2024-07-01 | 6-K | 2024-07-01 | 业务更新：2024 扩张（30 EH/s、510MW）已全额融资，$425,300,000 现金、无债；启动电力与土地组合货币化计划（含 West Texas 1,400MW；考虑资产出售/colocation/JV/build-to-suit）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124031860/ef20031976_6k.htm) |
+| 2024-06-06 | 6-K | 2024-06-06 | 月度更新 (2024-05)：挖矿 230 BTC，10 EH/s 运营，Q3 达 20 EH/s、Q4 达 30 EH/s；816 颗 H100 服务 Poolside AI；260MW 运营；$322,000,000 现金、无债。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124029066/ef20030723_6k.htm) |
+| 2024-05-15 | 6-K | 2024-03-31 | ⭐Q3 FY24 财报（截至 2024-03-31）：创纪录收入与调整后 EBITDA；FY24 至今经营现金流 $47,900,000；季度净利润 (NPAT) $8,600,000；2024 内扩至 30 EH/s。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124026268/ef20027345_6k.htm) |
+| 2024-05-06 | 6-K | 2024-05-06 | 月度更新 (2024-04)：挖矿 358 BTC，9.4 EH/s（5 月达 10）；816 颗 H100；**与 Poolside 协议扩容并延期**；245MW 运营；Childress Phase 3 扩 50MW（支撑 2024 超 20 EH/s）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124024431/ef20028541_6k.htm) |
+| 2024-04-29 | 6-K | 2024-04-29 | 业务更新：运营算力增至 **9 EH/s**（5 月达 10）；Childress Phase 3 增 50MW，2024 数据中心容量由 460MW 增至 **510MW**；20 EH/s 扩张已全额融资 (21.9 J/TH)。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124022673/ef20027927_6k.htm) |
+| 2024-04-08 | 6-K | 2024-04-08 | ⭐**Poolside AI** 合约扩容并延期：H100 GPU 由 248 → **504 颗**（成功初部署后）；新增 4 个月期限（4 月中起），客户可选再延 2 个月。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124018471/ef20026364_6k.htm) |
+| 2024-04-04 | 6-K | 2024-04-04 | 月度更新 (2024-03)：挖矿 353 BTC，8 EH/s（2024 达 20）；H100 GPU 248 运营/568 调试中，客户洽谈中；220MW 运营；$301,000,000 现金、无债；3/31 起季度报告。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124017811/ef20026073_6k.htm) |
+| 2024-04-01 | 6-K | 2024-04-01 | 业务更新：2024 扩张（460MW、20 EH/s）经定向 ATM 募资后已**全额融资**，$301,000,000 现金、无债；3/31 起季度报告；2,160MW 电力连接协议；816 颗 H100 年化约 $14-17M AI 云利润。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124016752/ef20025647_6k.htm) |
+| 2024-03-21 | 6-K | 2024-03-21 | 提交 Form F-3 注册声明相关法律意见书（Clifford Chance 澳洲法律意见，最高 $500,000,000 普通股 ATM Sales Agreement）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124014505/ny20024712x2_6k.htm) |
+| 2024-03-06 | 6-K | 2024-03-06 | 月度更新 (2024-02)：挖矿 310 BTC，创纪录 7 EH/s（2024 达 20）；与 Poolside AI 签约，H100 扩至 816 颗；460MW 容量；公司由 Iris Energy 更名为 IREN。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124011575/ef20023430_6k.htm) |
+| 2024-02-26 | 6-K | 2024-02-26 | 业务更新：2024 扩至 20 EH/s 路径：H1 达 10 EH/s（现 7），H2 达 20 EH/s（10 EH/s 新 Bitmain T21 固定价锁定 + Childress 200MW 扩建）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124009334/ef20022447_6k.htm) |
+| 2024-02-15 | 6-K | 2023-12-31 | ⭐Q2 FY24 财报（截至 2023-12-31）+ 正式更名 **Iris Energy → IREN**；附管理层演示、财报与 MD&A。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124008183/ef20015356_6k.htm) |
+| 2024-02-14 | 6-K | 2024-02-14 | ⭐购买额外 **568 颗 H100 GPU，$22,000,000**，AI 云扩至 816 颗（Q2 2024 交付）；客户需求增长，可训练万亿参数级 AI/LLM。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124007666/ef20021677_6k.htm) |
+| 2024-02-08 | 6-K | 2024-02-08 | ⭐与 **Poolside AI SAS** 启动 GPU 云服务（首 248 颗 H100；初 3 月期 + 可选 3 月延期），经严格客户测试后签约。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124006216/ef20021117_6k.htm) |
+| 2024-02-07 | 6-K | 2024-02-07 | 月度更新 (2024-01)：挖矿 341 BTC，算力 5.6→6.2 EH/s；H1 扩至 10 EH/s（含 Bitmain S21/T21），H2 路径至 20 EH/s（T21 期权 $14/TH）；Childress 建设进度。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124005947/ef20020920_6k.htm) |
+| 2024-01-23 | 6-K | 2024-01-23 | 业务更新：近期扩至 **10 EH/s**（算力增至 6，余 4 H1 2024 投产），作为 20 EH/s 路径一部分（已签 Bitmain T21 增购+固定价期权）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124003281/ef20019506_6k.htm) |
+| 2024-01-16 | 6-K | 2024-01-16 | ⭐与 **Bitmain** 签协议，提供 2024 扩至 20 EH/s 路径：$14/TH 固定价锁定 10 EH/s 新 T21（增购 1 EH/s + H2 期权 9.1 EH/s）；Childress 可支撑年底 20 EH/s。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124002189/ef20018887_6k.htm) |
+| 2024-01-05 | 6-K | 2024-01-05 | 月度更新 (2023-12)：12 月挖矿 399 BTC，**2023 全年挖 4,123 BTC**；扩至 10 EH/s 已全额融资（购 1.6 EH/s T21 $14/TH，效率 29.5→24.8 J/TH）；H100 GPU 调试中（生成式 AI）；Childress Phase 1 建设。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036124000809/ef20018183_6k.htm) |
+| 2023-12-21 | 6-K | 2023-12-21 | 业务更新：10 EH/s 扩张经定向募资已全额融资且超前；DC 2 通电中；H100 GPU 调试中（生成式 AI）；规划 H2 2024 进一步增长。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123058745/ef20017172_6k.htm) |
+| 2023-12-15 | 6-K | 2023-12-15 | ⭐购买 1.6 EH/s Bitmain T21 矿机（8,380 台，$14/TH ≈ $22,300,000，分期），自挖矿容量增至 10 EH/s（效率 29.5→24.8 J/TH）；Q2 2024 发运；Childress 80MW 扩建在轨。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123057724/ef20016735_6k.htm) |
+| 2023-12-07 | 6-K | 2023-12-07 | 2023 年度股东大会 (AGM) 结果（11/29 召开）：各项决议表决结果。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123056563/ef20016217_6k.htm) |
+| 2023-12-06 | 6-K | 2023-12-06 | 月度更新 (2023-11)：挖矿 369 BTC；购 1.3 EH/s T21（$14/TH，20% 延付），自挖矿增至 8.3 EH/s；cloud/colocation 客户洽谈；公布 **West Texas 新 1,400MW 开发站点**（2026 年末投产）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123056444/ef20016123_6k.htm) |
+| 2023-11-30 | 6-K | 2023-11-30 | ⭐购买 1.3 EH/s Bitmain T21（7,000 台，$14/TH ≈ $18,600,000，20% 延付至 2024-05-30），自挖矿容量增至 8.3 EH/s（效率 25.8 J/TH）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123055324/ef20015516_6k.htm) |
+| 2023-11-21 | 6-K | 2023-11-21 | 投资者电话会通知：议题含比特币挖矿扩至约 10 EH/s、面向生成式 AI 的 cloud/colocation 策略、West Texas 新 1,400MW 开发站点。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123054211/ef20015071_6k.htm) |
+| 2023-11-07 | 6-K | 2023-11-07 | 月度更新 (2023-10)：挖矿 376 BTC，扩至 9.4 EH/s；⭐与 **WEKA** 合作（生成式 AI 存储）；购 1.4 EH/s Bitmain S21（$14/TH，17.5 J/TH）；约 $64,000,000 现金。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123051704/ef20014192_6k.htm) |
+| 2023-10-24 | 6-K | 2023-10-24 | ⭐与 **WEKA**（性能密集型工作负载数据平台软件）合作，进军生成式 AI 市场；优化数据中心内 GPU 栈存储性能。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123049227/ef20013064_6k.htm) |
+| 2023-10-20 | 6-K | 2023-10-19 | 2023 AGM 通知/委托材料：AGM 于 2023-11-29（ET）虚拟召开。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123048935/ef20012850_6k.htm) |
+| 2023-10-20 | 6-K | 2023-10-19 | 提交截至 2023-06-30 的合并年度财务报告 (Annual Report)；含董事会报告与审计意见。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123048916/ef20012849_6k.htm) |
+| 2023-10-06 | 6-K | 2023-10-06 | ⭐购买约 7,000 台最新 Bitmain S21（1.4 EH/s，$14/TH ≈ $19,600,000，$2.9M 延付），自挖矿容量 +25% 至 7.0 EH/s（17.5 J/TH）；装于 Childress。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123047243/ef20012126_6k.htm) |
+| 2023-10-05 | 6-K | 2023-10-05 | 月度更新 (2023-09)：挖矿 390 BTC，5,554 PH/s；Childress 1.4c 低价电；30 EH/s 挖矿计划 + 下一代算力/生成式 AI；Childress Phase 1 (100MW) 建设。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123047077/ef20012021_6k.htm) |
+| 2023-09-13 | 6-K | 2023-09-13 | FY23 全年财报（截至 2023-06-30）：运营算力增至 5.6 EH/s，电力容量增至行业领先 760MW（开启 30 EH/s 扩张路径）；下一代算力/生成式 AI 策略。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123043825/ef20010616_6k.htm) |
+| 2023-09-06 | 6-K | 2023-09-06 | 月度更新 (2023-08)：挖矿 410 BTC；Childress 8 月负电价（实质被付费用电）；⭐首次提及购 **248 颗 H100 GPU，约 $10,000,000** 进军生成式 AI。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123042844/brhc20058546_6k.htm) |
+| 2023-08-29 | 6-K | 2023-08-29 | ⭐**首次购买 248 颗 NVIDIA H100 GPU，约 $10,000,000**（数月内交付），数据中心进军生成式 AI 市场；核心仍为比特币挖矿。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123041550/brhc20058156_6k.htm) |
+| 2023-08-11 | 6-K | 2023-08-11 | ⭐有限追索设备融资法律进展：BC 最高法院裁定支持公司立场——已挖比特币非该融资抵押物，且无母公司担保。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123039183/brhc20057412_6k.htm) |
+| 2023-08-03 | 6-K | 2023-08-03 | 月度更新 (2023-07)：挖矿 423 BTC，5,562 PH/s；44°C 高温下创纪录稳定运行（验证风冷设计）；任命 Sunita Parasuraman 入董事会。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123037771/brhc20056976_6k.htm) |
+| 2023-07-18 | 6-K | 2023-07-18 | 任命 **Sunita Parasuraman** 为非执行董事兼审计与风险委员会主席（曾任职 Meta/VMware/Genentech/Apple）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123034881/brhc20056018_6k.htm) |
+| 2023-07-07 | 6-K | 2023-07-07 | 月度更新 (2023-06)：挖矿 428 BTC，创纪录 5.6 EH/s；⭐重启 HPC 数据中心策略（与 AI/cloud、GPU 厂商、hyperscaler 洽谈）；扩张计划至 9.1 EH/s。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123033601/brhc20055660_6k.htm) |
+| 2023-06-20 | 6-K | 2023-06-20 | 业务更新：扩张计划至 **9.1 EH/s** + 重启 HPC 数据中心策略；Childress Phase 1 (100MW) 余 80MW 在建；Phase 2 长周期项已订；有限追索设备融资更新。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123030386/brhc20054635_6k.htm) |
+| 2023-06-06 | 6-K | 2023-06-06 | 月度更新 (2023-05)：挖矿 508 BTC，算力 +39% 至 5.5 EH/s；已宣布全额融资扩至 6.5 EH/s；任命 Raymond Chabot Grant Thornton 为新审计师；Childress 首 20MW 建设。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123028474/brhc20054092_6k.htm) |
+| 2023-05-22 | 6-K | 2023-05-22 | 更换独立注册会计师事务所：5/19 任命 **Raymond Chabot Grant Thornton LLP** 接替 Armanino LLP（含 Armanino 同意函）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123025866/brhc20053301_6k.htm) |
+| 2023-05-05 | 6-K | 2023-05-05 | 月度更新 (2023-04)：挖矿 319 BTC，算力 +118% 至 5.5 EH/s（5/3）；首 20MW Childress 数据中心运营；收到 AEP 退款 $18,400,000；5/10 投资者电话会。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123023096/brhc20052559_6k.htm) |
+| 2023-04-26 | 6-K | 2023-04-26 | 安装进度：5.5 EH/s 部署中，算力增至 5.2 EH/s（余 0.3 EH/s 待装）；BC 160MW + Childress 首 20MW 运营。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123020410/brhc20051994_6k.htm) |
+| 2023-04-20 | 6-K | 2023-04-19 | 安装进度：算力增至 4.6 EH/s（5.5 EH/s 部署中，余 0.9 待装）；⭐收到 **AEP 退款 $18,400,000**；董事增持。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123019286/brhc20051688_6k.htm) |
+| 2023-04-13 | 6-K | 2023-04-13 | 安装进度：算力增至 3.6 EH/s（余 1.9 待装）；⭐**Childress 600MW 变电站通电**；董事增持。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123018117/brhc20051418_6k.htm) |
+| 2023-04-06 | 6-K | 2023-04-06 | 月度更新 (2023-03)：挖矿 173 BTC，算力 +79% 至 3.1 EH/s（4/5）；600MW Childress 变电站临近通电；任命 CCO 与资本市场负责人。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123016921/brhc10051144_6k.htm) |
+| 2023-04-03 | 6-K | 2023-04-03 | 安装进度：算力增至 2.8 EH/s（2.0 EH/s 已交付待装、0.7 在途）；董事增持。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123015624/brhc10050847_6k.htm) |
+| 2023-03-23 | 6-K | 2023-03-23 | 安装进度：算力增至 2.0 EH/s（0.8 已交付、2.7 在途）；Childress switchyard 通电；董事增持。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123013234/brhc10050200_6k.htm) |
+| 2023-03-13 | 6-K | 2023-03-13 | 业务更新：开始接收/安装矿机（5.5 EH/s 爬坡），3 月底前交付更多；⭐确认**未在 SVB/Silvergate/Signature 银行存款**（应对当时银行业风险）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123011293/brhc10049683_6k.htm) |
+| 2023-03-07 | 6-K | 2023-03-07 | 月度更新 (2023-02)：挖矿 156 BTC，1,730 PH/s；⭐用剩余 $67,000,000 Bitmain 预付款购 4.4 EH/s 新 S19j Pro（无额外现金支出），自挖矿 2.0→5.5 EH/s；公布 Q2 FY23 财报。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123010398/brhc10049433_6k.htm) |
+| 2023-02-15 | 6-K | 2022-12-31 | Q2 FY23 财报（截至 2022-12-31）：2022 数字资产/股市艰难年；BC 数据中心容量扩 5x 至 160MW（三站点）；宣布利用 Bitmain 预付款增矿机。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123007261/brhc10048129_6k.htm) |
+| 2023-02-13 | 6-K | 2023-02-13 | ⭐用剩余 **$67,000,000 Bitmain 预付款**购 4.4 EH/s 新 S19j Pro 矿机（无额外现金支出），自挖矿容量 2.0→5.5 EH/s；考虑出售过剩矿机。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123006173/brhc10048150_6k.htm) |
+| 2023-02-07 | 6-K | 2023-02-07 | 月度更新 (2023-01)：挖矿 172 BTC，1,575 PH/s；Mackenzie 增 0.2 EH/s（运营 +15% 至 1.7 EH/s）；扩至 5.4 EH/s；Childress 600MW 变压器安装；任命 CLO Cesilia Kim，总裁 Lindsay Ward 退休。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123004859/brhc10047684_6k.htm) |
+| 2023-01-25 | 6-K | 2023-01-24 | 高管变动：总裁 **Lindsay Ward 退休**（曾主导 BC 160MW 三站点建设）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123002653/brhc10047017_6k.htm) |
+| 2023-01-12 | 6-K | 2023-01-12 | 月度更新 (2022-12)：挖矿 123 BTC，1,086 PH/s；BC 160MW 容量不受 BC 政府暂停加密挖矿连接影响；流动性举措获 $6,000,000 现金 + 偿债；Childress 600MW 变压器到货。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036123001425/brhc10046583_6k.htm) |
+| 2022-12-19 | 6-K | 2022-12-19 | 2022 年度股东大会 (AGM) 结果（12/13 召开）：各项决议表决结果。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122046058/brhc10045582_6k.htm) |
+| 2022-12-13 | 6-K | 2022-12-13 | 月度更新 (2022-11)：挖矿 151 BTC，1,445 PH/s；Mackenzie 30MW 扩建提前通电；12/6 投资者更新（"风险聚焦"定位）；月末 $47,000,000 现金无债，剩余 $75M Bitmain 预付款，$100M B. Riley 额度未用。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122045327/brhc10045374_6k.htm) |
+| 2022-11-21 | 6-K | 2022-11-21 | 企业更新 (Corporate Update)：在设备融资违约/加速背景下的整体定位与流动性说明。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122042419/ny20005141x6_6k.htm) |
+| 2022-11-07 | 6-K | 2022-11-07 | 月度更新 (2022-10)：Mackenzie 50→80MW 扩建在轨、Childress 建设/通电进行中；说明有限追索设备融资与 Bitmain 预付款更新（含相关托管安排终止）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122040205/brhc10043825_6k.htm) |
+| 2022-11-07 | 6-K | 2022-11-07 | ⭐有限追索设备融资**违约与加速通知**：11/2 起两笔 SPV 设备融资被相关贷款人加速（SPV 层级，无母公司担保、无对其他集团实体追索）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122040124/brhc10043824_6k.htm) |
+| 2022-11-03 | 6-K | 2022-11-03 | 2022 AGM 通知/委托材料：AGM 于 2022-12-13（ET）虚拟召开。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122039870/brhc10043708_6k.htm) |
+| 2022-11-02 | 6-K | 2022-11-02 | ⭐融资安排更新：SPV 有限追索设备融资（无母公司担保、集团无其他债务）；10/31 集团 $53,000,000 现金；提及利用 Bitmain 预付款机会。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122039464/brhc10043621_6-k.htm) |
+| 2022-10-13 | 6-K | 2022-10-13 | 提交截至 2022-06-30 的合并年度财务报告 (Annual Report)；含董事会报告与审计意见。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122037032/brhc10042843_6k.htm) |
+| 2022-10-07 | 6-K | 2022-10-07 | 月度更新 (2022-09)：挖矿 325 BTC，2,729 PH/s；Prince George (50MW) 按期通电，运营容量 +60% 超 3.7 EH/s；Mackenzie 50→80MW 在轨；Childress 首 40MW 规划达 6.0 EH/s；公布 FY22 财报。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122036514/brhc10042779_6k.htm) |
+| 2022-09-27 | 6-K | 2022-09-27 | 业务更新：Prince George (50MW, 1.4 EH/s) 按期全面通电，第三个运营站点，运营容量 +60% 超 **3.7 EH/s**；路径至 4.7→6.0 EH/s。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122034785/brhc10042311_6k.htm) |
+| 2022-09-23 | 6-K | 2022-09-23 | ⭐与 **B. Riley Principal Capital II, LLC** 签 Ordinary Share Purchase Agreement（约 $100M ATM/SEPA 股权融资工具）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122034465/ny20005141x2_6k.htm) |
+| 2022-09-13 | 6-K | 2022-09-13 | FY22 全年财报（截至 2022-06-30）：创纪录收入 $59,000,000 (+647% YoY)、调整后 EBITDA $26,200,000 (+1,791%)、经营现金流 $21,600,000；$110,000,000 现金、无公司债；与 Bitmain 达成额外 1.7 EH/s 发运（容量 4.3→6.0 EH/s）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122033184/brhc10041815_6k.htm) |
+| 2022-09-07 | 6-K | 2022-09-07 | 月度更新 (2022-08)：挖矿 301 BTC，2,204 PH/s；Prince George 9 月通电至 3.7 EH/s；Q4 容量指引 4.3→4.7 EH/s；路径至 6.0 EH/s；9/13 公布 FY22 财报。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122032488/brhc10041690_6k.htm) |
+| 2022-08-09 | 6-K | 2022-08-09 | 月度更新 (2022-07)：挖矿 154 BTC；Mackenzie 首 50MW 提前调试（运营容量翻倍超 2.3 EH/s）；⭐与 Bitmain 达成 8 月增发 1.7 EH/s S19j Pro（容量 4.3→6.0 EH/s）；新增高管。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122028827/brhc10040595_6k.htm) |
+| 2022-08-08 | 6-K | 2022-08-08 | 业务更新：Mackenzie 50MW 提前调试，运营容量约翻倍超 **2.3 EH/s**（Phase 1 9MW 4/13、Phase 2 41MW 8/5）；6.0 EH/s 部署选项推进。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122028560/brhc10040538_6k.htm) |
+| 2022-08-01 | 6-K | 2022-08-01 | ⭐与 **Bitmain** 达成 8 月增发 1.7 EH/s S19j Pro 矿机，预期总运营容量 4.3→6.0 EH/s；已就超出初始 4.3 EH/s 的矿机付 $130,000,000（其中 $46.7M…），考虑 Childress 等站点部署。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122027558/brhc10040234_6k.htm) |
+| 2022-07-07 | 6-K | 2022-07-07 | 月度更新 (2022-06)：挖矿 148 BTC，1,164 PH/s；Q4 容量指引 3.7→4.3 EH/s；鉴于市况推迟 4.3 EH/s 以外重大资本开支以保留资产负债表灵活性；Mackenzie 50→80MW 超前。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122025326/brhc10039406_6k.htm) |
+| 2022-06-21 | 6-K | 2022-06-21 | 业务更新：重申 Q3 2022 达 3.7 EH/s；Mackenzie 50→80MW 超前（Q4 达 4.3 EH/s）；鉴于市况推迟 4.3 EH/s 以外重大资本开支；无公司债。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122023553/brhc10038941_6k.htm) |
+| 2022-06-07 | 6-K | 2022-06-07 | 月度更新 (2022-05)：挖矿 151 BTC，1,165 PH/s (+12%)；Mackenzie (1.5 EH/s)、Prince George (1.4 EH/s) Q3 2022 在轨；任命 Belinda Nucifora 为 CFO；推进额外融资选项。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122022087/brhc10038493_6k.htm) |
+| 2022-05-16 | 6-K | 2022-05-16 | 任命 **Belinda Nucifora 为 CFO**（特许会计师，ASX 上市/私企经验）；公司建设 15 EH/s 运营+合约矿机平台（10 EH/s 预计 2023 初运营）。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122019377/brhc10037765_6k.htm) |
+| 2022-05-11 | 6-K | 2022-05-11 | Q3 FY22 财报（截至 2022-03-31）：收入 $15,200,000 (+445% YoY)、调整后 EBITDA $7,300,000 (margin 48%)、经营现金流 $4,600,000、IFRS 净亏损 $2,700,000（主因外汇）；创纪录 833 PH/s；扩至 15 EH/s 进展顺利。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122018660/brhc10037367_6k.htm) |
+| 2022-05-05 | 6-K | 2022-05-05 | 月度更新 (2022-04)：挖矿 137 BTC，1,038 PH/s (+22%)；Mackenzie 首 0.3 EH/s (9MW) 提前调试；2023 初达 10 EH/s 在轨。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122017746/brhc10037185_6k.htm) |
+| 2022-04-07 | 6-K | 2022-04-07 | 月度更新 (2022-03)：挖矿 121 BTC，850 PH/s；⭐与 **NYDIG** 签额外 **$71,000,000** 有限追索设备融资（抵押 19,800 台 S19j Pro / 1.98 EH/s，25 月期、11% 利率）；约 10 EH/s 矿机未质押。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122013470/brhc10036222_6k.htm) |
+| 2022-03-28 | 6-K | 2022-03-28 | ⭐与 **NYDIG** 完成 **$71,000,000** 有限追索设备融资（第三笔，抵押 19,800 台 S19j Pro / 1.98 EH/s）；约 10 EH/s 矿机仍未质押，保留资产负债表灵活性。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122011289/brhc10035767_6k.htm) |
+| 2022-03-08 | 6-K | 2022-03-08 | 月度更新 (2022-02)：挖矿 110 BTC，844 PH/s；公布首份季报 (截至 2021-12-31)：收入 $20M、调整后 EBITDA $14M (margin 72%)；电力容量增至 795MW；Cantor Fitzgerald 启动覆盖，Overweight、目标价 $25。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122008268/brhc10034779_6k.htm) |
+| 2022-02-09 | 6-K | 2022-02-09 | Q2 FY22 财报（截至 2021-12-31）：季度收入 $20,000,000 (+93%)、调整后 EBITDA $14,300,000 (margin 72%)、季度净利润 $71,700,000；半年净亏损 $418,900,000（IPO 时可转债转股一次性非现金按市值计价所致）；创纪录 685 PH/s。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122004329/brhc10033638_6k.htm) |
+| 2022-02-07 | 6-K | 2022-02-04 | 财报发布通知：将于 2022-02-09 公布 Q2/半年 (截至 2021-12-31) 财报；含投资者电话会安排。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122003999/brhc10033528_6k.htm) |
+| 2022-02-07 | 6-K | 2022-02-07 | 月度更新 (2022-01)：挖矿 126 BTC，804 PH/s (+8%)；⭐执行 **600MW AEP Texas 并网协议**，电力容量增至 765MW (~22 EH/s)，付 $19,000,000 押金/连接费；15 EH/s (~530MW) 执行计划明确。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122003997/brhc10033560_6k.htm) |
+| 2022-01-21 | 6-K | 2022-01-21 | ⭐执行**变革性 600MW AEP Texas 并网协议**，电力容量 165MW (4.6 EH/s) → 765MW (~22 EH/s)；付 $19,000,000 押金/连接费；>300 英亩 Texas Panhandle 自有地；电连接预计 Q1 2023 完成。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122002298/brhc10033000_6k.htm) |
+| 2022-01-11 | 6-K | 2022-01-11 | 月度更新 (2021-12)：挖矿 124 BTC，748 PH/s (+14%)，月收入 $6,200,000；自成立 100% 可再生能源 (购 REC)；Mackenzie/Prince George 建设在轨；极端低温验证风冷设计。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036122001204/brhc10032650_6k.htm) |
+| 2021-12-09 | 6-K | 2021-12-08 | 月度更新 (2021-11)：⭐完成 **$232,000,000 纳斯达克 IPO**（JPM/Canaccord/Citi 主承销）；锁定 15.2 EH/s 矿机（0.7 运营、0.8 2021、5.7 2022、8.0 2023）；11 月 657 PH/s、113 BTC、月收入 $6,600,000。 | [link](https://www.sec.gov/Archives/edgar/data/1878848/000114036121040953/brhc10031628_6k.htm) |
+
+---
+
+## 第三部分 — 注册发行 / 持股内部人 / SEC 来往函件
+
+# IREN Limited (CIK 0001878848) — 备案目录 Part 3：注册融资 / 所有权 / 监管来往
+
+> 数据来源：SEC EDGAR 官方一手 filings（UA: Yuki Pan yukipan0826@gmail.com）。本部分覆盖 114 份备案：注册/资本 47 份、所有权 44 份、监管来往 23 份。无遗漏。公司 2024 年由 Iris Energy Limited 更名为 IREN Limited（澳大利亚注册，Nasdaq:IREN）。
+
+## 总体图景
+
+- **货架/ATM 总注册额度**：2023-09 首张 F-3 货架 **$500,000,000**（含 $300M ATM）；2024-05 再叠加 **$500,000,000** ATM；2025-01-21 转为 **F-3ASR 自动货架（金额不限，WKSI）**，附带 **$1,000,000,000** ATM 销售协议（B. Riley / Canaccord / Cantor / Citigroup 等，佣金 3.0%）。2025-08-28 POSASR 披露该 ATM 自启用至 2025-08-15 已售出 **57,542,602 股、毛收入 $635,100,000**。2026-03-04 将 ATM 上限大幅提高至 **$6,000,000,000**。
+- **股权直募**：2025-12-04 通过 424B5 完成一次注册直接发行 **39,699,102 股 @ $41.12/股（≈ $1,632,627,074 毛额）**（12-03 FWP 为定价条款表）。
+- **员工股权计划（S-8）**：累计注册 2021 系列期权计划、2022 / 2023 Long-Term Incentive Plan（多次增量，2025-05 再注册 5,000,000 股）、2025 Omnibus Incentive Plan（2026-01 注册 17,500,000 股）。
+- **创始人减持**：联席 CEO **Daniel Roberts 与 William (Gregory) Roberts 两兄弟**于 2025-09 各减持 2,000,000 股——9/5 卖 1,000,000 股（500k @ $25.49 + 500k @ $23.51），9/11 再卖 1,000,000 股 @ $33.131（经家族信托 Awassi Capital Trust #1/#2），各自减持后仍持 13,989,696 股。2023-12 两人亦各申报拟售 1,000,000 股（144）。
+- **最大机构 13G 持有人**：Capital Ventures International（峰值 7.0%）、HANSAINVEST（首报 7.83%）、Jane Street Group（峰值 6.4%）、Citadel Securities（4.7%）。多为做市/量化型持有，持仓随后回落。
+- **SEC 来往信函**：2021 年系 IPO（F-1 草稿登记）问询；2022–2023 系 F-1/F-3 注册问询（部分涉及现金流/比特币收入政策）。**2024-11 至 2025-03 的 UPLOAD/CORRESP 确认系加密现金流重述**——SEC 加密资产办公室就 FY2024 Form 20-F 指出比特币售出所得应按 IAS 7.16(b) 列为投资活动（而非经营活动），公司在 2024-12-18 与 2025-03-20 回函中同意在 20-F 修订稿中相应重述现金流量表，SEC 于 2025-03-21 出具复核完成函。**已确认属实。**
+
+## 一、注册 / 资本（Registration & Capital）— 48 份
+
+| 日期 | Form | 内容摘要 | 链接 |
+|------|------|----------|------|
+| 2021-11-16 | EFFECT | SEC 生效通知（对应首张 S-8 / 注册声明生效） | [9999999995-21-004363](https://www.sec.gov/Archives/edgar/data/1878848/999999999521004363/xslEFFECTX01/primary_doc.xml) |
+| 2021-11-24 | S-8 | 注册 IPO 时点员工股权：2021 Employee Option Plan、2021 Non-Executive Director Option Plan、2021 Option/EDLPT/EDLTO Plan 项下普通股 | [0001140361-21-039254](https://www.sec.gov/Archives/edgar/data/1878848/000114036121039254/ny20000275x13_s8.htm) |
+| 2022-06-30 | S-8 | 注册 2022 Long-Term Incentive Plan（及 2021 Employee Option Plan）项下普通股 | [0000950103-22-011782](https://www.sec.gov/Archives/edgar/data/1878848/000095010322011782/dp176396_s8.htm) |
+| 2023-01-12 | S-8 | 注册 2022 Long-Term Incentive Plan 增量普通股 | [0000950103-23-000474](https://www.sec.gov/Archives/edgar/data/1878848/000095010323000474/dp186905_s8.htm) |
+| 2023-01-26 | EFFECT | SEC 生效通知（对应 F-1/POS AM 注册声明，2023-01-26 基础招股书生效） | [9999999995-23-000192](https://www.sec.gov/Archives/edgar/data/1878848/999999999523000192/xslEFFECTX01/primary_doc.xml) |
+| 2023-01-27 | 424B3 | 转售/发行招股书补充：B. Riley Principal Capital II ELOC 下最多 25,000,000 股普通股（基础招股书 2023-01-26） | [0001140361-23-002949](https://www.sec.gov/Archives/edgar/data/1878848/000114036123002949/ny20005141x18_424b3.htm) |
+| 2023-02-15 | 424B3 | ELOC 招股书补充：最多 25,000,000 股（B. Riley Principal Capital II 转售） | [0001140361-23-007305](https://www.sec.gov/Archives/edgar/data/1878848/000114036123007305/brhc10048262_424b3.htm) |
+| 2023-02-15 | POS AM | 对既有 F-1 注册声明的生效后修订（更新 ELOC/转售招股书） | [0001140361-23-007306](https://www.sec.gov/Archives/edgar/data/1878848/000114036123007306/ny20005141x19_posam.htm) |
+| 2023-02-23 | EFFECT | SEC 生效通知（对应 2023-02-15 POS AM） | [9999999995-23-000462](https://www.sec.gov/Archives/edgar/data/1878848/999999999523000462/xslEFFECTX01/primary_doc.xml) |
+| 2023-05-22 | 424B3 | ELOC 招股书补充：最多 25,000,000 股 | [0001140361-23-025869](https://www.sec.gov/Archives/edgar/data/1878848/000114036123025869/brhc20053300_424b3.htm) |
+| 2023-06-20 | 424B3 | ELOC 招股书补充：最多 25,000,000 股 | [0001140361-23-030396](https://www.sec.gov/Archives/edgar/data/1878848/000114036123030396/brhc20054634_424b3.htm) |
+| 2023-06-30 | S-8 | 注册 2023 Long-Term Incentive Plan 项下普通股 | [0000950103-23-009768](https://www.sec.gov/Archives/edgar/data/1878848/000095010323009768/dp195992_s8.htm) |
+| 2023-07-18 | 424B3 | ELOC 招股书补充：最多 25,000,000 股 | [0001140361-23-034883](https://www.sec.gov/Archives/edgar/data/1878848/000114036123034883/brhc20056019_424b3.htm) |
+| 2023-09-13 | F-3 | 通用货架注册声明：最多 **$500,000,000**（普通股/债务证券/认股权证/认购权/购买合约/单位） | [0001140361-23-043845](https://www.sec.gov/Archives/edgar/data/1878848/000114036123043845/ny20010416x1_f3.htm) |
+| 2023-09-13 | 424B3 | ELOC 招股书补充：最多 25,000,000 股 | [0001140361-23-043848](https://www.sec.gov/Archives/edgar/data/1878848/000114036123043848/ef20010551_424b3.htm) |
+| 2023-09-13 | POS AM | 对既有注册声明的生效后修订（配合新货架） | [0001140361-23-043847](https://www.sec.gov/Archives/edgar/data/1878848/000114036123043847/ny20010422x1_posam.htm) |
+| 2023-09-22 | EFFECT | SEC 生效通知（对应 F-3 货架） | [9999999995-23-002729](https://www.sec.gov/Archives/edgar/data/1878848/999999999523002729/xslEFFECTX01/primary_doc.xml) |
+| 2023-09-22 | EFFECT | SEC 生效通知（对应 POS AM） | [9999999995-23-002721](https://www.sec.gov/Archives/edgar/data/1878848/999999999523002721/xslEFFECTX01/primary_doc.xml) |
+| 2023-09-26 | 424B3 | 转售招股书：B. Riley Principal Capital II 最多 25,000,000 股 | [0001140361-23-045184](https://www.sec.gov/Archives/edgar/data/1878848/000114036123045184/ny20011266x1_424b3.htm) |
+| 2023-09-26 | 424B3 | ATM 招股书补充：**$300,000,000** 普通股 At Market Issuance 销售协议（B. Riley 等代理） | [0001140361-23-045182](https://www.sec.gov/Archives/edgar/data/1878848/000114036123045182/ny20011264x1_424b3.htm) |
+| 2024-02-15 | F-3 | 转售货架：代表特定 Selling Holders 转售最多 2,069,122 股普通股 | [0001140361-24-008211](https://www.sec.gov/Archives/edgar/data/1878848/000114036124008211/ny20021797x1_f3.htm) |
+| 2024-02-15 | RW | 撤回申请（Registration Withdrawal Request） | [0001140361-24-008179](https://www.sec.gov/Archives/edgar/data/1878848/000114036124008179/ny20021797x2_rw.htm) |
+| 2024-02-16 | POS AM | 生效后修订（配合 2024-02-15 转售货架） | [0001140361-24-008410](https://www.sec.gov/Archives/edgar/data/1878848/000114036124008410/ny20021797x3_posam.htm) |
+| 2024-02-16 | RW WD | 撤回撤回申请（Withdrawal of RW，即收回前一日的撤回请求） | [0001140361-24-008408](https://www.sec.gov/Archives/edgar/data/1878848/000114036124008408/ny20021797x4_rwwd.htm) |
+| 2024-02-22 | EFFECT | SEC 生效通知 | [9999999995-24-000515](https://www.sec.gov/Archives/edgar/data/1878848/999999999524000515/xslEFFECTX01/primary_doc.xml) |
+| 2024-03-05 | EFFECT | SEC 生效通知 | [9999999995-24-000606](https://www.sec.gov/Archives/edgar/data/1878848/999999999524000606/xslEFFECTX01/primary_doc.xml) |
+| 2024-03-05 | 424B3 | 转售招股书：Selling Holders 最多 2,069,122 股 | [0001140361-24-011415](https://www.sec.gov/Archives/edgar/data/1878848/000114036124011415/ny20021797x6_424b3.htm) |
+| 2024-03-21 | 424B3 | ATM 招股书补充：在原 $300M 之外，2023-09-13 ATM 协议下普通股最多 **$500,000,000** | [0001140361-24-014502](https://www.sec.gov/Archives/edgar/data/1878848/000114036124014502/ny20024712x1_424b3.htm) |
+| 2024-05-15 | F-3 | 通用货架注册声明：最多 **$500,000,000**（叠加于此前已注册的 $500,000,000 之上） | [0001140361-24-026237](https://www.sec.gov/Archives/edgar/data/1878848/000114036124026237/ny20029142x1_f3.htm) |
+| 2024-05-28 | EFFECT | SEC 生效通知（对应 2024-05-15 F-3 货架） | [9999999995-24-001660](https://www.sec.gov/Archives/edgar/data/1878848/999999999524001660/xslEFFECTX01/primary_doc.xml) |
+| 2024-05-29 | 424B3 | ATM 招股书补充：销售协议下普通股最多 **$500,000,000** | [0001140361-24-027806](https://www.sec.gov/Archives/edgar/data/1878848/000114036124027806/ny20029142x2_424b3.htm) |
+| 2024-06-27 | S-8 | 注册 2023 Long-Term Incentive Plan 增量普通股 | [0000950103-24-008935](https://www.sec.gov/Archives/edgar/data/1878848/000095010324008935/dp213392_s8.htm) |
+| 2024-08-29 | POS AM | 生效后修订 | [0001140361-24-039299](https://www.sec.gov/Archives/edgar/data/1878848/000114036124039299/ny20031130x1_posam.htm) |
+| 2024-08-30 | EFFECT | SEC 生效通知 | [9999999995-24-002694](https://www.sec.gov/Archives/edgar/data/1878848/999999999524002694/xslEFFECTX01/primary_doc.xml) |
+| 2025-01-21 | F-3ASR | **自动货架注册（WKSI，金额不限）**：普通股/债务/认股权证/认购权/购买合约/单位；附带 **$1,000,000,000** ATM 销售协议（B. Riley / Canaccord / Cantor / Citigroup 等，佣金 3.0%） | [0001140361-25-001462](https://www.sec.gov/Archives/edgar/data/1878848/000114036125001462/ny20037451x1_f3asr.htm) |
+| 2025-01-21 | POS AM | 与 F-3ASR 同日的生效后修订 | [0001140361-25-001458](https://www.sec.gov/Archives/edgar/data/1878848/000114036125001458/ny20037451x1_posam.htm) |
+| 2025-01-28 | EFFECT | SEC 生效通知（F-3ASR 提交即生效） | [9999999995-25-000215](https://www.sec.gov/Archives/edgar/data/1878848/999999999525000215/xslEFFECTX01/primary_doc.xml) |
+| 2025-05-22 | S-8 | 注册 2023 Long-Term Incentive Plan 增量 **5,000,000 股** 普通股 | [0000950103-25-006352](https://www.sec.gov/Archives/edgar/data/1878848/000095010325006352/dp229139_s8.htm) |
+| 2025-06-25 | S-8 | 注册 2023 Long-Term Incentive Plan 增量普通股 | [0000950103-25-007826](https://www.sec.gov/Archives/edgar/data/1878848/000095010325007826/dp230563_s8.htm) |
+| 2025-08-28 | POSASR | 自动货架生效后修订：更新 ATM——自 2025-01-21 至 08-15 已售 57,542,602 股、毛收入 **$635,100,000** | [0001140361-25-033216](https://www.sec.gov/Archives/edgar/data/1878848/000114036125033216/ny20054093x1_posasr.htm) |
+| 2025-08-28 | POS AM | 同日生效后修订 | [0001140361-25-033187](https://www.sec.gov/Archives/edgar/data/1878848/000114036125033187/ny20054093x2_posam.htm) |
+| 2025-08-29 | EFFECT | SEC 生效通知 | [9999999995-25-002785](https://www.sec.gov/Archives/edgar/data/1878848/999999999525002785/xslEFFECTX01/primary_doc.xml) |
+| 2025-12-01 | 424B5 | 注册直接发行招股书补充（初步）：向有限数量买方发行普通股，价格等于 Nasdaq 收盘价（基础招股书 2025-08-28） | [0001140361-25-043802](https://www.sec.gov/Archives/edgar/data/1878848/000114036125043802/ny20060080x1_424b5.htm) |
+| 2025-12-03 | FWP | 发行人自由书写招股书（定价条款表）：**39,699,102 股 @ $41.12** | [0001140361-25-044082](https://www.sec.gov/Archives/edgar/data/1878848/000114036125044082/ny20060080x5_fwp.htm) |
+| 2025-12-04 | 424B5 | 注册直接发行（最终）：**39,699,102 股普通股 @ $41.12/股（≈ $1,632,627,074）** | [0001140361-25-044381](https://www.sec.gov/Archives/edgar/data/1878848/000114036125044381/ny20060080x3_424b5.htm) |
+| 2026-01-02 | S-8 | 注册 **2025 Omnibus Incentive Plan** 项下 **17,500,000 股** 普通股 | [0001140361-26-000129](https://www.sec.gov/Archives/edgar/data/1878848/000114036126000129/ef20061051_s8.htm) |
+| 2026-03-04 | 424B5 | ATM 招股书补充：经修订重述的销售协议，普通股上限提高至 **$6,000,000,000** | [0001140361-26-007918](https://www.sec.gov/Archives/edgar/data/1878848/000114036126007918/ny20064909x1_424b5.htm) |
+
+_小计：47 份（其中 EFFECT 为 SEC 生效通知，无独立内容，对应同期注册声明）。_
+
+## 二、所有权（Ownership：Form 3 / 4 / 144 / Schedule 13G）— 43 份
+
+| 日期 | Form | 内容摘要 | 链接 |
+|------|------|----------|------|
+| 2023-11-27 | 144 | 拟售：Christopher Guzowski（高管）通过 Tourmaline Partners，34,853 股，市值 $127,214 | [0001495896-23-000007](https://www.sec.gov/Archives/edgar/data/1878848/000149589623000007/xsl144X01/primary_doc.xml) |
+| 2023-12-01 | 144 | 拟售：联席 CEO William (Gregory) Roberts，1,000,000 股，市值 $4,935,000（经纪 B. Riley） | [0001213900-23-092186](https://www.sec.gov/Archives/edgar/data/1878848/000121390023092186/xsl144X01/primary_doc.xml) |
+| 2023-12-01 | 144 | 拟售：联席 CEO Daniel Roberts，1,000,000 股，市值 $4,935,000（经纪 B. Riley） | [0001213900-23-092184](https://www.sec.gov/Archives/edgar/data/1878848/000121390023092184/xsl144X01/primary_doc.xml) |
+| 2023-12-11 | 144 | 拟售：Christopher Guzowski（高管），46,735 股，市值 $245,826 | [0001495896-23-000009](https://www.sec.gov/Archives/edgar/data/1878848/000149589623000009/xsl144X01/primary_doc.xml) |
+| 2023-12-12 | 144 | 拟售：Christopher Guzowski（高管），166,667 股，市值 $827,501 | [0001495896-23-000010](https://www.sec.gov/Archives/edgar/data/1878848/000149589623000010/xsl144X01/primary_doc.xml) |
+| 2024-01-26 | SCHEDULE 13G | 机构持有：HANSAINVEST Hanseatische Investment-GmbH，**7.83%**（被动机构） | [0001633724-24-000002](https://www.sec.gov/Archives/edgar/data/1878848/000163372424000002/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2024-02-12 | SCHEDULE 13G/A | HANSAINVEST 修订：持股降至 **5.67%** | [0001633724-24-000003](https://www.sec.gov/Archives/edgar/data/1878848/000163372424000003/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2024-02-14 | SC 13G/A | The Awassi Capital Trust #1（Roberts 家族信托），**6.0%** | [0001140361-24-007726](https://www.sec.gov/Archives/edgar/data/1878848/000114036124007726/ef20021660_sc13ga.htm) |
+| 2024-02-14 | SC 13G/A | The Awassi Capital Trust #2（Roberts 家族信托），**6.0%** | [0001140361-24-007721](https://www.sec.gov/Archives/edgar/data/1878848/000114036124007721/ef20021658_sc13ga.htm) |
+| 2024-07-03 | SCHEDULE 13G | HANSAINVEST 修订/再报：持股降至 **2.49%** | [0001633724-24-000006](https://www.sec.gov/Archives/edgar/data/1878848/000163372424000006/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2024-09-17 | 144 | 拟售：Christopher Guzowski（董事），28,970 股，市值 $223,938（经纪 Citigroup） | [0000950103-24-013677](https://www.sec.gov/Archives/edgar/data/1878848/000095010324013677/xsl144X01/primary_doc.xml) |
+| 2025-02-14 | SCHEDULE 13G | 机构持有：Jane Street Group, LLC，**6.0%**（做市/量化） | [0001595888-25-000076](https://www.sec.gov/Archives/edgar/data/1878848/000159588825000076/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2025-04-10 | SCHEDULE 13G | HANSAINVEST，**5.57%** | [0001633724-25-000002](https://www.sec.gov/Archives/edgar/data/1878848/000163372425000002/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2025-05-13 | SCHEDULE 13G/A | Jane Street Group 修订：持股降至 **2.4%** | [0001595888-25-000096](https://www.sec.gov/Archives/edgar/data/1878848/000159588825000096/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2025-07-03 | Form 4 | 董事 Christopher Guzowski：获授(A) 39,168 股（价 $0，股权激励授予） | [0000950103-25-008482](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008482/xslF345X05/dp231205_4-guzowski.xml) |
+| 2025-07-03 | Form 4 | 联席 CEO William (Gregory) Roberts：获授(A) **1,793,392 股**（授予） | [0000950103-25-008481](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008481/xslF345X05/dp231208_4-wroberts.xml) |
+| 2025-07-03 | Form 4 | 董事 David James Bartholomew：获授(A) 48,960 股 | [0000950103-25-008479](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008479/xslF345X05/dp231210_4-bartholomew.xml) |
+| 2025-07-03 | Form 4 | 联席 CEO Daniel John Roberts：获授(A) **1,793,392 股**（授予） | [0000950103-25-008478](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008478/xslF345X05/dp231209_4-droberts.xml) |
+| 2025-07-03 | Form 4 | 董事 Sunita Parasuraman：获授(A) 39,168 股 | [0000950103-25-008476](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008476/xslF345X05/dp231207_4-parasuraman.xml) |
+| 2025-07-03 | Form 4 | 董事 Michael Alfred：获授(A) 39,168 股 | [0000950103-25-008475](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008475/xslF345X05/dp231206_4-alfred.xml) |
+| 2025-07-03 | Form 4 | CFO Belinda Nucifora：获授(A) 63,910 股 | [0000950103-25-008474](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008474/xslF345X05/dp231204_4-nucifora.xml) |
+| 2025-07-03 | Form 3 | 初始持有申报：William (Gregory) Roberts（联席 CEO/董事） | [0000950103-25-008473](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008473/xslF345X02/dp230928_3-wroberts.xml) |
+| 2025-07-03 | Form 3 | 初始持有申报：Daniel Roberts（联席 CEO/董事） | [0000950103-25-008471](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008471/xslF345X02/dp230927_3-droberts.xml) |
+| 2025-07-03 | Form 3 | 初始持有申报：Belinda Nucifora（CFO） | [0000950103-25-008470](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008470/xslF345X02/dp230862_3-nucifora.xml) |
+| 2025-07-03 | Form 3 | 初始持有申报：Michael Alfred（董事） | [0000950103-25-008469](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008469/xslF345X02/dp230861_3-alfred.xml) |
+| 2025-07-03 | Form 3 | 初始持有申报：Sunita Parasuraman（董事） | [0000950103-25-008467](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008467/xslF345X02/dp230859_3-parasuraman.xml) |
+| 2025-07-03 | Form 3 | 初始持有申报：Christopher Guzowski（董事） | [0000950103-25-008466](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008466/xslF345X02/dp230860_3-guzowski.xml) |
+| 2025-07-03 | Form 3 | 初始持有申报：David James Bartholomew（董事） | [0000950103-25-008464](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008464/xslF345X02/dp230858_3-bartholomew.xml) |
+| 2025-07-03 | SCHEDULE 13G/A | The Awassi Capital Trust #2（Roberts 家族信托），**2.41%** | [0000950103-25-008484](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008484/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2025-07-03 | SCHEDULE 13G/A | The Awassi Capital Trust #1（Roberts 家族信托），**2.41%** | [0000950103-25-008483](https://www.sec.gov/Archives/edgar/data/1878848/000095010325008483/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2025-07-16 | SCHEDULE 13G | Jane Street Group，**5.2%**（重新过线） | [0001595888-25-000105](https://www.sec.gov/Archives/edgar/data/1878848/000159588825000105/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2025-07-23 | SCHEDULE 13G | HANSAINVEST，**4.71%** | [0001633724-25-000005](https://www.sec.gov/Archives/edgar/data/1878848/000163372425000005/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2025-08-14 | SCHEDULE 13G | 机构持有：Citadel Securities GP LLC，**4.7%** | [0001104659-25-078658](https://www.sec.gov/Archives/edgar/data/1878848/000110465925078658/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2025-09-05 | Form 4 | 联席 CEO Daniel Roberts 减持(S)：500,000 股 @ $25.49 + 500,000 股 @ $23.51（共 1,000,000 股） | [0000950103-25-011346](https://www.sec.gov/Archives/edgar/data/1878848/000095010325011346/xslF345X05/dp234081_4-droberts.xml) |
+| 2025-09-05 | Form 4 | 联席 CEO William (Gregory) Roberts 减持(S)：500,000 股 @ $25.49 + 500,000 股 @ $23.51 | [0000950103-25-011345](https://www.sec.gov/Archives/edgar/data/1878848/000095010325011345/xslF345X05/dp234080_4-wroberts.xml) |
+| 2025-09-11 | Form 4 | 联席 CEO Daniel Roberts 减持(S)：**1,000,000 股 @ $33.131**，减持后持 13,989,696 股 | [0000950103-25-011563](https://www.sec.gov/Archives/edgar/data/1878848/000095010325011563/xslF345X05/dp234279_4-droberts.xml) |
+| 2025-09-11 | 144 | 拟售：Daniel Roberts 经 Awassi Capital Trust #1，1,000,000 股，市值 **$33,131,000** | [0000950103-25-011562](https://www.sec.gov/Archives/edgar/data/1878848/000095010325011562/xsl144X01/primary_doc.xml) |
+| 2025-09-11 | Form 4 | 联席 CEO William (Gregory) Roberts 减持(S)：**1,000,000 股 @ $33.131**，减持后持 13,989,696 股 | [0000950103-25-011561](https://www.sec.gov/Archives/edgar/data/1878848/000095010325011561/xslF345X05/dp234278_4-wroberts.xml) |
+| 2025-09-11 | 144 | 拟售：William Roberts 经 Awassi Capital Trust #2，1,000,000 股，市值 **$33,131,000** | [0000950103-25-011560](https://www.sec.gov/Archives/edgar/data/1878848/000095010325011560/xsl144X01/primary_doc.xml) |
+| 2025-09-18 | Form 3 | 初始持有申报：Anthony J. Lewis（新任 CFO），持 194,515 + 44,000 股 | [0000950103-25-011864](https://www.sec.gov/Archives/edgar/data/1878848/000095010325011864/xslF345X02/dp234565_3-lewis.xml) |
+| 2025-11-13 | SCHEDULE 13G/A | Jane Street Group，**6.4%** | [0001595888-25-000152](https://www.sec.gov/Archives/edgar/data/1878848/000159588825000152/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2025-11-13 | SCHEDULE 13G | 机构持有：Capital Ventures International，**7.0%** | [0001446580-25-000116](https://www.sec.gov/Archives/edgar/data/1878848/000144658025000116/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2026-02-02 | SCHEDULE 13G/A | Jane Street Group 修订：**4.7%** | [0001595888-26-000008](https://www.sec.gov/Archives/edgar/data/1878848/000159588826000008/xslSCHEDULE_13G_X01/primary_doc.xml) |
+| 2026-02-13 | SCHEDULE 13G/A | Capital Ventures International 修订：**4.2%** | [0001446580-26-000036](https://www.sec.gov/Archives/edgar/data/1878848/000144658026000036/xslSCHEDULE_13G_X01/primary_doc.xml) |
+
+_小计：44 份（Form 4 ×11、Form 3 ×8、144 ×8、Schedule 13G 系列 ×16，全部经 XML 解析）。_
+
+## 三、监管来往（Correspondence：UPLOAD = SEC 问询函；CORRESP = 公司回函）— 23 份
+
+| 日期 | Form | 内容摘要 | 链接 |
+|------|------|----------|------|
+| 2021-09-23 | UPLOAD | SEC 对 IPO 草稿登记声明（DRS）的首轮问询：要求披露各期营收与净亏损等 | [0000000000-21-011621](https://www.sec.gov/Archives/edgar/data/1878848/000000000021011621/filename1.pdf) |
+| 2021-10-20 | UPLOAD | SEC 第二轮问询（F-1/草稿登记） | [0000000000-21-012725](https://www.sec.gov/Archives/edgar/data/1878848/000000000021012725/filename1.pdf) |
+| 2021-10-25 | CORRESP | 公司回函：回应 Amendment No.1 草稿登记问询（涉比特币、营收披露） | [0001140361-21-035329](https://www.sec.gov/Archives/edgar/data/1878848/000114036121035329/filename1.htm) |
+| 2021-11-02 | UPLOAD | SEC 问询（F-1 注册声明） | [0000000000-21-013308](https://www.sec.gov/Archives/edgar/data/1878848/000000000021013308/filename1.pdf) |
+| 2021-11-09 | CORRESP | 公司回函：回应注册声明问询（比特币、营收） | [0001140361-21-037103](https://www.sec.gov/Archives/edgar/data/1878848/000114036121037103/filename1.htm) |
+| 2021-11-15 | CORRESP | 公司回函（Form F-1 注册声明） | [0001140361-21-037808](https://www.sec.gov/Archives/edgar/data/1878848/000114036121037808/filename1.htm) |
+| 2021-11-15 | CORRESP | 公司回函（Form F-1 注册声明，另一封） | [0001140361-21-037806](https://www.sec.gov/Archives/edgar/data/1878848/000114036121037806/filename1.htm) |
+| 2022-10-03 | UPLOAD | SEC 问询函（注册/年报披露） | [0000000000-22-010831](https://www.sec.gov/Archives/edgar/data/1878848/000000000022010831/filename1.pdf) |
+| 2022-12-07 | CORRESP | 公司回函：涉现金流量表、比特币/加密、营收披露与注册声明 | [0001140361-22-044659](https://www.sec.gov/Archives/edgar/data/1878848/000114036122044659/filename1.htm) |
+| 2022-12-13 | UPLOAD | SEC 后续问询 | [0000000000-22-013435](https://www.sec.gov/Archives/edgar/data/1878848/000000000022013435/filename1.pdf) |
+| 2022-12-22 | CORRESP | 公司回函：涉现金流量表、加密、营收 | [0001140361-22-046599](https://www.sec.gov/Archives/edgar/data/1878848/000114036122046599/filename1.htm) |
+| 2023-01-26 | CORRESP | 公司回函（Form F-1 注册声明） | [0001140361-23-002840](https://www.sec.gov/Archives/edgar/data/1878848/000114036123002840/filename1.htm) |
+| 2023-09-19 | UPLOAD | SEC 加密资产办公室（Office of Crypto Assets）问询 | [0000000000-23-010304](https://www.sec.gov/Archives/edgar/data/1878848/000000000023010304/filename1.pdf) |
+| 2023-09-20 | CORRESP | 公司回函：回应加密资产相关问询（注册声明） | [0001140361-23-044546](https://www.sec.gov/Archives/edgar/data/1878848/000114036123044546/filename1.htm) |
+| 2024-02-22 | UPLOAD | SEC 加密资产办公室问询 | [0000000000-24-002031](https://www.sec.gov/Archives/edgar/data/1878848/000000000024002031/filename1.pdf) |
+| 2024-03-01 | CORRESP | 公司回函：回应加密相关问询 | [0001140361-24-010793](https://www.sec.gov/Archives/edgar/data/1878848/000114036124010793/filename1.htm) |
+| 2024-05-22 | UPLOAD | SEC 加密资产办公室问询 | [0000000000-24-005908](https://www.sec.gov/Archives/edgar/data/1878848/000000000024005908/filename1.pdf) |
+| 2024-05-24 | CORRESP | 公司回函：回应加密相关问询 | [0000950103-24-007087](https://www.sec.gov/Archives/edgar/data/1878848/000095010324007087/filename1.htm) |
+| 2024-11-19 | UPLOAD | **【重述周期】** SEC 加密资产办公室就 FY2024 Form 20-F 问询：净电费列报（p.92）、历史现金流（p.102）、比特币挖矿收入政策（F-15） | [0000000000-24-012765](https://www.sec.gov/Archives/edgar/data/1878848/000000000024012765/filename1.pdf) |
+| 2024-12-18 | CORRESP | **【重述周期】** 公司回函：回应 FY2024 20-F 现金流量表 / 比特币 / 净电费等问询 | [0001140361-24-049827](https://www.sec.gov/Archives/edgar/data/1878848/000114036124049827/filename1.htm) |
+| 2025-02-20 | UPLOAD | **【重述周期】** SEC 续问：比特币系非现金对价取得的无形资产，其后续出售应按 IAS 7 列为投资活动（现金流量表 F-11） | [0000000000-25-001990](https://www.sec.gov/Archives/edgar/data/1878848/000000000025001990/filename1.pdf) |
+| 2025-03-20 | CORRESP | **【重述周期】** 公司回函：**同意** 按 IAS 7.16(b) 将比特币出售所得重列为投资活动，并将在 20-F 修订稿中相应重述财务报表 | [0001140361-25-009535](https://www.sec.gov/Archives/edgar/data/1878848/000114036125009535/filename1.htm) |
+| 2025-03-21 | UPLOAD | **【重述周期】** SEC 复核完成函（Review complete）——加密现金流重述问询闭环 | [0000000000-25-003085](https://www.sec.gov/Archives/edgar/data/1878848/000000000025003085/filename1.pdf) |
+
+_小计：23 份（UPLOAD ×11、CORRESP ×12）。2024-11 至 2025-03 的 5 封确属加密现金流重述：SEC 要求比特币售出所得从经营活动改列投资活动（IAS 7.16(b)），公司在 20-F 修订稿中重述，已确认。_
+
+---
+
+**总计 114 份备案，无遗漏。**
+
+---
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>运营资产 — IREN</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.75;color:#1a2233;max-width:940px;margin:0 auto;padding:0 20px 80px;background:#fbfcfe}
+ header.nav{position:sticky;top:0;background:#0c1f33;color:#fff;margin:0 -20px 10px;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;z-index:10;font-size:14px}
+ header.nav a{color:#9fd9bd;text-decoration:none;font-weight:600} header.nav a.active{color:#fff;border-bottom:2px solid #5fdd9d} header.nav a:hover{color:#fff}
+ .stamp{font-size:12px;color:#9fb3c8;margin-left:auto}
+ .subnav{background:#eef4fb;margin:0 -20px 24px;padding:8px 20px;font-size:12.5px;border-bottom:1px solid #dde5ee}
+ .subnav a{color:#26557e;text-decoration:none;margin-right:13px;white-space:nowrap;display:inline-block} .subnav a:hover{text-decoration:underline}
+ h1{border-bottom:3px solid #5fdd9d;padding-bottom:8px;margin-top:1.2em} h2{border-bottom:1px solid #dde5ee;padding-bottom:5px;margin-top:1.8em;color:#0c1f33} h3{color:#26415e}
+ table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px} th,td{border:1px solid #d8e0ea;padding:7px 10px;text-align:left;vertical-align:top} th{background:#eef4fb} tr:nth-child(even){background:#f7fafd}
+ code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:90%} pre{background:#f4f7fb;border-radius:8px;overflow:auto} pre code{background:none}
+ blockquote{border-left:4px solid #ffd166;background:#fffdf5;margin:14px 0;padding:8px 16px;color:#4a5568}
+ .mermaid{background:#fff;border:1px solid #e3eaf3;border-radius:8px;padding:16px;margin:16px 0;text-align:center} a{color:#1a73c2}
+ .disc{background:#fff5f5;border:1px solid #ffd0d0;border-radius:8px;padding:10px 16px;font-size:13px;color:#7a3030;margin-top:24px}
+</style></head><body>
+<header class="nav"><a href="index.html">🏠 总览</a>
+<a href="report.html">📊 严谨财务报告</a>
+<a href="explainer.html">📖 通俗科普版</a>
+<a href="filings.html">🗂️ 全量Filing清单</a><span class="stamp">数据截止 2026-05-31 ｜ 最后更新 2026-05-31 ｜ 版本 v1.2</span></header>
+<div class="subnav"><a href="11_news_crosscheck.html">11 新闻↔SEC核对</a> <a href="00_initial_impression.html">00 初始印象</a> <a href="01_corporate_dna.html">01 公司DNA</a> <a href="02_business_map.html">02 业务地图</a> <a href="02_business_segments_DEEP.html">02 分部深挖</a> <a href="03_customers.html">03 客户</a> <a href="04_financial_statements.html">04 三表</a> <a href="04b_cash_flow_DEEP.html">04b 现金流深挖</a> <a href="05_accounting_policies.html">05 会计政策</a> <a href="06_capital_structure.html">06 资本结构</a> <a href="07_related_parties.html">07 关联方</a> <a href="08_risk_factors.html">08 风险因素</a> <a href="09_governance.html">09 治理薪酬</a> <a href="10_industry_compare.html">10 行业对比</a> <a href="12_open_questions.html">12 悬而未决</a> <a href="13_equity_options_vesting.html">13 股权期权</a> <a href="14_yoy_changes.html">14 逐年变更</a> <a href="15_operating_asset_deep_dive.html">15 运营资产</a> <a href="16_nonoperating_distortion_deep_dive.html">16 非经营剥离</a> <a href="17_glossary_value_chain.html">17 术语+产业链</a></div>
+<div id="content">渲染中…</div>
+<script type="text/markdown" id="md"># 15 — IREN Limited 运营 / 重资产专题档案（Operating Asset Deep Dive）
+
+> Agent D 交付件 | 标的：IREN Limited (NASDAQ: IREN, CIK 0001878848, FY 截止 6/30)
+> 数据源四级标注：★ SEC 一手 / ◆ 计算 / ◇ 第三方/公司投资材料 / ▽ 估算 | 单位写全，10× 复核
+> 主源：
+> - ★ [10-K FY2025 (period 2025-06-30)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001878848&type=10-K) — 本地 `data/research/IREN/raw/10K_FY2025.htm`
+> - ★ [10-Q Q3 FY26 (period 2026-03-31)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001878848&type=10-Q) — 本地 `data/research/IREN/raw/10Q_2026-03-31.htm`
+> - ◇ [IREN Q3 FY26 Earnings Presentation (May 7, 2026)](https://investors.iren.com) — 本地 `data/raw/IREN/external/IREN_Q3FY26_Earnings_Presentation.pdf`
+>
+> **产能单位统一定义**：MW = 兆瓦电力（IT load 或数据中心容量，公司口径）；EH/s = 算力（仅 Bitcoin 挖矿）；GPU 数量 = AI Cloud 算力。本档案以 **MW（数据中心容量 / 电力）** 为主口径。
+
+---
+
+## 0. 一页纸速查（必填）
+
+| 维度 | 数据 | 来源 |
+|---|---|---|
+| 运营站点数（已控制并表）| 6 个运营站点（TX×1 Childress、BC×3 Canal Flats/Mackenzie/Prince George）+ 2 个 TX 开发站点（Sweetwater 1&2）；全部全资自有 | ★ 10-K |
+| 合计已投产数据中心容量（FY25 末）| ~810 MW（TX 650 + BC 160）| ★ 10-K p.320 |
+| 已担保电力（secured power）| 2,910 MW（FY25 10-K）→ **5 GW**（Q3 FY26 deck，含 EU/APAC + Kiowa OK）| ★ / ◇ |
+| 容量阶梯目标 | 2026 末 480 MW（150k GPU）→ 2027 末 1,210 MW（+730 MW）→ 2028+ 5 GW | ◇ Q3 deck p.7 |
+| 在洽谈/未签约管线 | Kiowa OK 1,600 MW + Sweetwater 剩余 1,700 MW + EU/APAC（Nostrum 西班牙）+ 2027 大单谈判中 | ◇ |
+| BS 相关资产账面值（PP&E net, FY25）| 待查（交 Agent A，建议从 BS 拉 Property, plant and equipment, net）| ★ |
+| Capex（FY25）| 待查（交 Agent A/C 从投资活动现金流）；电力连接押金 Sweetwater $11.7m+$13.5m+$4.1m | ★ 10-K p.315 |
+| 相关收入（FY25 总）| Bitcoin mining $484.6m + AI Cloud $16.4m = $501.0m | ★ 10-K |
+| 相关收入（9M FY26）| Bitcoin mining $511.5m + AI Cloud $58.3m = $569.8m | ★ 10-Q |
+
+---
+
+## 15.1 财务确认（最关键）
+
+### (a) 营收 / 收入如何确认 ★
+
+| 收入类型 | 合同性质 | 确认方法 | 确认时点 | ASC 依据 | 来源 |
+|---|---|---|---|---|---|
+| Bitcoin mining | 与矿池（Antpool/Foundry）算力服务合同，**非现金对价**（赚 BTC）| Point-in-time（按日）| 当日提供 hash 计算服务并取得 BTC（入账=取得日公允价值，当日清算）| ASC 606 | ★ 10-Q Note；CORRESP 2024-12-18 |
+| AI Cloud Services | 云端 GPU 算力（H100/H200/Blackwell）售给第三方做 AI 训练/推理；on-demand 至 5 年长约 | Over-time（按期间/用量）| 随服务交付期间 | ASC 606 | ★ 10-Q |
+
+**关键问答**：
+- 收入是「服务费」（ASC 606，IREN 是算力服务商），**不是租金（ASC 842 房东）**。IREN 自有并运营 GPU/数据中心，向客户卖的是「云算力使用权」，不是把房子租给客户。这点很关键：H4/H16 里它不是 colocation 房东模式。
+- **Deferred Revenue 存在且暴增**：9M FY26 现金流里 deferred revenue 变动 **+$119.5m**（★ 10-Q OCF），反映 AI Cloud 长约预收款大增（与 $3.4bn NVIDIA、Microsoft 等合同的预付/里程碑结构一致）。FY25 末递延收入余额：待查（交 Agent A 从 BS）。
+- **自用产能**：Bitcoin 挖矿是「自用」（不产生外部租金，产出数字资产即时变现）。FY25 末/Q3 FY26 末 **均未持有任何 Bitcoin**（每日全部清算，BS 上数字资产 = $0，★ 10-K p.311 / 10-Q line 3224）。→ 无加密财库扰动（详见档案 16）。
+- **最低承诺合同（take-or-pay / RPO）**：$3.4bn / 5 年 NVIDIA 合同 ★；$3.1bn ARR under contract（含 $0.7bn 来自 NVIDIA 5 年 air-cooled Blackwell，2027 初 ramp）◇ Q3 deck p.11；目标 CY26 末 ARR $3.7bn ◇。「Operational capacity fully contracted」◇ deck p.5。
+
+### (b) 成本、费用及折旧如何确认 ★
+
+| 成本项 | 计入科目 | 现金/非现金 | 备注（Q3 FY26, 3M）| 来源 |
+|---|---|---|---|---|
+| 电力 | Cost of revenue（COGS）| 现金 | 占 COGS 大头；Bitcoin COGS $35.3m（电力下降 $8.7m，spot 价低）| ★ 10-Q p.3581 |
+| 运维人工 | COGS | 现金（+SBC）| AI Cloud COGS 仅 $4.6m（人头增加）| ★ |
+| 设施 + 设备折旧 | **单列 D&A**（不在 COGS 内，IS 上「exclusive of depreciation」）| 非现金 | 3M FY26 D&A = **$121.2m**（9M $305.6m，YoY 大增因 GPU/矿机投产+S19j 加速折旧）| ★ 10-Q |
+| 在建期间利息 | 资本化进 PP&E（⚠️）| 非现金（递延）| 利息资本化金额：待查（交 Agent C 从 PP&E/利息 note）| ★ |
+
+> ⚠️ **关键结构特征**：IREN 把折旧**单独列示**在营业费用区（"Cost of revenue exclusive of depreciation and amortization"）。这意味着所谓 segment "gross profit"（Q3 9M = $383.4m）**不含折旧**，看着很高；真实经营利润被巨额 D&A 吃掉（见档案 16 剥离测试）。读者极易被「毛利率 67%」误导。
+
+**折旧寿命表（来自档案 05.3，Agent B）**：
+
+| 资产类别 | 公司寿命 | 同业可比 | 判断 | 来源 |
+|---|---:|---:|---|---|
+| Buildings 数据中心壳体 | 20 年 | 20–40 年 | 保守-中性 | ★ 10-K Note 2 |
+| Plant & equipment 机电 | 3–10 年 | 7–15 年 | 中性偏保守 | ★ |
+| Mining hardware S19j Pro | 2 年（FY24 起下调）| 4–5 年 | 保守（加速折旧）| ★ |
+| HPC/AI GPU（H100/H200）| 5 年 | 5–6 年（hyperscaler）| 中性 | ★ |
+
+```
+⚠️ 重点警觉自检：
+□ 在建工程（CIP）有没有计提折旧？ → 未在 note 见到对 CIP 折旧（Sweetwater 等开发站点尚未投产，应未折旧）。待 Agent C 复核 PP&E note 的 CIP 行。
+□ Impairment 频繁：FY23 $105.2m、FY25 $7.2m、9M FY26 $188.4m（Q3 单季 $140.4m）→ 矿机/旧设备在向 AI 转型中被「displaced」减值。这是转型的反复成本，详见档案 16。
+□ GPU 5 年寿命 vs Blackwell 代际更替快 → 若实际经济寿命 < 5 年，未来还会有减值/加速折旧（红旗）。
+```
+
+### (c) 数据中心作为资产，还是其他核算方式？ ★
+
+| 设施 | 核算方式 | 在哪张表 / 科目 | 来源 |
+|---|---|---|---|
+| 全部 6 运营站点 + Sweetwater 开发地 | **自有资产（PP&E）+ 自有 freehold 土地** | BS — Property, plant and equipment, net | ★ 10-K p.313, p.1212-1214 |
+| 部分 GPU 设备 | **融资租赁**（finance lease，通过全资非追索 SPV；IREN 母公司提供担保）| BS — PP&E（finance-lease ROU 含在 PP&E）+ 租赁负债；折旧+利息 | ★ 10-Q line 1187；10-K p.585 |
+| 经营租赁 | 少量办公等 | BS — Operating lease ROU / 租赁负债 | ★ 10-Q（BS line 245/280/304）|
+
+> **结论**：IREN 是**垂直一体化、重资产自有**模式 —— 自有数据中心、电气基础设施、**freehold 土地**（BC 三地 10/11/21 acres；Childress ~500 acres；Sweetwater ~1,836 acres）。GPU 部分通过融资租赁取得（但 ROU 进 PP&E，类自有）。**没有任何站点是 JV / 权益法 / 表外**（无少数股东、无 VIE 不并表）。这与 colocation/hosting 轻资产同业（依赖第三方托管或短租地）形成对比，是公司刻意强调的「control」差异化。
+
+---
+
+## 15.2 资产与控制权（逐个站点）
+
+| # | 站点 / 位置 | 取得方式 | 控制权 % | 核算 | 少数股东 | 来源 |
+|---|---|---|---:|---|---|---|
+| 1 | Childress, TX (US) | 自建 freehold (~500 acres) | 100% | 并表 PP&E | 否 | ★ 10-K p.314, p.1214 |
+| 2 | Sweetwater 1, TX (US) | 自建 freehold（与 SW2 合计 ~1,836 acres）| 100% | 并表 PP&E（开发/在建）| 否 | ★ |
+| 3 | Sweetwater 2, TX (US) | 自建 freehold | 100% | 并表 PP&E（开发/在建）| 否 | ★ |
+| 4 | Canal Flats, BC (CA) | 2020 收购 PodTech (10 acres) | 100% | 并表 PP&E | 否 | ★ p.318, p.1212 |
+| 5 | Mackenzie, BC (CA) | 自建 freehold (11 acres) | 100% | 并表 PP&E | 否 | ★ |
+| 6 | Prince George, BC (CA) | 自建 freehold (21 acres) — AI Cloud GPU 所在地 | 100% | 并表 PP&E | 否 | ★ |
+| 7 | Kiowa, OK (US) | 开发权（1,600 MW）| 待确认（开发中）| 尚未并表为运营资产 | — | ◇ Q3 deck p.18 |
+| 8 | Nostrum, Spain (EU) | **拟收购**（pending acquisition, Nostrum Group / Ingenostrum；490 MW）| 待交割 | 尚未并表 | — | ◇ Q3 deck p.2 disclaimer（"pending acquisitions of Mirantis and Nostrum"）|
+
+> ⚠️ 全部运营站点 100% 全资，无经济权益稀释（无优先股/earnout 在站点层面）。**唯一的「未来表外→并表」变化点是 Nostrum (Spain) + Mirantis 两笔 pending acquisition**，目前未并表（仍在监管审批/交割条件中）。GPU 融资租赁通过非追索 SPV，但 IREN 母公司担保 → 实质风险在表内。
+
+---
+
+## 15.3 产能与交付管线
+
+### 已交付 vs 计划（逐站点，MW = 数据中心/电力容量）
+
+| 站点 | 总担保/规划 MW | FY25 末已投产 MW | 2026 计划新增 MW | 2027+ 计划 MW | 来源 |
+|---|---:|---:|---:|---:|---|
+| Childress, TX | 750 | 650 | +180（含 Horizon 1-4 GPU 区，BC&Childress 合计；Childress 50MW liquid + retrofit）| +400（Horizon 5-6 100MW liquid + 250MW retrofit）| ★ 10-K / ◇ deck p.7,9,10,14 |
+| Prince George, BC | 50 | 50 | GPU 全部运营/调试中 | — | ◇ deck p.10 |
+| Mackenzie, BC | 80 | 80 | GPU 安装 H2 2026 | — | ◇ deck p.10 |
+| Canal Flats, BC | 30 | 30 | — | +30 retrofit（air→液冷）| ◇ deck p.13 |
+| Sweetwater 1, TX | 1,400 | 0（在建）| substation 已按计划通电 | +300（初始 200MW IT load 液冷，Vera Rubin）| ★ 10-K / ◇ deck p.7,15 |
+| Sweetwater 2, TX | 600 | 0（开发）| — | 2027 Q4 通电目标 | ★ 10-K |
+| Kiowa, OK | 1,600 | 0 | — | 2028 起 ramp | ◇ deck p.18 |
+| Nostrum, Spain | 490（拟收购）| 0 | — | 2027+ | ◇ |
+| **合计已担保** | **~5 GW** | **~810 MW** | → **480 MW 目标** | → **1,210 MW 目标** | ◇ deck p.7 |
+
+### 逐年交付计划（区分已发生 vs 计划）
+
+| 时间 | 累计目标容量 | 状态 | GPU/ARR | 来源 |
+|---|---:|---|---|---|
+| FY25 末（2025-06-30，已发生）| ~810 MW（数据中心运营容量）| 已交付 ★ | ~1.9k H100/H200 GPU | ★ 10-K p.320 |
+| 2026 末（CY26, 目标）| **480 MW** | On Track ◇ | 150,000 GPU；ARR 目标 $3.7bn | ◇ deck p.7,11 |
+| 2027 末（CY27, 目标）| **1,210 MW**（+730 MW）| In Build ◇ | — | ◇ deck p.7 |
+| 2028+（中期）| **5 GW**（10× from 2026）| In Development ◇ | — | ◇ deck p.7 |
+
+> **注意 480MW 与 810MW 的口径差异**：FY25 末「810MW 运营数据中心容量」主要是 **Bitcoin 挖矿** 容量；「480MW (2026)」是公司新口径下的 **AI/HPC + 已转型** 部署目标（150k GPU）。两者口径不同，不可直接相减。挖矿容量正被「displaced」并减值（见 9M FY26 $188.4m 减值）。
+>
+> ```
+> □ 「计划」来源 = 公司投资材料指引（◇），非 SEC 强制披露（★）。投资者材料明示「guidance only effective as of May 7, 2026」。
+> □ 触发条件：电力通电（Sweetwater 1 substation 已按计划通电 ✓）、GPU 到货（150k 目标）、客户签约（"capacity contracted prior to commissioning"）。
+> □ 兑现记录：Childress 750MW 自 2023-04 运营、Sweetwater 1 substation「energized on schedule」✓ — 近期兑现良好；但 5GW/1,210MW 多为 2027-2028 远期，未经验证。
+> ```
+
+---
+
+## 15.4 在洽谈 / 未签约管线
+
+| 项目 | 阶段 | 潜在容量 | 潜在对手方 | 来源 | 可信度 |
+|---|---|---:|---|---|---|
+| Kiowa, OK | 开发中（advancing through connection processes）| 1,600 MW | 未签约客户 | ◇ deck p.18 | 中 |
+| Sweetwater 1&2 剩余 | 开发中（ramp from 2028）| 1,700 MW（2GW 减去已规划 300MW）| 谈判中 | ◇ deck p.18 | 中 |
+| 2027 大单 | "Negotiating large-scale AI Cloud deployments across 2027 capacity" | 1,210MW 内未签部分 | 未披露 | ◇ deck p.16 | 中 |
+| Nostrum (Spain) / Ingenostrum | **Pending acquisition**（监管审批/交割条件中）| 490 MW | EU 扩张 | ◇ deck p.2 | 中 |
+| Mirantis | Pending acquisition | — | 软件/平台能力 | ◇ deck p.2 | 中 |
+| EU & APAC 新站点 | "New sites in EU & APAC" | 未量化 | — | ◇ deck p.5 | 低 |
+| 额外多个开发项目 | "Multiple additional development projects" | 多 GW（达 5GW+ 之外）| — | ★ 10-K p.434（2,910MW 之外）| 低 |
+
+```
+□ 已签约（binding）：$3.4bn / 5yr NVIDIA ★、$3.1bn ARR under contract（含 Microsoft、together.ai、FluidStack、Fireworks AI 等 logo）◇ deck p.11
+□ 意向/谈判（non-binding）：上表全部
+□ 未签约管线不计入「确定容量」，仅作上行期权。Microsoft $9.7bn 与 NVIDIA $3.4bn 为已签合同（Big Story），但 5GW/1,210MW 之外的 ARR 仍待签约。
+```
+
+---
+
+## 📝 运营/重资产专题总结
+
+```
+1. 财务确认：收入按 ASC 606 服务费确认（不是 ASC 842 租金）—— Bitcoin point-in-time（日清算，无币库），
+   AI Cloud over-time（含巨额预收 deferred revenue 9M +$119.5m）。成本大头=电力(现金)；
+   折旧单列、不入 COGS（D&A 9M FY26 = $305.6m）→「毛利率 67%」严重高估真实盈利。
+   GPU 5 年寿命=中性；矿机 2 年=保守。利息资本化金额待 Agent C 补。
+
+2. 资产与控制权：6 个运营站点 + 2 个 Sweetwater 开发地，全部 100% 全资自有 freehold（无 JV/权益法/VIE，
+   无少数股东）。GPU 部分融资租赁（非追索 SPV，但母公司担保，实质在表内）。
+   唯一表外→并表变化点：Nostrum (Spain, 490MW) + Mirantis 两笔 pending acquisition（未交割）。
+
+3. 产能与交付：FY25 末已投产 ~810MW（多为挖矿）；阶梯目标 480MW(2026,150k GPU)→1,210MW(2027,+730MW)
+   →5GW(2028+,10×)。担保电力从 2,910MW(FY25 10-K)升至 5GW(Q3 deck)。Sweetwater 1 substation「on schedule」
+   通电、Childress 长期兑现 → 近期执行可信；但 1,210MW/5GW 多为 2027-2028 远期，未经验证。
+   在洽谈：Kiowa OK 1,600MW + Sweetwater 剩余 1,700MW + EU/APAC，均未签约。
+
+4. 最大会计判断点 / 红旗：
+   (a) 折旧单列于 COGS 之外 → 段毛利虚高，掩盖真实经营亏损（Q3 FY26 营业亏损 $(233.5)m）。
+   (b) Impairment 反复（FY23 $105m、9M FY26 $188m）= 挖矿→AI 转型的设备 displacement 成本，
+       本质是「重资产快速过时」的经常性代价，不应当作一次性。
+   (c) 容量口径混用（810MW 挖矿 vs 480MW AI 目标）易误导。
+   → 验证 H5/H15：5GW/1,210MW 阶梯属实，控制权清晰（全资自有 freehold + GPU 融资租赁），
+     收入/折旧确认清楚（606 服务费 + 单列折旧），但远期产能未经验证、转型减值持续吞噬利润。
+```
+</script>
+<script>
+ const raw=document.getElementById('md').textContent; marked.setOptions({gfm:true,breaks:false});
+ const tmp=document.createElement('div'); tmp.innerHTML=marked.parse(raw);
+ tmp.querySelectorAll('pre code.language-mermaid').forEach(c=>{const d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentElement.replaceWith(d);});
+ document.getElementById('content').innerHTML=tmp.innerHTML;
+ mermaid.initialize({startOnLoad:false,theme:'neutral'}); mermaid.run();
+</script></body></html>
