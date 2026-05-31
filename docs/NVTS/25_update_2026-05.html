@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2026-05 重大更新与勘误 · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">2026-05 重大更新与勘误 · NVTS</h1>
+</header>
+<h1 id="2026-05-数据截止后重大更新--gaap非-gaap-口径更正">2026-05
+数据截止后重大更新 + GAAP/非 GAAP 口径更正</h1>
+<blockquote>
+<p>本页是对全套报告的<strong>追更与勘误</strong>。触发：用户要求复核截至
+2026-05-31 之前的全部 SEC filing。 复核结论：EDGAR 最新 filing 为
+<strong>2026-05-29</strong>（5/30–5/31
+为周末，无新申报），清单无遗漏；但<strong>数据截止（FY2025 10-K / Q1'26
+10-Q）之后落地的一批 8-K + 13D/A
+含重大事件</strong>，此前仅列为「悬而未决」，现已逐份精读并入。同时纠正一处<strong>毛利率口径错误</strong>。
+标签：★ SEC 直接 · ◆ 计算 · ◇ 第三方 · ▽ 推算。</p>
+</blockquote>
+<hr />
+<h2
+id="一red_circle-最重磅股价从-7-暴涨到-29约-4-倍此前判断被推翻">一、🔴
+最重磅：股价从 ~$7 暴涨到 ~$29（约 4 倍），此前判断被推翻</h2>
+<table>
+<thead>
+<tr>
+<th>事实</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>维权大股东 <strong>Ranbir Singh（GeneSiC 创始人、8% 股东、13D
+申报人）</strong> 于 <strong>2026-05-27 卖出 3,060,118
+股</strong>（加权均价 <strong>$29.2862</strong>，区间
+$28.56–$31.94）、<strong>2026-05-28 再卖 664,058 股</strong>（均价
+$28.7201，区间 $28.44–$29.43）</td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000092189526001504/ex1to13da314410002_052926.htm">SCHEDULE
+13D/A 2026-05-29 Ex-1</a></td>
+</tr>
+<tr>
+<td>合计减持 <strong>3,724,176 股 ≈ 套现 $1.08 亿</strong> ◆（3,724,176
+× ~$29）</td>
+<td>◆ 计算得出</td>
+</tr>
+</tbody>
+</table>
+<p><strong>含义（▽）</strong>：股价在 2026 年 5 月已到 ~$28–32，较
+FY2025 年末的 ~$7.14（★ 10-K）<strong>翻了约 4 倍</strong>——几乎确定是
+AI 高功率 + 英伟达 800V HVDC 叙事 +
+半导体板块情绪共振的结果。这一条<strong>直接推翻</strong>了原报告（§13、§19、档案
+16）基于「股价 ~$7、远低于
+$12.50」做出的两个判断：①「对赌股大概率作废、负债将反转为收益」——错，第一档已触发（见下）；②隐含的「估值低迷、商誉减值风险高」——股价大涨后该担忧显著缓解。<strong>这是「必须复核到最新
+filing」的教科书案例。</strong></p>
+<blockquote>
+<p>⚠️
+同时这是一个值得记录的信号：<strong>被动等来的反转里，维权创始股东在高位大额减持</strong>（占其
+~18.67M 持股的约 20%）。</p>
+</blockquote>
+<hr />
+<h2 id="二red_circle-spac-对赌股第一档已达成不再是大概率作废">二、🔴
+SPAC 对赌股第一档已达成（不再是「大概率作废」）</h2>
+<table>
+<thead>
+<tr>
+<th>事实</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2026-05-22 公司发行 3,277,438 股 Class A</strong>，以履行
+<strong>Triggering Event I</strong>（即 $12.50 VWAP
+档）下的对赌股义务</td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926065737/tm2615305d2_8k.htm">8-K
+2026-05-22 Item 8.01</a></td>
+</tr>
+<tr>
+<td>对赌股总额仍为最多 10,000,000 股，窗口至
+2026-10-19；第一档（$12.50）已触发</td>
+<td>★ 同上</td>
+</tr>
+<tr>
+<td><strong>2026-05-18 与 Live Oak Sponsor 签 Settlement, Release and
+Amendment Agreement</strong>：转让 726,225 股 Sponsor
+对赌股（解除归属/没收/转让限制）+ 此前已确认赚得 421,000 股 + Sponsor
+没收 115,775 股；双方<strong>全面互相免责</strong></td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926065731/tm2614473d1_8k.htm">8-K
+2026-05-22 Item 1.01</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>含义</strong>：①约 328 万股对赌股 + Sponsor 相关股份落地 =
+<strong>额外稀释</strong>；②对赌负债（FY2025 末 $22.632M
+★）会随股价大涨被<strong>大幅上调</strong>，在 2026
+年报告期产生<strong>巨额非现金公允价值损失</strong>（与
+FY2022「股价跌→记收益」完全相反）——所以未来某季 headline
+净亏损会因对赌负债重估而异常放大，<strong>这不是经营恶化，是会计镜像</strong>（呼应档案
+16 的剥离测试逻辑，只是方向反转）。</p>
+<hr />
+<h2 id="三red_circle-第三轮巨额增发125m-新-atm数日内全额售罄">三、🔴
+第三轮巨额增发：$125M 新 ATM，数日内全额售罄</h2>
+<table>
+<thead>
+<tr>
+<th>事实</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2026-05-11 签新 Sales Agreement</strong>（代理
+<strong>Craig-Hallum + UBS Securities</strong>），ATM 额度 <strong>最高
+$125.0 million</strong>；同日配套 <strong>S-3ASR 货架 +
+424B5</strong></td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926059828/tm2614473d1_8k.htm">8-K
+2026-05-13 Item 8.01</a></td>
+</tr>
+<tr>
+<td><strong>截至 2026-05-12 已售出 6,529,666 股、净募 ~$122.0
+million，并已全额售罄</strong></td>
+<td>★ 同上</td>
+</tr>
+</tbody>
+</table>
+<p><strong>含义</strong>：继 2025 年 ATM $100M + PIPE $100M（净 $95.6M ★
+FY2025 earnings）之后，<strong>2026 年 5 月又一次性增发
+~$122M</strong>。趁股价大涨高位融资——这次发行价 ◆ ~$18.7/股（122M ÷
+6.53M）远高于 2025 年的
+$5–6.75，<strong>稀释代价相对更小、且大幅延长现金跑道</strong>。截至此，2024
+年末以来累计增发约 <strong>4,170 万股</strong>（19.78M ATM'25 + 14.81M
+PIPE + 6.53M ATM'26 + 3.28M 对赌）。</p>
+<hr />
+<h2 id="四red_circle-毛利率口径更正原报告-31376-用错了口径">四、🔴
+毛利率口径更正（原报告 31%/37.6% 用错了口径）</h2>
+<p>原报告（§7、§15、档案 22/21/10）用「营收 −
+不含无形摊销的营业成本」算出 FY2025 毛利率 31%、Q1'26
+37.6%。<strong>这不是公司的 GAAP 毛利率。</strong>
+公司财报对账表显示，$16.14M 的<strong>收购开发技术摊销应计入
+COGS</strong>，因此真实 GAAP 毛利率为<strong>负</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>口径（FY2025）</th>
+<th style="text-align: right;">毛利</th>
+<th style="text-align: right;">毛利率</th>
+<th>说明</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10-K 毛利小计（成本不含无形摊销）</td>
+<td style="text-align: right;">$14,248K</td>
+<td style="text-align: right;">31.0%</td>
+<td>原报告误用此为「毛利率」</td>
+<td>★ 10-K IS</td>
+</tr>
+<tr>
+<td><strong>公司 GAAP 毛利</strong>（开发技术摊销 $16,140K 计入
+COGS）</td>
+<td style="text-align: right;"><strong>$(1,892)K</strong></td>
+<td style="text-align: right;"><strong>(4.1)%</strong></td>
+<td>公司披露的真实 GAAP 毛利率</td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000003/exhibit991-navitassemicond.htm">FY2025
+earnings 8-K 2026-02-24</a></td>
+</tr>
+<tr>
+<td>非 GAAP 毛利（再剔 SBC + China SiC 减值 $3.174M）</td>
+<td style="text-align: right;">$17,652K</td>
+<td style="text-align: right;"><strong>38.4%</strong></td>
+<td>公司主推口径</td>
+<td>★ 同上</td>
+</tr>
+</tbody>
+</table>
+<p>季度 GAAP 毛利率（★ 同源）：<strong>Q4'25 (17.2)% · Q1'25 9.1% ·
+FY2024 15.0%</strong>；Q1'26 GAAP <strong>(9.3)%</strong> / 非 GAAP
+39.0%（★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926055620/tm2613492d1_ex99-1.htm">Q1'26
+earnings 8-K 2026-05-05</a>）。</p>
+<pre><code>三套毛利率口径（FY2025，单位 %）
+ 10-K 毛利小计(不含无形摊销)   ███████████████  31.0
+ 公司 GAAP 毛利率              ▏               (4.1)  ← 真实 GAAP，负
+ 非 GAAP 毛利率                ████████████████████ 38.4</code></pre>
+<blockquote>
+<p><strong>结论</strong>：NVTS 的<strong>真实 GAAP
+毛利率是负的</strong>（FY2025 −4.1%，Q4'25 −17.2%）——收购无形摊销 +
+收入太小是主因；管理层叙事用的是 ~38% 的<strong>非 GAAP</strong>
+毛利率。原报告 31%
+口径偏乐观，特此更正。这不改变「经营巨亏」的结论（摊销在损益表里无论放
+COGS 还是 opex，经营亏损都是
+−$107.8M），但<strong>把毛利率讲准很重要</strong>。</p>
+</blockquote>
+<hr />
+<h2 id="五非-gaap-经营亏损-vs-我的剥离测试两套口径对照">五、非 GAAP
+经营亏损 vs 我的剥离测试（两套口径对照）</h2>
+<p>公司现已披露完整非 GAAP 对账（此前我标为缺失，已补）：</p>
+<table>
+<thead>
+<tr>
+<th>口径（FY2025）</th>
+<th style="text-align: right;">经营亏损</th>
+<th>剔除了什么</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GAAP 经营亏损</td>
+<td style="text-align: right;"><strong>$(107,764)K</strong></td>
+<td>—</td>
+<td>★ FY2025 earnings</td>
+</tr>
+<tr>
+<td>我的「底层经营亏损」（档案16）</td>
+<td style="text-align: right;">~$(88,920)K</td>
+<td>仅剔重组减值 + 坏账（<strong>保留</strong> SBC + 无形摊销）</td>
+<td>◆</td>
+</tr>
+<tr>
+<td>公司非 GAAP 经营亏损</td>
+<td style="text-align: right;"><strong>$(45,968)K</strong></td>
+<td>再剔 SBC $14.5M + 无形摊销 $18.9M + China SiC 减值 $3.2M + CEO 过渡
+$2.5M + 治理费 $1.6M 等</td>
+<td>★ FY2025 earnings</td>
+</tr>
+<tr>
+<td>公司非 GAAP 净亏损</td>
+<td style="text-align: right;"><strong>$(41,612)K</strong> =
+$(0.20)/股</td>
+<td>同上 + 对赌/权益法</td>
+<td>★</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>三套口径的取舍</strong>：公司非
+GAAP（−$46.0M）比我的底层口径（−$88.9M）小近一半,差异几乎全在<strong>它把
+SBC（$14.5M）和无形摊销（$18.9M）也加回了</strong>。SBC
+是真实的股东价值转移、无形摊销对应真金白银的 GeneSiC
+收购对价——我<strong>有意保留</strong>这两项，所以我的「底层经营亏损」更保守、更接近真实烧钱内核。读者两套都该看：公司非
+GAAP показывает「剔除一次性后仍亏 $46M」，我的口径说明「连同
+SBC/摊销的真实经营消耗约 $89M」。</p>
+</blockquote>
+<p>非 GAAP 经营亏损轨迹（★）：FY2024 −$49.7M → FY2025 −$46.0M；Q4'24
+−$12.7M → Q4'25 −$12.1M → Q1'26 −$11.7M。<strong>非 GAAP
+口径下季度亏损在缓慢收窄</strong>——这是管理层「path to
+profitability」叙事的数据支撑（但 GAAP 仍巨亏）。</p>
+<hr />
+<h2
+id="六季度营收轨迹权威数据更正补全档案-21">六、季度营收轨迹（权威数据，更正/补全档案
+21）</h2>
+<table>
+<thead>
+<tr>
+<th>季度</th>
+<th style="text-align: right;">营收</th>
+<th style="text-align: right;">GAAP 毛利率</th>
+<th style="text-align: right;">GAAP 经营亏损</th>
+<th style="text-align: right;">非 GAAP 经营亏损</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1'25</td>
+<td style="text-align: right;">$14.0M</td>
+<td style="text-align: right;">9.1%</td>
+<td style="text-align: right;">$(25.3)M</td>
+<td style="text-align: right;">$(11.8)M</td>
+<td>★</td>
+</tr>
+<tr>
+<td>Q3'25</td>
+<td style="text-align: right;">$10.1M</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">$(19.4)M</td>
+<td style="text-align: right;">$(11.5)M</td>
+<td>★</td>
+</tr>
+<tr>
+<td><strong>Q4'25（真实低谷）</strong></td>
+<td style="text-align: right;"><strong>$7.296M</strong></td>
+<td style="text-align: right;">(17.2)%</td>
+<td style="text-align: right;">$(41.4)M</td>
+<td style="text-align: right;">$(12.1)M</td>
+<td>★ FY25 earnings</td>
+</tr>
+<tr>
+<td>Q1'26</td>
+<td style="text-align: right;">$8.6M（环比 +18%）</td>
+<td style="text-align: right;">(9.3)%</td>
+<td style="text-align: right;">$(27.8)M</td>
+<td style="text-align: right;">$(11.7)M</td>
+<td>★ Q1'26 earnings</td>
+</tr>
+<tr>
+<td><strong>Q2'26 指引</strong></td>
+<td style="text-align: right;"><strong>$10.0M ±0.5M（+16%
+环比）</strong></td>
+<td style="text-align: right;">非GAAP ~39.25%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">非GAAP opex $14.5–15.5M</td>
+<td>★ Q1'26 earnings</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>真实营收低谷是 Q4'25 单季 $7.296M</strong>（不是
+Q1'26）；Q1'26 已环比 +18%，Q2'26 指引继续 +16% → <strong>营收在 2026
+年初触底回升</strong>。管理层称 <strong>Q4'25
+高功率市场首次占营收多数、移动业务降至 &lt;25%</strong>（★ FY2025
+earnings）——转型在收入结构上<strong>确实开始兑现</strong>，这是对原报告「新业务尚未接棒」判断的重要修正：<strong>接棒已开始，只是绝对规模仍很小（季度
+~$8–10M）。</strong></p>
+</blockquote>
+<hr />
+<h2
+id="七补登的业务合作进展原报告缺来自-fy2025--q126-earnings-">七、补登的业务/合作进展（原报告缺，来自
+FY2025 + Q1'26 earnings ★）</h2>
+<ul>
+<li><strong>GlobalFoundries</strong> 长期战略代工合作，美国本土
+GaN，<strong>2026 年底投产</strong>；</li>
+<li><strong>分销重整</strong>：与 <strong>WT Microelectronics +
+Avnet</strong> 建全球分销合作（替代被终止的旧经销商）；</li>
+<li><strong>Cyient Semiconductors（印度）</strong> 合资共研 GaN，「Make
+in India」；</li>
+<li>产品：<strong>5 代 GeneSiC</strong>；<strong>2300V / 3300V 超高压
+SiC</strong> 取样；<strong>650V GaN</strong>（AI 数据中心 800V
+HVDC）取样；<strong>全 GaN 10kW 800V→50V DC-DC 平台，峰值效率
+98.5%</strong>；</li>
+<li><strong>新增独立董事 Davin Lee</strong>（2026-05-04，董事会更新，拟
+2027 年缩减至 8 人）★。</li>
+</ul>
+<hr />
+<h2
+id="八对原结论的净影响诚实勘误表">八、对原结论的净影响（诚实勘误表）</h2>
+<table>
+<thead>
+<tr>
+<th>原结论</th>
+<th>状态</th>
+<th>更新后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>股价 ~$7，对赌股大概率作废、将反转为收益</td>
+<td>❌ 推翻</td>
+<td>股价 ~$29，第一档已触发、发 328
+万股；负债将上调记<strong>损失</strong></td>
+</tr>
+<tr>
+<td>FY2025 毛利率 31% / Q1'26 37.6%</td>
+<td>⚠️ 口径错</td>
+<td>真实 GAAP 毛利率 <strong>−4.1% / −9.3%</strong>；非 GAAP ~38%</td>
+</tr>
+<tr>
+<td>现金 $237M、~3 年跑道</td>
+<td>🔺 更新</td>
+<td>2026-05 再融 ~$122M，跑道显著延长</td>
+</tr>
+<tr>
+<td>新业务尚未接棒</td>
+<td>🔺 部分修正</td>
+<td>Q4'25 高功率已占营收多数；营收 Q4'25 触底、Q1/Q2'26 回升</td>
+</tr>
+<tr>
+<td>非 GAAP 经营数据缺失</td>
+<td>✅ 已补</td>
+<td>FY2025 非 GAAP 经营亏损 −$46.0M、净亏 −$41.6M（−$0.20/股）</td>
+</tr>
+<tr>
+<td>营收真实低谷 Q1'26</td>
+<td>⚠️ 修正</td>
+<td>真实低谷 <strong>Q4'25 单季 $7.296M</strong></td>
+</tr>
+<tr>
+<td>维权方 Singh 介入治理</td>
+<td>🔺 更新</td>
+<td>Singh 在 $29 高位减持 372 万股（~$1.08 亿）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>不变的核心判断</strong>：仍是「轻资产
+fabless、零负债、靠增发续命、赌 AI 高功率」的故事；真实 GAAP
+仍巨亏（且毛利率为负，比原报告更差）；客户/经销商集中、供应链 TSMC
+退出、治理动荡等红旗不变。<strong>变的是</strong>：现金更厚（再融
+$122M）、股价已计入大量乐观预期（4
+倍重估）、对赌稀释正在发生、营收已现触底回升的早期迹象。</p>
+<hr />
+<h3 id="来源全部--sec2026-02-至-2026-05">来源（全部 ★ SEC，2026-02 至
+2026-05）</h3>
+<ul>
+<li>FY2025/Q4'25 业绩（含完整 GAAP↔︎非 GAAP 对账）: <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000003/exhibit991-navitassemicond.htm">8-K
+2026-02-24 Ex-99.1</a></li>
+<li>Q1'26 业绩 + Q2'26 指引: <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926055620/tm2613492d1_ex99-1.htm">8-K
+2026-05-05 Ex-99.1</a></li>
+<li>新增董事 Davin Lee: <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926054482/tm2613278d1_ex99-1.htm">8-K
+2026-05-04</a></li>
+<li>$125M ATM 全额售罄: <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926059828/tm2614473d1_8k.htm">8-K
+2026-05-13</a></li>
+<li>对赌 Triggering Event I（发 328 万股）: <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926065737/tm2615305d2_8k.htm">8-K
+2026-05-22 8.01</a></li>
+<li>Sponsor 对赌和解: <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926065731/tm2614473d1_8k.htm">8-K
+2026-05-22 1.01</a></li>
+<li>Singh 高位减持: <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000092189526001504/ex1to13da314410002_052926.htm">SCHEDULE
+13D/A 2026-05-29</a></li>
+</ul>
+</body>
+</html>
