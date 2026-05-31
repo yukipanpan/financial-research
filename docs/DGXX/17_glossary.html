@@ -1,0 +1,128 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>术语产业链</title><link rel="stylesheet" href="assets/style.css">
+<script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";mermaid.initialize({startOnLoad:true,theme:"neutral"});</script>
+</head><body>
+<header class="site"><div class="wrap"><h1>17 · 术语表 + 产业链地图</h1>
+<div class="fresh">DGXX · 数据截止 FY2025 10-K (2025-12-31) + Q1-2026 10-Q (2026-03-31) · 更新 2026-05-31 · v1.0</div></div></header>
+<main><nav class="toc"><a href="index.html">🏠 DGXX 首页</a><a href="index_detail.html">📑 全档案目录</a><a href="report.html">📊 报告</a><a href="explainer.html">📖 科普版</a></nav><h1 id="档案-17--术语表--产业链地图">档案 17 — 术语表 + 产业链地图</h1>
+<h2 id="171-术语三件套科普--产业链定位--对本公司意义">17.1 术语三件套（科普 + 产业链定位 + 对本公司意义）</h2>
+<table>
+<thead>
+<tr>
+<th>术语（全称）</th>
+<th>大白话</th>
+<th>产业链环节</th>
+<th>对 DGXX 的意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Colocation / 托管</strong></td>
+<td>把电力+场地+机柜租给别人放服务器/矿机收租</td>
+<td>中游</td>
+<td>FY2025 占收入 51%，当前主业</td>
+</tr>
+<tr>
+<td><strong>Tier III 数据中心</strong></td>
+<td>机房可靠性等级（N+1 冗余、可在线维护，年宕机&lt;1.6h）</td>
+<td>中游</td>
+<td>转型目标；ARMS 200 获 TIA-942 Tier 3 认证</td>
+</tr>
+<tr>
+<td><strong>HPC（High-Performance Computing）</strong></td>
+<td>高性能计算，跑 AI 训练/推理的大算力</td>
+<td>中下游</td>
+<td>AI 数据中心负载来源</td>
+</tr>
+<tr>
+<td><strong>ARMS（AI-Ready Modular Solution）</strong></td>
+<td>集装箱式预制 AI 机柜，1 pod≈1MW、装 256 张 B200/300</td>
+<td>中游（自研硬件）</td>
+<td>差异化卖点，已申美国专利</td>
+</tr>
+<tr>
+<td><strong>NeoCloudz</strong></td>
+<td>自营 GPU 云租赁（GPU-as-a-Service）</td>
+<td>下游（算力零售）</td>
+<td>2026-01 上线，未来变现</td>
+</tr>
+<tr>
+<td><strong>FPPS（Full Pay Per Share）</strong></td>
+<td>矿池按你贡献算力即时结算（区块奖励+手续费）</td>
+<td>上游（挖矿）</td>
+<td>挖矿收入确认依据</td>
+</tr>
+<tr>
+<td><strong>BTMG（Behind-the-meter generation）</strong></td>
+<td>电"表后"自发自用，绕过电网零售加价</td>
+<td>上游（自有发电）</td>
+<td>电厂使电价低至 ~$0.04/kWh</td>
+</tr>
+<tr>
+<td><strong>EH/s（Exahash per second）</strong></td>
+<td>算力单位，每秒万亿亿次哈希</td>
+<td>上游</td>
+<td>衡量挖矿规模（DGXX 已收缩近零）</td>
+</tr>
+<tr>
+<td><strong>ASU 2023-08 / ASC 350-60</strong></td>
+<td>加密资产按公允价值计、涨跌直接进当期损益</td>
+<td>（会计）</td>
+<td>FY2025 起 BTC/ETH 波动直接砸/撑净利</td>
+</tr>
+<tr>
+<td><strong>NCI（少数股东权益）</strong></td>
+<td>子公司里不属母公司的部分</td>
+<td>（合并）</td>
+<td>USDC 子公司 49% 外部股东</td>
+</tr>
+<tr>
+<td><strong>ATM（At-the-market offering）</strong></td>
+<td>随行就市持续小额卖新股募资</td>
+<td>（融资）</td>
+<td>DGXX 的主要输血管（$200M 额度）</td>
+</tr>
+<tr>
+<td><strong>RPO（Remaining Performance Obligations，剩余履约义务）</strong></td>
+<td>已签约但还没确认的未来收入</td>
+<td>（会计）</td>
+<td>DGXX 此项为 0（无 AI 合同）；同业 IREN 也为 nil</td>
+</tr>
+</tbody>
+</table>
+<h2 id="172-产业链地图红框--dgxx-所处环节">17.2 产业链地图（红框 = DGXX 所处环节）</h2>
+<pre class="mermaid">graph LR
+    subgraph 上游[上游 · 能源与硬件]
+      A1[天然气/电网 NYISO]
+      A2[NVIDIA B200/300]
+      A3[Super Micro 液冷服务器]
+    end
+    subgraph 中游[中游 · 电力→算力基建 ★DGXX]
+      B1["🟥 DGXX 60MW 电厂 ~197MW"]
+      B2["🟥 Tier III 数据中心+ARMS"]
+      B3["🟥 Colocation 托管"]
+    end
+    subgraph 下游[下游 · 算力消费]
+      C1[AI/云/企业（未签约·待落地）]
+      C2[第三方矿企（托管租户）]
+      C3[NeoCloudz GPU 零售]
+    end
+    A1-->B1; A2-->B2; A3-->B2
+    B1-->B2-->B3
+    B3-->C1; B3-->C2; B2-->C3
+</pre>
+<blockquote>
+<p>DGXX 卡在「电力→算力」中游基建。护城河=自有低价电+Tier3 认证+模块化快部署；最大短板=<strong>下游 AI 租户尚未签约</strong>。</p>
+</blockquote>
+<h2 id="173-缩写全称对照">17.3 缩写全称对照</h2>
+<ul>
+<li>DGXX = Digi Power X（前 Digihost）；USDC = US Data Centers, Inc.（子公司，非稳定币）</li>
+<li>SV = Subordinate Voting shares；PV = Proportionate Voting shares</li>
+<li>SBC = Share-Based Compensation；NCI = Non-Controlling Interest</li>
+<li>FPI = Foreign Private Issuer；EGC = Emerging Growth Company</li>
+<li>MW = Megawatt；EH/s = Exahash/second；BTMG = Behind-the-meter generation</li>
+</ul>
+</main>
+<footer>基于 SEC 公开 filing（CIK 1854368 + 同业 IREN/WULF/CORZ），仅供学习研究，不构成投资建议。</footer>
+</body></html>

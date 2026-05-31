@@ -1,0 +1,267 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>行业对标</title><link rel="stylesheet" href="assets/style.css">
+<script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";mermaid.initialize({startOnLoad:true,theme:"neutral"});</script>
+</head><body>
+<header class="site"><div class="wrap"><h1>10 · 行业横向对标（硬核·独立同业财报）</h1>
+<div class="fresh">DGXX · 数据截止 FY2025 10-K (2025-12-31) + Q1-2026 10-Q (2026-03-31) · 更新 2026-05-31 · v1.0</div></div></header>
+<main><nav class="toc"><a href="index.html">🏠 DGXX 首页</a><a href="index_detail.html">📑 全档案目录</a><a href="report.html">📊 报告</a><a href="explainer.html">📖 科普版</a></nav><h1 id="档案-10--行业横向对标硬核版独立拉取同业-sec-财报">档案 10 — 行业横向对标（硬核版，独立拉取同业 SEC 财报）</h1>
+<blockquote>
+<p>方法：独立从 SEC EDGAR 拉取三家「矿工转 AI/HPC」同业的<strong>最新 10-K + 10-Q</strong>，逐项抠出可比指标。 单位：美元全额。1 亿 = $100M = $0.1B。每个数字带 ★（同业 filing 直接披露）+ 期间。</p>
+</blockquote>
+<h2 id="可比池选择理由">可比池选择理由</h2>
+<p>DGXX 是「<strong>比特币矿工 → 电力驱动 AI/HPC 数据中心</strong>」转型故事。最贴切的可比是同样走这条路、且已是美国上市公司的三家：</p>
+<table>
+<thead>
+<tr>
+<th>同业</th>
+<th>Ticker</th>
+<th>CIK</th>
+<th>业务相似度</th>
+<th>转型阶段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IREN Ltd</strong></td>
+<td>IREN</td>
+<td>1878848</td>
+<td>高（矿工→AI Cloud + HPC）</td>
+<td>已签 Microsoft/NVIDIA 大单，规模化中</td>
+</tr>
+<tr>
+<td><strong>TeraWulf</strong></td>
+<td>WULF</td>
+<td>1083301</td>
+<td>高（矿工→HPC 租赁）</td>
+<td>已签 Google 背书的 Fluidstack/Core42 长租</td>
+</tr>
+<tr>
+<td><strong>Core Scientific</strong></td>
+<td>CORZ</td>
+<td>1839341</td>
+<td>高（矿工→HPC colocation）</td>
+<td>已签 CoreWeave 12 年 590MW</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：三家都比 DGXX 大一个数量级以上，正好用来定位 DGXX「<strong>同一赛道里最小、最早期、最未经验证</strong>」的位置。</p>
+</blockquote>
+<hr />
+<h2 id="对标表-1--规模最近一季截至-2026-03-31除-iren-为-6-月财年">对标表 1 — 规模（最近一季，截至 2026-03-31，除 IREN 为 6 月财年）</h2>
+<table>
+<thead>
+<tr>
+<th>指标（最近季度）</th>
+<th style="text-align: right;"><strong>DGXX</strong></th>
+<th style="text-align: right;">IREN</th>
+<th style="text-align: right;">WULF</th>
+<th style="text-align: right;">CORZ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>季度总收入 ★</td>
+<td style="text-align: right;"><strong>$6.79M</strong></td>
+<td style="text-align: right;">$144.8M</td>
+<td style="text-align: right;">$34.0M</td>
+<td style="text-align: right;">$115.2M</td>
+</tr>
+<tr>
+<td>— 挖矿</td>
+<td style="text-align: right;">$0.05M</td>
+<td style="text-align: right;">$111.2M</td>
+<td style="text-align: right;">$13.0M</td>
+<td style="text-align: right;"><span class="math inline">30.1<em>M</em>(<em>自</em><em>挖</em>)+</span>7.6M(托管)</td>
+</tr>
+<tr>
+<td>— AI/HPC/托管</td>
+<td style="text-align: right;">$3.03M(托管,非AI)</td>
+<td style="text-align: right;">$33.6M(AI Cloud)</td>
+<td style="text-align: right;">$21.0M(HPC)</td>
+<td style="text-align: right;">$77.5M(colo)</td>
+</tr>
+<tr>
+<td>— 售能/电</td>
+<td style="text-align: right;">$3.72M</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><strong>AI/HPC 收入占比</strong></td>
+<td style="text-align: right;"><strong>0%</strong>（托管非 AI）</td>
+<td style="text-align: right;">23%</td>
+<td style="text-align: right;">62%</td>
+<td style="text-align: right;">67%</td>
+</tr>
+<tr>
+<td>相对 DGXX 收入倍数 ◆</td>
+<td style="text-align: right;">1x</td>
+<td style="text-align: right;"><strong>~21x</strong></td>
+<td style="text-align: right;">~5x</td>
+<td style="text-align: right;"><strong>~17x</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>◆ 倍数为计算得出。<strong>DGXX 季度收入 $6.8M，是同业里最小的——IREN/CORZ 的二十分之一左右。</strong> 更关键：DGXX 的「非挖矿收入」全是<strong>传统托管 + 售电</strong>，<strong>AI/HPC 收入为 $0</strong>；而三家同业的 AI/HPC 收入占比都已过 23%–67%。</p>
+</blockquote>
+<h2 id="对标表-2--电力与算力家底">对标表 2 — 电力与算力家底</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;"><strong>DGXX</strong></th>
+<th style="text-align: right;">IREN</th>
+<th style="text-align: right;">WULF</th>
+<th style="text-align: right;">CORZ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总/合约电力容量(MW)★</td>
+<td style="text-align: right;">~197（+200 远期）</td>
+<td style="text-align: right;"><strong>4,510</strong>（合约）</td>
+<td style="text-align: right;">522（HPC 合约）</td>
+<td style="text-align: right;">1,860（毛）/1,275（可租）</td>
+</tr>
+<tr>
+<td>已通电/运营(MW)★</td>
+<td style="text-align: right;">数十 MW（爬坡中）</td>
+<td style="text-align: right;">~810</td>
+<td style="text-align: right;">HPC 已通电 60</td>
+<td style="text-align: right;">已计费 225</td>
+</tr>
+<tr>
+<td>自挖算力(EH/s)★</td>
+<td style="text-align: right;"><strong>~0</strong>（已收缩,FY25 仅 34 BTC）</td>
+<td style="text-align: right;">~38</td>
+<td style="text-align: right;">7.9</td>
+<td style="text-align: right;">15.7（FY25）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>DGXX 的电力容量(~197MW)在同业里垫底，仅为 IREN 的 4%、CORZ 的 15%。</strong> 它的相对独特处是<strong>自有发电厂</strong>（同业多靠电网+绿电），但规模太小。自挖算力已基本归零（主动收缩转 AI），这点方向与同业一致。</p>
+</blockquote>
+<h2 id="对标表-3--aihpc-签约这是真正的胜负手star">对标表 3 — AI/HPC 签约（这是真正的胜负手）⭐</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>DGXX</strong></th>
+<th>IREN</th>
+<th>WULF</th>
+<th>CORZ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>已签 AI/HPC 客户 ★</td>
+<td><strong>无（0）</strong></td>
+<td>Microsoft + NVIDIA</td>
+<td>Core42/G42 + Fluidstack（Google 背书）</td>
+<td>CoreWeave</td>
+</tr>
+<tr>
+<td>合约容量</td>
+<td>—</td>
+<td>Childress 专用 GPU</td>
+<td><strong>522 MW</strong> critical-IT</td>
+<td><strong>590 MW</strong></td>
+</tr>
+<tr>
+<td>合约期限</td>
+<td>—</td>
+<td>各 5 年</td>
+<td>10–25 年</td>
+<td><strong>12 年</strong></td>
+</tr>
+<tr>
+<td>合约总额/在手 ★</td>
+<td><strong>$0</strong></td>
+<td>Microsoft ~<span class="math inline">9.7<em>B</em> + <em>N</em><em>V</em><em>I</em><em>D</em><em>I</em><em>A</em> </span>3.4B ≈ <strong>$13.1B</strong>（headline，已确认 RPO 仍为 nil）</td>
+<td>已开始租约 $307.8M（未开始的 Fluidstack/Abernathy 未披露总额）</td>
+<td>**~<span class="math inline">9.2<em>B</em> * *<em>承</em><em>诺</em><em>租</em><em>金</em>（</span>3.4B 已开始 + $5.8B 未开始，12 年）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>这是 DGXX 与同业最刺眼的差距。</strong> 三家同业都已签下<strong>数十亿美元级</strong>的长期 AI/HPC 合约（IREN ~<span class="math inline">13<em>B</em>、<em>C</em><em>O</em><em>R</em><em>Z</em> </span>9.2B、WULF 522MW 长租），而 <strong>DGXX 至今 0 个签约 AI 客户、$0 AI 合约</strong>。DGXX 的 ARMS 机柜 2026-Q2 才首部署；它现在处在同业<strong>两三年前</strong>的位置。 同时也要看清同业的"水分"：IREN 的 $13B 是 headline，<strong>已确认 RPO 仍为 nil</strong>（按交付分批确认）；WULF/CORZ 的巨额 backlog 也多是"未开始"的合约——所以"签约≠收入"，但<strong>有签约 vs 零签约</strong>仍是质的差别。</p>
+</blockquote>
+<h2 id="对标表-4--资产负债表与杠杆截至-2026-03-31">对标表 4 — 资产负债表与杠杆（截至 2026-03-31）</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;"><strong>DGXX</strong></th>
+<th style="text-align: right;">IREN</th>
+<th style="text-align: right;">WULF</th>
+<th style="text-align: right;">CORZ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现金 ★</td>
+<td style="text-align: right;">$57.8M</td>
+<td style="text-align: right;">$2,213M</td>
+<td style="text-align: right;">$2,630M</td>
+<td style="text-align: right;">$1,005M</td>
+</tr>
+<tr>
+<td><strong>计息债务 ★</strong></td>
+<td style="text-align: right;"><strong>$0</strong></td>
+<td style="text-align: right;">~$3,745M（可转债）</td>
+<td style="text-align: right;">~$5,191M</td>
+<td style="text-align: right;">~<span class="math inline">2, 085<em>M</em>(→</span>5.4B 备考)</td>
+</tr>
+<tr>
+<td>流通股(M)★</td>
+<td style="text-align: right;">69.8（→90.4）</td>
+<td style="text-align: right;">341（→357）</td>
+<td style="text-align: right;">496</td>
+<td style="text-align: right;">318</td>
+</tr>
+<tr>
+<td>调整后 EBITDA(最近 FY)★</td>
+<td style="text-align: right;">未单列（剥离后经营亏 ~$17.6M）</td>
+<td style="text-align: right;"><strong>+$269.7M</strong>(FY6/25)</td>
+<td style="text-align: right;">$(23.1)M</td>
+<td style="text-align: right;">$(29.7)M</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>DGXX 唯一的相对优势在这里：零计息债务。</strong> 三家同业为了抢建 AI 产能，都背上了<strong>数十亿美元的可转债/有担保票据</strong>（IREN $3.7B、WULF $5.2B、CORZ 备考 $5.4B）。DGXX 靠纯股权融资、零债务——在加密/AI 寒冬里更抗打，但代价是<strong>疯狂稀释</strong>（同业也都在稀释，IREN 258M→357M 股、WULF 至 496M 股）。 盈利上：只有 IREN 调整后 EBITDA 为正（且是 6 月财年含 BTC 高价期）；WULF/CORZ 调整后 EBITDA 也是负的——说明<strong>整个赛道当前都在烧钱抢建</strong>，DGXX 的经营亏损并非异类，只是规模小、且没有签约收入兜底。</p>
+</blockquote>
+<hr />
+<h2 id="重大开支合理性三问铁律-43">重大开支合理性三问（铁律 4.3）</h2>
+<p><strong>问题 1：AI 投入占比 vs 同业？</strong> DGXX 的 AI 设备押金 Q1-2026 达 $20.9M、占总资产 ~16% ★。同业 IREN/WULF/CORZ 的 AI capex 占比更高（动辄数亿美元/季）。DGXX 投入方向对、占比合理，但<strong>绝对规模小两个数量级</strong>。</p>
+<p><strong>问题 2：是否对应战略必要性？</strong> 必要——这是它唯一的增长故事。但同业的 capex 背后<strong>有签约合同兜底</strong>（CoreWeave/Google/Microsoft 的长约），DGXX 的投入<strong>目前没有任何签约客户兜底</strong>，是纯前置赌注。</p>
+<p><strong>问题 3：会计处理是否美化数字？</strong> DGXX 把 AI 投入放在"设备押金"（未投用资产，不计折旧）★，与同业类似；它的矿机折旧寿命(1–3 年)偏保守，不存在用资本化美化利润的迹象。</p>
+<hr />
+<h2 id="对标结论定位非估值">对标结论（定位，非估值）</h2>
+<pre><code>按「赛道位置」给 DGXX 一个坐标：
+
+规模轴：DGXX 是同业里最小的（收入 ~1/20、电力 ~1/20、市值最小）
+进度轴：DGXX 在 AI 转型上最落后——0 签约 vs 同业 $9–13B backlog
+杠杆轴：DGXX 最干净——0 债务 vs 同业 $2–5B 债务</code></pre>
+<ul>
+<li>DGXX 像是<strong>同业两三年前的样子</strong>：刚停挖矿、刚开始建第一个 AI 数据中心、还没签下第一个 AI 客户。</li>
+<li>它的「干净资产负债表（零债务 + $58M 现金）」是真实的相对优势，让它在等待 AI 收入时不至于被债务压垮。</li>
+<li>但它要复制 IREN/CORZ/WULF 的路径，必须跨过那道<strong>所有同业都已跨过、而它还没跨的坎</strong>：<strong>签下第一个真实的、有约束力的 AI/HPC 大客户</strong>。在那之前，对它的任何乐观估值（如 deck 里的 $5.11B SOTP）都缺乏同业那样的签约合同支撑。</li>
+</ul>
+<blockquote>
+<p>⚠️ caveat：同业的 EV/EBITDA 倍数（DGXX deck 引用的 5.6x/9.1x/21.9x）本报告未独立逐家重算市值，故估值倍数仍以「定性定位」为主；但<strong>经营与签约层面的硬指标已全部独立抠自同业 SEC filing</strong>（见上表）。</p>
+</blockquote>
+<h2 id="同业来源-filing全部带链接">同业来源 filing（全部带链接）</h2>
+<ul>
+<li>IREN 10-K FY2025：<a href="https://www.sec.gov/Archives/edgar/data/1878848/000187884825000063/iren-20250630.htm">https://www.sec.gov/Archives/edgar/data/1878848/000187884825000063/iren-20250630.htm</a> ｜ 10-Q：<a href="https://www.sec.gov/Archives/edgar/data/1878848/000187884826000026/iren-20260331.htm">https://www.sec.gov/Archives/edgar/data/1878848/000187884826000026/iren-20260331.htm</a></li>
+<li>TeraWulf 10-K FY2025：<a href="https://www.sec.gov/Archives/edgar/data/1083301/000108330126000031/wulf-20251231.htm">https://www.sec.gov/Archives/edgar/data/1083301/000108330126000031/wulf-20251231.htm</a> ｜ 10-Q：<a href="https://www.sec.gov/Archives/edgar/data/1083301/000108330126000092/wulf-20260331.htm">https://www.sec.gov/Archives/edgar/data/1083301/000108330126000092/wulf-20260331.htm</a></li>
+<li>Core Scientific 10-K FY2025：<a href="https://www.sec.gov/Archives/edgar/data/1839341/000162828026013305/core-20251231.htm">https://www.sec.gov/Archives/edgar/data/1839341/000162828026013305/core-20251231.htm</a> ｜ 10-Q：<a href="https://www.sec.gov/Archives/edgar/data/1839341/000162828026031396/core-20260331.htm">https://www.sec.gov/Archives/edgar/data/1839341/000162828026031396/core-20260331.htm</a></li>
+</ul>
+</main>
+<footer>基于 SEC 公开 filing（CIK 1854368 + 同业 IREN/WULF/CORZ），仅供学习研究，不构成投资建议。</footer>
+</body></html>
