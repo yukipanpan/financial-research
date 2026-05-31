@@ -4,8 +4,8 @@
 <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";mermaid.initialize({startOnLoad:true,theme:"neutral"});</script>
 </head><body>
 <header class="site"><div class="wrap"><h1>04b · 现金流深度（来源 vs 用途）</h1>
-<div class="fresh">DGXX · 数据截止 FY2025 10-K (2025-12-31) + Q1-2026 10-Q (2026-03-31) · 更新 2026-05-31 · v1.0</div></div></header>
-<main><nav class="toc"><a href="index.html">🏠 DGXX 首页</a><a href="index_detail.html">📑 全档案目录</a><a href="report.html">📊 报告</a><a href="explainer.html">📖 科普版</a></nav><h1 id="档案-04b--现金流深度来源-vs-用途">档案 04b — 现金流深度（来源 vs 用途）</h1>
+<div class="fresh">DGXX · 数据截止 FY2025 10-K + Q1-2026 10-Q + 报告期后 8-K 合同 · 更新 2026-05-31 · v1.2</div></div></header>
+<main><nav class="toc"><a href="index.html">🏠 DGXX 首页</a><a href="index_detail.html">📑 全档案目录</a><a href="report.html">📊 报告</a><a href="explainer.html">📖 科普版</a><a href="25_contracts_valuation.html">🔺 合同更正+估值</a></nav><h1 id="档案-04b--现金流深度来源-vs-用途">档案 04b — 现金流深度（来源 vs 用途）</h1>
 <blockquote>
 <p>单位美元全额。全部 ★[10-K / 10-Q]。</p>
 </blockquote>
@@ -68,6 +68,32 @@
 <li>挖矿：段净亏 $(7.55M)，含 D&amp;A $6.51M，EBITDA $(1.33M)</li>
 <li>AI：纯流出（设备押金 <span class="math inline">8.5<em>M</em>→</span>20.9M），零现金流入</li>
 </ul>
+<h2 id="04b6-资金链atm--b300--neocloudz--subq三张表上的踪迹star">04b.6 资金链：ATM → B300 → NeoCloudz → SubQ（三张表上的踪迹）⭐</h2>
+<blockquote>
+<p>跟踪 ATM 募来的股权资金如何流过三张报表，最终变成 AI 设备与租金收入。关键：<strong>ATM 募资不进利润表</strong>（卖股≠收入），只在现金流量表（筹资/投资）和资产负债表（现金↑+APIC↑，无负债）留痕。</p>
+</blockquote>
+<pre class="mermaid">graph TD
+    ATM["ATM 增发卖股 ★<br/>FY2025: 24,078,450 股<br/>毛 $91.5M / 净 $88.8M<br/>佣金漏损 $2.74M"]
+    ATM -->|"① 现金流量表·筹资活动 (+$)"| CASH
+    ATM -->|权益沉淀| APIC
+    CASH["资产负债表·现金 ↑<br/>$1.7M → $78.5M"]
+    APIC["资产负债表·实收资本 APIC ↑<br/>$90.0M → $216.4M<br/>（股数 33M→69M→90M·无负债）"]
+    CASH -->|"② 现金流量表·投资活动 (−$)"| DEP
+    DEP["设备押金 equipment deposit ⭐<br/>$0 → $8.5M(FY25) → $20.9M(Q1-26)<br/>含 $20M NVIDIA B300 采购(2026-01)"]
+    DEP -->|GPU 上线投用| PPE["转入 PP&E·开始计提折旧"]
+    DEP --> NEO["NeoCloudz™ GPU-as-a-Service<br/>Tier III 数据中心·阿拉巴马<br/>2026-03 开放"]
+    NEO -->|首个付费租客| SUBQ["SubQ AI 合同<br/>$19.6M / 24 月·2026-05-15 生效"]
+    SUBQ -->|租金| IS["③ 利润表·AI 收入<br/>（这里才第一次进损益）"]
+    PPE -->|折旧| IS
+    CER["Cerebras 40MW colocation<br/>$1.1B/10年·Phase1 自筹建设"]:::sep -.->|独立·自筹 Phase1| DEP
+    classDef sep fill:#fff3e0,stroke:#b54708;
+</pre>
+<p><strong>读图三句话：</strong></p>
+<ol type="1">
+<li><strong>ATM 的钱第一次落地在「现金流量表-筹资活动」</strong>，同时把资产负债表的<strong>现金</strong>和**实收资本(APIC)**顶上去——<strong>全程不碰利润表</strong>（这是理解"卖股票不是赚钱"的关键）。</li>
+<li><strong>花出去时走「投资活动」</strong>，大头沉到**"设备押金"**这条线（<span class="math inline">0→</span>8.5M→<span class="math inline">20.9<em>M</em>），</span>20M B300 采购正是其中主力；GPU 上线后才转 PP&amp;E 计提折旧。</li>
+<li><strong>只有当 NeoCloudz 把 GPU 租给 SubQ、收到租金，钱才第一次以"收入"形式进利润表</strong>。Cerebras 是另一条线（colocation，Phase1 自筹建设）。</li>
+</ol>
 </main>
-<footer>基于 SEC 公开 filing（CIK 1854368 + 同业 IREN/WULF/CORZ），仅供学习研究，不构成投资建议。</footer>
+<footer>基于 SEC 公开 filing（CIK 1854368 + 同业 IREN/WULF/CORZ）+ 官网新闻稿，仅供学习研究，不构成投资建议。</footer>
 </body></html>

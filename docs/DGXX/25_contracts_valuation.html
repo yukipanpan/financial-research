@@ -33,8 +33,31 @@
 <ul>
 <li><strong>2026-03-13</strong>：<strong>Hans Vestberg（前 Verizon 董事长兼 CEO）联合创办 US Data Centers 下一阶段</strong>——<strong>这解开了「USDC 出售 49%」之谜</strong>：49% 给了 Vestberg 牵头的实体（Vestberg 2026-02 先以高级顾问加入）。</li>
 <li><strong>2026-01-07</strong>：与一座 <strong>1.3 GW 电厂</strong>签战略合作 <strong>LOI</strong>（远期电力扩张）</li>
-<li><strong>2026-01-12</strong>：<strong>$20M</strong> NVIDIA B300 采购（Supermicro，供 NeoCloudz）</li>
+<li><strong>2026-01-12</strong>：<strong>$20M NVIDIA B300 采购</strong>（自 Supermicro）★[8-K 2026-01-12]——装进 Tier III 数据中心、供 <strong>NeoCloudz™</strong> GPU 即服务出租；目标部署后 ~30 个月达正 ROIC；NeoCloudz 2026-03 开放。<strong>这批 B300 正是 SubQ 合同所租的硬件</strong>（SubQ 公告：10 pods / ~4,000 张 B300）。</li>
 </ul>
+<h3 id="资金链atm--b300--neocloudz--subq-star">资金链：ATM → B300 → NeoCloudz → SubQ ⭐</h3>
+<blockquote>
+<p>这条链把"钱从哪来"与"AI 收入怎么生出来"接上：ATM 募的股权资金 → 买 B300（设备押金）→ NeoCloudz 平台 → SubQ 首个付费租客 → 利润表 AI 收入。注意 ATM 募资<strong>不进利润表</strong>，只在现金流量表（筹资/投资）与资产负债表（现金↑+APIC↑·无负债）留痕。</p>
+</blockquote>
+<pre class="mermaid">graph TD
+    ATM["ATM 增发卖股 ★<br/>FY2025: 24,078,450 股<br/>毛 $91.5M / 净 $88.8M"]
+    ATM -->|"① 筹资活动 (+$)"| CASH
+    ATM -->|权益沉淀| APIC
+    CASH["资产负债表·现金 ↑<br/>$1.7M → $78.5M"]
+    APIC["资产负债表·APIC ↑<br/>$90.0M → $216.4M（无负债·稀释 33M→90M 股）"]
+    CASH -->|"② 投资活动 (−$)"| DEP
+    DEP["设备押金 ⭐<br/>$0→$8.5M(FY25)→$20.9M(Q1-26)<br/>含 $20M B300 采购"]
+    DEP -->|上线投用| PPE["PP&E·折旧"]
+    DEP --> NEO["NeoCloudz™ GPU-aaS<br/>Tier III·阿拉巴马·2026-03 开放"]
+    NEO -->|首个付费租客| SUBQ["SubQ AI · $19.6M/24月"]
+    SUBQ -->|租金| IS["③ 利润表·AI 收入<br/>（这里才第一次进损益）"]
+    PPE -->|折旧| IS
+    CER["Cerebras 40MW colocation<br/>$1.1B/10年·Phase1 自筹"]:::sep -.-> DEP
+    classDef sep fill:#fff3e0,stroke:#b54708;
+</pre>
+<blockquote>
+<p><strong>两条 AI 变现路径要分清</strong>：① <strong>NeoCloudz 自营 GPU 出租</strong>（自己买 B300 → 租给 SubQ，资本+折旧在自己表上）；② <strong>Cerebras colocation</strong>（出租机房空间/电力，按 ASC 842 租赁确认，Phase1 自筹建设）。前者轻客户、短约、自担 GPU 折旧；后者重资产、长约（10 年）、锚定单一大客户。</p>
+</blockquote>
 <blockquote>
 <p><strong>结论更正</strong>：DGXX <strong>不再是"0 签约"</strong>。它有 <strong>Cerebras（<span class="math inline">1.1<em>B</em><em>起</em>/40<em>M</em><em>W</em>/10<em>年</em>） + <em>S</em><em>u</em><em>b</em><em>Q</em>（</span>19.6M / 24 月）</strong> 两份已签约 AI 合同，签于 2026-04～05（Q1-2026 报告期后，在 8-K 与 10-Q 后续事件披露）。之前 agent 只读 10-K/10-Q 正文，漏了 8-K Item 1.01 流——这正是 skill「全量 filing 精读」要防的漏。</p>
 </blockquote>
