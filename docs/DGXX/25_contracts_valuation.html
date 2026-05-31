@@ -1,0 +1,283 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>合同更正+估值</title><link rel="stylesheet" href="assets/style.css">
+<script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";mermaid.initialize({startOnLoad:true,theme:"neutral"});</script>
+</head><body>
+<header class="site"><div class="wrap"><h1>25 · AI 合同更正 + 每兆瓦记账 + 市值估值框架</h1>
+<div class="fresh">DGXX · 数据截止 FY2025 10-K + Q1-2026 10-Q + 报告期后 8-K 合同 · 更新 2026-05-31 · v1.2</div></div></header>
+<main><nav class="toc"><a href="index.html">🏠 DGXX 首页</a><a href="index_detail.html">📑 全档案目录</a><a href="report.html">📊 报告</a><a href="explainer.html">📖 科普版</a><a href="25_contracts_valuation.html">🔺 合同更正+估值</a></nav><h1 id="档案-25--dgxx-已签-ai-合同更正-同业每兆瓦记账--市值估值框架">档案 25 — DGXX 已签 AI 合同（更正）+ 同业每兆瓦记账 + 市值估值框架</h1>
+<blockquote>
+<p>⚠️ <strong>重大更正</strong>：本档案修正前几版报告「DGXX 0 签约 AI 客户 / $0 backlog」的错误结论。 经 SEC 全文检索 + 8-K Item 1.01 合同正文 + 官网新闻稿逐页复查，DGXX <strong>已签两份 AI 合同</strong>。 数据：股价为 2026-05-29 收盘；合同来自 8-K（★）；市值/EV 为本人计算（◆）。</p>
+</blockquote>
+<hr />
+<h2 id="251-dgxx-实际已签-ai-合同之前漏掉">25.1 DGXX 实际已签 AI 合同（之前漏掉）</h2>
+<h3 id="合同-a--cerebras-systems锚定客户8-k-2026-05-08-item-101--ex10-1-合同正文">合同 A — Cerebras Systems（锚定客户）★[8-K 2026-05-08, Item 1.01 + ex10-1 合同正文]</h3>
+<ul>
+<li>对手方：<strong>Cerebras Systems Inc.</strong>（晶圆级 AI 芯片公司）</li>
+<li>协议：Data Center Colocation and Master Services Agreement（2026-05-04 签）</li>
+<li>规模：<strong>40MW</strong> AI 算力，阿拉巴马 Columbiana 园区；Cerebras 取得园区<strong>独家使用许可</strong></li>
+<li>期限：<strong>初始 10 年</strong>（可延 1/3/5/7 年）</li>
+<li>价值：<strong>初始 ~<span class="math inline">1.1<em>b</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em>，<em>含</em><em>一</em><em>次</em>7<em>年</em><em>延</em><em>期</em><em>最</em><em>高</em> </span>2.5 billion</strong>（subject to 公司履约）</li>
+<li>结构：Phase 1/2 <strong>一次性建设付款</strong> + <strong>按交付 kW 计的月度 colocation 费（部分预付）</strong></li>
+<li>交付：Phase 1（15MW）目标 <strong>2026-12-15 RFS</strong>；Phase 2（40MW）目标 <strong>2027-Q1</strong>（额外 25MW 以 Phase 2 融资为条件）</li>
+<li>注：DGXX 自有该地产 + 已建专用变电站 + 与 Alabama Power 签供电协议，Phase 1 自筹建设</li>
+</ul>
+<h3 id="合同-b--subq-ai首份-ai-收入8-k-2026-04-20-ex99-1">合同 B — SubQ AI（首份 AI 收入）★[8-K 2026-04-20, ex99-1]</h3>
+<ul>
+<li>对手方：<strong>SubQ AI</strong>（CEO Justin Dangel）</li>
+<li>协议：bare-metal GPU 租赁（NeoCloudz 平台），2026-05-15 生效</li>
+<li>价值：<strong>$19.6M TCV / 24 个月</strong>；公司称"<strong>首份签约 AI 收入</strong>"</li>
+<li>硬件：最新 NVIDIA Blackwell GPU；增长选项 10 pods / ~4,000 张 B300 / 满产 ~$120M 年化潜在收入</li>
+</ul>
+<h3 id="其它官网复查发现之前未纳入">其它官网复查发现（之前未纳入）</h3>
+<ul>
+<li><strong>2026-03-13</strong>：<strong>Hans Vestberg（前 Verizon 董事长兼 CEO）联合创办 US Data Centers 下一阶段</strong>——<strong>这解开了「USDC 出售 49%」之谜</strong>：49% 给了 Vestberg 牵头的实体（Vestberg 2026-02 先以高级顾问加入）。</li>
+<li><strong>2026-01-07</strong>：与一座 <strong>1.3 GW 电厂</strong>签战略合作 <strong>LOI</strong>（远期电力扩张）</li>
+<li><strong>2026-01-12</strong>：<strong>$20M</strong> NVIDIA B300 采购（Supermicro，供 NeoCloudz）</li>
+</ul>
+<blockquote>
+<p><strong>结论更正</strong>：DGXX <strong>不再是"0 签约"</strong>。它有 <strong>Cerebras（<span class="math inline">1.1<em>B</em><em>起</em>/40<em>M</em><em>W</em>/10<em>年</em>） + <em>S</em><em>u</em><em>b</em><em>Q</em>（</span>19.6M / 24 月）</strong> 两份已签约 AI 合同，签于 2026-04～05（Q1-2026 报告期后，在 8-K 与 10-Q 后续事件披露）。之前 agent 只读 10-K/10-Q 正文，漏了 8-K Item 1.01 流——这正是 skill「全量 filing 精读」要防的漏。</p>
+</blockquote>
+<hr />
+<h2 id="252-同业每兆瓦如何确认收入成本用哪种会计准则">25.2 同业每兆瓦如何确认收入/成本？用哪种会计准则？</h2>
+<p><strong>核心机制（三家同业 + DGXX 通用）：收入随『交付的兆瓦』确认，不随『签约』确认。</strong></p>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>AI/HPC 收入性质</th>
+<th>准则</th>
+<th>收入怎么确认</th>
+<th>成本怎么确认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CORZ</strong>（CoreWeave colocation）</td>
+<td>把机房空间/电力租给客户</td>
+<td><strong>ASC 842 经营租赁</strong> ★</td>
+<td>"lease income" 按租期<strong>直线确认</strong>，自每个 phase/MW <strong>交付（commence）起</strong></td>
+<td>机房建设资本化为 PP&amp;E(ASC 360)，投用后折旧；电力/运维费用化</td>
+</tr>
+<tr>
+<td><strong>WULF</strong>（HPC 租约）</td>
+<td>同上（Core42/Fluidstack）</td>
+<td><strong>ASC 842 经营租赁</strong> ★</td>
+<td>同上；<strong>预付租金</strong>（Core42 $90M）递延后摊销</td>
+<td>同上</td>
+</tr>
+<tr>
+<td><strong>IREN</strong>（AI Cloud）</td>
+<td>GPU 算力即服务</td>
+<td><strong>ASC 606 服务</strong> ★</td>
+<td>按<strong>交付/验收批次</strong>确认；RPO 已披露但<strong>交付前为 nil</strong></td>
+<td>GPU 资本化折旧 + 运营费用化</td>
+</tr>
+<tr>
+<td><strong>DGXX</strong>（Cerebras）</td>
+<td>colocation + 主服务</td>
+<td>大概率 <strong>ASC 842</strong>（独家使用+按 kW 月费）或部分 606（合同太新，公司尚未披露口径，<strong>待查</strong>）</td>
+<td>预计同 CORZ/WULF：交付起按期确认；预付递延</td>
+<td>同上（建设资本化折旧）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键推论（直接回答"市值反映已交付还是已签约"）：</strong></p>
+<pre><code>1. 损益表只反映『已交付/已投用的 MW』——签约但未交付的容量不进收入。
+2. 已签未交付的部分 = 附注里的『未来经营租赁应收款 / RPO』（backlog），在表外。
+   例：CORZ 披露 ~$5.8B『尚未 commence 的未来不可撤销经营租赁应收款』(12 年期)。
+3. 因此：当期收入/EBITDA 远小于市值能解释的水平——市值必然在给 backlog + 未来 ramp 定价。</code></pre>
+<hr />
+<h2 id="253-市值-vs-已交付-vs-已签约估值框架">25.3 市值 vs 已交付 vs 已签约（估值框架）◆</h2>
+<blockquote>
+<p>市值 = 股价(2026-05-29)×股数；EV = 市值 + 计息债务 − 现金。单位 $B。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">DGXX</th>
+<th style="text-align: right;">IREN</th>
+<th style="text-align: right;">WULF</th>
+<th style="text-align: right;">CORZ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>股价</td>
+<td style="text-align: right;">$7.81</td>
+<td style="text-align: right;">$63.54</td>
+<td style="text-align: right;">$25.56</td>
+<td style="text-align: right;">$26.85</td>
+</tr>
+<tr>
+<td>股数</td>
+<td style="text-align: right;">90.4M</td>
+<td style="text-align: right;">357M</td>
+<td style="text-align: right;">496M</td>
+<td style="text-align: right;">318M</td>
+</tr>
+<tr>
+<td><strong>市值</strong></td>
+<td style="text-align: right;"><strong>$0.71B</strong></td>
+<td style="text-align: right;"><strong>$22.7B</strong></td>
+<td style="text-align: right;"><strong>$12.7B</strong></td>
+<td style="text-align: right;"><strong>$8.5B</strong></td>
+</tr>
+<tr>
+<td>+债务</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$3.7B</td>
+<td style="text-align: right;">$5.2B</td>
+<td style="text-align: right;">$2.1B</td>
+</tr>
+<tr>
+<td>−现金</td>
+<td style="text-align: right;">$0.06B</td>
+<td style="text-align: right;">$2.2B</td>
+<td style="text-align: right;">$2.6B</td>
+<td style="text-align: right;">$1.0B</td>
+</tr>
+<tr>
+<td><strong>EV</strong></td>
+<td style="text-align: right;"><strong>~$0.65B</strong></td>
+<td style="text-align: right;"><strong>~$24.2B</strong></td>
+<td style="text-align: right;"><strong>~$15.3B</strong></td>
+<td style="text-align: right;"><strong>~$9.6B</strong></td>
+</tr>
+<tr>
+<td>已通电 AI/HPC MW</td>
+<td style="text-align: right;">~0（Phase1 2026-12）</td>
+<td style="text-align: right;">GPU 爬坡中</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">225(billable)</td>
+</tr>
+<tr>
+<td><strong>已签约 MW</strong></td>
+<td style="text-align: right;">40（Cerebras）</td>
+<td style="text-align: right;">—（GPU 服务制）</td>
+<td style="text-align: right;">522</td>
+<td style="text-align: right;">590</td>
+</tr>
+<tr>
+<td>已签 $ backlog</td>
+<td style="text-align: right;">~$1.1B(初始)</td>
+<td style="text-align: right;">~$13.1B(MSFT+NVDA)</td>
+<td style="text-align: right;">522MW 长租(总额未全披露)</td>
+<td style="text-align: right;">~$9.2B(12 年)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>两种每兆瓦/每美元口径（◆ 计算，粗略）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>估值口径</th>
+<th style="text-align: right;">DGXX</th>
+<th style="text-align: right;">IREN</th>
+<th style="text-align: right;">WULF</th>
+<th style="text-align: right;">CORZ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EV / 已通电 AI MW</td>
+<td style="text-align: right;">n/a(未交付)</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;"><strong>~$255M/MW</strong>(荒谬)</td>
+<td style="text-align: right;">~$43M/MW</td>
+</tr>
+<tr>
+<td>EV / 已签约 MW</td>
+<td style="text-align: right;">~$16M/MW</td>
+<td style="text-align: right;">n/a</td>
+<td style="text-align: right;">~$29M/MW</td>
+<td style="text-align: right;">~$16M/MW</td>
+</tr>
+<tr>
+<td>EV / 已签 $backlog</td>
+<td style="text-align: right;">~0.6x(初始Cerebras)</td>
+<td style="text-align: right;">~1.85x</td>
+<td style="text-align: right;">n/a</td>
+<td style="text-align: right;">~1.0x</td>
+</tr>
+</tbody>
+</table>
+<p><strong>读这张表的三个结论：</strong></p>
+<p><strong>(1) 市值绝不只反映已交付 MW。</strong> 若市值只给已通电 MW 定价，WULF 的 <strong>$255M/已通电MW</strong> 是荒谬的——说明市场在给 <strong>522MW 已签约 + 未来扩张</strong>定价，而非 60MW 已通电。三家同业皆如此：<strong>市值 = 已签 backlog 的折现 + 成长期权</strong>，远超已交付部分。</p>
+<p><strong>(2) 按"每已签约兆瓦"，四家收敛到 ~<span class="math inline">16–29<em>M</em>/<em>M</em><em>W</em>。 * *<em>D</em><em>G</em><em>X</em><em>X</em><em>签</em><em>下</em><em>C</em><em>e</em><em>r</em><em>e</em><em>b</em><em>r</em><em>a</em><em>s</em><em>后</em> ≈ **</span>16M/MW</strong>，与 CORZ 持平、略低于 WULF——<strong>意味着 Cerebras 大单基本抹平了 deck 之前宣称的"矿企折价"</strong>，市场已把 DGXX 朝同业的"每签约兆瓦"水平重估。（注：DGXX 的 deck 曾称 HPC ~$12.5M/MW，与此区间同量级。）</p>
+<p><strong>(3) 按"每已签 backlog 美元"，DGXX(~0.6x) &lt; CORZ(~1.0x) &lt; IREN(~1.85x)。</strong> 表面看 DGXX 最"便宜"，但这恰恰反映<strong>确定性的差异</strong>（见下），不能简单当低估。</p>
+<hr />
+<h2 id="254-那么高估--低估--合理-pricing分析框架非投资建议">25.4 那么——高估 / 低估 / 合理 pricing？（分析框架，非投资建议）</h2>
+<blockquote>
+<p>⚠️ 本节是研究性框架，<strong>不构成投资建议</strong>，不下买卖结论。是高是低取决于下面这些"你必须自己判断的假设"。</p>
+</blockquote>
+<p><strong>为什么不能只看每兆瓦数字下结论——决定 over/under/fair 的是 backlog 的"含金量"：</strong></p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>DGXX</th>
+<th>IREN</th>
+<th>WULF</th>
+<th>CORZ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>客户信用</td>
+<td>Cerebras（资金雄厚但<strong>未上市</strong> AI 芯片公司）</td>
+<td>Microsoft + NVIDIA（<strong>蓝筹</strong>）</td>
+<td>Fluidstack（<strong>Google 背书/信用增强</strong>）</td>
+<td>CoreWeave（IG 评级 SPV）</td>
+</tr>
+<tr>
+<td>backlog 确定性</td>
+<td>较低（单一客户、Phase1 未交付）</td>
+<td>中（RPO 仍 nil，需交付）</td>
+<td>较高（Google 背书）</td>
+<td>较高（12 年、IG SPV）</td>
+</tr>
+<tr>
+<td>交付进度</td>
+<td>最早期（2026-12 才 Phase1）</td>
+<td>爬坡中</td>
+<td>60/522MW 已通电</td>
+<td>225/590MW 已计费</td>
+</tr>
+<tr>
+<td>杠杆</td>
+<td><strong>零债务</strong></td>
+<td>$3.7B</td>
+<td>$5.2B</td>
+<td><span class="math inline">2.1<em>B</em>(→</span>5.4B)</td>
+</tr>
+<tr>
+<td>规模</td>
+<td>最小</td>
+<td>最大</td>
+<td>中</td>
+<td>中</td>
+</tr>
+</tbody>
+</table>
+<p><strong>框架式判断（"如果……则……"，不是结论）：</strong></p>
+<ul>
+<li>若你认为<strong>已签 backlog 大概率按期转成收入</strong> → 当前市值更像在给"已签约 + 合理成长"定价，处于<strong>接近合理 pricing</strong>；其中按 EV/已签约MW，四家相近，市场定价相对一致。</li>
+<li>若你认为<strong>市场还额外计入了"尚未签约的未来合同"</strong>（成长期权）→ 则对交付/签约最不确定的玩家（早期、单客户）存在<strong>透支风险</strong>。</li>
+<li>DGXX 的特殊点：<strong>EV/backlog 最低（~0.6x）但确定性最低</strong>（单一未上市客户 + 未交付 + 规模最小）。"便宜"与"高风险"是同一枚硬币——它到底是低估还是合理，取决于你给 Cerebras 这单的<strong>履约概率</strong>和<strong>Cerebras 自身信用</strong>打几折。</li>
+<li>同样，IREN 的 EV/backlog 最高（~1.85x）也不等于高估——它的客户（微软/英伟达）信用最好、合同最大，市场愿意给溢价。</li>
+</ul>
+<p><strong>一句话总结（研究观点，非建议）：</strong> 这几家的市值<strong>都不是只反映已交付兆瓦，而是在给『已签约 backlog 的折现 + 成长期权』定价</strong>。按"每已签约兆瓦"看，四家收敛在 ~$16–29M/MW、<strong>相对一致</strong>，更像"正常 pricing"而非普遍高/低估；真正的分歧不在"每兆瓦多少钱"，而在<strong>你给每家的 backlog 履约概率和客户信用打几折</strong>——这是判断个股高低估的真正变量，需你自行假设。我不替你下买卖结论。</p>
+<hr />
+<h2 id="255-来源">25.5 来源</h2>
+<ul>
+<li>DGXX Cerebras 8-K：<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390026053566/ea0289585-8k_digi.htm">https://www.sec.gov/Archives/edgar/data/1854368/000121390026053566/ea0289585-8k_digi.htm</a> （合同正文 ex10-1 同目录）</li>
+<li>DGXX SubQ 8-K：<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390026045361/ea028691301ex99-1.htm">https://www.sec.gov/Archives/edgar/data/1854368/000121390026045361/ea028691301ex99-1.htm</a></li>
+<li>官网新闻稿：<a href="https://www.digipowerx.com/press-release">https://www.digipowerx.com/press-release</a> （195 篇 / 22 页，AI 转型期第 1–5 页已逐页复查）</li>
+<li>同业 10-K（ASC 842/606 口径）：IREN/WULF/CORZ，链接见档案 10</li>
+<li>股价：Stooq 2026-05-29 收盘；股数：各家最新 filing</li>
+</ul>
+</main>
+<footer>基于 SEC 公开 filing（CIK 1854368 + 同业 IREN/WULF/CORZ）+ 官网新闻稿，仅供学习研究，不构成投资建议。</footer>
+</body></html>
