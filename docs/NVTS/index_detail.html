@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>NVTS 进度账本 + Phase0 + Step8</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="CHANGELOG.html">📜 更新日志</a> · <a href="index.html">↑ 本公司目录</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">NVTS 进度账本 + Phase0 + Step8</h1>
+</header>
+<h1 id="nvts-navitas-semiconductor-corp--research-index">NVTS (Navitas
+Semiconductor Corp) — Research Index</h1>
+<ul>
+<li><strong>Company:</strong> Navitas Semiconductor Corporation ·
+<strong>Ticker:</strong> NVTS (Nasdaq) · <strong>CIK:</strong>
+0001821769</li>
+<li><strong>Research scope:</strong> FY2022–FY2025 + Q1 2026 (per user:
+"2023–2026 全部 filings")</li>
+<li><strong>Methodology:</strong>
+<code>listed-company-financial-research</code> skill v2.0 — strict Phase
+0 → Step 1–10</li>
+<li><strong>Data cutoff:</strong> 2026-05-29 (latest filing) ·
+<strong>Started:</strong> 2026-05-31</li>
+<li><strong>Filings catalog (all 358):</strong>
+<code>../../processed/NVTS_filings_catalog_2023-2026.md</code></li>
+<li><strong>成果链接 (Step 10, GitHub Pages):</strong>
+<em>待发布</em></li>
+</ul>
+<hr />
+<h2 id="ledger-进度账本progress-ledger--全程维护每完成一步即更新">📒
+进度账本（Progress Ledger — 全程维护，每完成一步即更新）</h2>
+<table>
+<thead>
+<tr>
+<th>阶段 / 档案</th>
+<th>模板</th>
+<th>状态</th>
+<th>产出位置</th>
+<th>自检</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 0.1 初始印象</td>
+<td>00</td>
+<td>✅ 完成</td>
+<td>本文件 ↓「初始印象」段</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Phase 0.2 并行精读（5 agent 全量）</td>
+<td>00</td>
+<td>✅ 完成</td>
+<td>00_initial_impression.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Phase 0.3 收口 merge + 假设</td>
+<td>00</td>
+<td>✅ 完成</td>
+<td>00 Part 3（H1-H8 全部定论）</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Step 1 公司识别</td>
+<td>—</td>
+<td>✅ 完成</td>
+<td>catalog + 00</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Step 2 拉一手 filings</td>
+<td>—</td>
+<td>✅ 完成（4×10-K + Q1'26 10-Q + DEF14A + deck + 关键 8-K）</td>
+<td>raw/</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Step 3–7 全部档案（合并产出）</td>
+<td>02/04b/05/10/13/14/16/17</td>
+<td>✅ 完成（合并入 report.md 20 节）</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>└ 02 业务/分部</td>
+<td>02</td>
+<td>✅ → report §5,6</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>└ 04/04b 三表+现金流</td>
+<td>04b</td>
+<td>✅ → report §7,8,9</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>└ 05 会计政策+激进度</td>
+<td>05</td>
+<td>✅ → report §10</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>└ 13 股权/期权/稀释</td>
+<td>13</td>
+<td>✅ → report §14</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>└ 14 逐年变更(铁律6)</td>
+<td>14</td>
+<td>✅ → report §11</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>└ 15 运营资产</td>
+<td>15</td>
+<td>✅ 不触发(fabless) → §12</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>└ 16 非经营扰动+剥离测试</td>
+<td>16</td>
+<td>✅ → report §13</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>└ 17 术语+产业链</td>
+<td>17</td>
+<td>✅ → report §4</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Step 4 行业对比(POWI/WOLF/ON)</td>
+<td>10</td>
+<td>✅ → report §15</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Step 5 论点(3条+反方)</td>
+<td>—</td>
+<td>✅ → report §18</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Step 6 图文可视化(瀑布/产业链/剥离/控制)</td>
+<td>—</td>
+<td>✅ 报告内嵌 ASCII；HTML 待转</td>
+<td>report.md</td>
+<td>☑</td>
+</tr>
+<tr>
+<td><strong>Step 8 自审 Review</strong></td>
+<td>—</td>
+<td>✅ 完成</td>
+<td>本文件 ↓ Step 8</td>
+<td>☑</td>
+</tr>
+<tr>
+<td><strong>Step 9 通俗科普版 (≥8000字)</strong></td>
+<td>18</td>
+<td>✅ 完成 (8027 CJK 过门槛)</td>
+<td>18_plain_explainer.md / explainer.html (8078)</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Step 10 发布 (HTML 站)</td>
+<td>PUBLISH</td>
+<td>✅ 本地站完成 (index+report+explainer)</td>
+<td>site/</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Step 10 GitHub Pages 推送</td>
+<td>PUBLISH</td>
+<td>⏸ 待用户 (需用户 repo/凭证，skill 边界)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="white_check_mark-step-8--自审-review--definition-of-done">✅
+Step 8 — 自审 Review / Definition of Done</h2>
+<p><strong>A. 流程完整性</strong>：☑ Phase 0.1 初始印象 + 8 条假设 → ☑
+Phase 0.2 五 agent 全量并行精读 → ☑ 0.3 收口（H1-H8
+全部定论，含矛盾解决）→ ☑ Step 1-7（合并入 report.md 20 节）→ ☑ Step
+8/9/10。无倒挂闸门。 <strong>B. 模板调用</strong>：☑ 开了
+00/05/14/16/10/17/18 模板照搬结构；档案合并入
+report.md（已在账本注明映射），科普版独立成文。 <strong>C.
+十条铁律体检</strong>：</p>
+<ul>
+<li>铁律1 ☑ 数字带 ★◆◇▽ + 链接 · 铁律2 ☑ 单位双写 + 量级自检（§3）·
+铁律3 ☑ 会计政策(§10)先于结论 · 铁律4 ☑ 5W（产品到
+SKU/电压、客户到经销商占比、foundry 具名）· 铁律5 ☑ EDGAR 全文检索 +
+XBRL + 8-K 实取 · 铁律6 ☑ 逐年变更(§11)三类全扫 · 铁律7 ☑
+全量并行精读（4×10-K+Q1'26+DEF14A+关键8-K，覆盖率说明见§20）· 铁律8 ☑
+关键数字 cross-check（✅/⚠️/❌，现金桥/跨表勾稽）+ 无简写 · 铁律9 ☑
+术语三件套+产业链地图(§4)· 铁律10 ☑
+每主要章节配图（产业链/瀑布/剥离/控制结构/变更时间线，ASCII 内嵌）
+<strong>D. 跨表/跨档案勾稽</strong>：☑ CF 期末现金=BS 现金($236.857M)；☑
+现金桥 86.7+194.6−42.9−1.4=236.9；☑ 单一分部无需拆分勾稽；☑
+剥离测试(§13)数字与 IS 行 + FV 附注一致；☑ §11 逐年变更解释了净利润 YoY
+异常。 <strong>E. 输出形态</strong>：☑ report.md 含全部 0–20 节 · ☑
+图文结合 · ☑ 免责声明(§0)· ☑ 科普版
+18_plain_explainer.md(8027)+explainer.html(8078) 双过门槛 · ☑ 站点并列
+report.html + explainer.html + index.html。</li>
+</ul>
+<p><strong>判定：✅ 完成。</strong> 唯一未完成项 = GitHub Pages
+实际推送（需用户提供 repo + 凭证，属 skill
+明确边界，不替用户建账号/输密码）。</p>
+<p><strong>诚实记录的局限</strong>：①收入未按 GaN/SiC
+拆分（公司不披露，§19 已标）；②Form 4/144（124+91
+份）按信号抽样未逐份精读（§20 已说明）；③ON 毛利率用 ◇ 量级值（XBRL
+概念字段杂乱）；④Q1'26 后续事件段需核 as-filed HTML（§19）。</p>
+<blockquote>
+<p>⛓️ 阶段闸门：05 会计政策未填完不得动 04 三表；Phase 0 未收口不得进
+Step 3。</p>
+</blockquote>
+<hr />
+<h2 id="card_index_dividers-来源登记含非-sec-的-ir-文件">🗂️
+来源登记（含非 SEC 的 IR 文件）</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>文件</th>
+<th>期间</th>
+<th>本地</th>
+<th>链接</th>
+<th>标签</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10-K</td>
+<td>FY2025</td>
+<td>2025财年</td>
+<td>raw/10K_FY2025.txt</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">SEC</a></td>
+<td>★</td>
+</tr>
+<tr>
+<td>10-Q</td>
+<td>Q1 2026</td>
+<td>2026-03-31</td>
+<td>raw/10Q_Q1_2026.txt</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">SEC</a></td>
+<td>★</td>
+</tr>
+<tr>
+<td><strong>Investor Deck</strong></td>
+<td><strong>Mar 2026</strong></td>
+<td>2026-03</td>
+<td>raw/Investor_Slides_March_2026.pdf</td>
+<td><a
+href="https://ir.navitassemi.com/static-files/11be6fcd-5fb9-47d1-a006-51facff3f144">IR</a></td>
+<td>◇ <strong>非SEC</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ <strong>用户补充的 IR deck 已核验并加入</strong>：经 EDGAR
+全文检索确认该 investor presentation <strong>未</strong> file/furnish 给
+SEC（2023–2026 期间 NVTS 无任何投资者演示报备；EDGAR 仅 2021 de-SPAC
+期有）。属公司 IR 官网独有的管理层叙事材料 → 标 ◇，每个数字须与 ★ SEC
+三表对账。</p>
+</blockquote>
+<hr />
+<h2 id="mag-phase-01--初始印象读最新一期--investor-deck-后">🔍 Phase 0.1
+— 初始印象（读最新一期 + Investor Deck 后）</h2>
+<h3 id="a-一句话业务骨架">(a) 一句话业务骨架</h3>
+<p><strong>Navitas Semiconductor</strong>
+是一家<strong>无晶圆厂（fabless）的下一代功率半导体公司</strong>，设计销售两类宽禁带（wide-bandgap）功率器件：<strong>GaNFast™（氮化镓
+GaN）</strong> 与 <strong>GeneSiC™（碳化硅
+SiC）</strong>，用于把电能更高效地转换/传输。历史主战场是手机快充等消费电子，自
+2025 年起以「Navitas 2.0」战略转向<strong>高功率市场</strong>（AI
+数据中心、电网与能源、性能计算、工业电气化）。</p>
+<h3 id="b-管理层这季想让你看什么叙事锚-vs-缺席">(b)
+管理层这季想让你看什么（叙事锚 vs 缺席）</h3>
+<table>
+<thead>
+<tr>
+<th>观察项</th>
+<th>内容</th>
+<th>解读/警觉</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>被反复强调（叙事锚）</td>
+<td>① 「Navitas 2.0」转型 AI 高功率；② SAM 60–75% CAGR →
+$3.5–5.4B(2030)；③ <strong>Q4'25 现金 $237M、零负债</strong>；④ 300M+
+GaN 出货；⑤ 与「leading foundries」技术合作（暗示台积电？待查）</td>
+<td>卖的是<strong>未来 TAM</strong>，不是当下业绩</td>
+</tr>
+<tr>
+<td>讲故事口径</td>
+<td>deck 几乎不用任何 GAAP 财务数 ——
+只用市场规模($B)、CAGR%、现金余额</td>
+<td>⚠️ 回避损益表</td>
+</tr>
+<tr>
+<td>首次出现/改口径</td>
+<td>「Navitas 2.0」「High Power」分类（2025+）；deck 把业务按终端市场(AI
+DC/Grid/PC/Industrial)切</td>
+<td>是否与 10-K 报表口径一致？→ 档案14</td>
+</tr>
+<tr>
+<td><strong>被弱化/缺席的常见数字</strong></td>
+<td>❗ <strong>完全没有：营收、毛利率、净亏损、客户名、2025
+年的增发稀释</strong></td>
+<td>缺席即信号——业绩与稀释可能是痛点</td>
+</tr>
+<tr>
+<td>Risk/Subsequent 矛盾线索</td>
+<td>deck 称 "path to profitability" + "strong balance sheet"，但历史有
+2× 换审计、反复迟报、连续 ATM 增发</td>
+<td>叙事(强)vs 历史(弱)张力大</td>
+</tr>
+</tbody>
+</table>
+<h3 id="待验证假设清单进入-phase-02-逐条回答">待验证假设清单（进入 Phase
+0.2 逐条回答）</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>假设</th>
+<th>触发点</th>
+<th>验证 agent</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1</td>
+<td>公司仍在亏损且营收可能同比下滑（消费转高功率的青黄不接），故 deck
+回避损益</td>
+<td>deck 无任何营收/毛利 ◇</td>
+<td>Agent A</td>
+<td>待验证</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>$237M 现金主要靠 2025 ATM + Nov'25 增发募来，而非经营造血 →
+烧钱+稀释</td>
+<td>catalog 见多次 424B5/S-1/Form D ◇</td>
+<td>Agent A/C</td>
+<td>待验证</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>「Navitas 2.0」是否在 10-K 体现为收入分部/口径重分类（铁律6）？</td>
+<td>deck 新分类 ◇</td>
+<td>Agent B</td>
+<td>待验证</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>2× 换审计(2023-07、2025-04)+ 反复 NT 迟报 → 内控/披露红旗</td>
+<td>catalog ★</td>
+<td>Agent B/E</td>
+<td>待验证</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>客户集中度高（消费快充时代依赖少数大客户）→ 转型期客户风险</td>
+<td>一般行业特征</td>
+<td>Agent A/E</td>
+<td>待验证</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>高管大换血（2024–26 多次 5.02，含 2026-03 新 CFO）→ 治理动荡</td>
+<td>catalog ★ + ex99-1 ★</td>
+<td>Agent C/E</td>
+<td>待验证</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>「leading foundries」合作对手方是谁（台积电?）+ GeneSiC
+是否来自收购(GeneSiC Semiconductor 2022)</td>
+<td>deck p3/p12 ◇</td>
+<td>Agent A/D</td>
+<td>待验证</td>
+</tr>
+<tr>
+<td>H8</td>
+<td>是否持有「非经营扰动项」(无并表运营资产，fabless→大概率不触发档案15；但商誉/无形资产减值可能触发关注)</td>
+<td>fabless 特征</td>
+<td>Agent B/D</td>
+<td>待验证</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Phase 0.1 不下结论</strong>。下一步：Phase 0.2 派 5 个并行
+agent（A 财务分部 / B 会计政策+逐年变更 / C 资本结构+关联方 / D 专题 / E
+风险悬念）精读全量 filings，逐条回答上表。</p>
+</blockquote>
+<h1 id="00--initial-impression--parallel-read-phase-0">00 — Initial
+Impression &amp; Parallel Read (Phase 0)</h1>
+<blockquote>
+<p>NVTS (Navitas Semiconductor Corp, CIK 1821769). Phase 0.1 in
+<code>_INDEX.md</code>. This file = Phase 0.2 (5 parallel agents, Part 2
+blocks) + Phase 0.3 merge (Part 3). Source tags: ★ SEC direct · ◆ calc ·
+◇ third-party/IR (incl. Mar-2026 deck) · ▽ inference. Units written in
+full.</p>
+</blockquote>
+<hr />
+<h1
+id="part-2--parallel-agent-findings-condensed-full-evidence-in-agent-transcripts">Part
+2 — Parallel agent findings (condensed; full evidence in agent
+transcripts)</h1>
+<h2 id="agent-a--financial-statements--revenuesegment-fy2022q126">AGENT
+A — Financial statements &amp; revenue/segment (FY2022–Q1'26)</h2>
+<p><strong>Income statement (US$ thousands, GAAP):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">Q1'26</th>
+<th style="text-align: right;">Q1'25</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net revenues ★</td>
+<td style="text-align: right;">37,943</td>
+<td style="text-align: right;">79,456</td>
+<td style="text-align: right;">83,302</td>
+<td style="text-align: right;">45,916</td>
+<td style="text-align: right;">8,598</td>
+<td style="text-align: right;">14,018</td>
+</tr>
+<tr>
+<td>Revenue YoY ◆</td>
+<td style="text-align: right;">+60%</td>
+<td style="text-align: right;">+109.4%</td>
+<td style="text-align: right;">+4.8%</td>
+<td style="text-align: right;"><strong>−44.9%</strong></td>
+<td style="text-align: right;"><strong>−38.7%</strong></td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Cost of revenues ★</td>
+<td style="text-align: right;">25,996</td>
+<td style="text-align: right;">48,392</td>
+<td style="text-align: right;">54,963</td>
+<td style="text-align: right;">31,668</td>
+<td style="text-align: right;">5,361</td>
+<td style="text-align: right;">8,711</td>
+</tr>
+<tr>
+<td>Gross profit ◆</td>
+<td style="text-align: right;">11,947</td>
+<td style="text-align: right;">31,064</td>
+<td style="text-align: right;">28,339</td>
+<td style="text-align: right;">14,248</td>
+<td style="text-align: right;">3,237</td>
+<td style="text-align: right;">5,307</td>
+</tr>
+<tr>
+<td>Gross margin % ◆</td>
+<td style="text-align: right;">31.5%</td>
+<td style="text-align: right;">39.1%</td>
+<td style="text-align: right;">34.0%</td>
+<td style="text-align: right;">31.0%</td>
+<td style="text-align: right;">37.6%</td>
+<td style="text-align: right;">37.9%</td>
+</tr>
+<tr>
+<td>R&amp;D ★</td>
+<td style="text-align: right;">50,318</td>
+<td style="text-align: right;">68,825</td>
+<td style="text-align: right;">76,002</td>
+<td style="text-align: right;">49,830</td>
+<td style="text-align: right;">14,567</td>
+<td style="text-align: right;">12,668</td>
+</tr>
+<tr>
+<td>SG&amp;A ★</td>
+<td style="text-align: right;">78,353</td>
+<td style="text-align: right;">61,551</td>
+<td style="text-align: right;">62,863</td>
+<td style="text-align: right;">35,196</td>
+<td style="text-align: right;">11,252</td>
+<td style="text-align: right;">11,740</td>
+</tr>
+<tr>
+<td>Amort. intangibles ★</td>
+<td style="text-align: right;">6,913</td>
+<td style="text-align: right;">18,820</td>
+<td style="text-align: right;">18,926</td>
+<td style="text-align: right;">18,937</td>
+<td style="text-align: right;">4,734</td>
+<td style="text-align: right;">4,734</td>
+</tr>
+<tr>
+<td>Restructuring/impair ★</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1,223</td>
+<td style="text-align: right;">18,049</td>
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">1,469</td>
+</tr>
+<tr>
+<td><strong>Loss from operations</strong> ★</td>
+<td style="text-align: right;">(123,637)</td>
+<td style="text-align: right;">(118,132)</td>
+<td style="text-align: right;">(130,675)</td>
+<td style="text-align: right;">(107,764)</td>
+<td style="text-align: right;">(27,766)</td>
+<td style="text-align: right;">(25,304)</td>
+</tr>
+<tr>
+<td><strong>Net income (loss)</strong> ★</td>
+<td style="text-align: right;"><strong>+72,887</strong> ⚠️</td>
+<td style="text-align: right;">(145,951)</td>
+<td style="text-align: right;">(84,599)</td>
+<td style="text-align: right;">(116,953)</td>
+<td style="text-align: right;">(33,785)</td>
+<td style="text-align: right;">(16,829)</td>
+</tr>
+<tr>
+<td>Diluted EPS ★</td>
+<td style="text-align: right;">+0.51</td>
+<td style="text-align: right;">(0.86)</td>
+<td style="text-align: right;">(0.46)</td>
+<td style="text-align: right;">(0.57)</td>
+<td style="text-align: right;">(0.15)</td>
+<td style="text-align: right;">(0.09)</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ FY2022 net income +$72.9M = non-operating artifact (+$51.8M
+warrant FV gain +$121.7M earnout FV gain +$22.8M tax benefit); operating
+loss was −$123.6M. Source: Consolidated Statements of Operations, ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K</a>, <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">FY2022
+10-K</a>, <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">Q1'26
+10-Q</a>.</p>
+<p><strong>Balance sheet (US$ thousands) ★:</strong> Cash
+110,337(FY22)→86,737(FY24)→<strong>236,857</strong>(FY25)→221,008(Q1'26);
+Goodwill <strong>163,215</strong> (flat, never impaired); Intangibles
+net 53,258(FY25); <strong>Total debt = 0</strong> ✅; Equity
+443,661(FY25); Shares 188.1M→230.5M→232.0M.</p>
+<p><strong>Cash flow ★:</strong> Operating CF
+−44.5M/−40.1M/−58.8M/−42.9M/−16.4M(Q1'26); Capex ~−1.5M(FY25, fabless);
+FCF ◆ ≈ −44M to −66M/yr; Financing CF <strong>+194.6M
+(FY2025)</strong>.</p>
+<p><strong>Revenue disaggregation:</strong> GaN vs SiC split <strong>NOT
+disclosed</strong> (one reportable segment ★). All point-in-time (at
+shipment). Geography (MD&amp;A, end-customer): China 47%/US
+28%/Asia-ex-China 11%/Europe 14% (FY2025).</p>
+<p><strong>Customer concentration ★ (Note 12):</strong> FY2025
+Distributor B 46% + C 11%; FY2024 Distributor A 56% (terminated end-2024
+→ $7.5M bad debt + $5.0M inventory write-down + $1.7M R&amp;D
+abandonment).</p>
+<h2 id="agent-b--accounting-policies-铁律3--yoy-changes-铁律6">AGENT B —
+Accounting policies (铁律3) &amp; YoY changes (铁律6)</h2>
+<ul>
+<li><strong>Revenue rec:</strong> ASC 606 point-in-time at
+<strong>shipment</strong> to distributors (sell-in); warranty-only
+returns, no general return reserve; deferred revenue spiked to $10.953M
+(FY2023) then drawn down. ★ FY2025 10-K Note 2.</li>
+<li><strong>GeneSiC acquisition (Aug 15 2022): $246.2M</strong> →
+goodwill <strong>$161.5M→$163.2M</strong>, <strong>never
+impaired</strong> (test 9/30/25 FV&gt;carrying). Intangibles net
+$105.6M(FY22)→$53.3M(FY25), normal amortization only. ★ Note 6.</li>
+<li><strong>Impairments:</strong> FY2024 $2.0M other-asset;
+<strong>FY2025 $3.8M fixed-asset</strong> (in $18.0M
+restructuring+impairment). No goodwill/intangible impairment.</li>
+<li><strong>SBC:</strong> $63.3M→$54.0M→$43.0M→<strong>$14.5M</strong>
+(FY2025 incl. −$16.5M LTIP reversal on founder departures).</li>
+<li><strong>ASUs:</strong> ASC 842 (2022), ASU 2023-07 segment (FY24),
+ASU 2023-09 tax (FY25 prospective). No retrospective restatements.</li>
+<li><strong>Segments:</strong> ONE reportable segment all years;
+"Navitas 2.0" = restructuring, NOT a segment reclassification. But
+"segment/reporting-unit determination" was a <strong>named material
+weakness</strong> (FY2023).</li>
+<li><strong>AUDITOR CHANGES ×2:</strong> (1) 2023-07: <strong>Deloitte →
+Moss Adams</strong>; (2) 2025-03/04: <strong>Moss Adams → KPMG</strong>.
+Both 8-Ks carve out existing <strong>material weaknesses</strong> as the
+reportable-event exception; no disagreements/adverse opinions.</li>
+<li><strong>10-K/A amendments:</strong> FY2022/A routine (Part III);
+<strong>FY2023/A (2024-07-23) SUBSTANTIVE</strong> — reversed
+"remediated" claim, disclosed new MWs (journal entries, earnout,
+segments/reporting units) + <strong>adverse ICFR opinion</strong>,
+<em>no financial restatement</em>; FY2024/A &amp; FY2025/A routine (Part
+III).</li>
+<li><strong>NT late-filings:</strong> FY2022 (GeneSiC PPA — reclassify
+pre-close payment from goodwill → comp expense), FY2023 (generic),
+Q1-2024 10-Q.</li>
+</ul>
+<h2
+id="agent-c--capital-structure--equity--related-party--governance">AGENT
+C — Capital structure / equity / related party / governance</h2>
+<ul>
+<li><strong>Share classes:</strong> effectively single-class Class A
+($0.0001 par); Class B authorized but <strong>zero outstanding</strong>
+→ <strong>NOT a controlled company</strong>; 740M authorized vs ~231M
+out (huge dilution headroom). ★ FY2025 10-K; DEF14A.</li>
+<li><strong>Warrants:</strong> all SPAC warrants gone since FY2022
+(redeemed; +$51.8M FV gain).</li>
+<li><strong>SPAC earnout:</strong> up to <strong>10.0M Class A
+shares</strong> to pre-deal holders, VWAP hurdles $12.50/$17.00/$20.00,
+window to <strong>Oct 19 2026</strong>; <strong>none achieved</strong>
+(stock ~$7 « $12.50). Liability FV $22.6M (FY25). P&amp;L:
+−$12.4M(FY25)/+$36.6M(FY24)/−$33.8M(FY23). ★ Note.</li>
+<li><strong>Dilution overhang:</strong> options ~0.1M (LTIP 9.75M
+forfeited on founder exits); RSUs 8.7M; unrecognized SBC $36.1M;
+fully-diluted ◆ **~249–250M** (~8% over basic).</li>
+<li><strong>2025 financings:</strong> ATM (Jefferies, Mar 2025)
+<strong>$100M</strong> gross, ~19.78M sh @ ~$5.06; PIPE (Nov 7/10 2025,
+Needham) <strong>$100M</strong> gross, <strong>14.81M sh @
+$6.75</strong>, no warrants, investors <strong>unnamed</strong>. Total
+**~34.6M sh for ~$200M**.</li>
+<li><strong>Related party — Halo Microelectronics JV (China):</strong>
+bought out minority for <strong>$20M in stock</strong> (Feb 2023);
+separate affiliate equity-method investment 13.1%, carrying $7.8M;
+related-party revenue immaterial (&lt;1%).</li>
+<li><strong>Governance:</strong> classified board (declassification on
+2026 ballot); <strong>founding CEO Gene Sheridan resigned Aug
+2025</strong> (new CEO <strong>Chris Allexandre</strong>, FY25 comp
+$5.0M); <strong>founder COO/CTO Daniel Kinzer resigned May
+2025</strong>; CFO Glickman out → <strong>Tonya Stevens CFO Mar
+2026</strong>. Say-on-pay 97.3%. Clawback adopted Nov 2023. 124 Form 4 +
+91 Form 144 (heavy insider activity).</li>
+</ul>
+<h2 id="agent-d--products-supply-chain--剥离测试-strip-test">AGENT D —
+Products, supply chain &amp; 剥离测试 (strip-test)</h2>
+<ul>
+<li><strong>Products:</strong> <strong>GaNFast™/GaNSense™</strong>
+(integrated GaN power ICs); <strong>GeneSiC™</strong> SiC MOSFETs up to
+<strong>6.5 kV</strong>; <strong>AI 800VDC platform</strong> (grid→GPU
+power path incl. Solid-State Transformer). "IntelliWeave" <strong>not
+found in any SEC filing</strong> (deck-only). ★ FY2025 10-K Item 1.</li>
+<li><strong>Named partner: NVIDIA</strong> — 800V HVDC collaboration, ★
+8-K 2025-05-27 <strong>Item 8.01 (NOT 1.01)</strong> → no binding
+contract value; bundled with $50M ATM top-up.</li>
+<li><strong>Supply chain:</strong> <strong>TSMC</strong> sole GaN fab
+historically, <strong>announced 2025-07-01 ceasing GaN production July
+2027</strong> → transition to <strong>GlobalFoundries</strong> (US GaN,
+LT partnership Nov 2025) + <strong>Powerchip/PSMC</strong> + TSMC buffer
+inventory; <strong>X-Fab (US)</strong> = SiC. Re-qualification cost not
+yet quantified. ★ Item 1A.</li>
+<li><strong>档案15 (operating asset): NOT triggered</strong> — fabless,
+capex ~$1.5M/yr, PP&amp;E net $9.8M.</li>
+<li><strong>档案16 (nonoperating distortion): TRIGGERED.</strong>
+Strip-test bridge (US$ thousands):</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net income (loss) reported ★</td>
+<td style="text-align: right;">+72,887</td>
+<td style="text-align: right;">(145,951)</td>
+<td style="text-align: right;">(84,599)</td>
+<td style="text-align: right;">(116,953)</td>
+</tr>
+<tr>
+<td>− warrant FV (gain)/loss</td>
+<td style="text-align: right;">(51,763)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>− earnout FV (gain)/loss</td>
+<td style="text-align: right;">(121,709)</td>
+<td style="text-align: right;">+33,788</td>
+<td style="text-align: right;">(36,644)</td>
+<td style="text-align: right;">+12,424</td>
+</tr>
+<tr>
+<td>− equity-invest FV</td>
+<td style="text-align: right;">~+1,100</td>
+<td style="text-align: right;">~+100</td>
+<td style="text-align: right;">(3,905)</td>
+<td style="text-align: right;">+1,121</td>
+</tr>
+<tr>
+<td>− income tax (benefit)</td>
+<td style="text-align: right;">+22,812</td>
+<td style="text-align: right;">+517</td>
+<td style="text-align: right;">+342</td>
+<td style="text-align: right;">(50)</td>
+</tr>
+<tr>
+<td><strong>= Loss from operations (reported)</strong> ★</td>
+<td style="text-align: right;"><strong>(123,637)</strong></td>
+<td style="text-align: right;"><strong>(118,132)</strong></td>
+<td style="text-align: right;"><strong>(130,675)</strong></td>
+<td style="text-align: right;"><strong>(107,764)</strong></td>
+</tr>
+<tr>
+<td>+ restructuring &amp; impairment</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">~3,214</td>
+<td style="text-align: right;">18,000</td>
+</tr>
+<tr>
+<td>+ bad-debt/credit-loss</td>
+<td style="text-align: right;">~0</td>
+<td style="text-align: right;">~0</td>
+<td style="text-align: right;">7,689</td>
+<td style="text-align: right;">844</td>
+</tr>
+<tr>
+<td><strong>≈ Underlying operating loss ◆</strong></td>
+<td style="text-align: right;"><strong>(123,637)</strong></td>
+<td style="text-align: right;"><strong>(118,132)</strong></td>
+<td style="text-align: right;"><strong>(119,772)</strong></td>
+<td style="text-align: right;"><strong>(88,920)</strong></td>
+</tr>
+</tbody>
+</table>
+<p>→ <strong>No profitable operating year ever.</strong> Every &gt;$30M
+headline swing was a fair-value/tax artifact. FY2022 "+$72.9M profit"
+was driven by NVTS's <em>own collapsing stock</em> shrinking the earnout
+liability.</p>
+<h2 id="agent-e--risk-factors--litigation--going-concern--events">AGENT
+E — Risk factors / litigation / going-concern / events</h2>
+<ul>
+<li><strong>Going concern: NO doubt</strong> ★ (zero "going
+concern"/"substantial doubt" hits; $237M cash). KPMG report = financials
+only.</li>
+<li><strong>Litigation: NONE material</strong> ★ — "not currently
+subject to any pending actions or regulatory proceedings" (10-K Item 3 /
+Note 15; Q1'26 Note 14). <strong>No securities class action, no
+derivative suit, no IP suit disclosed.</strong> IP-litigation language
+is generic risk-factor only.</li>
+<li><strong>Top risk factors:</strong> pivot-execution ("revenues… if
+ever"), distributor concentration (worsened by pivot), <strong>TSMC GaN
+exit / single-source</strong>, China 47% + outbound-investment rules,
+<strong>capital "might not be available… if at all"</strong>,
+material-weakness recurrence, <strong>announcement-driven
+volatility</strong> (a self-aware disclaimer aimed at the NVIDIA spike:
+"may not reflect binding commitments… do not place undue reliance"),
+inverted-domestic-corp govt-contract limits, stockholder activism.</li>
+<li><strong>★ Activist settlement (2025-04-29 8-K, Item
+1.01+5.02+7.01):</strong> director <strong>Ranbir Singh /
+SiCPower</strong> forced governance overhaul — CEO Sheridan removed as
+Chair (→ Hendrix), COO/CTO Kinzer resigned, <strong>Executive Steering
+Committee chaired by Singh</strong> over capital allocation/succession,
+standstill. (Singh = GeneSiC founder, 8.0% holder, 13D filer.)</li>
+<li><strong>★ ICFR caveat:</strong> FY2025 "effective" is
+<strong>management-only — KPMG did NOT attest (no 404(b)
+audit)</strong>. 2025-04-02 8-K: FY2024 MWs "<strong>have not been
+remediated as of the date of this Current Report</strong>" (Apr
+2025).</li>
+<li><strong>Subsequent events:</strong> 10-K "none material" (as of
+2026-02-27); Q1'26 10-Q subsequent-events note appears absent in clean
+text → verify (May-2026 S-3ASR/424B5 offering landed days later).</li>
+</ul>
+<hr />
+<h1 id="part-3--phase-02-merge--收口">Part 3 — Phase 0.2 Merge /
+收口</h1>
+<h2 id="a-contradiction-resolution-cross-agent--vs-deck">A.
+Contradiction resolution (cross-agent + vs deck)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Resolution (with ★)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Distributor %: Agent A (B=46% FY25) vs Agent E (A=56%
+FY25)</strong></td>
+<td><strong>Agent A correct.</strong> Note 12 ★ columns are
+[2025][2024]: Distributor A <em>=below10%/2024=56%; Distributor B
+46%/</em>; C 11%/*. → <strong>FY2025 top distributor = B at 46% (+C
+11%); the 56% was FY2024's Distributor A, terminated end-2024.</strong>
+Agent E mis-mapped the year column (and the "Q1'26 A=59%" likely same
+error — flag for Q1'26 Note re-check).</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Geography: A says China 47%/US 28% vs E says Hong Kong
+57%</strong></td>
+<td><strong>Both correct, two different cuts.</strong> MD&amp;A reports
+<strong>end-customer</strong> domicile (China 47%, US 28%, Europe 14%);
+Note 12 reports <strong>shipment/billing</strong> domicile (Hong Kong
+57%, Rest of Asia 21%, US 10%, China 9%). Use end-customer for economic
+exposure; note the HK booking. ★ FY2025 10-K L1397 &amp; MD&amp;A.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>FY2025 MD&amp;A "$(32,354)" net-loss anomaly (Agent B
+flag)</strong></td>
+<td>Not the FY2023 full-year loss (which is −$145.951M ★). Likely a
+mislabeled sub-line/column in the MD&amp;A comparison table; <strong>the
+audited Statements of Operations govern</strong>: FY2023 net loss =
+−$145.951M. Treat MD&amp;A cell as presentation artifact. (Low
+materiality; financials are authoritative.)</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>FY2023 operating CF $(40,098) vs restated
+$(41,379)</strong></td>
+<td>Minor (~$1.3M) reclassification between original FY2023 10-K and
+FY2024 10-K comparative; <strong>not</strong> a financial restatement
+(Agent B confirms no restatement). Note ⚠️, immaterial.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Earnout vs warrant gain split in FY2022 (+$121.7M earnout,
++$51.8M warrant)</strong></td>
+<td>Reconciled across A/C/D: warrant +$51.8M (redeemed FY2022), earnout
++$121.7M (10M SPAC earnout shares re-valued down as stock fell
+$16.09→$1.47). Both non-cash.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="b-cross-档案-勾稽-tie-outs--all-white_check_mark">B. Cross-档案
+勾稽 (tie-outs) — all ✅</h2>
+<ul>
+<li><strong>CF ending cash = BS cash:</strong> $236.857M (A) ✅
+consistent across agents.</li>
+<li><strong>Cash bridge FY2025:</strong> 86.7M + 194.6M financing −
+42.9M opex − 1.4M invest = <strong>236.9M</strong> ✅ (Agent A
+reconciled).</li>
+<li><strong>Segment revenue = consolidated:</strong> one segment, no
+split needed ✅.</li>
+<li><strong>Equity roll:</strong> 2025 raises ~34.6M sh (C) tie to
+financing CF +$194.6M (A) ✅ ($200M gross − $7.7M costs ≈ $192M net +
+ESPP/option proceeds).</li>
+<li><strong>Distortion items (D strip-test) reconcile to IS lines (A)
+and FV notes (C):</strong> earnout/warrant/tax/restructuring all match
+✅.</li>
+</ul>
+<h2 id="c-hypothesis-status-回写-phase-01">C. Hypothesis status (回写
+Phase 0.1)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Assumption</th>
+<th>Status</th>
+<th>One-line conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1</td>
+<td>Loss-making + revenue declining</td>
+<td>✅ <strong>印证</strong></td>
+<td>Rev −45% FY2025, −39% Q1'26; operating loss every year; never
+GAAP-profitable from operations.</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>$237M cash from raises not operations</td>
+<td>✅ <strong>印证</strong></td>
+<td>$200M raised in 2025 (ATM+PIPE, +18% shares); operations burned
+$42.9M FY2025. Cash = dilution-funded runway.</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>"Navitas 2.0" = segment/口径 reclassification</td>
+<td>❌ <strong>推翻</strong></td>
+<td>It's a restructuring (charge $18.0M, 19% layoffs), NOT a
+reporting-segment change; still one segment.</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>2× auditor change + NT + 10-K/A = controls red flag</td>
+<td>✅ <strong>印证(强)</strong></td>
+<td>Deloitte→Moss Adams→KPMG; FY2023/A adverse ICFR; MWs recurred
+through FY2024; FY2025 "effective" is <strong>un-attested</strong>.</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>High customer concentration</td>
+<td>✅ <strong>印证(severe)</strong></td>
+<td>Single distributor 46% (FY2025) / prior 56% terminated cost ~$14.2M;
+China 47% end-market.</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>Management/governance instability</td>
+<td>✅ <strong>印证</strong></td>
+<td>Both founders (CEO Sheridan, COO/CTO Kinzer) exited 2025 via
+<strong>activist settlement</strong> (Ranbir Singh/SiCPower); 3rd CFO in
+12 mo; ~12 Item-5.02 events.</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>Foundry partner + GeneSiC origin</td>
+<td>✅ <strong>印证</strong></td>
+<td>TSMC (exiting GaN Jul 2027)→GlobalFoundries(US)+Powerchip;
+X-Fab=SiC. GeneSiC bought Aug 2022 $246.2M.</td>
+</tr>
+<tr>
+<td>H8</td>
+<td>Non-operating distortion / impairment</td>
+<td>✅ <strong>印证</strong> (no goodwill impair, but)</td>
+<td>Goodwill never impaired; BUT earnout FV swings + $18M restructuring
++ bad-debt distort headline. Strip-test → true operating loss
+~$89–124M/yr.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="d-phase-0-收尾结论-定调-for-7-step-deep-dive">D. Phase 0
+收尾结论 (定调 for 7-step deep dive)</h2>
+<ol type="1">
+<li><strong>Revised one-liner:</strong> NVTS is a fabless GaN/SiC
+power-semiconductor company executing a high-risk "Navitas 2.0" pivot
+from collapsing consumer/mobile revenue toward an as-yet-unmonetized
+AI-datacenter/grid TAM — funded by serial equity dilution, carrying
+recurring internal-control issues and a just-replaced founding
+management team.</li>
+<li><strong>Biggest narrative-vs-reality gap:</strong> the deck sells a
+$3.5–5.4B 2030 TAM + "$237M cash / path to profitability," while the
+filings show revenue <strong>−45%</strong>, ~$90–120M annual operating
+loss, ~$200M of 2025 dilution, single-distributor 46% concentration, a
+sole-GaN-supplier (TSMC) exit, two auditor changes, and an
+activist-forced C-suite overhaul.</li>
+<li><strong>Deep-dive focus:</strong> 档案 <strong>05</strong> (revenue
+rec at shipment to one distributor; SBC reversal mechanics),
+<strong>04/04b</strong> (the dilution-funded cash bridge),
+<strong>14</strong> (auditor changes + ICFR timeline + restructuring),
+<strong>16</strong> (earnout FV strip-test — the headline-distortion
+engine), <strong>02/03</strong> (the distributor-concentration + GaN/SiC
+undisclosed mix), <strong>08</strong> (TSMC exit + activism).
+<strong>档案 15 not triggered</strong> (fabless).</li>
+<li><strong>Can be preliminarily set aside:</strong> going-concern doubt
+(none; $237M cash, zero debt, ~3-yr runway); goodwill impairment
+(untested as of 9/30/25 but FV&gt;carrying); active litigation (none
+material disclosed).</li>
+</ol>
+</body>
+</html>

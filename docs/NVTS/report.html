@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Navitas (NVTS) 财务研究报告</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="CHANGELOG.html">📜 更新日志</a> · <a href="index.html">↑ 本公司目录</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">Navitas (NVTS) 财务研究报告</h1>
+</header>
+<h1 id="navitas-semiconductor-nvts--财务研究报告">Navitas Semiconductor
+(NVTS) — 财务研究报告</h1>
+<blockquote>
+<p>基于 SEC 一手 filings（FY2022–FY2025 10-K + Q1 2026 10-Q + DEF 14A +
+关键 8-K）+ 公司 IR 投资者演示（2026-03，非 SEC，标 ◇）。
+方法论：<code>listed-company-financial-research</code> v2.0。数据截止
+<strong>2026-05-29</strong>。报告日 <strong>2026-05-31</strong>。
+标签：★ SEC 直接披露 · ◆ 公式计算 · ◇ 第三方/公司 IR · ▽
+推算。cross-check：✅ 吻合 · ⚠️ 有差异 · ❌ 无法验证。</p>
+</blockquote>
+<hr />
+<h2 id="0-免责声明">0. 免责声明</h2>
+<p>本文是一篇基于 SEC
+公开文件的财务分析读书笔记，纯属个人学习心得与公开数据解读，<strong>不构成任何投资建议</strong>。文中数据已尽力
+cross-check
+并标注来源等级（★◆◇▽）。涉及估值/概率/情景的判断均为主观推演，仅供研究参考，不应作为买入/卖出/持有任何证券的依据。请独立判断并咨询持牌顾问。本文作者及发布平台不对任何投资决策承担责任。</p>
+<hr />
+<h2 id="1-公司一句话定义">1. 公司一句话定义</h2>
+<p><strong>Navitas Semiconductor（Nasdaq:
+NVTS）是一家无晶圆厂（fabless）的下一代功率半导体公司</strong>，设计销售两类宽禁带（wide-bandgap）功率器件——<strong>GaNFast™
+氮化镓（GaN）功率 IC</strong> 与 <strong>GeneSiC™
+碳化硅（SiC）器件</strong>——把电能更高效地转换与传输。公司正执行一场名为「<strong>Navitas
+2.0</strong>」的高风险战略转型：从正在萎缩的手机快充/消费电子主业，转向尚未规模变现的
+<strong>AI
+数据中心、电网与能源、性能计算、工业电气化</strong>等高功率市场。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K Item 1</a></p>
+<hr />
+<h2 id="2-数据来源与方法论说明">2. 数据来源与方法论说明</h2>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一手来源</td>
+<td>FY2022/2023/2024/2025 四份 10-K；Q1 2026 10-Q；2026 DEF 14A；关键
+8-K（4.01 换审计 ×2、1.01+5.02 维权和解、8.01 NVIDIA、1.01+3.02
+PIPE）</td>
+</tr>
+<tr>
+<td>公司 IR（非 SEC，◇）</td>
+<td>《Navitas — Investor Slides March 2026》13 页 deck —— 经 EDGAR
+全文检索确认<strong>未</strong> file/furnish 给 SEC（2023–2026
+期间无任何投资者演示报备），仅托管于 IR
+官网。作为管理层叙事锚使用，每个数字与 ★ SEC 对账。</td>
+</tr>
+<tr>
+<td>filing 覆盖率</td>
+<td>EDGAR 2023–2026 共 <strong>358</strong> filings：4× 10-K + 4× 10-K/A
++ 10× 10-Q + 48× 8-K + DEF 14A 系列全部精读或登记；124× Form 4 / 91×
+Form 144
+作为内部人信号按需抽取（未逐一精读，已说明理由——量大且为同质内部人交易）。</td>
+</tr>
+<tr>
+<td>方法</td>
+<td>Phase 0（最新一期 + deck 建假设 → 5 agent 并行精读全量 → 收口）→ 7
+步深挖 → 自审 → 科普版 → 发布。8 条假设 H1–H8 全部有定论（见
+<code>00_initial_impression.md</code> Part 3）。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>关键口径提示</strong>：NVTS 是<strong>前
+SPAC</strong>（2021 年与 Live Oak Acquisition Corp II 反向并购上市），其
+headline 净利润被 <strong>earnout/warrant
+公允价值变动</strong>严重扭曲（见 §13
+剥离测试）。<strong>分析利润必须用「Loss from
+operations」，不能用净利润。</strong></p>
+</blockquote>
+<hr />
+<h2 id="3-单位约定与常识自检禁简写">3. 单位约定与常识自检（禁简写）</h2>
+<ul>
+<li><strong>1 亿 USD = $100M = $0.1B</strong>（10×
+关系）。本报告数字一律双写一次 million/billion，先 filing
+原值后约整。</li>
+<li>常识锚：Microsoft 营收 ~$245B、AWS ~$108B、NVIDIA(FY24)
+~$60.9B、Power Integrations(FY25) ~$0.44B。</li>
+<li>NVTS 体量自检：FY2025 营收 <strong>$45.916 million（= $0.046
+billion）</strong>——约为 POWI 的 1/10、NVIDIA 的
+1/1300。<strong>这是一家年营收不足半亿美元的小公司</strong>，任何把它与
+NVIDIA 并列的叙事都要先做这个量级自检。</li>
+</ul>
+<hr />
+<h2 id="4-术语表--产业链地图铁律-9">4. 术语表 + 产业链地图（铁律
+9）</h2>
+<h3 id="41-术语三件套科普--产业链环节--对本公司意义">4.1
+术语三件套（科普 + 产业链环节 + 对本公司意义）</h3>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>大白话科普</th>
+<th>产业链环节</th>
+<th>对 NVTS 的意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GaN（氮化镓）</strong></td>
+<td>一种比普通硅更「快、更省、更耐高压」的半导体材料，做电源开关</td>
+<td>上游材料/中游器件</td>
+<td>NVTS 的 GaNFast™ 核心产品材料</td>
+</tr>
+<tr>
+<td><strong>SiC（碳化硅）</strong></td>
+<td>比 GaN 更耐超高压（可达数千伏）的宽禁带材料，适合电网/电车</td>
+<td>上游材料/中游器件</td>
+<td>NVTS 的 GeneSiC™（2022 收购而来）</td>
+</tr>
+<tr>
+<td><strong>Fabless（无晶圆厂）</strong></td>
+<td>自己设计芯片、把制造外包给代工厂（foundry）的轻资产模式</td>
+<td>中游设计</td>
+<td>NVTS
+模式——资本开支极低（~$1.5M/年），但<strong>受制于代工厂</strong>（TSMC
+退出 GaN 是大风险）</td>
+</tr>
+<tr>
+<td><strong>Foundry（晶圆代工厂）</strong></td>
+<td>替 fabless 公司生产芯片的工厂（台积电、格芯等）</td>
+<td>中游制造</td>
+<td>NVTS 的 GaN 原由 <strong>TSMC</strong> 代工，SiC 由
+<strong>X-Fab</strong> 代工</td>
+</tr>
+<tr>
+<td><strong>800V HVDC</strong></td>
+<td>数据中心把供电电压提到 800 伏直流以减少损耗的新架构</td>
+<td>下游应用</td>
+<td>NVTS 押注的 AI 数据中心新需求（与 NVIDIA「合作」）</td>
+</tr>
+<tr>
+<td><strong>SST（固态变压器）</strong></td>
+<td>用功率半导体替代传统笨重铁芯变压器，体积小效率高</td>
+<td>下游应用</td>
+<td>NVTS 电网业务的卖点（deck 称体积↓20×）</td>
+</tr>
+<tr>
+<td><strong>Earnout shares（对赌股）</strong></td>
+<td>SPAC 上市时约定「股价达标才发给原股东」的或有股份</td>
+<td>资本结构</td>
+<td><strong>扭曲 NVTS
+净利润的元凶</strong>：股价跌→负债减→记「利润」（见 §13）</td>
+</tr>
+<tr>
+<td><strong>RPO/Backlog</strong></td>
+<td>已签约未确认的收入（订单储备）</td>
+<td>财务</td>
+<td>NVTS <strong>未披露</strong> backlog——转型期收入能见度低的信号</td>
+</tr>
+<tr>
+<td><strong>ICFR / 重大缺陷</strong></td>
+<td>财报内控；「重大缺陷」= 内控有可能导致错报的严重漏洞</td>
+<td>治理</td>
+<td>NVTS 连续多年有重大缺陷 + 2 次换审计（见 §11）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-产业链地图红框nvts-所处环节">4.2 产业链地图（红框=NVTS
+所处环节）</h3>
+<pre><code>  上游材料            中游设计(fabless)        中游制造(代工/封测)        下游系统/客户
+  ──────             ─────────────         ──────────────         ───────────────
+  GaN-on-Si 衬底  →  ┌──────────────┐  →   TSMC(GaN,退出中)    →   电源模块/PSU 厂
+  SiC 晶圆           │  ★ NAVITAS   │      GlobalFoundries(GaN,US)   ODM/OEM
+  (多家合格供应商)    │ 设计 GaNFast │      Powerchip(GaN)            ↓ 经销商(高度集中)
+                     │     GeneSiC  │      X-Fab(SiC,US)             ↓
+                     └──────────────┘      封测(亚洲 OSAT)      终端: AI数据中心(NVIDIA)
+                          ▲                                          /电网/快充/工业
+                     资本极轻但受制于代工厂</code></pre>
+<blockquote>
+<p>NVTS 处于<strong>中游设计</strong>环节：不碰材料、不建厂，靠 IP
+和系统方案赚钱。<strong>护城河在芯片集成度与高压 SiC
+专利；命门在代工依赖（TSMC 退出）+ 下游经销商集中（单一经销商
+46%）。</strong></p>
+</blockquote>
+<hr />
+<h2 id="5-业务地图按分部">5. 业务地图（按分部）</h2>
+<ul>
+<li><strong>报告分部：仅 1 个</strong>（CODM=CEO，合并口径）★ FY2025
+10-K Note。<strong>收入不按 GaN/SiC
+拆分披露</strong>——这是分析的一大盲区（见 §19 悬而未决）。</li>
+<li>deck（◇）按<strong>终端市场</strong>切四块：AI
+数据中心、电网与能源、性能计算、工业电气化——但这是<strong>未来 TAM
+叙事</strong>，非当前收入分部。</li>
+<li>当前真实收入结构（★ MD&amp;A，按终端客户地理）：<strong>中国 47% /
+美国 28% / 亚洲其他 11% / 欧洲 14%</strong>（FY2025）。</li>
+</ul>
+<pre><code>收入构成（图：单一分部 + 地理）                单位：% of FY2025 net revenue $45.9M
+终端客户地理:  中国 ████████████ 47%
+              美国 ███████ 28%
+              欧洲 ████ 14%
+              亚洲 ███ 11%
+经销商集中:    Distributor B ████████████ 46%  +  Distributor C ███ 11%（≥10% 仅此两家）★ Note 12</code></pre>
+<blockquote>
+<p>⚠️ 注意两套地理口径：MD&amp;A 按「终端客户」中国 47%；Note 12
+按「出货/开票地」香港 57%/亚洲其他 21%/美国 10%/中国 9%。✅
+两者并存，前者反映真实经济暴露。</p>
+</blockquote>
+<hr />
+<h2 id="6-收入构成含客户集中度">6. 收入构成（含客户集中度）</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">Q1'26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>净营收（$ thousands）★</td>
+<td style="text-align: right;">37,943</td>
+<td style="text-align: right;">79,456</td>
+<td style="text-align: right;">83,302</td>
+<td style="text-align: right;"><strong>45,916</strong></td>
+<td style="text-align: right;">8,598</td>
+</tr>
+<tr>
+<td>YoY ◆</td>
+<td style="text-align: right;">+60%</td>
+<td style="text-align: right;">+109%</td>
+<td style="text-align: right;">+5%</td>
+<td style="text-align: right;"><strong>−45%</strong></td>
+<td style="text-align: right;"><strong>−39%</strong>(vs Q1'25)</td>
+</tr>
+<tr>
+<td>最大经销商占比 ★</td>
+<td style="text-align: right;">A 21%</td>
+<td style="text-align: right;">A 45%</td>
+<td style="text-align: right;">A 56%</td>
+<td style="text-align: right;"><strong>B 46%</strong></td>
+<td style="text-align: right;">(待 Q1'26 Note 核)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>营收在 FY2024 见顶 $83.3M 后，FY2025 腰斩至
+$45.9M（−45%），Q1'26 继续 −39%。</strong> ✅ cross-check：IS 营收行 vs
+MD&amp;A
+文字一致。这是「消费业务主动收缩、高功率收入尚未接棒」的青黄不接，公司自己在风险因素里承认设计导入「one
+year or more, <strong>if ever</strong>」★ Item 1A。</li>
+<li><strong>客户集中度极高</strong>：FY2025 仅 Distributor B（46%）+
+C（11%）≥10%；FY2024 的 Distributor A（56%）于 2024 年底被终止，直接造成
+<strong>$7.5M 坏账 + $5.0M 存货减值 + $1.7M 研发报废 ≈ $14.2M</strong>
+一次性损失 ★ Note 12。<strong>单点失败风险已被验证过一次。</strong></li>
+</ul>
+<hr />
+<h2 id="7-利润表按合并口径配段层瀑布">7.
+利润表（按合并口径，配段层瀑布）</h2>
+<p>单位：$ thousands，GAAP。★ Consolidated Statements of
+Operations（FY2025/FY2022 10-K、Q1'26 10-Q）。</p>
+<table>
+<thead>
+<tr>
+<th>行项</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>净营收</td>
+<td style="text-align: right;">37,943</td>
+<td style="text-align: right;">79,456</td>
+<td style="text-align: right;">83,302</td>
+<td style="text-align: right;">45,916</td>
+</tr>
+<tr>
+<td>营业成本</td>
+<td style="text-align: right;">25,996</td>
+<td style="text-align: right;">48,392</td>
+<td style="text-align: right;">54,963</td>
+<td style="text-align: right;">31,668</td>
+</tr>
+<tr>
+<td><strong>毛利</strong> ◆</td>
+<td style="text-align: right;">11,947</td>
+<td style="text-align: right;">31,064</td>
+<td style="text-align: right;">28,339</td>
+<td style="text-align: right;">14,248</td>
+</tr>
+<tr>
+<td><strong>毛利率</strong> ◆</td>
+<td style="text-align: right;">31.5%</td>
+<td style="text-align: right;">39.1%</td>
+<td style="text-align: right;">34.0%</td>
+<td style="text-align: right;"><strong>31.0%</strong></td>
+</tr>
+<tr>
+<td>研发</td>
+<td style="text-align: right;">50,318</td>
+<td style="text-align: right;">68,825</td>
+<td style="text-align: right;">76,002</td>
+<td style="text-align: right;">49,830</td>
+</tr>
+<tr>
+<td>销售管理(SG&amp;A)</td>
+<td style="text-align: right;">78,353</td>
+<td style="text-align: right;">61,551</td>
+<td style="text-align: right;">62,863</td>
+<td style="text-align: right;">35,196</td>
+</tr>
+<tr>
+<td>无形资产摊销</td>
+<td style="text-align: right;">6,913</td>
+<td style="text-align: right;">18,820</td>
+<td style="text-align: right;">18,926</td>
+<td style="text-align: right;">18,937</td>
+</tr>
+<tr>
+<td>重组与减值</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1,223</td>
+<td style="text-align: right;">18,049</td>
+</tr>
+<tr>
+<td><strong>经营亏损</strong></td>
+<td style="text-align: right;"><strong>(123,637)</strong></td>
+<td style="text-align: right;"><strong>(118,132)</strong></td>
+<td style="text-align: right;"><strong>(130,675)</strong></td>
+<td style="text-align: right;"><strong>(107,764)</strong></td>
+</tr>
+<tr>
+<td>净利润(亏损)</td>
+<td style="text-align: right;"><strong>+72,887</strong> ⚠️</td>
+<td style="text-align: right;">(145,951)</td>
+<td style="text-align: right;">(84,599)</td>
+<td style="text-align: right;">(116,953)</td>
+</tr>
+<tr>
+<td>摊薄 EPS</td>
+<td style="text-align: right;">+0.51</td>
+<td style="text-align: right;">(0.86)</td>
+<td style="text-align: right;">(0.46)</td>
+<td style="text-align: right;">(0.57)</td>
+</tr>
+</tbody>
+</table>
+<pre><code>FY2025 段层瀑布（$M）   营收 45.9
+  −营业成本 31.7  ┐
+  =毛利 14.2 ─────┼──→ −研发 49.8 ──→ −SG&amp;A 35.2 ──→ −摊销 18.9 ──→ −重组减值 18.0
+                 └──────────────────────────────────────────────→ 经营亏损 −107.8</code></pre>
+<blockquote>
+<p><strong>关键洞察</strong>：①毛利率从 FY2023 的 39% 滑到 31%（规模收缩
++ 产品组合），Q1'26 回升至
+37.6%（mix）。②<strong>研发($49.8M)远超毛利($14.2M)</strong>——这是一家「研发吃掉
+3.5 倍毛利」的烧钱公司。③FY2022「净利润 +$72.9M」是假象（见 §13）。</p>
+</blockquote>
+<hr />
+<h2 id="8-资产负债表">8. 资产负债表</h2>
+<p>单位：$ thousands。★ Consolidated Balance Sheets。</p>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">Q1'26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现金及等价物</td>
+<td style="text-align: right;">110,337</td>
+<td style="text-align: right;">86,737</td>
+<td style="text-align: right;"><strong>236,857</strong></td>
+<td style="text-align: right;">221,008</td>
+</tr>
+<tr>
+<td>商誉</td>
+<td style="text-align: right;">161,527</td>
+<td style="text-align: right;">163,215</td>
+<td style="text-align: right;">163,215</td>
+<td style="text-align: right;">163,215</td>
+</tr>
+<tr>
+<td>无形资产净额</td>
+<td style="text-align: right;">105,620</td>
+<td style="text-align: right;">72,195</td>
+<td style="text-align: right;">53,258</td>
+<td style="text-align: right;">48,524</td>
+</tr>
+<tr>
+<td><strong>总债务</strong></td>
+<td style="text-align: right;"><strong>0</strong> ✅</td>
+<td style="text-align: right;"><strong>0</strong> ✅</td>
+<td style="text-align: right;"><strong>0</strong> ✅</td>
+<td style="text-align: right;"><strong>0</strong> ✅</td>
+</tr>
+<tr>
+<td>股东权益</td>
+<td style="text-align: right;">384,760</td>
+<td style="text-align: right;">348,013</td>
+<td style="text-align: right;">443,661</td>
+<td style="text-align: right;">420,049</td>
+</tr>
+<tr>
+<td>流通股(Class A, M 股)</td>
+<td style="text-align: right;">n/a</td>
+<td style="text-align: right;">188.1</td>
+<td style="text-align: right;">230.5</td>
+<td style="text-align: right;">232.0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>零负债 ✅</strong>（仅有微量融资租赁，FY2025 付息
+$29K）。管理层「strong balance
+sheet」在<strong>债务</strong>这点上属实。</li>
+<li><strong>商誉 $163.2M + 无形 $53.3M = $216.5M ≈ 总资产($500.5M)的
+43%</strong>——全部来自 2022 年 GeneSiC 收购。商誉从未减值（9/30/25 测试
+FV&gt;账面）★ Note 6，但营收腰斩 +
+股价低迷下，<strong>减值风险真实存在却尚未触发</strong>。</li>
+<li>现金 $236.857M ✅ = deck
+的「$237M」。<strong>但这笔现金的来源是稀释（见 §9）。</strong></li>
+</ul>
+<hr />
+<h2 id="9-现金流量表来源-vs-用途配现金流瀑布">9. 现金流量表（来源 vs
+用途，配现金流瀑布）</h2>
+<p>单位：$ thousands。★ Consolidated Statements of Cash Flows。</p>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">Q1'26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经营现金流(OCF)</td>
+<td style="text-align: right;">(44,497)</td>
+<td style="text-align: right;">(40,098)</td>
+<td style="text-align: right;">(58,823)</td>
+<td style="text-align: right;">(42,891)</td>
+<td style="text-align: right;">(16,362)</td>
+</tr>
+<tr>
+<td>资本开支(Capex)</td>
+<td style="text-align: right;">(4,644)</td>
+<td style="text-align: right;">(4,782)</td>
+<td style="text-align: right;">(6,771)</td>
+<td style="text-align: right;">(1,478)</td>
+<td style="text-align: right;">(388)</td>
+</tr>
+<tr>
+<td><strong>自由现金流</strong> ◆</td>
+<td style="text-align: right;">(49,141)</td>
+<td style="text-align: right;">(44,880)</td>
+<td style="text-align: right;">(65,594)</td>
+<td style="text-align: right;"><strong>(44,369)</strong></td>
+<td style="text-align: right;">(16,750)</td>
+</tr>
+<tr>
+<td>融资现金流</td>
+<td style="text-align: right;">n/a</td>
+<td style="text-align: right;">~88,400</td>
+<td style="text-align: right;">3,495</td>
+<td style="text-align: right;"><strong>+194,639</strong></td>
+<td style="text-align: right;">1,518</td>
+</tr>
+</tbody>
+</table>
+<pre><code>FY2025 现金流瀑布（$M）
+ 期初现金 86.7
+   ＋融资 +194.6  ████████████████  ← ATM $100 + PIPE $100（稀释！）
+   −经营 −42.9    ██████            ← 真实烧钱
+   −投资 −1.4     ▏                 ← fabless，几乎不投
+ 期末现金 236.9   ✅ = BS 现金（跨表勾稽通过）</code></pre>
+<ul>
+<li><strong>现金桥（◆ 计算得出）</strong>：86.7 + 194.6 − 42.9 − 1.4 =
+<strong>236.9</strong> ✅ 与资产负债表现金完全勾稽。</li>
+<li><strong>结论：$237M 现金 100% 由融资（增发）堆出来，经营每年净流出
+$43–66M。</strong> 没有 2025 年的 $200M 增发，现金本应降到 ~$42M
+且持续下滑。</li>
+<li><strong>跑道</strong>：按 Q1'26 经营烧钱年化 ~$67M，$221M 现金可支撑
+**~3
+年**（若营收继续跌则更短）。这是「靠稀释买来的跑道」，非自身造血。</li>
+</ul>
+<hr />
+<h2 id="10-关键会计政策深度解析铁律-3含激进度评分">10.
+关键会计政策深度解析（铁律 3，含激进度评分）</h2>
+<table>
+<thead>
+<tr>
+<th>政策</th>
+<th>NVTS 做法</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>收入确认</td>
+<td>ASC
+606，<strong>发货时点</strong>确认（sell-in，卖给经销商即确认，非
+sell-through）★ Note 2</td>
+<td>🟡 中性偏积极——经销商集中下，sell-in 确认可能与终端真实需求脱节</td>
+</tr>
+<tr>
+<td>退货</td>
+<td>仅保证性质保修（12 月），<strong>不计一般退货准备</strong> ★</td>
+<td>🟡 历史退货不重大，但转型期需警觉</td>
+</tr>
+<tr>
+<td>商誉/无形</td>
+<td>GeneSiC 收购产生 $161.5M 商誉，<strong>从未减值</strong>；无形按
+4–15 年摊销 ★ Note 6</td>
+<td>🟢 摊销正常；🔴 减值测试结论依赖股价 FV，营收腰斩下脆弱</td>
+</tr>
+<tr>
+<td>存货</td>
+<td>成本与可变现净值孰低；<strong>被审计师列为 Critical Audit
+Matter（FY23–25）</strong> ★</td>
+<td>🔴 需求预测主观，已发生 $5.0M 减值（FY24）</td>
+</tr>
+<tr>
+<td>股权激励(SBC)</td>
+<td>Black-Scholes + 蒙特卡洛；FY2025 $14.5M（含 <strong>−$16.5M LTIP
+冲回</strong>）★</td>
+<td>🔴 冲回是创始人离职的会计指纹，<strong>美化了 FY2025
+opex</strong>，非真实降本</td>
+</tr>
+<tr>
+<td>earnout 负债</td>
+<td>按公允价值计量，损益表确认 FV 变动 ★</td>
+<td>🔴 <strong>headline 利润的最大扭曲源</strong>（见 §13）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>激进度综合评分：+0.5（略偏积极）</strong>——主因：①sell-in
+收入确认叠加单一经销商 46%；②商誉/无形占资产 43% 且未减值；③SBC 冲回与
+earnout FV 让 headline
+数字波动巨大、可比性差。<strong>会计本身无造假证据</strong>（无财务重述），但<strong>披露/内控质量差</strong>（见
+§11）。</p>
+<hr />
+<h2 id="11-逐年变更侦测铁律-6配变更时间线-本案最重红旗">11.
+逐年变更侦测（铁律 6，配变更时间线）—— 本案最重红旗</h2>
+<pre><code>变更时间线
+2022 ──── GeneSiC 收购($246.2M) → 并表、商誉 $161.5M；FY2022 NT 迟报(PPA 重分类)
+2023-07 ─ 换审计 #1：Deloitte → Moss Adams ★（理由备注=既有重大缺陷）
+2024-03 ─ FY2023 10-K 声称「内控已整改」
+2024-07 ─ FY2023 10-K/A：⚠️ 反转「已整改」→ 披露新重大缺陷 + adverse ICFR 意见（无财务重述）
+2024 ──── 新增实体级/现金流分类/外部报告重大缺陷
+2025-04 ─ 换审计 #2：Moss Adams → KPMG ★（8-K 明确 FY2024 缺陷「截至本报告日尚未整改」）
+2025-04 ─ ★维权和解：创始 COO/CTO Kinzer 辞职；CEO 被剥夺董事长
+2025-08 ─ 创始 CEO Sheridan 辞职 → 新 CEO Allexandre
+2025-Q4 ─ 「Navitas 2.0」重组：$18.0M 费用 + 19% 裁员 + $3.8M 固定资产减值
+2025-11 ─ PIPE 增发 $100M @ $6.75
+2026-02 ─ FY2025 10-K：声称内控「有效」⚠️（但 KPMG 未做 404(b) 审计鉴证）
+2026-03 ─ 新 CFO Tonya Stevens（12 个月内第 3 个 C 级变动）</code></pre>
+<ul>
+<li><strong>(a) 会计准则</strong>：ASC 842(2022)、ASU 2023-07
+分部(FY24)、ASU 2023-09 税(FY25 未来适用)。无追溯重述。</li>
+<li><strong>(b) 分部/重分类</strong>：始终 1 个报告分部；「Navitas
+2.0」是<strong>重组而非分部重分类</strong>（H3 推翻）。</li>
+<li><strong>(c) 业务转型</strong>：GeneSiC 并表（2022）；Navitas 2.0
+转型（2025+）。</li>
+<li><strong>(d) 换审计 ×2 + (e)
+10-K/A</strong>：<strong>两年内换两次审计师</strong>（大所→区域所→大所），每次
+8-K 都把「重大缺陷」列为可报告事件例外。<strong>FY2023 10-K/A
+把「已整改」反转为 adverse
+ICFR</strong>。<strong>FY2025「内控有效」是管理层单方声明，KPMG
+未鉴证（豁免
+404(b)）</strong>——这是本案<strong>最值得警惕的披露质量红旗</strong>（H4
+印证）。无财务重述是唯一缓和点。</li>
+</ul>
+<hr />
+<h2 id="12-运营资产产能专题--不触发fabless">12. 运营资产/产能专题 ——
+不触发（fabless）</h2>
+<p><strong>档案 15 不触发 ❌</strong>：NVTS 是
+fabless，无自有晶圆厂/数据中心/机队/矿山。Capex 仅
+~$1.478M（FY2025）★，PP&amp;E 净额
+$9.8M。其「产能」实为<strong>代工产能依赖</strong>，已在 §4.2 与 §17
+风险中覆盖（TSMC 退出 GaN）。</p>
+<hr />
+<h2 id="13-非经营盈余扰动项专题铁律触发配剥离测试对比图star-核心">13.
+非经营/盈余扰动项专题（铁律触发，配剥离测试对比图）⭐ 核心</h2>
+<p>NVTS 的 headline
+净利润被大量非经营项严重扭曲，<strong>必须剥离才能看清真实经营亏损</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>行项（$ thousands）</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>报告净利润(亏损)</strong> ★</td>
+<td style="text-align: right;">+72,887</td>
+<td style="text-align: right;">(145,951)</td>
+<td style="text-align: right;">(84,599)</td>
+<td style="text-align: right;">(116,953)</td>
+</tr>
+<tr>
+<td>− warrant 公允价值(收益)/损失</td>
+<td style="text-align: right;">(51,763)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>− earnout 公允价值(收益)/损失</td>
+<td style="text-align: right;">(121,709)</td>
+<td style="text-align: right;">+33,788</td>
+<td style="text-align: right;">(36,644)</td>
+<td style="text-align: right;">+12,424</td>
+</tr>
+<tr>
+<td>− 权益法投资公允价值</td>
+<td style="text-align: right;">~+1,100</td>
+<td style="text-align: right;">~+100</td>
+<td style="text-align: right;">(3,905)</td>
+<td style="text-align: right;">+1,121</td>
+</tr>
+<tr>
+<td>− 所得税(收益)</td>
+<td style="text-align: right;">+22,812</td>
+<td style="text-align: right;">+517</td>
+<td style="text-align: right;">+342</td>
+<td style="text-align: right;">(50)</td>
+</tr>
+<tr>
+<td><strong>= 经营亏损（公司披露）</strong> ★</td>
+<td style="text-align: right;"><strong>(123,637)</strong></td>
+<td style="text-align: right;"><strong>(118,132)</strong></td>
+<td style="text-align: right;"><strong>(130,675)</strong></td>
+<td style="text-align: right;"><strong>(107,764)</strong></td>
+</tr>
+<tr>
+<td>＋重组与减值（在 opex 内）</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">~3,214</td>
+<td style="text-align: right;">18,000</td>
+</tr>
+<tr>
+<td>＋坏账/信用损失（在 SG&amp;A 内）</td>
+<td style="text-align: right;">~0</td>
+<td style="text-align: right;">~0</td>
+<td style="text-align: right;">7,689</td>
+<td style="text-align: right;">844</td>
+</tr>
+<tr>
+<td><strong>≈ 底层经营亏损 ◆</strong></td>
+<td style="text-align: right;"><strong>(123,637)</strong></td>
+<td style="text-align: right;"><strong>(118,132)</strong></td>
+<td style="text-align: right;"><strong>(119,772)</strong></td>
+<td style="text-align: right;"><strong>(88,920)</strong></td>
+</tr>
+</tbody>
+</table>
+<pre><code>剥离测试对比图（$M）
+FY2022:  报告净利 +72.9  ➜➜剥离 warrant/earnout/税➜➜  真实经营亏损 −123.6  ⚠️ 反转 196 个 M！
+FY2025:  报告净亏 −117.0 ➜➜剥离 earnout 损失+重组➜➜    底层经营亏损 −88.9</code></pre>
+<blockquote>
+<p><strong>三个致命洞察</strong>：</p>
+<ol type="1">
+<li><strong>FY2022「+$72.9M 净利润」是纯粹的会计幻觉</strong>：剥离
++$51.8M warrant FV 收益、+$121.7M earnout FV 收益、+$22.8M
+一次性税收优惠后，真实经营<strong>亏损
+$123.6M</strong>。这个「利润」恰恰来自<strong>公司自己股价暴跌</strong>（$16.09→$1.47
+让 earnout 负债缩水）——股东亏钱，账上记利润。</li>
+<li><strong>从未有任何一年经营盈利</strong>。真实经营亏损 FY22–24 约
+$120M/年，FY2025 靠重组 + SBC 冲回收窄到 ~$89M——但建立在营收 −45%
+的基础上。</li>
+<li><strong>earnout 是双刃剑</strong>：10M 对赌股的 VWAP 门槛
+$12.50/$17/$20，窗口 2026-10-19 到期。股价 ~$7 远低于门槛 →
+若到期未达标，$22.6M 负债将<strong>反转为 FY2026
+的一次性账面收益</strong>，又一次扭曲 headline。✅
+已知的前瞻性扰动。</li>
+</ol>
+</blockquote>
+<hr />
+<h2 id="14-资本结构--到期墙配股权控制结构图">14. 资本结构 +
+到期墙（配股权/控制结构图）</h2>
+<ul>
+<li><strong>股本</strong>：实际单一 Class A（Class B 授权但零发行）→
+<strong>非 controlled company</strong>；740M 授权 vs ~232M
+流通，<strong>稀释空间巨大</strong>。★ FY2025 10-K / DEF 14A。</li>
+<li><strong>无债务到期墙</strong>（零债务）✅。</li>
+<li><strong>2025 年增发（稀释明细）★</strong>：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>时间</th>
+<th style="text-align: right;">募资(gross)</th>
+<th style="text-align: right;">新增股数</th>
+<th style="text-align: right;">价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATM（Jefferies）</td>
+<td>2025 Q2</td>
+<td style="text-align: right;">$100.0M</td>
+<td style="text-align: right;">~19.78M</td>
+<td style="text-align: right;">~$5.06</td>
+</tr>
+<tr>
+<td>PIPE（Needham，未具名投资者）</td>
+<td>2025-11-10</td>
+<td style="text-align: right;">$100.0M</td>
+<td style="text-align: right;">14.81M</td>
+<td style="text-align: right;">$6.75</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td>2025</td>
+<td style="text-align: right;"><strong>~$200M</strong></td>
+<td style="text-align: right;"><strong>~34.6M</strong></td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>稀释幅度 ◆</strong>：股数
+188.1M(FY24)→230.5M(FY25)→232.0M(Q1'26)，<strong>两年
++23%</strong>；2025 增发价 $5.06/$6.75 <strong>均低于</strong> 12/31
+股价 ~$7.14，更远低于 $12.50 对赌门槛。</li>
+<li><strong>对赌股(10M)</strong>：VWAP 门槛
+$12.5/$17/$20，<strong>全未达标</strong>，全部排除在摊薄股数外，窗口
+2026-10 到期。</li>
+<li><strong>稀释总览 ◆</strong>：全摊薄 ~249–250M（约 +8% over
+basic）。最毒的 LTIP 巨额期权（9.75M）已随创始人离职作废。</li>
+</ul>
+<pre><code>控制/相关方结构图
+  公众/机构(BlackRock 6.6%) ──┐
+  Ranbir Singh 8.0%(GeneSiC创始人/13D维权方)──┤
+  全体董事高管 12.4% ─────────┤──→ ★ Navitas (单一 Class A，无控股股东)
+                                         ├─ GeneSiC(2022 全资并购 $246.2M)
+                                         ├─ Halo JV(中国，2023 以 $20M 股票买断少数权益)
+                                         └─ 关联方权益法投资 13.1%(账面 $7.8M)</code></pre>
+<hr />
+<h2 id="15-行业横向对比step-4配对标图">15. 行业横向对比（Step
+4，配对标图）</h2>
+<p><strong>可比池选择理由</strong>：均为功率半导体（GaN/SiC），覆盖「盈利
+fabless 标杆」「SiC 纯玩家反面教材」「规模化 IDM」三类，以定位
+NVTS。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;"><strong>NVTS</strong> (FY25)</th>
+<th style="text-align: right;"><strong>POWI</strong> (FY25)</th>
+<th style="text-align: right;"><strong>WOLF</strong> (FY25,6月制)</th>
+<th style="text-align: right;"><strong>ON</strong> (FY24)</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收</td>
+<td style="text-align: right;">$45.9M</td>
+<td style="text-align: right;">$443.5M</td>
+<td style="text-align: right;">$757.6M</td>
+<td style="text-align: right;">~$7,080M</td>
+<td>★SEC / ◇ON</td>
+</tr>
+<tr>
+<td>营收 YoY</td>
+<td style="text-align: right;"><strong>−45%</strong></td>
+<td style="text-align: right;">~+6%</td>
+<td style="text-align: right;">−6%</td>
+<td style="text-align: right;">−14%</td>
+<td>◆</td>
+</tr>
+<tr>
+<td>毛利率</td>
+<td style="text-align: right;">31.0%</td>
+<td style="text-align: right;"><strong>54.5%</strong></td>
+<td style="text-align: right;"><strong>−16.0%</strong> ⚠️负</td>
+<td style="text-align: right;">~45%</td>
+<td>◆/◇</td>
+</tr>
+<tr>
+<td>研发/营收</td>
+<td style="text-align: right;"><strong>109%</strong> ⚠️</td>
+<td style="text-align: right;">~23%</td>
+<td style="text-align: right;">重</td>
+<td style="text-align: right;">~9%</td>
+<td>◆</td>
+</tr>
+<tr>
+<td>经营利润</td>
+<td style="text-align: right;"><strong>亏 $107.8M</strong></td>
+<td style="text-align: right;">盈利</td>
+<td style="text-align: right;">巨亏</td>
+<td style="text-align: right;">盈利</td>
+<td>★/◇</td>
+</tr>
+<tr>
+<td>商业模式</td>
+<td style="text-align: right;">fabless</td>
+<td style="text-align: right;">fabless</td>
+<td style="text-align: right;">IDM(自有厂)</td>
+<td style="text-align: right;">IDM</td>
+<td>—</td>
+</tr>
+<tr>
+<td>净负债</td>
+<td style="text-align: right;"><strong>净现金($237M)</strong></td>
+<td style="text-align: right;">净现金</td>
+<td style="text-align: right;">~$6.5B 债务→<strong>破产</strong></td>
+<td style="text-align: right;">有杠杆</td>
+<td>★/◇</td>
+</tr>
+</tbody>
+</table>
+<p>数据来源：NVTS/POWI/WOLF 取自 SEC XBRL companyconcept（★）；POWI
+FY2025 营收 $443.5M、毛利 $241.6M→GM 54.5% ◆ <a
+href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000833640/us-gaap/Revenues.json">SEC</a>；WOLF
+FY2025 营收 $757.6M、毛利 <strong>−$121.6M</strong> ◆ <a
+href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000895419/us-gaap/GrossProfit.json">SEC</a>；ON
+营收/毛利率为 ◇ 公开值（量级核对）。</p>
+<pre><code>对标定位图
+            盈利能力 高
+                │   ● POWI(fabless,GM55%,盈利,净现金) ← &quot;好学生&quot;
+                │   ● ON(IDM,GM45%,盈利)
+   资本轻 ──────┼──────── 资本重
+   ● NVTS       │
+   (fabless但   │   ● WOLF(SiC,GM-16%,$6.5B债务→破产) ← &quot;反面教材&quot;
+    巨亏,−45%)  │
+            盈利能力 低</code></pre>
+<p><strong>合理性判断（铁律 4.3）</strong>：</p>
+<ul>
+<li><strong>NVTS 像 POWI
+一样轻资产（fabless、净现金、零债务）——这是它相对 WOLF
+的最大优势</strong>：不会像 Wolfspeed 那样因数百亿资本开支 + 债务在 SiC
+下行周期破产。</li>
+<li><strong>但 NVTS 的盈利质量像 WOLF 一样差</strong>：毛利率仅
+31%（POWI 的 55% 几乎一倍差距），且<strong>研发吃掉 109%
+营收</strong>（POWI 仅 23%）——营收太小，研发摊不薄。</li>
+<li><strong>核心矛盾</strong>：NVTS
+把自己讲成「下一个增长引擎」，但当前是<strong>唯一一家营收负 45%
+且经营巨亏的可比公司</strong>。它的生存逻辑不是当前盈利，而是「轻资产能熬
++ $237M 现金能撑 ~3 年 + 赌 AI 高功率 TAM 接棒」。</li>
+</ul>
+<hr />
+<h2 id="16-关联方红旗扫描">16. 关联方红旗扫描</h2>
+<table>
+<thead>
+<tr>
+<th>红旗项</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>客户集中度 ≥20%</td>
+<td>🔴 单一经销商 46%（FY25），≥10% 仅 2 家 ★ Note 12</td>
+</tr>
+<tr>
+<td>关联方交易 ≥1% 收入</td>
+<td>🟢 Halo JV 关联收入 &lt;1%，不重大；2023 以 $20M 股票买断 Halo
+少数权益 ★</td>
+</tr>
+<tr>
+<td>失败售后回租</td>
+<td>🟢 无</td>
+</tr>
+<tr>
+<td>Going concern</td>
+<td>🟢 无（$237M 现金）★</td>
+</tr>
+<tr>
+<td>NT 迟报</td>
+<td>🔴 FY2022、FY2023 10-K + Q1'24 10-Q 均迟报 ★</td>
+</tr>
+<tr>
+<td>Item 4.02 重述</td>
+<td>🟢 无非依赖性重述（10-K/A 未重述财务）</td>
+</tr>
+<tr>
+<td>重大 SBC 重订</td>
+<td>🟡 LTIP 巨额期权随创始人离职作废，$16.5M 冲回 ★</td>
+</tr>
+<tr>
+<td>Controlled company</td>
+<td>🟢 否（无 &gt;10% 股东）★</td>
+</tr>
+<tr>
+<td>双层股权</td>
+<td>🟢 实际单一 Class A ★</td>
+</tr>
+<tr>
+<td>债务到期/covenant</td>
+<td>🟢 零债务 ★</td>
+</tr>
+<tr>
+<td>会计准则/重分类追溯重述</td>
+<td>🟢 无追溯重述</td>
+</tr>
+<tr>
+<td>停止经营</td>
+<td>🟢 无</td>
+</tr>
+<tr>
+<td>非经营项撑利润</td>
+<td>🔴 earnout/warrant FV 主导 headline（见 §13）★</td>
+</tr>
+<tr>
+<td>维权方介入</td>
+<td>🔴 Ranbir Singh/SiCPower 13D 维权 → 和解逼退创始管理层 ★</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="17-风险因素提炼item-1a">17. 风险因素提炼（Item 1A）</h2>
+<p>按重要性排序（★ FY2025 10-K Item 1A）：</p>
+<ol type="1">
+<li><strong>转型执行风险</strong>：高功率设计导入「one year or more,
+<strong>if ever</strong>」——收入可能永远接不上。</li>
+<li><strong>客户/经销商集中</strong>：单一经销商
+46%，且转型主动收窄经销商网络（风险因素明确承认）。</li>
+<li><strong>供应链/TSMC 退出 GaN</strong>：TSMC
+曾是<strong>唯一</strong> GaN 供应商，2025-07-01 宣布 <strong>2027 年 7
+月停产 GaN</strong>；转向
+GlobalFoundries(US)+Powerchip，需重新认证，「no
+assurance」能保质保量供货。</li>
+<li><strong>中国/地缘/出口管制</strong>：中国占终端
+47%，叠加美国对华出口/对外投资新规。</li>
+<li><strong>资本充足/稀释</strong>：「可能需要额外资本，而这未必能以可接受条件获得，甚至根本拿不到」。</li>
+<li><strong>内控/重大缺陷</strong>：风险因素保留缺陷复发的可能（即便
+FY2025 声称「有效」）。</li>
+<li><strong>公告驱动的股价波动</strong>（自省式免责）：「客户/技术选用公告<strong>未必反映有约束力的承诺或未来收入</strong>……投资者不应过度依赖」——这条直指
+2025-05 NVIDIA 消息引发的暴涨。</li>
+<li><strong>SPAC
+遗留/治理</strong>：倒置国内公司地位限制政府合同；股东维权扰动；股权集中。</li>
+</ol>
+<hr />
+<h2 id="18-我的论点含反方观点">18. 我的论点（含反方观点）</h2>
+<h3
+id="论点-1这是一次用资产负债表换时间的转型豪赌能不能赢取决于-ai-高功率收入能否在现金耗尽前接棒">论点
+1：这是一次「用资产负债表换时间」的转型豪赌——能不能赢取决于 AI
+高功率收入能否在现金耗尽前接棒。</h3>
+<ul>
+<li><strong>证据</strong>：①营收 FY2024→FY2025 腰斩 −45%，Q1'26 再
+−39%（§6）；②经营每年烧 $43–66M，$237M 现金给 ~3 年跑道（§9）；③现金
+100% 靠 2025 年 $200M 增发（§14）。</li>
+<li><strong>反方</strong>：fabless + 零债务 + $237M 现金，比
+Wolfspeed（破产）安全得多；AI 数据中心 800V HVDC
+是真实的结构性需求，NVIDIA「合作」给了背书。</li>
+<li><strong>我的反驳</strong>：NVIDIA 那份 8-K 是 <strong>Item
+8.01「其他事件」而非 1.01「重大合同」</strong>，且与一次 ATM
+增发<strong>捆绑同日披露</strong>（§13/事件流）——公司自己在风险因素里警告「不要过度依赖此类公告」。背书
+≠ 订单。轻资产确实能熬，但「熬」需要营收止跌，而目前还在加速下滑。</li>
+</ul>
+<h3
+id="论点-2headline-财务数字基本不可用必须看底层经营亏损而它揭示一个研发吃掉-35-倍毛利的小公司">论点
+2：headline
+财务数字基本不可用，必须看「底层经营亏损」——而它揭示一个研发吃掉 3.5
+倍毛利的小公司。</h3>
+<ul>
+<li><strong>证据</strong>：①FY2022「+$72.9M 净利」剥离后是 −$123.6M
+经营亏损（§13）；②研发 $49.8M vs 毛利 $14.2M（§7）；③毛利率 31% 仅 POWI
+的一半（§15）。</li>
+<li><strong>反方</strong>：FY2025 底层经营亏损已从 ~$120M 收窄到
+~$89M，SBC 大降，说明成本纪律见效。</li>
+<li><strong>我的反驳</strong>：$16.5M 的 SBC 下降主要是创始人离职导致
+LTIP
+作废<strong>冲回</strong>（§10），是管理层动荡的会计副产品，不是经营杠杆。真实降本要看营收企稳后的毛利。</li>
+</ul>
+<h3
+id="论点-3治理与内控是被低估的风险两次换审计--adverse-icfr-反转--维权逼宫--c-级大换血集中在-18-个月内">论点
+3：治理与内控是被低估的风险——两次换审计 + adverse ICFR 反转 + 维权逼宫 +
+C 级大换血，集中在 18 个月内。</h3>
+<ul>
+<li><strong>证据</strong>：①Deloitte→Moss Adams→KPMG（§11）；②FY2023
+10-K/A 把「已整改」反转为 adverse
+ICFR；③FY2025「内控有效」是管理层单方声明、KPMG
+未鉴证；④两位创始人(CEO/CTO)2025 年经维权和解离场，12 个月内第 3 个
+CFO（§14）。</li>
+<li><strong>反方</strong>：新 CEO 来自外部、薪酬高度绑定业绩；clawback +
+97.3% say-on-pay + 董事会去分级提案 =
+治理在清理而非丑闻；无财务重述。</li>
+<li><strong>我的反驳</strong>：认同方向在改善，但<strong>红旗的密度</strong>（2
+年 2 次换审计 + ICFR 反转 + 维权 + 三换
+CFO）本身就是尽调级警示。FY2025「内控有效」缺审计师鉴证，可信度打折。</li>
+</ul>
+<hr />
+<h2 id="19-悬而未决问题保留诚实">19. 悬而未决问题（保留诚实）</h2>
+<ol type="1">
+<li><strong>GaN vs SiC
+收入拆分</strong>——公司从不披露（单一分部），无法判断 AI/SiC
+接棒的真实进度。需电话会/deck 旁证。</li>
+<li><strong>Backlog/RPO 缺失</strong>——转型期收入能见度无法量化。</li>
+<li><strong>TSMC 退出 GaN 的过渡成本与时间</strong>——10-K
+称「仍在评估」，buffer 库存与重认证费用未量化。</li>
+<li><strong>NVIDIA「合作」是否含任何约束性收入</strong>——8.01 而非
+1.01，强烈暗示无约束性供货合同（待证）。</li>
+<li><strong>PIPE 投资者身份</strong>——$100M @ $6.75
+的认购方未具名（战略客户 or 财务投资者？需 Form D/13D）。</li>
+<li><strong>2026-05 新一轮融资</strong>——S-3ASR + 424B5 + 1.01 8-K
+同日（数据截止后），增量稀释待量化。</li>
+<li><strong>Q1'26 10-Q 后续事件披露</strong>——清洗文本中未见 subsequent
+events 段，需核对 as-filed HTML。</li>
+</ol>
+<hr />
+<h2 id="20-复盘附录来源索引--覆盖率自检">20. 复盘附录（来源索引 +
+覆盖率自检）</h2>
+<ul>
+<li><strong>filing 覆盖率</strong>：2023–2026 EDGAR 共 358
+filings。已精读：4× 10-K（FY22–25）、Q1'26 10-Q、2026 DEF 14A、关键
+8-K（4.01×2、1.01 维权、8.01 NVIDIA、1.01+3.02
+PIPE）。已登记未逐份精读：124× Form 4、91× Form
+144（同质内部人交易，按需抽取）、其余 10-Q（季度数据已由 10-K 年度数 +
+Q1'26 覆盖趋势）。<strong>覆盖率：核心分析性 filing
+~100%；全量含内部人表 ~按信号抽样</strong>。</li>
+<li><strong>关键链接</strong>：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K</a> · <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">Q1'26
+10-Q</a> · <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926058742/tm2613272d3_def14a.htm">2026
+DEF 14A</a> · <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm">换审计
+8-K 2025</a> · <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828025027705/nvts-20250521.htm">NVIDIA
+8-K</a> · <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465925109160/tm2530677d1_8k.htm">PIPE
+8-K</a> · 完整 358 清单见 <a
+href="../../processed/NVTS_filings_catalog_2023-2026.md">catalog</a></li>
+<li><strong>第一次出错/修正</strong>：①初读以为单一经销商
+FY2025=56%，经查 Note 12 原文修正为 <strong>B=46%（56% 是 FY2024 的
+A，已终止）</strong>；②两套地理口径（MD&amp;A 终端 vs Note
+出货地）已并存说明。</li>
+<li><strong>数据来源四级占比</strong>：本报告财务数字以 ★ SEC 为主，◆
+计算项均写明公式，◇ 仅用于 deck 叙事与 ON 量级，▽
+推算仅用于跑道/趋势判断。</li>
+</ul>
+</body>
+</html>
