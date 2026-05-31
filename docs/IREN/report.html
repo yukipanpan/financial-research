@@ -66,23 +66,23 @@
 
 ```mermaid
 flowchart LR
-  subgraph UP[上游 ⚙️]
-    P[电力+土地<br/>PPA/并网]
-    N[NVIDIA<br/>GPU 芯片]
-    D[Dell<br/>GPU 服务器]
+  subgraph UP["上游 Upstream"]
+    P["电力+土地 PPA/并网"]
+    N["NVIDIA GPU 芯片"]
+    D["Dell GPU 服务器"]
   end
-  subgraph MID[中游 ★ IREN 所处环节]
-    I["IREN：锁电锁地 → 自建数据中心(风冷/液冷)<br/>→ 装 GPU → 自营 AI Cloud 出租算力<br/>(Mirantis 补编排/运维软件)"]
+  subgraph MID["中游 — IREN 所处环节"]
+    I["IREN 锁电锁地 → 自建数据中心 风冷/液冷 → 装 GPU → 自营 AI Cloud 出租算力 + Mirantis 软件"]
   end
-  subgraph DOWN[下游 💰]
-    M["Microsoft $9.7bn / 200MW (至2031)"]
-    NV["NVIDIA $3.4bn (至2032)"]
-    E[AI 实验室 / 企业]
+  subgraph DOWN["下游 Downstream"]
+    M["Microsoft 9.7bn / 200MW 至2031"]
+    NV["NVIDIA 3.4bn 至2032"]
+    E["AI 实验室 / 企业"]
   end
-  P -->|电=最大经营成本| I
-  N -->|芯片(稀缺)| I
-  D -->|~$5.8bn 服务器| I
-  I -->|AI 算力小时| M
+  P -->|电为最大成本| I
+  N -->|芯片稀缺| I
+  D -->|约5.8bn服务器| I
+  I -->|AI 算力| M
   I --> NV
   I --> E
   style I fill:#5fdd9d,stroke:#0a3,stroke-width:3px
@@ -107,15 +107,13 @@ flowchart LR
 | Q3 FY26 | **111.2** | 68.2% | **33.6** | 86.3% | **144.8** | ✅ ★10-Q |
 
 ```mermaid
-flowchart LR
-  subgraph 收入构成演变["总收入 & 转型（$M）"]
-    direction TB
-    A["FY25: Mining 484.6 (97%) + AI 16.4 (3%) = 501.0"]
-    B["Q1 FY26: 240.3 ↘"]
-    C["Q2 FY26: 184.7 ↘"]
-    D["Q3 FY26: Mining 111.2 (77%) + AI 33.6 (23%) = 144.8 ↘↘"]
-    A-->B-->C-->D
-  end
+flowchart TB
+  A["FY25 总收入 501.0 — Mining 484.6 占97% + AI 16.4 占3%"]
+  B["Q1 FY26 总收入 240.3 ↘"]
+  C["Q2 FY26 总收入 184.7 ↘"]
+  D["Q3 FY26 总收入 144.8 ↘↘ — Mining 111.2 占77% + AI 33.6 占23%"]
+  A-->B-->C-->D
+  style D fill:#ffd166
 ```
 > **关键事实**：总收入**连续两季下滑**（240.3→184.7→144.8）——Mining 萎缩快于 AI Cloud 增长。AI Cloud 环比 +94%（17.3→33.6）但仅占 23%。**跨段排名**：核心=Mining（在退场）；增长引擎=AI Cloud；真实盈利能力=两段 D&A 前看着都赚，但全公司 Q3 GAAP 经营亏损 $(233.5)m（D&A 121.2 + 减值 140.4 + SG&A 81.8 吞掉段毛利 104.9）。
 
@@ -141,13 +139,13 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-  R["总收入 $144.8m"] --> GP["段毛利(D&A前) ~$104.9m"]
-  GP --> DA["− D&A $121.2m"]
-  DA --> IMP["− 减值 $140.4m(退役矿机)"]
-  IMP --> SGA["− SG&A $81.8m"]
-  SGA --> OL["= 经营亏损 $(233.5)m"]
-  OL --> FV["− capped call 未实现损失 $23.7m 等"]
-  FV --> NL["= 净亏损 $(247.8)m"]
+  R["总收入 144.8m"] --> GP["段毛利 D&A前 约104.9m"]
+  GP --> DA["减 D&A 121.2m"]
+  DA --> IMP["减 减值 140.4m 退役矿机"]
+  IMP --> SGA["减 SG&A 81.8m"]
+  SGA --> OL["= 经营亏损 233.5m"]
+  OL --> FV["减 capped call 未实现损失 23.7m 等"]
+  FV --> NL["= 净亏损 247.8m"]
   style NL fill:#ff6b6b,stroke:#a00,stroke-width:2px
   style OL fill:#ffb86b
 ```
@@ -179,15 +177,15 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-  subgraph 来源["💧 资金来源 (9M)"]
-    OCF["经营 OCF +$289.3m<br/>(含非现金加回 $767.9m)"]
-    CN["可转债 +$3,299.6m"]
-    EQ["增发股票 +$2,630.8m"]
+  subgraph SRC["资金来源 9M"]
+    OCF["经营 OCF +289.3m 含非现金加回767.9m"]
+    CN["可转债 +3,299.6m"]
+    EQ["增发股票 +2,630.8m"]
   end
-  subgraph 用途["🔥 资金用途 (9M)"]
-    CAPEX["投资(主要 capex) −$2,608.9m"]
+  subgraph USE["资金用途 9M"]
+    CAPEX["投资 主要capex -2,608.9m"]
   end
-  来源 ==> 用途
+  SRC ==> USE
 ```
 > **FCF（9M）≈ −$2,253m（= −$2.25bn）；年化烧钱 ~−$3.0bn；裸现金跑道 ~8.8 个月**。OCF 仅覆盖 capex 的 ~11%；Capex/D&A ≈ 8.3×。**生存高度依赖持续再融资**（$6.0bn ATM、更多可转债、GPU 融资租赁、Microsoft/NVIDIA 预付）。✅ CF 期末现金 = BS 现金（勾稽通过）。
 
@@ -205,15 +203,15 @@ flowchart LR
 ## 11. 逐年变更侦测（铁律 6，详见 `14_yoy_changes.md`）
 
 ```mermaid
-timeline
-  title IREN 逐年变更 / 重大事件时间线
-  2024-02 : 改名 Iris Energy → IREN
-  2024-08 : FY2024 20-F (going-concern + ICFR 重大缺陷)
-  2024-11→2025-02 : SEC 加密资产办公室 3 轮问询 (现金流分类)
-  2025-03-20 : 重述 — 6-K notice + 6-K/A + 20-F/A (现金流重分类)
-  2025-06-30 : 重大缺陷称已修复 ; IFRS→US GAAP 切换
-  2025-11 : 审计师 RCGT → KPMG
-  2026 FY : Adj EBITDA 改定义(剔除 debt conversion inducement)
+flowchart TB
+  T1["2024-02 改名 Iris Energy 为 IREN"]
+  T2["2024-08 FY2024 20-F 带 going-concern + ICFR 重大缺陷"]
+  T3["2024-11 至 2025-02 SEC 加密资产办公室 3 轮问询 现金流分类"]
+  T4["2025-03-20 重述 6-K notice + 6-K/A + 20-F/A 现金流重分类"]
+  T5["2025-06-30 重大缺陷称已修复 IFRS 转 US GAAP"]
+  T6["2025-11 审计师 RCGT 转 KPMG"]
+  T7["2026 FY Adj EBITDA 改定义 剔除 debt conversion inducement"]
+  T1-->T2-->T3-->T4-->T5-->T6-->T7
 ```
 - **重述（H3，已确认）**：仅**现金流量表重分类**——把「出售已挖比特币的收入」从**经营**移到**投资**活动（IAS 7.16(b)，BTC=无形资产）。SEC 三轮问询后 IREN 让步。**对损益/资产/权益/期末现金零影响**，只是历史经营现金流被调低。★ [6-K](https://www.sec.gov/Archives/edgar/data/1878848/000187884825000027/irenlimited-6krestatemento.htm)
 - **可比性陷阱**：① FY2025 起 IFRS→US GAAP，FY25 数字不能直接接原 20-F；② 历史经营现金流须用重述后口径。
@@ -237,7 +235,7 @@ timeline
 
 ```mermaid
 flowchart LR
-  Y26["2026: 480MW<br/>150k GPU<br/>目标 $4.4bn ARR"] --> Y27["2027: 1,210MW<br/>(+730MW)<br/>Childress H5-6 / Sweetwater1"] --> Y28["2028+: 5GW secured<br/>Sweetwater/Kiowa/Nostrum"]
+  Y26["2026 · 480MW · 150k GPU · 目标 4.4bn ARR"] --> Y27["2027 · 1,210MW · +730MW · Childress H5-6 / Sweetwater1"] --> Y28["2028+ · 5GW secured · Sweetwater/Kiowa/Nostrum"]
   style Y26 fill:#5fdd9d
   style Y27 fill:#ffd166
   style Y28 fill:#ef476f,color:#fff
@@ -259,11 +257,11 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-  subgraph FY25
-    A1["报告净利 +$86.9m"] -->|剔除非现金 FV +$77.5m 等| A2["真实经营 ≈ +$7.6m"]
+  subgraph G1["FY25"]
+    A1["报告净利 +86.9m"] -->|剔除非现金FV +77.5m等| A2["真实经营 约 +7.6m"]
   end
-  subgraph 9M_FY26["9M FY26"]
-    B1["报告净亏 −$18.6m<br/>(被 +$533.9m FV 收益掩盖)"] -->|还原| B2["真实经营亏损 ≈ −$252m<br/>(经营口径 −$426m)"]
+  subgraph G2["9M FY26"]
+    B1["报告净亏 -18.6m 被 +533.9m FV收益掩盖"] -->|还原| B2["真实经营亏损 约 -252m 经营口径 -426m"]
   end
   style A2 fill:#ffd166
   style B2 fill:#ff6b6b,color:#fff
@@ -279,7 +277,7 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-  Y29["2029<br/>$233m"] --- Y30["2030<br/>$212m"] --- Y31["2031<br/>$1.0bn"] --- Y32["2032<br/>$1.15bn"] --- Y33["2033<br/>$4.15bn ⚠️"]
+  Y29["2029 · 233m"] --- Y30["2030 · 212m"] --- Y31["2031 · 1.0bn"] --- Y32["2032 · 1.15bn"] --- Y33["2033 · 4.15bn 高峰"]
   style Y33 fill:#ff6b6b,color:#fff
 ```
 - **Dec 2025 诱导转股**：以 $1.63bn 现金回购 $544.3m 2029/2030 债，诱导费 $111.8m。
