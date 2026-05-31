@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>年报逐年精读 FY2022-2025 · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">年报逐年精读 FY2022-2025 · NVTS</h1>
+</header>
+<h1
+id="年报逐年精读-fy2022--fy2025annual-income-statement-teardown">年报逐年精读
+FY2022 → FY2025（Annual Income-Statement Teardown）</h1>
+<blockquote>
+<p>Navitas Semiconductor Corporation（NVTS，CIK 1821769），fabless
+GaN/SiC power-semiconductor
+公司。本页对四个完整会计年度（FY2022–FY2025，每年 12/31
+结束）逐行精读损益表、拆解营收驱动、做 gross-margin walk、分解
+opex、揭示 headline-vs-operating 的鸿沟，并逐条 YoY 对比。</p>
+<p>数据来源标签：★ = SEC filing 原文（附 Note/行 + 可点击 SEC URL）· ◆ =
+计算得出（show formula）· ◇ = 第三方/IR · ▽ =
+推断/敏感性。金额一律写全单位。所有交叉勾稽标 ✅/⚠️/❌。</p>
+</blockquote>
+<hr />
+<h2 id="0-四年损益全景表先看全局再逐年精读">0.
+四年损益全景表（先看全局，再逐年精读）</h2>
+<p>下表为四年 GAAP 损益表逐行对照（单位：US$
+thousands，除每股数据）。每一行均来自审计后的 Consolidated Statements of
+Operations。</p>
+<table>
+<thead>
+<tr>
+<th>损益行（US$ thousands）</th>
+<th style="text-align: right;">FY2022 ★</th>
+<th style="text-align: right;">FY2023 ★</th>
+<th style="text-align: right;">FY2024 ★</th>
+<th style="text-align: right;">FY2025 ★</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net revenues</td>
+<td style="text-align: right;">37,943</td>
+<td style="text-align: right;">79,456</td>
+<td style="text-align: right;">83,302</td>
+<td style="text-align: right;">45,916</td>
+</tr>
+<tr>
+<td>└ 其中 related-party revenue</td>
+<td style="text-align: right;">1,528</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">n/d</td>
+<td style="text-align: right;">n/d</td>
+</tr>
+<tr>
+<td>Cost of revenues（不含无形摊销）</td>
+<td style="text-align: right;">25,996</td>
+<td style="text-align: right;">48,392</td>
+<td style="text-align: right;">54,963</td>
+<td style="text-align: right;">31,668</td>
+</tr>
+<tr>
+<td><strong>Gross profit ◆</strong></td>
+<td style="text-align: right;"><strong>11,947</strong></td>
+<td style="text-align: right;"><strong>31,064</strong></td>
+<td style="text-align: right;"><strong>28,339</strong></td>
+<td style="text-align: right;"><strong>14,248</strong></td>
+</tr>
+<tr>
+<td><strong>Gross margin % ◆</strong></td>
+<td style="text-align: right;"><strong>31.49%</strong></td>
+<td style="text-align: right;"><strong>39.10%</strong></td>
+<td style="text-align: right;"><strong>34.02%</strong></td>
+<td style="text-align: right;"><strong>31.03%</strong></td>
+</tr>
+<tr>
+<td>R&amp;D</td>
+<td style="text-align: right;">50,318</td>
+<td style="text-align: right;">68,825</td>
+<td style="text-align: right;">76,002</td>
+<td style="text-align: right;">49,830</td>
+</tr>
+<tr>
+<td>SG&amp;A</td>
+<td style="text-align: right;">78,353</td>
+<td style="text-align: right;">61,551</td>
+<td style="text-align: right;">62,863</td>
+<td style="text-align: right;">35,196</td>
+</tr>
+<tr>
+<td>Amortization of intangibles</td>
+<td style="text-align: right;">6,913</td>
+<td style="text-align: right;">18,820</td>
+<td style="text-align: right;">18,926</td>
+<td style="text-align: right;">18,937</td>
+</tr>
+<tr>
+<td>Restructuring &amp; impairment</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1,223</td>
+<td style="text-align: right;">18,049</td>
+</tr>
+<tr>
+<td>Total operating expenses</td>
+<td style="text-align: right;">135,584</td>
+<td style="text-align: right;">149,196</td>
+<td style="text-align: right;">159,014</td>
+<td style="text-align: right;">122,012</td>
+</tr>
+<tr>
+<td><strong>Loss from operations</strong></td>
+<td style="text-align: right;"><strong>(123,637)</strong></td>
+<td style="text-align: right;"><strong>(118,132)</strong></td>
+<td style="text-align: right;"><strong>(130,675)</strong></td>
+<td style="text-align: right;"><strong>(107,764)</strong></td>
+</tr>
+<tr>
+<td>Interest income (expense), net</td>
+<td style="text-align: right;">1,387</td>
+<td style="text-align: right;">5,368</td>
+<td style="text-align: right;">(150)</td>
+<td style="text-align: right;">863</td>
+</tr>
+<tr>
+<td>Dividend income</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">5,233</td>
+<td style="text-align: right;">3,537</td>
+</tr>
+<tr>
+<td>FV change — warrants</td>
+<td style="text-align: right;">+51,763</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>FV change — earnout liabilities</td>
+<td style="text-align: right;">+121,709</td>
+<td style="text-align: right;">(33,788)</td>
+<td style="text-align: right;">+36,644</td>
+<td style="text-align: right;">(12,424)</td>
+</tr>
+<tr>
+<td>Other income (expense), net</td>
+<td style="text-align: right;">(1,147)</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td><strong>Total other income (expense), net</strong></td>
+<td style="text-align: right;"><strong>+173,712</strong></td>
+<td style="text-align: right;"><strong>(28,336)</strong></td>
+<td style="text-align: right;"><strong>+41,829</strong></td>
+<td style="text-align: right;"><strong>(8,018)</strong></td>
+</tr>
+<tr>
+<td>Income (loss) before income taxes</td>
+<td style="text-align: right;">50,075</td>
+<td style="text-align: right;">(146,468)</td>
+<td style="text-align: right;">(88,846)</td>
+<td style="text-align: right;">(115,782)</td>
+</tr>
+<tr>
+<td>Income tax (benefit) provision</td>
+<td style="text-align: right;">(22,812)</td>
+<td style="text-align: right;">(517)</td>
+<td style="text-align: right;">(342)</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr>
+<td>Equity-method investment (loss) gain</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">+3,905</td>
+<td style="text-align: right;">(1,121)</td>
+</tr>
+<tr>
+<td><strong>Net income (loss)</strong></td>
+<td style="text-align: right;"><strong>+72,887</strong> ⚠️</td>
+<td style="text-align: right;"><strong>(145,951)</strong></td>
+<td style="text-align: right;"><strong>(84,599)</strong></td>
+<td style="text-align: right;"><strong>(116,953)</strong></td>
+</tr>
+<tr>
+<td>└ 归属于非控股权益 NCI</td>
+<td style="text-align: right;">(1,026)</td>
+<td style="text-align: right;">(518)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Net income (loss) attrib. to controlling</td>
+<td style="text-align: right;">+73,913</td>
+<td style="text-align: right;">(145,433)</td>
+<td style="text-align: right;">(84,599)</td>
+<td style="text-align: right;">(116,953)</td>
+</tr>
+<tr>
+<td>Basic EPS（US$/share）</td>
+<td style="text-align: right;">+0.55</td>
+<td style="text-align: right;">(0.86)</td>
+<td style="text-align: right;">(0.46)</td>
+<td style="text-align: right;">(0.57)</td>
+</tr>
+<tr>
+<td>Diluted EPS（US$/share）</td>
+<td style="text-align: right;">+0.51</td>
+<td style="text-align: right;">(0.86)</td>
+<td style="text-align: right;">(0.46)</td>
+<td style="text-align: right;">(0.57)</td>
+</tr>
+<tr>
+<td>Weighted-avg basic shares（thousands）</td>
+<td style="text-align: right;">133,668</td>
+<td style="text-align: right;">168,927</td>
+<td style="text-align: right;">182,460</td>
+<td style="text-align: right;">205,573</td>
+</tr>
+</tbody>
+</table>
+<p>★ Sources — 各年 Consolidated Statements of Operations：</p>
+<ul>
+<li>FY2022 / FY2021：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">FY2022
+10-K, F-4</a>（行 1024–1052）</li>
+<li>FY2023 / FY2022：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000024/nvts-20231231.htm">FY2023
+10-K, F-6</a>（行 825–852）</li>
+<li>FY2024 / FY2023：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm">FY2024
+10-K, F-6</a></li>
+<li>FY2025 / FY2024：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K, F-6</a>（行 850–878）</li>
+</ul>
+<p><strong>两条全局结论（贯穿全页）</strong></p>
+<ol type="1">
+<li><strong>从未有过经营盈利的年份。</strong> Loss from operations
+四年分别为 −$123.637M / −$118.132M / −$130.675M /
+−$107.764M——即便在营收顶峰
+FY2024（$83.302M），经营亏损反而是四年最大（−$130.675M）。营收涨跌与经营亏损几乎脱钩，说明亏损是**结构性
+opex（R&amp;D+SBC+无形摊销）**驱动，而非单纯销量问题。</li>
+<li><strong>唯一一次「净利润为正」（FY2022
++$72.887M）是非经营会计幻觉。</strong> 它由 +$51.763M warrant FV gain +
+$121.709M earnout FV gain + $22.812M 税收 benefit
+共同造出；剔除后经营层面仍亏 −$123.637M。详见第 5 节
+headline-vs-operating gap。</li>
+</ol>
+<hr />
+<h2 id="营收轨迹图ascii-trend-barsus-million">营收轨迹图（ASCII trend
+bars，US$ million）</h2>
+<pre><code>Net revenues, US$ million (bar width ∝ value)
+FY2021  23.7  ████████████
+FY2022  37.9  ███████████████████             +60.0%  (GeneSiC 4.5 个月并表)
+FY2023  79.5  ████████████████████████████████████████  +109.4% (GeneSiC 满年 + mobile)
+FY2024  83.3  ███████████████████████████████████████████  +4.8%  (峰值, mobile 拉动)
+FY2025  45.9  ███████████████████████          −44.9%  (Navitas 2.0 转型 + 大客户流失)
+              └ 峰→谷两年回吐 (83.3→45.9 = −44.9%)，几乎回到 FY2022/2023 之间水平</code></pre>
+<p>★ 营收数据见上表来源；YoY 百分比为 ◆ 计算得出，公式见各年小节。</p>
+<hr />
+<h2 id="1-fy2022--genesic-并表元年--earnout假盈利">1. FY2022 — GeneSiC
+并表元年 + earnout「假盈利」</h2>
+<h3 id="11-完整损益表us-thousands">1.1 完整损益表（US$ thousands）★</h3>
+<table>
+<thead>
+<tr>
+<th>行</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2021</th>
+<th style="text-align: right;">YoY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net revenues</td>
+<td style="text-align: right;">37,943</td>
+<td style="text-align: right;">23,736</td>
+<td style="text-align: right;"><strong>+59.85%</strong> ◆</td>
+</tr>
+<tr>
+<td>Cost of revenues</td>
+<td style="text-align: right;">25,996</td>
+<td style="text-align: right;">13,050</td>
+<td style="text-align: right;">+99.2%</td>
+</tr>
+<tr>
+<td>Gross profit ◆</td>
+<td style="text-align: right;">11,947</td>
+<td style="text-align: right;">10,686</td>
+<td style="text-align: right;">+11.8%</td>
+</tr>
+<tr>
+<td>Gross margin % ◆</td>
+<td style="text-align: right;">31.49%</td>
+<td style="text-align: right;">45.02%</td>
+<td style="text-align: right;">−13.5pp</td>
+</tr>
+<tr>
+<td>R&amp;D</td>
+<td style="text-align: right;">50,318</td>
+<td style="text-align: right;">27,475</td>
+<td style="text-align: right;">+83.1%</td>
+</tr>
+<tr>
+<td>SG&amp;A</td>
+<td style="text-align: right;">78,353</td>
+<td style="text-align: right;">51,374</td>
+<td style="text-align: right;">+52.5%</td>
+</tr>
+<tr>
+<td>Amort. intangibles</td>
+<td style="text-align: right;">6,913</td>
+<td style="text-align: right;">345</td>
+<td style="text-align: right;">×20</td>
+</tr>
+<tr>
+<td>Loss from operations</td>
+<td style="text-align: right;">(123,637)</td>
+<td style="text-align: right;">(68,508)</td>
+<td style="text-align: right;">亏损扩大 +80.5%</td>
+</tr>
+<tr>
+<td>Net income (loss)</td>
+<td style="text-align: right;"><strong>+72,887</strong></td>
+<td style="text-align: right;">(152,685)</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p>来源 ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">FY2022
+10-K Statements of Operations, F-4</a>（行 1024–1052）。</p>
+<h3 id="12-营收驱动--genesic-是核心">1.2 营收驱动 — GeneSiC 是核心</h3>
+<ul>
+<li>FY2022 营收 $37.943 million（= $0.038 billion），同比 +59.85%
+◆（公式：37,943 ÷ 23,736 − 1 = +59.85%）。</li>
+<li><strong>核心驱动 = GeneSiC Power Electronics 收购（2022-08-15
+收盘）</strong>，对价 <strong>$246.2 million</strong>（现金 + 25.033M
+股，见 stockholders' equity 行 886「Shares issued for business
+acquisitions 25,033 / +$147,380K」★）。GeneSiC 的 SiC MOSFET 收入自 8/15
+起并表，仅贡献约 4.5 个月，叠加原有 GaN 消费/移动业务增长。</li>
+<li>Related-party revenue $1.528 million（Halo Microelectronics
+关联交易），占比 ~4.0% ◆。</li>
+</ul>
+<h3 id="13-gross-margin-walkfy2021--fy2022">1.3 Gross-margin
+walk（FY2021 → FY2022）◆</h3>
+<pre><code>GM% 45.0% (FY2021)
+  ↓ −13.5pp
+GM% 31.5% (FY2022)
+驱动：(a) GeneSiC SiC 产品毛利结构低于 GaN 消费产品；
+      (b) COGS +99.2% 远超营收 +59.9% → 规模/产品组合双拖累。</code></pre>
+<p>计算得出 ◆：GP FY2022 = 37,943 − 25,996 = 11,947；GM% = 11,947 ÷
+37,943 = 31.49%。</p>
+<h3 id="14-opex-构成--sga-异常高78353m--营收-37943m-的-206">1.4 Opex
+构成 — SG&amp;A 异常高（$78.353M &gt; 营收 $37.943M 的 2.06×）</h3>
+<p>opex 合计 $135.584 million，是营收的 3.57× ◆。其中：</p>
+<ul>
+<li><strong>SG&amp;A $78.353 million</strong> — 含巨额 SBC（FY2022 SBC
+总额 $63.288 million，见现金流 ★ 行 912）+ SPAC 上市后行政膨胀 + GeneSiC
+整合费用。</li>
+<li>R&amp;D $50.318 million（GaN/SiC 双线研发）。</li>
+<li>无形摊销跳升至 $6.913 million（FY2021 仅 $0.345M），系 GeneSiC PPA
+产生的 developed-technology / customer-relationship
+无形资产开始摊销。</li>
+</ul>
+<h3 id="15-关键-notes-事件">1.5 关键 Notes 事件</h3>
+<ul>
+<li><strong>GeneSiC PPA → Goodwill $161.527 million</strong>（BS 行 796
+★），Intangibles net $105.620 million（行 795 ★）。</li>
+<li><strong>NT 10-K 晚报</strong>（2023-04-03）：起因是 GeneSiC PPA
+中需把一笔 pre-close 付款从 goodwill 重分类为 compensation
+expense（铁律6 变更侦测，已在 00 档案确认）。</li>
+<li><strong>Net income +$72.887M 的成因（⚠️ 必须剔除）</strong>：warrant
+FV gain +$51.763M（SPAC warrant 因股价下跌而负债缩水后赎回）+ earnout FV
+gain +$121.709M（10M earnout 股因股价从 $16.09 跌到 $1.47
+而负债大幅缩水）+ 税收 benefit
++$22.812M。三者皆<strong>非现金、非经营</strong>。</li>
+</ul>
+<hr />
+<h2 id="2-fy2023--genesic-满年并表营收翻倍但亏损依旧">2. FY2023 —
+GeneSiC 满年并表，营收翻倍，但亏损依旧</h2>
+<h3 id="21-完整损益表us-thousands">2.1 完整损益表（US$ thousands）★</h3>
+<table>
+<thead>
+<tr>
+<th>行</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">YoY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net revenues</td>
+<td style="text-align: right;">79,456</td>
+<td style="text-align: right;">37,943</td>
+<td style="text-align: right;"><strong>+109.41%</strong> ◆</td>
+</tr>
+<tr>
+<td>Cost of revenues</td>
+<td style="text-align: right;">48,392</td>
+<td style="text-align: right;">25,996</td>
+<td style="text-align: right;">+86.2%</td>
+</tr>
+<tr>
+<td>Gross profit ◆</td>
+<td style="text-align: right;">31,064</td>
+<td style="text-align: right;">11,947</td>
+<td style="text-align: right;">+160.0%</td>
+</tr>
+<tr>
+<td>Gross margin % ◆</td>
+<td style="text-align: right;">39.10%</td>
+<td style="text-align: right;">31.49%</td>
+<td style="text-align: right;"><strong>+7.6pp</strong></td>
+</tr>
+<tr>
+<td>R&amp;D</td>
+<td style="text-align: right;">68,825</td>
+<td style="text-align: right;">50,318</td>
+<td style="text-align: right;">+36.8%</td>
+</tr>
+<tr>
+<td>SG&amp;A</td>
+<td style="text-align: right;">61,551</td>
+<td style="text-align: right;">78,353</td>
+<td style="text-align: right;">−21.4%</td>
+</tr>
+<tr>
+<td>Amort. intangibles</td>
+<td style="text-align: right;">18,820</td>
+<td style="text-align: right;">6,913</td>
+<td style="text-align: right;">+172.2%</td>
+</tr>
+<tr>
+<td>Loss from operations</td>
+<td style="text-align: right;">(118,132)</td>
+<td style="text-align: right;">(123,637)</td>
+<td style="text-align: right;">亏损微缩 −4.5%</td>
+</tr>
+<tr>
+<td>Net income (loss)</td>
+<td style="text-align: right;"><strong>(145,951)</strong></td>
+<td style="text-align: right;">+72,887</td>
+<td style="text-align: right;">转亏</td>
+</tr>
+</tbody>
+</table>
+<p>来源 ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000024/nvts-20231231.htm">FY2023
+10-K, F-6</a>（行 825–852）。</p>
+<h3 id="22-营收驱动--genesic-满年--mobile">2.2 营收驱动 — GeneSiC 满年 +
+mobile</h3>
+<ul>
+<li>营收 $79.456 million（= $0.079 billion），同比
+<strong>+109.41%</strong> ◆（79,456 ÷ 37,943 − 1）。</li>
+<li>翻倍主因：<strong>GeneSiC 满 12 个月并表</strong>（FY2022 仅 4.5
+个月）+ GaN 在 mobile（手机快充）市场放量。</li>
+<li>这是公司历史上<strong>最健康的一年</strong>：毛利率升至
+39.10%（四年最高），营收近翻倍。</li>
+</ul>
+<h3 id="23-gross-margin-walkfy2022--fy2023">2.3 Gross-margin
+walk（FY2022 → FY2023）◆</h3>
+<pre><code>GM% 31.49% (FY2022)
+  ↑ +7.61pp  (产品组合改善 + GeneSiC 满年规模效应 + mobile 高毛利)
+GM% 39.10% (FY2023)   ← 四年峰值</code></pre>
+<p>◆：GP = 79,456 − 48,392 = 31,064；GM% = 31,064 ÷ 79,456 =
+39.10%。</p>
+<h3 id="24-opex-构成--rd-反超-sga无形摊销满年化">2.4 Opex 构成 — R&amp;D
+反超 SG&amp;A，无形摊销满年化</h3>
+<ul>
+<li>R&amp;D <strong>$68.825 million</strong>（+36.8%
+YoY）——研发投入随转型加码。</li>
+<li>SG&amp;A 降至 $61.551 million（−21.4%），主因 SBC 从 FY2022
+高位回落。</li>
+<li><strong>无形摊销 $18.820 million</strong>（+172% YoY）——GeneSiC PPA
+无形资产首次满年摊销（FY2022 仅摊 4.5 个月
+$6.913M）。这是一笔<strong>纯非现金、固定</strong>的 opex，将持续压制
+GAAP 损益至无形资产摊完。</li>
+</ul>
+<h3 id="25-headline-与经营的背离">2.5 headline 与经营的背离</h3>
+<ul>
+<li>Loss from operations −$118.132M（四年中亏损最小），但 <strong>Net
+loss 却高达 −$145.951M</strong>——背离来自 earnout FV
+<strong>loss</strong> −$33.788M（股价反弹使 earnout 负债回升）+ 利息收入
++$5.368M 不足以抵消。</li>
+<li>即 FY2023 的 net loss 比 operating loss <strong>还多亏
+$27.8M</strong>，全因 earnout 由 FY2022 的 +$121.7M gain 翻转为 −$33.8M
+loss。</li>
+</ul>
+<h3 id="26-关键-notes-事件控制缺陷高峰年">2.6 关键 Notes
+事件（控制缺陷高峰年）</h3>
+<ul>
+<li><strong>Deferred revenue 暴增至 $10.953 million</strong>（BS 行 804
+★，FY2022 仅 $0.486M）——渠道/客户预收激增，为后续 drawdown
+埋下伏笔。</li>
+<li><strong>Accounts receivable 升至 $25.858 million</strong>（行
+789，FY2022 $9.127M）——营收翻倍带动 AR 翻倍，但也提高了坏账暴露。</li>
+<li><strong>Halo JV 少数股权买断</strong>（2023-02，$20M 股票），NCI 从
+$3.628M（FY2022）清零（equity roll 行 895「Shares issued in connection
+with buyout agreement 4,232 股」★）。</li>
+<li><strong>May-2023 公开增发</strong>：11.5M 股募资净额 $86.462
+million（equity roll 行 894 ★ / 现金流 financing +$86.941M 行
+938）。</li>
+<li><strong>审计师更换 #1（2023-07）：Deloitte → Moss
+Adams</strong>。</li>
+<li><strong>FY2023/A 修订（2024-07-23）实质性</strong>：撤回「已
+remediate」声明，新增 material weakness（journal entries / earnout /
+segments-reporting-units）+ <strong>adverse ICFR
+opinion</strong>，但<strong>无财务重述</strong>（00 档案 H4
+已印证）。</li>
+</ul>
+<hr />
+<h2 id="3-fy2024--营收峰值-833m却是经营亏损最大年大客户流失埋雷">3.
+FY2024 — 营收峰值 $83.3M，却是经营亏损最大年；大客户流失埋雷</h2>
+<h3 id="31-完整损益表us-thousands">3.1 完整损益表（US$ thousands）★</h3>
+<table>
+<thead>
+<tr>
+<th>行</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">YoY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net revenues</td>
+<td style="text-align: right;">83,302</td>
+<td style="text-align: right;">79,456</td>
+<td style="text-align: right;"><strong>+4.84%</strong> ◆</td>
+</tr>
+<tr>
+<td>Cost of revenues</td>
+<td style="text-align: right;">54,963</td>
+<td style="text-align: right;">48,392</td>
+<td style="text-align: right;">+13.6%</td>
+</tr>
+<tr>
+<td>Gross profit ◆</td>
+<td style="text-align: right;">28,339</td>
+<td style="text-align: right;">31,064</td>
+<td style="text-align: right;">−8.8%</td>
+</tr>
+<tr>
+<td>Gross margin % ◆</td>
+<td style="text-align: right;">34.02%</td>
+<td style="text-align: right;">39.10%</td>
+<td style="text-align: right;"><strong>−5.1pp</strong></td>
+</tr>
+<tr>
+<td>R&amp;D</td>
+<td style="text-align: right;">76,002</td>
+<td style="text-align: right;">68,825</td>
+<td style="text-align: right;">+10.4%</td>
+</tr>
+<tr>
+<td>SG&amp;A</td>
+<td style="text-align: right;">62,863</td>
+<td style="text-align: right;">61,551</td>
+<td style="text-align: right;">+2.1%</td>
+</tr>
+<tr>
+<td>Amort. intangibles</td>
+<td style="text-align: right;">18,926</td>
+<td style="text-align: right;">18,820</td>
+<td style="text-align: right;">+0.6%</td>
+</tr>
+<tr>
+<td>Restructuring &amp; impairment</td>
+<td style="text-align: right;">1,223</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">新增</td>
+</tr>
+<tr>
+<td>Loss from operations</td>
+<td style="text-align: right;">(130,675)</td>
+<td style="text-align: right;">(118,132)</td>
+<td style="text-align: right;"><strong>亏损扩大 +10.6%</strong></td>
+</tr>
+<tr>
+<td>Net income (loss)</td>
+<td style="text-align: right;"><strong>(84,599)</strong></td>
+<td style="text-align: right;">(145,951)</td>
+<td style="text-align: right;">亏损收窄</td>
+</tr>
+</tbody>
+</table>
+<p>来源 ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm">FY2024
+10-K, F-6</a>（行 842, 1074）；MD&amp;A 行 635, 660–666。</p>
+<h3 id="32-营收驱动--见顶仅靠-mobile-撑住-48">3.2 营收驱动 — 见顶，仅靠
+mobile 撑住 +4.8%</h3>
+<ul>
+<li>营收 $83.302 million（= $0.083 billion），同比仅
+<strong>+4.84%</strong> ◆（83,302 ÷ 79,456 − 1）。</li>
+<li>MD&amp;A 原文 ★：「increase of $3.8 million, or 5%... driven
+primarily by the growth in mobile markets」（行 660）。</li>
+<li>增长已接近停滞，且<strong>高度依赖单一 mobile 终端 + 单一渠道
+Distributor A（占 56%，见下）</strong>——这正是 FY2025
+崩塌的导火索。</li>
+</ul>
+<h3 id="33-gross-margin-walkfy2023--fy2024">3.3 Gross-margin
+walk（FY2023 → FY2024）◆</h3>
+<pre><code>GM% 39.10% (FY2023)
+  ↓ −5.08pp
+GM% 34.02% (FY2024)
+驱动：MD&amp;A 明示 COGS +$6.6M / +14% 主因
+      (a) $5.0M inventory reserve（与 Distributor A 终止相关，行 662 ★）
+      (b) mobile 业务占比上升（mobile 毛利结构偏低）</code></pre>
+<p>◆：GP = 83,302 − 54,963 = 28,339；GM% = 28,339 ÷ 83,302 = 34.02%。
+<strong>交叉勾稽 ✅</strong>：MD&amp;A 称 COGS 增 $6.6M（行 662），表内
+54,963 − 48,392 = $6.571M ≈ 一致 ✅。</p>
+<h3 id="34-opex-构成--rd-创历史峰值-760m">3.4 Opex 构成 — R&amp;D
+创历史峰值 $76.0M</h3>
+<ul>
+<li><strong>R&amp;D $76.002 million</strong>（四年峰值，+10.4%
+YoY）——MD&amp;A ★：投向 EV / enterprise / solar 产品与封装开发，含 $1.7M
+一次性 project expense + $2.0M other-asset impairment（行 664）。</li>
+<li>SG&amp;A $62.863 million（+2.1%）——<strong>含 $7.5 million bad-debt
+expense</strong>（Distributor A 终止，行 666 ★），但被 SBC 下降约 $8.0M
+抵消。</li>
+<li><strong>首次出现 Restructuring &amp; impairment $1.223
+million</strong>（Navitas 2.0 自 Q3'24 起裁员的早期计提）。</li>
+</ul>
+<h3 id="35-headline-vs-operating-gap本年方向相反">3.5
+headline-vs-operating gap（本年方向相反）</h3>
+<ul>
+<li>Operating loss
+−$130.675M（<strong>四年最大经营亏损</strong>，恰在营收峰值年），但 Net
+loss 仅 −$84.599M——因 earnout FV <strong>gain</strong>
++$36.644M（股价下跌使 earnout 负债缩水）+ dividend income +$5.233M
+把净亏「美化」了约 $46M。</li>
+<li>即 FY2024 net loss 比 operating loss <strong>少亏
+$46.1M</strong>，全靠非经营 earnout gain。</li>
+</ul>
+<h3 id="36-关键-notes-事件崩塌前夜">3.6 关键 Notes 事件（崩塌前夜）</h3>
+<ul>
+<li><strong>Distributor A 占营收 56%</strong>（Note customer
+concentration，行 1384/1370 ★），且 <strong>2024
+年底终止经销协议</strong> → 直接代价：$7.5M bad debt（SG&amp;A）+ $5.0M
+inventory reserve（COGS）+ $1.7M R&amp;D abandonment ≈ <strong>$14.2M
+一次性损失</strong>，并掏空 FY2025 营收基础。</li>
+<li>AR 大降至 $13.982 million（FY2023 $25.858M）——大客户去库存。</li>
+<li>Cash 降至 $86.737 million（FY2023 $152.839M）——一年烧掉约
+$66M，逼近需融资的临界点。</li>
+<li>Goodwill 保持 $163.215 million，未减值。</li>
+</ul>
+<hr />
+<h2 id="4-fy2025--navitas-20-转型营收-45-崩塌18m-重组">4. FY2025 —
+Navitas 2.0 转型，营收 −45% 崩塌，$18M 重组</h2>
+<h3 id="41-完整损益表us-thousands">4.1 完整损益表（US$ thousands）★</h3>
+<table>
+<thead>
+<tr>
+<th>行</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">YoY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net revenues</td>
+<td style="text-align: right;">45,916</td>
+<td style="text-align: right;">83,302</td>
+<td style="text-align: right;"><strong>−44.88%</strong> ◆</td>
+</tr>
+<tr>
+<td>Cost of revenues</td>
+<td style="text-align: right;">31,668</td>
+<td style="text-align: right;">54,963</td>
+<td style="text-align: right;">−42.4%</td>
+</tr>
+<tr>
+<td>Gross profit ◆</td>
+<td style="text-align: right;">14,248</td>
+<td style="text-align: right;">28,339</td>
+<td style="text-align: right;">−49.7%</td>
+</tr>
+<tr>
+<td>Gross margin % ◆</td>
+<td style="text-align: right;">31.03%</td>
+<td style="text-align: right;">34.02%</td>
+<td style="text-align: right;"><strong>−3.0pp</strong></td>
+</tr>
+<tr>
+<td>R&amp;D</td>
+<td style="text-align: right;">49,830</td>
+<td style="text-align: right;">76,002</td>
+<td style="text-align: right;">−34.4%</td>
+</tr>
+<tr>
+<td>SG&amp;A</td>
+<td style="text-align: right;">35,196</td>
+<td style="text-align: right;">62,863</td>
+<td style="text-align: right;">−44.0%</td>
+</tr>
+<tr>
+<td>Amort. intangibles</td>
+<td style="text-align: right;">18,937</td>
+<td style="text-align: right;">18,926</td>
+<td style="text-align: right;">+0.1%</td>
+</tr>
+<tr>
+<td>Restructuring &amp; impairment</td>
+<td style="text-align: right;">18,049</td>
+<td style="text-align: right;">1,223</td>
+<td style="text-align: right;"><strong>×14.8</strong></td>
+</tr>
+<tr>
+<td>Loss from operations</td>
+<td style="text-align: right;">(107,764)</td>
+<td style="text-align: right;">(130,675)</td>
+<td style="text-align: right;">亏损收窄 −17.5%</td>
+</tr>
+<tr>
+<td>Net income (loss)</td>
+<td style="text-align: right;"><strong>(116,953)</strong></td>
+<td style="text-align: right;">(84,599)</td>
+<td style="text-align: right;"><strong>亏损扩大 +38.2%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>来源 ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K, F-6</a>（行 850–878）；MD&amp;A 行 656–662。</p>
+<h3 id="42-营收驱动--45-大崩塌双重打击">4.2 营收驱动 — −45%
+大崩塌（双重打击）</h3>
+<ul>
+<li>营收 $45.916 million（= $0.046 billion），同比
+<strong>−44.88%</strong> ◆（45,916 ÷ 83,302 − 1 = −44.88%）。</li>
+<li><strong>崩塌双因</strong>：(a) <strong>Distributor A
+流失</strong>（占 FY2024 营收 56%，2024 年底终止）；(b) <strong>Navitas
+2.0 主动战略转型</strong>——砍掉低毛利消费/移动业务，转向尚未变现的 AI
+数据中心/电网（800VDC、SiC、GaN 高功率）。MD&amp;A
+明示转型期「revenues... if ever」（风险因子原文）。</li>
+<li>地理结构 ★（end-customer 口径，行 602–611）：China 47%（FY2024
+60%）/ US 28%（16%）/ Asia-ex-China 11%（15%）/ Europe
+14%（8%）——美国占比翻倍，中国占比从 60% 降至
+47%，反映客户结构重组。</li>
+</ul>
+<h3 id="43-gross-margin-walkfy2024--fy2025">4.3 Gross-margin
+walk（FY2024 → FY2025）◆</h3>
+<pre><code>GM% 34.02% (FY2024)
+  ↓ −2.99pp
+GM% 31.03% (FY2025)
+注：MD&amp;A ★ 称 COGS −$23.3M/−42%，部分因「上年 $5.0M inventory reserve 不再重复」(行 656)
+    → 若不剔除该一次性项，underlying GM 实则更差；销量崩塌摊薄固定制造成本是核心拖累。</code></pre>
+<p>◆：GP = 45,916 − 31,668 = 14,248；GM% = 14,248 ÷ 45,916 =
+31.03%。</p>
+<h3 id="44-opex-构成--全线砍navitas-20-降本但重组费暴增">4.4 Opex 构成 —
+全线砍（Navitas 2.0 降本）但重组费暴增</h3>
+<table>
+<thead>
+<tr>
+<th>Opex 项</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">变化</th>
+<th>主因（MD&amp;A ★）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R&amp;D</td>
+<td style="text-align: right;">49,830</td>
+<td style="text-align: right;">76,002</td>
+<td style="text-align: right;">−$26.2M / −34%</td>
+<td>SBC −$10.7M（含 −$4.2M LTIP 反转）+ 裁员 −$10.1M + 开发费
+−$1.6M；部分被 +$2.2M NRE impairment 抵消（行 660）</td>
+</tr>
+<tr>
+<td>SG&amp;A</td>
+<td style="text-align: right;">35,196</td>
+<td style="text-align: right;">62,863</td>
+<td style="text-align: right;">−$27.7M / −44%</td>
+<td>SBC −$17.8M（含 −$12.6M LTIP 反转）+ 上年 $7.5M 坏账不再 + 裁员
+−$3.9M；部分被 +$4.0M CEO 过渡/治理费抵消（行 662）</td>
+</tr>
+<tr>
+<td>Amort.</td>
+<td style="text-align: right;">18,937</td>
+<td style="text-align: right;">18,926</td>
+<td style="text-align: right;">+$0.011M</td>
+<td>纯固定无形摊销</td>
+</tr>
+<tr>
+<td>Restructuring &amp; impairment</td>
+<td style="text-align: right;">18,049</td>
+<td style="text-align: right;">1,223</td>
+<td style="text-align: right;">+$16.8M</td>
+<td>Navitas 2.0 重组（~19% 裁员）+ $3.8M 固定资产减值（00 档案）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键洞察</strong>：opex 大降 $37.2M（122,012 vs 159,014
+◆）几乎全靠 <strong>SBC 反转 + 裁员 +
+上年一次性项不再</strong>，而非可持续的运营效率。其中 <strong>SBC 从
+$43.0M 暴跌至 $14.5M</strong>，主要源于两位创始高管离职触发的 LTIP
+反转（−$16.5M 合计），属一次性、不可重复。</p>
+<h3 id="45-headline-vs-operating-gap本年净亏--经营亏损">4.5
+headline-vs-operating gap（本年净亏 &gt; 经营亏损）</h3>
+<ul>
+<li>Operating loss −$107.764M（比 FY2024 收窄 17.5%），但 <strong>Net
+loss −$116.953M</strong>（比 FY2024 扩大 38.2%）。</li>
+<li>背离来自 earnout FV <strong>loss</strong> −$12.424M（股价回升使
+earnout 负债回升）+ equity-method loss −$1.121M，抵消了 dividend income
++$3.537M 与 interest +$0.863M。</li>
+<li>即 FY2025 net loss 比 operating loss <strong>多亏
+$9.2M</strong>——又是 earnout 这台「headline 扰动引擎」在作怪。</li>
+</ul>
+<h3 id="46-关键-notes-事件">4.6 关键 Notes 事件</h3>
+<ul>
+<li><strong>客户重新洗牌</strong>：Distributor B 占 46% + Distributor C
+占 11%（Note concentration 行 1384–1386 ★）；上年 56% 的 Distributor A
+已 &lt;10%。集中度未改善，只是换了主。</li>
+<li><strong>$200M 股权融资</strong>（ATM $100M + PIPE $100M），cash
+跃升至 $236.857 million（详见 04b 现金流深度）。</li>
+<li><strong>两位创始人离职</strong>：CEO Sheridan（Aug 2025）、COO/CTO
+Kinzer（May 2025），由 activist（Ranbir Singh/SiCPower）和解推动；触发
+LTIP 反转（直接美化 opex）。</li>
+<li><strong>审计师更换 #2（2025-03/04）：Moss Adams →
+KPMG</strong>。KPMG 仅审计财务报表，<strong>未对 ICFR 出具 404(b)
+attestation</strong>（00 档案 Agent E）。</li>
+<li><strong>TSMC 宣布 2027-07 退出 GaN 代工</strong>（2025-07-01），NVTS
+转向 GlobalFoundries（US）+ Powerchip（00 档案 H7）。</li>
+</ul>
+<hr />
+<h2 id="5-四年headline-vs-operating-gap总表核心揭示">5.
+四年「headline-vs-operating gap」总表（核心揭示）</h2>
+<blockquote>
+<p>这是本页最重要的一张表：<strong>净利润 headline
+与真实经营之间的鸿沟，几乎全部由 earnout/warrant 公允价值波动 +
+税收造成。</strong> 每一笔 &gt;$30M 的 headline
+摆动都是非现金、非经营的会计产物。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>US$ thousands</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Net income (loss) 报告值</strong> ★</td>
+<td style="text-align: right;"><strong>+72,887</strong></td>
+<td style="text-align: right;">(145,951)</td>
+<td style="text-align: right;">(84,599)</td>
+<td style="text-align: right;">(116,953)</td>
+</tr>
+<tr>
+<td>− warrant FV (gain)/loss</td>
+<td style="text-align: right;">(51,763)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>− earnout FV (gain)/loss</td>
+<td style="text-align: right;">(121,709)</td>
+<td style="text-align: right;">+33,788</td>
+<td style="text-align: right;">(36,644)</td>
+<td style="text-align: right;">+12,424</td>
+</tr>
+<tr>
+<td>− dividend income（非经营）</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">(5,233)</td>
+<td style="text-align: right;">(3,537)</td>
+</tr>
+<tr>
+<td>− equity-method (gain)/loss</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">(3,905)</td>
+<td style="text-align: right;">+1,121</td>
+</tr>
+<tr>
+<td>− interest income, net</td>
+<td style="text-align: right;">(1,387)</td>
+<td style="text-align: right;">(5,368)</td>
+<td style="text-align: right;">+150</td>
+<td style="text-align: right;">(863)</td>
+</tr>
+<tr>
+<td>− income tax (benefit)/provision</td>
+<td style="text-align: right;">+22,812</td>
+<td style="text-align: right;">+517</td>
+<td style="text-align: right;">+342</td>
+<td style="text-align: right;">(50)</td>
+</tr>
+<tr>
+<td>− other (income) expense</td>
+<td style="text-align: right;">+1,147</td>
+<td style="text-align: right;">(84)</td>
+<td style="text-align: right;">(102)</td>
+<td style="text-align: right;">(6)</td>
+</tr>
+<tr>
+<td><strong>= Loss from operations 报告值</strong> ★</td>
+<td style="text-align: right;"><strong>(123,637)</strong></td>
+<td style="text-align: right;"><strong>(118,132)</strong></td>
+<td style="text-align: right;"><strong>(130,675)</strong></td>
+<td style="text-align: right;"><strong>(107,764)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>勾稽 ✅</strong>：每年从 Net income
+逐项剔除非经营项，精确回到审计的 Loss from operations（四年皆完全
+tie-out）。</p>
+<pre><code>Headline net income vs Operating loss（US$ million，正=利润 负=亏损）
+
+FY2022  Net +72.9  ████████████████▶            (假盈利，非经营造)
+        Oper -123.6 ◀████████████████████████
+FY2023  Net -146.0 ◀█████████████████████████████
+        Oper -118.1 ◀███████████████████████
+FY2024  Net  -84.6 ◀█████████████████
+        Oper -130.7 ◀██████████████████████████  (营收峰值却经营亏损最大)
+FY2025  Net -117.0 ◀███████████████████████
+        Oper -107.8 ◀██████████████████████
+
+→ 四年 headline 在 +72.9 ~ -146.0 之间剧烈摆动 (区间 219M)，
+  而 operating loss 始终稳定在 -108 ~ -131 之间 (区间仅 23M)。
+  「波动」全在非经营项；真实经营一贯亏损。</code></pre>
+<hr />
+<h2 id="6-yoy-显式对比小结一句话定调每段转折">6. YoY
+显式对比小结（一句话定调每段转折）</h2>
+<table>
+<thead>
+<tr>
+<th>转折</th>
+<th style="text-align: right;">营收</th>
+<th style="text-align: right;">经营亏损</th>
+<th style="text-align: right;">净利/亏</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2021→22</td>
+<td style="text-align: right;">+59.9%</td>
+<td style="text-align: right;">扩大</td>
+<td style="text-align: right;">+72.9M（假）</td>
+<td>GeneSiC 并表 4.5 月 + earnout 假盈利</td>
+</tr>
+<tr>
+<td>FY2022→23</td>
+<td style="text-align: right;"><strong>+109.4%</strong></td>
+<td style="text-align: right;">微缩</td>
+<td style="text-align: right;">转亏 −146M</td>
+<td>GeneSiC 满年 + mobile，GM 升至峰值 39.1%</td>
+</tr>
+<tr>
+<td>FY2023→24</td>
+<td style="text-align: right;">+4.8%</td>
+<td style="text-align: right;"><strong>扩大至 −130.7M</strong></td>
+<td style="text-align: right;">亏损收窄（earnout gain）</td>
+<td>营收见顶，R&amp;D 创峰，大客户埋雷</td>
+</tr>
+<tr>
+<td>FY2024→25</td>
+<td style="text-align: right;"><strong>−44.9%</strong></td>
+<td style="text-align: right;">收窄</td>
+<td style="text-align: right;">扩大至 −117M</td>
+<td>转型崩塌 + $18M 重组 + SBC 反转</td>
+</tr>
+</tbody>
+</table>
+<p><strong>总判</strong>：NVTS 的损益曲线是一条「靠 GeneSiC
+收购堆出营收峰值（FY2023–24），随后因大客户流失 + 主动转型而 −45%
+崩塌（FY2025）」的轨迹；而 GAAP 净利润四年剧烈摆动（+73M ↔︎
+−146M）几乎全是 earnout/warrant
+公允价值幻觉，<strong>真实经营从未盈利</strong>，年度经营亏损稳定在约
+$108–131M。</p>
+<hr />
+<h2 id="来源sec-links-used">来源（SEC links used）</h2>
+<ul>
+<li>★ FY2022 10-K（filed 2023-04-03）— Statements of Operations
+F-4、Balance Sheets、Equity roll：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm</a></li>
+<li>★ FY2023 10-K（filed 2024-03-06）— Statements of Operations F-6（行
+825–852）、Balance Sheets（行 784–820）、Cash Flows（行 902–943）：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000024/nvts-20231231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176924000024/nvts-20231231.htm</a></li>
+<li>★ FY2024 10-K（filed 2025-03-19）— Statements of Operations（行
+842/1074）、MD&amp;A（行 635, 660–666）、Customer concentration（行
+1370/1384）：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm</a></li>
+<li>★ FY2025 10-K（filed 2026-02-27）— Statements of Operations F-6（行
+850–878）、Balance Sheets F-5（行 800–845）、MD&amp;A（行
+656–700）、Geography（行 602–611）、Customer concentration（行
+1384–1386）：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm</a></li>
+<li>交叉参考：本仓库
+<code>data/research/NVTS/00_initial_impression.md</code>（已交叉核对的合并数据）</li>
+</ul>
+</body>
+</html>

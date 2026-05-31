@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>季度财务轨迹 · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">季度财务轨迹 · NVTS</h1>
+</header>
+<h1 id="季度轨迹q125-vs-q126营收触底与现金燃烧逐季追踪">季度轨迹：Q1'25
+vs Q1'26，营收触底与现金燃烧逐季追踪</h1>
+<blockquote>
+<p>NVTS（CIK 1821769）季度深读。核心对照 = Q1 FY2025（三个月止
+2025-03-31）vs Q1 FY2026（三个月止 2026-03-31），并把营收
+trough、毛利、opex、净亏、现金燃烧逐季拼出。NVTS 财年与日历年一致（12/31
+结束），故「Q1'26」= 2026 年第一季度。</p>
+<p>标签：★ SEC 原文 · ◆ 计算得出 · ◇ 第三方 · ▽
+推断/敏感性。金额写全单位。勾稽标 ✅/⚠️。</p>
+</blockquote>
+<hr />
+<h2 id="0-q126-vs-q125-完整对照表us-thousands除每股">0. Q1'26 vs Q1'25
+完整对照表（US$ thousands，除每股）★</h2>
+<table>
+<thead>
+<tr>
+<th>损益 / 现金行</th>
+<th style="text-align: right;">Q1'26（止 3/31/26）</th>
+<th style="text-align: right;">Q1'25（止 3/31/25）</th>
+<th style="text-align: right;">YoY ◆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net revenues</td>
+<td style="text-align: right;">8,598</td>
+<td style="text-align: right;">14,018</td>
+<td style="text-align: right;"><strong>−38.66%</strong></td>
+</tr>
+<tr>
+<td>Cost of revenues</td>
+<td style="text-align: right;">5,361</td>
+<td style="text-align: right;">8,711</td>
+<td style="text-align: right;">−38.46%</td>
+</tr>
+<tr>
+<td><strong>Gross profit ◆</strong></td>
+<td style="text-align: right;"><strong>3,237</strong></td>
+<td style="text-align: right;"><strong>5,307</strong></td>
+<td style="text-align: right;">−39.00%</td>
+</tr>
+<tr>
+<td><strong>Gross margin % ◆</strong></td>
+<td style="text-align: right;"><strong>37.65%</strong></td>
+<td style="text-align: right;"><strong>37.86%</strong></td>
+<td style="text-align: right;">−0.21pp</td>
+</tr>
+<tr>
+<td>R&amp;D</td>
+<td style="text-align: right;">14,567</td>
+<td style="text-align: right;">12,668</td>
+<td style="text-align: right;"><strong>+14.99%</strong></td>
+</tr>
+<tr>
+<td>SG&amp;A</td>
+<td style="text-align: right;">11,252</td>
+<td style="text-align: right;">11,740</td>
+<td style="text-align: right;">−4.16%</td>
+</tr>
+<tr>
+<td>Amortization of intangibles</td>
+<td style="text-align: right;">4,734</td>
+<td style="text-align: right;">4,734</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr>
+<td>Restructuring expense</td>
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">1,469</td>
+<td style="text-align: right;">−69.4%</td>
+</tr>
+<tr>
+<td>Total operating expenses</td>
+<td style="text-align: right;">31,003</td>
+<td style="text-align: right;">30,611</td>
+<td style="text-align: right;">+1.28%</td>
+</tr>
+<tr>
+<td><strong>Loss from operations</strong></td>
+<td style="text-align: right;"><strong>(27,766)</strong></td>
+<td style="text-align: right;"><strong>(25,304)</strong></td>
+<td style="text-align: right;">亏损扩大 +9.73%</td>
+</tr>
+<tr>
+<td>Interest income (expense), net</td>
+<td style="text-align: right;">264</td>
+<td style="text-align: right;">(38)</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Dividend income</td>
+<td style="text-align: right;">1,688</td>
+<td style="text-align: right;">744</td>
+<td style="text-align: right;">+126.9%</td>
+</tr>
+<tr>
+<td>FV change — earnout</td>
+<td style="text-align: right;">(7,914)</td>
+<td style="text-align: right;">+8,113</td>
+<td style="text-align: right;">翻转</td>
+</tr>
+<tr>
+<td>Other income</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Total other income (expense), net</td>
+<td style="text-align: right;">(5,952)</td>
+<td style="text-align: right;">+8,837</td>
+<td style="text-align: right;">翻转</td>
+</tr>
+<tr>
+<td>Loss before income taxes</td>
+<td style="text-align: right;">(33,718)</td>
+<td style="text-align: right;">(16,467)</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Income tax provision</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Equity-method investment loss</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">(280)</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><strong>Net loss</strong></td>
+<td style="text-align: right;"><strong>(33,785)</strong></td>
+<td style="text-align: right;"><strong>(16,829)</strong></td>
+<td style="text-align: right;"><strong>亏损扩大 +100.8%</strong></td>
+</tr>
+<tr>
+<td>Basic / Diluted EPS（US$）</td>
+<td style="text-align: right;">(0.15)</td>
+<td style="text-align: right;">(0.09)</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Weighted-avg basic shares（thousands）</td>
+<td style="text-align: right;">229,988</td>
+<td style="text-align: right;">187,784</td>
+<td style="text-align: right;">+22.5%</td>
+</tr>
+<tr>
+<td>— 现金流 —</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Net cash used in operating activities</td>
+<td style="text-align: right;">(16,362)</td>
+<td style="text-align: right;">(13,533)</td>
+<td style="text-align: right;">烧钱 +20.9%</td>
+</tr>
+<tr>
+<td>Net cash used in investing activities</td>
+<td style="text-align: right;">(388)</td>
+<td style="text-align: right;">(41)</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Net cash provided by financing</td>
+<td style="text-align: right;">1,518</td>
+<td style="text-align: right;">949</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>期末 cash &amp; equivalents</td>
+<td style="text-align: right;">221,008</td>
+<td style="text-align: right;">75,132</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p>来源 ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">Q1'26
+10-Q</a>：Statements of Operations（行 127–155）、Cash Flows（行
+193–235）、Balance Sheets（行 80–122）。Q1'25 对照列同样取自该
+10-Q（10-Q 含上年同期列）。</p>
+<hr />
+<h2 id="1-逐行精读q126-vs-q125">1. 逐行精读：Q1'26 vs Q1'25</h2>
+<h3 id="11-营收-387--转型崩塌延续到-2026">1.1 营收 −38.7% —
+转型崩塌延续到 2026</h3>
+<ul>
+<li>Q1'26 营收 <strong>$8.598 million（= $0.0086
+billion）</strong>，同比 <strong>−38.66%</strong> ◆（8,598 ÷ 14,018 −
+1）。</li>
+<li>这是在 FY2025 全年已 −44.9% 的低基数上<strong>继续下滑近
+40%</strong>——说明 Navitas 2.0
+转型尚未触底回升，旧消费/移动业务持续流失而新
+AI/数据中心业务尚未变现。</li>
+<li>把 Q1'26 年化 ▽：$8.598M × 4 = <strong>$34.4 million</strong>（推断
+▽，假设无季节性），远低于 FY2025 的 $45.9M——若无 H2 反弹，FY2026
+营收恐再降约 25%。</li>
+</ul>
+<h3 id="12-毛利率几乎不变3765-vs-3786-一个反直觉亮点">1.2
+毛利率几乎不变（37.65% vs 37.86%）— 一个反直觉亮点</h3>
+<ul>
+<li>Q1'26 GM% 37.65% ◆（GP = 8,598 − 5,361 = 3,237；3,237 ÷ 8,598 =
+37.65%），仅比 Q1'25 的 37.86% 低 0.21pp。</li>
+<li><strong>反直觉</strong>：营收暴跌
+39%，毛利率却几乎稳住。说明转型后的产品组合（SiC/高功率
+GaN）单位毛利结构与旧业务相当甚至略好；崩塌是<strong>销量问题，不是定价问题</strong>。注意：此
+Q1'26 GM%（37.65%）显著高于 FY2025 全年
+31.03%——季度毛利率波动大，单季不能外推全年。</li>
+</ul>
+<h3 id="13-opex-几乎持平但-rd-逆势-15">1.3 opex 几乎持平，但 R&amp;D
+逆势 +15%</h3>
+<ul>
+<li>Total opex $31.003M vs $30.611M，仅 +1.28%。</li>
+<li><strong>R&amp;D 逆势升至 $14.567M（+15.0%
+YoY）</strong>——这是最关键信号：营收腰斩、整体降本的同时，公司<strong>加码研发投入</strong>（AI
+800VDC、GaN-on-GlobalFoundries 重新认证、SiC 高压平台）。这是对转型的
+all-in 下注，也是现金燃烧的核心来源。</li>
+<li>SG&amp;A 微降至 $11.252M（−4.2%），重组费降至 $0.450M（Navitas 2.0
+大规模裁员已在 FY2025 完成）。</li>
+</ul>
+<h3 id="14-净亏翻倍33785m-vs-16829m-earnout-翻转是主因">1.4
+净亏翻倍（−$33.785M vs −$16.829M）— earnout 翻转是主因</h3>
+<ul>
+<li>Net loss −$33.785M，同比<strong>翻倍（+100.8%）</strong>，但
+operating loss 仅扩大 9.7%（−27.766M vs −25.304M）。</li>
+<li>差额几乎全来自 <strong>earnout FV 翻转</strong>：Q1'25 是 +$8.113M
+<strong>gain</strong>（股价跌→负债缩水），Q1'26 是 −$7.914M
+<strong>loss</strong>（股价回升→负债回升）——一来一回 $16.0M
+的非经营摆动，把净亏放大了一倍。</li>
+<li>又一次印证 22_annual 第 5 节的判断：<strong>earnout 是 headline
+扰动引擎</strong>，季度层面同样成立。剔除 earnout 后，Q1'26「核心净亏」≈
+−$25.9M ◆（−33,785 + 7,914），同比仅小幅扩大。</li>
+</ul>
+<h3 id="15-现金燃烧加速16362m-vs-13533m">1.5 现金燃烧加速（−$16.362M vs
+−$13.533M）</h3>
+<ul>
+<li>经营现金流出 Q1'26 −$16.362M，比 Q1'25 −$13.533M 多烧
+$2.829M（+20.9%）。</li>
+<li>10-Q MD&amp;A ★（行 678）：增因「higher net loss, including
+unfavorable change in fair value of earnout liability and working
+capital, partially offset by higher non-cash stock-based
+compensation」。</li>
+<li>注意 OCF 包含非现金 earnout loss +$7.914M
+的加回，故真实「经营性」现金消耗节奏需看营运资本（见 1.6）。</li>
+</ul>
+<h3 id="16-营运资本变动q126">1.6 营运资本变动（Q1'26）★</h3>
+<table>
+<thead>
+<tr>
+<th>营运资本项（US$ thousands）</th>
+<th style="text-align: right;">Q1'26</th>
+<th style="text-align: right;">Q1'25</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accounts receivable</td>
+<td style="text-align: right;">(106)</td>
+<td style="text-align: right;">+1,209</td>
+</tr>
+<tr>
+<td>Inventories</td>
+<td style="text-align: right;">(1,642)</td>
+<td style="text-align: right;">(585)</td>
+</tr>
+<tr>
+<td>Prepaid &amp; other current</td>
+<td style="text-align: right;">+173</td>
+<td style="text-align: right;">(609)</td>
+</tr>
+<tr>
+<td>Other assets</td>
+<td style="text-align: right;">(77)</td>
+<td style="text-align: right;">+7</td>
+</tr>
+<tr>
+<td>AP / accrued comp / accrued exp</td>
+<td style="text-align: right;"><strong>(4,700)</strong></td>
+<td style="text-align: right;">(1,729)</td>
+</tr>
+<tr>
+<td>Operating lease liability</td>
+<td style="text-align: right;">(469)</td>
+<td style="text-align: right;">(471)</td>
+</tr>
+<tr>
+<td>Deferred revenue</td>
+<td style="text-align: right;">(185)</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>存货逆势增加 $1.642M</strong>（BS：13,283 →
+14,925）——营收下滑中存货反增，可能为 AI/数据中心新产品备货或 TSMC GaN
+退出前的 buffer inventory 储备（与 FY2025 10-K 披露的「committing to
+purchase buffer inventory from TSMC」一致）。值得监控的 ⚠️
+信号：若需求不及，存货减值风险上升。</li>
+<li><strong>AP/应付大降 $4.700M</strong> 是 Q1'26
+现金多烧的核心营运资本拖累。</li>
+</ul>
+<p>来源 ★ Q1'26 10-Q Cash Flows（行 208–216）。</p>
+<hr />
+<h2 id="2-营收-trough真实逐季实数q125--q126">2. 营收
+trough：真实逐季实数（Q1'25 → Q1'26）★</h2>
+<blockquote>
+<p>与 22_annual 不同，此处不靠年度均摊推算，而是<strong>从各张 10-Q
+直接拉出每个季度的 3-month 实数</strong>（Q2'25 来自 Q2 10-Q
+三个月列，Q3'25 来自 Q3 10-Q 三个月列，Q4'25 由 FY2025 全年 − 9 个月 YTD
+倒推）。这是真正的 quarter-by-quarter trough。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>季度（3-month）</th>
+<th style="text-align: right;">营收 ★</th>
+<th style="text-align: right;">营业亏损 ★</th>
+<th style="text-align: right;">净亏 ★</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1'25（3/31/25）</td>
+<td style="text-align: right;">14,018</td>
+<td style="text-align: right;">(25,304)</td>
+<td style="text-align: right;">(16,829)</td>
+<td>★ Q1'26 10-Q 对照列</td>
+</tr>
+<tr>
+<td>Q2'25（6/30/25）</td>
+<td style="text-align: right;">14,490</td>
+<td style="text-align: right;">(21,653)</td>
+<td style="text-align: right;">(49,075)</td>
+<td>★ Q2'25 10-Q 三月列</td>
+</tr>
+<tr>
+<td>Q3'25（9/30/25）</td>
+<td style="text-align: right;">10,112</td>
+<td style="text-align: right;">(19,414)</td>
+<td style="text-align: right;">(19,234)</td>
+<td>★ Q3'25 10-Q 三月列</td>
+</tr>
+<tr>
+<td><strong>Q4'25（12/31/25）◆</strong></td>
+<td style="text-align: right;"><strong>7,296</strong></td>
+<td style="text-align: right;">n/d</td>
+<td style="text-align: right;">(31,815)</td>
+<td>◆（FY 45,916 − 9mo 38,620 / FY net −116,953 − 9mo −85,138）</td>
+</tr>
+<tr>
+<td>Q1'26（3/31/26）</td>
+<td style="text-align: right;">8,598</td>
+<td style="text-align: right;">(27,766)</td>
+<td style="text-align: right;">(33,785)</td>
+<td>★ Q1'26 10-Q</td>
+</tr>
+</tbody>
+</table>
+<p>◆ Q4'25 营收 = FY2025 全年 45,916 − 9 个月 YTD 38,620 =
+<strong>7,296</strong>；Q4'25 净亏 = FY 全年 (116,953) − 9 个月 YTD
+(85,138) = <strong>(31,815)</strong>。 来源 ★：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000181/nvts-20250630.htm">Q2'25
+10-Q</a>（NET REVENUES 三月列 $14,490；9mo/6mo YTD）、<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000214/nvts-20250930.htm">Q3'25
+10-Q</a>（三月列 $10,112；9mo YTD net loss $85,138）、FY2025
+10-K（全年）。</p>
+<pre><code>真实季度营收趋势 (US$ million，█ ∝ 值)
+Q1&#39;25  14.0  ██████████████      (★)
+Q2&#39;25  14.5  ██████████████▌     (★ 小幅回升)
+Q3&#39;25  10.1  ██████████          (★ 转型砍单加速)
+Q4&#39;25   7.3  ███████             (◆ 倒推 — 真正的最低单季 trough!)
+Q1&#39;26   8.6  ████████▌           (★ 微反弹，仍极低)
+             └ 峰(Q2&#39;25 14.5) → 谷(Q4&#39;25 7.3) = −49.7% ◆</code></pre>
+<ul>
+<li><strong>真正的 trough = Q4'25 的 $7.296M</strong>（◆ 倒推），并非
+Q1'26。Q1'26 的 $8.598M 较 Q4'25 实际<strong>环比小幅回升 +17.8%
+◆</strong>（8,598 ÷ 7,296 − 1）。</li>
+<li>营收轨迹：Q1–Q2'25 在 $14M 平台（旧业务尾声）→ Q3'25 跌至
+$10.1M（Navitas 2.0 砍单加速）→ Q4'25 触底 $7.3M → Q1'26 微反弹
+$8.6M。<strong>这是「旧业务清退 → 触底 →
+极低位企稳」的形态</strong>，但绝对水平仍仅为 FY2024 季均（~$20.8M）的约
+40%。</li>
+<li><strong>季节性提示</strong>：FY2025 10-K 风险因子 ★（行 375）明示 Q1
+偏弱，故 Q1'26 的反弹更可能是 Q4 去库存后的正常回补，触底确认仍需 Q2'26
+数据（▽）。</li>
+</ul>
+<hr />
+<h2 id="3-现金燃烧逐季追踪cash-burn-per-quarter">3.
+现金燃烧逐季追踪（cash burn per quarter）★</h2>
+<blockquote>
+<p>同样用真实 YTD OCF 倒推每个季度的单季燃烧（10-Q 的 OCF 是 YTD
+累计，需差分）。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>季度（3-month）</th>
+<th style="text-align: right;">YTD OCF ★</th>
+<th style="text-align: right;"><strong>单季 OCF ◆</strong></th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1'25</td>
+<td style="text-align: right;">(13,533)</td>
+<td style="text-align: right;"><strong>(13,533)</strong></td>
+<td>★ Q1'26 10-Q 对照</td>
+</tr>
+<tr>
+<td>Q2'25</td>
+<td style="text-align: right;">(24,765) 6mo</td>
+<td style="text-align: right;"><strong>(11,232)</strong>
+◆（24,765−13,533）</td>
+<td>★ Q2'25 10-Q</td>
+</tr>
+<tr>
+<td>Q3'25</td>
+<td style="text-align: right;">(34,783) 9mo</td>
+<td style="text-align: right;"><strong>(10,018)</strong>
+◆（34,783−24,765）</td>
+<td>★ Q3'25 10-Q</td>
+</tr>
+<tr>
+<td>Q4'25</td>
+<td style="text-align: right;">(42,891) FY</td>
+<td style="text-align: right;"><strong>(8,108)</strong>
+◆（42,891−34,783）</td>
+<td>★ FY2025 10-K</td>
+</tr>
+<tr>
+<td>Q1'26</td>
+<td style="text-align: right;">(16,362)</td>
+<td style="text-align: right;"><strong>(16,362)</strong></td>
+<td>★ Q1'26 10-Q</td>
+</tr>
+</tbody>
+</table>
+<pre><code>真实单季经营现金燃烧 (US$ million 流出，◀█ ∝ 值)
+Q1&#39;25  13.5  ◀██████████████     (★)
+Q2&#39;25  11.2  ◀███████████        (◆ 差分)
+Q3&#39;25  10.0  ◀██████████         (◆ 差分，降本见效)
+Q4&#39;25   8.1  ◀████████           (◆ 差分，季度最低燃烧)
+Q1&#39;26  16.4  ◀█████████████████  (★ 大幅反弹! R&amp;D +15% + AP 回吐 -4.7M)
+             └ Q4&#39;25→Q1&#39;26 燃烧翻倍 (+102%)</code></pre>
+<p><strong>关键洞察 ⚠️</strong>：FY2025
+内单季燃烧逐季下降（13.5→11.2→10.0→8.1），Navitas 2.0 降本/裁员/SBC
+反转<strong>确实把燃烧压到 Q4'25 的 $8.1M 低点</strong>；但
+<strong>Q1'26 燃烧暴增到 $16.4M（环比 +102% ◆）</strong>——R&amp;D 加码
++15% + AP 回吐 −$4.7M + earnout
+现金外的工作资本拖累把降本红利一次吃光。若 Q1'26 速率延续，年化燃烧 ▽ ≈
+$16.4M × 4 = <strong>$65.4M</strong>，远高于 FY2025 全年的 $42.9M，把
+runway 从「乐观」推回「需再融资」区间（runway 量化详见 04b
+现金流深度）。</p>
+<blockquote>
+<p>⚠️ 注意：Q1 通常含 ESPP/年度结算等季节性现金外流，单季 $16.4M
+不宜简单年化；但方向（燃烧重新上升）明确。</p>
+</blockquote>
+<hr />
+<h2 id="3b-单季-opex-与净亏构成趋势fy2025-逐季--q126">3b. 单季 opex
+与净亏构成趋势（FY2025 逐季 → Q1'26）★</h2>
+<blockquote>
+<p>把各 10-Q 三个月列与年度倒推拼成单季 opex/净亏全表，看降本与 earnout
+扰动的逐季节奏。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>单季（US$ thousands）</th>
+<th style="text-align: right;">Q1'25</th>
+<th style="text-align: right;">Q2'25</th>
+<th style="text-align: right;">Q3'25</th>
+<th style="text-align: right;">Q1'26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net revenues ★</td>
+<td style="text-align: right;">14,018</td>
+<td style="text-align: right;">14,490</td>
+<td style="text-align: right;">10,112</td>
+<td style="text-align: right;">8,598</td>
+</tr>
+<tr>
+<td>Cost of revenues ★</td>
+<td style="text-align: right;">8,711</td>
+<td style="text-align: right;">12,162</td>
+<td style="text-align: right;">6,281</td>
+<td style="text-align: right;">5,361</td>
+</tr>
+<tr>
+<td>Gross margin % ◆</td>
+<td style="text-align: right;">37.86%</td>
+<td style="text-align: right;"><strong>16.07%</strong></td>
+<td style="text-align: right;">37.89%</td>
+<td style="text-align: right;">37.65%</td>
+</tr>
+<tr>
+<td>R&amp;D ★</td>
+<td style="text-align: right;">12,668</td>
+<td style="text-align: right;">11,496</td>
+<td style="text-align: right;">13,280</td>
+<td style="text-align: right;">14,567</td>
+</tr>
+<tr>
+<td>SG&amp;A ★</td>
+<td style="text-align: right;">11,740</td>
+<td style="text-align: right;">7,751</td>
+<td style="text-align: right;">5,230</td>
+<td style="text-align: right;">11,252</td>
+</tr>
+<tr>
+<td>Loss from operations ★</td>
+<td style="text-align: right;">(25,304)</td>
+<td style="text-align: right;">(21,653)</td>
+<td style="text-align: right;">(19,414)</td>
+<td style="text-align: right;">(27,766)</td>
+</tr>
+<tr>
+<td>Net loss ★</td>
+<td style="text-align: right;">(16,829)</td>
+<td style="text-align: right;"><strong>(49,075)</strong></td>
+<td style="text-align: right;">(19,234)</td>
+<td style="text-align: right;">(33,785)</td>
+</tr>
+</tbody>
+</table>
+<p>来源 ★ Q2'25 10-Q（三月列）、Q3'25 10-Q（三月列）、Q1'26 10-Q；GM% 为
+◆。</p>
+<p><strong>两个反常单季信号 ⚠️</strong>：</p>
+<ol type="1">
+<li><strong>Q2'25 毛利率塌到 16.07% ◆</strong>（GP = 14,490 − 12,162 =
+2,328；2,328 ÷ 14,490 = 16.07%）——单季 COGS $12.162M
+异常高（含转型期存货/认证相关成本），远低于其余季度的约 38%。说明 FY2025
+毛利率波动剧烈，<strong>单季 GM 完全不可外推</strong>。</li>
+<li><strong>Q2'25 净亏暴冲到 −$49.075M</strong>（远超当季 −$21.653M
+经营亏损）——又是 earnout FV loss 在该季大幅计提（股价回升）。这再次印证
+earnout 是季度 headline 的主要扰动源，且方向随股价季季翻转。</li>
+</ol>
+<p><strong>R&amp;D 的逆势上行轨迹</strong>：Q1'25 $12.7M → Q2 $11.5M →
+Q3 $13.3M → Q1'26 $14.6M——除 Q2 短暂回落外，R&amp;D 整体抬升，是公司对
+AI/数据中心转型持续加码的清晰证据，也是燃烧反弹的结构性原因。</p>
+<hr />
+<h2 id="3c-客户营收金额季度-tie-outq126">3c. 客户营收金额季度
+tie-out（Q1'26）◆</h2>
+<p>把客户集中度百分比换算成金额，并与总营收勾稽：</p>
+<table>
+<thead>
+<tr>
+<th>客户</th>
+<th style="text-align: right;">Q1'26 占比 ★</th>
+<th style="text-align: right;">隐含金额 ◆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distributor A</td>
+<td style="text-align: right;">59%</td>
+<td style="text-align: right;">8,598 × 59% =
+<strong>$5.073M</strong></td>
+</tr>
+<tr>
+<td>其余（各 &lt;10%）</td>
+<td style="text-align: right;">41%</td>
+<td style="text-align: right;"><strong>$3.525M</strong></td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;"><strong>$8.598M</strong> ✅</td>
+</tr>
+</tbody>
+</table>
+<p>◆ 单一 Distributor A 单季贡献约
+$5.073M——<strong>整家公司一个季度的营收，过半压在一个经销商身上</strong>。若该经销商如
+FY2024 的 Distributor A 一样流失，按历史先例将再触发坏账 +
+存货减值的双重打击。</p>
+<hr />
+<h2 id="4-资产负债表季度变动q126-vs-fy2025-年末">4.
+资产负债表季度变动（Q1'26 vs FY2025 年末）★</h2>
+<table>
+<thead>
+<tr>
+<th>BS 行（US$ thousands）</th>
+<th style="text-align: right;">3/31/2026</th>
+<th style="text-align: right;">12/31/2025</th>
+<th style="text-align: right;">变化 ◆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cash &amp; equivalents</td>
+<td style="text-align: right;">221,008</td>
+<td style="text-align: right;">236,857</td>
+<td style="text-align: right;"><strong>−15,849</strong></td>
+</tr>
+<tr>
+<td>Restricted cash</td>
+<td style="text-align: right;">2,362</td>
+<td style="text-align: right;">1,745</td>
+<td style="text-align: right;">+617</td>
+</tr>
+<tr>
+<td>Accounts receivable, net</td>
+<td style="text-align: right;">3,727</td>
+<td style="text-align: right;">3,621</td>
+<td style="text-align: right;">+106</td>
+</tr>
+<tr>
+<td>Inventories</td>
+<td style="text-align: right;">14,925</td>
+<td style="text-align: right;">13,283</td>
+<td style="text-align: right;"><strong>+1,642</strong></td>
+</tr>
+<tr>
+<td>Total current assets</td>
+<td style="text-align: right;">246,249</td>
+<td style="text-align: right;">259,905</td>
+<td style="text-align: right;">−13,656</td>
+</tr>
+<tr>
+<td>Intangible assets, net</td>
+<td style="text-align: right;">48,524</td>
+<td style="text-align: right;">53,258</td>
+<td style="text-align: right;">−4,734（= 1Q 摊销）✅</td>
+</tr>
+<tr>
+<td>Goodwill</td>
+<td style="text-align: right;">163,215</td>
+<td style="text-align: right;">163,215</td>
+<td style="text-align: right;">0（未减值）</td>
+</tr>
+<tr>
+<td>Total assets</td>
+<td style="text-align: right;">481,367</td>
+<td style="text-align: right;">500,469</td>
+<td style="text-align: right;">−19,102</td>
+</tr>
+<tr>
+<td>Earnout liability</td>
+<td style="text-align: right;">30,546</td>
+<td style="text-align: right;">22,632</td>
+<td style="text-align: right;"><strong>+7,914</strong>（= earnout FV
+loss）✅</td>
+</tr>
+<tr>
+<td>Additional paid-in capital</td>
+<td style="text-align: right;">955,554</td>
+<td style="text-align: right;">945,381</td>
+<td style="text-align: right;">+10,173</td>
+</tr>
+<tr>
+<td>Accumulated deficit</td>
+<td style="text-align: right;">(535,524)</td>
+<td style="text-align: right;">(501,739)</td>
+<td style="text-align: right;">−33,785（= 季度净亏）✅</td>
+</tr>
+<tr>
+<td>Total stockholders' equity</td>
+<td style="text-align: right;">420,049</td>
+<td style="text-align: right;">443,661</td>
+<td style="text-align: right;">−23,612</td>
+</tr>
+</tbody>
+</table>
+<p><strong>三处季度勾稽 ✅</strong>：</p>
+<ol type="1">
+<li>无形资产季度减少 $4.734M <strong>= Statements of Operations
+的季度无形摊销 $4.734M</strong> ✅。</li>
+<li>Earnout liability 季度增加 $7.914M <strong>= 损益表 earnout FV loss
+$7.914M</strong> ✅。</li>
+<li>Accumulated deficit 季度增加 $33.785M <strong>= 季度 net loss
+$33.785M</strong> ✅（equity roll 行 170–174 ★）。</li>
+</ol>
+<ul>
+<li>单季现金净减 −$15.849M（cash &amp; equivalents 口径），与 NET
+DECREASE IN CASH −$15.232M（含 restricted cash，行 225 ★）一致方向
+✅。</li>
+</ul>
+<hr />
+<h2 id="5-客户与地理集中度季度且持续恶化">5.
+客户与地理集中度（季度，且持续恶化）★</h2>
+<h3 id="51-客户集中度占季度营收-10">5.1 客户集中度（占季度营收
+≥10%）</h3>
+<table>
+<thead>
+<tr>
+<th>客户</th>
+<th style="text-align: right;">Q1'26</th>
+<th style="text-align: right;">Q1'25</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distributor A</td>
+<td style="text-align: right;"><strong>59%</strong></td>
+<td style="text-align: right;">&lt;10%</td>
+</tr>
+<tr>
+<td>Distributor B</td>
+<td style="text-align: right;">&lt;10%</td>
+<td style="text-align: right;">51%</td>
+</tr>
+<tr>
+<td>Distributor C</td>
+<td style="text-align: right;">&lt;10%</td>
+<td style="text-align: right;">12%</td>
+</tr>
+</tbody>
+</table>
+<p>来源 ★ Q1'26 10-Q Note（行 292–297）。</p>
+<ul>
+<li><strong>集中度恶化</strong>：Q1'26 单一 Distributor A 占
+<strong>59%</strong>（高于 FY2025 全年最大客户 Distributor B 的
+46%）。注意 NVTS 每期重新字母编号客户，故 Q1'26 的「Distributor
+A」未必等于 FY2024 那个被终止的 56%
+大客户——但<strong>绝对集中度上升到近六成</strong>，是单一渠道依赖恶化的明确
+⚠️ 信号。</li>
+<li>AR 集中度更极端：Distributor A 占应收
+<strong>58%（$2.143M）</strong>（行 312
+★）——半数应收押在一个经销商身上，坏账暴露集中。</li>
+</ul>
+<h3 id="52-地理shipmentbilling-口径q126">5.2 地理（shipment/billing
+口径，Q1'26）★</h3>
+<table>
+<thead>
+<tr>
+<th>地区</th>
+<th style="text-align: right;">Q1'26</th>
+<th style="text-align: right;">Q1'25</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hong Kong</td>
+<td style="text-align: right;">76%（$6.583M）</td>
+<td style="text-align: right;">59%</td>
+</tr>
+<tr>
+<td>United States</td>
+<td style="text-align: right;">13%（$1.109M）</td>
+<td style="text-align: right;">9%</td>
+</tr>
+<tr>
+<td>Rest of Asia</td>
+<td style="text-align: right;">8%（$0.682M）</td>
+<td style="text-align: right;">18%</td>
+</tr>
+<tr>
+<td>China</td>
+<td style="text-align: right;">2%（$0.177M）</td>
+<td style="text-align: right;">7%</td>
+</tr>
+<tr>
+<td>Europe</td>
+<td style="text-align: right;">1%</td>
+<td style="text-align: right;">4%</td>
+</tr>
+</tbody>
+</table>
+<p>来源 ★ 行 300–308。注意此为<strong>发货/开票地（香港
+76%）</strong>，与 FY2025 10-K 的 end-customer 口径（China 47%/US
+28%）是两个不同切面（00 档案矛盾点 #2 已澄清）。香港占比从 59% 升至
+76%，反映渠道更集中于香港转口。</p>
+<hr />
+<h2 id="6-季度小结定调">6. 季度小结（定调）</h2>
+<ol type="1">
+<li><strong>营收 trough 是 Q4'25 的 $7.3M</strong>（◆ 倒推），Q1'26
+$8.598M 较其环比微反弹 +17.8%，但同比仍 −38.7%、绝对水平仅 FY2024
+季均的约 40%；触底确认待 Q2'26（▽）。</li>
+<li><strong>毛利率稳住</strong>（~37.7%）——崩塌是销量而非定价问题，转型产品单位经济未恶化。</li>
+<li><strong>R&amp;D 逆势 +15%</strong>——对 AI/数据中心转型
+all-in，是现金燃烧的主动选择。</li>
+<li><strong>净亏翻倍主要是 earnout 公允价值翻转</strong>（−$7.9M loss vs
+上年 +$8.1M gain），非经营恶化；核心净亏约 −$25.9M ◆。</li>
+<li><strong>现金燃烧从 FY2025 的季均 ~$10.7M 跳回 Q1'26 的
+$16.4M</strong>——降本红利耗尽，年化燃烧或回到 $60M+，把 runway
+重新拉紧。</li>
+<li><strong>客户集中度恶化</strong>：单一经销商占营收 59%、占应收
+58%——比 FY2025 更集中。</li>
+</ol>
+<hr />
+<h2 id="来源sec-links-used">来源（SEC links used）</h2>
+<ul>
+<li>★ Q1'26 10-Q（filed 2026-05-05，期止 2026-03-31）— Balance
+Sheets（行 80–122）、Statements of Operations（行 127–155）、Equity（行
+160–189）、Cash Flows（行 193–235）、MD&amp;A 现金流（行
+662–682）、Customer &amp; geographic concentration（行 288–317）：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm</a></li>
+<li>★ FY2025 10-K（filed 2026-02-27）— 年度 OCF/营收基数用于 Q4'25
+倒推：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm</a></li>
+<li>★ Q2'25 10-Q（filed 2025-08-04）— 三个月营收 $14,490、6mo YTD OCF
+(24,765)：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000181/nvts-20250630.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176925000181/nvts-20250630.htm</a></li>
+<li>★ Q3'25 10-Q（filed 2025-11-03）— 三个月营收 $10,112、9mo YTD OCF
+(34,783)、9mo net loss (85,138)：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000214/nvts-20250930.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176925000214/nvts-20250930.htm</a></li>
+<li>季度历史 10-Q
+完整清单：<code>data/processed/NVTS_filings_catalog_2023-2026.md</code></li>
+<li>交叉参考：<code>data/research/NVTS/00_initial_impression.md</code>、<code>data/research/NVTS/22_annual.md</code></li>
+</ul>
+</body>
+</html>

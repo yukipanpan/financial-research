@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>资本结构 + SPAC 对赌股 · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">资本结构 + SPAC 对赌股 · NVTS</h1>
+</header>
+<h1
+id="06--资本结构capital-structure股权类别稀释余地spac-earnout-与零债务">06
+— 资本结构（Capital Structure）：股权类别、稀释余地、SPAC Earnout
+与零债务</h1>
+<blockquote>
+<p>NVTS（Navitas Semiconductor Corp，CIK
+1821769）。本档深挖<strong>资本结构</strong>：股份类别（share
+classes）、授权与发行（authorized vs
+outstanding）、巨量稀释余地（dilution
+headroom）、认股权证历史（warrants，已赎回）、<strong>SPAC Earnout
+深度拆解</strong>、零债务确认（zero-debt）、股东权益滚动（equity
+roll-forward FY2022→FY2025）、以及 2026 年 5 月 post-cutoff 的 S-3ASR
+货架（shelf，仅标记）。</p>
+<p>来源标签：★ SEC 直读 · ◆ 本人计算（calc）· ◇ 第三方/IR · ▽
+推断（inference）。单位双写（中文+English，full units）。交叉核对：✅
+一致 / ⚠️ 需注意 / ❌ 矛盾。</p>
+</blockquote>
+<hr />
+<h2 id="0-一句话定调one-liner">0. 一句话定调（One-liner）</h2>
+<p>NVTS 是一家<strong>单一类别普通股（single effective class of Class A
+common stock）、零金融债务（zero financial
+debt）、靠连续股权稀释（serial equity
+dilution）续命</strong>的无晶圆厂（fabless）功率半导体公司：740,000,000
+股授权（authorized）对约 232,000,000
+股已发行（outstanding），稀释余地（headroom）巨大；唯一的「历史结构性负担」是
+SPAC 时代遗留的 10,000,000 股
+Earnout（盈利对赌股份）与其公允价值负债（fair-value
+liability），但因股价（约 7 美元 / about US$7）远低于第一档触发价 12.50
+美元（US$12.50），三档门槛<strong>至今无一达成（none
+achieved）</strong>，2026 年 10 月 19
+日窗口到期后大概率全额作废并产生一次性账面收益（reversal）。</p>
+<hr />
+<h2 id="1-股份类别share-classes-名义双层实质单层">1. 股份类别（Share
+Classes）— 名义双层、实质单层</h2>
+<p>NVTS 章程（Certificate of Incorporation）授权两类普通股 +
+一类优先股，但<strong>只有 Class A 实际发行</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>类别 Class</th>
+<th>面值 Par</th>
+<th style="text-align: right;">授权 Authorized</th>
+<th style="text-align: right;">已发行 Outstanding (2025-12-31)</th>
+<th>投票/分红/清算权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class A 普通股 ★</td>
+<td>US$0.0001</td>
+<td style="text-align: right;">740,000,000 股</td>
+<td style="text-align: right;"><strong>230,525,464 股</strong></td>
+<td>1 票/股，identical rights</td>
+</tr>
+<tr>
+<td>Class B 普通股 ★</td>
+<td>US$0.0001</td>
+<td style="text-align: right;">10,000,000 股</td>
+<td style="text-align: right;"><strong>0 股（zero）</strong></td>
+<td>与 Class A 完全相同（identical voting/dividend/liquidation
+rights）</td>
+</tr>
+<tr>
+<td>优先股 Preferred ★</td>
+<td>US$0.0001</td>
+<td style="text-align: right;">1,000,000 股</td>
+<td style="text-align: right;"><strong>0 股（zero）</strong></td>
+<td>board 可定 rights（blank-check preferred）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>★ 来源：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K 资产负债表脚注 L837–839、Note 9</a>： 「Class A common stock,
+$0.0001 par value, <strong>740,000,000 shares authorized</strong> …
+<strong>230,525,464</strong> and 188,114,202 shares issued and
+outstanding at December 31, 2025 and 2024」； 「Class B common stock …
+10,000,000 shares authorized … and <strong>0 shares issued and
+outstanding</strong> at both December 31, 2025 and 2024」；
+「<strong>Both classes have identical voting, dividend, and liquidation
+rights.</strong>」</p>
+</blockquote>
+<p><strong>关键判断（cross-check ✅）：</strong></p>
+<ul>
+<li>❌ 没有「超级投票权」（no super-voting structure）：Class B 与 Class
+A 权利<strong>完全相同</strong>且 Class B 零发行 →
+这<strong>不是双层投票公司（dual-class voting）</strong>。</li>
+<li>✅ <strong>不是受控公司（NOT a controlled
+company）</strong>：无单一股东持股 &gt;50%，最大股东 Ranbir Singh 仅
+8.0%（见档案 24）。</li>
+<li>⚠️ <strong>Blank-check 优先股是潜在防御工具</strong>：board
+可单方面发行带「优先投票/清算/分红权」的优先股，10-K 风险因素自承「may
+delay or prevent a change in control … materially and adversely affect …
+the voting and other rights of the holders of Class A common
+stock」★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+L513</a>）——即一项尚未动用、但随时可祭出的反收购弹药。</li>
+</ul>
+<hr />
+<h2 id="2-授权-vs-发行巨量稀释余地dilution-headroom">2. 授权 vs
+发行：巨量稀释余地（Dilution Headroom）</h2>
+<p>10-K 直接量化未发行余量（unissued headroom）：</p>
+<blockquote>
+<p>★「At December 31, 2025, we had <strong>approximately 510 million
+shares of Class A common stock authorized but unissued</strong>.」（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+L513</a>）</p>
+</blockquote>
+<p>◆ 本人勾稽（calc）：740,000,000 授权 − 230,525,464 发行 =
+<strong>509,474,536 股未发行</strong>（约 510,000,000 股 / about 510
+million shares）✅ 与 10-K 措辞一致。</p>
+<p><strong>含义：</strong> 公司<strong>无须股东再批准</strong>即可增发约
+5.1 亿股（约当前流通盘的 2.2 倍 / about 2.2× current float），董事会「in
+its sole discretion … may be issued at a discount to the market
+price」★。结合 2025 年已实际增发约 34,600,000 股（见
+§6），稀释余地从「理论」变成「已被反复使用的现实工具」。这是无盈利、年烧约
+4,000–6,000 万美元（about US$40–60
+million/yr）公司的<strong>主要融资引擎</strong>。</p>
+<hr />
+<h2 id="3-认股权证历史warrants-已全部消失redeemed-fy2022">3.
+认股权证历史（Warrants）— 已全部消失（Redeemed FY2022）</h2>
+<p>SPAC（Live Oak Acquisition Corp. II）合并遗留的公开 +
+私募认股权证（public + private warrants）<strong>已于 2022
+年初全部赎回/行权清零</strong>：</p>
+<blockquote>
+<p>★「The change in fair value of our warrant liability is due to the
+Company issuing a <strong>notice of redemption on February 4,
+2022</strong> and the Company revaluing the liability just before the
+exercise and redemptions which resulted in a valuation change of
+<strong>$51.8 million</strong>.」（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">FY2022
+10-K L870–871</a>）</p>
+</blockquote>
+<ul>
+<li>◆ FY2022 因权证 FV 下行确认 <strong>+51,800,000 美元（+US$51.8
+million）非现金收益</strong>；此后年报无 warrant liability 余额
+✅。</li>
+<li>⚠️ <strong>会计警示</strong>：这 +5,180 万美元收益、连同 Earnout 的
++1.217 亿美元收益（见 §4），是 FY2022「+7,290 万美元净利润（+US$72.9
+million net income）」假象的两大来源——彼时<strong>经营亏损实为 −1.236
+亿美元（−US$123.6 million）</strong>。换言之，FY2022「盈利」是「股价崩塌
+→ 衍生负债缩水 →
+账面收益」的反身性（reflexivity）产物，不是经营成果。详见档案
+16（剥离测试 strip-test）。</li>
+</ul>
+<hr />
+<h2 id="4-spac-earnout-深拆核心结构性负担">4. SPAC Earnout
+深拆（核心结构性负担）</h2>
+<h3 id="41-条款terms">4.1 条款（Terms）★</h3>
+<blockquote>
+<p>★「Certain shareholders … are eligible to receive up to
+<strong>10,000,000 earnout shares</strong> … These milestones consist of
+<strong>three distinct criteria, with each criterion granting …
+3,333,333 earn-out shares</strong> … Each earnout milestone is deemed
+achieved if, at any time <strong>within 150 days following the Business
+Combination and before October 19, 2026</strong>, the
+<strong>volume-weighted average price (VWAP)</strong> of the Company's
+Class A common stock reaches or exceeds <strong>$12.50, $17.00, or
+$20.00 for any twenty trading days within a thirty trading day
+period</strong>, respectively.」（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K Note 11 / L730, L1366</a>）</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>档次 Tranche</th>
+<th style="text-align: right;">股价门槛 VWAP Hurdle</th>
+<th style="text-align: right;">释放股数 Shares</th>
+<th>状态 Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一档 Milestone 1</td>
+<td style="text-align: right;">≥ US$12.50</td>
+<td style="text-align: right;">3,333,333</td>
+<td>❌ 未达成（none achieved；股价约 US$7）</td>
+</tr>
+<tr>
+<td>第二档 Milestone 2</td>
+<td style="text-align: right;">≥ US$17.00</td>
+<td style="text-align: right;">3,333,333</td>
+<td>❌ 未达成</td>
+</tr>
+<tr>
+<td>第三档 Milestone 3</td>
+<td style="text-align: right;">≥ US$20.00</td>
+<td style="text-align: right;">3,333,334</td>
+<td>❌ 未达成</td>
+</tr>
+<tr>
+<td><strong>合计 Total</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>10,000,000</strong></td>
+<td><strong>0 股已发行（0 issued）</strong> ★</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>触发期（measurement window）：2022-03-18（合并后 150 天）→
+<strong>2026-10-19</strong> ★。</li>
+<li>「<strong>Sale</strong>」条款（加速达成）：私有化、退市、控制权变更等亦视为达成
+★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1366</a>）——并购/被收购情形下
+earnout 会按对应触发价立即结算。</li>
+<li>★「As of the date of this proxy statement, <strong>none of the
+Earnout Shares have been issued.</strong>」（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926058742/tm2613272d3_def14a.htm">DEF14A
+2026, 相关方章节</a>）</li>
+<li>平行存在 <strong>Sponsor Earnout Shares</strong>（Live Oak Sponsor
+持有，相同 12.50/17.00/20.00 门槛、相同 2026-10-19
+截止），同样<strong>未归属（none vested）</strong>，逾期则 forfeited and
+cancelled ★。</li>
+</ul>
+<h3 id="42-vested-vs-unvested-拆分会计双轨制">4.2 Vested vs Unvested
+拆分（会计双轨制）★</h3>
+<p>10,000,000
+股按合并时持有人「股权是否已归属」拆成两块，<strong>会计处理完全不同</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>组成 Component</th>
+<th style="text-align: right;">股数 Shares (2025-12-31)</th>
+<th>会计分类 Classification</th>
+<th>处理 Treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vested Shares</strong>（已归属持有人） ★</td>
+<td style="text-align: right;"><strong>9,713,212 股</strong></td>
+<td><strong>负债 Liability</strong>（Level 3 公允价值）</td>
+<td>期末重估，FV 变动入 Other income (expense)，net</td>
+</tr>
+<tr>
+<td><strong>Unvested Shares</strong>（未归属/员工，须服务期） ★</td>
+<td style="text-align: right;"><strong>286,788 股</strong></td>
+<td><strong>权益 Equity</strong>（股权激励 SBC）</td>
+<td>按 grant-date FV 摊销；离职则 forfeit、份额回拨（reallocate）</td>
+</tr>
+<tr>
+<td>合计</td>
+<td style="text-align: right;">10,000,000 股</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>★「As of December 31, 2025, <strong>9,713,212 of the Earnout Shares
+are vested shares and liability classified</strong> … and
+<strong>286,788 number of shares are unvested and equity
+classified</strong>.」（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+L1366</a>）</p>
+</blockquote>
+<ul>
+<li>Unvested 部分 grant-date 公允价值合计 <strong>19,100,000
+美元（US$19.1 million，约
+US$11.52/股）</strong>★；服务期已过，FY2025/FY2024 仅就 forfeitures
+确认极小 SBC（各 0.1M / 0.2M 美元）★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1364</a>）。</li>
+</ul>
+<h3 id="43-monte-carlo-估值与公允价值轨迹fv-trajectory">4.3 Monte Carlo
+估值与公允价值轨迹（FV Trajectory）★</h3>
+<p>Vested 负债用 <strong>Monte Carlo 模拟 20,000 条股价路径（20,000
+simulations）</strong>
+估值，输入：股价波动率（volatility）、无风险利率（risk-free
+rate）、预期期限（expected term）★。</p>
+<blockquote>
+<p>★「The estimated fair value of the earnout liability was determined
+using a <strong>Monte Carlo analysis of 20,000 simulations</strong> of
+the future path of the Company's stock price over the earnout
+period.」（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+L735, L1368</a>）</p>
+</blockquote>
+<p><strong>公允价值与损益轨迹（US$ thousands / 千美元）★：</strong></p>
+<table>
+<thead>
+<tr>
+<th>期间 Period</th>
+<th style="text-align: right;">期末负债 FV</th>
+<th style="text-align: right;">当期损益（损失正/收益负）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2022</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>−121,709（gain
+收益）</strong></td>
+<td>股价由约 16.09→1.47 美元暴跌 → 负债缩水 ★</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>+33,788（loss
+损失）</strong></td>
+<td>股价反弹 → 负债重估上升 ★</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td style="text-align: right;"><strong>10,208</strong></td>
+<td style="text-align: right;"><strong>−36,644（gain
+收益）</strong></td>
+<td>股价回落 ★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L831,
+L923</a>）</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td style="text-align: right;"><strong>22,632 / 22,580</strong></td>
+<td style="text-align: right;"><strong>+12,424（loss
+损失）</strong></td>
+<td>股价回升 → 负债翻倍 ★</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>★ FY2025 Level 3 reconciliation：期初 10,208 + Fair value adjustment
+12,424 = <strong>期末 22,632 千美元</strong>（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1173–1183</a>）✅
+自洽。 ★「the earnout liability had a fair value of <strong>$22.6
+million</strong> which resulted in a <strong>loss of $12.4
+million</strong> for the year」（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L775</a>）。KPMG
+将其列为<strong>关键审计事项（Critical Audit Matter, CAM）</strong>，因
+volatility 假设对估值影响重大 ★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L776–777</a>）。</p>
+</blockquote>
+<p><strong>◆ 反身性（reflexivity）解读：</strong> 这是「股价涨 → earnout
+负债涨 → 记损失 → 拖累净利」、「股价跌 → 负债缩 → 记收益 →
+美化净利」的<strong>反向放大器</strong>。它与公司经营完全脱钩，是 NVTS
+头条净利大幅波动的最大单一非经营扰动项（详见档案 16）。</p>
+<h3 id="44-未来反转future-reversal">4.4 未来反转（Future
+Reversal）▽</h3>
+<p>▽ 推断：若 2026-10-19 前股价仍 &lt;&lt; 12.50 美元（当前约 7
+美元、第一档需翻近一倍）且无 Sale 事件，则三档门槛全部落空 → 10,000,000
+股<strong>全部作废（forfeit/cancel）</strong> → 期末 22,632
+千美元负债将<strong>一次性转回为收益（reversal，约 +US$22.6 million
+账面）</strong>，并永久消除该衍生负债。</p>
+<ul>
+<li>⚠️ 这将再次制造一次「与经营无关的账面利好」，分析时须剥离。</li>
+<li>◆ 同时<strong>消除约 1,000 万股潜在稀释</strong>（Earnout 10M +
+Sponsor），对完全稀释股本（fully-diluted）构成上限保护。</li>
+</ul>
+<hr />
+<h2 id="5-零债务确认zero-debtwhite_check_mark">5.
+零债务确认（Zero-Debt）✅</h2>
+<p>★ FY2025
+资产负债表无任何长期/短期金融借款、可转债、循环信贷余额：<strong>Total
+financial debt = 0</strong>（仅有小额融资租赁 finance lease，FY2025 偿付
+0.2M 美元）。</p>
+<table>
+<thead>
+<tr>
+<th>项目 Item</th>
+<th style="text-align: right;">FY2025</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现金及等价物 Cash &amp; equivalents ★</td>
+<td style="text-align: right;"><strong>236,857 千美元</strong></td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+BS</a></td>
+</tr>
+<tr>
+<td>金融借款 Debt ★</td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>同上（无 debt 科目）</td>
+</tr>
+<tr>
+<td>股东权益 Total equity ★</td>
+<td style="text-align: right;"><strong>443,661 千美元</strong></td>
+<td>同上</td>
+</tr>
+<tr>
+<td>美国联邦 NOL 结转 ★</td>
+<td style="text-align: right;"><strong>334,800 千美元（US$334.8
+million）</strong></td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L481</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>✅ 现金桥（cash bridge）勾稽：86.7M（FY24）+ 194.6M 融资 − 42.9M
+经营 − 1.4M 投资 ≈ <strong>236.9M</strong>（详见档案 04）。</li>
+<li>▽ 结论：资本结构「资产端靠现金、权益端靠增发、无杠杆」；近 3
+年现金跑道（runway）来自稀释而非经营，但<strong>无债务到期墙（no debt
+maturity
+wall）、无利息负担、无契约违约（covenant）风险</strong>——这是其相对同业的一项结构性安全垫。</li>
+</ul>
+<hr />
+<h2 id="6-股东权益滚动表equity-roll-forwardfy2022q126-">6.
+股东权益滚动表（Equity Roll-Forward）FY2022→Q1'26 ★</h2>
+<p><strong>已发行股数轨迹（Class A，期末）★：</strong></p>
+<table>
+<thead>
+<tr>
+<th>时点</th>
+<th style="text-align: right;">已发行股数 Shares</th>
+<th>增量来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023-12-31</td>
+<td style="text-align: right;">179,196,000</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2024-12-31</td>
+<td style="text-align: right;"><strong>188,114,202</strong></td>
+<td>+8,918K（期权行权 + 股权激励 plans）</td>
+</tr>
+<tr>
+<td>2025-12-31</td>
+<td style="text-align: right;"><strong>230,525,464</strong></td>
+<td>+ATM 19,781K +PIPE 14,815K +plans 7,815K</td>
+</tr>
+<tr>
+<td>Record Date 2026 ★</td>
+<td style="text-align: right;"><strong>233,713,166</strong></td>
+<td>续增（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926058742/tm2613272d3_def14a.htm">DEF14A
+脚注 1</a>）</td>
+</tr>
+</tbody>
+</table>
+<p>◆ 两年（FY2023→FY2025）已发行股 179.2M→230.5M =
+<strong>+28.7%</strong>；按 188.1M→230.5M（FY2024→FY2025）=
+<strong>+22.5%（约 +23%）</strong> ◆。</p>
+<p><strong>FY2025 权益变动表（Stockholders' Equity，千美元）★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+L880–900</a>）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>变动</th>
+<th style="text-align: right;">股数(千)</th>
+<th style="text-align: right;">APIC 资本公积变动</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期初 2024-12-31</td>
+<td style="text-align: right;">188,114</td>
+<td style="text-align: right;">732,784</td>
+<td>累计赤字 −384,786；总权益 348,013</td>
+</tr>
+<tr>
+<td>ATM 1 &amp; 2 发行</td>
+<td style="text-align: right;">+19,781</td>
+<td style="text-align: right;">+99,998</td>
+<td>毛额 100,000</td>
+</tr>
+<tr>
+<td>PIPE 发行</td>
+<td style="text-align: right;">+14,815</td>
+<td style="text-align: right;">+99,999</td>
+<td>毛额 100,000</td>
+</tr>
+<tr>
+<td>期权/股权激励 plans</td>
+<td style="text-align: right;">+7,815</td>
+<td style="text-align: right;">+5,687</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ATM 发行成本</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">−3,249</td>
+<td>—</td>
+</tr>
+<tr>
+<td>PIPE 发行成本</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">−4,437</td>
+<td>—</td>
+</tr>
+<tr>
+<td>SBC（股权激励费用）</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">+14,599</td>
+<td>—</td>
+</tr>
+<tr>
+<td>净亏损 Net loss</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>−116,953</td>
+</tr>
+<tr>
+<td><strong>期末 2025-12-31</strong></td>
+<td style="text-align: right;"><strong>230,525</strong></td>
+<td style="text-align: right;"><strong>945,381</strong></td>
+<td><strong>累计赤字 −501,739；总权益 443,661</strong> ★</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>✅ 勾稽：2025 两次募资合计 34,596K 股（19,781 + 14,815）、毛额
+200,000 千美元、成本 7,686 千美元；净筹资现金流 +194,600 千美元（含 ESPP
+1,498 + 期权 1,032，减融资租赁 0.2M）。详细发行条款见<strong>档案 13
+§2</strong>。</li>
+<li>⚠️ 累计赤字（accumulated deficit）已达 −501,739 千美元（约 −US$502
+million），且每年净亏损吞噬权益；权益维持在 4.4
+亿美元水平<strong>完全依赖增发对冲</strong>。</li>
+</ul>
+<hr />
+<h2 id="7-post-cutoff2026-年-5-月-s-3asr-货架标记-flagwarning">7.
+Post-Cutoff：2026 年 5 月 S-3ASR 货架（标记 Flag）⚠️</h2>
+<ul>
+<li>⚠️ <strong>超出本研究主要数据截止（10-K cutoff 2026-02-27 / Q1'26
+2026-05-05）</strong>，仅作旗标，未纳入核心结论：
+<ul>
+<li>2026-05-11 同日出现 <strong>8-K（Item 1.01 + 8.01）+ S-3ASR +
+424B5</strong>（自动生效货架注册 + 招股增补）★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926058734/tm2613239d3_8k.htm">catalog</a>）→
+典型「新一轮增发/货架续期」结构信号。</li>
+<li>2026-05-22 又有 8-K（Item 1.01）「Material definitive
+agreement」★。</li>
+</ul></li>
+<li>▽ 推断：延续 2025 年「ATM + PIPE」打法，2026
+年公司很可能再以货架（shelf）形式继续股权融资。建议后续档案（financing
+log）单独追踪 424B5 实际定价与股数。</li>
+<li>✅ 一致性：与「serial dilution = primary funding
+engine」主线吻合，不改变本档定调。</li>
+</ul>
+<hr />
+<h2 id="8-ascii-资本结构--所有权图capital-structure--ownership-map">8.
+ASCII 资本结构 / 所有权图（Capital Structure &amp; Ownership Map）</h2>
+<pre><code>                 NAVITAS SEMICONDUCTOR CORP (NVTS, CIK 1821769)
+                 单层 Class A 普通股 · 零债务 · 稀释驱动型资本结构
+   ─────────────────────────────────────────────────────────────────────
+   授权 AUTHORIZED                              已发行 OUTSTANDING (2025-12-31)
+   ┌──────────────────────────────┐            ┌────────────────────────────┐
+   │ Class A   740,000,000 股      │──发行───▶ │ Class A   230,525,464 股   │
+   │ Class B    10,000,000 股 (0)  │  (issued) │ Class B           0 股      │
+   │ Preferred   1,000,000 股 (0)  │           │ Preferred         0 股      │
+   └──────────────────────────────┘            └────────────────────────────┘
+            │                                              │
+            │  未发行余量 headroom ≈ 510,000,000 股        │ 流通盘 float
+            │  (无需股东批准即可增发, 可折价)              │
+            ▼                                              ▼
+   ╔══════════════════════════════╗            ┌────────────────────────────┐
+   ║  稀释引擎 DILUTION ENGINE     ║            │ 主要持有人 (Record Date&#39;26)│
+   ║  2025: ATM 19.78M @~$5.06     ║            │  Ranbir Singh   8.0% (13D) │
+   ║        PIPE 14.81M @ $6.75    ║            │  Capricorn/Saluja 6.6%     │
+   ║   = +34.6M 股, +$200M 毛额    ║            │  BlackRock(13G) ~6.6%      │
+   ║  2026: S-3ASR shelf (post-cut)║            │  全体董监高 12.4%          │
+   ╚══════════════════════════════╝            │  无 &gt;10% 单一控制人        │
+                                                └────────────────────────────┘
+   ─────────────────────────────────────────────────────────────────────
+   历史遗留 LEGACY DERIVATIVES (SPAC era, Live Oak Acq. Corp. II, 2021-10-19)
+   ┌────────────────────────────────────────────────────────────────────┐
+   │ Warrants 认股权证 ──── 全部赎回 REDEEMED 2022-02 (+$51.8M FV gain) ✔ │
+   │ Earnout 对赌股份 10,000,000 股 ─ 三档 $12.50 / $17.00 / $20.00 VWAP  │
+   │   ├─ Vested 9,713,212 → 负债 Liability  FV $22.6M (FY25, loss $12.4M)│
+   │   └─ Unvested 286,788 → 权益 Equity (SBC, 已摊完)                    │
+   │   窗口 window → 2026-10-19  状态: ❌ 0 达成 (股价~$7 &lt;&lt; $12.50)      │
+   │   未来 ▽: 逾期作废 → 转回 +$22.6M 账面收益 + 消除 ~10M 潜在稀释      │
+   └────────────────────────────────────────────────────────────────────┘
+   零债务 DEBT = $0   |   现金 Cash $236.9M   |   权益 Equity $443.7M
+   累计赤字 Accum. deficit −$501.7M   |   NOL 结转 $334.8M</code></pre>
+<hr />
+<h2 id="9-交叉核对小结cross-check-summary">9. 交叉核对小结（Cross-Check
+Summary）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>项目</th>
+<th>状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>授权 vs 发行</td>
+<td>✅</td>
+<td>740M − 230.5M = 509.5M ≈ 10-K「约 510M 未发行」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>双层投票</td>
+<td>❌ 推翻</td>
+<td>Class B 零发行且权利相同 → 非 dual-class、非 controlled company</td>
+</tr>
+<tr>
+<td>3</td>
+<td>权证状态</td>
+<td>✅</td>
+<td>FY2022 全部赎回（+$51.8M），此后无余额</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Earnout vested+unvested</td>
+<td>✅</td>
+<td>9,713,212 + 286,788 = 10,000,000</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Earnout FV 滚动</td>
+<td>✅</td>
+<td>期初 10,208 + adj 12,424 = 期末 22,632（千美元）</td>
+</tr>
+<tr>
+<td>6</td>
+<td>权益滚动 vs 融资现金流</td>
+<td>✅</td>
+<td>34.6M 股 / $200M 毛额 ↔︎ 净筹资 +$194.6M（含 ESPP/期权，减成本）</td>
+</tr>
+<tr>
+<td>7</td>
+<td>零债务</td>
+<td>✅</td>
+<td>BS 无借款科目；仅小额融资租赁</td>
+</tr>
+<tr>
+<td>8</td>
+<td>S-3ASR 2026-05</td>
+<td>⚠️ flag</td>
+<td>post-cutoff，未纳入核心结论，待追踪 424B5</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="来源sourcesfootnote">来源（Sources）footnote</h3>
+<ul>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">NVTS
+FY2025 10-K (filed 2026-02-27)</a> — Notes
+9/10/11、权益变动表、earnout、Level 3、authorized/outstanding。</li>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">NVTS
+FY2022 10-K (filed 2023)</a> — 权证赎回 +$51.8M、earnout +$121.7M、SPAC
+起源、Halo JV/noncontrolling。</li>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926058742/tm2613272d3_def14a.htm">NVTS
+DEF 14A 2026 (filed 2026-05-11)</a> — earnout 持有人、Sponsor
+earnout、所有权（Record Date 233,713,166 股）。</li>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465925109160/tm2530677d1_8k.htm">PIPE
+8-K (2025-11-10, Item 1.01/3.02)</a> — 14,814,813 股 @ $6.75、$100M
+毛额、Needham、登记权协议。</li>
+<li>◇ <a
+href="../../processed/NVTS_filings_catalog_2023-2026.md">Filings catalog
+2023-2026</a> — 2026-05 S-3ASR/424B5/8-K 标记。</li>
+<li>交叉核对锚点：本系列档案 04（现金桥/融资）、13（股权激励/稀释/2025
+募资条款）、16（earnout 剥离测试）、24（治理/所有权）。</li>
+</ul>
+</body>
+</html>

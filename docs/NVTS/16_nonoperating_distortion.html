@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>非经营扰动 + 剥离测试 · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">非经营扰动 + 剥离测试 · NVTS</h1>
+</header>
+<h1
+id="16--非经营--盈余扰动专题--剥离测试-non-operating-distortion--strip-test">16
+— 非经营 / 盈余扰动专题 + 剥离测试 (Non-Operating Distortion &amp;
+Strip-Test)</h1>
+<blockquote>
+<p><strong>Navitas Semiconductor Corp (NVTS, CIK 1821769)</strong> —
+本案的<strong>招牌分析 (signature analysis)</strong>。 核心命题：NVTS
+历年 GAAP 净利润被<strong>公允价值 (FV) 重估 +
+税收一次性项目</strong>严重扰动，尤以 <strong>earnout liability（SPAC
+业绩对赌负债）的 FV 摆动</strong>为最——FY2022 一度把 −$123.6M
+的营业亏损"美化"成 +$72.9M 的净利润。本文用<strong>剥离测试
+(strip-test)</strong> 逐年还原真实经营利润，并详解 earnout 机制。
+来源等级：★ SEC 一手 · ◆ 计算 · ◇ 第三方 · ▽ 推断。单位双写（M=million
+百万 / B=billion 十亿）。Cross-check：✅/⚠️/❌。</p>
+</blockquote>
+<hr />
+<h2 id="161-为什么触发本专题档案16-触发条件">16.1
+为什么触发本专题（档案16 触发条件）</h2>
+<p>NVTS 满足"非经营/盈余扰动"专题的全部触发条件：</p>
+<ol type="1">
+<li><strong>巨额经常性 FV 重估项</strong>入损益：earnout liability
+FV、warrant FV、权益法投资 FV；</li>
+<li><strong>净利润符号与营业利润符号背离</strong>：FY2022 营业亏损
+−$123.6M 却报出净利润 <strong>+$72.9M</strong>；</li>
+<li><strong>一次性税收项目</strong>：FY2022 因 GeneSiC 收购释放 $20.5M
+联邦估值备抵 → $22.8M 税收"收益"；</li>
+<li><strong>重组/减值/坏账</strong>等也叠加扰动（FY2024–FY2025）。</li>
+</ol>
+<p>→ 标准做法：把这些项目从净利润<strong>剥离 (strip)</strong>，回到
+<strong>Loss from
+operations（营业亏损）</strong>，再加回重组/减值/坏账等扰动，得到
+<strong>underlying operating loss（潜在真实经营亏损）</strong>。</p>
+<hr />
+<h2 id="162-earnout-机制详解-the-earnout-mechanism">16.2 Earnout
+机制详解 (The Earnout Mechanism)</h2>
+<h3 id="1621-条款-terms">16.2.1 条款 (Terms)</h3>
+<p>de-SPAC（2021-10-19 Live Oak 合并）遗留的 <strong>业绩对赌
+(Earnout)</strong>：</p>
+<blockquote>
+<p>"Certain of the Company's stockholders are entitled to receive up to
+<strong>10,000,000 Earnout Shares</strong> … The Earnout Milestones
+represents three independent criteria, which each entitles the eligible
+stockholders to <strong>3,333,333 earn-out shares per milestone
+met</strong>. Each Earnout Milestone is considered met if at any time
+150 days following the Business Combination and <strong>prior to October
+19, 2026</strong>, the volume weighted average price (VWAP) … is greater
+than or equal to <strong>$12.50, $17.00 or $20.00</strong> for any
+twenty trading days within any thirty trading day period." ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">FY2022
+10-K Note, L933/L1551</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总股数</td>
+<td>最多 <strong>10,000,000 股</strong> Class A 普通股</td>
+</tr>
+<tr>
+<td>三档独立门槛</td>
+<td>各 3,333,333 股；VWAP ≥ <strong>$12.50 / $17.00 /
+$20.00</strong></td>
+</tr>
+<tr>
+<td>触发规则</td>
+<td>30 个交易日内任意 20 个交易日 VWAP
+达标；或发生"Sale"（私有化/退市/控制权变更）即视同达标</td>
+</tr>
+<tr>
+<td>窗口期</td>
+<td>de-SPAC 后 150 天 ~ <strong>2026-10-19</strong> 截止</td>
+</tr>
+<tr>
+<td>达标情况</td>
+<td><strong>三档全部未达标</strong>（股价长期 ≈ $1.5–7 « $12.50）★</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1622-会计处理-the-accounting--为何是负债为何摆动">16.2.2
+会计处理 (The Accounting) — 为何是负债、为何摆动</h3>
+<ul>
+<li>既得股东对应的部分（<strong>Vested Shares</strong>）按 <strong>ASC
+815 衍生工具</strong>列为<strong>负债</strong>，每期按 FV
+重估，<strong>FV 变动入 Other income (expense),
+net</strong>（即跳过营业利润，直接进净利润）。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">FY2022
+10-K L934/L1552</a></li>
+<li>估值法：<strong>Monte Carlo 模拟（20,000 次）</strong>，输入 =
+股价、波动率、无风险利率、期限。★ L935/L1553。</li>
+<li><strong>反直觉的核心机制</strong>：earnout
+是<strong>或有发股负债</strong>（达标就要白送 10M
+股给老股东，稀释现有股东）。
+<ul>
+<li>当 <strong>股价下跌</strong> → 达标概率↓ → 负债 FV↓ →
+公司确认**"收益"（gain）**；</li>
+<li>当 <strong>股价上涨</strong> → 达标概率↑ → 负债 FV↑ →
+公司确认**"损失"（loss）**。</li>
+<li>⚠️
+即：<strong>公司自己的股价越崩，账面"利润"越好看</strong>——这是一个与股东利益完全背离的会计悖论。</li>
+</ul></li>
+</ul>
+<h3 id="1623-fy2022-的-1217m-收益是怎么来的">16.2.3 FY2022 的 +$121.7M
+"收益"是怎么来的</h3>
+<blockquote>
+<p>"The decrease in fair value of our earn-out liability of
+<strong>$121.7 million</strong> was primarily a result of the decrease
+of the closing price of our Class A common stock … resulting in the
+decline in the estimated fair value of the earnout shares from
+<strong>$16.09 as of December 31, 2021 to $1.47 as of December 31,
+2022</strong>." ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">FY2022
+10-K MD&amp;A, L872</a></p>
+</blockquote>
+<ul>
+<li>股价 <strong>$16.09 → $1.47</strong>（−90.9%）◆ → earnout
+负债几近清零 → 确认
+<strong>+$121.7M（一亿二千一百七十万美元）非现金"收益"</strong>。★
+L847/L1039/L1131。</li>
+<li>叠加 <strong>warrant FV 收益 +$51.8M</strong>（SPAC 认股权证 FY2022
+全部赎回/清零）★ L846 + <strong>税收收益 +$22.8M</strong>（GeneSiC
+收购释放 $20.5M 联邦估值备抵）★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">L851/L875</a>。</li>
+<li>→ 三笔合计约
+<strong>+$196M（一亿九千六百万美元）非经营贡献</strong>，把
+<strong>−$123.6M 营业亏损</strong>翻转为 <strong>+$72.9M 净利润、EPS
++$0.51</strong>。✅ 与损益表勾稽。</li>
+</ul>
+<blockquote>
+<p><strong>一句话</strong>：FY2022 的"盈利"是 <strong>NVTS 自身股票崩盘
++ 认股权证清零 +
+收购税盾</strong>三重非现金/一次性事件的合谋，与卖芯片赚钱毫无关系。</p>
+</blockquote>
+<h3 id="1624-后续年度的反向摆动与未来的埋伏">16.2.4
+后续年度的反向摆动与未来的"埋伏"</h3>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th>期末 earnout FV/股</th>
+<th style="text-align: right;">earnout 损益</th>
+<th>方向</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2022</td>
+<td>$1.47</td>
+<td style="text-align: right;"><strong>+$121.7M 收益</strong></td>
+<td>股价崩 → 负债缩</td>
+<td>★ L872</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td>—</td>
+<td style="text-align: right;"><strong>−$33.8M 损失</strong></td>
+<td>股价回升 → 负债增</td>
+<td>★ 损益表 / 00_impression</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td>$1.18</td>
+<td style="text-align: right;"><strong>+$36.6M 收益</strong></td>
+<td>股价再跌 → 负债缩</td>
+<td>★ FY2025 L670（隐含）</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td>$2.33</td>
+<td style="text-align: right;"><strong>−$12.4M 损失</strong></td>
+<td>股价 $1.18→$2.33 → 负债增</td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+L670/L775</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>FY2025 末 earnout 负债 FV = <strong>$22.6M（$22,632
+thousand）</strong>，对应 <strong>9,713,212 股</strong> vested。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+L775/L1163</a></li>
+<li>⚠️ <strong>未来反转风险旗标 (flagged)</strong>：该 $22.6M
+负债<strong>最迟在 2026-10-19 窗口到期时必须结算</strong>：
+<ul>
+<li><strong>情形A（大概率）</strong>：窗口到期、三档均未达标 →
+负债<strong>全额转回 → 一次性 +$22.6M 非现金"收益"</strong>
+▽（届时会再次美化净利润，但纯属会计幻觉）；</li>
+<li><strong>情形B</strong>：若股价奇迹般冲过 $12.50+ →
+负债先放大（更多损失），达标则发股稀释。</li>
+<li>→ 任何阅读 FY2026/2027 净利润者，<strong>必须预先剔除这笔即将到期的
+$22.6M earnout 摆动</strong>，否则会误读盈利能力。</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="163-剥离测试桥-the-strip-test-bridge-fy2022fy2025">16.3
+剥离测试桥 (The Strip-Test Bridge) FY2022–FY2025</h2>
+<p><strong>完整桥（US$ thousands）</strong> —
+从报告净利润逐项剥离非经营/扰动项，回到营业亏损，再加回重组/减值/坏账，得到
+underlying 真实经营亏损：</p>
+<table>
+<thead>
+<tr>
+<th>行项</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>① 报告净利润(损)</strong> ★</td>
+<td style="text-align: right;"><strong>+72,887</strong></td>
+<td style="text-align: right;">(145,951)</td>
+<td style="text-align: right;">(84,599)</td>
+<td style="text-align: right;">(116,953)</td>
+<td>★ 损益表各年</td>
+</tr>
+<tr>
+<td>− warrant FV (收益)/损失</td>
+<td style="text-align: right;">(51,763)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td>★ FY2022 L846</td>
+</tr>
+<tr>
+<td>− earnout FV (收益)/损失</td>
+<td style="text-align: right;">(121,709)</td>
+<td style="text-align: right;">+33,788</td>
+<td style="text-align: right;">(36,644)</td>
+<td style="text-align: right;">+12,424</td>
+<td>★ L847；FY2025 L670</td>
+</tr>
+<tr>
+<td>− 权益法投资 FV (收益)/损失</td>
+<td style="text-align: right;">~+1,100</td>
+<td style="text-align: right;">~+100</td>
+<td style="text-align: right;">(3,905)</td>
+<td style="text-align: right;">+1,121</td>
+<td>★ FY2024 L581；FY2025 L650</td>
+</tr>
+<tr>
+<td>− 所得税 (收益)/费用</td>
+<td style="text-align: right;">+22,812</td>
+<td style="text-align: right;">+517</td>
+<td style="text-align: right;">+342</td>
+<td style="text-align: right;">(50)</td>
+<td>★ FY2022 L851</td>
+</tr>
+<tr>
+<td><strong>② = 营业亏损(报告)</strong> ★</td>
+<td style="text-align: right;"><strong>(123,637)</strong></td>
+<td style="text-align: right;"><strong>(118,132)</strong></td>
+<td style="text-align: right;"><strong>(130,675)</strong></td>
+<td style="text-align: right;"><strong>(107,764)</strong></td>
+<td>★ 损益表各年（勾稽锚点）</td>
+</tr>
+<tr>
+<td>+ 重组与减值</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">~3,214</td>
+<td style="text-align: right;">18,049</td>
+<td>★ FY2025 L639/L666</td>
+</tr>
+<tr>
+<td>+ 坏账/信用损失</td>
+<td style="text-align: right;">~0</td>
+<td style="text-align: right;">~0</td>
+<td style="text-align: right;">7,689</td>
+<td style="text-align: right;">844</td>
+<td>★ FY2024 L695（$7.7M）</td>
+</tr>
+<tr>
+<td><strong>③ ≈ Underlying 经营亏损</strong> ◆</td>
+<td style="text-align: right;"><strong>(123,637)</strong></td>
+<td style="text-align: right;"><strong>(118,132)</strong></td>
+<td style="text-align: right;"><strong>≈(119,772)</strong></td>
+<td style="text-align: right;"><strong>≈(88,920)</strong></td>
+<td>◆ 由②加回</td>
+</tr>
+</tbody>
+</table>
+<p>✅ <strong>勾稽锚点</strong>：第②行（营业亏损）= 各年 10-K 损益表
+"Loss from operations" 原值（−123,637 / −118,132 / −130,675 /
+−107,764），与第①行经四项剥离后<strong>完全对齐</strong>——证明 NVTS
+净利润与营业利润之间的全部差额，就是这四类非经营项。</p>
+<h3 id="1631-关键结论">16.3.1 关键结论</h3>
+<ol type="1">
+<li><strong>从未有过盈利的经营年度</strong>：剔除非经营项后，NVTS
+<strong>每一年营业亏损都在 $88M–$131M（八千八百万 ~
+一亿三千万美元）之间</strong>。GAAP "+$72.9M
+净利润"（FY2022）是纯粹的非经营幻觉。</li>
+<li><strong>每一笔 &gt;$30M 的净利润摆动都是 FV/税收
+artifact</strong>，不是经营改善：FY2022→FY2023 净利润从 +$72.9M 暴跌至
+−$146.0M（摆动 $219M），其中约 $173M 来自 warrant+earnout
+反向摆动。</li>
+<li><strong>FY2025 的"改善"要打折看</strong>：underlying 经营亏损从
+FY2024 的 ≈$119.8M 收窄到 ≈$88.9M，看似进步 $30M，但其中很大部分来自
+<strong>SBC 转回 −$16.5M（创始人离职触发 LTIP forfeiture）</strong>
+这一<strong>一次性、非经营</strong>会计转回（详见 档案05
+§5.5），而非真实降本。剔除该转回后改善幅度大打折扣 ▽。</li>
+<li><strong>earnout 是唯一一台"盈余扰动引擎"</strong>：warrant 已于
+FY2022
+清零、税收一次性项也已用完，权益法份额很小——<strong>未来净利润的最大单一干扰仍是
+$22.6M earnout 负债在 2026-10-19 前后的结算</strong>（见 16.2.4）。</li>
+</ol>
+<h3 id="1632-ascii-剥离测试对比图">16.3.2 ASCII 剥离测试对比图</h3>
+<pre><code>ASCII 图 16-A：报告净利润 vs 真实经营亏损（US$ M，剥离测试）
+                  报告净利润 ①        →  剥离非经营 →   Underlying 经营亏损 ③
+            +100 ┤
+                 │  ╔════════╗
+            +73  ┤  ║ +72.9  ║ FY2022  ← warrant+51.8, earnout+121.7,
+                 │  ╚════════╝            tax+22.8 把亏损翻成盈利!
+               0 ┼──────────────────────────────────────────────
+                 │
+             -50 ┤
+                 │              ░░░░░░ -88.9 ◀FY2025 underlying (含SBC转回水分)
+             -85 ┤  ▒▒▒▒ -84.6 FY2024 报告
+                 │  ░░░░░░ -119.8 ◀FY2024 underlying
+            -117 ┤  ▒▒▒▒▒▒ -117.0 FY2025 报告
+                 │  ░░░░░░ -123.6 ◀FY2022/FY2023 underlying (≈-118~-124)
+            -146 ┤  ▒▒▒▒▒▒▒ -146.0 FY2023 报告
+                 └─────────────────────────────────────────────
+                  ▒ = 报告净利润(波动剧烈, 受FV摆动)
+                  ░ = underlying 经营亏损(平稳深亏 ~-89 至 -124, 从未转正)
+
+   核心洞察: ▒线上蹿下跳(从+73到-146, 振幅$219M), 全因非经营FV;
+            ░线始终趴在 -$89~-124M 区间 → 这才是&quot;真实的Navitas&quot;。
+
+ASCII 图 16-B：FY2022 净利润&quot;造假&quot;分解桥 (US$ M)
+   营业亏损 ──┐
+   -123.6     │
+              ├──+ warrant FV 收益    +51.8  (SPAC认股权证清零)
+              ├──+ earnout FV 收益   +121.7  (股价$16.09→$1.47, 负债缩水)
+              ├──+ 税收收益           +22.8  (GeneSiC收购释放估值备抵)
+              ├──+ 其他(权益法等)      ~-0.2
+              ▼
+   报告净利润 = +72.9  ◀── 表面&quot;盈利&quot;, 实为 -$123.6M 经营亏损被 +$196M 非经营项掩盖</code></pre>
+<hr />
+<h2 id="1633-earnout-损益的方向性敏感性股价--损益-反向">16.3.3 Earnout
+损益的方向性敏感性（股价 ↔︎ 损益 反向）</h2>
+<p>把历年 earnout
+FV/股与对应损益并列，可直观看到<strong>股价与"利润贡献"完全反向</strong>这一悖论：</p>
+<table>
+<thead>
+<tr>
+<th>期末</th>
+<th style="text-align: right;">earnout FV/股 ★</th>
+<th>同比股价方向</th>
+<th style="text-align: right;">earnout 损益 ★</th>
+<th>对净利润</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2021</td>
+<td style="text-align: right;">$16.09</td>
+<td>（基期）</td>
+<td style="text-align: right;">—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FY2022</td>
+<td style="text-align: right;">$1.47</td>
+<td>↓ −90.9% ◆</td>
+<td style="text-align: right;"><strong>+$121.7M</strong> 收益</td>
+<td><strong>大幅美化</strong></td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td style="text-align: right;">（回升）</td>
+<td>↑</td>
+<td style="text-align: right;"><strong>−$33.8M</strong> 损失</td>
+<td>拖累</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td style="text-align: right;">$1.18</td>
+<td>↓</td>
+<td style="text-align: right;"><strong>+$36.6M</strong> 收益</td>
+<td>美化</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td style="text-align: right;">$2.33</td>
+<td>↑ +97.5% ◆</td>
+<td style="text-align: right;"><strong>−$12.4M</strong> 损失</td>
+<td>拖累</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>◆ <strong>敏感性量级</strong>：FY2022 股价跌 $14.62/股带来 +$121.7M
+收益 ≈ 每股价下跌 $1 → 约 +$8.3M 收益（粗略线性化，实际为 Monte Carlo
+非线性）。FY2025 股价升 $1.15/股仅带来 −$12.4M
+损失——说明<strong>随股价远离 $12.50
+门槛，负债对股价的敏感度递减</strong>（深度价外期权特征）▽。这也意味着：当前股价（~$2–7）下该负债已大幅缩小，<strong>未来若窗口到期作废，转回收益上限就是当前
+$22.6M</strong>。</p>
+</blockquote>
+<h2 id="1634-与稀释现金的交互为何这是双输扰动">16.3.4
+与稀释、现金的交互（为何这是"双输"扰动）</h2>
+<ul>
+<li>earnout 是<strong>或有发股</strong>：若达标，老股东白拿最多 10M
+股，现有股东被<strong>额外稀释约 4%</strong>（10M / ~232M
+在外股）◆。即净利润的"earnout
+收益"与股东价值是<strong>反向</strong>的——账面赚钱时（股价跌）股东在亏钱。</li>
+<li>与 warrant 不同，earnout
+<strong>不带来任何现金流入</strong>（warrant 行权至少进现金；earnout
+纯送股）。</li>
+<li>截至 FY2025，warrant
+已清零、税收一次性项已用尽、权益法份额小——<strong>earnout
+是唯一仍在运转的盈余扰动引擎</strong>，且其结算大限
+<strong>2026-10-19</strong> 已近在眼前。任何对 NVTS 估值的人，应把这
+$22.6M
+负债视为"要么作废转回（情形A）、要么稀释发股（情形B）"的<strong>二元期权</strong>单独处理，不并入经营判断。</li>
+</ul>
+<h2 id="164-取证小结-forensic-takeaways">16.4 取证小结 (Forensic
+Takeaways)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>发现</th>
+<th style="text-align: center;">等级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>NVTS 从无盈利经营年；真实经营亏损常年 $89–124M</td>
+<td style="text-align: center;">✅ ★</td>
+</tr>
+<tr>
+<td>2</td>
+<td>FY2022 "+$72.9M 净利润" = warrant+earnout+税收三重非经营幻觉</td>
+<td style="text-align: center;">✅ ★</td>
+</tr>
+<tr>
+<td>3</td>
+<td>earnout 悖论：自家股价越跌、账面利润越好（与股东利益背离）</td>
+<td style="text-align: center;">⚠️ ★</td>
+</tr>
+<tr>
+<td>4</td>
+<td>$22.6M earnout 负债将于 2026-10-19 前结算 → 未来净利润埋伏一次性
++$22.6M 转回（情形A）</td>
+<td style="text-align: center;">▽ 旗标</td>
+</tr>
+<tr>
+<td>5</td>
+<td>FY2025 underlying 改善含 −$16.5M SBC
+一次性转回水分，非纯经营降本</td>
+<td style="text-align: center;">⚠️ ◆</td>
+</tr>
+<tr>
+<td>6</td>
+<td>earnout 估值 + SBC + journal entry
+同时是<strong>重复出现的内控重大缺陷</strong>（见 档案14）→
+计量可靠性本身存疑</td>
+<td style="text-align: center;">⚠️⚠️ ★</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>一句话定调</strong>：阅读 NVTS
+任何一年的"净利润"都必须先做剥离测试——<strong>报告净利润几乎不含信息量，营业亏损才是真相</strong>，而连营业亏损都还需对
+SBC 转回与重组/减值做二次还原。</p>
+</blockquote>
+<hr />
+<h2 id="来源-sources">来源 (Sources)</h2>
+<ul>
+<li>★ FY2022 10-K：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm</a>
+— earnout 条款（L933/L1551）、会计分类（L934/L1552）、Monte
+Carlo（L935/L1553）、warrant 收益 +$51.8M（L846）、earnout 收益 +$121.7M
+&amp; 股价 $16.09→$1.47（L847/L872/L1039/L1131）、税收收益 +$22.8M &amp;
+估值备抵释放（L851/L875）</li>
+<li>★ FY2023 10-K：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000024/nvts-20231231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176924000024/nvts-20231231.htm</a>
+— earnout −$33.8M 损失（MD&amp;A/现金流 L665/L699）</li>
+<li>★ FY2024 10-K：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm</a>
+— earnout +$36.6M、坏账 $7.7M、权益法 +$3.9M（L581/L695/L1578）</li>
+<li>★ FY2025 10-K：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm</a>
+— earnout −$12.4M &amp; 股价 $1.18→$2.33（L670）、earnout 负债 $22.6M /
+9.71M 股（L775/L1163）、重组+减值 $18.0M（L639/L666）、权益法
+−$1.1M（L650）</li>
+<li>★ 4.01 8-K（2025-04-02）earnout 估值/分类列为重大缺陷：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm</a></li>
+<li>内部整合：<code>data/research/NVTS/00_initial_impression.md</code>（Agent
+D 剥离测试表 + Part 3 H8 假设印证 + 矛盾#5 解决）</li>
+</ul>
+</body>
+</html>

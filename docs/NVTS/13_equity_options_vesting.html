@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>股权·期权·稀释瀑布 · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">股权·期权·稀释瀑布 · NVTS</h1>
+</header>
+<h1
+id="13--股权激励--期权--vesting--稀释equity--options--vesting--dilution">13
+— 股权激励 / 期权 / Vesting / 稀释（Equity / Options / Vesting /
+Dilution）</h1>
+<blockquote>
+<p>NVTS（Navitas Semiconductor Corp，CIK
+1821769）。本档深挖<strong>股权激励池与稀释机制</strong>：期权（stock
+options）、LTIP 业绩期权、RSU 池、ESPP、未确认股权激励费用（unrecognized
+SBC）、SBC 费用轨迹与 <strong>LTIP 没收转回（forfeiture
+reversal）机制</strong>、<strong>2025 年两次融资精确条款（ATM +
+PIPE）</strong>、稀释百分比、完全稀释桥（fully-diluted bridge）、内部人
+Form 4/144 活动。</p>
+<p>来源标签：★ SEC 直读 · ◆ calc · ◇ 第三方/IR · ▽
+推断。单位双写。交叉核对 ✅/⚠️/❌。</p>
+</blockquote>
+<hr />
+<h2 id="0-一句话定调">0. 一句话定调</h2>
+<p>NVTS
+的股权激励池在创始管理层离场后<strong>急剧瘦身</strong>：期权几乎归零（约
+100K 股）、两批 LTIP 业绩期权（合计 9,750,000 股、行权价 10–15.51
+美元）因高管出走**全部没收（forfeited）<strong>并触发
+<strong>−16,500,000 美元 SBC 转回</strong>——这是 FY2025
+营业费用「假性改善」的关键账面引擎；真正的持续稀释来自 8,700,000 股 RSU
+池（未确认 SBC 36,100,000 美元）、ESPP，以及</strong>2025 年靠 ATM +
+PIPE 增发约 34,600,000 股（+约 18% / about +18%）换取约 2 亿美元（about
+US$200 million）**的稀释式融资。完全稀释股本约 249–250M 股。</p>
+<hr />
+<h2 id="1-股权激励计划全景equity-plans-overview">1.
+股权激励计划全景（Equity Plans Overview）★</h2>
+<table>
+<thead>
+<tr>
+<th>计划 Plan</th>
+<th style="text-align: right;">授权额度 Authorized</th>
+<th>状态 Status</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2020 Plan</strong></td>
+<td style="text-align: right;">18,899,285 股</td>
+<td>2021-10-19 后<strong>停止新授</strong>（forfeit 回流入 2021
+Plan）</td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1277</a></td>
+</tr>
+<tr>
+<td><strong>2021 Equity Incentive Plan</strong></td>
+<td style="text-align: right;">16,334,527 股 + 2020 Plan 回流 15,802,050
+股 + <strong>年度自动增加（evergreen）</strong>：每年取 「上年末流通股
+4%」与 board 定额孰低，至 2031-01-01</td>
+<td>主激励计划，含 RSU/期权/LTIP</td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1278</a></td>
+</tr>
+<tr>
+<td><strong>2022 ESPP</strong></td>
+<td style="text-align: right;">3,000,000 股</td>
+<td>运行中；2025 末剩 1,242,467 股可购</td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1353–1355</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Evergreen 条款（自动续池）</strong>：2021 Plan
+每年自动注入「上年末流通股 4%」——按约 230M 股计，理论上每年可新增约
+9,200,000 股授权额度（◆ 230M × 4% ≈
+9.2M），是一个<strong>长期、自动、稀释性的池子补给机制</strong>，无需逐年股东批准。</p>
+</blockquote>
+<hr />
+<h2 id="2-普通股期权stock-options-几近归零-">2. 普通股期权（Stock
+Options）— 几近归零 ★</h2>
+<p>普通期权（非 LTIP）一般 10 年期、首年 1/4、其后每月 1/48 归属
+★。活动表（千股）：</p>
+<table>
+<thead>
+<tr>
+<th>期权 Options</th>
+<th style="text-align: right;">股数(千) Shares</th>
+<th style="text-align: right;">加权行权价 WAEP</th>
+<th style="text-align: right;">剩余年限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023-12-31 在外</td>
+<td style="text-align: right;">2,657</td>
+<td style="text-align: right;">US$0.72</td>
+<td style="text-align: right;">5.7 yr</td>
+</tr>
+<tr>
+<td>FY2024 行权 Exercised</td>
+<td style="text-align: right;">(1,142)</td>
+<td style="text-align: right;">0.71</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>FY2024 没收/到期</td>
+<td style="text-align: right;">(16)</td>
+<td style="text-align: right;">1.06</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2024-12-31 在外</td>
+<td style="text-align: right;">1,499</td>
+<td style="text-align: right;">0.74</td>
+<td style="text-align: right;">4.7 yr</td>
+</tr>
+<tr>
+<td>FY2025 行权 Exercised</td>
+<td style="text-align: right;">(1,399)</td>
+<td style="text-align: right;">0.74</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><strong>2025-12-31 在外</strong></td>
+<td style="text-align: right;"><strong>100</strong></td>
+<td style="text-align: right;"><strong>US$0.72</strong></td>
+<td style="text-align: right;">3.5 yr</td>
+</tr>
+<tr>
+<td>已归属可行权 Vested &amp; exercisable</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">0.72</td>
+<td style="text-align: right;">3.5 yr</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+Note 10 / L1296–1304</a>。FY2025 普通期权 SBC「immaterial」；FY2024 仅
+0.1M 美元。</p>
+</blockquote>
+<p>◆ 解读：普通期权池<strong>实质清空</strong>（仅剩 100,000 股、行权价
+0.72 美元、深度价内但量极小），对未来稀释贡献可忽略。重头戏在
+LTIP（§3）与 RSU（§4）。</p>
+<hr />
+<h2 id="3-ltip-业绩期权--没收转回机制核心账面引擎">3. LTIP 业绩期权 +
+没收转回机制（核心账面引擎）★</h2>
+<h3 id="31-两批-ltip合计-9750000-股">3.1 两批 LTIP（合计 9,750,000
+股）</h3>
+<table>
+<thead>
+<tr>
+<th>LTIP 批次</th>
+<th>授予日</th>
+<th style="text-align: right;">股数 Shares</th>
+<th style="text-align: right;">行权价 Exercise</th>
+<th style="text-align: right;">Grant-date FV</th>
+<th>估值法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2021 LTIP Options</strong> ★</td>
+<td>2021-12-29</td>
+<td style="text-align: right;">6,500,000</td>
+<td style="text-align: right;">US$15.51</td>
+<td style="text-align: right;">US$9.14/股</td>
+<td>Black-Scholes + Monte Carlo（500,000 scenarios）</td>
+</tr>
+<tr>
+<td><strong>2022 LTIP Options</strong> ★</td>
+<td>2022-08-15</td>
+<td style="text-align: right;">3,250,000</td>
+<td style="text-align: right;">US$10.00</td>
+<td style="text-align: right;">US$2.89/股</td>
+<td>Black-Scholes + Monte Carlo</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td>—</td>
+<td style="text-align: right;"><strong>9,750,000</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>归属条件极苛刻：<strong>市场条件 + 业绩条件双触发</strong>——10
+档股价门槛（ten share price hurdles）<strong>15–60
+美元/股（US$15–60）</strong>，叠加 revenue 与 EBITDA 目标，7
+年业绩期、10 年到期 ★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1305–1321</a>）。</li>
+<li>◇ 这是为创始管理层（CEO Sheridan / COO·CTO
+Kinzer）量身定制的「唯一长期激励（the only equity awards … over the
+duration of the performance period）」★。</li>
+</ul>
+<h3 id="32-没收转回机制forfeiture-reversal-fy2025-165m-美元-">3.2
+没收转回机制（Forfeiture Reversal）— FY2025 −16.5M 美元 ★</h3>
+<p>ASC 718 下，业绩期权仅在「probable to vest」时才确认费用；一旦
+recipient 离职且不再
+probable，<strong>已确认费用全额转回（reverse）</strong>：</p>
+<blockquote>
+<p>★「During the year ended December 31, 2025, <strong>the members of
+senior management who were recipients of the "2021 LTIP Options" left
+the Company</strong>. Therefore, the Company recognized a
+<strong>reversal of previously recorded stock-based compensation expense
+of $16.5 million</strong> for the year ended December 31, 2025 … the
+Company does not expect to recognize any further compensation expense
+associated with the award.」（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+L1310</a>）</p>
+</blockquote>
+<blockquote>
+<p>★ 2022 LTIP：高管 2024 年内离职、未满服务期 → 期权没收，FY2024
+转回累计 2,100,000 美元、FY2025 无费用（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1321</a>）。</p>
+</blockquote>
+<p><strong>机制链条（cause-effect chain）：</strong></p>
+<pre><code>创始 CEO/COO 离场 (2025)  →  LTIP recipients 不再在职  →  归属不再 probable
+   →  累计已记 SBC 全额转回  →  −$16.5M (2021 LTIP) + 已含 −$2.1M (2022 LTIP, FY24)
+   →  FY2025 营业费用被「冲红」压低  →  头条 opex / 经营亏损被美化（flatters）</code></pre>
+<p>⚠️ <strong>分析警示：</strong> FY2025 SBC 总额骤降至 14,484
+千美元，其中<strong>含 −16,500 千美元 LTIP
+转回</strong>——若剔除该一次性贷项，「正常化 SBC」约为 14.5M + 16.5M ≈
+<strong>31,000
+千美元</strong>（◆），费用降幅远没有头条那么夸张。这是「管理层动荡 →
+会计转回 → 费用假性改善」的典型例子，须与档案 16（剥离测试）联读。</p>
+<hr />
+<h2 id="4-rsu-池主要持续稀释来源">4. RSU 池（主要持续稀释来源）★</h2>
+<table>
+<thead>
+<tr>
+<th>RSU 活动</th>
+<th style="text-align: right;">股数(千) Shares</th>
+<th style="text-align: right;">加权 Grant-date FV/股</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023-12-31 在外</td>
+<td style="text-align: right;">12,872</td>
+<td style="text-align: right;">US$6.70</td>
+</tr>
+<tr>
+<td>FY2024 授予 Granted</td>
+<td style="text-align: right;">5,556</td>
+<td style="text-align: right;">5.21</td>
+</tr>
+<tr>
+<td>FY2024 归属 Vested</td>
+<td style="text-align: right;">(7,005)</td>
+<td style="text-align: right;">5.68</td>
+</tr>
+<tr>
+<td>FY2024 没收 Forfeited</td>
+<td style="text-align: right;">(1,871)</td>
+<td style="text-align: right;">6.48</td>
+</tr>
+<tr>
+<td>2024-12-31 在外</td>
+<td style="text-align: right;">9,552</td>
+<td style="text-align: right;">6.63</td>
+</tr>
+<tr>
+<td>FY2025 授予 Granted</td>
+<td style="text-align: right;">8,241</td>
+<td style="text-align: right;">5.38</td>
+</tr>
+<tr>
+<td>FY2025 归属 Vested</td>
+<td style="text-align: right;">(5,701)</td>
+<td style="text-align: right;">5.96</td>
+</tr>
+<tr>
+<td>FY2025 没收 Forfeited</td>
+<td style="text-align: right;">(3,390)</td>
+<td style="text-align: right;">6.25</td>
+</tr>
+<tr>
+<td><strong>2025-12-31 在外</strong></td>
+<td style="text-align: right;"><strong>8,702</strong></td>
+<td style="text-align: right;"><strong>US$6.04</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+Note 10 / L1338–1351</a>。</p>
+<ul>
+<li>FY2025 RSU 确认 SBC <strong>29,700 千美元</strong>（FY2024：34,000
+千美元）★。</li>
+<li><strong>未确认 SBC（unrecognized）：36,100 千美元（US$36.1
+million）</strong>，加权剩余确认期 <strong>2.0 年</strong> ★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1351</a>）。</li>
+<li>⚠️ FY2025 没收 3,390K
+股（高于授予年份常态），反映裁员/离职潮（Navitas 2.0 重组 19%
+裁员）。</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="5-espp员工持股计划">5. ESPP（员工持股计划）★</h2>
+<ul>
+<li>2022 ESPP：授权 3,000,000 股；折扣价 = min(offering 日 FMV, purchase
+日 FMV) × 85%（<strong>15% 折扣</strong>）★。</li>
+<li>FY2025 购入 <strong>698,105 股</strong>，价 US$2.07，现金 1,498
+千美元；FY2024 购入 801,465 股，价 US$2.24，现金 2,683 千美元 ★。</li>
+<li>2025-12-31 剩余可购 <strong>1,242,467 股</strong> ★；FY2025/FY2024
+ESPP SBC 各 1,100 / 1,800 千美元 ★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1355</a>）。</li>
+</ul>
+<hr />
+<h2 id="6-sbc-费用轨迹stock-based-compensation-trajectory">6. SBC
+费用轨迹（Stock-Based Compensation Trajectory）★</h2>
+<table>
+<thead>
+<tr>
+<th>财年 FY</th>
+<th style="text-align: right;">SBC 总额（千美元）</th>
+<th>关键驱动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2022 ★</td>
+<td style="text-align: right;"><strong>63,300</strong></td>
+<td>SPAC 后高速扩张、LTIP 起算</td>
+</tr>
+<tr>
+<td>FY2023 ★</td>
+<td style="text-align: right;"><strong>54,000</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>FY2024 ★</td>
+<td style="text-align: right;"><strong>43,000</strong></td>
+<td>RSU 34.0M + 期权/ESPP；LTIP 2021 仍记 +4.0M、2022 转回 −2.1M</td>
+</tr>
+<tr>
+<td><strong>FY2025 ★</strong></td>
+<td style="text-align: right;"><strong>14,484</strong></td>
+<td>RSU 29.7M + ESPP 1.1M <strong>− LTIP 转回 16.5M</strong> + 其他</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>★ FY2025 SBC 费用分布（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1280–1291</a>）：SG&amp;A
+1,473 千美元、合计 14,484 千美元（FY2024 43,031 千美元）。</p>
+</blockquote>
+<p>◆ <strong>正常化提示：</strong> FY2025 头条 SBC 14.5M ≈ RSU 29.7M +
+ESPP 1.1M − LTIP 16.5M（含 2021 LTIP）+
+期权/earnout/其他微项。<strong>剔除 −16.5M 转回后约 31M
+美元</strong>——即「真实经营性 SBC」比头条高约一倍。FY2022→FY2025
+表面降幅（63.3M→14.5M，−77%）被一次性转回严重夸大。</p>
+<hr />
+<h2 id="7-2025-年两次融资精确条款financings--exact-terms">7. 2025
+年两次融资精确条款（Financings — Exact Terms）★</h2>
+<h3 id="71-atmat-the-marketjefferies">7.1
+ATM（At-the-Market，Jefferies）★</h3>
+<blockquote>
+<p>★「On March 19, 2025, … entered into an Open Market Sale Agreement
+with <strong>Jefferies LLC</strong> … subsequently completed two ATM
+offerings ("<strong>ATM One</strong>" and "<strong>ATM Two</strong>") …
+each … aggregate offering price of up to <strong>$50,000,000</strong> …
+As of June 30, 2025, completed sales of <strong>11.1 million shares
+under ATM One</strong> and <strong>8.7 million shares under ATM
+Two</strong>, … gross proceeds of approximately <strong>$100.0
+million</strong> and offering-related costs of <strong>$3.3
+million</strong> … All sales … in the second quarter of 2025.」（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+L571, L974</a>）</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>ATM</th>
+<th>销售代理 Agent</th>
+<th style="text-align: right;">股数 Shares</th>
+<th style="text-align: right;">毛额 Gross</th>
+<th style="text-align: right;">成本 Costs</th>
+<th style="text-align: right;">均价（◆）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATM One</td>
+<td>Jefferies</td>
+<td style="text-align: right;">11,100,000</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>ATM Two</td>
+<td>Jefferies</td>
+<td style="text-align: right;">8,700,000</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td>—</td>
+<td
+style="text-align: right;"><strong>≈19,781,000</strong>（权益表精确数
+19,781K）</td>
+<td style="text-align: right;"><strong>100,000 千美元</strong></td>
+<td style="text-align: right;"><strong>3,249 千美元</strong></td>
+<td style="text-align: right;"><strong>≈ US$5.06/股</strong> ◆</td>
+</tr>
+</tbody>
+</table>
+<p>◆ 均价：100,000 千美元 ÷ 19,781K 股 ≈
+<strong>US$5.06/股</strong>。注册依据 Form S-3（File No.
+333-269752），prospectus supplements 生效日 2025-03-20（ATM One）/
+2025-05-27（ATM Two）★。</p>
+<h3 id="72-pipe私募-private-placementneedham">7.2 PIPE（私募 Private
+Placement，Needham）★</h3>
+<blockquote>
+<p>★「On November 7, 2025, … a securities purchase agreement … private
+placement of <strong>14,814,813 shares</strong> of Class A common stock
+at <strong>$6.75 per share</strong>. The transaction <strong>closed on
+November 10, 2025</strong>, with <strong>Needham &amp; Company</strong>
+as sole placement agent, … gross proceeds of approximately
+<strong>$100.0 million</strong> and offering-related costs of
+<strong>$4.4 million</strong>.」（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+L972</a>；<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465925109160/tm2530677d1_8k.htm">PIPE
+8-K Item 1.01/3.02</a>）</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投资人 Investors</td>
+<td><strong>accredited investors（具名未披露 unnamed）</strong> ⚠️</td>
+</tr>
+<tr>
+<td>股数 Shares</td>
+<td><strong>14,814,813 股</strong>（权益表列 14,815K）</td>
+</tr>
+<tr>
+<td>单价 Price</td>
+<td><strong>US$6.75/股</strong></td>
+</tr>
+<tr>
+<td>毛额 Gross</td>
+<td><strong>100,000 千美元（US$100 million）</strong></td>
+</tr>
+<tr>
+<td>成本 Costs</td>
+<td><strong>4,437 千美元</strong></td>
+</tr>
+<tr>
+<td>认股权证 Warrants</td>
+<td><strong>无（no warrants）</strong></td>
+</tr>
+<tr>
+<td>登记权 Registration rights</td>
+<td>有，公司须在 SEC「full review」后 120 天内登记转售 ★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465925109160/tm2530677d1_8k.htm">PIPE
+8-K</a>）</td>
+</tr>
+<tr>
+<td>安排人 Agent</td>
+<td>Needham &amp; Company, LLC（sole placement agent，Placement Agent
+Agreement 2025-11-06）</td>
+</tr>
+<tr>
+<td>完成</td>
+<td>2025 年四季度交割结算</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>PIPE 投资人未具名</strong>——8-K 仅称「certain accredited
+investors（the
+Purchasers）」，无大型战略/产业投资人披露，限制了「背书价值」的可读性。</p>
+<h3 id="73-募资合计与价格对照">7.3 募资合计与价格对照</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025 增发股数合计</td>
+<td style="text-align: right;">≈ 34,596,000 股（19,781K + 14,815K）</td>
+</tr>
+<tr>
+<td>毛额合计 Gross</td>
+<td style="text-align: right;"><strong>200,000 千美元（US$200
+million）</strong></td>
+</tr>
+<tr>
+<td>成本合计 Costs</td>
+<td style="text-align: right;"><strong>7,686 千美元</strong>（3,249 +
+4,437）</td>
+</tr>
+<tr>
+<td>净筹资现金流 Financing CF FY2025 ★</td>
+<td style="text-align: right;"><strong>+194,600 千美元</strong>（含 ESPP
+1,498 + 期权 1,032，减租赁 0.2M）</td>
+</tr>
+<tr>
+<td>◆ ATM 均价</td>
+<td style="text-align: right;">US$5.06/股</td>
+</tr>
+<tr>
+<td>PIPE 单价</td>
+<td style="text-align: right;">US$6.75/股</td>
+</tr>
+<tr>
+<td>当时市价对照 ◇</td>
+<td style="text-align: right;">约
+US$5–7（与发行价同量级，几无溢价）</td>
+</tr>
+<tr>
+<td><strong>vs Earnout 第一档门槛 US$12.50</strong></td>
+<td style="text-align: right;">发行价<strong>仅为门槛的 40–54%</strong>
+◆ → earnout 触发遥不可及</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>★ 融资现金流：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">10-K
+L700</a>「$194.6 million … primarily … proceeds of $200.0 million
+related to our PIPE and ATM offerings, … ESPP $1.5 million, … stock
+option exercises $1.0 million … offset by costs of $7.7
+million」✅。</p>
+</blockquote>
+<hr />
+<h2 id="8-稀释百分比dilution-">8. 稀释百分比（Dilution %）◆</h2>
+<table>
+<thead>
+<tr>
+<th>口径</th>
+<th>计算</th>
+<th style="text-align: right;">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>◆ 募资稀释（仅 ATM+PIPE）</td>
+<td>34,596K ÷ 188,114K（FY2024 期初基数）</td>
+<td style="text-align: right;"><strong>+18.4%（约 +18%）</strong> ◆</td>
+</tr>
+<tr>
+<td>◆ 两年总稀释（含激励行权）</td>
+<td>(230,525 − 188,114) ÷ 188,114</td>
+<td style="text-align: right;"><strong>+22.5%（约 +23%）</strong> ◆</td>
+</tr>
+<tr>
+<td>◆ 募资稀释（对 FY2025 期末）</td>
+<td>34,596K ÷ 230,525K</td>
+<td style="text-align: right;"><strong>15.0%</strong> ◆</td>
+</tr>
+</tbody>
+</table>
+<p>◆ <strong>关键洞察：</strong> 2025 年单年仅靠两次融资就稀释存量股东约
+18%，且发行价（US$5.06 / US$6.75）几乎无溢价、远低于 earnout
+门槛（US$12.50）——这是「在低位反复增发换现金」的稀释，对长期持有人价值侵蚀显著。</p>
+<hr />
+<h2 id="9-完全稀释桥fully-diluted-bridge">9. 完全稀释桥（Fully-Diluted
+Bridge）◆</h2>
+<table>
+<thead>
+<tr>
+<th>组成 Component</th>
+<th style="text-align: right;">股数 Shares</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基本流通 Basic outstanding (2025-12-31) ★</td>
+<td style="text-align: right;">230,525,464</td>
+<td>10-K</td>
+</tr>
+<tr>
+<td>+ 普通期权 Options（在外） ★</td>
+<td style="text-align: right;">100,000</td>
+<td>Note 10</td>
+</tr>
+<tr>
+<td>+ RSU（未归属在外） ★</td>
+<td style="text-align: right;">8,702,000</td>
+<td>Note 10</td>
+</tr>
+<tr>
+<td>+ ESPP（剩余可购） ★</td>
+<td style="text-align: right;">1,242,467</td>
+<td>Note 10</td>
+</tr>
+<tr>
+<td>+ Earnout 未归属（equity-classified）★</td>
+<td style="text-align: right;">286,788</td>
+<td>Note 11</td>
+</tr>
+<tr>
+<td>(备查) Earnout 已归属（liability，潜在 ~9.71M）</td>
+<td style="text-align: right;">(9,713,212)</td>
+<td>须股价≥12.50 才发行，当前不计入</td>
+</tr>
+<tr>
+<td>LTIP 期权（9.75M）★</td>
+<td style="text-align: right;">0（已全部没收 forfeited）</td>
+<td>Note 10</td>
+</tr>
+<tr>
+<td><strong>≈ 完全稀释 Fully-diluted（不含 liability
+earnout）</strong></td>
+<td style="text-align: right;"><strong>≈ 240,856,719</strong></td>
+<td>◆</td>
+</tr>
+<tr>
+<td><strong>若计入已归属 Earnout liability 上限</strong></td>
+<td style="text-align: right;"><strong>≈ 250,569,931</strong></td>
+<td>◆</td>
+</tr>
+</tbody>
+</table>
+<p>◆ 结论：完全稀释约 <strong>240.9M–250.6M 股</strong>（较基本约
++4%~+9%）。区间下限剔除「股价远未达标的」liability earnout；上限纳入
+9.71M 已归属 earnout（仅 Sale 或股价≥12.50
+时发行）。**初始印象档「~249–250M」落在上限区间内**，✅
+一致（采用上限口径）。</p>
+<blockquote>
+<p>⚠️ 注意：FY2025/FY2024 因净亏损，期权/RSU/ESPP 在摊薄 EPS
+计算中<strong>反稀释（anti-dilutive）被剔除</strong>★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">L1437</a>）；故
+GAAP 摊薄 EPS
+用的是基本股数，而上述完全稀释桥是「潜在最大稀释」视角。</p>
+</blockquote>
+<hr />
+<h2 id="10-内部人-form-4--144-活动信号无法逐笔枚举">10. 内部人 Form 4 /
+144 活动（信号，无法逐笔枚举）</h2>
+<ul>
+<li>◇ 全期共 <strong>124 份 Form 4（内部人交易）+ 91 份 Form
+144（拟售通知）</strong>——为<strong>重度内部人活动信号（heavy insider
+activity signal）</strong>。</li>
+<li>⚠️ 须谨慎解读：NVTS 内部人薪酬高度以 RSU 计价，<strong>Form 4
+中大量「买入」实为 RSU 归属（vesting），「卖出」多为
+sell-to-cover（代扣税抛售）或 10b5-1 计划</strong>——DEF14A
+明确内部人交易须经 10b5-1 plan 或 sell-to-cover 例外 ★（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926058742/tm2613272d3_def14a.htm">DEF14A
+L671–674</a>）。</li>
+<li>▽ 因此<strong>不宜将「124 Form
+4」直接读作主动减持</strong>；建议后续单独追踪「非 10b5-1、非
+sell-to-cover
+的酌情卖出」才有信息含量。本档仅标记规模，<strong>不逐笔枚举（can't
+enumerate here）</strong>。</li>
+</ul>
+<hr />
+<h2 id="11-ascii-稀释瀑布图dilution-waterfall">11. ASCII
+稀释瀑布图（Dilution Waterfall）</h2>
+<pre><code>   NVTS 稀释瀑布 DILUTION WATERFALL  (Class A 股数, 千股)
+   ─────────────────────────────────────────────────────────────
+   FY2023 期初           179,196 ████████████████████████
+                              │  +8,918 (期权行权 + 股权激励 plans)
+   FY2024 期末           188,114 █████████████████████████▌
+                              │  +19,781  ATM 1&amp;2 @ ~$5.06  ($100M)
+                              │  +14,815  PIPE @ $6.75       ($100M)  ◆ +18%
+                              │   +7,815  期权/RSU/ESPP plans
+   FY2025 期末           230,525 ██████████████████████████████▊  ◆ 两年 +23%
+                              │   +3,188  续增 (Record Date 2026)
+   Record Date 2026      233,713 ███████████████████████████████▏
+   ─────────────────────────────────────────────────────────────
+   潜在稀释 POTENTIAL DILUTION (加到基本 230,525):
+     + 期权 Options        100  ▏ (几近归零)
+     + RSU 未归属        8,702  ██▏   (未确认 SBC $36.1M, 2.0 yr)
+     + ESPP 剩余         1,242  ▍
+     + Earnout unvested    287  ▏ (equity)
+     ─────────────────────────
+     完全稀释 ≈ 240,857  ███████████████████████████████▊
+     +Earnout 已归属 9,713 (liability, 须 ≥$12.50) → 上限 ≈ 250,570
+     LTIP 9,750 ──────── 全部没收 FORFEITED (−$16.5M SBC 转回) ✗
+   ─────────────────────────────────────────────────────────────
+   稀释引擎: ① 低位增发 (ATM/PIPE, 无溢价)  ② RSU evergreen 池 (年补4%)
+   反向项:   LTIP 没收转回 (一次性美化 FY25 opex)</code></pre>
+<hr />
+<h2 id="12-交叉核对小结">12. 交叉核对小结</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>项目</th>
+<th>状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>LTIP 转回 −16.5M</td>
+<td>✅</td>
+<td>2021 LTIP 全额转回（创始人离场），2022 LTIP FY24 转回 2.1M</td>
+</tr>
+<tr>
+<td>2</td>
+<td>SBC 14.5M「含 −16.5M」</td>
+<td>✅</td>
+<td>正常化后约 31M，头条降幅被夸大</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ATM 股数/均价</td>
+<td>✅</td>
+<td>19,781K 股 / $100M / ~$5.06</td>
+</tr>
+<tr>
+<td>4</td>
+<td>PIPE 股数/价</td>
+<td>✅</td>
+<td>14,814,813 股 @ $6.75 / $100M / Needham / 投资人未具名</td>
+</tr>
+<tr>
+<td>5</td>
+<td>稀释 +18% / +23%</td>
+<td>✅</td>
+<td>34.6M÷188.1M=18.4%；两年存量 +22.5%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>完全稀释 ~249–250M</td>
+<td>✅</td>
+<td>上限口径含已归属 earnout，落在 240.9M–250.6M</td>
+</tr>
+<tr>
+<td>7</td>
+<td>发行价 vs earnout $12.50</td>
+<td>✅</td>
+<td>发行价仅门槛 40–54% → earnout 触发遥远</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Form 4/144 信号</td>
+<td>⚠️</td>
+<td>124+91 份；多为 RSU vest / sell-to-cover，慎读为主动减持</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="来源sourcesfootnote">来源（Sources）footnote</h3>
+<ul>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">NVTS
+FY2025 10-K (2026-02-27)</a> — Note
+10（plans/options/LTIP/RSU/ESPP/SBC）、Note
+11（earnout）、L700（融资现金流）、L1437（反稀释）。</li>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465925109160/tm2530677d1_8k.htm">PIPE
+8-K (2025-11-10)</a> — PIPE 精确条款、登记权、Needham。</li>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926058742/tm2613272d3_def14a.htm">DEF
+14A 2026 (2026-05-11)</a> — 内部人交易政策（10b5-1 /
+sell-to-cover）。</li>
+<li>交叉锚点：档案
+06（资本结构/earnout）、04（现金桥）、16（剥离测试/SBC
+转回对经营亏损的影响）、24（管理层离场触发 LTIP 没收）。</li>
+</ul>
+</body>
+</html>

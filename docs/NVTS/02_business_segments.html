@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>业务地图 + 产品5W + 客户集中 · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">业务地图 + 产品5W + 客户集中 · NVTS</h1>
+</header>
+<h1 id="档案-02--业务地图--产品-5w--客户经销商--收入构成--终端市场">档案
+02 — 业务地图 + 产品 5W + 客户经销商 + 收入构成 + 终端市场</h1>
+<blockquote>
+<p>Navitas Semiconductor Corporation（Nasdaq: <strong>NVTS</strong>，CIK
+<strong>1821769</strong>）— fabless
+宽禁带（wide-bandgap）功率半导体公司。
+本档案回答：<strong>这家公司到底卖什么、卖给谁、钱从哪来、未来想赚谁的钱</strong>。深挖到
+SKU / 电压档级。 数据截止 <strong>2026-05-29</strong>。标签：★ SEC
+直接披露 · ◆ 公式计算 · ◇ 第三方/公司 IR（含 2026-03 deck）· ▽
+推算。cross-check：✅ 吻合 · ⚠️ 有差异 · ❌
+无法验证。单位一律双写一次（million/billion）。</p>
+</blockquote>
+<hr />
+<h2 id="020-一页速读tldr">02.0 一页速读（TL;DR）</h2>
+<ul>
+<li><strong>一句话</strong>：NVTS 设计两类宽禁带功率器件——<strong>GaN
+功率 IC（GaNFast™/GaNSense™）</strong> 与 <strong>SiC
+器件（GeneSiC™，最高 6.5
+kV）</strong>——制造全外包（fabless），通过<strong>经销商</strong>卖给电源/系统厂商，再进入手机快充、AI
+数据中心、电网、工业等终端。</li>
+<li><strong>报告分部：仅 1 个</strong>（合并口径）。<strong>GaN vs SiC
+的收入拆分从未披露</strong> ★——这是分析最大的盲区。</li>
+<li><strong>收入正在腰斩</strong>：FY2024 营收 <strong>$83.302
+million（= $0.083 billion）</strong> 见顶 → FY2025 <strong>$45.916
+million（= $0.046 billion）</strong>，<strong>−45%</strong>；Q1'26 再
+<strong>−39%</strong>（YoY）。★</li>
+<li><strong>客户集中度极端且在恶化</strong>：FY2024 单一经销商
+Distributor A 占 56% → 年底终止（一次性损失约 <strong>$14.2
+million</strong>）→ FY2025 Distributor B 占 46% → <strong>Q1'26
+单一经销商已升至 59%</strong> ★。</li>
+<li><strong>两套地理口径并存</strong>（容易踩坑）：MD&amp;A
+按<strong>终端客户</strong>（中国 47% / 美国 28%）；财报 Note 12
+按<strong>出货/开票地</strong>（香港 57% / 亚洲其他 21%）。✅
+两者都对，含义不同。</li>
+<li><strong>未来叙事（◇ deck）</strong>：Navitas 2.0
+聚焦四个高功率市场——AI 数据中心、电网与能源、性能计算、工业电气化；2030
+SAM 喊到 <strong>$3.5–5.4 billion</strong>。这是 <strong>TAM
+故事</strong>，不是当前收入。</li>
+</ul>
+<hr />
+<h2 id="021-业务地图business-map">02.1 业务地图（Business Map）</h2>
+<pre><code>                          ★ NAVITAS SEMICONDUCTOR（单一报告分部）
+                          ─────────────────────────────────────
+                          fabless 设计公司，总部 Torrance, CA
+                          专利 &gt;300 项（含 2024-10 与 Infineon 交叉授权）★
+                                       │
+            ┌──────────────────────────┴──────────────────────────┐
+            │                                                       │
+    ┌───────▼────────┐                                     ┌────────▼────────┐
+    │   GaN 产品线    │                                     │   SiC 产品线     │
+    │  (自研, 2018-)  │                                     │ (GeneSiC, 2022收购)│
+    ├────────────────┤                                     ├──────────────────┤
+    │ GaNFast™ 功率IC │                                     │ GeneSiC™ MOSFET   │
+    │ GaNSense™ 带感知 │                                     │ + 二极管(diode)   │
+    │ 集成 drive/控制/ │                                     │ &quot;trench-assisted  │
+    │ 保护(单片集成)   │                                     │  planar&quot; 沟槽辅助 │
+    │ 100× 更快开关    │                                     │ 平面栅, 最高6.5kV │
+    │ 省电至多 40%     │                                     │ 寿命 3× 竞品      │
+    └───────┬────────┘                                     └────────┬─────────┘
+            │              ┌──────────────────────┐                │
+            └──────────────►  AI 800VDC 平台(横跨   ◄───────────────┘
+                           │  GaN+SiC, 电网→GPU 全  │
+                           │  功率路径, 含 SST)      │
+                           └──────────────────────┘
+            收入合并为 1 个分部 → GaN/SiC 拆分 NOT disclosed ❌</code></pre>
+<blockquote>
+<p><strong>判读</strong>：NVTS 不是单一材料公司。它<strong>同时押注
+GaN（中低压、高频、做电源 IC）和
+SiC（超高压、做电网/工业）</strong>，并用「AI 800VDC
+平台」把两者串成「从电网到 GPU 的全功率路径」叙事。GaN
+是自研老本行（2018 起，已出货 &gt;75 million 颗 ◇ FY2022 10-K），SiC 是
+2022 年花 <strong>$246.2 million</strong> 收购 GeneSiC 来的。 来源：★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K Item 1 Business</a>（L195、L213–253）；★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">FY2022
+10-K Item 1</a>（L223、L265）。</p>
+</blockquote>
+<hr />
+<h2 id="022-产品-5w--拆到-sku--电压档级">02.2 产品 5W —— 拆到 SKU /
+电压档级</h2>
+<p>「5W」= What（是什么）/ Who（卖给谁）/ Where（用在哪）/
+When（什么阶段）/ Why（为何选它）。</p>
+<h3 id="a-ganfast--集成-gan-功率-ic核心老本行">A. GaNFast™ —— 集成 GaN
+功率 IC（核心老本行）</h3>
+<table>
+<thead>
+<tr>
+<th>5W</th>
+<th>内容</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>What</strong></td>
+<td><strong>单片集成（monolithic）GaN 功率 IC</strong>：把 GaN 功率管 +
+驱动（drive）+ 控制（control）+
+保护（protection）做在一颗芯片里。GaN-on-Si（硅衬底上长氮化镓）。<strong>100×
+更快开关、至多 40% 节能</strong> vs 传统硅。20 年限保。</td>
+<td>★ FY2025 10-K L251；★ FY2022 10-K L265</td>
+</tr>
+<tr>
+<td><strong>电压档级</strong></td>
+<td>主流 <strong>~650 V GaN</strong>（消费快充）；EV 用 <strong>~700 V
+GaN</strong>（400 V 电池系统的车载充电 OBC / DC-DC）</td>
+<td>◇ FY2022 10-K L251（"~700 V-rated GaN"）</td>
+</tr>
+<tr>
+<td><strong>Who</strong></td>
+<td>经销商 → 手机/笔电充电器 ODM/OEM、商用电源（merchant power
+supply）厂、数据中心 PSU 厂</td>
+<td>★ FY2025 10-K L1380</td>
+</tr>
+<tr>
+<td><strong>Where</strong></td>
+<td>历史主力＝<strong>手机快充/消费电子</strong>（已出货 &gt;75 million
+颗 ◇）；正向 <strong>AI 数据中心 PSU / 性能计算</strong>迁移</td>
+<td>◇ FY2022 L253；★ FY2025 L227</td>
+</tr>
+<tr>
+<td><strong>When</strong></td>
+<td>成熟量产（mobile）；<strong>主动 de-emphasize</strong>（Navitas 2.0
+去消费化）→ 高功率应用仍在设计导入</td>
+<td>★ FY2025 L227</td>
+</tr>
+<tr>
+<td><strong>Why</strong></td>
+<td>集成度＝护城河。10-K 自述：「<strong>大多数 GaN
+厂商今天只提供分立（discrete,
+非集成）方案</strong>，需要外挂硅器件做驱动/控制/保护」——NVTS 的集成 IC
+是差异化</td>
+<td>★ FY2025 L246</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b-gansense--带感知保护的-ganganfast-子系列">B. GaNSense™ ——
+带感知/保护的 GaN（GaNFast 子系列）</h3>
+<ul>
+<li><strong>What</strong>：在 GaNFast
+基础上<strong>集成实时电流感知与保护（autonomous sensing &amp;
+protection）</strong>，进一步减少外围元件、提升保护速度。属于 GaNFast
+产品族的高阶变体。</li>
+<li><strong>意义</strong>：体现「集成度」战略的延伸——把更多系统功能吸进芯片。SEC
+文本以 GaNFast™/GaNSense™ 并称作为产品商标族出现。★ FY2025
+10-K（产品商标族）。</li>
+</ul>
+<h3 id="c-genesic--高压超高压-sic2022-收购">C. GeneSiC™ —— 高压/超高压
+SiC（2022 收购）</h3>
+<table>
+<thead>
+<tr>
+<th>5W</th>
+<th>内容</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>What</strong></td>
+<td><strong>SiC MOSFET + 二极管</strong>。专利 <strong>"trench-assisted
+planar"（沟槽辅助平面栅）</strong>：兼具平面 SiC（易制造、稳健）与沟槽
+SiC（低阻、小 die）优点。高温下电阻更低、运行 25°C
+更凉、<strong>寿命预期 3×</strong></td>
+<td>★ FY2025 L195；★ FY2022 L256</td>
+</tr>
+<tr>
+<td><strong>电压档级</strong></td>
+<td><strong>最高 6.5 kV（= 6,500 V）</strong> ★。细分：1,200 V SiC（800
+V 电池 EV 牵引逆变器）；<strong>1,700–3,300 V
+SiC</strong>（卡车/巴士/工程车 OBC、路边快充）；电网/SST 用至 6.5
+kV</td>
+<td>★ FY2025 L251；◇ FY2022 L251</td>
+</tr>
+<tr>
+<td><strong>Who</strong></td>
+<td>经销商 → 电网/储能 OEM、工业电气化、（历史上）EV/光伏厂</td>
+<td>★ FY2025 L1380；★ FY2022 L223</td>
+</tr>
+<tr>
+<td><strong>Where</strong></td>
+<td>Navitas 2.0
+下聚焦<strong>电网基础设施、工业电气化、SST</strong>；<strong>明确排除
+EV 与低压 SiC</strong>（"intentionally excluded EV and low-voltage
+SiC"）</td>
+<td>★ FY2025 L213</td>
+</tr>
+<tr>
+<td><strong>When</strong></td>
+<td>量产（已出货 &gt;9 million 颗 ◇ FY2022
+L253）；高压电网应用仍在拓展</td>
+<td>◇ FY2022 L253</td>
+</tr>
+<tr>
+<td><strong>Why</strong></td>
+<td>高压（&gt;3 kV）是 GaN 做不到的领域；SiC 让 NVTS 能讲「电网→GPU
+全功率路径」</td>
+<td>★ FY2025 L251</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>战略反转值得记录</strong>：FY2022 10-K 把 GeneSiC
+收购定位为「进军 <strong>EV、光伏</strong>」（L223）；FY2025 10-K
+却<strong>明确剔除 EV 与低压 SiC</strong>（L213）。同一块 SiC
+资产，三年内目标市场掉头——这是 Navitas 2.0 转型的产品级证据。✅ 两份
+filing 交叉确认。</p>
+</blockquote>
+<h3 id="d-ai-800vdc-平台--横跨-gansic-的系统叙事">D. AI 800VDC 平台 ——
+横跨 GaN+SiC 的系统叙事</h3>
+<ul>
+<li><strong>What</strong>：不是单颗芯片，而是**「从公用电网到 AI GPU
+的整条 800 V 直流（HVDC）供电路径」**的 GaN+SiC 器件组合，含
+<strong>固态变压器（SST, Solid-State Transformer）</strong>。</li>
+<li><strong>SST 规格 ★</strong>：输入 <strong>11–13 kV AC</strong>，输出
+<strong>800 VDC 标准 / 1500 VDC 标准</strong>；号称比传统 50/60Hz
+变压器效率更高、体积更小、可用性更好。★ FY2025 10-K L205。</li>
+<li><strong>Why</strong>：这是 NVTS 押注 AI
+数据中心结构性需求的核心叙事，也是 2025-05
+NVIDIA「合作」消息的技术背景（NVIDIA 8-K 详见档案 08）。</li>
+<li><strong>风险因素自承</strong>：「我们对 800V AI 数据中心 GaN/SiC
+用量的预测，<strong>取决于 800V 系统本身能否被接受和增长</strong>」★
+FY2025 L363——管理层自己承认这是押注一个尚未成型的架构。</li>
+</ul>
+<h3 id="e--intelliweave--deck-拓扑品牌sec-文件中查无">E. ◇
+"IntelliWeave" —— deck 拓扑品牌，<strong>SEC 文件中查无</strong></h3>
+<ul>
+<li>在任何 SEC filing（10-K/10-Q/8-K）中<strong>均未出现
+"IntelliWeave"</strong> ❌（已全文检索确认）。这是公司在 IR
+材料/拓扑命名中使用的控制技术品牌（一种 PFC
+控制拓扑），<strong>deck-only</strong>。</li>
+<li><strong>判读</strong>：凡涉及 IntelliWeave
+的性能宣称，<strong>仅为公司叙事（◇）</strong>，无 SEC
+披露背书，引用时必须标 ◇ 并做合理性自检。</li>
+</ul>
+<hr />
+<h2 id="023-客户与经销商集中度--本案最尖锐的风险之一">02.3
+客户与经销商集中度 —— 本案最尖锐的风险之一</h2>
+<p>NVTS <strong>几乎全部通过经销商（distributors of electronic
+components）销售</strong>，经销商再转卖给 OEM 和电源厂。★ FY2025 10-K
+Note 12（L1380）。这意味着 NVTS
+与终端客户之间隔了一层，<strong>真实终端需求能见度低</strong>，且<strong>单点经销商失败会直接砸营收</strong>。</p>
+<h3 id="经销商集中度按-10-营收口径逐年-note-12">经销商集中度（按 ≥10%
+营收口径，逐年）★ Note 12</h3>
+<table>
+<thead>
+<tr>
+<th>经销商</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">Q1'26</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Distributor A</strong></td>
+<td style="text-align: right;"><strong>56%</strong></td>
+<td style="text-align: right;">&lt;10%（*）</td>
+<td style="text-align: right;"><strong>59%</strong> ⚠️</td>
+<td>FY2024 的 A 已于 2024 年底<strong>终止</strong>；Q1'26
+的「A」为重新编号后的最大经销商，占比已升至 59%</td>
+</tr>
+<tr>
+<td><strong>Distributor B</strong></td>
+<td style="text-align: right;">&lt;10%（*）</td>
+<td style="text-align: right;"><strong>46%</strong></td>
+<td style="text-align: right;">&lt;10%</td>
+<td>FY2025 最大经销商</td>
+</tr>
+<tr>
+<td><strong>Distributor C</strong></td>
+<td style="text-align: right;">&lt;10%（*）</td>
+<td style="text-align: right;"><strong>11%</strong></td>
+<td style="text-align: right;">&lt;10%</td>
+<td>FY2025 第二大</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>编号陷阱</strong>：Note 12 表的「Distributor
+A/B/C」是<strong>每期独立匿名编号</strong>，跨期不一定是同一家。FY2024
+的 A（56%，被终止）≠ FY2025 的 B（46%）≠ Q1'26 的
+A（59%）。<strong>初读极易把 56% 误读成 FY2025
+的数</strong>——这是本研究第一次出错并修正的点（见 report.md §20）。
+来源：★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K Note 12</a>（L1383–1386）；★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">Q1'26
+10-Q Note 4</a>（L293）。</p>
+</blockquote>
+<pre><code>单一经销商占营收 % —— 集中度不降反升
+FY2024  ████████████████████████████  56% (Distributor A, 年底被终止)
+FY2025  ███████████████████████       46% (Distributor B)
+Q1&#39;26   █████████████████████████████ 59% (Distributor A&#39;)  ⚠️ 转型后更集中</code></pre>
+<h3 id="应收账款集中度信用风险-note-12">应收账款集中度（信用风险）★ Note
+12</h3>
+<table>
+<thead>
+<tr>
+<th>经销商</th>
+<th style="text-align: right;">FY2025 应收占比</th>
+<th style="text-align: right;">Q1'26 应收占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最大单一经销商</td>
+<td style="text-align: right;">26%（B）</td>
+<td style="text-align: right;"><strong>58%</strong>（A，金额 $2.143
+million）⚠️</td>
+</tr>
+<tr>
+<td>前五合计</td>
+<td style="text-align: right;">B 26% + C 18% + D 13% + E 12% ≈
+<strong>69%</strong></td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Q1'26 单一经销商占应收 <strong>58%</strong>（$2.143 million / 总应收
+$3.7 million ▽）——<strong>信用风险高度集中在一家</strong>。★ Q1'26 10-Q
+L312。</p>
+</blockquote>
+<h3 id="distributor-a-终止事件--集中度风险的实弹演习fy2024">Distributor
+A 终止事件 —— 集中度风险的「实弹演习」（FY2024）</h3>
+<p>2024 年底，NVTS <strong>终止了与 Distributor A（当年占营收
+56%）的经销协议</strong>。一次性代价拆解 ★ Note 12（L1387–1388）+
+MD&amp;A：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align: right;">金额</th>
+<th>入账位置</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>坏账费用（bad debt）</td>
+<td style="text-align: right;"><strong>$7.5 million</strong></td>
+<td>计入 SG&amp;A</td>
+<td>★ L1387、L662</td>
+</tr>
+<tr>
+<td>存货减值（为该经销商备的货卖不掉）</td>
+<td style="text-align: right;"><strong>$5.0 million</strong></td>
+<td>计入营业成本 Cost of revenues</td>
+<td>★ L1388、L656</td>
+</tr>
+<tr>
+<td>研发报废（为该客户开发的未来产品项目放弃）</td>
+<td style="text-align: right;"><strong>$1.7 million</strong></td>
+<td>计入 R&amp;D</td>
+<td>★ L1388</td>
+</tr>
+<tr>
+<td><strong>合计一次性损失</strong> ◆</td>
+<td style="text-align: right;"><strong>≈ $14.2 million</strong></td>
+<td>三处分摊</td>
+<td>◆ = 7.5 + 5.0 + 1.7 ✅</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>判读</strong>：$14.2 million ≈ FY2024 营收 $83.3 million 的
+<strong>17%</strong>
+◆——一个经销商关系破裂就削掉近两成年营收的利润。这是「单点失败风险」<strong>已被现实验证过一次</strong>的硬证据，而
+Q1'26 集中度反而升到 59%，风险更高不更低。10-K
+风险因素也明确承认：转型期「<strong>streamlining distribution
+channels</strong>（精简经销渠道）」会进一步抬高集中度。★ FY2025
+L666。</p>
+</blockquote>
+<hr />
+<h2 id="024-收入构成--两套地理口径必须并存">02.4 收入构成 ——
+两套地理口径必须并存</h2>
+<p>NVTS
+披露<strong>两套互不相同的地理切法</strong>，新手极易冲突，这里讲清。</p>
+<h3
+id="切法一mda-按终端客户end-customer所在地--反映经济暴露">切法一：MD&amp;A
+按「终端客户（end-customer）」所在地 —— 反映经济暴露</h3>
+<table>
+<thead>
+<tr>
+<th>地区</th>
+<th style="text-align: right;">FY2025 占比</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>中国 China</strong></td>
+<td style="text-align: right;"><strong>47%</strong></td>
+<td>真实终端需求暴露最大在中国</td>
+</tr>
+<tr>
+<td>美国 US</td>
+<td style="text-align: right;">28%</td>
+<td></td>
+</tr>
+<tr>
+<td>欧洲 Europe</td>
+<td style="text-align: right;">14%</td>
+<td></td>
+</tr>
+<tr>
+<td>亚洲其他</td>
+<td style="text-align: right;">11%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>来源：★ FY2025 10-K MD&amp;A（end-customer 口径，见 report.md §5
+已核）。</p>
+</blockquote>
+<h3
+id="切法二财报-note-12-按出货开票地ship-to--billed-location-反映账务流">切法二：财报
+Note 12 按「出货/开票地（ship-to / billed location）」—— 反映账务流</h3>
+<table>
+<thead>
+<tr>
+<th>地区</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">FY2024</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>香港 Hong Kong</strong></td>
+<td style="text-align: right;"><strong>57%</strong></td>
+<td style="text-align: right;">64%</td>
+<td>★ L1397</td>
+</tr>
+<tr>
+<td>亚洲其他 Rest of Asia</td>
+<td style="text-align: right;">21%</td>
+<td style="text-align: right;">18%</td>
+<td>★ L1398</td>
+</tr>
+<tr>
+<td>美国 US</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">9%</td>
+<td>★ L1399</td>
+</tr>
+<tr>
+<td>中国 China</td>
+<td style="text-align: right;">9%</td>
+<td style="text-align: right;">4%</td>
+<td>★ L1400</td>
+</tr>
+<tr>
+<td>欧洲 Europe</td>
+<td style="text-align: right;">3%</td>
+<td style="text-align: right;">4%</td>
+<td>★ L1401</td>
+</tr>
+<tr>
+<td>其他</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">1%</td>
+<td>★ L1402</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>★ Note
+明确：「按产品<strong>最初开票地</strong>分配收入，<strong>即使终端客户在不同地点</strong>」（L1390
+上下文）。这就是为什么香港 57%（开票/物流枢纽）≠ 中国
+47%（真实终端）。</p>
+</blockquote>
+<pre><code>同一笔收入，两个地理标签（FY2025）
+按开票地(Note12):  香港 ██████████████ 57%   亚洲其他 █████ 21%  US ██ 10%  中国 ██ 9%
+按终端客户(MD&amp;A):  中国 ████████████ 47%      US ███████ 28%   欧洲 ████ 14%  亚洲 ███ 11%
+                   ↑账务在香港中转            ↑真实需求在中国</code></pre>
+<blockquote>
+<p>⚠️ <strong>cross-check
+✅</strong>：两套都对，是<strong>不同维度</strong>（开票地 vs
+终端地），非矛盾。<strong>经济风险敞口看终端口径（中国
+47%）</strong>；理解账务/物流流向看开票口径（香港 57%）。另注：FY2025
+10-K L418 还披露「约 <strong>58%</strong> 净销售给亚洲终端客户」（FY2024
+为 75%）——与「去中国化」转型方向一致（亚洲占比从 75%→58%）。★ L418。</p>
+</blockquote>
+<h3 id="收入趋势腰斩">收入趋势（腰斩）★</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">Q1'26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>净营收（$ thousands） ★</td>
+<td style="text-align: right;">37,943</td>
+<td style="text-align: right;">79,456</td>
+<td style="text-align: right;"><strong>83,302</strong></td>
+<td style="text-align: right;"><strong>45,916</strong></td>
+<td style="text-align: right;">8,598</td>
+</tr>
+<tr>
+<td>YoY ◆</td>
+<td style="text-align: right;">+60%</td>
+<td style="text-align: right;">+109%</td>
+<td style="text-align: right;">+5%</td>
+<td style="text-align: right;"><strong>−45%</strong></td>
+<td style="text-align: right;"><strong>−39%</strong>（vs Q1'25 的
+14,018）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>判读</strong>：FY2024
+见顶后<strong>腰斩</strong>，转型期「消费业务主动收缩、高功率收入尚未接棒」的青黄不接。10-K
+风险因素自承高功率设计导入需「one year or more, <strong>if
+ever</strong>（一年以上，甚至永远不来）」★ FY2025 L363/Item
+1A。<strong>NVTS 未披露
+backlog/RPO</strong>，转型期收入能见度无法量化（见档案 19
+悬而未决）。</p>
+</blockquote>
+<hr />
+<h2 id="025-终端市场--navitas-20-的四个赛道-叙事---锚定">02.5 终端市场
+—— Navitas 2.0 的四个赛道（◇ 叙事 + ★ 锚定）</h2>
+<p>Navitas 2.0
+把目标市场重定义为<strong>四个高功率赛道</strong>，并<strong>主动去掉</strong>手机快充、低端消费、中国相关业务（"de-emphasized
+mobile charging, low end consumer electronics, and China-based
+segments"）★ FY2025 L227。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>终端市场</th>
+<th>NVTS 的产品对应</th>
+<th>当前状态</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>AI 数据中心</strong></td>
+<td>GaNFast（PSU/服务器电源）+ 800VDC 平台 + SST</td>
+<td>叙事核心；NVIDIA「合作」(8.01)
+背书；<strong>收入尚未规模化</strong></td>
+<td>★ L227、L205</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>电网与能源基础设施</strong></td>
+<td>GeneSiC 高压 SiC（至 6.5 kV）+ SST</td>
+<td>早期；SST 输入 11–13 kV AC</td>
+<td>★ L205</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>性能计算（performance computing）</strong></td>
+<td>GaNFast 高功率电源</td>
+<td>早期</td>
+<td>★ L227</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>工业电气化</strong></td>
+<td>GeneSiC SiC + GaN</td>
+<td>早期</td>
+<td>★ L227</td>
+</tr>
+</tbody>
+</table>
+<pre><code>终端市场迁移（Navitas 1.0 → 2.0）
+旧(收缩中):   手机快充 ████  低端消费 ███  中国业务 ███   ← de-emphasized ★
+新(押注未来): AI数据中心 ?  电网/能源 ?  性能计算 ?  工业电气化 ?  ← &quot;if ever&quot; 风险
+              └─────── deck 2030 SAM $3.5–5.4B ◇（GaN $1.8–2.9B + SiC $1.7–2.5B）───────┘</code></pre>
+<blockquote>
+<p><strong>deck TAM 叙事（◇，必须标）</strong>：2026-03 投资者 deck
+称四市场合计 <strong>2030 SAM $3.5–5.4 billion（60–75%
+CAGR）</strong>，其中 GaN SAM <strong>$1.8–2.9 billion</strong>、SiC SAM
+<strong>$1.7–2.5 billion</strong>，假设 2030 AI 数据中心总需求 219–298
+GW。◇ Investor Slides March 2026（非 SEC）。 <strong>合理性自检（◇ vs
+★）</strong>：deck 把市场画到数十亿美元，但 NVTS <strong>当前年营收仅
+$45.916 million（= $0.046 billion）</strong>——即便拿下 SAM 的 1%（$35–54
+million）也仅与现状相当。SAM 是「整个赛道蛋糕」，<strong>不是 NVTS
+的收入</strong>。叙事与现实之间隔着「设计导入能否成功 +
+现金能否撑到那天」两道关（详见档案 04 现金桥、档案 18 论点）。⚠️ 任何把
+deck TAM 当 NVTS 收入预期的读法都要先做这个量级自检。</p>
+</blockquote>
+<hr />
+<h2 id="026-本档案小结">02.6 本档案小结</h2>
+<ol type="1">
+<li><strong>业务</strong>：单一报告分部，GaN（自研）+ SiC（2022 收购
+GeneSiC），<strong>GaN/SiC 收入拆分从不披露</strong> ❌——分析盲区。</li>
+<li><strong>产品</strong>：GaNFast/GaNSense（集成 GaN IC，~650–700 V）+
+GeneSiC（SiC MOSFET，至 6.5 kV）+ 800VDC 平台（含 SST，输入 11–13 kV AC
+/ 输出 800–1500 VDC）；<strong>IntelliWeave 仅 deck，无 SEC
+披露</strong>。</li>
+<li><strong>客户</strong>：纯经销商模式，集中度<strong>极端且恶化</strong>——FY2024
+单一 A 56%（终止代价 $14.2M）→ FY2025 B 46% → Q1'26 A'
+<strong>59%</strong>。</li>
+<li><strong>地理</strong>：终端口径中国 47%（看经济暴露）vs 开票口径香港
+57%（看账务流），两者并存 ✅。</li>
+<li><strong>终端市场</strong>：Navitas 2.0 押注 AI
+数据中心/电网/性能计算/工业电气化，deck 2030 SAM
+$3.5–5.4B（◇），但当前营收 −45%
+且尚未接棒——<strong>叙事远超现实</strong>。</li>
+</ol>
+<hr />
+<h2 id="来源脚注本档案">来源脚注（本档案）</h2>
+<ul>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">Navitas
+FY2025 10-K</a> — Item 1
+Business（L195/L205/L213/L227/L246/L251）、MD&amp;A（L418/L656/L662/L666）、Note
+12 Significant Customers（L1380–1418）。</li>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">Navitas
+FY2022 10-K</a> — GeneSiC 收购定位 EV/光伏（L223）、产品电压档（L251
+~700V GaN / 1700–3300V SiC / $350/EV）、出货量（L253 &gt;75M GaN /
+&gt;9M SiC）、Halo JV 买断（L268）。</li>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">Navitas
+Q1'26 10-Q</a> — Note 4 客户集中度（L293 Distributor A 59% / L312 应收
+58%）。</li>
+<li>◇ Navitas Investor Slides March 2026（IR
+官网托管，<strong>未</strong> file/furnish 给 SEC，全文检索已确认）—
+2030 SAM $3.5–5.4B、GaN/SiC SAM 拆分、219–298 GW
+假设。仅作管理层叙事锚，每个数字已与 ★ 量级自检。</li>
+<li>标签复核：本档案财务数字以 ★ SEC 为主；◆ 计算项（$14.2M
+终止损失、YoY、应收比例）均写明算式；◇ 仅用于 deck 的 TAM/SAM
+与未来市场；▽ 推算仅用于 Q1'26 应收总额反推。</li>
+</ul>
+</body>
+</html>

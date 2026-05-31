@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>风险因素深度（Item 1A） · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">风险因素深度（Item 1A） · NVTS</h1>
+</header>
+<h1 id="08--风险因素深度item-1a-法律诉讼--持续经营">08 —
+风险因素深度（Item 1A）+ 法律诉讼 + 持续经营</h1>
+<blockquote>
+<p>NVTS（Navitas Semiconductor Corp，CIK 1821769）。本页 = 7
+步深挖之「风险因素 / 法律 / 持续经营」专题，对 <code>report.md</code>
+§17 的大幅扩写。 标签：★ SEC 直接披露 · ◆ 公式计算 · ◇ 第三方/公司 IR ·
+▽ 推算。cross-check：✅ 吻合 · ⚠️ 有差异 · ❌
+无法验证。单位双写（million / billion）。 主源：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K</a> Item 1A（行 272–545）、Item 3 Legal（行 546–547）、Note 15
+Commitments（行 1572–1573）、Item 9A Controls（行
+1616–1639）、KPMG/Baker Tilly 审计报告（行 743–791）；<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">Q1'26
+10-Q</a> Note 14（行 531–536）、Item 1 Legal（行 708–709）。
+交叉引用：换审计与事件流见
+<code>20_8k_events.md</code>；剥离测试与底层经营亏损见
+<code>report.md</code> §13 与 <code>00_initial_impression.md</code>
+Agent D。</p>
+</blockquote>
+<hr />
+<h2 id="0-本页一句话">0. 本页一句话</h2>
+<p>NVTS 的风险版图不是「会不会被起诉」（<strong>无任何重大诉讼</strong>
+★），而是 <strong>「转型能否在现金耗尽前接棒」叠加「供应链单点（TSMC
+退出
+GaN）」叠加「治理/内控刚从重大缺陷里爬出来」</strong>——而且公司在风险因素里<strong>亲手写下了一条针对
+NVIDIA
+暴涨行情的自省式免责声明</strong>，明示投资者「不要过度依赖此类公告」。这是本案最具信息量的一段披露。</p>
+<hr />
+<h2 id="1-风险因素全景图按能否致命--是否已被验证二维定位">1.
+风险因素全景图（按「能否致命 × 是否已被验证」二维定位）</h2>
+<pre><code>                        已被验证发生过（历史事件背书）
+                                  ▲
+              客户集中(46%)●      │      ●两位创始人经维权和解离场
+        (FY24 单一经销商终止       │       (2025-04 / 2025-08)
+         → $14.2M 一次性损失)      │      ●两次换审计 + FY2023/A adverse ICFR
+                                  │      ●营收 −45%（设计导入&quot;if ever&quot;已现实化)
+   尚属潜在 ◀──────────────────────┼──────────────────────▶ 致命级（伤及生存）
+              ●IP 诉讼(纯假设,无案)  │      ●TSMC 2027 退出 GaN(单一GaN供应商)
+              ●inverted-corp 政府合同│      ●资本&quot;if at all&quot;(靠稀释续命)
+              ●出口管制/对外投资新规  │      ●内控缺陷复发(FY25&quot;有效&quot;未经审计鉴证)
+              ●网络攻击(2024 已 2 起) │
+                                  ▼
+                        仍属前瞻性风险（尚未兑现）</code></pre>
+<blockquote>
+<p>读法：<strong>右上象限 =
+既致命又已被现实验证过的风险</strong>——这才是 NVTS
+真正的风险核心，远比「假设性 IP
+诉讼」重要。公司自己把这些放在风险因素摘要的最前面（行 279–327）。</p>
+</blockquote>
+<hr />
+<h2 id="2-top-10-风险因素分组深挖含原文引语">2. Top 10
+风险因素分组深挖（含原文引语）</h2>
+<h3
+id="r1--转型执行风险revenues-one-year-or-more-if-everred_circle-致命级已部分兑现">R1
+— 转型执行风险：「revenues… one year or more, <strong>if
+ever</strong>」🔴 致命级·已部分兑现</h3>
+<p>公司在风险摘要第一条即写明（★ 10-K 行 279/338）：</p>
+<blockquote>
+<p>"Even if we are awarded a design win, expected revenues typically do
+not result for one year or more, <strong>if ever</strong>. Further,
+revenues from design wins may not materialize if our customer changes,
+cancels or delays the selection or if our customer's products are not
+successful."</p>
+</blockquote>
+<p>正文进一步（行 339）把转型期的脆弱性挑明：</p>
+<blockquote>
+<p>"After incurring significant design and development expenditures … a
+substantial period of time generally elapses before we may generate
+meaningful net sales relating to such product, <strong>if at
+all</strong>. This may be especially true <strong>as we reprioritize our
+business towards high-power markets and deprioritize our emphasis on
+mobile and consumer products markets</strong>."</p>
+</blockquote>
+<ul>
+<li><strong>为何致命</strong>：这是「主动放弃正在萎缩但真实存在的手机/消费收入，去赌一个一年以上才可能、甚至永不变现的高功率收入」的官方表述。营收
+FY2024→FY2025 <strong>−45%（$83.302 million → $45.916
+million）</strong>、Q1'26 再 <strong>−39%</strong> ◆ —— 设计导入「if
+ever」已经从风险变成了<strong>正在发生的现实</strong>。✅
+cross-check：与 <code>report.md</code> §6 营收行一致。</li>
+</ul>
+<h3 id="r2--客户--经销商集中单一经销商-46red_circle-已被验证一次">R2 —
+客户 / 经销商集中：单一经销商 46%🔴 已被验证一次</h3>
+<p>★ 10-K 行 19（distributor 风险，专条标题）：</p>
+<blockquote>
+<p>"We depend on a few key distributors and the loss of one or more of
+these distributors could have a material adverse effect … This is
+especially true following our announcement that we will prioritize
+high-power markets. <strong>As a result of this change in our business,
+we reduced the overall number of distributors that we work with and
+placed additional reliance on a few key distribution
+partners.</strong>"</p>
+</blockquote>
+<ul>
+<li><strong>量化</strong>（★ Note 12）：FY2025 ≥10% 客户仅
+<strong>Distributor B（46%）+ Distributor C（11%）</strong>；FY2024 的
+<strong>Distributor A（56%）于 2024 年底被终止</strong>，直接造成
+<strong>$7.5 million 坏账 + $5.0 million 存货减值 + $1.7 million
+研发报废 ≈ $14.2 million（约 $0.0142 billion）</strong>
+一次性损失。</li>
+<li><strong>风险因素自承的二阶效应</strong>：「the use of distributors
+means that we are subject to <strong>channel inventory fluctuations and
+reduced demand transparency</strong> in the distribution channel」（行
+19 末）——即 sell-in 确认收入（发货即确认，见 <code>report.md</code>
+§10）叠加经销商集中，<strong>终端真实需求能见度极低</strong>。⚠️
+这是会计政策（sell-in）与集中度风险的耦合点。</li>
+</ul>
+<h3
+id="r3--供应链单点--tsmc-退出-gansole-supplier--cease-gan-production-in-july-2027red_circle-致命级新增">R3
+— 供应链单点 / TSMC 退出 GaN：「sole supplier … cease GaN production in
+July 2027」🔴 致命级·新增</h3>
+<p>这是 FY2025 新出现、且最具结构性的风险。★ 10-K 行 378–379：</p>
+<blockquote>
+<p>"We have historically relied on a <strong>single</strong> third-party
+manufacturer (wafer foundry) to fabricate our GaN products, and on a
+separate, <strong>single</strong> wafer foundry to fabricate our SiC
+products. … For example, historically, we have relied on <strong>TSMC as
+our sole supplier of GaN wafers</strong> … On <strong>July 1, 2025, TSMC
+announced its intention to cease GaN production in July
+2027.</strong>"</p>
+</blockquote>
+<p>缓解措施与残余不确定（行 382）：</p>
+<blockquote>
+<p>"We have taken proactive steps to mitigate this risk, including
+<strong>committing to purchase buffer inventory from TSMC</strong>,
+expanding our collaboration with <strong>Powerchip</strong> … and in
+November 2025, we announced a long-term strategic partnership with
+<strong>GlobalFoundries</strong> … Despite these mitigation steps,
+<strong>there is no assurance</strong> that we will be able to
+successfully source sufficient quality or volume of GaN wafers at a cost
+or on a timeline that meets our requirements. … the transition may
+require us to modify our designs or manufacturing processes or to
+undertake <strong>extensive re-qualification efforts</strong> …
+<strong>We are continuing to evaluate the impact of this transition on
+our financial statements</strong>."</p>
+</blockquote>
+<ul>
+<li><strong>三层风险</strong>：①buffer
+库存可能买不够，或买多了被迫报废（"end with excess inventory that must
+be scrapped"）；②Powerchip/GlobalFoundries
+上量延迟；③重新认证（re-qualification）的工程成本与时间。</li>
+<li><strong>⚠️ 未量化</strong>：过渡成本、buffer
+规模、重认证费用均「continuing to evaluate」——这是
+<code>01_synthesis.md</code> 列出的悬而未决问题之一。</li>
+<li><strong>正反两面</strong>：美国本土代工（GlobalFoundries GaN / X-Fab
+SiC）反被公司包装成「国家安全相关市场的竞争优势」（★ 行 224）——
+一个风险（TSMC 退出）被叙事转化成卖点。✅ 但风险因素本身的「no
+assurance」语气诚实。</li>
+</ul>
+<h3 id="r4--中国--出口管制--对外投资新规orange_circle-结构性">R4 — 中国
+/ 出口管制 / 对外投资新规🟠 结构性</h3>
+<ul>
+<li><strong>暴露</strong>：中国占终端客户 <strong>47%</strong>（★
+MD&amp;A，FY2025）。</li>
+<li><strong>新规（★ 行 447 专条）</strong>：</li>
+</ul>
+<blockquote>
+<p>"The U.S. government has implemented new regulations,
+<strong>effective January 2, 2025</strong>, that establish an
+<strong>Outbound Investment Security Program</strong> which prohibits or
+requires notification of certain investments by U.S. companies in
+entities involved in … semiconductor … in China, Hong Kong and
+Macau."</p>
+</blockquote>
+<ul>
+<li>四条具体影响（行 447 子项）：投资限制（禁止投 GaN
+器件制造类中国实体）、通知义务、竞争劣势（仅约束美企）、违规罚则（民事/刑事）。公司自评：「we
+do <strong>not</strong> believe this materially limits our ability to
+enter into or continue customary commercial relationships with Chinese
+suppliers and customers」但<strong>限制了在 GaN
+器件制造领域的战略投资/合作</strong>。</li>
+<li><strong>判断</strong>：当前<strong>不限商业买卖、限战略投资</strong>；但「the
+full impact … remains uncertain and could be material」。叠加 47%
+中国终端，地缘是中长期悬顶。</li>
+</ul>
+<h3
+id="r5--资本充足--稀释might-not-be-available--if-at-allred_circle-致命级命门">R5
+— 资本充足 / 稀释：「might not be available … <strong>if at
+all</strong>」🔴 致命级·命门</h3>
+<p>★ 10-K 行 302/455：</p>
+<blockquote>
+<p>"Our working capital needs are difficult to predict. We may require
+additional capital … and this capital <strong>might not be available on
+acceptable terms, if at all</strong>."</p>
+</blockquote>
+<p>行 460 进一步点明稀释的自我强化（financing → dilution →
+更难融资）：</p>
+<blockquote>
+<p>"Any such financing … could … create significant shareholder
+dilution, <strong>which may make it more difficult to obtain additional
+capital</strong> … We may not be able to obtain additional financing on
+favorable terms, <strong>if at all</strong>."</p>
+</blockquote>
+<ul>
+<li><strong>为何是命门</strong>：$236.857 million（约 $0.237
+billion）现金 <strong>100% 来自 2025 年 ~$200 million 增发</strong>（ATM
+$100M + PIPE $100M），经营每年净流出 $42.9
+million（FY2025）。无造血、靠稀释续命（详见 <code>report.md</code>
+§9、<code>20_8k_events.md</code> 事件流）。按 Q1'26 年化烧钱 ~$67
+million，~$221 million 现金可支撑 <strong>~3 年</strong> ▽——但前提是「if
+at all」不成真。✅ 现金桥跨表勾稽通过。</li>
+</ul>
+<h3
+id="r6--内控--重大缺陷风险因素--item-9afully-remediated-审计师未鉴证red_circle-红旗已部分缓和">R6
+— 内控 / 重大缺陷：风险因素 + Item 9A「fully remediated」+
+审计师未鉴证🔴 红旗·已部分缓和</h3>
+<p>风险因素（行 461）保留缺陷复发的可能：</p>
+<blockquote>
+<p>"Maintaining effective internal controls is an ongoing process, and
+<strong>if material weaknesses were to be identified in the
+future</strong> and not timely remediated … we could be unable to
+produce timely and accurate financial statements …"</p>
+</blockquote>
+<p><strong>关键事实校正</strong>（对早期 Agent E 表述的修正）：FY2025
+10-K 并非「保留缺陷」，而是<strong>明确宣告整改完成</strong>。★ 行 462 /
+Item 9A 行 1621：</p>
+<blockquote>
+<p>"During 2025, we <strong>successfully completed the
+remediation</strong> of the material weaknesses … management concluded
+that our internal control over financial reporting <strong>was effective
+as of December 31, 2025</strong>, and that the previously identified
+material weaknesses <strong>have been fully remediated</strong>."</p>
+</blockquote>
+<p><strong>但</strong>——KPMG
+审计报告明确<strong>未对内控发表意见</strong>（★ 行 764，与行 791
+重复）：</p>
+<blockquote>
+<p>"<strong>The Company is not required to have, nor were we engaged to
+perform, an audit of its internal control over financial
+reporting</strong> … Accordingly, <strong>we express no such
+opinion</strong>."</p>
+</blockquote>
+<ul>
+<li><strong>解读（本案最值得警惕的披露质量点）</strong>：
+<ol type="1">
+<li>FY2025「内控有效 + 缺陷已全部整改」是
+<strong>管理层单方声明</strong>，<strong>KPMG 未做 Section 404(b)
+鉴证</strong>（10-K 封面 404(b) attestation 勾选项 行 58–59）。</li>
+<li>时间线对照（详见 <code>20_8k_events.md</code>）：<strong>2025-04-02
+换审计 8-K 白纸黑字写</strong>「These material weaknesses … <strong>have
+not been remediated as of the date of this Current Report on Form
+8-K</strong>」（FY2024 缺陷，截至 2025 年 4 月仍未整改）★ → 到 FY2025
+10-K（2026-02）变成「fully remediated」。<strong>9
+个月内从「未整改」到「全部整改且有效」，且无独立审计师背书</strong>。</li>
+<li>缓和点：FY2022/A、FY2023/A、FY2024/A
+均<strong>无财务重述</strong>（无 Item
+4.02），缺陷是「设计/流程」层面而非「数字错报」。</li>
+</ol></li>
+<li><strong>结论</strong>：方向在改善，但「自评有效 +
+审计师明确不发表意见」让可信度打折。🟡→🔴。</li>
+</ul>
+<h3
+id="r7--公告驱动的股价波动自省式免责do-not-place-undue-reliancered_circle-信息量最高">R7
+— 公告驱动的股价波动（自省式免责）：「<strong>do not place undue
+reliance</strong>」🔴 信息量最高</h3>
+<p>这是本案<strong>最罕见、最诚实、信息量最大</strong>的一条风险因素——公司亲手为
+2025-05 NVIDIA 消息引发的暴涨写了免责。★ 10-K 行 327（摘要）与行
+533/537/538（正文，全文罕见地重复了两次「undue reliance」）：</p>
+<blockquote>
+<p>"The market price of our common stock may be affected by
+announcements regarding the <strong>selection of our products or
+technologies by key customers or industry participants, even though
+these events may not reflect binding commitments or future revenues.
+This may be particularly true following the Company's announcement of a
+pivot towards high-power markets.</strong> Investors should <strong>not
+place undue reliance</strong> on such announcements as an indicator of
+our business prospects, future performance or otherwise …"</p>
+</blockquote>
+<p>正文行 537 更直白：</p>
+<blockquote>
+<p>"…such announcements may <strong>generate significant investor
+interest</strong> and may lead to <strong>temporary fluctuations in our
+stock price</strong> … However, the … business opportunities …
+<strong>may not constitute binding commitments or guaranteed
+revenue</strong> … there is no guarantee … that any customer will
+ultimately place orders for our products <strong>or that any such orders
+will be material in amount</strong>."</p>
+</blockquote>
+<ul>
+<li><strong>直指对象</strong>：NVIDIA 800V
+HVDC「collaboration」（2025-05 8-K）。该 8-K 是 <strong>Item
+8.01「其他事件」而非 1.01「重大合同」</strong>，且<strong>与一次 $50
+million ATM 增发捆绑同日披露</strong>（详见 <code>20_8k_events.md</code>
+解码）。</li>
+<li><strong>意义</strong>：公司用法律语言自我警告「背书 ≠
+订单」。这一条本身就是 <code>01_synthesis.md</code> 论点 1
+的核心证据——<strong>估值由公告驱动，而公告无约束力</strong>。</li>
+</ul>
+<h3
+id="r8--inverted-domestic-corporation政府合同受限orange_circle-spac-遗留结构性">R8
+— inverted domestic corporation：政府合同受限🟠 SPAC 遗留·结构性</h3>
+<p>★ 10-K 行 312/473–474：</p>
+<blockquote>
+<p>"As a consequence of <strong>Legacy Navitas being treated as an
+inverted domestic corporation under the Homeland Security Act</strong>,
+the U.S. federal government and certain state and local governments
+<strong>may refrain from entering into contracts</strong> with it in the
+future, which could substantially decrease the value of our business …"
+"The Federal Acquisition Regulation ('FAR') prohibits U.S. federal
+government agencies from using appropriated … funds for contracts with …
+an 'inverted domestic corporation,' as defined in the Homeland Security
+Act at <strong>6 U.S.C. § 395(b)</strong>."</p>
+</blockquote>
+<ul>
+<li><strong>讽刺张力</strong>：NVTS 把「AI 数据中心 +
+电网现代化」包装成「national security
+implications」并以美国本土代工为卖点（行
+224）；但其<strong>自身的倒置公司地位反而可能令其拿不到美国政府合同</strong>。「If
+our business becomes heavily dependent upon revenues generated from U.S.
+federal government
+contracts」时才致命——目前政府合同非主力，故列<strong>结构性而非即期</strong>风险。</li>
+</ul>
+<h3 id="r9--股东维权stockholder-activismred_circle-已兑现">R9 —
+股东维权（stockholder activism）🔴 已兑现</h3>
+<p>★ 10-K 行
+320/505–509。风险因素本身写得很「教科书」，但<strong>它已经发生了</strong>：</p>
+<blockquote>
+<p>"Our business and operations could be impacted by stockholder
+activism … this may create a significant distraction … may result in
+<strong>changes to our senior management team</strong> … In addition,
+such stockholder activism may cause significant fluctuations in the
+market value …"</p>
+</blockquote>
+<ul>
+<li><strong>已兑现的事实</strong>（详见
+<code>20_8k_events.md</code>）：2025-04-23 与董事 <strong>Ranbir Singh /
+SiCPower, LLC</strong> 的和解协议（★ 2025-04-29 8-K Item
+1.01+5.02+7.01）：CEO Sheridan 被剥夺董事长（→ Hendrix），创始 COO/CTO
+<strong>Kinzer 辞去董事 + 高管职务</strong>，成立 <strong>由 Singh
+任主席的 Executive Steering Committee</strong>
+监督资本配置/费用/高管接班，附带标准
+standstill。<strong>风险因素里的假设语气，对应的是一桩已签署的协议</strong>——这是
+<code>01_synthesis.md</code> 论点 3 的支柱。</li>
+</ul>
+<h3
+id="r10--ip-诉讼纯假设无在审案件yellow_circle-风险因素级非实际诉讼">R10
+— IP 诉讼（纯假设，<strong>无在审案件</strong>）🟡
+风险因素级·非实际诉讼</h3>
+<p>★ 10-K 行
+498/45–55。这是<strong>纯前瞻性风险因素，不指向任何已发生的诉讼</strong>：</p>
+<blockquote>
+<p>"The semiconductor industry is characterized by frequent litigation
+regarding patent and other intellectual property rights, including by
+both competitors and so-called 'non-practicing entities.' <strong>We
+have received communications, and we expect to receive additional
+communications from time to time, that allege or imply that our products
+or technologies infringe</strong> … or that invite us to take a license
+…"</p>
+</blockquote>
+<ul>
+<li><strong>不可编造案件</strong>：此处只有「收到过质疑函/邀请授权」的一般性表述，<strong>未点名任何原告/案号/诉讼</strong>。✅
+与 Item 3 / Note 15「无重大诉讼」一致（见 §3）。</li>
+<li><strong>正面信号</strong>：2024 年 10 月与 <strong>Infineon
+Technologies AG 达成广泛专利交叉授权</strong>（★ 行 253）——反映 IP
+组合（300+ 专利）有谈判价值，而非被动挨告。</li>
+</ul>
+<h3 id="附其他已披露但非-top10-的风险备查">附：其他已披露但非 Top10
+的风险（备查）</h3>
+<ul>
+<li><strong>网络安全</strong>（行 19 子节）：「In 2024 we experienced
+<strong>at least two attempted cyber attacks</strong> … one of which
+resulted in unauthorized access to non-critical
+systems」——已发生但未重大。</li>
+<li><strong>税务 / NOL</strong>（行 481）：截至 2025-12-31，美国联邦 NOL
+结转 <strong>~$334.8 million（约 $0.335 billion）</strong>；Section 382
+所有权变更（2025 年大额增发）<strong>可能限制 NOL
+使用</strong>，公司「have not yet determined any resulting
+limitations」⚠️。</li>
+<li><strong>应收账款 DCF 模型</strong>（行
+17）：用折现现金流模型估应收回收，假设偏差有风险——与 FY2024
+经销商终止坏账呼应。</li>
+</ul>
+<hr />
+<h2 id="3-法律诉讼无任何重大诉讼-white_check_mark不可编造">3.
+法律诉讼：无任何重大诉讼 ✅（不可编造）</h2>
+<p><strong>Item 3 Legal Proceedings</strong>（★ 10-K 行
+546–547）通过引用并入 Note 15：</p>
+<blockquote>
+<p>"The information required by this item is incorporated by reference
+from 'Legal proceedings and contingencies,' included in <strong>Note 15
+– 'Commitments and Contingencies'</strong>."</p>
+</blockquote>
+<p><strong>Note 15 原文</strong>（★ 10-K 行 1572–1573）：</p>
+<blockquote>
+<p>"From time to time in the ordinary course of business, the Company
+may become involved in lawsuits … The Company makes a provision for a
+liability when it is both probable that a liability has been incurred
+and the amount of the loss can be reasonably estimated. <strong>The
+Company is not currently subject to any pending actions or regulatory
+proceedings that either individually or in the aggregate are expected to
+have a material impact on its consolidated financial
+statements.</strong>"</p>
+</blockquote>
+<p><strong>Q1'26 10-Q 复核</strong>（★ Item 1 行 708–709 + Note 14 行
+535–536）：</p>
+<blockquote>
+<p>"We are <strong>currently not a party to any material legal
+proceedings</strong>." / "The Company is <strong>not currently subject
+to any pending actions or regulatory proceedings</strong> that … are
+expected to have a material impact …"</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>诉讼类型</th>
+<th>是否披露</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>证券集体诉讼（securities class action）</td>
+<td><strong>❌ 无</strong></td>
+<td>★ Item 3 / Note 15 / Q1'26 Note 14</td>
+</tr>
+<tr>
+<td>股东派生诉讼（derivative suit）</td>
+<td><strong>❌ 无</strong></td>
+<td>同上</td>
+</tr>
+<tr>
+<td>专利 / IP 侵权诉讼（实际案件）</td>
+<td><strong>❌ 无</strong>（仅有一般性「收到质疑函」风险表述）</td>
+<td>★ 行 45–55、498</td>
+</tr>
+<tr>
+<td>监管调查（SEC/regulatory proceeding）</td>
+<td><strong>❌ 无</strong></td>
+<td>★ Note 15 / Q1'26 Note 14</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️
+<strong>研究纪律提示</strong>：本案<strong>不存在任何已立案的诉讼</strong>。任何把
+NVTS
+与「证券欺诈集体诉讼」「派生诉讼」挂钩的叙述均为<strong>杜撰</strong>——IP-litigation
+语言仅是行业通用风险因素。✅ 已在 FY2025 10-K + Q1'26 10-Q
+两处独立确认。</p>
+</blockquote>
+<hr />
+<h2 id="4-持续经营going-concern明确无疑虑-white_check_mark">4.
+持续经营（Going Concern）：明确无疑虑 ✅</h2>
+<ul>
+<li><strong>全文检索</strong>：FY2025 10-K 与 Q1'26 10-Q 中**「going
+concern」「substantial doubt」零命中** ★。</li>
+<li><strong>KPMG / Baker Tilly 审计意见</strong>（★ 行
+743–791）：标准无保留意见，<strong>无 going-concern
+段落、无强调事项</strong>。审计仅就财务报表发表意见，明确不就内控发表意见（见
+R6）。</li>
+<li><strong>支撑事实</strong>：现金 <strong>$236.857 million（约 $0.237
+billion）</strong>、<strong>零债务</strong>（仅微量融资租赁，FY2025 付息
+$29 thousand）、~3 年跑道 ▽。</li>
+</ul>
+<pre><code>持续经营自检（为何&quot;无疑虑&quot;成立）
+  现金 $236.9M ───┐
+  零债务         ─┤──→ 即便每年烧 $43–67M，仍有 ~3 年缓冲 → 无 12 个月内违约/枯竭风险
+  ~3 年跑道 ▽    ─┘     ∴ 审计师与管理层均未提 going concern ✅
+  ⚠️ 但&quot;无 going-concern&quot;≠&quot;安全&quot;：跑道是稀释买来的，营收若继续 −40%/年则跑道缩短</code></pre>
+<blockquote>
+<p><strong>辩证结论</strong>：going-concern
+<strong>可以作为「可设置一边」的事项</strong>（详见
+<code>01_synthesis.md</code>
+§「可设置一边」），但<strong>不可解读为「无生存风险」</strong>——它只说明「未来
+12 个月不会枯竭」，不解决「3 年后靠什么」。</p>
+</blockquote>
+<hr />
+<h2
+id="5-风险因素--财务事件-勾稽表每条风险都落到一个已发生的数字或事件">5.
+风险因素 → 财务/事件 勾稽表（每条风险都落到一个已发生的数字或事件）</h2>
+<table>
+<thead>
+<tr>
+<th>风险因素（Item 1A）</th>
+<th>是否已兑现</th>
+<th>对应的硬证据</th>
+<th>cross-check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1 设计导入「if ever」</td>
+<td>✅ 已兑现</td>
+<td>营收 −45%(FY25)/−39%(Q1'26) ★</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>R2 经销商集中</td>
+<td>✅ 兑现一次</td>
+<td>FY24 Distributor A 终止 → $14.2M 损失 ★ Note 12</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>R3 TSMC 退出 GaN</td>
+<td>🟡 进行中</td>
+<td>2025-07-01 TSMC 公告 2027 停产 ★ 行 379；过渡成本未量化</td>
+<td>⚠️ 未量化</td>
+</tr>
+<tr>
+<td>R4 中国/出口管制</td>
+<td>🟡 结构性</td>
+<td>中国终端 47% + 2025-01-02 对外投资新规 ★</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>R5 资本「if at all」</td>
+<td>✅ 持续兑现</td>
+<td>2025 增发 ~$200M，现金 100% 融资来源 ★</td>
+<td>✅ 现金桥勾稽</td>
+</tr>
+<tr>
+<td>R6 内控缺陷</td>
+<td>🟡 已缓和但未鉴证</td>
+<td>FY23/A adverse → FY24 MW「未整改」(2025-04)→ FY25「fully
+remediated」(自评,未经 404(b)) ★</td>
+<td>⚠️ 审计师 no opinion</td>
+</tr>
+<tr>
+<td>R7 公告驱动波动</td>
+<td>✅ 兑现</td>
+<td>NVIDIA 8.01 暴涨 → 自省式「undue reliance」免责 ★ 行 533</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>R8 inverted-corp</td>
+<td>🟡 潜在</td>
+<td>6 U.S.C. § 395(b)，政府合同非主力 ★ 行 474</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>R9 股东维权</td>
+<td>✅ 兑现</td>
+<td>Singh/SiCPower 2025-04 和解逼退创始管理层 ★</td>
+<td>✅ 见 20_8k_events</td>
+</tr>
+<tr>
+<td>R10 IP 诉讼</td>
+<td>❌ 未发生</td>
+<td>仅「收到质疑函」一般表述；<strong>无在审案件</strong> ★</td>
+<td>✅ Item 3 无诉讼</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>来源脚注：以上★ 引语逐条来自 <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K</a>（Item 1A 行 272–545、Item 3 行 546、Note 15 行 1572、Item 9A 行
+1616、审计报告 行 743–791）及 <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">Q1'26
+10-Q</a>（Note 14 行 531、Item 1 行 708）。换审计/维权/NVIDIA 事件的 8-K
+原文与解码见 <code>20_8k_events.md</code>。综合判断见
+<code>01_synthesis.md</code>。</p>
+</blockquote>
+</body>
+</html>

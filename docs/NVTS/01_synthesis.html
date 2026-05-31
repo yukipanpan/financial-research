@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>综合判断（论点·红旗·悬念） · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">综合判断（论点·红旗·悬念） · NVTS</h1>
+</header>
+<h1 id="01--综合判断capstone--收口">01 — 综合判断（Capstone /
+收口）</h1>
+<blockquote>
+<p>NVTS（Navitas Semiconductor Corp，CIK 1821769）。本页 =
+全部档案的<strong>收口页</strong>：把分散在各档案的证据拧成 3
+条主论点（每条 ≥3 条跨档案证据 + 反方 + 我的反驳）+ 全量红旗扫描 +
+悬而未决 + 可设置一边。 标签：★ SEC 直接披露 · ◆ 计算 · ◇ 第三方/IR · ▽
+推算。cross-check：✅ · ⚠️ · ❌。单位双写。 交叉引用：风险/诉讼/持续经营
+→ <code>08_risk_factors.md</code>；事件流/合同解码 →
+<code>20_8k_events.md</code>；财务全表/剥离测试/横向对比 →
+<code>report.md</code>（§7/§9/§13/§15）；并行精读与假设回写 →
+<code>00_initial_impression.md</code>。 主源链接：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K</a> · <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">Q1'26
+10-Q</a> · <a
+href="../../processed/NVTS_filings_catalog_2023-2026.md">filings
+catalog</a>。</p>
+</blockquote>
+<hr />
+<h2 id="0-免责声明">0. 免责声明</h2>
+<p>本页是基于 SEC
+公开文件的研究读书笔记，<strong>不构成任何投资建议</strong>。所有判断为主观推演，请独立判断并咨询持牌顾问。不可编造未披露的诉讼/合同。</p>
+<hr />
+<h2 id="1-修正后的一句话the-revised-one-liner">1. 修正后的一句话（the
+revised one-liner）</h2>
+<blockquote>
+<p><strong>Navitas 是一家年营收不足半亿美元（FY2025 $45.916 million ≈
+$0.046 billion）的无晶圆厂 GaN/SiC 功率半导体公司，正用一张「零债务 +
+$237 million
+现金」的资产负债表，去赌一场把萎缩中的消费/手机收入换成尚未变现的 AI
+数据中心/电网高功率 TAM 的转型——这笔现金 100% 来自 2025 年约 $200
+million
+的股权稀释而非自身造血，公司从未有过任何一个经营盈利的年度，刚从连续多年的内控重大缺陷里（自评）爬出但未经审计师鉴证，且两位创始人已在一场活动维权和解中被逐出管理层。</strong></p>
+</blockquote>
+<p>一句话的反面（管理层叙事，◇ Mar-2026 deck）：「$3.5–5.4 billion 的
+2030 TAM + $237 million 现金 + 通向盈利的路径 + NVIDIA
+合作」。<strong>叙事与现实的最大缺口</strong>：deck 卖增长故事，filings
+显示营收 <strong>−45%</strong>、年经营亏损 ~$89–124 million、单一经销商
+46%、唯一 GaN 供应商（TSMC）退出、两次换审计、维权逼宫。</p>
+<hr />
+<h2 id="2-三条主论点每条-3-证据--反方--反驳">2. 三条主论点（每条 ≥3 证据
++ 反方 + 反驳）</h2>
+<h3
+id="论点-1--这是一场用资产负债表换时间的豪赌输赢取决于-ai-高功率收入能否在现金耗尽前接棒">论点
+1 — 这是一场「用资产负债表换时间」的豪赌；输赢取决于 AI
+高功率收入能否在现金耗尽前接棒</h3>
+<p><strong>证据（跨档案）</strong>：</p>
+<ul>
+<li><strong>E1.1</strong> 营收 FY2024→FY2025 <strong>腰斩 −45%（$83.302M
+→ $45.916M）</strong>，Q1'26 再 <strong>−39%（$14.018M →
+$8.598M）</strong> ★。设计导入风险因素自承「one year or more, <strong>if
+ever</strong>」（见 <code>08_risk_factors.md</code> R1）。→
+收入端正在加速失血。</li>
+<li><strong>E1.2</strong> 现金 <strong>$236.857 million（约 $0.237
+billion）100% 由融资堆出</strong>：FY2025 融资 CF <strong>+$194.639
+million</strong>，经营 CF <strong>−$42.891 million</strong>；现金桥 86.7
++ 194.6 − 42.9 − 1.4 = <strong>236.9</strong> ✅ 勾稽（见
+<code>report.md</code> §9）。无 2025 年增发，现金本应降到 ~$42M。</li>
+<li><strong>E1.3</strong>
+稀释引擎与「消息」捆绑：ATM（2025-03/05，$100M）+ PIPE（2025-11，$100M @
+$6.75）+ 2026-05 又一轮 S-3ASR/424B5；其中 <strong>NVIDIA 8.01 消息与
+$50M ATM 扩容写在同一份 8-K</strong>（见 <code>20_8k_events.md</code>
+§5）。</li>
+<li><strong>E1.4</strong> 跑道 ▽：按 Q1'26 年化烧钱 ~$67 million，~$221
+million 现金 ≈ <strong>3 年</strong>——但营收续跌则更短。</li>
+</ul>
+<p><strong>反方</strong>：fabless + <strong>零债务</strong> + $237M
+现金，比 Wolfspeed（SiC，~$6.5B 债务→破产）安全一个数量级（见
+<code>report.md</code> §15 对标）；AI 数据中心 800V HVDC
+是真实结构性需求，NVIDIA「合作」给了技术背书；公司可在窗口内继续低成本融资。</p>
+<p><strong>我的反驳</strong>：NVIDIA 那份是 <strong>Item
+8.01「其他事件」而非
+1.01「重大合同」</strong>——无金额、无供货承诺，且公司<strong>亲手在风险因素里写「do
+not place undue reliance」</strong>（<code>08_risk_factors.md</code>
+R7）。<strong>背书 ≠
+订单</strong>。轻资产确实能「熬」，但「熬」需要营收止跌；目前不仅没止跌，还在
+−40%/年加速下滑。资产负债表买来的是<strong>时间</strong>，不是<strong>胜率</strong>。</p>
+<hr />
+<h3
+id="论点-2--headline-财务数字基本不可用必须看底层经营亏损它揭示一个研发吃掉-35-倍毛利的小公司">论点
+2 — headline
+财务数字基本不可用；必须看「底层经营亏损」——它揭示一个研发吃掉 3.5
+倍毛利的小公司</h3>
+<p><strong>证据（跨档案）</strong>：</p>
+<ul>
+<li><strong>E2.1</strong> FY2022「净利润 <strong>+$72.887
+million</strong>」是纯会计幻觉：剥离 +$51.8M warrant FV 收益、+$121.7M
+earnout FV 收益、+$22.8M 一次性税收优惠后，真实<strong>经营亏损
+−$123.637 million</strong> ★（见 <code>report.md</code> §13
+剥离测试）。这「利润」恰恰来自<strong>公司自己股价暴跌</strong>（$16.09→$1.47
+令 earnout 负债缩水）——股东亏钱，账上记利润。</li>
+<li><strong>E2.2</strong> <strong>研发吃掉 3.5 倍毛利</strong>：FY2025
+研发 <strong>$49.830 million</strong> vs 毛利 <strong>$14.248
+million</strong>（◆ 比值 <strong>3.50×</strong>）；研发/营收
+<strong>109%</strong> ◆。一家营收太小、研发摊不薄的公司（见
+<code>report.md</code> §7/§15）。</li>
+<li><strong>E2.3</strong> 毛利率 <strong>31.0%</strong> 仅
+POWI（54.5%）的一半多一点；NVTS 是对标池里<strong>唯一营收 −45%
+且经营巨亏</strong>的可比公司（见 <code>report.md</code> §15）。</li>
+<li><strong>E2.4</strong> 从未有任何一年经营盈利：底层经营亏损 FY22–24
+约 <strong>$120 million/年</strong>，FY2025 收窄到 ~<strong>$88.9
+million</strong> ◆（剥离重组+坏账后）。</li>
+</ul>
+<p><strong>反方</strong>：FY2025 底层经营亏损已从 ~$120M 收窄到
+~$89M，SBC 从 $43M 降到 $14.5M，说明成本纪律见效、运营杠杆开始显现。</p>
+<p><strong>我的反驳</strong>：$16.5M 的 SBC
+下降主要是<strong>创始人离职导致 LTIP 期权作废的冲回</strong>（−$16.5M
+LTIP reversal，见 <code>report.md</code>
+§10、<code>00_initial_impression.md</code> Agent
+B），是<strong>管理层动荡的会计副产品，不是经营杠杆</strong>。同理
+FY2025 的 $18.0M 重组与 19% 裁员压低了
+opex，但这是收缩而非增长。真实降本要等营收企稳后看毛利——而营收还在跌。</p>
+<hr />
+<h3
+id="论点-3--治理与内控是被低估的风险两次换审计--adverse-icfr-反转--维权逼宫--c-级大换血集中在约-18-个月内">论点
+3 — 治理与内控是被低估的风险：两次换审计 + adverse ICFR 反转 + 维权逼宫
++ C 级大换血，集中在约 18 个月内</h3>
+<p><strong>证据（跨档案）</strong>：</p>
+<ul>
+<li><strong>E3.1</strong> <strong>审计师 Deloitte→Moss
+Adams→KPMG</strong>（2023-07、2025-04 两次
+4.01），每次都把「重大缺陷」列为唯一 reportable-event 例外（见
+<code>20_8k_events.md</code> §3）。</li>
+<li><strong>E3.2</strong> <strong>ICFR
+时间线翻转</strong>：FY2023/A（2024-07）把「已整改」反转为
+<strong>adverse ICFR +
+新增重大缺陷</strong>（无财务重述）；<strong>2025-04-02 换审计 8-K
+白纸黑字「FY2024 缺陷 has not been remediated as of the date of this
+Current Report」</strong> ★；到 FY2025 10-K（2026-02）变成「fully
+remediated + ICFR 有效」——<strong>而 KPMG 明确「we express no such
+opinion」（未做 404(b) 鉴证）</strong> ★（见
+<code>08_risk_factors.md</code> R6）。</li>
+<li><strong>E3.3</strong> <strong>维权逼宫</strong>：2025-04-23 与
+Ranbir Singh/SiCPower 和解（1.01+5.02+7.01）——CEO Sheridan
+失董事长、创始 COO/CTO Kinzer 辞职、<strong>Singh 任主席的 Executive
+Steering Committee 接管资本配置/费用/接班</strong> ★（见
+<code>20_8k_events.md</code> §4）。</li>
+<li><strong>E3.4</strong> <strong>C 级大换血</strong>：创始 CEO
+Sheridan（2025-08 辞）、创始 COO/CTO Kinzer（2025-05 辞）、<strong>12
+个月内第 3 个 CFO（Tonya Stevens, 2026-03）</strong>；约 12 次 5.02
+事件（见 <code>report.md</code> §14）。</li>
+</ul>
+<p><strong>反方</strong>：新 CEO Allexandre
+来自外部、薪酬高度绑定业绩；公司采纳 clawback、say-on-pay 97.3%、2026
+年提案董事会去分级化；<strong>全程无财务重述（无 Item
+4.02）</strong>——缺陷是流程/设计层面，治理在「清理」而非「丑闻」。</p>
+<p><strong>我的反驳</strong>：认同方向在改善，但<strong>红旗的密度本身就是尽调级警示</strong>：2
+年 2 次换审计 + ICFR「已整改→adverse→未整改→fully remediated」的来回 +
+维权和解 + 三换 CFO，集中在 18 个月。最关键的是
+FY2025「内控有效」是<strong>管理层单方声明、审计师明确不发表意见</strong>——在一家有此前科的公司，这种"自我宣告整改完成"应当折价。无财务重述是唯一实质性缓和点。</p>
+<hr />
+<h2 id="3-全量红旗扫描表">3. 全量红旗扫描表</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>红旗项</th>
+<th style="text-align: center;">等级</th>
+<th>结论 + 来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>营收下滑</td>
+<td style="text-align: center;">🔴</td>
+<td>−45%(FY25)/−39%(Q1'26) ★ → <code>report.md</code>§6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>从未经营盈利</td>
+<td style="text-align: center;">🔴</td>
+<td>底层经营亏损 ~$89–124M/年 ◆ → <code>report.md</code>§13</td>
+</tr>
+<tr>
+<td>3</td>
+<td>研发 &gt; 毛利</td>
+<td style="text-align: center;">🔴</td>
+<td>研发 $49.8M = 3.5× 毛利 $14.2M ◆ → 论点 2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>客户/经销商集中</td>
+<td style="text-align: center;">🔴</td>
+<td>单一经销商 46%；FY24 终止致 $14.2M 损失 ★ → <code>08</code>R2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>供应链单点（TSMC 退 GaN）</td>
+<td style="text-align: center;">🔴</td>
+<td>唯一 GaN 供应商 2027 退出，过渡成本未量化 ★ → <code>08</code>R3</td>
+</tr>
+<tr>
+<td>6</td>
+<td>现金靠稀释非造血</td>
+<td style="text-align: center;">🔴</td>
+<td>2025 ~$200M 增发，现金桥勾稽 ✅ → 论点 1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>内控：2×换审计 + ICFR 反转</td>
+<td style="text-align: center;">🔴</td>
+<td>FY24 MW「未整改」(2025-04)→FY25「有效」未鉴证 ★ →
+<code>08</code>R6/<code>20</code>§3</td>
+</tr>
+<tr>
+<td>8</td>
+<td>维权逼宫 + 创始人离场</td>
+<td style="text-align: center;">🔴</td>
+<td>Singh/SiCPower 和解；Steering Committee 接管 ★ →
+<code>20</code>§4</td>
+</tr>
+<tr>
+<td>9</td>
+<td>C 级动荡</td>
+<td style="text-align: center;">🔴</td>
+<td>12 个月内第 3 CFO；~12× 5.02 ★ → <code>report.md</code>§14</td>
+</tr>
+<tr>
+<td>10</td>
+<td>非经营项撑/扭曲 headline</td>
+<td style="text-align: center;">🔴</td>
+<td>earnout/warrant FV 主导净利 ★ → <code>report.md</code>§13</td>
+</tr>
+<tr>
+<td>11</td>
+<td>公告驱动股价（自省免责）</td>
+<td style="text-align: center;">🔴</td>
+<td>NVIDIA 8.01 + 自承「undue reliance」★ →
+<code>08</code>R7/<code>20</code>§5</td>
+</tr>
+<tr>
+<td>12</td>
+<td>NT 迟报</td>
+<td style="text-align: center;">🟠</td>
+<td>FY2022、FY2023 10-K + Q1'24 10-Q 迟报 ★</td>
+</tr>
+<tr>
+<td>13</td>
+<td>中国敞口 + 出口管制</td>
+<td style="text-align: center;">🟠</td>
+<td>终端 47% + 对外投资新规(2025-01-02) ★ → <code>08</code>R4</td>
+</tr>
+<tr>
+<td>14</td>
+<td>稀释空间巨大</td>
+<td style="text-align: center;">🟠</td>
+<td>740M 授权 vs ~232M 流通；earnout 10M 待定 ★ →
+<code>report.md</code>§14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>商誉占资产 43% 未减值</td>
+<td style="text-align: center;">🟡</td>
+<td>$163.2M 商誉从未减值，依赖股价 FV ★ → <code>report.md</code>§8</td>
+</tr>
+<tr>
+<td>16</td>
+<td>NOL Section 382 限制</td>
+<td style="text-align: center;">🟡</td>
+<td>$334.8M NOL；所有权变更或限用，未量化 ★ → <code>08</code>§2</td>
+</tr>
+<tr>
+<td>17</td>
+<td>sell-in 收入确认</td>
+<td style="text-align: center;">🟡</td>
+<td>发货即确认，叠加经销商集中 ★ → <code>report.md</code>§10</td>
+</tr>
+<tr>
+<td>18</td>
+<td>inverted-corp 政府合同</td>
+<td style="text-align: center;">🟡</td>
+<td>6 U.S.C.§395(b) 限政府合同 ★ → <code>08</code>R8</td>
+</tr>
+<tr>
+<td>19</td>
+<td>网络攻击</td>
+<td style="text-align: center;">🟡</td>
+<td>2024 至少 2 起，一起入侵非关键系统 ★ → <code>08</code>§2</td>
+</tr>
+<tr>
+<td>20</td>
+<td>重大诉讼</td>
+<td style="text-align: center;">🟢 无</td>
+<td><strong>无任何在审重大诉讼</strong> ★ →
+<code>08</code>§3（不可编造）</td>
+</tr>
+<tr>
+<td>21</td>
+<td>持续经营疑虑</td>
+<td style="text-align: center;">🟢 无</td>
+<td>零命中；$237M 现金、零债务 ★ → <code>08</code>§4</td>
+</tr>
+<tr>
+<td>22</td>
+<td>财务重述（4.02）</td>
+<td style="text-align: center;">🟢 无</td>
+<td>10-K/A 均未重述财务 ★</td>
+</tr>
+<tr>
+<td>23</td>
+<td>双层股权/controlled co.</td>
+<td style="text-align: center;">🟢 无</td>
+<td>实际单一 Class A，无 &gt;10% 控股 ★</td>
+</tr>
+</tbody>
+</table>
+<pre><code>红旗热力分布（颜色 = 严重度；位置 = 类别）
+  经营/财务    供应链      治理/内控        资本/结构      已排除
+  ──────      ─────      ───────         ──────        ─────
+  🔴营收-45%   🔴TSMC退GaN  🔴2×换审计       🔴稀释续命     🟢无诉讼
+  🔴never盈利  🟠中国47%    🔴ICFR反转/未鉴证  🟠740M授权     🟢无going-concern
+  🔴R&amp;D&gt;3.5×GP            🔴维权逼宫        🟡商誉43%      🟢无财务重述
+  🔴集中46%               🔴C级三换CFO      🟡NOL§382      🟢无双层股权
+  🔴非经营撑利润           🔴公告驱动免责</code></pre>
+<hr />
+<h2 id="4-悬而未决问题保留诚实">4. 悬而未决问题（保留诚实）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>问题</th>
+<th>为何无法定论</th>
+<th>下一步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1</td>
+<td><strong>GaN vs SiC 收入拆分</strong></td>
+<td>单一报告分部，从不披露 ★ → 无法判断 AI/SiC 接棒进度</td>
+<td>电话会/deck 旁证；XBRL 维度</td>
+</tr>
+<tr>
+<td>Q2</td>
+<td><strong>Backlog / RPO 缺失</strong></td>
+<td>转型期收入能见度无法量化；公司不披露</td>
+<td>关注是否新增披露</td>
+</tr>
+<tr>
+<td>Q3</td>
+<td><strong>TSMC 退出 GaN 过渡成本</strong></td>
+<td>10-K 称「continuing to evaluate」，buffer 规模/重认证费用未量化 ★ →
+<code>08</code>R3</td>
+<td>跟踪后续 10-Q/8-K</td>
+</tr>
+<tr>
+<td>Q4</td>
+<td><strong>NVIDIA 合作是否含约束性收入</strong></td>
+<td>仅 8.01 消息，无 1.01 合同 → 强烈暗示无约束供货 ★ →
+<code>20</code>§5</td>
+<td>待 1.01 或财务披露证实</td>
+</tr>
+<tr>
+<td>Q5</td>
+<td><strong>PIPE 投资者身份</strong></td>
+<td>$100M @ $6.75 认购方「accredited」未具名 ★ → <code>20</code>§6</td>
+<td>查 Form D / 后续 13D/G</td>
+</tr>
+<tr>
+<td>Q6</td>
+<td><strong>2026-05 新一轮融资</strong></td>
+<td>S-3ASR + 424B5 + 1.01 8-K 同日（数据截止后）→ 增量稀释未量化 ★</td>
+<td>解析 2026-05-11/22 文件</td>
+</tr>
+<tr>
+<td>Q7</td>
+<td><strong>Q1'26 后续事件</strong></td>
+<td>清洗文本中<strong>未见 subsequent-events 段</strong>
+⚠️（已复核：Q1'26 10-Q 无该 note）→ 与 2026-05 融资是否构成后续事件待对
+as-filed</td>
+<td>复核 as-filed HTML</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-可以设置一边的事项避免过度报警">5.
+可以设置一边的事项（避免过度报警）</h2>
+<table>
+<thead>
+<tr>
+<th>事项</th>
+<th>为何可设置一边</th>
+<th>注意边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>持续经营疑虑</strong></td>
+<td>零命中；$237M 现金、零债务、~3 年跑道；审计师无 going-concern 段 ★ →
+<code>08</code>§4</td>
+<td>✅ 但「无疑虑」≠「安全」：跑道是稀释买来的，只覆盖未来 12
+个月不枯竭</td>
+</tr>
+<tr>
+<td><strong>重大诉讼</strong></td>
+<td>Item 3 / Note 15 / Q1'26 Note 14
+三处独立确认「无在审重大诉讼」；无证券集体诉讼/派生诉讼/IP 实际案件 ★ →
+<code>08</code>§3</td>
+<td>✅ <strong>不可编造任何案件</strong>；IP
+语言仅是行业通用风险因素</td>
+</tr>
+<tr>
+<td><strong>商誉减值</strong></td>
+<td>9/30/25 测试 FV&gt;账面，从未减值 ★；fabless 资产轻 →
+<code>report.md</code>§8</td>
+<td>⚠️ 营收腰斩 +
+股价低迷下，减值风险真实存在但<strong>尚未触发</strong>；非「永不减值」</td>
+</tr>
+<tr>
+<td><strong>财务造假</strong></td>
+<td>无任何财务重述（无 4.02）；缺陷为流程/设计层面</td>
+<td>⚠️
+「无造假」≠「披露质量好」：内控史与未鉴证的「整改完成」仍需折价</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-收口一图论点--证据--反方--净判断">6. 收口一图（论点 → 证据 →
+反方 → 净判断）</h2>
+<pre><code>              ┌────────────────────── NVTS 综合判断 ──────────────────────┐
+              │                                                          │
+ 论点1 资产负债表换时间 ──── 营收-45% + 现金100%靠稀释 + NVIDIA仅8.01     │
+   反方: 零债务比WOLF安全 ── 反驳: 背书≠订单, 营收还在加速跌            │
+              │                                                          │
+ 论点2 headline不可用 ────── FY22&quot;+72.9M&quot;=幻觉; R&amp;D=3.5×毛利; GM仅POWI一半 │
+   反方: FY25亏损收窄 ────── 反驳: SBC降是LTIP冲回(创始人离职), 非杠杆     │
+              │                                                          │
+ 论点3 治理/内控被低估 ───── 2×换审计+ICFR反转+维权逼宫+3换CFO/18个月     │
+   反方: 在清理非丑闻 ────── 反驳: 红旗密度本身=警示; FY25&quot;有效&quot;未经鉴证   │
+              │                                                          │
+ 可设置一边: going-concern ✅ / 重大诉讼 ✅(不可编造) / 商誉减值 🟡(未触发) │
+              └──────────────────────────────────────────────────────────┘</code></pre>
+<blockquote>
+<p>来源脚注：本页所有 ★ 引语与数字均回链至 <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K</a>、<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">Q1'26
+10-Q</a> 及各关键 8-K（NVIDIA 8.01、PIPE 1.01+3.02、维权
+1.01+5.02+7.01、换审计 4.01——原文 URL 见
+<code>20_8k_events.md</code>）。完整 358 filings 索引见 <a
+href="../../processed/NVTS_filings_catalog_2023-2026.md">catalog</a>。详证分散在
+<code>08_risk_factors.md</code>、<code>20_8k_events.md</code>、<code>report.md</code>、<code>00_initial_impression.md</code>。</p>
+</blockquote>
+</body>
+</html>

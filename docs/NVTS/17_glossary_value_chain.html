@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>术语表 + 产业链地图 · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">术语表 + 产业链地图 · NVTS</h1>
+</header>
+<h1 id="档案-17--术语表--产业链价值地图">档案 17 — 术语表 +
+产业链价值地图</h1>
+<blockquote>
+<p>Navitas Semiconductor（Nasdaq: <strong>NVTS</strong>，CIK
+<strong>1821769</strong>）专用术语词典 + 产业链地图。
+本档案是<strong>读懂前面所有档案的「随身词典」</strong>：每个术语都给「<strong>三件套</strong>」=
+①大白话科普 ②在产业链哪个环节 ③对 NVTS 的意义。 数据截止
+<strong>2026-05-29</strong>。标签：★ SEC 直接 · ◆ 计算 · ◇ 第三方/IR · ▽
+推算。单位双写一次。</p>
+</blockquote>
+<hr />
+<h2 id="170-怎么用这本词典">17.0 怎么用这本词典</h2>
+<ul>
+<li>术语分四组：<strong>A. 材料与器件</strong> / <strong>B.
+商业模式与制造</strong> / <strong>C. 应用与系统</strong> / <strong>D.
+资本与治理</strong>。</li>
+<li>每条「三件套」：<strong>大白话</strong>（外行能懂）+
+<strong>产业链环节</strong>（上游/中游/下游/资本/治理）+ <strong>对 NVTS
+意义</strong>（这词为什么对本案重要，带 ★ 锚点）。</li>
+<li>末尾附 <strong>缩写全称对照表</strong> + <strong>产业链 ASCII
+地图（红框=NVTS）</strong>。</li>
+</ul>
+<hr />
+<h2 id="171-a-组--材料与器件">17.1 A 组 — 材料与器件</h2>
+<h3 id="gan氮化镓gallium-nitride">GaN（氮化镓，Gallium Nitride）</h3>
+<ul>
+<li><strong>大白话</strong>：一种比普通硅（Si）「开关更快、更省电、更耐高压」的半导体材料，特别适合做电源里的「电子开关」。属于「宽禁带」材料。</li>
+<li><strong>产业链环节</strong>：上游材料 / 中游器件。</li>
+<li><strong>对 NVTS 意义</strong>：NVTS 自研老本行，<strong>GaNFast™
+功率 IC</strong> 的核心材料，号称「100× 更快开关、至多 40%
+节能」。GaN-on-Si（在硅衬底上长氮化镓）。★ FY2025 10-K L251。</li>
+</ul>
+<h3 id="sic碳化硅silicon-carbide">SiC（碳化硅，Silicon Carbide）</h3>
+<ul>
+<li><strong>大白话</strong>：比 GaN
+更能扛<strong>超高压</strong>（数千伏）的宽禁带材料，适合电网、工业、电车这种「大电压、大功率」场景。</li>
+<li><strong>产业链环节</strong>：上游材料 / 中游器件。</li>
+<li><strong>对 NVTS 意义</strong>：NVTS 2022 年花 <strong>$246.2
+million</strong> 收购 GeneSiC 拿到的，<strong>GeneSiC™ SiC MOSFET 最高
+6.5 kV（= 6,500 V）</strong>。★ FY2025 10-K L195/L251。</li>
+</ul>
+<h3 id="wide-bandgap宽禁带">Wide-bandgap（宽禁带）</h3>
+<ul>
+<li><strong>大白话</strong>：「禁带」是材料里电子跳跃要跨的能量沟。沟越宽（宽禁带），材料越能扛高压高温、开关越快、损耗越小。GaN
+和 SiC 都是宽禁带，硅不是。</li>
+<li><strong>产业链环节</strong>：上游材料属性。</li>
+<li><strong>对 NVTS 意义</strong>：NVTS
+自我定位就是「<strong>wide-bandgap
+technology</strong>」公司——这个词是它整个故事的物理基础。★ FY2025 10-K
+L251。</li>
+</ul>
+<h3
+id="mosfet金属氧化物半导体场效应晶体管">MOSFET（金属氧化物半导体场效应晶体管）</h3>
+<ul>
+<li><strong>大白话</strong>：最常见的一种「电子开关」器件。SiC MOSFET =
+用碳化硅做的高压开关管。</li>
+<li><strong>产业链环节</strong>：中游器件。</li>
+<li><strong>对 NVTS 意义</strong>：GeneSiC™
+的核心产品形态，专利「trench-assisted planar（沟槽辅助平面栅）」结构。★
+FY2025 10-K L195。</li>
+</ul>
+<hr />
+<h2 id="172-b-组--商业模式与制造">17.2 B 组 — 商业模式与制造</h2>
+<h3 id="fabless无晶圆厂">Fabless（无晶圆厂）</h3>
+<ul>
+<li><strong>大白话</strong>：自己只<strong>设计</strong>芯片，把<strong>制造</strong>全外包给代工厂的轻资产模式。好比餐厅只管菜谱和点菜，厨房租别人的。</li>
+<li><strong>产业链环节</strong>：中游设计。</li>
+<li><strong>对 NVTS 意义</strong>：NVTS 的核心模式——Capex 极低（FY2025
+仅 <strong>$1.478
+million</strong>），但<strong>受制于代工厂</strong>（TSMC 退出 GaN
+是大风险，见档案 15）。★ FY2025 10-K L214/L938。</li>
+</ul>
+<h3 id="foundry晶圆代工厂">Foundry（晶圆代工厂）</h3>
+<ul>
+<li><strong>大白话</strong>：替 fabless
+公司「代工生产」芯片的工厂（台积电 TSMC、格芯 GlobalFoundries
+等）。</li>
+<li><strong>产业链环节</strong>：中游制造。</li>
+<li><strong>对 NVTS 意义</strong>：NVTS 的 GaN 历史上由
+<strong>TSMC</strong> 代工（<strong>2027 年 7 月停产</strong>），转向
+<strong>GlobalFoundries（美国）+ Powerchip</strong>；SiC 由
+<strong>X-Fab（美国）</strong> 代工。★ FY2025 10-K L235/L379。</li>
+</ul>
+<h3
+id="osat外包封装与测试outsourced-semiconductor-assembly-and-test">OSAT（外包封装与测试，Outsourced
+Semiconductor Assembly and Test）</h3>
+<ul>
+<li><strong>大白话</strong>：晶圆做好后，负责「切割、封装、测试」成可用芯片的外包厂。</li>
+<li><strong>产业链环节</strong>：中游制造（后段 back-end）。</li>
+<li><strong>对 NVTS 意义</strong>：NVTS
+封测外包给**亚洲（主台湾/菲律宾）**的多家
+OSAT，「每产品族合格多家以分散风险」。★ FY2025 10-K L240/L1418。</li>
+</ul>
+<h3
+id="idm整合元件制造商integrated-device-manufacturer">IDM（整合元件制造商，Integrated
+Device Manufacturer）</h3>
+<ul>
+<li><strong>大白话</strong>：设计+制造<strong>一条龙自己干</strong>的公司（自有晶圆厂）。与
+fabless 相反。</li>
+<li><strong>产业链环节</strong>：跨中游设计+制造。</li>
+<li><strong>对 NVTS 意义</strong>：对比项——<strong>WOLF、ON、Infineon 是
+IDM</strong>（重资产）；NVTS 是 fabless（轻资产）。WOLF 因 IDM 重资产 +
+债务在 2025 破产，凸显 NVTS 轻资产的安全边际（见档案 10）。</li>
+</ul>
+<hr />
+<h2 id="173-c-组--应用与系统">17.3 C 组 — 应用与系统</h2>
+<h3 id="800v-hvdc800-伏高压直流high-voltage-direct-current">800V
+HVDC（800 伏高压直流，High-Voltage Direct Current）</h3>
+<ul>
+<li><strong>大白话</strong>：数据中心把供电电压提到 800
+伏<strong>直流</strong>，减少传输损耗、省铜、省空间——AI
+数据中心的新供电架构。</li>
+<li><strong>产业链环节</strong>：下游应用/系统。</li>
+<li><strong>对 NVTS 意义</strong>：NVTS 押注的核心叙事（「<strong>AI
+800VDC 平台</strong>」），也是 2025-05 NVIDIA「合作」的技术背景。⚠️ NVTS
+自承「800V 用量预测<strong>取决于 800V 系统本身能否被接受</strong>」。★
+FY2025 10-K L205/L363。</li>
+</ul>
+<h3
+id="sst固态变压器solid-state-transformer">SST（固态变压器，Solid-State
+Transformer）</h3>
+<ul>
+<li><strong>大白话</strong>：用功率半导体替代传统笨重的铁芯变压器，体积小、效率高、可用性好。</li>
+<li><strong>产业链环节</strong>：下游系统。</li>
+<li><strong>对 NVTS 意义</strong>：NVTS 电网业务卖点——SST <strong>输入
+11–13 kV AC，输出 800 VDC / 1500 VDC</strong>，用 GaN+SiC 器件。★ FY2025
+10-K L205。</li>
+</ul>
+<h3 id="psu电源供应器power-supply-unit">PSU（电源供应器，Power Supply
+Unit）</h3>
+<ul>
+<li><strong>大白话</strong>：把市电转成设备能用的电的「电源盒」（电脑/服务器电源）。</li>
+<li><strong>产业链环节</strong>：下游系统（NVTS 客户的产品）。</li>
+<li><strong>对 NVTS 意义</strong>：GaNFast 的主战场之一——数据中心服务器
+PSU。NVTS 卖芯片给 PSU 厂（经由经销商）。★ FY2025 10-K L1380。</li>
+</ul>
+<h3 id="bbu备用电池单元battery-backup-unit">BBU（备用电池单元，Battery
+Backup Unit）</h3>
+<ul>
+<li><strong>大白话</strong>：数据中心断电时顶上的「备用电池」模块。</li>
+<li><strong>产业链环节</strong>：下游系统。</li>
+<li><strong>对 NVTS 意义</strong>：AI 数据中心供电路径中的一环，GaN/SiC
+高效充放电的潜在应用场景（deck 叙事 ◇）。</li>
+</ul>
+<h3
+id="ibc中间总线变换器intermediate-bus-converter">IBC（中间总线变换器，Intermediate
+Bus Converter）</h3>
+<ul>
+<li><strong>大白话</strong>：把较高电压（如
+48V/800V）降到电路板上各芯片要的中间电压的「电压中转站」。</li>
+<li><strong>产业链环节</strong>：下游系统（板级电源）。</li>
+<li><strong>对 NVTS 意义</strong>：800VDC → GPU
+供电路径中的降压环节，GaN 高频开关的用武之地。</li>
+</ul>
+<h3
+id="vrm电压调节模块voltage-regulator-module">VRM（电压调节模块，Voltage
+Regulator Module）</h3>
+<ul>
+<li><strong>大白话</strong>：紧挨
+CPU/GPU、把电压精调到芯片要的「最后一段精密供电」。</li>
+<li><strong>产业链环节</strong>：下游系统（点负载电源）。</li>
+<li><strong>对 NVTS 意义</strong>：「从电网到 GPU
+全功率路径」的<strong>最后一公里</strong>；NVTS 叙事覆盖整条路径，VRM
+是终点。</li>
+</ul>
+<hr />
+<h2 id="174-d-组--资本与治理">17.4 D 组 — 资本与治理</h2>
+<h3 id="earnout对赌股--或有对价earnout-shares">Earnout（对赌股 /
+或有对价，Earnout shares）</h3>
+<ul>
+<li><strong>大白话</strong>：SPAC
+上市时约定「<strong>股价达标才发给原股东</strong>」的或有股份。按公允价值（FV）记为负债，每期波动进损益表。</li>
+<li><strong>产业链环节</strong>：资本结构。</li>
+<li><strong>对 NVTS 意义</strong>：<strong>扭曲 NVTS
+净利润的元凶</strong>。10M 对赌股，VWAP 门槛 $12.50/$17/$20，窗口至
+2026-10-19，全未达标。股价跌 → 负债缩水 → 账上记「利润」；FY2025 earnout
+负债 FV <strong>$22.6 million</strong>，当年 FV <strong>损失 $12.4
+million</strong>（FY2024 为 <strong>收益 $36.6 million</strong>）。★
+FY2025 10-K L1377（见档案 16 剥离测试）。</li>
+</ul>
+<h3 id="rpo--backlog剩余履约义务--订单储备">RPO / Backlog（剩余履约义务
+/ 订单储备）</h3>
+<ul>
+<li><strong>大白话</strong>：已签约但还没确认成收入的订单（未来收入的能见度）。</li>
+<li><strong>产业链环节</strong>：财务披露。</li>
+<li><strong>对 NVTS 意义</strong>：<strong>NVTS 未披露
+backlog/RPO</strong>
+❌——转型期收入能见度无法量化，是一项「缺失的信号」（见档案 19）。</li>
+</ul>
+<h3 id="icfr--material-weakness财报内控--重大缺陷">ICFR / Material
+Weakness（财报内控 / 重大缺陷）</h3>
+<ul>
+<li><strong>大白话</strong>：ICFR =
+财务报告内部控制；「重大缺陷（material weakness）」=
+内控有可能导致重大错报的严重漏洞。</li>
+<li><strong>产业链环节</strong>：治理。</li>
+<li><strong>对 NVTS 意义</strong>：NVTS 连续多年有重大缺陷 +
+<strong>两次换审计师</strong>（Deloitte→Moss Adams→KPMG）+ FY2023 10-K/A
+把「已整改」反转为 <strong>adverse ICFR
+意见</strong>；FY2025「内控有效」是<strong>管理层单方声明，KPMG 未做
+404(b) 鉴证</strong>。★（见档案 14）。本案最重红旗之一。</li>
+</ul>
+<h3 id="de-spacspac-反向并购上市">De-SPAC（SPAC 反向并购上市）</h3>
+<ul>
+<li><strong>大白话</strong>：通过与「空白支票公司（SPAC）」合并而非传统
+IPO 上市。</li>
+<li><strong>产业链环节</strong>：资本结构/上市方式。</li>
+<li><strong>对 NVTS 意义</strong>：NVTS 2021 年与 <strong>Live Oak
+Acquisition Corp II</strong> 反向并购上市——de-SPAC 留下了 earnout 与
+warrant 两大利润扭曲源（见档案 16）。</li>
+</ul>
+<h3
+id="pipe私募投资公开股权private-investment-in-public-equity">PIPE（私募投资公开股权，Private
+Investment in Public Equity）</h3>
+<ul>
+<li><strong>大白话</strong>：上市公司向特定投资者<strong>私下增发</strong>新股募资（不走公开发行流程）。</li>
+<li><strong>产业链环节</strong>：资本结构/融资。</li>
+<li><strong>对 NVTS 意义</strong>：2025-11 NVTS 做了 <strong>$100
+million PIPE</strong>（14.81M 股 @
+$6.75，无认股权证，投资者未具名）——2025 年 $200M 稀释的一半。★（见档案
+14）。</li>
+</ul>
+<h3
+id="atm随行就市增发at-the-market-offering">ATM（随行就市增发，At-The-Market
+offering）</h3>
+<ul>
+<li><strong>大白话</strong>：上市公司按当前市价<strong>陆续在公开市场卖新股</strong>募资的方式（细水长流式增发）。</li>
+<li><strong>产业链环节</strong>：资本结构/融资。</li>
+<li><strong>对 NVTS 意义</strong>：2025 年 ATM（Jefferies）募
+<strong>$100 million</strong>（~19.78M 股 @ ~$5.06）——2025 年 $200M
+稀释的另一半。★（见档案 14）。</li>
+</ul>
+<pre><code>术语关系速记（NVTS 的钱与扭曲）
+de-SPAC(2021) ──► 留下 earnout(对赌股) + warrant ──► 扭曲净利润(档案16)
+现金来源 ────────► ATM($100M) + PIPE($100M) = 2025 稀释 $200M(档案14)
+内控信号 ────────► ICFR 重大缺陷 + 2次换审计 + adverse 意见(档案14)
+收入能见度 ──────► RPO/backlog 未披露 ❌(档案19)</code></pre>
+<hr />
+<h2 id="175-产业链价值地图红框--nvts-所处环节">17.5 产业链价值地图（红框
+= NVTS 所处环节）</h2>
+<pre><code>  上游(材料/衬底)        中游(设计 fabless)        中游(制造/封测)             下游(系统/客户/终端)
+  ──────────────        ───────────────────       ──────────────────         ───────────────────────
+                       ┏━━━━━━━━━━━━━━━━━━━┓
+  GaN-on-Si 衬底  ───► ┃  ★★ NAVITAS ★★    ┃ ──►  晶圆制造(Foundry):           系统厂(经由经销商):
+  SiC 晶圆基板         ┃  【中游设计环节】  ┃      · GaN: TSMC(2027退出⚠️)      · PSU/服务器电源
+  (多家合格供应商)     ┃                    ┃      · GaN: GlobalFoundries(US)   · IBC/VRM/BBU 模块
+                       ┃ 设计:              ┃      · GaN: Powerchip(台)         · SST(电网)
+                       ┃  GaNFast/GaNSense  ┃      · SiC: X-Fab(US,Lubbock)         │
+                       ┃  GeneSiC(≤6.5kV)   ┃            │                          ▼
+                       ┃  AI 800VDC 平台    ┃      封测(OSAT):                  经销商(高度集中!)
+                       ┃ 专利&gt;300(交叉授权  ┃      · 亚洲(台湾/菲律宾)          单一经销商: 46%(FY25)
+                       ┃  Infineon 2024-10) ┃            │                       → 59%(Q1&#39;26)⚠️
+                       ┗━━━━━━━━━━━━━━━━━━━┛            │                          │
+                            ▲  资本极轻(Capex $1.5M)     │                          ▼
+                            │  但受制于代工厂            │                     终端市场(Navitas 2.0):
+                            │  (TSMC 退出 GaN)           │                     AI数据中心/电网/
+                            └────────────────────────────┘                     性能计算/工业电气化
+                                                                                (NVIDIA &quot;合作&quot; 8.01)
+  ── 利润分配直觉 ──
+  上游(材料): 重资产, 周期波动大     中游设计(NVTS): IP+集成度赚钱, 轻资产但供给受制
+  中游制造(代工): 规模/产能为王       下游(系统/终端): 贴近需求, NVTS 隔着经销商一层</code></pre>
+<blockquote>
+<p><strong>NVTS
+在产业链的位置</strong>：<strong>中游设计（fabless）</strong>——不碰材料、不建厂，靠<strong>芯片
+IP 与系统集成度</strong>赚钱。</p>
+<ul>
+<li><strong>护城河</strong>：GaN 单片集成度（多数对手只做分立
+GaN，L246）+ 高压 SiC 专利（&gt;300 项，2024-10 与 Infineon 交叉授权 ★
+L223）。</li>
+<li><strong>命门 1（上游/制造侧）</strong>：代工依赖——<strong>TSMC 退出
+GaN</strong>（见档案 15）。</li>
+<li><strong>命门
+2（下游侧）</strong>：经销商高度集中——<strong>单一经销商
+46%(FY25)→59%(Q1'26)</strong>（见档案 02）。</li>
+<li><strong>轻资产双刃剑</strong>：Capex $1.478 million 让 NVTS 比
+WOLF（IDM 破产）安全，但供给与渠道两头都受制于人。</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="176-缩写全称对照表">17.6 缩写全称对照表</h2>
+<table>
+<thead>
+<tr>
+<th>缩写</th>
+<th>英文全称</th>
+<th>中文</th>
+<th>环节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GaN</td>
+<td>Gallium Nitride</td>
+<td>氮化镓</td>
+<td>材料</td>
+</tr>
+<tr>
+<td>SiC</td>
+<td>Silicon Carbide</td>
+<td>碳化硅</td>
+<td>材料</td>
+</tr>
+<tr>
+<td>MOSFET</td>
+<td>Metal-Oxide-Semiconductor Field-Effect Transistor</td>
+<td>金属氧化物半导体场效应晶体管</td>
+<td>器件</td>
+</tr>
+<tr>
+<td>IC</td>
+<td>Integrated Circuit</td>
+<td>集成电路</td>
+<td>器件</td>
+</tr>
+<tr>
+<td>GaN-on-Si</td>
+<td>GaN on Silicon substrate</td>
+<td>硅衬底氮化镓</td>
+<td>制造工艺</td>
+</tr>
+<tr>
+<td>Fabless</td>
+<td>—</td>
+<td>无晶圆厂（只设计）</td>
+<td>商业模式</td>
+</tr>
+<tr>
+<td>Foundry</td>
+<td>—</td>
+<td>晶圆代工厂</td>
+<td>制造</td>
+</tr>
+<tr>
+<td>OSAT</td>
+<td>Outsourced Semiconductor Assembly and Test</td>
+<td>外包封装与测试</td>
+<td>制造(后段)</td>
+</tr>
+<tr>
+<td>IDM</td>
+<td>Integrated Device Manufacturer</td>
+<td>整合元件制造商</td>
+<td>商业模式</td>
+</tr>
+<tr>
+<td>PDK</td>
+<td>Process Design Kit</td>
+<td>工艺设计套件</td>
+<td>设计工具 ★L253</td>
+</tr>
+<tr>
+<td>HVDC</td>
+<td>High-Voltage Direct Current</td>
+<td>高压直流</td>
+<td>应用</td>
+</tr>
+<tr>
+<td>SST</td>
+<td>Solid-State Transformer</td>
+<td>固态变压器</td>
+<td>系统</td>
+</tr>
+<tr>
+<td>PSU</td>
+<td>Power Supply Unit</td>
+<td>电源供应器</td>
+<td>系统</td>
+</tr>
+<tr>
+<td>BBU</td>
+<td>Battery Backup Unit</td>
+<td>备用电池单元</td>
+<td>系统</td>
+</tr>
+<tr>
+<td>IBC</td>
+<td>Intermediate Bus Converter</td>
+<td>中间总线变换器</td>
+<td>系统</td>
+</tr>
+<tr>
+<td>VRM</td>
+<td>Voltage Regulator Module</td>
+<td>电压调节模块</td>
+<td>系统</td>
+</tr>
+<tr>
+<td>OBC</td>
+<td>On-Board Charger</td>
+<td>车载充电器</td>
+<td>应用(EV,已去优先)</td>
+</tr>
+<tr>
+<td>TAM/SAM</td>
+<td>Total/Serviceable Available Market</td>
+<td>总/可服务市场</td>
+<td>市场叙事(◇)</td>
+</tr>
+<tr>
+<td>RPO</td>
+<td>Remaining Performance Obligations</td>
+<td>剩余履约义务</td>
+<td>财务(未披露)</td>
+</tr>
+<tr>
+<td>Earnout</td>
+<td>—</td>
+<td>对赌股/或有对价</td>
+<td>资本结构</td>
+</tr>
+<tr>
+<td>ICFR</td>
+<td>Internal Control over Financial Reporting</td>
+<td>财报内部控制</td>
+<td>治理</td>
+</tr>
+<tr>
+<td>de-SPAC</td>
+<td>—</td>
+<td>SPAC 反向并购上市</td>
+<td>上市方式</td>
+</tr>
+<tr>
+<td>PIPE</td>
+<td>Private Investment in Public Equity</td>
+<td>私募公开股权投资</td>
+<td>融资</td>
+</tr>
+<tr>
+<td>ATM</td>
+<td>At-The-Market offering</td>
+<td>随行就市增发</td>
+<td>融资</td>
+</tr>
+<tr>
+<td>VWAP</td>
+<td>Volume-Weighted Average Price</td>
+<td>成交量加权平均价</td>
+<td>对赌门槛</td>
+</tr>
+<tr>
+<td>CODM</td>
+<td>Chief Operating Decision Maker</td>
+<td>首席运营决策者</td>
+<td>分部判定</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="177-本档案小结">17.7 本档案小结</h2>
+<ol type="1">
+<li>四组术语（材料器件 / 模式制造 / 应用系统 /
+资本治理）各带「三件套」，是读懂全套档案的随身词典。</li>
+<li><strong>NVTS 产业链位置 = 中游设计（fabless）</strong>：护城河在 GaN
+集成度 + SiC 专利；两大命门在「上游代工（TSMC 退出
+GaN）」与「下游经销商集中（46%→59%）」。</li>
+<li>资本/治理术语（earnout、de-SPAC、ATM、PIPE、ICFR）解释了 NVTS
+的两大特性：<strong>利润被对赌股扭曲</strong>（档案 16）+
+<strong>现金靠稀释</strong>（档案 14）。</li>
+</ol>
+<hr />
+<h2 id="来源脚注本档案">来源脚注（本档案）</h2>
+<ul>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">Navitas
+FY2025 10-K</a>：GaN/SiC/wide-bandgap 定义（L251）、GeneSiC
+6.5kV（L195/L251）、fabless（L214）、代工伙伴（L235/L379）、OSAT（L240/L1418）、800VDC/SST（L205）、800V
+系统接受度风险（L363）、PDK（L253）、专利&gt;300 + Infineon
+交叉授权（L223）、Capex 1,478（L938）、earnout FV $22.6M / 损失
+$12.4M（L1377）、经销商集中（L1384–1386）。</li>
+<li>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm">Navitas
+Q1'26 10-Q</a>：单一经销商 59%（L293）。</li>
+<li>◇ Navitas Investor Slides March 2026（非 SEC，IR 托管）：TAM/SAM
+叙事、BBU/IBC 系统场景描述（标 ◇）。</li>
+<li>关联档案：术语对 NVTS 的意义详见 档案 02（业务/客户）、档案
+14（资本/治理）、档案 15（供应链）、档案 16（剥离测试）、档案
+10（行业对比）、档案 19（悬而未决）。</li>
+</ul>
+</body>
+</html>

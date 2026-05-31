@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>会计政策（含激进度评分） · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">会计政策（含激进度评分） · NVTS</h1>
+</header>
+<h1 id="05--会计政策深挖-accounting-policies-铁律3">05 — 会计政策深挖
+(Accounting Policies, 铁律3)</h1>
+<blockquote>
+<p><strong>Navitas Semiconductor Corp (NVTS, CIK 1821769)</strong> —
+fabless GaN/SiC 功率半导体。本文 7
+子节，做会计取证深度（accounting-forensics depth），逐项标注来源等级 +
+SEC 链接。 来源等级：★ = SEC 一手 filing 原文 · ◆ = 笔者由 ★ 数据计算 ·
+◇ = 第三方/IR · ▽ = 推断。单位双写（M = million 百万 / B = billion
+十亿）。Cross-check 标记 ✅ 勾稽通过 / ⚠️ 存在口径差 / ❌ 矛盾。</p>
+<p>核心 filings： <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">FY2022
+10-K</a> · <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000024/nvts-20231231.htm">FY2023
+10-K</a> · <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm">FY2024
+10-K</a> · <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K</a></p>
+</blockquote>
+<hr />
+<h2 id="51-收入确认-revenue-recognition--asc-606sell-in-at-shipment">5.1
+收入确认 (Revenue Recognition) — ASC 606，sell-in at shipment</h2>
+<h3 id="511-五步法与控制权转移时点">5.1.1 五步法与控制权转移时点</h3>
+<p>NVTS 在 ASC 606
+下采用标准五步法（识别合同→识别履约义务→确定交易价格→分摊→满足时确认），但<strong>关键判断在于控制权转移时点
+= 发货时 (at shipment)</strong>，即典型的 <strong>sell-in
+模型</strong>（向分销商发货即确认，而非 sell-through 等终端售出）：</p>
+<blockquote>
+<p>"Revenue is recognized when control of the product is transferred to
+the customer (i.e., when the Company's performance obligation is
+satisfied), which typically occurs <strong>at shipment</strong>. … the
+Company considers if there is a present right to payment and legal
+title, along with risks and rewards of ownership having transferred to
+the customer." ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K, Note 2, L993</a></p>
+</blockquote>
+<ul>
+<li><strong>全部 point-in-time</strong>（无 over-time 确认）。★ FY2025
+10-K Note 2。</li>
+<li>国际客户多按 <strong>EXW（EX Works）</strong> 条款：在 NVTS
+或其代工厂海外仓库发货时控制权即转移。★ FY2025 10-K Note 2 L995。</li>
+<li><strong>独立售价 (SSP)</strong>：以采购订单 (PO) 标价作为可观察
+SSP。★ L993。</li>
+</ul>
+<h3 id="512-退货与可变对价--sell-in-模型的关键风险点">5.1.2
+退货与可变对价 — sell-in 模型的关键风险点</h3>
+<p>NVTS <strong>没有一般退货准备 (no general return
+reserve)</strong>，仅对分销商提供有限的 <strong>"stock
+rotation"（库存调换权）</strong>：</p>
+<blockquote>
+<p>"Sales to most distributors are made under terms allowing certain
+limited rights of return (known as 'stock rotation') … Stock rotation
+adjustments are a form of variable consideration and are estimated using
+the expected value method based on historical return rates.
+<strong>Historically, distributor stock rotation adjustments have been
+insignificant.</strong>" ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K Note 2, L997</a></p>
+</blockquote>
+<p>⚠️ <strong>会计取证视角的红旗</strong>：sell-in 模型 + "退货
+insignificant"
+的组合，意味着收入在货物推入分销渠道时即确认，<strong>渠道库存波动
+(channel inventory fluctuations) 与需求透明度下降 (reduced demand
+transparency)</strong> 的风险由公司自己在风险因素中点名披露：</p>
+<blockquote>
+<p>"the use of distributors means that we are subject to channel
+inventory fluctuations and reduced demand transparency in the
+distribution channel, which may increase forecasting and inventory
+risk." ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K Item 1A, L373</a></p>
+</blockquote>
+<p>→ 在 sell-in 制下，向单一分销商集中（FY2025 Distributor B = 46%；详见
+档案02/03）放大了<strong>渠道塞货 (channel stuffing)
+的结构性可能</strong>。无证据表明发生塞货，但这是收入质量审视的必查项
+▽。</p>
+<h3
+id="513-递延收入-deferred-revenue--fy2023-的-1095m-千万美元级-异常脉冲">5.1.3
+递延收入 (Deferred Revenue) — FY2023 的 $10.95M (千万美元级)
+异常脉冲</h3>
+<p>预收货款（客户在发货前付款）计为合同负债，列入 deferred revenue。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000024/nvts-20231231.htm">FY2023
+10-K Note, L993</a></p>
+<table>
+<thead>
+<tr>
+<th>期末递延收入 (Deferred Revenue / Customer deposit)</th>
+<th style="text-align: right;">金额 (US$ thousands)</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2021 期末</td>
+<td style="text-align: right;">29</td>
+<td>★ FY2023 10-K, L997</td>
+</tr>
+<tr>
+<td>FY2022 期末</td>
+<td style="text-align: right;">486</td>
+<td>★ FY2023 10-K, L804/L997</td>
+</tr>
+<tr>
+<td><strong>FY2023 期末</strong></td>
+<td style="text-align: right;"><strong>10,953</strong>（约 $10.95M /
+一千零九十五万美元）</td>
+<td>★ FY2023 10-K, L804/L997</td>
+</tr>
+<tr>
+<td>FY2024 期末</td>
+<td style="text-align: right;">0（"Customer deposit and deferred revenue
+— / 10,953"，即全额释放）</td>
+<td>★ FY2024 10-K, L816</td>
+</tr>
+<tr>
+<td>FY2025 期末</td>
+<td style="text-align: right;">极小（cash-flow 表未再单列大额变动）</td>
+<td>▽ FY2025 10-K</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取证解读</strong>：</p>
+<ul>
+<li>FY2023 递延收入从 $0.486M 暴增至 <strong>$10.953M</strong>（×22.5
+倍）◆，同期 FY2023 营收 +109.4% 至 $79.456M。现金流量表确认 "an increase
+of <strong>$10.5 million in deferred revenue</strong>"。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000024/nvts-20231231.htm">FY2023
+10-K MD&amp;A, L665</a></li>
+<li>FY2024 该余额<strong>全额转回（−$10.953M）</strong>，现金流量表列
+"$11.0 million decrease in customer deposit and deferred revenue"。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm">FY2024
+10-K, L698/L816/L922</a></li>
+<li>⚠️ <strong>判断</strong>：FY2023 的预收暴增 =
+客户提前付款（可能为绑定产能/订单的押金），在 FY2024
+随出货确认而释放。这解释了 FY2024 营收仅
++4.8%（$83.302M）却消化了一笔大额预收——即 FY2023
+末的"已收钱未确认收入"在 FY2024 落地。<strong>这是 sell-in
+收入节奏的一次性扰动，非可持续增长</strong>。✅
+与现金流口径勾稽一致。</li>
+</ul>
+<hr />
+<h2
+id="52-负债确认-liability-recognition--含-earnout-liability-分类">5.2
+负债确认 (Liability Recognition) — 含 earnout liability 分类</h2>
+<h3 id="521-一般负债">5.2.1 一般负债</h3>
+<p>应付账款、应计补偿（accrued compensation）、经营租赁负债（ASC
+842）均按常规权责发生制确认，无异常。★ FY2025 10-K
+资产负债表。无任何金融负债/借款——<strong>总债务 = 0</strong> ✅（详见
+档案04）。</p>
+<h3
+id="522-earnout-liability-的分类--衍生工具负债-asc-815最关键的会计政策选择">5.2.2
+Earnout Liability 的分类 — 衍生工具负债 (ASC
+815)，最关键的会计政策选择</h3>
+<p>SPAC 交易遗留的 <strong>10,000,000 股 Earnout Shares</strong>（详见
+档案16）被<strong>拆分为两部分</strong>，分类逻辑是本案最重要的会计判断：</p>
+<table>
+<thead>
+<tr>
+<th>组成</th>
+<th>对应人群</th>
+<th>分类</th>
+<th>会计处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vested Shares</strong>（既得）</td>
+<td>de-SPAC 关闭时已 vested 的股东</td>
+<td><strong>负债 (liability)</strong> — ASC 815 衍生工具</td>
+<td>每个报告期按公允价值重估，FV 变动入 <strong>Other income
+(expense)</strong> 损益 ★</td>
+</tr>
+<tr>
+<td><strong>Unvested Shares</strong>（未既得）</td>
+<td>关闭时持未既得股权者</td>
+<td><strong>权益 (equity)</strong> — 股份支付</td>
+<td>按服务期摊销为 SBC ★</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>"The Vested Shares are classified as liabilities in the consolidated
+balance sheet and the Unvested Shares are equity-classified share-based
+compensation … The change in fair value of the earn-out liability is
+recorded as part of <strong>Other income (expense), net</strong>." ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">FY2022
+10-K Note 7, L934/L1552</a></p>
+</blockquote>
+<ul>
+<li>截至 FY2025 末，<strong>9,713,212 股</strong>为 vested/负债分类，用
+<strong>Monte Carlo 模型（20,000 次模拟）</strong> 估值；earnout
+liability 公允价值 = <strong>$22.6M（两千二百六十万美元，准确 $22,632
+thousand）</strong>。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K, L775/L1163</a></li>
+<li>⚠️ <strong>会计取证红旗（双重）</strong>：(1) 该负债分类正是 FY2024
+被点名的<strong>重大缺陷 (material weakness)</strong> 之一——"controls
+over the inputs and assumptions used in the valuation of the earnout
+liability and information utilized to classify awards as either equity
+or liability"。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm">2025-04-02
+4.01 8-K (d)项</a>；(2) 该负债的 FV
+重估是历年净利润<strong>最大的非经营扰动源</strong>（FY2022 +$121.7M
+"收益"），见 5.7 与 档案16。</li>
+</ul>
+<hr />
+<h2 id="53-折旧--摊销-depreciation--amortization">5.3 折旧 / 摊销
+(Depreciation &amp; Amortization)</h2>
+<h3 id="531-折旧--直线法ppe-极轻-fabless">5.3.1 折旧 — 直线法，PP&amp;E
+极轻 (fabless)</h3>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th style="text-align: right;">折旧费用 (Depreciation expense,
+US$M)</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2021</td>
+<td style="text-align: right;">0.4（四十万美元）</td>
+<td>★ FY2022 10-K L1315</td>
+</tr>
+<tr>
+<td>FY2022</td>
+<td style="text-align: right;">1.0（一百万美元）</td>
+<td>★ FY2022 10-K L1315</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td style="text-align: right;">2.2（二百二十万美元）</td>
+<td>★ FY2023 10-K L1085</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td style="text-align: right;">3.0（三百万美元）</td>
+<td>★ FY2024 10-K L1137</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td style="text-align: right;">3.5（三百五十万美元）</td>
+<td>★ FY2025 10-K L1135</td>
+</tr>
+</tbody>
+</table>
+<p>→ 直线法、按估计使用年限折旧。折旧绝对额微小（FY2025 PP&amp;E
+净额仅约 $9.8M），印证 <strong>fabless
+轻资产模型</strong>——折旧不是利润操纵的杠杆点。✅
+档案15（重资产专题）不触发。</p>
+<h3 id="532-无形资产摊销--genesic-收购的余波">5.3.2 无形资产摊销 —
+GeneSiC 收购的余波</h3>
+<p>GeneSiC（2022-08-15 收购，对价
+$246.2M）带来的无形资产，按直线法分类摊销，<strong>估计寿命 4–15
+年</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>无形资产类别 (FY2025)</th>
+<th style="text-align: right;">成本 (US$K)</th>
+<th style="text-align: right;">累计摊销 (US$K)</th>
+<th style="text-align: right;">净值 (US$K)</th>
+<th>寿命</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trade Names</td>
+<td style="text-align: right;">900</td>
+<td style="text-align: right;">(900)</td>
+<td style="text-align: right;">0</td>
+<td>2 年</td>
+<td>★ FY2025 10-K L1192</td>
+</tr>
+<tr>
+<td>Developed Technology</td>
+<td style="text-align: right;">54,677</td>
+<td style="text-align: right;">(44,741)</td>
+<td style="text-align: right;">9,936</td>
+<td>4–10 年</td>
+<td>★ 同</td>
+</tr>
+<tr>
+<td>Patents</td>
+<td style="text-align: right;">34,900</td>
+<td style="text-align: right;">(8,294)</td>
+<td style="text-align: right;">26,606</td>
+<td>5–15 年</td>
+<td>★ 同</td>
+</tr>
+<tr>
+<td>Customer Relationships</td>
+<td style="text-align: right;">24,300</td>
+<td style="text-align: right;">(8,201)</td>
+<td style="text-align: right;">16,099</td>
+<td>10 年</td>
+<td>★ 同</td>
+</tr>
+<tr>
+<td>Non-Competition Agreements</td>
+<td style="text-align: right;">1,900</td>
+<td style="text-align: right;">(1,283)</td>
+<td style="text-align: right;">617</td>
+<td>5 年</td>
+<td>★ 同</td>
+</tr>
+<tr>
+<td>Other</td>
+<td style="text-align: right;">658</td>
+<td style="text-align: right;">(658)</td>
+<td style="text-align: right;">0</td>
+<td>5 年</td>
+<td>★ 同</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>117,335</strong></td>
+<td style="text-align: right;"><strong>(64,077)</strong></td>
+<td style="text-align: right;"><strong>53,258</strong></td>
+<td>—</td>
+<td>★ 同</td>
+</tr>
+</tbody>
+</table>
+<p><strong>年度摊销额</strong>：FY2022 $6.9M（仅含 GeneSiC 收购后 4.5
+个月）→ FY2023/24/25 稳定在 <strong>$18.8–18.9M/年</strong>（$18,820 /
+$18,926 / $18,937 thousand）。★ 各 10-K 损益表。</p>
+<blockquote>
+<p>◆ <strong>取证观察</strong>：摊销额从 FY2022 的 $6.9M 跳升至 FY2023
+的 $18.8M（×2.7），单纯因 FY2022 只含部分年度。此后高度稳定 →
+纯属正常摊销，<strong>无加速、无减值（goodwill 从未减值，FV&gt;carrying
+测试于 9/30/25 通过）</strong>。✅ 这条曲线本身干净，但它每年吞掉约
+$18.9M 利润，是营业亏损的结构性拖累。</p>
+</blockquote>
+<hr />
+<h2
+id="54-资本化-vs-费用化-capitalize-vs-expense--fabless-的全费用化">5.4
+资本化 vs 费用化 (Capitalize vs. Expense) — fabless 的"全费用化"</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>NVTS 处理</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>研发 (R&amp;D)</strong></td>
+<td><strong>全额费用化 (expensed as incurred)</strong>，不资本化</td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">FY2022
+10-K L818</a>；★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K L614/L1071</a></td>
+</tr>
+<tr>
+<td><strong>资本化利息 (Capitalized interest)</strong></td>
+<td><strong>无</strong>（无在建工程、无借款）</td>
+<td>▽（无任何 capitalized interest 披露 + 零债务）</td>
+</tr>
+<tr>
+<td><strong>广告费</strong></td>
+<td>费用化（计入 SG&amp;A），FY2022 仅 $0.1M</td>
+<td>★ FY2022 10-K L1281</td>
+</tr>
+<tr>
+<td><strong>销售佣金</strong></td>
+<td>实务简化 (practical expedient)：发生即费用化（摊销期 &lt; 1
+年）</td>
+<td>★ FY2025 10-K L994</td>
+</tr>
+<tr>
+<td><strong>库存中的研发用料</strong></td>
+<td>仅当<strong>已确立替代未来用途</strong>时才资本化为 supplies
+inventory；否则费用化</td>
+<td>★ FY2025 10-K Note 2 L1009</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>"Costs related to research, design and development of our products
+are <strong>expensed as incurred</strong>." ★ FY2025 10-K L614。</p>
+</blockquote>
+<p><strong>会计取证含义</strong>：</p>
+<ul>
+<li>NVTS 是 fabless（无晶圆厂），无 PP&amp;E 资本化空间，无 capitalized
+interest——<strong>几乎没有"把费用藏进资产负债表"的会计弹性</strong>。这一点是中性偏正面：利润操纵的资本化手法在此基本不可用。✅</li>
+<li>但反面是：R&amp;D 全费用化 + 高 SBC（详见 5.5），使营业亏损在 GAAP
+上"看上去"很大；这与档案16
+的"剥离测试"互为镜像——真实经营亏损靠的是规模不足，而非会计藏匿。</li>
+</ul>
+<hr />
+<h2 id="55-cogs--rd--sga-三费拆解-by-year">5.5 COGS / R&amp;D / SG&amp;A
+三费拆解 (by year)</h2>
+<p><strong>损益表三费（US$ thousands，GAAP）</strong> ★ 各年 10-K：</p>
+<table>
+<thead>
+<tr>
+<th>行项</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net revenues</td>
+<td style="text-align: right;">37,943</td>
+<td style="text-align: right;">79,456</td>
+<td style="text-align: right;">83,302</td>
+<td style="text-align: right;">45,916</td>
+<td>★</td>
+</tr>
+<tr>
+<td><strong>Cost of revenues</strong>（不含无形摊销）</td>
+<td style="text-align: right;">25,996</td>
+<td style="text-align: right;">48,392</td>
+<td style="text-align: right;">54,963</td>
+<td style="text-align: right;">31,668</td>
+<td>★ FY2025 L634/L855</td>
+</tr>
+<tr>
+<td>　占营收 % ◆</td>
+<td style="text-align: right;">68.5%</td>
+<td style="text-align: right;">60.9%</td>
+<td style="text-align: right;">66.0%</td>
+<td style="text-align: right;">69.0%</td>
+<td>◆</td>
+</tr>
+<tr>
+<td>Gross profit ◆</td>
+<td style="text-align: right;">11,947</td>
+<td style="text-align: right;">31,064</td>
+<td style="text-align: right;">28,339</td>
+<td style="text-align: right;">14,248</td>
+<td>◆</td>
+</tr>
+<tr>
+<td>　Gross margin % ◆</td>
+<td style="text-align: right;">31.5%</td>
+<td style="text-align: right;">39.1%</td>
+<td style="text-align: right;">34.0%</td>
+<td style="text-align: right;">31.0%</td>
+<td>◆</td>
+</tr>
+<tr>
+<td><strong>R&amp;D</strong></td>
+<td style="text-align: right;">50,318</td>
+<td style="text-align: right;">68,825</td>
+<td style="text-align: right;">76,002</td>
+<td style="text-align: right;">49,830</td>
+<td>★ FY2025 L636/L857</td>
+</tr>
+<tr>
+<td>　占营收 % ◆</td>
+<td style="text-align: right;"><strong>132.6%</strong></td>
+<td style="text-align: right;">86.6%</td>
+<td style="text-align: right;">91.2%</td>
+<td style="text-align: right;"><strong>108.5%</strong></td>
+<td>◆</td>
+</tr>
+<tr>
+<td><strong>SG&amp;A</strong></td>
+<td style="text-align: right;">78,353</td>
+<td style="text-align: right;">61,551</td>
+<td style="text-align: right;">62,863</td>
+<td style="text-align: right;">35,196</td>
+<td>★ FY2025 L637/L858</td>
+</tr>
+<tr>
+<td>　占营收 % ◆</td>
+<td style="text-align: right;"><strong>206.5%</strong></td>
+<td style="text-align: right;">77.5%</td>
+<td style="text-align: right;">75.5%</td>
+<td style="text-align: right;">76.7%</td>
+<td>◆</td>
+</tr>
+<tr>
+<td>Amort. of intangibles</td>
+<td style="text-align: right;">6,913</td>
+<td style="text-align: right;">18,820</td>
+<td style="text-align: right;">18,926</td>
+<td style="text-align: right;">18,937</td>
+<td>★</td>
+</tr>
+<tr>
+<td>Restructuring &amp; impairment</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1,223</td>
+<td style="text-align: right;">18,049</td>
+<td>★ FY2025 L639</td>
+</tr>
+<tr>
+<td><strong>Loss from operations</strong></td>
+<td style="text-align: right;">(123,637)</td>
+<td style="text-align: right;">(118,132)</td>
+<td style="text-align: right;">(130,675)</td>
+<td style="text-align: right;">(107,764)</td>
+<td>★</td>
+</tr>
+</tbody>
+</table>
+<p><strong>三费拆解的取证要点</strong>：</p>
+<ol type="1">
+<li><strong>R&amp;D 占营收常年 &gt;85%，FY2022/FY2025 甚至
+&gt;100%</strong> ◆ — 这是 pre-revenue 式烧钱结构。FY2025 R&amp;D $49.8M
+同比 −34%，主因：SBC 降 $10.7M（含 LTIP 转回 $4.2M）+ 裁员省 $10.1M +
+一次性项目消失。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K L660</a></li>
+<li><strong>SG&amp;A FY2022 高达 $78.4M（占营收 206%）</strong> —
+主因巨额 SBC（FY2022 总 SBC $63.3M）。FY2025 SG&amp;A 降至
+$35.2M（−44%），主因 SBC 降 $17.8M（含创始管理层离职触发 <strong>−$12.6M
+LTIP 转回</strong>）+ 坏账 $7.5M 不再发生，但被 <strong>CEO
+过渡与治理成本 +$4.0M</strong> 部分抵消。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K L662</a></li>
+<li><strong>COGS（毛利率）波动</strong>：FY2024 含 <strong>$5.0M
+库存减值</strong>（分销商 A 终止），剔除后毛利率更高；FY2025
+因该减值不再发生而 COGS 同比 −42%。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K L656</a></li>
+<li>⚠️ <strong>关键提醒</strong>：FY2025 三费的"改善"很大程度来自
+<strong>SBC 转回（−$16.5M LTIP 因创始人离职）</strong>
+这一<strong>一次性、非经营</strong>性质的会计转回，而非真实成本结构优化。剔除后
+underlying 经营仍深度亏损（详见 档案16 剥离测试）。</li>
+</ol>
+<pre><code>ASCII 图 5-A：三费占营收比例（%，越高越烧钱）
+                  0%      50%     100%    150%    200%
+FY2022 COGS  ▓▓▓▓▓▓▓ 68.5
+FY2022 R&amp;D   ▓▓▓▓▓▓▓▓▓▓▓▓▓ 132.6  ←研发 &gt; 营收
+FY2022 SG&amp;A  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 206.5  ←SG&amp;A 是营收两倍 (SBC 膨胀)
+FY2023 COGS  ▓▓▓▓▓▓ 60.9
+FY2023 R&amp;D   ▓▓▓▓▓▓▓▓ 86.6
+FY2023 SG&amp;A  ▓▓▓▓▓▓▓ 77.5
+FY2024 COGS  ▓▓▓▓▓▓ 66.0
+FY2024 R&amp;D   ▓▓▓▓▓▓▓▓▓ 91.2
+FY2024 SG&amp;A  ▓▓▓▓▓▓▓ 75.5
+FY2025 COGS  ▓▓▓▓▓▓▓ 69.0
+FY2025 R&amp;D   ▓▓▓▓▓▓▓▓▓▓ 108.5  ←营收腰斩后研发又&gt;营收
+FY2025 SG&amp;A  ▓▓▓▓▓▓▓ 76.7
+                  └ 解读：营收规模根本不足以覆盖固定研发/SG&amp;A，
+                    任何&quot;盈利&quot;只能来自非经营 FV 收益 (见 档案16)</code></pre>
+<hr />
+<h2 id="56-激进度评分-aggressiveness-scoring--12-维度2激进--2保守">5.6
+激进度评分 (Aggressiveness Scoring) — 12 维度，−2(激进) ~ +2(保守)</h2>
+<blockquote>
+<p>评分约定：<strong>+2 = 高度保守 / +1 = 偏保守 / 0 = 中性·行业惯例 /
+−1 = 偏激进 / −2 = 高度激进</strong>。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>维度</th>
+<th style="text-align: center;">评分</th>
+<th>依据（★ SEC）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>收入确认时点</td>
+<td style="text-align: center;"><strong>−1</strong></td>
+<td>sell-in at shipment（发货即确认），叠加单一分销商 46% 集中 →
+渠道塞货结构性风险（无证据但需监控）★ FY2025 Note 2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>退货/可变对价</td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td>仅有限 stock
+rotation，按历史率估计，称"insignificant"——行业常见，但无独立准备金
+★</td>
+</tr>
+<tr>
+<td>3</td>
+<td>递延收入运用</td>
+<td style="text-align: center;"><strong>−1</strong></td>
+<td>FY2023 $10.95M 预收脉冲 → FY2024 全额释放，制造跨期收入节奏 ⚠️
+★</td>
+</tr>
+<tr>
+<td>4</td>
+<td>R&amp;D 资本化</td>
+<td style="text-align: center;"><strong>+2</strong></td>
+<td>全额费用化，零资本化 → 最保守 ★</td>
+</tr>
+<tr>
+<td>5</td>
+<td>资本化利息</td>
+<td style="text-align: center;"><strong>+1</strong></td>
+<td>无（fabless + 零债务）★</td>
+</tr>
+<tr>
+<td>6</td>
+<td>折旧政策</td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td>直线法、寿命合理、绝对额微小 ★</td>
+</tr>
+<tr>
+<td>7</td>
+<td>无形资产摊销</td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td>直线法 4–15 年，无加速也无延长，稳定 ★</td>
+</tr>
+<tr>
+<td>8</td>
+<td>商誉减值</td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td>$163.2M 商誉从未减值；9/30/25 FV&gt;carrying
+测试通过，但<strong>单一报告单元</strong>判断曾是 MW ⚠️ ★</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Earnout 负债 FV 计量</td>
+<td style="text-align: center;"><strong>−1</strong></td>
+<td>Monte Carlo 估值（输入主观），是 CAM 兼 MW；FV 摆动主导净利润 ★</td>
+</tr>
+<tr>
+<td>10</td>
+<td>SBC 处理（尤其 LTIP 转回）</td>
+<td style="text-align: center;"><strong>−1</strong></td>
+<td>FY2025 −$16.5M 转回美化费用线，源于创始人离职而非经营改善 ⚠️ ★</td>
+</tr>
+<tr>
+<td>11</td>
+<td>重组/减值列报</td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td>$18.0M 重组单列，分类清晰；但其"美化后续"效应需在剥离测试还原 ★</td>
+</tr>
+<tr>
+<td>12</td>
+<td>关联方/权益法</td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td>13.1% 权益法投资，2024-10 由 ASC321 转 ASC323 触发 +$3.9M
+重估收益（一次性）★</td>
+</tr>
+</tbody>
+</table>
+<p><strong>综合激进度评分</strong> ◆：12 项合计 = <strong>−2
+分</strong>（区间 −24 ~ +24）。</p>
+<p>→ <strong>定调</strong>：NVTS
+会计政策<strong>整体不算"做账激进"</strong>——R&amp;D/资本化端高度保守（fabless
+决定了几乎没有藏费用空间），真正的"激进/扰动"集中在 <strong>②收入
+sell-in 时点、③递延收入跨期、⑨ earnout FV 计量、⑩ SBC
+转回</strong>这四处与<strong>估值/公允价值/股份支付</strong>相关的判断上。这恰好与该公司<strong>重复出现的内部控制重大缺陷（journal
+entries、earnout
+valuation、SBC、segment/reporting-unit）<strong>高度重叠（详见
+档案14）。⚠️
+即：风险不在"刻意做高利润"，而在</strong>控制薄弱导致的计量可靠性</strong>，以及<strong>非经营
+FV 项目把真实经营亏损掩盖</strong>（档案16）。</p>
+<hr />
+<h2 id="57-关键假设敏感性-key-assumption-sensitivity">5.7 关键假设敏感性
+(Key-Assumption Sensitivity)</h2>
+<p>管理层自列的关键估计（FY2025 10-K Note 2 / Critical
+Estimates，L983）：(i) 应收回收性；(ii) 存货跌价；(iii)
+长期资产寿命；(iv) 税务资产/负债；(v) 无形资产可回收性；(vi) SBC；(vii)
+应计费用；(viii) 收入确认；<strong>(ix) earnout
+liability</strong>。★</p>
+<h3
+id="571-存货--fy2023fy2025-连续被列为关键审计事项-critical-audit-matter">5.7.1
+存货 = FY2023–FY2025 连续被列为关键审计事项 (Critical Audit Matter)</h3>
+<blockquote>
+<p>"We identified the <strong>valuation of inventory as a critical audit
+matter</strong>. Subjective auditor judgment was required to evaluate
+the expected demand inclusive of sales forecasts used within the
+valuation of inventory as such forecasts represented subjective
+determinations of future market conditions." ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K, CAM, L768–L773</a></p>
+</blockquote>
+<ul>
+<li>FY2025 存货账面 <strong>$13.3M</strong>，按 <strong>成本(FIFO)
+与可变现净值孰低</strong> 计量。★ L769。</li>
+<li>敏感变量：<strong>预期需求/销售预测 (expected demand / sales
+forecasts)</strong> — 在营收 FY2025 −44.9%、FY2026Q1 −38.7%
+的塌缩背景下，"未来需求"假设极度脆弱。</li>
+<li>历史已兑现的减值：FY2024 因分销商 A 终止，<strong>$5.0M
+库存减值</strong> + $1.7M R&amp;D 项目放弃。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K L1388</a></li>
+<li>▽ <strong>敏感性方向</strong>：若 Navitas 2.0
+转型期需求预测继续下修，存货减值可能再现（管理层在风险因素中明言"excess
+inventory that must be scrapped"，针对 TSMC GaN 退出的 buffer 备货）。★
+FY2025 Item 1A L379。</li>
+</ul>
+<h3 id="572-earnout-负债--fy2025-关键审计事项第二个-cam">5.7.2 Earnout
+负债 = FY2025 关键审计事项（第二个 CAM）</h3>
+<blockquote>
+<p>"We identified the assessment of the Company's valuation of the
+earnout liability as a critical audit matter. Complex auditor judgment,
+and specialized skills and knowledge, were required to evaluate the
+<strong>volatility</strong> in the valuation model." ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K CAM, L776–L777</a></p>
+</blockquote>
+<ul>
+<li>估值法：<strong>Monte Carlo 20,000 次模拟</strong>；核心敏感输入 =
+<strong>股价、波动率 (volatility)、无风险利率、期限</strong>。★
+L735/L775。</li>
+<li>敏感性极强：FV 从 FY2024 末 $1.18/股 → FY2025 末
+$2.33/股，使负债增加、产生 <strong>$12.4M 损失</strong>；反之 FY2022
+股价 $16.09→$1.47 使负债缩水、产生 <strong>+$121.7M "收益"</strong>（见
+档案16）。★ L670。</li>
+<li>→
+<strong>这是全公司净利润敏感性最高的单一假设</strong>：股价每一档波动直接放大/缩小一笔可达九位数（百万级
+~ 亿级）的非现金损益。</li>
+</ul>
+<pre><code>ASCII 图 5-B：两大关键审计事项 (CAM) 的敏感性传导
+┌─────────────────────────────────────────────────────────┐
+│ CAM-1 存货估值 ($13.3M)                                    │
+│   关键假设：未来需求 / 销售预测  ──(营收 −45% 下修)──▶ 减值风险↑ │
+│   已兑现：FY2024 $5.0M write-down (分销商A终止)            │
+├─────────────────────────────────────────────────────────┤
+│ CAM-2 Earnout 负债 ($22.6M, 9.71M 股, Monte Carlo)        │
+│   关键假设：股价 / 波动率 ─────────────────────────┐      │
+│        股价 $16.09→$1.47 (FY22) ▶ 负债↓ ▶ +$121.7M &quot;收益&quot; │  │
+│        股价 $1.18→$2.33 (FY25)  ▶ 负债↑ ▶ −$12.4M  损失   │  │
+│        └─ 直接灌入 Other income, 主导 GAAP 净利润 ◀──────┘  │
+└─────────────────────────────────────────────────────────┘</code></pre>
+<hr />
+<h2 id="来源-sources">来源 (Sources)</h2>
+<ul>
+<li>★ FY2022 10-K（2023-04-03）：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176923000049/nvts-20221231.htm</a>
+— Note 2/7/18，earnout 条款（L929–935,
+L1551–1564），三费政策（L818/L820），税务（L851/L875），折旧（L1315），无形摊销（L1368–1370）</li>
+<li>★ FY2023 10-K（2024-03-06）：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000024/nvts-20231231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176924000024/nvts-20231231.htm</a>
+— 递延收入 $10.953M（L804/L997），现金流（L665），折旧（L1085）</li>
+<li>★ FY2024 10-K（2025-03-19）：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm</a>
+— 递延收入释放（L698/L816/L922），折旧（L1137），分部 ASU
+2023-07（L973/L1064/L1071），权益法（L581/L1578）</li>
+<li>★ FY2025 10-K（2026-02-27）：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm</a>
+— 收入政策（L991–997），CAM
+存货+earnout（L766–777），无形资产表（L1192），折旧（L1135），三费
+MD&amp;A（L656/L660/L662），earnout FV $22.6M（L775/L1163），重组
+$18.0M（L639/L665），ASU 2023-09（L1083），ASC842 租赁（L812/L829）</li>
+<li>★ 4.01 8-K（2025-04-02）earnout/SBC/segment 重大缺陷点名：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm</a></li>
+<li>内部整合：<code>data/research/NVTS/00_initial_impression.md</code>（Agent
+B/D 交叉核对）</li>
+</ul>
+</body>
+</html>

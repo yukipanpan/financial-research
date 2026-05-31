@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>逐年变更 + 换审计/ICFR 时间线 · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">逐年变更 + 换审计/ICFR 时间线 · NVTS</h1>
+</header>
+<h1 id="14--逐年变更侦测-year-over-year-changes-铁律6">14 — 逐年变更侦测
+(Year-over-Year Changes, 铁律6)</h1>
+<blockquote>
+<p><strong>Navitas Semiconductor Corp (NVTS, CIK
+1821769)</strong>。本文做"准则变更 / 业务重分类 /
+业务转型"三类逐年侦测，并以 <strong>换审计 ×2 全考据 +
+ICFR(内控)时间线</strong> 为核心——这是 NVTS 最具信号价值的红旗集群。
+来源等级：★ SEC 一手 · ◆ 计算 · ◇ 第三方 · ▽ 推断。单位双写（M=million
+百万 / B=billion 十亿）。Cross-check：✅/⚠️/❌。</p>
+</blockquote>
+<hr />
+<h2 id="141-会计准则变更-accounting-standard-changes">14.1 会计准则变更
+(Accounting-Standard Changes)</h2>
+<table>
+<thead>
+<tr>
+<th>准则</th>
+<th>内容</th>
+<th>NVTS 采用</th>
+<th>影响</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ASC 842</strong> Leases</td>
+<td>经营租赁入表（ROU 资产/租赁负债）</td>
+<td>2022 年（已采用）</td>
+<td>FY2025 ROU 资产 $5.166M、租赁负债（流动+非流动）合计约
+$5.6M——金额小，无追溯重述</td>
+<td>★ FY2025 10-K L812/L829</td>
+</tr>
+<tr>
+<td><strong>ASU 2023-07</strong> Segment Reporting (Topic 280)</td>
+<td>即便单一报告分部也须披露 CODM
+用于决策的分部损益度量、重大分部费用</td>
+<td><strong>FY2024 当期采用</strong></td>
+<td>仅增加披露；NVTS
+仍为<strong>单一报告分部</strong>，CODM（CEO）以合并净利润为分部损益度量</td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm">FY2024
+10-K L973/L1064/L1071</a></td>
+</tr>
+<tr>
+<td><strong>ASU 2023-09</strong> Income Taxes (Topic 740)</td>
+<td>增强税率调节表、已付税款披露</td>
+<td><strong>FY2025 当期、按未来适用法 (prospective) 采用</strong></td>
+<td>仅披露增强，无重述</td>
+<td>★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K L1083</a></td>
+</tr>
+<tr>
+<td>ASC 805 Business Combinations</td>
+<td>GeneSiC 收购采购法</td>
+<td>2022 年</td>
+<td>见 14.3</td>
+<td>★ FY2025 10-K L718</td>
+</tr>
+<tr>
+<td>ASC 323（由 ASC 321 转入）</td>
+<td>权益法</td>
+<td>2024-10 触发（13.1% + 董事提名权）</td>
+<td>触发 <strong>+$3.9M 重估收益</strong>（FY2024，一次性）；FY2025 转为
+<strong>−$1.1M</strong> 份额亏损</td>
+<td>★ FY2024 10-K L581/L1578</td>
+</tr>
+</tbody>
+</table>
+<p>✅
+<strong>结论</strong>：所有准则变更均为<strong>披露性/前瞻性采用</strong>，<strong>无任何追溯财务重述
+(no retrospective restatement)</strong>。这一点很关键——它把后面 14.4 的
+ICFR
+风暴与"财务数字是否被改"清楚切割开：<strong>控制有问题，但报表数字未被重述</strong>。</p>
+<hr />
+<h2 id="142-分部--重分类-segment--reclassification">14.2 分部 / 重分类
+(Segment &amp; Reclassification)</h2>
+<ul>
+<li><strong>历年始终为 1 个报告分部</strong> ★（FY2022→FY2025
+一致）。CODM = CEO（Gene Sheridan，至 2025-08
+离任前），以<strong>合并净利润</strong>为分部损益度量；产品级（GaN vs
+SiC）数据"内部可得但不用于绩效评估或资源分配"。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm">FY2024
+10-K L1071</a></li>
+<li>❌ <strong>推翻一个常见误解</strong>："Navitas 2.0"
+<strong>不是</strong>分部/口径重分类，而是一次<strong>重组
+(restructuring)</strong>（见 14.3）。仍是单一分部。</li>
+<li>⚠️ <strong>但</strong>："<strong>segment / reporting-unit
+determination</strong>"本身被列为<strong>重大缺陷 (material
+weakness)</strong>：</li>
+</ul>
+<blockquote>
+<p>"(e) The Company did not maintain effective controls over its
+<strong>determination of reportable segments</strong> for purposes of
+segment reporting and <strong>reporting units</strong> for purposes of
+goodwill." ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm">2025-04-02
+4.01 8-K, FY2023 MW (e)</a></p>
+</blockquote>
+<p>→ 即：分部本身是"1 个"，但<strong>公司连"如何确定它是 1
+个"的控制都被审计判定无效</strong>——这直接牵连商誉减值测试所依赖的
+reporting unit 划分（商誉 $163.2M
+从未减值，但其测试基础的控制曾失效）。</p>
+<hr />
+<h2 id="143-业务转型-business-transformation">14.3 业务转型 (Business
+Transformation)</h2>
+<h3 id="1431-genesic-并表-2022">14.3.1 GeneSiC 并表 (2022)</h3>
+<ul>
+<li>2022-08-15 收购 GeneSiC Semiconductor Inc.，对价
+<strong>$246.2M（约二亿四千六百万美元）</strong>，采购法（ASC 805）→
+商誉 <strong>$161.5M→$163.2M</strong>（从未减值），无形资产净额峰值
+$105.6M（FY2022）→ $53.3M（FY2025，正常摊销）。★ FY2025 10-K Note 6 /
+00_impression Agent B。</li>
+<li>⚠️ GeneSiC PPA（purchase price allocation）是 <strong>FY2022 NT 10-K
+晚报的导火索</strong>之一：需将一笔 pre-close
+付款从商誉<strong>重分类为薪酬费用 (comp expense)</strong>。★
+00_impression Agent B（NT 10-K 上下文）。</li>
+</ul>
+<h3 id="1432-navitas-20-重组-2025-q4">14.3.2 "Navitas 2.0" 重组 (2025
+Q4)</h3>
+<blockquote>
+<p>"During the fourth quarter of 2025, we have undertaken a strategic
+transformation ('Navitas 2.0 Restructuring Plan') … The fourth quarter
+2025 total restructuring expense and impairment charges incurred by us
+were <strong>$16.6 million</strong>." ★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K L573</a></p>
+</blockquote>
+<ul>
+<li>全年重组+减值 <strong>$18.0M（一千八百万美元，准确 $18,049
+thousand）</strong> = $16.6M（Navitas 2.0）+ $1.4M（2025 Restructuring
+Plan），其中含 <strong>$3.8M 非现金固定资产减值</strong>。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K L666/L1134</a></li>
+<li>四大动作：(1) 分销商精简 (distributor rationalization)、(2)
+资源重配、(3) 技术路线加速、(4) go-to-market 重构。★ L574。</li>
+<li><strong>方向</strong>：从 mobile/consumer（短生命周期）→ AI 数据中心
+/ 电网与能源 / 高性能计算 / 工业电气化（高功率、高毛利）。★
+L196/L572。</li>
+<li>员工数：FY2025 末仅约 <strong>190 人</strong>（叠加 2024 Q3
+以来的裁员）。★ FY2025 10-K L262。00_impression 记为"$18M+约19%
+裁员"。</li>
+</ul>
+<hr />
+<h2 id="144-逐年变更时间线--换审计-2-全考据--icfr-时间线">14.4
+逐年变更时间线 + 换审计 ×2 全考据 + ICFR 时间线</h2>
+<h3 id="1441-换审计-1--deloitte--moss-adams2023-07">14.4.1 换审计 #1 —
+Deloitte → Moss Adams（2023-07）</h3>
+<p><strong>8-K（4.01）：</strong> <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000124/i-20230719.htm">2023-07-25,
+i-20230719.htm</a> ★</p>
+<ul>
+<li><strong>谁</strong>：审计委员会经"评估与审查多家会计师事务所"后，2023-07-19
+解聘 <strong>Deloitte &amp; Touche LLP</strong>，聘任 <strong>Moss Adams
+LLP</strong>。</li>
+<li><strong>为何（公司口径）</strong>：是一次主动的"评估流程"结果（assessment
+and review of several accounting
+firms），<strong>非分歧驱动</strong>。</li>
+<li><strong>Deloitte 意见</strong>：FY2022/FY2021 报告<strong>无
+adverse/disclaimer，无 qualified/modified</strong>。</li>
+<li><strong>关键例外条款</strong>：声明无 Item 304(a)(1)(v)
+的"reportable events"——<strong>除了重大缺陷</strong>：
+<blockquote>
+<p>"except for the material weaknesses … related to (i) the lack of a
+sufficient number of trained professionals with technical accounting
+expertise … including revenue and stock-based compensation, and (ii)
+insufficient accounting resources to maintain appropriate segregation of
+duties, including to ensure <strong>journal entries are reviewed by
+personnel independent of the preparer</strong>." ★</p>
+</blockquote></li>
+<li>Deloitte 致 SEC 的同意函（Exhibit 16.1，2023-07-25）已附。无与
+Deloitte 的"disagreement"。</li>
+</ul>
+<blockquote>
+<p><strong>取证解读</strong>：从四大之一（Deloitte）换到区域所（Moss
+Adams）发生在<strong>重大缺陷悬而未决之时</strong>——这是降级换所
+(auditor downgrade)，红旗等级中等偏高。⚠️</p>
+</blockquote>
+<h3 id="1442-换审计-2--moss-adams--kpmg2025-0304">14.4.2 换审计 #2 —
+Moss Adams → KPMG（2025-03/04）</h3>
+<p><strong>8-K（4.01）：</strong> <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm">2025-04-02,
+i-20250327.htm</a> ★</p>
+<ul>
+<li><strong>谁</strong>：2025-03-27 审计委员会聘任 <strong>KPMG
+LLP</strong>、解聘 <strong>Moss Adams</strong>；2025-03-28 正式解聘 Moss
+Adams。</li>
+<li><strong>为何（公司口径）</strong>：未给具体理由，仍称无
+disagreement。</li>
+<li><strong>Moss Adams 意见</strong>：FY2024/FY2023 报告无
+adverse/disclaimer。</li>
+<li><strong>关键例外条款 — 这份 8-K
+罕见地完整列出了两年的重大缺陷清单：</strong>
+<ul>
+<li><strong>FY2023 MW</strong>（控制环境/风险评估/控制活动/监督四大 COSO
+组件不足）派生出：
+<ul>
+<li>(a) <strong>journal entries</strong>
+无独立复核即创建/复核/过账（影响"substantially all"账户）；</li>
+<li>(b) <strong>share-based payments</strong>（含 LTIP、earnout
+liability）控制无效；</li>
+<li>(c) <strong>license and release agreement</strong>
+会计控制无效；</li>
+<li>(d) <strong>earnout liability
+估值的输入与假设、以及权益/负债分类</strong>控制无效；</li>
+<li>(e) <strong>reportable segments / reporting units
+确定</strong>控制无效。</li>
+</ul></li>
+<li>公司称：除控制环境等 COSO 组件外，FY2023 的上述缺陷"<strong>已于
+2024-12-31 remediated</strong>"。</li>
+<li><strong>FY2024 MW</strong>（仍是四大 COSO 组件不足）派生出：
+<ul>
+<li>(a)
+现金流量表/损益表<strong>分类</strong>控制不足（无法准确区分经营/投资/筹资现金流；无法正确归类营业费用与权益法投资活动）；</li>
+<li>(b) 外部报告流程设计不当（R&amp;D
+资产、PP&amp;E、权益交易的识别/记录/披露）。</li>
+</ul></li>
+<li><strong>关键句</strong>：FY2024 的这些 MW "<strong>have not been
+remediated as of the date of this Current Report on Form
+8-K</strong>"（即截至 2025-04-02 仍未整改）。★</li>
+</ul></li>
+</ul>
+<blockquote>
+<p><strong>取证解读</strong>：从区域所（Moss
+Adams）换到四大（KPMG）发生在<strong>FY2024
+重大缺陷明确未整改之际</strong>。两次换所方向相反（先降级后升级），但都<strong>卡在重大缺陷上</strong>——三个会计年度、三家审计师、缺陷反复，这是
+H4 假设（控制红旗）的最强证据。⚠️⚠️</p>
+</blockquote>
+<h3
+id="1443-icfr内部控制时间线--自相矛盾的已整改--反转为否定意见">14.4.3
+ICFR(内部控制)时间线 — 自相矛盾的"已整改 → 反转为否定意见"</h3>
+<p>这是本案最戏剧化的一段：</p>
+<ol type="1">
+<li><strong>FY2022 10-K（2023-04-03）</strong>：披露重大缺陷（trained
+professionals 不足 + segregation of duties / journal entries）。</li>
+<li><strong>FY2023 10-K（2024-03-06）</strong>：原版 <strong>声称已
+remediated</strong>（管理层认定内控有效）。</li>
+<li><strong>FY2023 10-K/A（2024-07-23）— SUBSTANTIVE 修订</strong>：
+<ul>
+<li><strong>反转 (REVERSED)</strong> 此前"remediated"主张，改为
+<strong>adverse ICFR opinion（内控否定意见）</strong>；</li>
+<li>新增多项 MW：journal entries、earnout、segments/reporting
+units；</li>
+<li>⚠️ <strong>但无财务重述（no financial
+restatement）</strong>——只改内控结论与披露，不改数字。★ 00_impression
+Agent B；与 14.1 ✅ 一致（无追溯重述）。</li>
+</ul></li>
+<li><strong>FY2024 10-K（2025-03-19）</strong>：FY2023
+部分缺陷称已整改，但<strong>FY2024 又出现新
+MW</strong>（现金流/费用分类、外部报告流程）。★ 4.01 8-K 转述。</li>
+<li><strong>FY2025 10-K（2026-02-27）</strong>：管理层认定内控
+<strong>"effective"</strong>——但 <strong>⚠️ KPMG 未对内控出具 404(b)
+鉴证</strong>（管理层单方结论，无审计师 attestation）。★ 00_impression
+Agent E。</li>
+</ol>
+<blockquote>
+<p><strong>三个会计年度的 ICFR 结论</strong>：MW → 声称已整改 →
+<strong>反转为否定意见 + 新 MW（10-K/A）</strong> → 又有新 MW →
+"有效"但未经审计师鉴证。一条不收敛的曲线。</p>
+</blockquote>
+<h3 id="1444-nt-晚报-late-filing-notices">14.4.4 NT 晚报 (Late-Filing
+Notices)</h3>
+<table>
+<thead>
+<tr>
+<th>期间</th>
+<th>NT 表</th>
+<th>原因/上下文</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2022 10-K</td>
+<td>NT 10-K（2023-04-03）</td>
+<td>GeneSiC PPA 调整（pre-close 付款从商誉→薪酬费用）</td>
+<td>★ 目录 L44；00_impression</td>
+</tr>
+<tr>
+<td>FY2023 10-K</td>
+<td>NT 10-K（2024-03-01）</td>
+<td>通用延期</td>
+<td>★ 目录 L45</td>
+</tr>
+<tr>
+<td>Q1-2024 10-Q</td>
+<td>NT 10-Q（2024-05-13）</td>
+<td>通用延期</td>
+<td>★ 目录 L46</td>
+</tr>
+</tbody>
+</table>
+<p>→ 连续晚报叠加两份 10-K/A，与 ICFR 缺陷互为佐证。</p>
+<h3 id="1445-ascii-时间线换审计--icfr--晚报--10-ka">14.4.5 ASCII
+时间线（换审计 + ICFR + 晚报 + 10-K/A）</h3>
+<pre><code>年份 ──┬─ 审计师 ───────┬─ ICFR 结论 ───────────────┬─ 晚报/修订 ─────────────
+       │                 │                              │
+2022   │ Deloitte (Big4) │ MW: trained pros, JE/SoD     │ NT 10-K (PPA调整)
+       │                 │                              │ 10-K/A (Part III, 例行)
+       │                 │                              │
+2023 ──┼─ Deloitte → ────┤ 原版 10-K: 声称&quot;已整改&quot; ✓    │ NT 10-K
+07/19  │  Moss Adams     │           ↓                  │
+       │  (区域所·降级)   │  ┌──────────────────────┐  │
+2024 ──┤                 │  │ 10-K/A (07/23): 反转!  │  │ ★FY2023 10-K/A
+07/23  │                 │  │ → ADVERSE 内控否定意见 │←─┤   (SUBSTANTIVE)
+       │                 │  │ + 新MW: JE/earnout/seg │  │ NT 10-Q (Q1&#39;24)
+       │                 │  │ (无财务重述)            │  │
+       │                 │  └──────────────────────┘  │
+       │                 │  FY2024 10-K: 又新增 MW      │
+       │                 │  (CF/费用分类, 外部报告)      │
+       │                 │                              │
+2025 ──┼─ Moss Adams → ──┤ 4.01 8-K (04/02):            │ ★换所#2 8-K
+03/27  │  KPMG (Big4)    │ &quot;FY2024 MW 截至本报告日       │
+       │  (升级)          │  仍未整改&quot;                   │
+       │                 │                              │
+2026 ──┤ KPMG            │ FY2025 10-K: 管理层称&quot;有效&quot;   │
+02/27  │                 │ ⚠️但 KPMG 未做 404(b) 鉴证     │
+       └─────────────────┴──────────────────────────────┴─────────────────────
+   3 个财年 · 3 家审计师 · 缺陷反复 · 一次内控意见反转 · 终局&quot;有效&quot;但未鉴证</code></pre>
+<h3
+id="1446-重大缺陷复发矩阵-material-weakness-recurrence-matrix">14.4.6
+重大缺陷复发矩阵 (Material-Weakness Recurrence Matrix)</h3>
+<p>把两份 4.01 8-K 与各年 10-K Item 9A
+的缺陷逐条铺开，可见<strong>同一根源（COSO 四组件薄弱 +
+复杂/非常规交易能力不足）反复派生新缺陷</strong>，整改一项又冒出另一项：</p>
+<table>
+<thead>
+<tr>
+<th>重大缺陷 (MW)</th>
+<th style="text-align: center;">FY2022</th>
+<th style="text-align: center;">FY2023(原版)</th>
+<th style="text-align: center;">FY2023/A</th>
+<th style="text-align: center;">FY2024</th>
+<th style="text-align: center;">FY2025</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COSO 控制环境/风险评估/控制活动/监督不足</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">（声称已整改）</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">○</td>
+<td>★ 两份 4.01 8-K</td>
+</tr>
+<tr>
+<td>技术会计人才不足（收入、SBC、复杂交易）</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">（声称已整改）</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">○</td>
+<td>★ #1 8-K</td>
+</tr>
+<tr>
+<td>Segregation of duties / <strong>journal entries</strong>
+无独立复核</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">（声称已整改）</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">○</td>
+<td>★ #1+#2 8-K</td>
+</tr>
+<tr>
+<td><strong>Earnout liability</strong> 估值输入/假设 +
+权益/负债分类</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">（称已整改）</td>
+<td style="text-align: center;">○</td>
+<td>★ #2 8-K (d)</td>
+</tr>
+<tr>
+<td><strong>Share-based payments</strong>（LTIP/earnout）</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">（称已整改）</td>
+<td style="text-align: center;">○</td>
+<td>★ #2 8-K (b)</td>
+</tr>
+<tr>
+<td><strong>License and release agreement</strong> 会计</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">（称已整改）</td>
+<td style="text-align: center;">○</td>
+<td>★ #2 8-K (c)</td>
+</tr>
+<tr>
+<td><strong>Segments / reporting units</strong> 确定</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">（称已整改）</td>
+<td style="text-align: center;">○</td>
+<td>★ #2 8-K (e)</td>
+</tr>
+<tr>
+<td>现金流/营业费用<strong>分类</strong> + 权益法活动归类</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">○</td>
+<td>★ #2 8-K FY2024(a)</td>
+</tr>
+<tr>
+<td>外部报告流程设计（R&amp;D 资产/PP&amp;E/权益交易）</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;">○</td>
+<td>★ #2 8-K FY2024(b)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>图例：● = 当年存在；○ = 管理层称"有效"（FY2025，但 KPMG 未做 404(b)
+鉴证）；— = 未单列。</p>
+<p><strong>取证解读</strong>：(1) FY2023 原版称"已整改"，FY2023/A
+立刻反转并新增 4 项细分缺陷——说明<strong>整改主张不可靠</strong>；(2)
+FY2024 又长出 2
+项<strong>全新缺陷</strong>（现金流/费用分类、外部报告流程），且截至
+2025-04-02 "未整改"；(3) FY2025
+全部归零为"有效"，但<strong>无审计师鉴证背书</strong>——一条"按下葫芦浮起瓢"再到"无人复核的有效"的曲线。⚠️⚠️
+缺陷恰好覆盖了档案05/16
+里最敏感的会计判断（earnout、SBC、收入、分部）。</p>
+</blockquote>
+<h3 id="1447-sec-评论函背景-comment-letter-context-2023">14.4.7 SEC
+评论函背景 (Comment-Letter Context, 2023)</h3>
+<p>逐年变更不能脱离监管互动：2023 年 NVTS 经历过一轮 <strong>SEC staff
+评论函往来</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>文件</th>
+<th>性质</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023-02-22</td>
+<td>UPLOAD</td>
+<td>SEC staff 致公司的意见函</td>
+<td>★ 目录 L190</td>
+</tr>
+<tr>
+<td>2023-04-26</td>
+<td>CORRESP</td>
+<td>公司对 SEC 的回函</td>
+<td>★ 目录 L191</td>
+</tr>
+</tbody>
+</table>
+<p>→ 该 UPLOAD+CORRESP 对发生在 FY2022 10-K 晚报（2023-04-03）与换审计
+#1（2023-07）之间，时间上与 GeneSiC PPA 调整、重大缺陷披露同期。监管问询
++ 晚报 + MW + 半年后换所，构成 2023
+年一连串的会计/披露承压信号。▽（评论函具体议题未在本轮取证中逐字提取，标记为待深读项）。</p>
+<h3 id="1448-逐年变更主时间线综合">14.4.8 逐年变更主时间线（综合）</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>类别</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2022-08-15</td>
+<td>GeneSiC 收购 $246.2M（商誉 $163.2M）</td>
+<td>业务转型</td>
+<td>★ Note 6</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>采用 ASC 842 租赁</td>
+<td>准则</td>
+<td>★</td>
+</tr>
+<tr>
+<td>2023-04-03</td>
+<td>FY2022 10-K 晚报（NT）+ MW 披露</td>
+<td>控制</td>
+<td>★ 目录</td>
+</tr>
+<tr>
+<td>2023-07-19</td>
+<td><strong>换审计 #1：Deloitte → Moss Adams</strong></td>
+<td>审计</td>
+<td>★ 4.01 8-K</td>
+</tr>
+<tr>
+<td>2023-12/24-Q1</td>
+<td>FY2023 10-K + Q1'24 10-Q 晚报</td>
+<td>控制</td>
+<td>★</td>
+</tr>
+<tr>
+<td>2024-07-23</td>
+<td><strong>FY2023 10-K/A：内控意见反转为 adverse + 新 MW</strong></td>
+<td>控制</td>
+<td>★ 10-K/A</td>
+</tr>
+<tr>
+<td>2024（FY2024）</td>
+<td>采用 ASU 2023-07 分部披露；ASC 321→323 权益法（+$3.9M）</td>
+<td>准则</td>
+<td>★ FY2024 10-K</td>
+</tr>
+<tr>
+<td>2024-10</td>
+<td>13.1% 投资转权益法，重估 +$3.9M</td>
+<td>准则/转型</td>
+<td>★ L1578</td>
+</tr>
+<tr>
+<td>2024 末</td>
+<td>分销商 A 终止 → $5.0M 库存减值 + $7.5M 坏账 + $1.7M R&amp;D
+放弃</td>
+<td>业务</td>
+<td>★ FY2025 L1388</td>
+</tr>
+<tr>
+<td>2025-03-27</td>
+<td><strong>换审计 #2：Moss Adams → KPMG</strong>；FY2024 MW
+"未整改"</td>
+<td>审计/控制</td>
+<td>★ 4.01 8-K</td>
+</tr>
+<tr>
+<td>2025 Q2–Q3</td>
+<td>创始 COO/CTO Kinzer（5月）、创始 CEO
+Sheridan（8月）离任；活动股东和解</td>
+<td>治理</td>
+<td>★ 00_impression Agent C/E</td>
+</tr>
+<tr>
+<td>2025 Q4</td>
+<td><strong>Navitas 2.0 重组 $18.0M（含 $3.8M 减值），约19%
+裁员</strong></td>
+<td>业务转型</td>
+<td>★ FY2025 L573/L666</td>
+</tr>
+<tr>
+<td>2025（FY2025）</td>
+<td>采用 ASU 2023-09 税务披露（prospective）</td>
+<td>准则</td>
+<td>★ L1083</td>
+</tr>
+<tr>
+<td>2026-02-27</td>
+<td>FY2025 10-K：管理层称内控"有效"，KPMG 未做 404(b)</td>
+<td>控制</td>
+<td>★</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="来源-sources">来源 (Sources)</h2>
+<ul>
+<li>★ <strong>4.01 8-K #1（2023-07-25）</strong> Deloitte→Moss Adams：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000124/i-20230719.htm（含">https://www.sec.gov/Archives/edgar/data/1821769/000182176923000124/i-20230719.htm（含</a>
+FY2022/21 MW 例外条款、Deloitte 16.1 同意函）</li>
+<li>★ <strong>4.01 8-K #2（2025-04-02）</strong> Moss Adams→KPMG：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm（含">https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm（含</a>
+FY2023 五项 MW (a)-(e)、FY2024 两项 MW、"未整改"声明、Moss Adams 16.1
+同意函）</li>
+<li>★ FY2024 10-K：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176925000021/nvts-20241231.htm</a>
+— 单一分部（L973/L1071）、ASU
+2023-07（L1064）、权益法（L581/L1578）</li>
+<li>★ FY2025 10-K：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm</a>
+— Navitas 2.0 重组（L573/L574/L666）、$3.8M 减值（L1134）、ASU
+2023-09（L1083）、ASC842（L812/L829）、员工 190 人（L262）</li>
+<li>★ 过滤目录（晚报/10-K/A
+时间）：<code>data/processed/NVTS_filings_catalog_2023-2026.md</code>（L18–25,
+L41–48）</li>
+<li>内部整合：<code>data/research/NVTS/00_initial_impression.md</code>（Agent
+B/C/E + Part 3 H4 假设印证）</li>
+</ul>
+</body>
+</html>

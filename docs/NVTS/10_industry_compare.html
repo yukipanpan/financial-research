@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>行业横向对比（POWI/WOLF/ON） · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">行业横向对比（POWI/WOLF/ON） · NVTS</h1>
+</header>
+<h1 id="档案-10--行业横向对比深度">档案 10 — 行业横向对比（深度）</h1>
+<blockquote>
+<p>Navitas Semiconductor（Nasdaq: <strong>NVTS</strong>，CIK
+<strong>1821769</strong>）vs 功率半导体可比池。 本档案回答：<strong>把
+NVTS 放进同行里，它到底处在什么位置？</strong>
+核心结论：<strong>资本结构像「好学生」POWI，盈利质量像「反面教材」WOLF。</strong>
+数据截止 <strong>2026-05-29</strong>。标签：★ SEC XBRL/filing 直接 · ◆
+计算 · ◇ 第三方/IR · ▽ 推算。cross-check：✅/⚠️/❌。单位双写一次。</p>
+</blockquote>
+<hr />
+<h2 id="100-一页速读tldr">10.0 一页速读（TL;DR）</h2>
+<ul>
+<li><strong>可比池</strong>：NVTS（fabless GaN/SiC）vs
+<strong>POWI</strong>（fabless 功率 IC，盈利标杆）vs
+<strong>WOLF</strong>（SiC 纯玩家 IDM，2025 破产，反面教材）vs
+<strong>ON</strong>（规模化 IDM，◇）vs <strong>Infineon</strong>（综合
+IDM，◇）。</li>
+<li><strong>NVTS
+的双重身份</strong>：①<strong>资本结构端</strong>——fabless、零债务、净现金
+$237 million，跟 POWI 一样轻，远比 WOLF（约 $6.5 billion 债务 →
+破产）安全；②<strong>盈利质量端</strong>——毛利率 31%（POWI
+的一半）、<strong>研发吃掉 109% 营收</strong>、营收 −45%、经营巨亏，跟
+WOLF 一样难看。</li>
+<li><strong>铁律 4.3 合理性判断</strong>：NVTS 的「研发=109%
+营收、毛利仅 POWI
+一半」<strong>符合「营收太小、研发摊不薄的转型期小公司」逻辑，不是数据错误</strong>——但这正是它「靠资产负债表换时间」的本质。</li>
+</ul>
+<hr />
+<h2 id="101-可比池选择理由comparable-set-rationale">10.1
+可比池选择理由（comparable-set rationale）</h2>
+<p>选可比公司不能只看「都做半导体」，要看<strong>业务/材料/商业模式</strong>三层匹配，并刻意覆盖「正反样本」以定位
+NVTS。</p>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>Ticker / CIK</th>
+<th>为何入选</th>
+<th>类型角色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Navitas</strong></td>
+<td>NVTS / 1821769</td>
+<td>本体：fabless GaN 功率 IC + SiC</td>
+<td>被分析对象</td>
+</tr>
+<tr>
+<td><strong>Power Integrations</strong></td>
+<td>POWI / 0000833640</td>
+<td><strong>同为 fabless 功率半导体</strong>，且是 NVTS 自己点名的 GaN
+竞品；长期盈利</td>
+<td>🟢 <strong>「好学生」</strong>（盈利 fabless 标杆）</td>
+</tr>
+<tr>
+<td><strong>Wolfspeed</strong></td>
+<td>WOLF / 0000895419</td>
+<td><strong>SiC 纯玩家</strong>，与 NVTS 的 GeneSiC 直接对位；IDM
+重资产，2025 破产</td>
+<td>🔴 <strong>「反面教材」</strong>（SiC + 重资产 +
+债务的崩塌路径）</td>
+</tr>
+<tr>
+<td><strong>ON Semiconductor</strong></td>
+<td>ON</td>
+<td>规模化 IDM，GaN/SiC 竞品，营收量级 ~$7 billion</td>
+<td>🟡 IDM 规模锚（◇）</td>
+</tr>
+<tr>
+<td><strong>Infineon</strong></td>
+<td>IFX（德股）</td>
+<td>综合功率 IDM，NVTS 的头号点名竞品（且 2024-10 与 NVTS
+交叉授权）</td>
+<td>🟡 综合 IDM（◇，仅定性）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>NVTS 在 FY2025 10-K 自己点名竞品：GaN 侧 = <strong>Infineon、Power
+Integrations、TI、Innoscience、Renesas、EPC</strong>；SiC 侧 =
+<strong>Infineon、Wolfspeed、ON、ROHM、Qorvo、ST</strong>。★
+L246。可比池正是从这份官方竞品清单中选「数据可得 +
+角色鲜明」的代表。</p>
+</blockquote>
+<pre><code>可比池定位（商业模式 × 材料）
+                fabless(轻)                     IDM(自有厂,重)
+   ───────────────────────────────────────────────────────────
+   GaN 主    │  ★NVTS(GaN+SiC)   POWI🟢       │  Infineon, TI
+             │                                 │
+   SiC 主    │  (少有纯fabless SiC)            │  WOLF🔴  ON  ROHM  ST
+   ───────────────────────────────────────────────────────────
+   选样逻辑: POWI=同模式盈利样本; WOLF=同材料(SiC)崩塌样本; ON/IFX=规模IDM锚</code></pre>
+<hr />
+<h2 id="102-核心对比表sec-xbrl-优先-标注">10.2 核心对比表（SEC XBRL
+优先，★ 标注）</h2>
+<blockquote>
+<p>口径说明：NVTS = FY2025（截至 2025-12-31）；POWI = FY2025（截至
+2025-12-31）；WOLF = FY2025（财年 6 月制）；ON = 最近年度（◇
+公开值，量级核对）。POWI/WOLF 数字取自 <strong>SEC XBRL
+companyconcept</strong>（★），ON 为 ◇。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;"><strong>NVTS</strong> ★</th>
+<th style="text-align: right;"><strong>POWI</strong> ★</th>
+<th style="text-align: right;"><strong>WOLF</strong> ★</th>
+<th style="text-align: right;"><strong>ON</strong> ◇</th>
+<th>数据来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收 Revenue</td>
+<td style="text-align: right;"><strong>$45.9M</strong></td>
+<td style="text-align: right;"><strong>$443.5M</strong></td>
+<td style="text-align: right;"><strong>$757.6M</strong></td>
+<td style="text-align: right;">~$7,080M</td>
+<td>NVTS/POWI/WOLF=★XBRL；ON=◇</td>
+</tr>
+<tr>
+<td>营收 YoY</td>
+<td style="text-align: right;"><strong>−45%</strong> ◆</td>
+<td style="text-align: right;">~+6%</td>
+<td style="text-align: right;">−6% ▽</td>
+<td style="text-align: right;">~−14% ◇</td>
+<td>◆/◇</td>
+</tr>
+<tr>
+<td>毛利 Gross profit</td>
+<td style="text-align: right;">$14.2M ◆</td>
+<td style="text-align: right;"><strong>$241.6M</strong> ★</td>
+<td style="text-align: right;"><strong>−$121.6M</strong> ★⚠️</td>
+<td style="text-align: right;">~$3,200M ◇</td>
+<td>★/◇</td>
+</tr>
+<tr>
+<td>毛利率 GM%</td>
+<td style="text-align: right;"><strong>31.0%</strong> ◆</td>
+<td style="text-align: right;"><strong>54.5%</strong> ◆</td>
+<td style="text-align: right;"><strong>−16.0%</strong> ◆⚠️</td>
+<td style="text-align: right;">~45% ◇</td>
+<td>◆</td>
+</tr>
+<tr>
+<td>研发 R&amp;D</td>
+<td style="text-align: right;">$49.8M ★</td>
+<td style="text-align: right;"><strong>$101.1M</strong> ★</td>
+<td style="text-align: right;">重（SiC IDM）</td>
+<td style="text-align: right;">~$640M ◇</td>
+<td>★/◇</td>
+</tr>
+<tr>
+<td><strong>研发/营收</strong></td>
+<td style="text-align: right;"><strong>109%</strong> ◆⚠️</td>
+<td style="text-align: right;"><strong>22.8%</strong> ◆</td>
+<td style="text-align: right;">高</td>
+<td style="text-align: right;">~9% ◇</td>
+<td>◆</td>
+</tr>
+<tr>
+<td>经营利润 Op income</td>
+<td style="text-align: right;"><strong>−$107.8M</strong> ★</td>
+<td style="text-align: right;">盈利（正）★</td>
+<td style="text-align: right;">巨亏 ★</td>
+<td style="text-align: right;">盈利 ◇</td>
+<td>★/◇</td>
+</tr>
+<tr>
+<td>Capex 模式</td>
+<td style="text-align: right;">极轻（$1.5M）★</td>
+<td style="text-align: right;">轻（fabless）★</td>
+<td style="text-align: right;"><strong>极重</strong>（自建 SiC
+fab，数十亿）◇</td>
+<td style="text-align: right;">重（IDM）◇</td>
+<td>★/◇</td>
+</tr>
+<tr>
+<td>净债务 Net debt</td>
+<td style="text-align: right;"><strong>净现金 +$237M</strong> ★</td>
+<td style="text-align: right;">净现金 ◇</td>
+<td style="text-align: right;"><strong>~$6.5B 债务 → 破产</strong>
+◇</td>
+<td style="text-align: right;">有杠杆 ◇</td>
+<td>★/◇</td>
+</tr>
+<tr>
+<td>商业模式</td>
+<td style="text-align: right;"><strong>fabless</strong></td>
+<td style="text-align: right;"><strong>fabless</strong></td>
+<td style="text-align: right;"><strong>IDM</strong></td>
+<td style="text-align: right;">IDM</td>
+<td>★</td>
+</tr>
+</tbody>
+</table>
+<p><strong>XBRL 取数明细（★ 可复核）</strong>：</p>
+<ul>
+<li>POWI FY2025：营收 <strong>$443.5 million</strong>、毛利
+<strong>$241.6 million</strong>（→ GM 54.5% ◆）、研发 <strong>$101.116
+million</strong>（→ 研发/营收 22.8% ◆）。★ <a
+href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000833640/us-gaap/ResearchAndDevelopmentExpense.json">POWI
+XBRL R&amp;D</a>（2025-12-31 = 101,116,000，已 curl 核实）、<a
+href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000833640/us-gaap/Revenues.json">POWI
+Revenues</a>、<a
+href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000833640/us-gaap/GrossProfit.json">POWI
+GrossProfit</a>。</li>
+<li>WOLF FY2025：营收 <strong>$757.6 million</strong>、毛利
+<strong>−$121.6 million</strong>（→ GM −16.0%
+◆，<strong>毛利为负</strong>）。★ <a
+href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000895419/us-gaap/GrossProfit.json">WOLF
+XBRL GrossProfit</a>。</li>
+<li>NVTS FY2025：营收 <strong>$45.916 million</strong>、毛利
+<strong>$14.248 million</strong>（GM 31.0%）、研发 <strong>$49.830
+million</strong>、经营亏损 <strong>−$107.764 million</strong>。★ <a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">NVTS
+FY2025 10-K</a>。</li>
+<li>ON：营收/毛利率/研发为 ◇
+公开量级值，仅用于规模锚定，不参与精确判断。</li>
+</ul>
+<pre><code>毛利率对比（FY2025，% of revenue）
+POWI  ██████████████████████████  54.5%  🟢 盈利 fabless
+ON    █████████████████████       ~45%   🟡 规模 IDM (◇)
+NVTS  ███████████████             31.0%        ← 约 POWI 一半
+WOLF  ▼▼▼▼▼▼▼▼ −16.0% 🔴 毛利为负(卖一片亏一片) → 破产</code></pre>
+<pre><code>研发/营收对比（FY2025，研发占营收 %）—— NVTS 的烧钱本质
+NVTS  ████████████████████████████████████████████████████  109% ⚠️ 研发 &gt; 毛利
+POWI  ███████████ 22.8%
+ON    ████ ~9% (◇)</code></pre>
+<hr />
+<h2 id="103-powi--好学生--wolf--反面教材定位">10.3 「POWI = 好学生 /
+WOLF = 反面教材」定位</h2>
+<p>NVTS 的处境，用两个极端样本就能讲清。</p>
+<h3 id="green_circle-powi--nvts想成为的样子同模式能赚钱">🟢 POWI ——
+NVTS「想成为的样子」（同模式、能赚钱）</h3>
+<ul>
+<li><strong>同为 fabless
+功率半导体</strong>，轻资产、净现金、无破产风险——商业模式与 NVTS
+一致。</li>
+<li><strong>但 POWI 盈利</strong>：GM 54.5%、研发仅占营收
+22.8%、经营为正。POWI 证明了「fabless
+功率半导体<strong>可以</strong>赚钱」——前提是<strong>营收规模够大（$443.5
+million，约 NVTS 的 10×）</strong>，研发能摊薄。</li>
+<li><strong>NVTS 与 POWI 的差距 ＝ 规模差距</strong>：NVTS 营收只有 POWI
+的 ~1/10，于是同样的研发投入摊在小营收上，比例就爆到 109%。</li>
+</ul>
+<h3 id="red_circle-wolf--nvts最怕变成的样子同材料已崩塌">🔴 WOLF ——
+NVTS「最怕变成的样子」（同材料、已崩塌）</h3>
+<ul>
+<li><strong>WOLF 是 SiC 纯玩家 + IDM（自建晶圆厂）</strong>：与 NVTS 的
+GeneSiC 同赛道（SiC），但走了<strong>重资产 + 高债务</strong>路线。</li>
+<li><strong>结局</strong>：FY2025 营收 $757.6 million
+却<strong>毛利为负（−$121.6 million，GM
+−16%）</strong>——卖一片亏一片；叠加约 <strong>$6.5 billion
+债务</strong>，在 SiC 周期下行中<strong>于 2025 年破产</strong>（Chapter
+11）。</li>
+<li><strong>教训</strong>：SiC
+需求好的时候疯狂砸钱建厂，需求一软，重资产 +
+债务的双杀直接压垮公司。<strong>NVTS
+恰恰避开了这条路</strong>——fabless、零债务，所以 SiC
+下行周期不会要它的命。</li>
+</ul>
+<h3 id="nvts-的真实位置左手-powi-的骨架右手-wolf-的体质">NVTS
+的真实位置：左手 POWI 的骨架，右手 WOLF 的体质</h3>
+<pre><code>            盈利能力 高
+                │   ● POWI(fabless, GM55%, 盈利, 净现金)  ← NVTS 想成为
+                │   ● ON(IDM, GM45%, 盈利)
+   资本轻 ──────┼──────────────────────── 资本重
+   ● NVTS       │
+   (fabless,    │   ● WOLF(SiC IDM, GM−16%, $6.5B债务→破产)  ← NVTS 最怕变成
+    零债务,     │
+    但 GM31%,   │
+    研发109%,   │
+    营收−45%)   │
+            盈利能力 低</code></pre>
+<blockquote>
+<p><strong>一句话</strong>：NVTS <strong>资本结构像 POWI（fabless
+轻资产、净现金、零债务），盈利质量像
+WOLF（毛利薄、巨亏、营收下滑）</strong>。它的生存逻辑不是当前盈利，而是「<strong>用
+POWI 式的轻资产骨架 + $237 million 现金，熬过 WOLF 式的难看盈利期，赌 AI
+高功率收入接棒</strong>」。轻资产是它相对 WOLF
+的<strong>最大安全边际</strong>——不会因建厂债务破产（详见档案 04 现金桥
+/ 档案 15 fabless 命门）。</p>
+</blockquote>
+<hr />
+<h2 id="104-铁律-43--异常指标的合理性判断不是数据错是业务使然">10.4 铁律
+4.3 —— 异常指标的合理性判断（不是数据错，是业务使然）</h2>
+<p>铁律 4.3
+要求：遇到「离谱」的比率，先判断是<strong>数据错误</strong>还是<strong>业务逻辑使然</strong>，给出理由。</p>
+<h3 id="异常-1研发--109-营收powi-仅-228-合理-white_check_mark">异常
+1：研发 = 109% 营收（POWI 仅 22.8%）—— 合理 ✅</h3>
+<ul>
+<li><strong>数学</strong>：研发 $49.830 million ÷ 营收 $45.916 million =
+<strong>108.5% ≈ 109%</strong> ◆。✅ 数字本身核对无误。</li>
+<li><strong>为什么合理（业务逻辑）</strong>：①研发投入是<strong>绝对额</strong>（$49.8M），不会因营收腰斩而同步腰斩（研发团队、流片、PDK
+是固定/半固定投入）；②营收 FY2024→FY2025 腰斩
+−45%，<strong>分母崩了分子没同步崩</strong>，比率自然爆表；③NVTS
+正处转型期，<strong>主动为未来高功率产品砸研发</strong>，当期营收却在收缩——典型「青黄不接期小公司」特征。</li>
+<li><strong>结论</strong>：<strong>不是数据错误，是「营收太小 +
+转型期重研发」的真实写照。</strong>
+但这也精确量化了「烧钱」——研发本身就超过全部毛利（$49.8M &gt;
+$14.2M），意味着<strong>毛利完全不够养研发</strong>，必须靠资产负债表（现金）补。</li>
+</ul>
+<h3 id="异常-2毛利率-31仅-powi-的一半--合理-white_check_mark">异常
+2：毛利率 31%，仅 POWI 的一半 —— 合理 ✅</h3>
+<ul>
+<li><strong>为什么合理</strong>：①<strong>规模经济缺失</strong>——POWI
+营收 10×
+NVTS，固定制造支持成本摊薄得多；②<strong>产品组合</strong>——NVTS FY2025
+营收腰斩中混入存货减值（FY2024 有 $5.0M 存货减值拖累，见档案
+02）、转型期混合毛利波动（Q1'26 回升至 37.6% 因 mix）；③<strong>fabless
+议价权弱</strong>——小批量向 TSMC/X-Fab
+拿产能，单位晶圆成本高于大客户。</li>
+<li><strong>结论</strong>：31% vs 55%
+的差距<strong>主要是规模差距，不是商业模式差距</strong>（两家都是
+fabless）。随营收规模化，理论上毛利率有向 POWI
+靠拢的空间——但前提是<strong>营收先止跌回升</strong>，而目前还在
+−39%（Q1'26）。</li>
+</ul>
+<h3 id="异常-3营收-45-却仍是净现金-237m--合理但要警惕来源-warning">异常
+3：营收 −45% 却仍是净现金 +$237M —— 合理但要警惕来源 ⚠️</h3>
+<ul>
+<li><strong>合理性</strong>：净现金不是经营赚来的，是<strong>2025 年
+$200 million 增发（ATM + PIPE）堆出来的</strong>（见档案
+04/14）。所以「营收崩 +
+净现金充裕」并存，逻辑自洽——<strong>现金是稀释买来的跑道，不是造血</strong>。</li>
+<li><strong>对比</strong>：POWI
+的净现金是<strong>盈利攒的</strong>，WOLF
+是<strong>借的（→破产）</strong>，NVTS
+是<strong>增发的（→稀释股东）</strong>。同样「有钱」，来源天差地别。</li>
+</ul>
+<hr />
+<h2 id="104b-单位经济与规模门槛推演解释-nvts-缺什么">10.4b
+单位经济与「规模门槛」推演（▽，解释 NVTS 缺什么）</h2>
+<p>把 NVTS 与 POWI
+并排做一次「如果营收回到某规模会怎样」的盈亏平衡直觉推演（▽
+推算，仅作量级判断，非预测）：</p>
+<table>
+<thead>
+<tr>
+<th>假设场景</th>
+<th style="text-align: right;">营收</th>
+<th style="text-align: right;">毛利@31% ◆</th>
+<th style="text-align: right;">研发(假设固定$49.8M)</th>
+<th style="text-align: right;">毛利−研发 ▽</th>
+<th>含 SG&amp;A 后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现状 FY2025</td>
+<td style="text-align: right;">$45.9M</td>
+<td style="text-align: right;">$14.2M</td>
+<td style="text-align: right;">$49.8M</td>
+<td style="text-align: right;"><strong>−$35.6M</strong></td>
+<td>仍巨亏（再减 SG&amp;A $35.2M + 摊销 $18.9M）</td>
+</tr>
+<tr>
+<td>翻倍</td>
+<td style="text-align: right;">~$92M</td>
+<td style="text-align: right;">~$28.5M</td>
+<td style="text-align: right;">$49.8M</td>
+<td style="text-align: right;">−$21.3M</td>
+<td>仍亏</td>
+</tr>
+<tr>
+<td>回到 FY2024 峰值</td>
+<td style="text-align: right;">$83.3M</td>
+<td style="text-align: right;">~$25.8M</td>
+<td style="text-align: right;">$49.8M</td>
+<td style="text-align: right;">−$24.0M</td>
+<td>仍亏</td>
+</tr>
+<tr>
+<td>4× 现状（接近 POWI 1/3）</td>
+<td style="text-align: right;">~$184M</td>
+<td style="text-align: right;">~$57M</td>
+<td style="text-align: right;">$49.8M</td>
+<td style="text-align: right;"><strong>+$7.2M</strong></td>
+<td>接近研发盈亏平衡</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>▽ 推演结论（粗）</strong>：在 31% 毛利率下，NVTS
+大约需要<strong>营收 4×
+现状（~$180M+）才能让毛利覆盖研发</strong>，再叠加
+SG&amp;A/摊销，<strong>盈亏平衡门槛更高</strong>。这定量解释了为什么「轻资产
+≠
+短期能盈利」——<strong>问题不在资产负债表，在收入规模太小，固定研发摊不薄</strong>。这正是
+NVTS 与 POWI 的本质差距（规模），也是它「赌 AI 收入接棒」的数学必要性。
+⚠️
+此为单点弹性推演（假设毛利率/研发不变），现实中规模化会同时改善毛利率（向
+POWI 靠拢）并可能抬高研发绝对额，仅供量级直觉，标 ▽。</p>
+</blockquote>
+<hr />
+<h2 id="104c-一张表看三条路">10.4c 一张表看「三条路」</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>POWI（活得好）🟢</th>
+<th>NVTS（赌未来）❓</th>
+<th>WOLF（已崩塌）🔴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>商业模式</td>
+<td>fabless</td>
+<td>fabless</td>
+<td>IDM(重资产)</td>
+</tr>
+<tr>
+<td>现金来源</td>
+<td><strong>盈利攒的</strong></td>
+<td><strong>增发稀释的</strong></td>
+<td><strong>借债借的</strong></td>
+</tr>
+<tr>
+<td>毛利率</td>
+<td>54.5%</td>
+<td>31.0%</td>
+<td>−16.0%</td>
+</tr>
+<tr>
+<td>营收趋势</td>
+<td>稳/微增</td>
+<td><strong>−45%</strong></td>
+<td>−6%</td>
+</tr>
+<tr>
+<td>债务</td>
+<td>净现金</td>
+<td><strong>零债务/净现金</strong></td>
+<td>$6.5B → 违约</td>
+</tr>
+<tr>
+<td>结局</td>
+<td>持续盈利</td>
+<td>待定（熬+赌）</td>
+<td>2025 破产</td>
+</tr>
+<tr>
+<td>对 NVTS 的镜鉴</td>
+<td>想成为（需放大规模）</td>
+<td>——</td>
+<td>已避开（靠零债务/fabless）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>收口</strong>：NVTS 走在 POWI 与 WOLF
+之间的「第三条路」——<strong>用 POWI 式轻资产骨架避开 WOLF
+式破产，但盈利质量暂时停在 WOLF
+区间</strong>。决定它最终归向哪边的，不是资产负债表（已经够安全），而是<strong>营收能否在现金耗尽前止跌并放大到盈亏平衡规模</strong>（见档案
+04 现金桥 ~3 年跑道、档案 18 论点）。</p>
+</blockquote>
+<hr />
+<h2 id="105-本档案小结">10.5 本档案小结</h2>
+<ol type="1">
+<li><strong>可比池</strong>：POWI（同模式盈利标杆）、WOLF（同材料崩塌教材）、ON/Infineon（规模
+IDM 锚），均出自 NVTS 自己的官方竞品清单。</li>
+<li><strong>核心对位</strong>：NVTS <strong>资本结构像
+POWI</strong>（fabless、零债务、净现金 $237M），<strong>盈利质量像
+WOLF</strong>（GM 31%、研发 109% 营收、营收 −45%、巨亏）。</li>
+<li><strong>铁律 4.3</strong>：研发=109% 营收、GM 仅 POWI
+一半，<strong>均为「营收太小 +
+转型期重研发」的真实业务结果，非数据错误</strong>——但精确量化了「毛利养不起研发、必须靠资产负债表补」的烧钱本质。</li>
+<li><strong>安全边际</strong>：fabless + 零债务是 NVTS 相对 WOLF
+的最大优势——SiC 周期下行不会要它的命；但能否赢，取决于营收止跌 + AI
+收入接棒（见档案 18）。</li>
+</ol>
+<hr />
+<h2 id="来源脚注本档案">来源脚注（本档案）</h2>
+<ul>
+<li>★ NVTS：<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm">FY2025
+10-K</a> 利润表（营收 45,916 / 毛利 14,248 / 研发 49,830 / 经营亏损
+107,764）、竞品清单（L246）。</li>
+<li>★ POWI XBRL：<a
+href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000833640/us-gaap/ResearchAndDevelopmentExpense.json">R&amp;D</a>（FY2025
+= $101.116M，已 curl 核实）、<a
+href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000833640/us-gaap/Revenues.json">Revenues</a>（$443.5M）、<a
+href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000833640/us-gaap/GrossProfit.json">GrossProfit</a>（$241.6M）。CIK
+0000833640。</li>
+<li>★ WOLF XBRL：<a
+href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000895419/us-gaap/GrossProfit.json">GrossProfit</a>（FY2025
+营收 $757.6M、毛利 −$121.6M）。CIK 0000895419。</li>
+<li>◇ ON /
+Infineon：公开年报量级值，仅作规模锚，不参与精确比率判断（明确标
+◇）。</li>
+<li>◆ 计算：GM% = 毛利/营收；研发/营收 = 49,830/45,916 = 108.5%；POWI GM
+= 241.6/443.5 = 54.5%、研发/营收 = 101.1/443.5 = 22.8%；WOLF GM =
+−121.6/757.6 = −16.0%。</li>
+</ul>
+</body>
+</html>

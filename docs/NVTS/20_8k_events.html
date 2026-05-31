@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>8-K 事件流时间线 · NVTS</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<p class="nav"><a href="index.html">↑ 本公司目录</a> · <a href="CHANGELOG.html">📜 更新日志</a> · <a href="../index.html">← 返回全部公司</a></p>
+<header id="title-block-header">
+<h1 class="title">8-K 事件流时间线 · NVTS</h1>
+</header>
+<h1 id="20--8-k-事件流--合同事件时间线20232026">20 — 8-K 事件流 +
+合同/事件时间线（2023→2026）</h1>
+<blockquote>
+<p>NVTS（Navitas Semiconductor Corp，CIK 1821769）。本页 = 7
+步深挖之「事件驱动 / deal-flow」专题。把 EDGAR 上 48 份 8-K
+中的高信号事件按时间轴排开，并<strong>解码两个被市场误读的事件：NVIDIA「合作」与
+PIPE</strong>。 标签：★ SEC 直接披露 · ◆ 计算 · ◇ 第三方/IR · ▽
+推算。单位双写。 主源：<a
+href="../../processed/NVTS_filings_catalog_2023-2026.md">NVTS_filings_catalog_2023-2026.md</a>（358
+filings 全量）；逐份 8-K 原文 URL 见下表。交叉引用：风险因素见
+<code>08_risk_factors.md</code>；综合判断见
+<code>01_synthesis.md</code>。 <strong>8-K Item 速记</strong>：1.01 =
+重大合同（有约束力）· 3.02 = 未注册股份发行 · 4.01 = 换审计 · 5.02 =
+高管/董事变动 · 5.03 = 章程/细则 · 7.01 = Reg FD（"furnished" 非
+"filed"）· <strong>8.01 =
+其他事件（无特定法律含义，常用于装"消息"）</strong>。</p>
+</blockquote>
+<hr />
+<h2 id="0-本页一句话">0. 本页一句话</h2>
+<p>NVTS 的 8-K
+事件流讲了一个<strong>比新闻稿冷峻得多</strong>的故事：<strong>两次换审计（4.01×2）+
+一个横跨 18 个月的高管离职簇（5.02×约 12 次）+
+一次活动维权和解（1.01+5.02+7.01）+ 靠 ATM/PIPE/S-3ASR
+三轮稀释续命</strong>——而被散户当成「转型成功」的 <strong>NVIDIA
+合作，其实只是一条 Item 8.01「其他事件」，且与一次 $50 million ATM
+增发捆绑在同一份 8-K 里披露</strong>。<strong>Item
+编号本身就是信息</strong>。</p>
+<hr />
+<h2 id="1-重大事件时间轴ascii">1. 重大事件时间轴（ASCII）</h2>
+<pre><code>2023        2024              2025                                   2026
+ │           │                 │                                      │
+ ▼           ▼                 ▼                                      ▼
+2023-07 ───── 换审计#1: Deloitte → Moss Adams (4.01) ★【缺陷列为&quot;reportable event&quot;例外】
+             2024-01 ── 高管变动簇起点 (5.02 ×2: 01-03 / 01-10)
+                        2024-09 ── 5.02
+                                2024-12 ── 5.02 (+ 7.01)
+                                  │
+2025-03-03 ── 5.03 章程修订
+2025-03-20 ── 1.01 ★【ATM 计划: Jefferies, S-3 货架】◀── 稀释引擎启动
+2025-04-02 ── 换审计#2: Moss Adams → KPMG (4.01) ★【&quot;FY24 缺陷 has NOT been remediated as of date of this report&quot;】
+2025-04-10 ── 5.03 章程修订
+2025-04-29 ── ★★ 维权和解 (1.01 + 5.02 + 7.01) ◀── Singh/SiCPower: 剥夺 CEO 董事长 + 创始 COO/CTO Kinzer 辞职 + Steering Committee
+2025-05-14 ── 5.02 (+7.01)
+2025-05-27 ── ★★ NVIDIA &quot;collaboration&quot; (8.01, **非 1.01**) ◀── 与 ATM 再加 $50M 捆绑同一 8-K!
+2025-07-29 ── 5.02/A (Kinzer 离职补充)
+2025-08-25 ── ★ 创始 CEO Sheridan 辞职 (5.02 +7.01) ◀── 新 CEO Allexandre
+2025-11-10 ── ★★ PIPE 私募 (1.01 + 3.02) ◀── 14,814,813 股 @ $6.75 = $100M gross, Needham, 投资者&quot;accredited&quot;未具名
+2025-11 ──── ★ GlobalFoundries 长期 GaN 战略合作（10-K 行 382 提及; 缓解 TSMC 退出）
+              │
+2026-02-24 ── 5.02
+2026-03-11 ── 5.02 (+7.01) ◀── 新 CFO Tonya Stevens（12 个月内第 3 个 C 级变动）
+2026-03-17 ── 5.02
+2026-04-13 ── 5.02
+2026-05-04 ── 5.02 (+7.01)
+2026-05-11 ── ★★ 1.01 + 8.01 + S-3ASR + 424B5 同日 ◀── 又一轮稀释（数据截止后）
+2026-05-22 ── 1.01 + 9.01 重大合同</code></pre>
+<blockquote>
+<p>读法：<strong>左侧密集的 5.02 簇 =
+管理层动荡的会计指纹</strong>；<strong>两个 4.01 =
+控制质量红旗</strong>；<strong>每个 1.01 几乎都与一次股份发行（3.02 /
+S-3 / 424B5）成对出现 = 融资节奏</strong>；<strong>8.01 = NVIDIA
+那种"消息但无约束"事件</strong>。</p>
+</blockquote>
+<hr />
+<h2 id="2-高信号-8-k-事件表chronological20232026">2. 高信号 8-K
+事件表（chronological，2023→2026）</h2>
+<table>
+<thead>
+<tr>
+<th>日期(filed)</th>
+<th>Items</th>
+<th>事件</th>
+<th>解码 / 为何重要</th>
+<th>原文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023-07-25</td>
+<td><strong>4.01</strong>, 9.01</td>
+<td>换审计#1 Deloitte→Moss Adams</td>
+<td>缺陷列为唯一"reportable event"例外；无 disagreement</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176923000124/i-20230719.htm">link</a></td>
+</tr>
+<tr>
+<td>2024-01-03</td>
+<td>5.02, 9.01</td>
+<td>高管/董事变动</td>
+<td>离职簇起点</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000003/i-20231227.htm">link</a></td>
+</tr>
+<tr>
+<td>2024-01-10</td>
+<td>5.02, 7.01, 9.01</td>
+<td>高管/董事变动</td>
+<td>—</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000006/i-20240109.htm">link</a></td>
+</tr>
+<tr>
+<td>2024-09-16</td>
+<td>5.02</td>
+<td>高管/董事变动</td>
+<td>—</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000111/i-20240910.htm">link</a></td>
+</tr>
+<tr>
+<td>2024-12-03</td>
+<td>5.02, 7.01, 9.01</td>
+<td>高管/董事变动</td>
+<td>—</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176924000133/i-20241126.htm">link</a></td>
+</tr>
+<tr>
+<td>2025-03-03</td>
+<td>5.03, 9.01</td>
+<td>章程/细则修订</td>
+<td>治理调整前奏</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000015/i-20250302.htm">link</a></td>
+</tr>
+<tr>
+<td>2025-03-20</td>
+<td><strong>1.01</strong>, 9.01</td>
+<td><strong>ATM 计划</strong>（Open Market Sale Agreement,
+Jefferies）</td>
+<td>稀释引擎启动；走 2023-02 的 S-3 货架</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000029/i-20250319.htm">link</a></td>
+</tr>
+<tr>
+<td>2025-04-02</td>
+<td><strong>4.01</strong>, 9.01</td>
+<td>换审计#2 Moss Adams→KPMG</td>
+<td>★「FY24 缺陷<strong>尚未整改</strong>」白纸黑字（见 §3）</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm">link</a></td>
+</tr>
+<tr>
+<td>2025-04-10</td>
+<td>5.03, 9.01</td>
+<td>章程/细则修订</td>
+<td>—</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000049/i-20250408.htm">link</a></td>
+</tr>
+<tr>
+<td>2025-04-29</td>
+<td><strong>1.01+5.02+7.01</strong>, 9.01</td>
+<td>★★ <strong>维权和解</strong>（Singh/SiCPower）</td>
+<td>见 §4 解码</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000053/i-20250423.htm">link</a></td>
+</tr>
+<tr>
+<td>2025-05-14</td>
+<td>5.02, 7.01, 9.01</td>
+<td>高管/董事变动</td>
+<td>—</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000076/i-20250508.htm">link</a></td>
+</tr>
+<tr>
+<td>2025-05-27</td>
+<td><strong>8.01</strong>, 9.01</td>
+<td>★★ <strong>NVIDIA 800V HVDC 合作</strong> + ATM 再 $50M</td>
+<td>见 §5 解码（<strong>8.01 非 1.01</strong>）</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828025027705/nvts-20250521.htm">link</a></td>
+</tr>
+<tr>
+<td>2025-07-29</td>
+<td>5.02 (8-K/A)</td>
+<td>Kinzer 离职补充</td>
+<td>维权和解的执行</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000167/nvts-20250508.htm">link</a></td>
+</tr>
+<tr>
+<td>2025-08-25</td>
+<td>5.02, 7.01, 9.01</td>
+<td>★ 创始 CEO Sheridan 辞职</td>
+<td>新 CEO Chris Allexandre</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000204/nvts-20250820.htm">link</a></td>
+</tr>
+<tr>
+<td>2025-11-10</td>
+<td><strong>1.01+3.02</strong>, 9.01</td>
+<td>★★ <strong>PIPE 私募 $100M</strong></td>
+<td>见 §6 解码</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465925109160/tm2530677d1_8k.htm">link</a></td>
+</tr>
+<tr>
+<td>2026-02-24</td>
+<td>5.02</td>
+<td>高管/董事变动</td>
+<td>—</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926019220/tm267059d1_8k.htm">link</a></td>
+</tr>
+<tr>
+<td>2026-03-11</td>
+<td>5.02, 7.01, 9.01</td>
+<td>★ 新 CFO Tonya Stevens</td>
+<td>12 个月内第 3 个 C 级变动</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926026385/tm268482d1_8k.htm">link</a></td>
+</tr>
+<tr>
+<td>2026-03-17</td>
+<td>5.02</td>
+<td>高管/董事变动</td>
+<td>—</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926029469/tm269070d1_8k.htm">link</a></td>
+</tr>
+<tr>
+<td>2026-04-13</td>
+<td>5.02, 9.01</td>
+<td>高管/董事变动</td>
+<td>—</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926042619/tm2611717d1_8k.htm">link</a></td>
+</tr>
+<tr>
+<td>2026-05-04</td>
+<td>5.02, 7.01, 9.01</td>
+<td>高管/董事变动</td>
+<td>—</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926054482/tm2613278d1_8k.htm">link</a></td>
+</tr>
+<tr>
+<td>2026-05-11</td>
+<td><strong>1.01+8.01</strong>, 9.01</td>
+<td>★ 重大合同 + S-3ASR + 424B5 同日</td>
+<td>又一轮稀释（数据截止后，未量化）</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926058734/tm2613239d3_8k.htm">link</a></td>
+</tr>
+<tr>
+<td>2026-05-22</td>
+<td><strong>1.01</strong>, 9.01</td>
+<td>重大合同</td>
+<td>待解析</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465926065731/tm2614473d1_8k.htm">link</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：2.02（业绩 PR，2025-02-24 / 2026-05-05）与纯 8.01/9.01 Reg-FD
+类列为 Tier 3，未入主表。124× Form 4 / 91× Form
+144（内部人交易）按信号抽样，未逐份登记。</p>
+</blockquote>
+<hr />
+<h2 id="3-解码-①两次换审计401fy2024-缺陷尚未整改的铁证">3. 解码
+①：两次换审计（4.01）——FY2024 缺陷「尚未整改」的铁证</h2>
+<p><strong>换审计#1（2023-07-25）</strong>：Deloitte → Moss Adams。8-K
+标准措辞：无 disagreement、无 adverse
+opinion，唯一例外是<strong>既有重大缺陷</strong>列为「reportable
+event」。</p>
+<p><strong>换审计#2（2025-04-02，KPMG 上位）</strong>——这份 8-K
+是本案<strong>内控时间线的关键锚点</strong>。★ 原文（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000047/i-20250327.htm">link</a>）：</p>
+<blockquote>
+<p>"On March 27, 2025, the Audit Committee … approved the appointment of
+<strong>KPMG</strong> … approved the dismissal of <strong>Moss
+Adams</strong> … there were <strong>no 'disagreements'</strong> … There
+were no 'reportable events' … <strong>except for the material
+weaknesses</strong> in the Company's internal control over financial
+reporting."</p>
+</blockquote>
+<p>随后逐条列出 FY2023 与 FY2024 的重大缺陷，并对 FY2024
+缺陷给出<strong>致命一句</strong>：</p>
+<blockquote>
+<p>"These material weaknesses were identified and reported in the
+Company's Annual Report on Form 10-K for the fiscal year ended December
+31, 2024, and <strong>have not been remediated as of the date of this
+Current Report on Form 8-K</strong>." （2025-04-02）</p>
+</blockquote>
+<ul>
+<li><strong>意义</strong>：<strong>截至 2025 年 4 月，FY2024
+的两项重大缺陷（损益/现金流分类 + 外部报告流程）仍未整改</strong> ★。而
+FY2025 10-K（2026-02）却宣告「fully remediated + ICFR 有效」（见
+<code>08_risk_factors.md</code> R6）——<strong>9
+个月内从"未整改"翻转为"全部整改且有效"，且 KPMG
+明确不就内控发表意见</strong>。这是 <code>01_synthesis.md</code> 论点 3
+的事件支柱。</li>
+<li>⚠️ <strong>缺陷曾涵盖的科目</strong>（FY2023
+版，行内列示）：日记账无独立复核、SBC/LTIP/earnout
+负债的估值与权益/负债分类、license/release
+协议会计、<strong>分部与商誉报告单元的认定</strong>——后者正是「Navitas
+2.0 是否是分部重分类」假设（H3）的内控背景。</li>
+</ul>
+<pre><code>内控时间线（4.01 与 10-K 交叉读）
+ FY2023/A (2024-07) ─ adverse ICFR；反转&quot;已整改&quot;声明，新增 MW（日记账/earnout/分部）
+        │
+ 2025-04-02 换审计8-K ─ &quot;FY24 缺陷 HAS NOT been remediated as of date of this report&quot; ★
+        │  （≈ 9 个月窗口，无独立审计师跟踪）
+        ▼
+ FY2025 10-K (2026-02) ─ 管理层：&quot;fully remediated, ICFR effective&quot;
+                         KPMG：&quot;we express no such opinion&quot;(未做 404(b)) ★</code></pre>
+<hr />
+<h2 id="4-解码-②维权和解2025-04-29101502701风险因素的现实版">4. 解码
+②：维权和解（2025-04-29，1.01+5.02+7.01）——风险因素的现实版</h2>
+<p>★ 原文（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000182176925000053/i-20250423.htm">link</a>）。这是与董事
+<strong>Ranbir Singh + SiCPower, LLC</strong>（合称「Singh
+Parties」；Singh 系 GeneSiC 创始人、8% 持股、13D
+申报人）的协议，<strong>Item
+1.01（重大合同）说明这是有约束力的协议，不是消息</strong>：</p>
+<blockquote>
+<p>"On April 23, 2025, … the Company entered into an agreement … with
+<strong>Ranbir Singh</strong>, a member of the Company's board … and
+<strong>SiCPower, LLC</strong> … the Company accepted the resignation of
+<strong>Gene Sheridan</strong>, the Company's chief executive officer,
+<strong>as Chair of the Board</strong> and appointed <strong>Richard J.
+Hendrix</strong> … as Chair. … The Company also accepted <strong>Daniel
+M. Kinzer's resignation from the Board and from his position as Chief
+Technology Officer and Chief Operating Officer</strong> … The Company
+further agreed to form an <strong>Executive Steering Committee of the
+Board, to be chaired by Dr. Singh</strong> … responsibility for the
+oversight of certain strategic matters, including … <strong>capital
+allocation, expense management, certain senior hiring and succession
+planning</strong>."</p>
+</blockquote>
+<ul>
+<li><strong>三个 Item 各自的含义</strong>：
+<ul>
+<li><strong>1.01</strong>：和解协议是<strong>有约束力的合同</strong>（Exhibit
+10.1）——与「8.01 消息」形成鲜明对比。</li>
+<li><strong>5.02</strong>：CEO 失董事长、创始 COO/CTO 辞职。Kinzer
+拿「Good Reason 辞职」遣散包（12 个月底薪一次性 + 12 个月医保 +
+按比例年终奖）★。</li>
+<li><strong>7.01</strong>：配套新闻稿（furnished，非 filed）。</li>
+</ul></li>
+<li><strong>standstill</strong>：Singh Parties 接受标准 standstill
+与投票承诺，有效至 2026 年股东会提名截止前 30 天。</li>
+<li><strong>意义</strong>：<strong>外部维权方实际接管了资本配置与接班的董事会监督权</strong>。这把
+<code>08_risk_factors.md</code> R9
+从「假设性风险因素」变成「已签署的事实」。两位创始人（CEO
+Sheridan、COO/CTO Kinzer）随后于 2025 年全部离场。</li>
+</ul>
+<hr />
+<h2
+id="5-解码-③nvidia合作2025-05-27item-801-非-101--捆绑-atm--本页最重要的一段">5.
+解码 ③：NVIDIA「合作」(2025-05-27，<strong>Item 8.01 非 1.01</strong>) +
+捆绑 ATM —— 本页最重要的一段</h2>
+<p>市场把这条当成「NVTS 拿下 NVIDIA 订单」而暴涨。<strong>SEC
+文本讲了完全不同的故事</strong>。★ 原文（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000162828025027705/nvts-20250521.htm">link</a>）：</p>
+<blockquote>
+<p>"<strong>Item 8.01. Other Events.</strong> On May 21, 2025, Navitas …
+issued a <strong>press release</strong> relating to the Company's
+<strong>collaboration</strong> with Nvidia Corporation on next
+generation 800V HVDC architecture. The press release is attached as
+Exhibit 99.1 …"</p>
+</blockquote>
+<p><strong>三重解码</strong>：</p>
+<ol type="1">
+<li><p><strong>Item 编号 = 8.01「Other Events」，不是 1.01「Material
+Definitive Agreement」</strong> ★。</p>
+<ul>
+<li>若存在有约束力的供货/采购合同，按规则应入
+<strong>1.01</strong>（如同 PIPE 与维权和解都用了 1.01）。NVTS 选择
+<strong>8.01 + 附一份新闻稿（Exhibit
+99.1）</strong>——<strong>披露的是"一则消息"，而非"一份合同"</strong>。<strong>无合同金额、无供货承诺、无收入指引</strong>。</li>
+</ul></li>
+<li><p><strong>同一份 8-K 里捆绑了一次 $50 million ATM 增发</strong>
+★（同文「'At the Market Offering' Program」段）：</p>
+<blockquote>
+<p>"…the Company subsequently sold shares … having an aggregate sales
+price of <strong>$50,000,000</strong>. On May 27, 2025, the Company
+filed … a prospectus supplement … pursuant to which the Company may sell
+<strong>additional shares … up to $50,000,000</strong>."</p>
+</blockquote>
+<ul>
+<li>即：<strong>前期已卖 $50 million，本次再上调 $50 million 额度 → ATM
+累计 $100 million</strong>。<strong>把利好消息（NVIDIA）与抽水（ATM
+扩容）写在同一份文件、同一天披露</strong>——经典「趁消息发股」时序。</li>
+</ul></li>
+<li><p><strong>公司自己在风险因素里为这条消息免责</strong>（见
+<code>08_risk_factors.md</code> R7，10-K 行 533）：「announcements … may
+not reflect binding commitments or future revenues … Investors should
+<strong>not place undue reliance</strong>」——这句话几乎可以逐字对应这份
+8.01。</p></li>
+</ol>
+<pre><code>NVIDIA 事件的&quot;双层结构&quot;（同一份 8-K, 2025-05-27）
+ ┌─────────────────────────────────────────────┐
+ │ Item 8.01「其他事件」: NVIDIA 800V HVDC 合作消息  │ ← 市场看到的（利好,无约束)
+ │   └ Exhibit 99.1 新闻稿（非合同, 无金额）         │
+ ├─────────────────────────────────────────────┤
+ │ 同文 ATM 段: 已卖 $50M + 再增 $50M 额度 = $100M  │ ← 多数人忽略的（抽水)
+ │   └ 签字人: Gene Sheridan, President &amp; CEO       │
+ └─────────────────────────────────────────────┘
+ 结论: 8.01 ≠ 1.01 → &quot;背书&quot;非&quot;订单&quot;; 利好与稀释同日同档披露</code></pre>
+<blockquote>
+<p><strong>悬而未决</strong>：NVIDIA
+合作是否含<strong>任何</strong>约束性收入，无法从 8.01 判定——这是
+<code>01_synthesis.md</code> 列出的 open question 之一（待 1.01
+或财务披露证实）。</p>
+</blockquote>
+<hr />
+<h2 id="6-解码-④pipe-私募2025-11-10101302">6. 解码 ④：PIPE
+私募（2025-11-10，1.01+3.02）</h2>
+<p>★ 原文（<a
+href="https://www.sec.gov/Archives/edgar/data/1821769/000110465925109160/tm2530677d1_8k.htm">link</a>）：</p>
+<blockquote>
+<p>"<strong>Item 1.01</strong> … On November 7, 2025, … entered into a
+securities purchase agreement … with <strong>certain accredited
+investors</strong> … for the issuance and sale in a <strong>private
+placement</strong> of an aggregate of <strong>14,814,813 shares</strong>
+of Class A common stock … at a purchase price of <strong>$6.75 per
+share</strong>. The Private Placement closed on <strong>November 10,
+2025</strong>. … gross proceeds … approximately <strong>$100
+million</strong> … <strong>Needham &amp; Company, LLC</strong> … served
+as the Company's sole placement agent." "<strong>Item 3.02</strong> …
+The Shares were issued in reliance on the exemptions … <strong>Section
+4(a)(2) … and Regulation D</strong>."</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th style="text-align: right;">值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>股数</td>
+<td style="text-align: right;"><strong>14,814,813 股</strong></td>
+<td>★ 1.01</td>
+</tr>
+<tr>
+<td>价格</td>
+<td style="text-align: right;"><strong>$6.75 / 股</strong></td>
+<td>★ 1.01</td>
+</tr>
+<tr>
+<td>总募资(gross)</td>
+<td style="text-align: right;"><strong>~$100 million（约 $0.1
+billion）</strong></td>
+<td>★ 1.01</td>
+</tr>
+<tr>
+<td>发行费用</td>
+<td style="text-align: right;">$4.4 million</td>
+<td>★ 10-K 行 76（Item 5）</td>
+</tr>
+<tr>
+<td>配售代理</td>
+<td style="text-align: right;">Needham &amp; Company（独家）</td>
+<td>★ 1.01</td>
+</tr>
+<tr>
+<td>投资者</td>
+<td style="text-align: right;">「accredited
+investors」<strong>未具名</strong></td>
+<td>★ 1.01</td>
+</tr>
+<tr>
+<td>注册权</td>
+<td style="text-align: right;">11-17 前提交 resale S-1；≤120 天生效</td>
+<td>★ 注册权协议</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>与 NVIDIA 8.01 的对比</strong>：PIPE 用
+<strong>1.01（重大合同）+
+3.02（实际发股）</strong>——<strong>这才是"有约束力的交易"应有的 Item
+组合</strong>。两相对照，更凸显 NVIDIA 仅用 8.01 的含义。</li>
+<li><strong>悬而未决</strong>：PIPE 投资者身份未具名——是战略客户（如
+NVIDIA 生态参与者）还是纯财务投资者？需查 Form D / 后续 13D/G。这是
+<code>01_synthesis.md</code> open question。</li>
+<li><strong>稀释</strong>：$6.75 增发价<strong>低于</strong> 12/31 股价
+~$7.14、远低于 earnout 门槛 $12.50。叠加 ATM ~$100M，2025 全年 ~$200M
+增发、股数 +约 18%。</li>
+</ul>
+<hr />
+<h2 id="7-事件流--财务治理-勾稽事件落到数字">7. 事件流 → 财务/治理
+勾稽（事件落到数字）</h2>
+<table>
+<thead>
+<tr>
+<th>事件簇</th>
+<th style="text-align: right;">数量/规模</th>
+<th>对应财务/治理结果</th>
+<th>cross-check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.01 换审计</td>
+<td style="text-align: right;">×2（2023-07、2025-04）</td>
+<td>FY23/A adverse ICFR；FY24 MW「未整改」(2025-04)</td>
+<td>✅ 见 §3</td>
+</tr>
+<tr>
+<td>5.02 高管/董事</td>
+<td style="text-align: right;">~12 次（2024-01 → 2026-05）</td>
+<td>两位创始人离场 + 12 个月内第 3 CFO</td>
+<td>✅ 见 <code>report.md</code> §14</td>
+</tr>
+<tr>
+<td>1.01 维权和解</td>
+<td style="text-align: right;">1 次（2025-04）</td>
+<td>Steering Committee 接管资本配置/接班</td>
+<td>✅ 见 §4</td>
+</tr>
+<tr>
+<td>8.01 NVIDIA</td>
+<td style="text-align: right;">1 次（2025-05）</td>
+<td>股价暴涨 + 同日 ATM 扩容 $50M</td>
+<td>✅ 见 §5</td>
+</tr>
+<tr>
+<td>1.01+3.02 PIPE</td>
+<td style="text-align: right;">1 次（2025-11）</td>
+<td>+14.81M 股 @ $6.75 = $100M gross</td>
+<td>✅ 见 §6</td>
+</tr>
+<tr>
+<td>融资类（ATM/PIPE/S-3ASR/424B5）</td>
+<td style="text-align: right;">2025 ~$200M + 2026-05 新一轮</td>
+<td>现金 $86.7M→$236.9M；财务 CF +$194.6M(FY25)</td>
+<td>✅ 现金桥勾稽 (<code>report.md</code> §9)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>来源脚注：所有事件原文 URL
+见上表；NVIDIA（8.01）、维权（1.01+5.02+7.01）、PIPE（1.01+3.02）、换审计#2（4.01）四份
+8-K 已逐字核对引语。全量 358 filings 索引见 <a
+href="../../processed/NVTS_filings_catalog_2023-2026.md">catalog</a>。风险因素映射见
+<code>08_risk_factors.md</code>；综合判断与悬而未决见
+<code>01_synthesis.md</code>。</p>
+</blockquote>
+</body>
+</html>
