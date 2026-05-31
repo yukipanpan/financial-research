@@ -82,6 +82,7 @@ ul.tight li{margin:3px 0}
 <a href="#asset">12 · 运营资产/产能</a>
 <a href="#distort">13 · 非经营扰动项</a>
 <a href="#cap">14 · 资本结构+控制权</a>
+<a href="#financing">14b · 融资全景 + PR核对</a>
 <a href="#peer">15 · 行业对比</a>
 <a href="#related">16 · 关联方红旗</a>
 <a href="#risk">17 · 风险因素</a>
@@ -346,6 +347,31 @@ ul.tight li{margin:3px 0}
 <div class="cap">★ 8-K。2027:~$100M(上限 $200M)可转债(12%→15%,Canaccord);2031:$350M(6.00%,Oaktree+Two Seas 领投,转股价 ~$48.24)。注意 10-Q 中可转债以公允价值 $199.4M 列流动负债 = 近期再融资/转股压力。另:$50M NUAI 票据为<b>应收</b>(期后已收回)。</div>
 </div>
 
+<!-- 14b -->
+<h2 id="financing">14b · 融资全景 + 新闻稿(IR)vs SEC 逐条核对</h2>
+<p>把公司全部 ~40 篇新闻稿(经 WordPress API 全量拉取,非媒体页 UI 的 10 条)逐条对 SEC。<b>结构性事实</b>:SHAZ 2025-12 de-SPAC 后才成为美国申报主体,之前(得州 JV、NEXTDC 扩容、平台发布等)按设计无 8-K,仅见于 S-4。</p>
+<div class="card bad">
+<h4>⚠️ 三条之前未覆盖、且仅以"furnished/叙事"披露的重大事项</h4>
+<ul class="tight">
+<li><b>USD.AI 高达 $500M 债务额度</b>(PR 2026-01-23)— 由 Permian Labs 的 <b>USD.AI 协议(USDai 稳定币)</b>提供的<b>加密/链上、非追索、GPU 资产抵押</b>融资,不占资产负债表;初始拟提 ~$65M。SEC 仅以 <b>8-K 2026-01-22(000444,7.01 furnished)</b>附新闻稿披露,<b>非 1.01 具结合同</b> → 属"已批额度",非已签已动用。🆕 引入<b>加密/稳定币/DeFi 融资依赖</b>这一全新风险维度。</li>
+<li><b>Digital Alpha 高达 $200M 股权+收入分成投资</b>(PR 2026-01-20,Cisco 三方)— SEC 仅 <b>8-K 4/1(014405,7.01)+ 10-K 期后事项</b>叙事披露。"收入分成"结构会分流未来收入。</li>
+<li><b>得州数据中心从 90MW→250MW→1GW+ 园区再整体出售</b> — TCDC 实为一度做到 1GW+ 的巨型园区(再购地、选 Ramboll、两期工程),2026-01 高位 $70M 套现退出。比 deck"250MW"叙事完整得多。</li>
+</ul>
+</div>
+<div class="fig">
+<h4>图 14b.1 · 融资全景:宣称"可用"额度 vs 已动用 <span class="unit">单位 $M</span></h4>
+<div class="chartbox"><canvas id="cFinancing"></canvas></div>
+<div class="cap">★ 8-K/10-K/PR。公司排了 <b>~$1.27B+ 的"宣称可用"融资</b>(Pre-IPO/$100M 可转债 + USD.AI $500M + Digital Alpha $200M + IPO $125M + $350M 可转债),但其中 USD.AI/Digital Alpha 多为"up to"已批额度(furnished 披露),<b>实际已动用远小于宣称额</b>。读财报时务必区分"facility/approved"与"drawn/committed"。</div>
+</div>
+<h4>核对结论</h4>
+<ul class="tight">
+<li><b>上市后的重大事件基本都能在 8-K 找到对应</b>(de-SPAC Super 8-K、$100M/$350M 可转债、TCDC 出售、IPO 定价、高管/董事变动、ESDS $1.25B、$950M 合同)✅。</li>
+<li><b>两笔大额融资(USD.AI $500M、Digital Alpha $200M)仅 7.01 furnished/叙事披露</b>,未作 1.01 具结合同 ⚠️——这本身是信号:公司未将其作为已签订的约束性重大合同。</li>
+<li><b>ESDS $1.25B 有 8-K(1.01)却无独立新闻稿;Canva/GMI 有新闻叙事却无 8-K</b>——IR 叙事与法定披露不完全对称。</li>
+<li>上市前 ~17 篇新闻稿(得州 JV + 产品里程碑)无 8-K,符合"当时非美国申报主体"的设计。</li>
+</ul>
+<p class="src">完整逐条矩阵见 <code>data/research/SHAZ/raw/F_pr_vs_sec_crosscheck.md</code>(全量 40 篇 PR × SEC)。</p>
+
 <!-- 15 -->
 <h2 id="peer">15 · 行业横向对比</h2>
 <p>可比池 = neocloud / GPUaaS / AI 数据中心(含 AI 转型矿工)。指标为最近一期 FY/LTM。</p>
@@ -390,6 +416,7 @@ ul.tight li{margin:3px 0}
 <li><b>双层股权控制</b> — 可能"阻退机构投资者"。</li>
 <li><b>NUAI 对手方信用</b> — TCDC 票据收回依赖 NUAI 偿付能力。</li>
 <li><b>GPU 过时 + AUD/USD 汇率</b> — 代际更替致机群资本搁浅;澳元运营 vs 美元债务。</li>
+<li>🆕 <b>加密/稳定币融资依赖</b> — 高达 $500M 的 USD.AI 额度依赖 USDai 稳定币 + 链上信贷协议(Permian Labs),引入稳定币脱锚、协议偿付、链上 GPU 抵押估值等非传统金融风险;且为"已批额度"非具结债务。</li>
 </ol>
 
 <!-- 18 -->
@@ -484,6 +511,14 @@ new Chart(document.getElementById('cMaturity'),{type:'bar',
  data:{labels:['2027','2031'],
  datasets:[{label:'可转债本金 $M',data:[100,350],backgroundColor:[ORG,RED]}]},
  options:{plugins:{legend:{display:false}},scales:{y:{title:{display:true,text:'USD $M(本金)'}}}}});
+
+// 14b.1 Financing capacity vs drawn
+new Chart(document.getElementById('cFinancing'),{type:'bar',
+ data:{labels:['Pre-IPO/$100M 可转债','USD.AI 额度','Digital Alpha','IPO','$350M 可转债'],
+ datasets:[
+  {label:'宣称可用 $M',data:[200,500,200,125,350],backgroundColor:'#3a4a5e'},
+  {label:'已动用/已发 $M(约)',data:[103,65,0,119.5,350],backgroundColor:RED}]},
+ options:{plugins:{legend:{position:'top'}},scales:{y:{title:{display:true,text:'USD $M'}}}}});
 
 // 15.1 Peer revenue (log)
 new Chart(document.getElementById('cPeerRev'),{type:'bar',
