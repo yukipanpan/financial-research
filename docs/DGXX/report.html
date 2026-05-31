@@ -1,0 +1,1104 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DGXX 财务研究报告</title><link rel="stylesheet" href="assets/style.css">
+<script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";mermaid.initialize({startOnLoad:true,theme:"neutral"});</script>
+</head><body>
+<header class="site"><div class="wrap"><h1>Digi Power X (DGXX) — 财务研究报告</h1>
+<div class="fresh">数据截止：FY2025 10-K (2025-12-31) + Q1-2026 10-Q (2026-03-31) · 最后更新 2026-05-31 · 版本 v1.0 · <a href="index.html">← 返回 DGXX 首页</a></div></div></header>
+<main><h1 id="digi-power-x-inc-nasdaq-dgxx--财务研究报告">Digi Power X Inc. (Nasdaq: DGXX) — 财务研究报告</h1>
+<blockquote>
+<p>方法论：<code>/listed-company-financial-research</code>（SEC 一手 filings 为锚 + 行业对比 + 记账逻辑 + 四级来源标注）。 数据截止：<strong>FY2025 10-K（期末 2025-12-31）+ Q1-2026 10-Q（期末 2026-03-31）</strong>。最后更新 2026-05-31。版本 v1.0。</p>
+</blockquote>
+<hr />
+<h2 id="0-免责声明">0. 免责声明</h2>
+<p>本文是一篇基于 SEC 公开文件的财务分析读书笔记，纯属个人学习心得与公开数据解读，<strong>不构成任何投资建议</strong>。文中数据已尽力 cross-check 并标注来源（★ SEC 直接披露／◆ 公式计算／◇ 第三方／▽ 推算）。涉及判断均为主观推演，仅供研究参考，不应作为买卖任何证券的依据。请独立判断并咨询持牌顾问。</p>
+<hr />
+<h2 id="1-公司一句话定义">1. 公司一句话定义</h2>
+<p><strong>Digi Power X Inc.</strong>（前身 <strong>Digihost Technology Inc.</strong>，2025-03-06 更名 ★<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390026037677/ea0283764-10k_digipower.htm">10-K</a>）是一家<strong>从比特币矿工转型为「电力驱动的 AI/HPC 数据中心 + 托管」运营商</strong>的能源基建公司：自有一座 <strong>60MW 燃气联合循环电厂</strong>，控制约 <strong>197MW</strong> 电力容量，正用自研 <strong>ARMS</strong> 模块化机柜（搭载 NVIDIA B200/300）把矿场改造成 Tier III AI 算力中心。双重上市：Nasdaq <strong>DGXX</strong> + Cboe Canada <strong>DGX</strong>。</p>
+<hr />
+<h2 id="2-数据来源与方法论说明">2. 数据来源与方法论说明</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一手来源</td>
+<td>SEC EDGAR，CIK <strong>1854368</strong>。7 份周期报告全文精读 + 116 filings 全量索引。</td>
+</tr>
+<tr>
+<td>标注体系</td>
+<td>★ filing 直接披露（带链接）／◆ 公式计算／◇ 第三方/公司 deck／▽ 推算</td>
+</tr>
+<tr>
+<td>覆盖率</td>
+<td>周期/财务报告 <strong>7/7</strong>；重大 8-K/6-K 事件（重述、更名、ATM、Wainwright 和解、Cboe 上市）已覆盖。DEF 14A 2026 <strong>尚未申报</strong> → 最新持股/薪酬口径「待查」。</td>
+</tr>
+<tr>
+<td>并行精读</td>
+<td>5 个 agent 按 scope 并行（财务/分部、会计政策/逐年变更、资本结构/关联方、加密+运营资产专题、风险/悬念），统一收口（见 <a href="_INDEX.md"><code>_INDEX.md</code></a>）。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心一手 filing 链接：</strong></p>
+<ul>
+<li>★ FY2025 <strong>10-K</strong>：<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390026037677/ea0283764-10k_digipower.htm">https://www.sec.gov/Archives/edgar/data/1854368/000121390026037677/ea0283764-10k_digipower.htm</a></li>
+<li>★ Q1-2026 <strong>10-Q</strong>：<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390026057115/ea0290525-10q_digipower.htm">https://www.sec.gov/Archives/edgar/data/1854368/000121390026057115/ea0290525-10q_digipower.htm</a></li>
+<li>★ FY2024 <strong>20-F</strong>：<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390025025829/ea0236201-20f_digipower.htm">https://www.sec.gov/Archives/edgar/data/1854368/000121390025025829/ea0236201-20f_digipower.htm</a></li>
+<li>★ FY2023&amp;2022 <strong>重述财报（6-K/A ex99-2/3）</strong>：<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390025020789/">https://www.sec.gov/Archives/edgar/data/1854368/000121390025020789/</a></li>
+</ul>
+<hr />
+<h2 id="3-单位约定与常识自检">3. 单位约定与常识自检</h2>
+<blockquote>
+<p><strong>报告币种 = 美元 (USD)，以全额美元列示（非千元）。1 亿 USD = $100M = $0.1B。</strong></p>
+</blockquote>
+<ul>
+<li>DGXX 体量极小：FY2025 收入 <strong>$34.2M = $0.034B = 0.34 亿美元</strong>。常识自检：AWS 一年 $108B ≈ DGXX 的 <strong>3,000 倍</strong>；这是一家微型公司（micro-cap）。</li>
+<li>总资产 FY2025 <strong><span class="math inline">134.1<em>M</em> = 1.34<em>亿</em><em>美</em><em>元</em> * *；<em>现</em><em>金</em> * *</span>78.5M</strong>。量级合理（一座电厂 + 矿机 + AI 设备押金 + 现金）。</li>
+<li>⚠️ <strong>框架陷阱</strong>：FY2024 有两套数（IFRS vs US GAAP），下文同一年若并列会显式标注框架，禁止跨框架直接 trend。</li>
+</ul>
+<hr />
+<h2 id="4-术语表--产业链地图">4. 术语表 + 产业链地图</h2>
+<p><strong>术语三件套（科普 + 产业链定位 + 对本公司意义）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>术语（全称）</th>
+<th>大白话</th>
+<th>产业链环节</th>
+<th>对 DGXX 的意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Colocation / 托管</strong></td>
+<td>把自己的电力+场地+机柜租给别人放服务器/矿机，收租</td>
+<td>中游（基建出租）</td>
+<td>FY2025 <strong>占收入 51%</strong>，是当前主业</td>
+</tr>
+<tr>
+<td><strong>Tier III 数据中心</strong></td>
+<td>机房可靠性等级（N+1 冗余、可在线维护，年宕机 &lt;1.6 小时）</td>
+<td>中游</td>
+<td>转型目标；ARMS 200 获 <strong>TIA-942 Tier 3 认证</strong> ★</td>
+</tr>
+<tr>
+<td><strong>HPC（High-Performance Computing）</strong></td>
+<td>高性能计算，跑 AI 训练/推理的大算力</td>
+<td>中下游</td>
+<td>AI 数据中心的负载来源</td>
+</tr>
+<tr>
+<td><strong>ARMS（AI-Ready Modular Solution）</strong></td>
+<td>集装箱式预制 AI 机柜，1 个 pod≈1MW、装 256 张 B200/300</td>
+<td>中游（自研硬件）</td>
+<td>差异化卖点；已申请美国专利 ★</td>
+</tr>
+<tr>
+<td><strong>NeoCloudz</strong></td>
+<td>自营 GPU 云租赁（GPU-as-a-Service）</td>
+<td>下游（算力零售）</td>
+<td>2026-01 上线，未来变现路径</td>
+</tr>
+<tr>
+<td><strong>FPPS（Full Pay Per Share）</strong></td>
+<td>矿池按你贡献的算力即时结算，含区块奖励+手续费</td>
+<td>上游（挖矿）</td>
+<td>挖矿收入确认依据 ★</td>
+</tr>
+<tr>
+<td><strong>BTMG（Behind-the-meter generation）</strong></td>
+<td>电「表后」自发自用，绕过电网零售加价</td>
+<td>上游（自有发电）</td>
+<td>电厂使其电价低至 ~$0.04/kWh ◇deck</td>
+</tr>
+<tr>
+<td><strong>ASU 2023-08 / ASC 350-60</strong></td>
+<td>美国会计新规：加密资产按公允价值计、涨跌<strong>直接进当期损益</strong></td>
+<td>—（会计）</td>
+<td>FY2025 起 BTC/ETH 市价波动直接砸/撑净利 ★</td>
+</tr>
+<tr>
+<td><strong>NCI（Non-Controlling Interest，少数股东权益）</strong></td>
+<td>子公司里不属于母公司的那部分</td>
+<td>—（合并）</td>
+<td>US Data Centers 子公司 49% 外部股东</td>
+</tr>
+</tbody>
+</table>
+<p><strong>产业链地图（红框＝DGXX 所处环节）：</strong></p>
+<pre class="mermaid">graph LR
+    subgraph 上游[上游 · 能源与硬件]
+      A1[天然气/电网<br/>NYISO 容量市场]
+      A2[NVIDIA B200/300 GPU]
+      A3[Super Micro 液冷服务器]
+    end
+    subgraph 中游[中游 · 电力→算力基建 ★DGXX 核心]
+      B1["🟥 DGXX 自有 60MW 电厂<br/>~197MW 容量"]
+      B2["🟥 DGXX Tier III 数据中心<br/>+ARMS 模块化机柜"]
+      B3["🟥 Colocation 托管出租"]
+    end
+    subgraph 下游[下游 · 算力消费]
+      C1[AI/云/企业 租户<br/>（尚未签约·待落地）]
+      C2[第三方比特币矿企<br/>（托管租户）]
+      C3[NeoCloudz GPU 零售客户]
+    end
+    A1 --> B1; A2 --> B2; A3 --> B2
+    B1 --> B2 --> B3
+    B3 --> C1; B3 --> C2; B2 --> C3
+</pre>
+<blockquote>
+<p>定位：DGXX 卡在**「电力 → 算力」的中游基建**。护城河 = 自有低价电力 + Tier 3 认证 + 模块化快速部署；最大短板 = <strong>下游 AI 租户尚未签约</strong>，转型仍在「有电、有机柜、没客户」阶段。</p>
+</blockquote>
+<hr />
+<h2 id="5-业务地图按-segment-收入构成">5. 业务地图（按 Segment）+ 收入构成</h2>
+<p>公司自 FY2025 报 <strong>4 个分部</strong>：加密货币挖矿、售能/售电、Colocation 托管、<strong>Tier III AI 数据中心（FY2025 新增，零收入，开发期）</strong> ★[10-K Note 20]。FY2023(20-F) 为 3 个分部。</p>
+<p><strong>收入构成与「挖矿→托管/能源」的迁移（核心叙事）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>收入流</th>
+<th style="text-align: right;">FY2022</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>挖矿(+质押) ★</td>
+<td style="text-align: right;">$24.19M</td>
+<td style="text-align: right;">$18.13M</td>
+<td style="text-align: right;">$10.32M</td>
+<td style="text-align: right;"><strong>$3.52M</strong></td>
+</tr>
+<tr>
+<td>Colocation 托管 ★</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$1.68M</td>
+<td style="text-align: right;">$15.79M</td>
+<td style="text-align: right;"><strong>$17.47M</strong></td>
+</tr>
+<tr>
+<td>售电(Northern Data) ★</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$3.04M</td>
+<td style="text-align: right;">$6.28M</td>
+<td style="text-align: right;"><strong>$0</strong>（合同 2024 到期）</td>
+</tr>
+<tr>
+<td>售能(电厂→电网) ★</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$3.27M</td>
+<td style="text-align: right;">$4.61M</td>
+<td style="text-align: right;"><strong>$13.20M</strong></td>
+</tr>
+<tr>
+<td><strong>总收入 ★</strong></td>
+<td style="text-align: right;"><strong>$24.19M</strong></td>
+<td style="text-align: right;"><strong>$26.11M</strong></td>
+<td style="text-align: right;"><strong>$37.00M</strong></td>
+<td style="text-align: right;"><strong>$34.19M</strong></td>
+</tr>
+<tr>
+<td>AI Tier III ★</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>$0（开发期）</strong></td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid">graph TD
+    T["收入结构迁移（占比）"]
+    T --> Y22["FY2022：挖矿 100%"]
+    T --> Y23["FY2023：挖矿 69% / 能源 24% / 托管 6%"]
+    T --> Y24["FY2024：挖矿 28% / 能源 29% / 托管 43%"]
+    T --> Y25["FY2025：挖矿 10% / 能源 39% / 托管 51%"]
+</pre>
+<blockquote>
+<p>◆ 占比由 ★ 收入算得。一句话：<strong>纯矿工(FY22) → 多元托管/能源(FY23-24) → 托管主导+电网售能、挖矿沦为配角、AI 数据中心开建(FY25)</strong>。挖矿收入 4 年从 $24.2M 崩到 $3.5M（BTC 产量 640→34 枚）。</p>
+</blockquote>
+<p><strong>分部盈利（FY2025 ★10-K Note 20）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>FY2025</th>
+<th style="text-align: right;">挖矿</th>
+<th style="text-align: right;">售能/电</th>
+<th style="text-align: right;">托管</th>
+<th style="text-align: right;">AI Tier III</th>
+<th style="text-align: right;">合计</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>收入</td>
+<td style="text-align: right;">$3.52M</td>
+<td style="text-align: right;">$13.20M</td>
+<td style="text-align: right;">$17.47M</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$34.19M</td>
+</tr>
+<tr>
+<td>营业成本</td>
+<td style="text-align: right;">$(2.03M)</td>
+<td style="text-align: right;">$(18.38M)</td>
+<td style="text-align: right;">$(10.05M)</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$(30.45M)</td>
+</tr>
+<tr>
+<td>折旧摊销</td>
+<td style="text-align: right;">$(6.51M)</td>
+<td style="text-align: right;">$(0.45M)</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$(6.95M)</td>
+</tr>
+<tr>
+<td>分部净亏</td>
+<td style="text-align: right;">$(7.55M)</td>
+<td style="text-align: right;"><strong>$(14.20M)</strong></td>
+<td style="text-align: right;">$(6.61M)</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;">$(28.36M)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>售能分部 FY2025 深度亏损</strong>：成本 $18.38M &gt; 收入 $13.20M，分部净亏 $(14.2M)——电厂向电网售电相对其分摊成本是亏的。这是 FY2025 经营层面最刺眼的点（不是加密 mark-to-market，是真实经营）。</p>
+</blockquote>
+<hr />
+<h2 id="6-收入构成与客户集中度">6. 收入构成与客户集中度</h2>
+<ul>
+<li><strong>客户集中度（红旗 ✅ 存在，但未量化披露）</strong>：filings <strong>未给</strong> 「X% 收入来自客户 Y」的量化集中度表（披露缺口 ⚠️）。但定性上 colocation/售电由<strong>少数几份合同</strong>构成 ★[10-K]。</li>
+<li><strong>Northern Data NY, LLC</strong> 是「售电」的<strong>唯一</strong>客户（≥22MW、24/7）★[20-F]，贡献 FY2024 <strong>$6.28M</strong>、FY2023 <span class="math inline">3.04<em>M</em>，2024<em>年</em><em>合</em><em>同</em><em>到</em><em>期</em><em>后</em><em>F</em><em>Y</em>2025<em>归</em><em>零</em>—— * *<em>单</em><em>一</em><em>客</em><em>户</em><em>流</em><em>失</em><em>直</em><em>接</em><em>抹</em><em>掉</em> </span>6.3M 收入**。</li>
+<li>Colocation 合同分别签于 2023-04、2023-09、2024-03、2024-07 ★[10-K]；Q4-2025 托管收入降至 $3.99M（因一个托管站改造为 AI）。</li>
+<li><strong>5W 检验</strong>：WHAT=电力+机柜+场地托管；WHO=Northern Data（已走）+ 数家未具名矿企；HOW MUCH=按实际用电量月结；WHEN=over-time 月度确认；WHY=自有低价电力(~$0.04/kWh)。</li>
+</ul>
+<hr />
+<h2 id="7-完整利润表按-segment--框架标注">7. 完整利润表（按 Segment / 框架标注）</h2>
+<blockquote>
+<p>FY2025/FY2024 = <strong>US GAAP（10-K）</strong>；FY2023/FY2022 = <strong>IFRS（20-F）</strong>。⚠️ FY2024 另有 IFRS 版（见 §11）。全部 ★。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>利润表行</th>
+<th style="text-align: right;">FY2022 (IFRS)</th>
+<th style="text-align: right;">FY2023 (IFRS)</th>
+<th style="text-align: right;">FY2024 (GAAP)</th>
+<th style="text-align: right;">FY2025 (GAAP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总收入</td>
+<td style="text-align: right;">$24,190,060</td>
+<td style="text-align: right;">$26,112,908</td>
+<td style="text-align: right;">$37,002,263</td>
+<td style="text-align: right;">$34,188,226</td>
+</tr>
+<tr>
+<td>营业成本(不含 D&amp;A)</td>
+<td style="text-align: right;">$(17,760,786)</td>
+<td style="text-align: right;">$(20,217,924)</td>
+<td style="text-align: right;">$(32,711,567)</td>
+<td style="text-align: right;">$(30,450,962)</td>
+</tr>
+<tr>
+<td>折旧摊销 D&amp;A</td>
+<td style="text-align: right;">$(10,709,108)</td>
+<td style="text-align: right;">$(14,923,419)</td>
+<td style="text-align: right;">$(15,637,616)</td>
+<td style="text-align: right;"><strong>$(6,953,827)</strong></td>
+</tr>
+<tr>
+<td><strong>毛亏 Gross loss</strong></td>
+<td style="text-align: right;">$(6,797,337)</td>
+<td style="text-align: right;">$(9,667,124)</td>
+<td style="text-align: right;">$(11,346,920)</td>
+<td style="text-align: right;"><strong>$(3,216,563)</strong></td>
+</tr>
+<tr>
+<td>G&amp;A（一般行政）</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">$(7,276,564)</td>
+<td style="text-align: right;"><strong>$(16,335,135)</strong></td>
+</tr>
+<tr>
+<td>汇兑损益 FX</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>+$5,227,038</strong></td>
+<td style="text-align: right;"><strong>$(3,498,836)</strong></td>
+</tr>
+<tr>
+<td>加密出售收益</td>
+<td style="text-align: right;">$ (11,574,330)*</td>
+<td style="text-align: right;">+$945,536</td>
+<td style="text-align: right;">+$1,558,772</td>
+<td style="text-align: right;">+$1,029,017</td>
+</tr>
+<tr>
+<td>加密重估损益</td>
+<td style="text-align: right;">$(3,256,530)</td>
+<td style="text-align: right;">+$10,991</td>
+<td style="text-align: right;">+$898,691</td>
+<td style="text-align: right;"><strong>$(4,109,276)</strong></td>
+</tr>
+<tr>
+<td>权证重估损益</td>
+<td style="text-align: right;"><strong>+$32,010,637</strong></td>
+<td style="text-align: right;">$(4,522,523)</td>
+<td style="text-align: right;">−$723,529(GAAP)</td>
+<td style="text-align: right;">$(3,110,015)</td>
+</tr>
+<tr>
+<td><strong>净利(亏) ★</strong></td>
+<td style="text-align: right;"><strong>+$4,329,342</strong></td>
+<td style="text-align: right;"><strong>$(21,885,410)</strong></td>
+<td style="text-align: right;"><strong>$(12,391,298)</strong></td>
+<td style="text-align: right;"><strong>$(28,356,223)</strong></td>
+</tr>
+<tr>
+<td>EPS（基本=摊薄）</td>
+<td style="text-align: right;">+$0.16</td>
+<td style="text-align: right;">$(0.77)</td>
+<td style="text-align: right;">$(0.40)</td>
+<td style="text-align: right;">$(0.64)</td>
+</tr>
+<tr>
+<td>加权平均股数</td>
+<td style="text-align: right;">27,227,284</td>
+<td style="text-align: right;">28,573,101</td>
+<td style="text-align: right;">30,704,548</td>
+<td style="text-align: right;">44,457,316</td>
+</tr>
+</tbody>
+</table>
+<p>*FY2022 加密出售为大额亏损；当年净利转正完全靠 <strong>+$32.0M 权证重估收益</strong>（一次性、非经营）。</p>
+<p><strong>段层瀑布（FY2025，单位 $M）：</strong></p>
+<pre class="mermaid">graph TD
+  R["收入 $34.19M"] --> CR["−营业成本 $30.45M"]
+  CR --> GM["−D&A $6.95M → 毛亏 $(3.22M)"]
+  GM --> GA["−G&A $16.34M（含 SBC $8.03M）"]
+  GA --> NONOP["±非经营：加密重估 $(4.11M)·FX $(3.50M)·权证 $(3.11M)"]
+  NONOP --> NL["净亏 $(28.36M)"]
+</pre>
+<blockquote>
+<p><strong>关键洞察（剥离测试预告，详见 §13）</strong>：FY2025 reported 巨亏 <span class="math inline">28.4<em>M</em><em>中</em>，<em>加</em><em>密</em> + <em>F</em><em>X</em> + <em>权</em><em>证</em><em>三</em><em>项</em><em>非</em><em>经</em><em>营</em><em>m</em><em>a</em><em>r</em><em>k</em> − <em>t</em><em>o</em> − <em>m</em><em>a</em><em>r</em><em>k</em><em>e</em><em>t</em><em>合</em><em>计</em><em>拖</em><em>累</em> </span>10.7M；G&amp;A 暴增主要是 **SBC $8.03M（FY2024 仅 <span class="math inline">2.55<em>M</em>） * *。<em>真</em><em>实</em><em>经</em><em>营</em><em>亏</em><em>损</em> </span>17.6M，与 FY2024 基本持平。</p>
+</blockquote>
+<hr />
+<h2 id="8-完整资产负债表">8. 完整资产负债表</h2>
+<blockquote>
+<p>FY2025/FY2024 = GAAP；FY2023 = IFRS。全部 ★。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>BS 行</th>
+<th style="text-align: right;">FY2023 (IFRS)</th>
+<th style="text-align: right;">FY2024 (GAAP)</th>
+<th style="text-align: right;">FY2025 (GAAP)</th>
+<th style="text-align: right;">Q1-2026 (GAAP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现金及等价物</td>
+<td style="text-align: right;">$341,273</td>
+<td style="text-align: right;">$1,703,896</td>
+<td style="text-align: right;"><strong>$78,478,759</strong></td>
+<td style="text-align: right;">$57,813,811</td>
+</tr>
+<tr>
+<td>数字货币(BTC/ETH)</td>
+<td style="text-align: right;">$822,884</td>
+<td style="text-align: right;">$4,525,416</td>
+<td style="text-align: right;">$14,814,180</td>
+<td style="text-align: right;">$13,561,396</td>
+</tr>
+<tr>
+<td>PP&amp;E 净额</td>
+<td style="text-align: right;">$33,386,684</td>
+<td style="text-align: right;">$23,643,743</td>
+<td style="text-align: right;">$23,005,900</td>
+<td style="text-align: right;">$26,211,575</td>
+</tr>
+<tr>
+<td>设备押金(AI 未投用)</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">$0</td>
+<td style="text-align: right;"><strong>$8,496,528</strong></td>
+<td style="text-align: right;"><strong>$20,902,909</strong></td>
+</tr>
+<tr>
+<td><strong>总资产</strong></td>
+<td style="text-align: right;">$42,147,347</td>
+<td style="text-align: right;">$34,318,088</td>
+<td style="text-align: right;"><strong>$134,113,579</strong></td>
+<td style="text-align: right;">$126,934,586</td>
+</tr>
+<tr>
+<td>应付账款及预提</td>
+<td style="text-align: right;">$4,510,757</td>
+<td style="text-align: right;">$6,579,948</td>
+<td style="text-align: right;">$6,350,923</td>
+<td style="text-align: right;">$3,716,253</td>
+</tr>
+<tr>
+<td>权证负债</td>
+<td style="text-align: right;">$5,456,749</td>
+<td style="text-align: right;">$3,040,494</td>
+<td style="text-align: right;">$2,297,930</td>
+<td style="text-align: right;">$2,076,760</td>
+</tr>
+<tr>
+<td><strong>计息债务</strong></td>
+<td style="text-align: right;">小额(loans+mortgage)</td>
+<td style="text-align: right;">$77,564</td>
+<td style="text-align: right;"><strong>$0</strong></td>
+<td style="text-align: right;"><strong>$0</strong></td>
+</tr>
+<tr>
+<td><strong>总负债</strong></td>
+<td style="text-align: right;">$12,900,608</td>
+<td style="text-align: right;">$12,028,329</td>
+<td style="text-align: right;"><strong>$10,852,379</strong></td>
+<td style="text-align: right;">$7,996,539</td>
+</tr>
+<tr>
+<td>实收资本(APIC)</td>
+<td style="text-align: right;">$42.5M(share cap)</td>
+<td style="text-align: right;">$90,011,906</td>
+<td style="text-align: right;"><strong>$216,409,130</strong></td>
+<td style="text-align: right;">$218,733,180</td>
+</tr>
+<tr>
+<td>累计赤字</td>
+<td style="text-align: right;">$(26,497,297)</td>
+<td style="text-align: right;">$(60,514,384)</td>
+<td style="text-align: right;">$(88,870,607)</td>
+<td style="text-align: right;">$(93,522,952)</td>
+</tr>
+<tr>
+<td><strong>股东权益</strong></td>
+<td style="text-align: right;">$29,246,739</td>
+<td style="text-align: right;">$22,289,759</td>
+<td style="text-align: right;"><strong>$123,261,200</strong></td>
+<td style="text-align: right;">$118,938,047</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>资产负债表一年放大 4 倍</strong>：总资产 <span class="math inline">34.3<em>M</em>→</span>134.1M、权益 <span class="math inline">22.3<em>M</em>→</span>123.3M、现金 <span class="math inline">1.7<em>M</em>→</span>78.5M——全部来自 <strong><span class="math inline">104.7<em>M</em><em>股</em><em>权</em><em>增</em><em>发</em> + <em>A</em><em>T</em><em>M</em> * *，<em>而</em><em>非</em><em>经</em><em>营</em>。 * *<em>零</em><em>计</em><em>息</em><em>债</em><em>务</em> * *（<em>d</em><em>e</em><em>c</em><em>k</em>「</span>0 long-term debt」<strong>已从正表证实</strong> ★）。代价是累计赤字升至 $(88.9M)，股本被大幅稀释（见 §14）。 数字资产：FY2025 末 <strong>133 BTC + 1,009 ETH</strong>（公允价 $14.81M，成本 <span class="math inline">18.57<em>M</em> → * * <em>浮</em><em>亏</em> </span>3.76M</strong>）★。Q1-2026 末 <strong>166 BTC + 1,013 ETH</strong> ★[10-Q 正表]（⚠️ 10-K 正文误写「51 BTC」，以 10-Q 为准）。</p>
+</blockquote>
+<hr />
+<h2 id="9-完整现金流量表">9. 完整现金流量表</h2>
+<blockquote>
+<p>全部 ★。FY2023 为 IFRS <strong>重述后</strong>（见 §11）。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>CF 行</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经营活动净现金</td>
+<td style="text-align: right;">$(13,572,958)</td>
+<td style="text-align: right;">$(17,532,344)</td>
+<td style="text-align: right;"><strong>$(25,535,126)</strong></td>
+</tr>
+<tr>
+<td>资本开支(购建 PP&amp;E/押金)</td>
+<td style="text-align: right;">$(3,007,766)</td>
+<td style="text-align: right;">$(3,790,777)</td>
+<td style="text-align: right;"><strong>$(17,297,576)</strong></td>
+</tr>
+<tr>
+<td>投资活动净现金</td>
+<td style="text-align: right;">$12,007,498</td>
+<td style="text-align: right;">$14,716,849</td>
+<td style="text-align: right;">$(12,203,076)</td>
+</tr>
+<tr>
+<td>筹资活动净现金</td>
+<td style="text-align: right;">$56,111</td>
+<td style="text-align: right;">$4,178,118</td>
+<td style="text-align: right;"><strong>$114,513,065</strong></td>
+</tr>
+<tr>
+<td>现金净变动</td>
+<td style="text-align: right;">$(1,509,349)</td>
+<td style="text-align: right;">$1,362,623</td>
+<td style="text-align: right;"><strong>$76,774,863</strong></td>
+</tr>
+<tr>
+<td>期末现金</td>
+<td style="text-align: right;">$341,273</td>
+<td style="text-align: right;">$1,703,896</td>
+<td style="text-align: right;">$78,478,759</td>
+</tr>
+</tbody>
+</table>
+<p><strong>现金流瀑布（FY2025，来源 vs 用途，$M）：</strong></p>
+<pre class="mermaid">graph LR
+  subgraph 来源
+    F1["股权增发(净) +$104.7M"]
+    F2["权证/期权行权 +$8.5M"]
+    F3["预融资权证 +$2.5M"]
+    F4["卖币换现 +$10.97M"]
+  end
+  subgraph 用途
+    U1["经营烧钱 −$25.5M"]
+    U2["资本开支/设备押金 −$17.3M"]
+    U3["买币 −$6.16M"]
+  end
+  来源 --> NET["现金净增 +$76.8M<br/>期末 $78.5M"]
+  用途 --> NET
+</pre>
+<blockquote>
+<p><strong>利润质量 / 现金真相</strong>：经营<strong>烧钱逐年扩大</strong>（<span class="math inline">13.6<em>M</em>→</span>17.5M→$25.5M），靠资本市场输血。<strong>ATM 是输血管</strong>：2025-05-30 至 2026-03-31 经 A.G.P. ATM 发 <strong>24,078,450 股、毛 $91.5M（均价 $3.80）</strong>，net <span class="math inline">88.8<em>M</em>★[10 − <em>Q</em>]；<em>Q</em>1 − 2026<em>后</em><em>又</em><em>增</em><em>发</em>19.95<em>M</em><em>股</em><em>募</em> </span>102.9M ★。<strong>自由现金流深度为负</strong>，跑道完全依赖持续增发。</p>
+</blockquote>
+<hr />
+<h2 id="10-关键会计政策深度解析含激进度评分">10. 关键会计政策深度解析（含激进度评分）</h2>
+<p><strong>(a) 收入确认</strong> ★[10-K Note 2(g)]：挖矿=向矿池提供算力，FPPS，合同&lt;24 小时滚动续签，<strong>point-in-time</strong> 按 Gemini 当日均价以非现金/可变对价确认；托管/售电=<strong>over-time</strong> 按实际用电月结；售能=point-in-time。</p>
+<p><strong>(b) 折旧（最易出陷阱）</strong> ★：</p>
+<table>
+<thead>
+<tr>
+<th>资产</th>
+<th>DGXX 选择</th>
+<th>行业可比</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>矿机</strong></td>
+<td><strong>12–36 个月（1–3 年）</strong></td>
+<td>同业多 2–5 年</td>
+<td><strong>偏保守</strong>（寿命短→多提折旧、资产账面低，非激进）</td>
+</tr>
+<tr>
+<td>电厂（在用）</td>
+<td>240–480 月（20–40 年）</td>
+<td>燃气调峰厂 20–40 年</td>
+<td><strong>中性偏保守</strong>（FY2025 新增 20 年下限）</td>
+</tr>
+<tr>
+<td>建筑</td>
+<td>120 月（10 年）</td>
+<td>—</td>
+<td>偏短</td>
+</tr>
+</tbody>
+</table>
+<p><strong>(c) 数字资产会计 — 两套截然不同的制度（铁律 6 关键）</strong> ★：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>FY2022–24（IFRS, 20-F）</th>
+<th>FY2025（US GAAP, 10-K）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分类</td>
+<td>无形资产 IAS 38</td>
+<td>加密资产 ASC 350-60（ASU 2023-08）</td>
+</tr>
+<tr>
+<td>计量</td>
+<td><strong>重估模型</strong>：涨→OCI，跌→损益</td>
+<td><strong>公允价值全进当期净利</strong>（涨跌都进 P&amp;L）</td>
+</tr>
+<tr>
+<td>公允价值层级</td>
+<td>Level 2</td>
+<td>Level 1</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ 10-K 称 ASU 2023-08「effective on inception, prospective」——<strong>未披露</strong>对期初赤字的累积影响调整（标准做法应有）→ <strong>待查</strong>。本质变化：加密涨跌从 OCI 挪进<strong>净利</strong>，放大利润波动。</p>
+</blockquote>
+<p><strong>(d) 激进度评分：</strong></p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>DGXX 选择</th>
+<th style="text-align: right;">评分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>矿机折旧寿命</td>
+<td>1–3 年（短）</td>
+<td style="text-align: right;">−1 保守</td>
+</tr>
+<tr>
+<td>加密计量</td>
+<td>公允价（规则强制）</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>利息资本化</td>
+<td>未见显著资本化利息</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>收入确认</td>
+<td>point-in-time 为主</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>商誉</td>
+<td>FY2024 已减值 $1.26M</td>
+<td style="text-align: right;">−1 保守</td>
+</tr>
+<tr>
+<td><strong>综合</strong></td>
+<td></td>
+<td style="text-align: right;"><strong>−0.4 → 略偏保守</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>结论：DGXX <strong>会计政策不激进，偏保守</strong>（短折旧、加密强制公允价、商誉已减值）。reported 巨亏不是「藏不住的真实恶化」，而是<strong>保守会计 + 强制 mark-to-market</strong> 的结果。</p>
+</blockquote>
+<hr />
+<h2 id="11-逐年变更侦测会计准则--重分类--转型">11. 逐年变更侦测（会计准则 / 重分类 / 转型）</h2>
+<pre class="mermaid">timeline
+    title DGXX 逐年变更时间线
+    2023-02 : 收购 60MW North Tonawanda 电厂($4.75M) → 新增售电/售能
+    2023 : 挖矿 640 BTC → 售电客户 Northern Data
+    2024 : 挖矿降至 188 BTC(减半后) : Northern Data 售电合同到期
+    2025-03 : 更名 Digihost→Digi Power X : FY2023&2022 现金流重述(material weakness)
+    2025-Q1 : 成立 US Data Centers 子公司(51%/49% NCI) : 矿场停机转 AI
+    2025-06 : 丧失 FPI 身份 : ATM 启动(后扩至 $200M)
+    2025 : 框架切换 IFRS→US GAAP : 采纳 ASU 2023-08 加密公允价
+    2026-01 : NeoCloudz 上线 : Wainwright 薪酬纠纷和解($840K+权证)
+    2026-02 : 从 TSXV 转板 Cboe Canada
+</pre>
+<p><strong>三类变更：</strong></p>
+<ul>
+<li><strong>会计准则（铁律 6 ①）</strong>：① <strong>IFRS→US GAAP</strong> 整体切换（FY2025）——⚠️ <strong>未见 IFRS→GAAP 量化对账桥</strong>，导致 FY2024 两套净亏损（$12.4M vs $6.8M）。② <strong>ASU 2023-08</strong> 加密公允价（加密损益 OCI→净利、L2→L1）。③ <strong>FY2023/2022 现金流重述</strong>（见下）。</li>
+<li><strong>重分类（②）</strong>：<strong>FY2023 现金流重述</strong>——SEC 复核迫使把「卖币所得」从<strong>经营</strong>挪到<strong>投资</strong>活动（FY2023 $19.26M、FY2022 $12.08M）★[6-K/A ex99-6]。<strong>仅影响现金流分类，不动净利/资产</strong>；但公司认定为<strong>material weakness</strong>（已于 FY2024 报告 remediated）。</li>
+<li><strong>业务转型（③）</strong>：矿工→AI 数据中心；丧失 FPI；新设 US Data Centers 子公司（NCI）；FY2025 后**「出售 49%」USDC**（保留 51% 控制，仍并表）——⚠️ 定性矛盾，见 §19。</li>
+</ul>
+<blockquote>
+<p><strong>可比性警告</strong>：禁止跨 20-F/10-K 直接 trend FY2024；FY2025 加密损益进净利使利润波动远大于此前 IFRS 年度；现金流趋势须用重述后数。</p>
+</blockquote>
+<hr />
+<h2 id="12-运营资产--产能专题模块-15">12. 运营资产 / 产能专题（模块 15）</h2>
+<p><strong>站点与容量表（★◆[10-K]）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>站点</th>
+<th>自有/租赁</th>
+<th>内容</th>
+<th>电力容量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buffalo (East Delavan), NY</td>
+<td><strong>租赁（99 年）</strong></td>
+<td>矿场/托管</td>
+<td>18.7MW（NY 三站合计 141.7MW）</td>
+</tr>
+<tr>
+<td>North Tonawanda, NY</td>
+<td><strong>自有</strong></td>
+<td><strong>60MW 燃气电厂</strong> + 矿场</td>
+<td>60MW 厂，站点 123MW，+60MW 载流研究已批</td>
+</tr>
+<tr>
+<td>Columbiana, Alabama</td>
+<td><strong>自有</strong></td>
+<td>矿场改造为 <strong>Tier III AI(ARMS 200)</strong></td>
+<td>初期 28MW，up to 55MW</td>
+</tr>
+<tr>
+<td>North Carolina (Hildebran 附近)</td>
+<td><strong>自有地</strong></td>
+<td>未开发，远期 AI</td>
+<td><strong>200MW</strong>（目标 2028–29）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>当前可用电力 <strong>~197MW</strong>（AL 55 + NY 141.7）+ 远期 NC 200MW。⚠️ NC 口径变化（20-F:25 acres/JV/75MW → 10-K:40 acres/自有/200MW）→ 待查。</p>
+</blockquote>
+<p><strong>矿机产量/算力趋势：</strong></p>
+<table>
+<thead>
+<tr>
+<th>FY</th>
+<th style="text-align: right;">自挖 BTC</th>
+<th style="text-align: right;">挖矿收入</th>
+<th>算力里程碑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2022</td>
+<td style="text-align: right;">~832</td>
+<td style="text-align: right;">$24.19M</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td style="text-align: right;"><strong>640</strong></td>
+<td style="text-align: right;">$18.13M</td>
+<td>2024-03 峰值 2.4 EH/s</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td style="text-align: right;"><strong>188</strong></td>
+<td style="text-align: right;">$10.32M</td>
+<td>减半后骤降</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td style="text-align: right;"><strong>~34</strong></td>
+<td style="text-align: right;">$3.52M</td>
+<td>2025-04 起 AL 停机转 AI</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AI 建设投入与控制结构：</strong></p>
+<ul>
+<li>资本投入真金白银：<strong>设备押金 <span class="math inline">0(<em>F</em><em>Y</em>24)→</span>8.50M(FY25)→$20.91M(Q1-26)</strong> ★；ARMS 200 设计完成，<strong>2026-Q2 在 AL 首部署</strong>；电力路线图 Q1-26 的 5MW → Q4-26 的 55MW。</li>
+<li>AI Tier III 分部 FY2025 <strong>收入 $0（开发期）</strong>。</li>
+<li><strong>控制结构</strong>：核心运营资产（AL/NY 数据中心、电厂）<strong>全资</strong>；唯一非全资子公司 <strong>US Data Centers（USDC，51% 控股 / 49% NCI）</strong>，且 subsequent event 澄清 USDC <strong>仅做 ARMS 设备制造分销、不拥有公司自有数据中心资产</strong> ★[10-K Note 24]。</li>
+</ul>
+<pre class="mermaid">graph TD
+  P["Digi Power X Inc.（母公司，Nasdaq DGXX）"]
+  P -->|100%| S1["Digihost International / DGX Holding / World Generation X<br/>（电厂·矿场·AI 站，全资并表）"]
+  P -->|51% 控股| S2["US Data Centers Inc.<br/>（ARMS 设备制造，49% NCI，并表）"]
+</pre>
+<hr />
+<h2 id="13-非经营--盈余扰动项专题模块-16star-剥离测试">13. 非经营 / 盈余扰动项专题（模块 16）⭐ 剥离测试</h2>
+<p>DGXX reported 净亏被三类非经营 mark-to-market 严重扭曲：<strong>加密重估、汇兑、权证重估</strong>。剥离后看真实经营：</p>
+<table>
+<thead>
+<tr>
+<th>行</th>
+<th style="text-align: right;">FY2024 (GAAP)</th>
+<th style="text-align: right;">FY2025 (GAAP)</th>
+<th style="text-align: right;">Q1-2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reported 净亏</strong> ★</td>
+<td style="text-align: right;">$(12,391,298)</td>
+<td style="text-align: right;"><strong>$(28,356,223)</strong></td>
+<td style="text-align: right;">$(4,652,345)</td>
+</tr>
+<tr>
+<td>剥离 加密重估损益</td>
+<td style="text-align: right;">−$898,691</td>
+<td style="text-align: right;">+$4,109,276</td>
+<td style="text-align: right;">+$3,764,103</td>
+</tr>
+<tr>
+<td>剥离 汇兑损益</td>
+<td style="text-align: right;">−$5,227,038</td>
+<td style="text-align: right;">+$3,498,836</td>
+<td style="text-align: right;">−$2,959,327</td>
+</tr>
+<tr>
+<td>剥离 权证重估损益</td>
+<td style="text-align: right;">+$723,529</td>
+<td style="text-align: right;">+$3,110,015</td>
+<td style="text-align: right;">−$784,833</td>
+</tr>
+<tr>
+<td><strong>= 调整后经营亏损(◆)</strong></td>
+<td style="text-align: right;"><strong>≈ $(17,793,498)</strong></td>
+<td style="text-align: right;"><strong>≈ $(17,638,096)</strong></td>
+<td style="text-align: right;"><strong>≈ $(4,632,402)</strong></td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid">graph LR
+  A["Reported 净亏 $(28.36M)"] --> B["+剥离加密 $4.11M"]
+  B --> C["+剥离FX $3.50M"]
+  C --> D["+剥离权证 $3.11M"]
+  D --> E["真实经营亏损 ≈ $(17.64M)<br/>≈ FY2024 的 $(17.79M)"]
+</pre>
+<blockquote>
+<p><strong>核心洞察</strong>：reported 净亏从 FY2024 的 $12.4M 恶化到 FY2025 的 <span class="math inline">28.4<em>M</em>（<em>看</em><em>似</em><em>翻</em><em>倍</em><em>恶</em><em>化</em>），<em>但</em> * *<em>剥</em><em>离</em><em>三</em><em>项</em><em>后</em><em>经</em><em>营</em><em>亏</em><em>损</em> </span>17.6M ≈ FY2024 的 ~<span class="math inline">17.8<em>M</em>——<em>基</em><em>本</em><em>持</em><em>平</em> * *。 </span>16M 的 reported 恶化<strong>几乎全是非经营噪音</strong>（加密从 +<span class="math inline">0.9<em>M</em><em>翻</em><em>成</em>−</span>4.1M；FX 从 +<span class="math inline">5.2<em>M</em><em>翻</em><em>成</em>−</span>3.5M；权证 −$3.1M）。 反向提醒：调整后 <span class="math inline">17.6<em>M</em><em>仍</em><em>含</em> * *</span>8.03M 非现金 SBC** 和大额 D&amp;A；这是「剔除扰动」而非「正常化 EBITDA」。加密浮亏 ~$3.76M 也是真实的资产价值缩水（持仓成本 $18.6M vs 市值 $14.8M）。</p>
+</blockquote>
+<hr />
+<h2 id="14-资本结构--到期墙--稀释">14. 资本结构 + 到期墙 + 稀释</h2>
+<ul>
+<li><strong>零计息债务，纯股权融资</strong>（§8 已证）。无信贷额度、无可转债、无融资租赁负债（FY2025）★。唯一历史借款是关联方 Doge Capital 比特币借款，已于 2024-Q1 还清。</li>
+<li><strong>股本稀释（红旗 ✅ 显著）：</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">Q1-2026</th>
+<th style="text-align: right;">最新(5/15/26)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SV 流通股 ★</td>
+<td style="text-align: right;">28,878,740</td>
+<td style="text-align: right;">33,011,600</td>
+<td style="text-align: right;"><strong>69,427,788</strong></td>
+<td style="text-align: right;">69,807,452</td>
+<td style="text-align: right;"><strong>90,420,824</strong></td>
+</tr>
+<tr>
+<td>摊薄悬量(期权+RSU+权证)★</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">12,644,080</td>
+<td style="text-align: right;">6,702,879</td>
+<td style="text-align: right;">7,748,783</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>SV 股 FY2024→FY2025 <strong>+110%（翻倍）</strong>，到 2026-05-15 <strong>较 FY2023 增至 ~3.1 倍</strong>。ATM 从 <span class="math inline">100<em>M</em><em>上</em><em>调</em><em>至</em> * *</span>200M**。<strong>这是 DGXX 最现实的风险：转型资金靠不断增发现有股东买单。</strong></p>
+</blockquote>
+<ul>
+<li><strong>股权融资明细</strong>：FY2025 私募 $6.6M + 注册直接发行 $15.0M + ATM 毛 <span class="math inline">91.5<em>M</em> ≈ <em>全</em><em>年</em> </span>113M；Q1-2026 后 ATM 再募 ~$103M ★。APIC <span class="math inline">90.0<em>M</em>→</span>216.4M 印证。</li>
+<li><strong>到期墙</strong>：无债务到期墙。权证 1,475,143 份（行权价 <span class="math inline">2.00–</span>3.59，2027–2030 到期）★。</li>
+</ul>
+<hr />
+<h2 id="15-行业横向对比">15. 行业横向对比</h2>
+<blockquote>
+<p>⚠️ <strong>方法论 caveat</strong>：下表 peer 倍数主要来自<strong>公司自己的 deck（◇，2025-10/2026-04）</strong>，未独立逐家拉 peer SEC 财报。仅作定位参考，不作估值结论。</p>
+</blockquote>
+<p><strong>(a) EV/2025E EBITDA 可比（◇ 公司 deck）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>同业组</th>
+<th style="text-align: right;">EV/EBITDA</th>
+<th>DGXX 自身</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>纯矿企(MARA/RIOT/CleanSpark/Bitfarms)</td>
+<td style="text-align: right;">5.6x</td>
+<td>DGXX <strong>5.6x</strong></td>
+</tr>
+<tr>
+<td>混合(Core Scientific/IREN/TeraWulf/Bit Digital)</td>
+<td style="text-align: right;">9.1x</td>
+<td>—</td>
+</tr>
+<tr>
+<td>纯 HPC(Equinix/Digital Realty/Iron Mountain)</td>
+<td style="text-align: right;"><strong>21.9x</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>公司 thesis：DGXX 现按矿企 5.6x 定价，若转型成 HPC（21.9x）则有重估空间。<strong>◇ 这是公司叙事，非独立验证。</strong></p>
+</blockquote>
+<p><strong>(b) 每 MW 资产估值（◇ deck SOTP）：</strong> 矿企 <span class="math inline">500<em>K</em>/<em>M</em><em>W</em><em>v</em><em>s</em><em>H</em><em>P</em><em>C</em> </span>12.5M/MW（&gt;20x 差）。</p>
+<p><strong>(c) 重大开支合理性（◆ 三问）：</strong></p>
+<ul>
+<li>AI 设备押金 Q1-2026 单季 +$12.4M，占总资产 ~16% → 战略必要（转型核心），但<strong>对应零 AI 收入</strong>，回报未兑现。</li>
+<li>经营烧钱/收入 = <span class="math inline">25.5<em>M</em>/</span>34.2M ≈ <strong>75%</strong>（远高于成熟基建商）→ 反映转型期 + 售能分部亏损。</li>
+<li>SBC/收入 = <span class="math inline">8.03<em>M</em>/</span>34.2M ≈ <strong>23%</strong>（极高）→ 微型公司用股票替现金付薪/咨询，加剧稀释。</li>
+</ul>
+<p><strong>(d) 对标定位（◆ 判断）</strong>：DGXX 是同业中<strong>最小、最早期</strong>的玩家之一（FY2025 自挖仅 34 BTC，AI 零收入）。相对 IREN/TeraWulf/Core Scientific 这些已有 HPC/AI 签约收入的混合矿企，DGXX 的转型<strong>进度落后、规模小一个数量级</strong>，但**资产负债表干净（零债务、$78M 现金）**是相对优势。</p>
+<hr />
+<h2 id="16-关联方红旗扫描">16. 关联方红旗扫描</h2>
+<table>
+<thead>
+<tr>
+<th>关联方</th>
+<th>关系</th>
+<th>性质</th>
+<th>金额/条款</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Doge Capital LLC</strong></td>
+<td>Amar 父子控制</td>
+<td>比特币借款</td>
+<td>借 30 BTC，还 <strong>36 BTC</strong>（~20% in-kind 溢价）</td>
+<td>2024-Q1 已还清 ★</td>
+</tr>
+<tr>
+<td><strong>ElsEnergy LLC</strong></td>
+<td>董事 Elsenbeck 关联</td>
+<td>能源咨询</td>
+<td><strong>$5,000/月</strong>（2022-08 起）</td>
+<td>持续 ★</td>
+</tr>
+<tr>
+<td><strong>East Delavan Property LLC</strong></td>
+<td>Buffalo 房东</td>
+<td>99 年租约</td>
+<td>一次性 $2.3M</td>
+<td>关联性<strong>待查</strong> ⚠️</td>
+</tr>
+<tr>
+<td>高管(Amar 父子等)</td>
+<td>内部人</td>
+<td>薪酬，<strong>部分以 BTC 付</strong></td>
+<td>见下</td>
+<td>持续 ★</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>高管薪酬 FY2024→FY2025 暴增 3.8x</strong>（<span class="math inline">2.56<em>M</em>→</span>9.74M），主要是 SBC（<span class="math inline">1.56<em>M</em>→</span>6.76M）+ 薪资翻三倍——发生在公司只挖了 34 BTC、净亏 $28M 的一年，且与 110% 稀释同步 ⚠️。<strong>部分以比特币计酬</strong>（不寻常）。Michel Amar(CEO) 基薪 $475K、Alec Amar(总裁，CEO 之子) 基薪 $375K ★。</p>
+</blockquote>
+<hr />
+<h2 id="17-风险因素提炼按-dgxx-特定性排序">17. 风险因素提炼（按 DGXX 特定性排序）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>风险</th>
+<th>对 DGXX 的特定意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>AI 转型执行风险</strong></td>
+<td>整个股权故事押在 ARMS/AI 上，但首部署才 2026-Q2，<strong>AI 收入至今为 $0</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>客户集中</strong></td>
+<td>托管租户少；Northern Data 售电合同已丢($6.3M)；锚定租户违约可重创收入</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>加密价格暴露 + 被迫卖币</strong></td>
+<td>靠卖挖出的 BTC 补经营；$14.8M 加密<strong>全部热钱包存于单一 Gemini</strong> ⚠️</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>比特币减半</strong></td>
+<td>明示与持续经营挂钩；FY2024 挖矿收入已因减半骤降</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>稀释/资本依赖</strong></td>
+<td>ATM 升至 $200M；一年股本翻倍；经营靠增发输血</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>历史 material weakness</strong></td>
+<td>连续两代控制缺陷 + 一次重述；FY2025 已 remediate <strong>但无 404(b) 审计验证</strong>（EGC 豁免）</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>售能分部亏损</strong></td>
+<td>FY2025 售能分部净亏 $14.2M（真实经营亏损）</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>双层股权 / 关联控制</strong></td>
+<td>PV 股 200 票；Amar 父子控盘</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>PFIC 税务</strong></td>
+<td>加拿大发行人，未出具 PFIC 法律意见，美国持有人潜在不利税务</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="18-我的论点含反方观点">18. 我的论点（含反方观点）</h2>
+<p><strong>主论点 1 — reported 巨亏被严重误读；真实经营亏损稳定但仍未盈利。</strong></p>
+<ul>
+<li>证据：① 剥离测试 FY2025 经营亏损 ~<span class="math inline">17.6<em>M</em> ≈ <em>F</em><em>Y</em>2024 </span>17.8M（§13）；② reported $28.4M 的恶化几乎全是加密/FX/权证 mark-to-market；③ 会计政策偏保守（§10）。</li>
+<li>反方：调整后仍亏 $17.6M，且含 $8M SBC；毛利仍为负（毛亏 $3.2M）；加密浮亏 $3.76M 是真实价值缩水。</li>
+<li>我的反驳：论点是「reported 数字误导」，不是「公司健康」。两者都成立——经营未盈利，但没有 reported 显示的「断崖式恶化」。</li>
+</ul>
+<p><strong>主论点 2 — 这是一个「有电、有机柜、没客户」的转型期权(option)，价值与风险都在尚未签约的 AI 租户上。</strong></p>
+<ul>
+<li>证据：① 设备押金真金投入 <span class="math inline">0→</span>20.9M；② 但 AI 分部 FY2025 收入 $0；③ 下游 AI 客户在 deck 中是「目标」而非签约合同（§4 产业链下游空缺）。</li>
+<li>反方：~197MW 自有低价电力 + Tier 3 认证 + $78M 现金 + 零债务，是真实可变现的转型底座。</li>
+<li>我的反驳：底座真实，但<strong>估值/前景完全取决于能否把电力容量转成签约 AI 收入</strong>——这一步尚未发生，是纯期权。</li>
+</ul>
+<p><strong>主论点 3 — 资产负债表干净，但靠持续稀释维系；治理集中是结构性折价项。</strong></p>
+<ul>
+<li>证据：零债务 + $78M 现金（§8）；但 SV 股 3 年增至 3.1 倍 + ATM $200M（§14）；Amar 父子控盘 + 双层股权 + 高管薪酬 3.8x 暴增 + BTC 计酬（§16）。</li>
+<li>反方：零债务使其在 crypto/AI 寒冬中比高杠杆同业更抗打。</li>
+<li>我的反驳：抗打成立，但代价是现有股东被持续稀释，且治理集中度高——是「干净的资产负债表 + 不便宜的治理」。</li>
+</ul>
+<hr />
+<h2 id="19-悬而未决问题保留诚实">19. 悬而未决问题（保留诚实）</h2>
+<ol type="1">
+<li>⭐ <strong>USDC「出售 49%」到底是什么？</strong> 10-K Note 3 写「divested 49%」，Subsequent Events 又称只是「restructuring/澄清」保留 51%。<strong>买方是谁？是否收到对价？是否关联方？</strong> 这是 10-K 最大歧义，直击 AI 转型经济性。</li>
+<li><strong>是否已有任何具约束力的 AI/HPC 客户合同？</strong> 还是只有 Super Micro/NVIDIA 供货关系？</li>
+<li><strong>量化客户集中度未披露</strong>：现 ~$17.5M 托管收入里最大客户占比多少？</li>
+<li><strong>IFRS→GAAP 对账桥 + ASU 2023-08 累积影响</strong>未量化披露 → 待查。</li>
+<li><strong>material weakness 修复的持久性</strong>：无 404(b) 审计，新业务扩张下控制能否扛住？</li>
+<li><strong>加密托管风险</strong>：为何 100% BTC 转入单一 Gemini 热钱包（逆转此前冷热混合）？保险 $125M 是否够？</li>
+<li><strong>跑道 vs 烧钱</strong>：AI 建设烧钱速率多少？AI 收入到来前会消耗多少 ATM 容量？</li>
+<li><strong>最新持股/薪酬</strong>：DEF 14A 2026 尚未申报，Amar 家族稀释后经济持股 % 待查。</li>
+</ol>
+<hr />
+<h2 id="20-复盘附录来源索引--覆盖率自检">20. 复盘附录（来源索引 + 覆盖率自检）</h2>
+<p><strong>一手来源完整索引（全部带链接）：</strong></p>
+<ul>
+<li>FY2025 10-K：<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390026037677/ea0283764-10k_digipower.htm">https://www.sec.gov/Archives/edgar/data/1854368/000121390026037677/ea0283764-10k_digipower.htm</a></li>
+<li>Q1-2026 10-Q：<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390026057115/ea0290525-10q_digipower.htm">https://www.sec.gov/Archives/edgar/data/1854368/000121390026057115/ea0290525-10q_digipower.htm</a></li>
+<li>FY2024 20-F：<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390025025829/ea0236201-20f_digipower.htm">https://www.sec.gov/Archives/edgar/data/1854368/000121390025025829/ea0236201-20f_digipower.htm</a></li>
+<li>FY2023&amp;2022 重述财报 6-K/A：<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390025020789/">https://www.sec.gov/Archives/edgar/data/1854368/000121390025020789/</a></li>
+<li>10-K/A FY2025：<a href="https://www.sec.gov/Archives/edgar/data/1854368/000121390026050340/ea0288276-10ka1_digipower.htm">https://www.sec.gov/Archives/edgar/data/1854368/000121390026050340/ea0288276-10ka1_digipower.htm</a></li>
+<li>本地全文与图表转写：<a href="../DGXX_SEC_filings/README.md"><code>../DGXX_SEC_filings/</code></a></li>
+</ul>
+<p><strong>覆盖率自检：</strong> 周期/财务报告 7/7 精读；116 filings 全量索引；DEF 14A 2026 未申报（待查）。</p>
+<p><strong>复盘教训：</strong></p>
+<ul>
+<li>第一次差点把 FY2024 当成单一净亏损——cross-check 抓到 IFRS/GAAP 双版本，避免 trend 失真。</li>
+<li>reported 巨亏的「叙事」被剥离测试推翻，回到「让数据说话」（数据：经营亏损其实持平）。</li>
+<li>deck 的乐观估值（$5.11B SOTP）与三表（净亏 $28M、AI 收入 $0）反差极大——典型「叙事先行 vs 数据后验」，本报告以三表为锚。</li>
+</ul>
+<hr />
+<h2 id="white_check_mark-step-8-自审-review完工判定">✅ Step 8 自审 Review（完工判定）</h2>
+<ul>
+<li><strong>A 流程完整性</strong>：Phase 0.1/0.2 ✅；Step 1–7 ✅；Step 8 ✅；<strong>Step 9（科普长文）/10（发布）⏸ 待用户确认</strong>（已在账本如实标注，未强行打勾）。</li>
+<li><strong>B 模板调用</strong>：00/05/14/15/16/10/13 结构均已落入对应章节；填不出项写「待查」未删。</li>
+<li><strong>C 十条铁律</strong>：①来源+链接 ✅；②单位统一+常识自检 ✅（§3）；③会计政策(§10)先于解读 ✅；④5W(§6) ✅；⑤数据不足走优先级链+标待查 ✅；⑥逐年变更三类(§11) ✅；⑦全量并行精读+覆盖率 ✅；⑧每数字 cross-check（IFRS/GAAP、跨表勾稽、deck vs SEC）✅、单位写全 ✅；⑨术语三件套+产业链(§4) ✅；⑩每主要章节配图(Mermaid×7) ✅。</li>
+<li><strong>D 跨表勾稽</strong>：期末现金=BS 现金 ✅；段收入和=合并 ✅；专题数字对三表 ✅；YoY 解释 reported 异常 ✅。</li>
+<li><strong>E 输出形态</strong>：含 0–20 节 ✅；图文结合 ✅；免责声明 ✅；科普版 ⏸；发布 ⏸。</li>
+</ul>
+<p><strong>判定</strong>：严谨报告（用户明确所求「详实报告」）<strong>✅ 完成可输出</strong>；Step 9/10 作为可选附加，待用户确认后接力。</p>
+<hr />
+<p><em>本报告基于 SEC 公开文件，仅供学习研究，不构成投资建议。</em></p>
+</main>
+<footer>本页基于 SEC 公开 filing，仅供学习研究，不构成投资建议。来源：SEC EDGAR CIK 1854368。</footer>
+</body></html>
