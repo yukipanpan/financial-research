@@ -47,6 +47,7 @@ MUST_CONTAIN = {
     "25_contracts_valuation.md": ["Cerebras", "SubQ", "ASC 842"],
     "REPORT.md": ["Cerebras", "SubQ"],
     "18_plain_explainer.md": ["Cerebras", "SubQ"],
+    "26_latest_developments.md": ["Vera Rubin", "Cerebras"],
 }
 
 
