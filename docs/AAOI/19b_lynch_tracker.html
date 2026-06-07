@@ -1,0 +1,365 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/style.css"><title>📅 Lynch 季度复查跟踪表（故事是否成立） · AAOI</title>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+</script></head><body><main><p class="nav"><a href="index.html">🏠 AAOI 首页</a> · <a href="report.html">📊 整合报告</a> · <a href="CHANGELOG.html">📜 更新日志</a></p><p class="meta">数据截止：FY2025 10-K + Q1-2026 10-Q + 2026-06-05 8-K (年度股东大会)　·　最后更新：2026-06-07　·　版本：v2.4　·　来源：SEC EDGAR</p><h1
+id="aaoi--peter-lynch-季度复查跟踪表quarterly-story-validity-tracker">AAOI
+× Peter Lynch 季度复查跟踪表（Quarterly Story-Validity Tracker）</h1>
+<blockquote>
+<p>Lynch
+第二纪律：<strong>每季只问一个问题——"故事还成立吗？"</strong>，不看股价、不设目标价（"水草理论"：不要因为股价跌就卖）。
+本表把 <code>19_peter_lynch_analysis.md</code>
+里"故事成立的三条关键证据"做成可每季滚动更新的仪表盘。 数据来源：每期
+10-Q / 10-K（★ SEC 直接披露）；比率为 ◆
+计算。<strong>不构成投资建议。</strong> 最后更新：2026-06-07 ·
+数据截止：FY2025 10-K + Q1-2026 10-Q</p>
+</blockquote>
+<hr />
+<h2 id="0-三条证据--三个故事成立的必要条件">0. 三条证据 =
+三个"故事成立"的必要条件</h2>
+<p>Lynch 框架下，AAOI
+的多头故事要成立，必须同时看到这三件事往好的方向走。任何一条持续恶化 =
+故事出洞。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>证据</th>
+<th>它在验证什么</th>
+<th>✅ 故事成立（看到这个）</th>
+<th>🔴 故事破（看到这个）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><strong>经营亏损率</strong>（Op Loss / Rev）</td>
+<td>规模效应到底跑没跑通（能否走向盈利）</td>
+<td>逐季收窄并趋近转正</td>
+<td>停滞在负值或再度走阔</td>
+</tr>
+<tr>
+<td>B</td>
+<td><strong>应收周转天数 DSO</strong>（尤其 Digicomm）</td>
+<td>增长是真需求还是"供应商融资"堆出来的</td>
+<td>DSO 回落、Digicomm 账期收敛</td>
+<td>DSO 持续拉长（周期见顶/坏账前兆）</td>
+</tr>
+<tr>
+<td>C</td>
+<td><strong>Amazon 权证 vesting</strong></td>
+<td>"$40 亿大单"从故事变现金的进度</td>
+<td>表现归属股开始 vest、Amazon 进 &gt;10% 客户表</td>
+<td>长期 0 vest（纯期权，故事不兑现）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-经营亏损率证据-a-op-loss---比率">1. 经营亏损率（证据 A）★ Op
+Loss / ◆ 比率</h2>
+<table>
+<thead>
+<tr>
+<th>季度</th>
+<th style="text-align: right;">营收 $M ★</th>
+<th style="text-align: right;">经营亏损 $M ★</th>
+<th style="text-align: right;">经营亏损率 ◆</th>
+<th>趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024Q1</td>
+<td style="text-align: right;">40.7</td>
+<td style="text-align: right;">(21.6)</td>
+<td style="text-align: right;">−53.1%</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2024Q2</td>
+<td style="text-align: right;">43.3</td>
+<td style="text-align: right;">(26.2)</td>
+<td style="text-align: right;">−60.5%</td>
+<td>🔴 谷底</td>
+</tr>
+<tr>
+<td>2024Q3</td>
+<td style="text-align: right;">65.2</td>
+<td style="text-align: right;">(16.5)</td>
+<td style="text-align: right;">−25.3%</td>
+<td>↑ 改善</td>
+</tr>
+<tr>
+<td>2025Q1</td>
+<td style="text-align: right;">99.9</td>
+<td style="text-align: right;">(8.9)</td>
+<td style="text-align: right;"><strong>−8.9%</strong></td>
+<td>↑ 改善</td>
+</tr>
+<tr>
+<td>2025Q2</td>
+<td style="text-align: right;">103.0</td>
+<td style="text-align: right;">(16.0)</td>
+<td style="text-align: right;">−15.5%</td>
+<td>↓ 回吐</td>
+</tr>
+<tr>
+<td>2025Q3</td>
+<td style="text-align: right;">118.6</td>
+<td style="text-align: right;">(18.2)</td>
+<td style="text-align: right;">−15.3%</td>
+<td>→ 持平</td>
+</tr>
+<tr>
+<td>2026Q1</td>
+<td style="text-align: right;">151.1</td>
+<td style="text-align: right;">(13.0)</td>
+<td style="text-align: right;"><strong>−8.6%</strong></td>
+<td>↑ 改善</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lynch 读法</strong>：从 −60% 谷底大幅收窄到 −9%
+区间，<strong>方向对</strong>；但<strong>仍为负、且不平滑</strong>（25Q1
+触及 −8.9% 后又回吐到 −15%，研发/管理费随营收同步膨胀吃掉了规模红利）。
+<strong>当前判定：🟡 改善中但未证实</strong>——故事 A
+尚未成立（需看到连续两季继续收窄并逼近 0）。</p>
+<hr />
+<h2 id="2-应收周转天数-dso证据-b--ar--营收--91">2. 应收周转天数
+DSO（证据 B）◆ = AR / 营收 × 91</h2>
+<table>
+<thead>
+<tr>
+<th>季度</th>
+<th style="text-align: right;">应收 AR $M ★</th>
+<th style="text-align: right;">营收 $M ★</th>
+<th style="text-align: right;">混合 DSO ◆</th>
+<th>Digicomm 专项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024Q1</td>
+<td style="text-align: right;">57.5</td>
+<td style="text-align: right;">40.7</td>
+<td style="text-align: right;">129 天</td>
+<td>未单独披露</td>
+</tr>
+<tr>
+<td>2024Q2</td>
+<td style="text-align: right;">57.7</td>
+<td style="text-align: right;">43.3</td>
+<td style="text-align: right;">121 天</td>
+<td>未单独披露</td>
+</tr>
+<tr>
+<td>2024Q3</td>
+<td style="text-align: right;">75.2</td>
+<td style="text-align: right;">65.2</td>
+<td style="text-align: right;">105 天</td>
+<td>未单独披露</td>
+</tr>
+<tr>
+<td>2025Q1</td>
+<td style="text-align: right;">171.1</td>
+<td style="text-align: right;">99.9</td>
+<td style="text-align: right;">156 天</td>
+<td>未单独披露</td>
+</tr>
+<tr>
+<td>2025Q2</td>
+<td style="text-align: right;">211.5</td>
+<td style="text-align: right;">103.0</td>
+<td style="text-align: right;">187 天</td>
+<td>未单独披露</td>
+</tr>
+<tr>
+<td>2025Q3</td>
+<td style="text-align: right;">224.0</td>
+<td style="text-align: right;">118.6</td>
+<td style="text-align: right;">172 天</td>
+<td>未单独披露</td>
+</tr>
+<tr>
+<td>2026Q1</td>
+<td style="text-align: right;">299.0</td>
+<td style="text-align: right;">151.1</td>
+<td style="text-align: right;"><strong>180 天</strong></td>
+<td><strong>Digicomm 应收 $222.7M = 74.5% 总应收；专项 DSO ~304
+天</strong> ★</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lynch 读法</strong>：DSO 从 2024 年的 ~105–130
+天<strong>结构性抬升到 156–187 天</strong>，且最大客户 Digicomm 被给予
+~304 天超长账期——这正是 Lynch
+周期股的<strong>见顶/坏账前兆信号</strong>（"库存堆积 / DSO
+拉长"）。增长有相当部分是用资产负债表给经销商"供应商融资"换来的。
+<strong>当前判定：🔴 恶化——这是三条里最弱的一条</strong>，故事 B
+不成立，需重点盯 Digicomm 账期是否收敛、是否出现坏账计提。</p>
+<hr />
+<h2 id="3-amazon-权证-vesting证据-c">3. Amazon 权证 Vesting（证据
+C）★</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>截至 2026Q1 状态 ★</th>
+<th>触发线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初始可行权股</td>
+<td>1,324,233 股（发行时一次性）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>表现归属股已 vest</strong></td>
+<td><strong>0 / 6,621,166 股</strong></td>
+<td>随 Amazon 累计采购至 <strong>$4.0 billion</strong>（= $4,000
+million）逐步解锁</td>
+</tr>
+<tr>
+<td>Amazon 累计采购（推断）</td>
+<td>▽ ~<span
+class="math inline">71<em>m</em><em>i</em><em>l</em><em>l</em><em>i</em><em>o</em><em>n</em>（<em>F</em><em>Y</em>25 </span>33.1M
++ Q1-26 ~$38M）</td>
+<td>不足触发线的 <strong>2%</strong></td>
+</tr>
+<tr>
+<td>Amazon 是否进 &gt;10% 客户表</td>
+<td><strong>否</strong> ★</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lynch
+读法</strong>：典型"<strong>将会成功</strong>"而非"已经成功"。$40 亿/794
+万股几乎全是未兑现期权。 <strong>当前判定：🟡 未兑现</strong>——故事 C
+尚未成立；关键看后续季报是否出现"第二批权证开始 vest"或 Amazon 首次进入
+&gt;10% 客户名单。</p>
+<hr />
+<h2 id="4-综合判定本季">4. 综合判定（本季）</h2>
+<table>
+<thead>
+<tr>
+<th>证据</th>
+<th>方向</th>
+<th>故事成立？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 经营亏损率</td>
+<td>🟡 改善但未转正、不平滑</td>
+<td>未证实</td>
+</tr>
+<tr>
+<td>B Digicomm DSO</td>
+<td>🔴 恶化（180 天 / Digicomm 304 天）</td>
+<td><strong>否</strong></td>
+</tr>
+<tr>
+<td>C Amazon vesting</td>
+<td>🟡 0 兑现</td>
+<td>未证实</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lynch
+式结论（2026Q1）</strong>：多头故事<strong>整体尚未证实，且有一条（DSO）在恶化</strong>。按
+Lynch 纪律，这不是"故事已破"（A 在改善、公司死不了、CEO
+净买入），但也远未到"故事坐实"——<strong>继续放观察名单，等下季三条同时给出方向</strong>。不因股价涨跌做动作，只跟故事。</p>
+<hr />
+<h2 id="5-下一季待填模板2026q2预计-2026-08-出-10-q">5.
+下一季待填模板（2026Q2，预计 2026-08 出 10-Q）</h2>
+<p>复查时只需填这一行（数字来源：新 10-Q 利润表 + 资产负债表 +
+可转债/权证 Note）：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>2026Q1（上期）</th>
+<th><strong>2026Q2（待填）</strong></th>
+<th>取数位置（10-Q）</th>
+<th>判定规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收 $M</td>
+<td>151.1</td>
+<td>____</td>
+<td>利润表 Revenue</td>
+<td>—</td>
+</tr>
+<tr>
+<td>经营亏损 $M</td>
+<td>(13.0)</td>
+<td>____</td>
+<td>利润表 Loss from operations</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>经营亏损率</strong> ◆</td>
+<td>−8.6%</td>
+<td>____%</td>
+<td>= 经营亏损/营收</td>
+<td>较上期收窄=✅；走阔=🔴</td>
+</tr>
+<tr>
+<td>应收 AR $M</td>
+<td>299.0</td>
+<td>____</td>
+<td>资产负债表 Accounts receivable</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>混合 DSO</strong> ◆</td>
+<td>180 天</td>
+<td>____ 天</td>
+<td>= AR/营收×91</td>
+<td>较上期下降=✅；上升=🔴</td>
+</tr>
+<tr>
+<td>Digicomm 应收 $M</td>
+<td>222.7</td>
+<td>____</td>
+<td>10-Q 客户集中度 Note</td>
+<td>占比下降=✅</td>
+</tr>
+<tr>
+<td><strong>Amazon 已 vest 股</strong></td>
+<td>0 / 6.62M</td>
+<td>____</td>
+<td>权证 Note（warrant）</td>
+<td>&gt;0 首次=✅ 重大里程碑</td>
+</tr>
+<tr>
+<td>坏账计提 $M</td>
+<td>~0</td>
+<td>____</td>
+<td>信用损失准备 Note</td>
+<td>大幅上升=🔴</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>填完后更新本表 §1–4 的最新行 + §4 综合判定 + 站点 CHANGELOG，commit
+&amp; push（增量更新流程）。</p>
+</blockquote>
+<hr />
+<h2 id="6-更新操作一次性记住">6. 更新操作（一次性记住）</h2>
+<pre><code>1. 新 10-Q 落地 → 拉取（fetch_filing_content.py）
+2. 抠四个数：营收、经营亏损、应收、Digicomm应收 + 查 warrant Note 的 vest 进度
+3. 填 §5 模板行 → 把该行并入 §1/§2/§3 历史表 → 重写 §4 综合判定
+4. 重建站点（build_site.py，本表已在 PAGES）→ clone 仓库 → 覆盖 docs/AAOI → push
+5. 更新 CHANGELOG 与页眉&quot;数据截止/版本&quot;</code></pre>
+<p><em>免责声明：本表基于 SEC 公开文件，纯属学习研究，依 Peter Lynch
+方法论只跟踪"故事是否成立"，不构成投资建议、不设目标价、不因股价涨跌建议买卖。</em></p>
+<p class="disc">免责声明：本文基于 SEC EDGAR 公开文件，纯属个人学习研究，不构成任何投资建议。
+来源标注 ★SEC直接披露 ◆公式计算 ◇第三方 ▽推算。数据可能过时，请以最新 filing 为准。</p>
+</main></body></html>
