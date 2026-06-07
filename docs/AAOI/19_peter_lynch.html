@@ -1,0 +1,339 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/style.css"><title>🎯 Peter Lynch 视角：六类/13准则/两分钟独白 · AAOI</title>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({startOnLoad:true,theme:'neutral'});
+</script></head><body><main><p class="nav"><a href="index.html">🏠 AAOI 首页</a> · <a href="report.html">📊 整合报告</a> · <a href="CHANGELOG.html">📜 更新日志</a></p><p class="meta">数据截止：FY2025 10-K + Q1-2026 10-Q + 2026-06-05 8-K (年度股东大会)　·　最后更新：2026-06-07　·　版本：v2.3　·　来源：SEC EDGAR</p><h1 id="aaoi--peter-lynch-方法论分析">AAOI × Peter Lynch 方法论分析</h1>
+<blockquote>
+<p>用彼得·林奇（Peter Lynch）的方法论框架，基于已建的 AAOI SEC
+研究档案（data/research/AAOI/ + <a
+href="https://yukipanpan.github.io/financial-research/AAOI/）重走一遍。">https://yukipanpan.github.io/financial-research/AAOI/）重走一遍。</a>
+步骤：分类 → 13 条选股准则 → PEG/财务硬约束 → 两分钟独白 →
+分类卖出信号。 <strong>边界：本文是 Lynch
+框架下的研究笔记，不构成投资建议、不设目标价（Lynch
+本人也不设目标价，只设卖出触发器）。</strong> 数据来源沿用 ★SEC直接披露
+◆计算 ◇第三方 ▽推断。</p>
+</blockquote>
+<hr />
+<h2 id="warning-开场最重要的一句话lynch-式祛魅">⚠️
+开场最重要的一句话（Lynch 式祛魅）</h2>
+<p>Lynch 的 PEG/13
+准则体系是为<strong>有盈利历史的实业公司</strong>设计的。AAOI
+<strong>连续 8 年经营亏损（FY2018–FY2025）</strong>、当前无正盈利 →
+<strong>PEG 无法计算、PE 失效</strong>。这本身就是 Lynch
+框架给出的第一个警告信号：一家用"PEG
+估值法"根本套不进去的"快速增长股"，要么是周期股、要么是故事股，<strong>通常不在
+Lynch 的能力圈内</strong>。下面逐步说明为什么。</p>
+<hr />
+<h2 id="step-1分类--它是-lynch-六类里的哪一类">Step 1：分类 —— 它是
+Lynch 六类里的哪一类？</h2>
+<p>Lynch 第一纪律："不分类就不能分析。" AAOI 难归类，正是问题所在：</p>
+<table>
+<thead>
+<tr>
+<th>候选类型</th>
+<th>像不像？</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>快速增长型</td>
+<td><strong>表面像</strong></td>
+<td>营收 FY2025 +83%、Q1-2026 +51% ★</td>
+</tr>
+<tr>
+<td>周期型</td>
+<td><strong>骨子里更像</strong></td>
+<td>2016→2017 营收 <span class="math inline">261<em>M</em>→</span>382M
+暴涨、净利 <span class="math inline">31<em>M</em>→</span>74M，随后
+2018–2024 连年亏损；现又靠
+CATV(DOCSIS)+数据中心两个<strong>资本开支周期</strong>回升 ★</td>
+</tr>
+<tr>
+<td>困境反转型</td>
+<td><strong>有色彩</strong></td>
+<td>前几年濒临边缘、靠可转债重组与增发续命，是"bail-us-out by capital
+markets"式自救 ★</td>
+</tr>
+<tr>
+<td>稳定增长/缓慢增长/隐蔽资产</td>
+<td>否</td>
+<td>无稳定盈利、无股息、无隐蔽资产</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lynch 式结论</strong>：AAOI 是一只**"披着快速增长外衣的周期股
++ 故事股"<strong>。最像
+<strong>周期型（Cyclical）</strong>——理由是它的盈利不是平滑复利，而是随
+2017 一轮、2025 一轮的</strong>行业资本开支周期**剧烈起落（EPS
+像"测谎仪曲线"，正是 Lynch 对周期股的描述）。</p>
+<blockquote>
+<p>关键含义：<strong>周期股不能用当期高增速去线性外推</strong>。用对待快速增长股的方式对待周期股，是
+Lynch 说的"最常见也最致命的错误"。2017
+年买在数据中心周期顶的人，随后吃了 7 年熊市——这是 AAOI
+自己的历史教训。</p>
+</blockquote>
+<hr />
+<h2 id="step-213-条选股准则打分">Step 2：13 条选股准则打分</h2>
+<p>逐条对照（✓ 满足 / △ 部分 / ✗ 不满足）：</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>准则</th>
+<th>判定</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>名字枯燥可笑</td>
+<td>△</td>
+<td>"Applied Optoelectronics"
+技术味、不算花哨，但也不可笑；如今被贴上"AI 光模块"性感标签</td>
+</tr>
+<tr>
+<td>2</td>
+<td>业务枯燥</td>
+<td>✗</td>
+<td>光模块现在是 AI 最热赛道之一，远非"无聊"——Lynch
+警告：性感业务招来大量竞争者</td>
+</tr>
+<tr>
+<td>3</td>
+<td>业务令人厌恶</td>
+<td>✗</td>
+<td>否</td>
+</tr>
+<tr>
+<td>4</td>
+<td>从母公司分拆</td>
+<td>✗</td>
+<td>否，独立 IPO</td>
+</tr>
+<tr>
+<td>5</td>
+<td>机构不持股/分析师不追踪</td>
+<td>✗✗</td>
+<td><strong>反向</strong>：机构密集（Jane Street、D.E. Shaw、Citadel
+量化主导）、卖方覆盖多 ★ 24号档案——没有"被忽视"红利</td>
+</tr>
+<tr>
+<td>6</td>
+<td>被谣言包围</td>
+<td>△</td>
+<td>历史上有高空头、做空报告，但当前更多是利好叙事</td>
+</tr>
+<tr>
+<td>7</td>
+<td>业务令人压抑</td>
+<td>✗</td>
+<td>否</td>
+</tr>
+<tr>
+<td>8</td>
+<td>处于零增长行业</td>
+<td>✗</td>
+<td><strong>反向</strong>：光通信是高增长行业——Lynch
+偏爱零增长行业（龙头吃份额、不招竞争者），AAOI 恰相反</td>
+</tr>
+<tr>
+<td>9</td>
+<td>有利基/护城河</td>
+<td>△</td>
+<td>垂直整合（自产激光芯片）是结构性差异化，但<strong>毛利率 30% 低于
+Coherent ~35%</strong>，未转化为定价权 ◆ 10号档案</td>
+</tr>
+<tr>
+<td>10</td>
+<td>重复消费</td>
+<td>△</td>
+<td>客户会复购，但属<strong>资本开支驱动的批量订单</strong>，非快消式刚需，且高度依赖少数客户的采购周期</td>
+</tr>
+<tr>
+<td>11</td>
+<td>高科技产品的<strong>用户</strong>而非生产者</td>
+<td>✗✗</td>
+<td><strong>直接违反</strong>：AAOI
+是高科技产品的<strong>生产者</strong>，处在价格战、技术迭代快的环节——Lynch
+明确说"买因技术变便宜而受益的用户，别买打价格战的生产者"</td>
+</tr>
+<tr>
+<td>12</td>
+<td>内部人买入</td>
+<td>△</td>
+<td><strong>亮点</strong>：CEO Thompson Lin
+近期为赠与/转让非卖出、且历史上是公开市场净买入者
+★；但整体内部人净卖出，董事 Chen 刚于 $201 卖出 8,247 股</td>
+</tr>
+<tr>
+<td>13</td>
+<td>回购股票</td>
+<td>✗✗</td>
+<td><strong>强烈反向</strong>：不仅不回购，反而<strong>两年增发稀释
++176%</strong>（28.6M→79.0M 股）、ATM 额度升至 $600M ★ 23号档案</td>
+</tr>
+</tbody>
+</table>
+<p><strong>得分：约 1.5 / 13（满足 ~1 条，部分 ~4 条）。</strong> Lynch
+门槛是 ≥5–7 条。</p>
+<p><strong>两条最刺眼的 Lynch 红旗</strong>：</p>
+<ul>
+<li><strong>第 11
+条</strong>：它是价格战行业里的<strong>生产者</strong>（Lynch
+最不爱的位置）。</li>
+<li><strong>第 13 条</strong>：它在<strong>大幅稀释</strong>（Lynch
+最看重的回报股东方式的反面）。</li>
+</ul>
+<hr />
+<h2 id="step-3财务硬约束peg--每股净现金--现金负债">Step
+3：财务硬约束（PEG / 每股净现金 / 现金负债）</h2>
+<h3 id="peg--x-无法计算">PEG —— ❌ 无法计算</h3>
+<ul>
+<li>PEG = PE / 增速；AAOI <strong>无正盈利 → 无 PE → PEG
+失效</strong>。◆</li>
+<li>Lynch 规则：PEG 不适用于"困境反转型/周期谷底/无盈利"公司。AAOI
+同时占了"无盈利"和"周期"两条 → <strong>PEG
+框架在此明确不可用</strong>，这正是 Lynch
+会"放下这只票"的技术原因之一。</li>
+</ul>
+<h3 id="每股净现金lynch-最看重的死不死得了指标">每股净现金（Lynch
+最看重的"死不死得了"指标）</h3>
+<p>◆ 计算（这是计算得出的）：</p>
+<ul>
+<li>现金及等价物 $206.1 million（FY2025末）★；后 Q1-2026 升至 $439.7
+million ★（增发所得）</li>
+<li>减：可转债 $125.0 million（= $0.125 billion）2030 Notes ★</li>
+<li>→ 净现金为正，<strong>短期不会"死"</strong>（活得下去）——这点 Lynch
+会给通过。</li>
+<li>但代价是：靠<strong>持续增发</strong>维持现金（三年累计 FCF −$484
+million ◆），不是靠经营造血。Lynch 对"靠资本市场输血的增长"评价低。</li>
+</ul>
+<h3 id="lynch-反-pe-规则周期股专用">Lynch 反 PE 规则（周期股专用）</h3>
+<ul>
+<li>既然归为周期股，Lynch 会提醒：<strong>周期股要在"行业最坏、PE
+高（或亏损）"时买，在"盈利达峰、PE 低"时卖</strong>。AAOI 当前处在
+CATV+数据中心双周期<strong>上行段</strong>，不是底部——按 Lynch
+周期纪律，这不是他偏好的"周期底部"买点。</li>
+</ul>
+<hr />
+<h2 id="step-4两分钟独白lynch-终极测试讲不顺--不能买">Step
+4：两分钟独白（Lynch 终极测试：讲不顺 = 不能买）</h2>
+<p>按"周期型 + 快速增长"混合模板尝试朗读：</p>
+<blockquote>
+<p><strong>段 1（买入理由）</strong>：我关注 AAOI
+因为它是一只<strong>周期股</strong>（光通信资本开支周期），当前营收高速增长（+83%），吸引点是
+AI 数据中心 800G 放量 + 有线电视 DOCSIS 4.0 升级…… ⛔
+<strong>第一处卡壳</strong>：当前 PE = 无（亏损）、PEG = 无 →
+我<strong>无法说出它便宜还是贵</strong>。</p>
+</blockquote>
+<blockquote>
+<p><strong>段 2（成功条件）</strong>：未来 12–36 个月要涨，靠 5
+增收路径里的"开发新市场（AI 数据中心）"+"卖更多到现有市场（CATV）"…… ⛔
+<strong>第二处卡壳</strong>：增长高度依赖**单一经销商 Digicomm（占收入
+53%、占应收 74.5%）**和少数
+hyperscaler——这不是"可复制商业模式"，是"客户集中度押注"。而且经营仍亏损，<strong>看不到通往盈利的清晰路径</strong>（营收翻倍下经营亏损率才到
+−12%）。</p>
+</blockquote>
+<blockquote>
+<p><strong>段 3（已成功 vs 将成功）</strong>：被市场当卖点的"亚马逊 $40
+亿大单"…… ⛔ <strong>第三处卡壳</strong>：按 Lynch "已经成功 vs
+将会成功"判别——<strong>亚马逊实际采购不到触发线的 2%、794
+万股权证表现部分 0 股 vested</strong> ★ 15号档案 →
+这是典型的"<strong>将会成功</strong>"故事股溢价，不是"已经发生的现金流"。</p>
+</blockquote>
+<p><strong>独白结论：三段全部卡壳。</strong> Lynch
+的判定很直接——<strong>讲不顺 = 故事有洞 =
+不买</strong>。三个洞分别是：估值无法定价、增长靠客户集中度押注、核心利好是未兑现期权。</p>
+<hr />
+<h2 id="step-5分类卖出信号若已持有按周期股纪律盯">Step
+5：分类卖出信号（若已持有，按"周期股"纪律盯）</h2>
+<p>Lynch 周期股 + 故事股的卖出触发器，对照 AAOI 当前可观察指标：</p>
+<table>
+<thead>
+<tr>
+<th>Lynch 卖出信号（周期/故事股）</th>
+<th>AAOI 当前状态</th>
+<th>警示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>库存堆积 / DSO 拉长</strong>（周期见顶前兆）</td>
+<td><strong>DSO 已达 180 天，Digicomm 单独 ~304 天</strong>；存货 $206M
+◆</td>
+<td>🔴 已亮</td>
+</tr>
+<tr>
+<td>行业新一轮产能扩张</td>
+<td>AAOI 自己 Capex/营收 39%（同业 5×）疯狂扩产</td>
+<td>🟡 自身即在扩产端</td>
+</tr>
+<tr>
+<td>媒体大量正面报道（"火热的 AI 光模块"）</td>
+<td>当前正是叙事高峰</td>
+<td>🟡</td>
+</tr>
+<tr>
+<td>故事股：核心利好被证伪/迟迟不兑现</td>
+<td>亚马逊 $4B 兑现 &lt;2%</td>
+<td>🟡 盯第二批权证是否 vest</td>
+</tr>
+<tr>
+<td>创始人/灵魂人物离任</td>
+<td>无离任；CEO 仍在且近期未卖出</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>增发/稀释加剧（回购的反面）</td>
+<td>ATM 持续、$600M 额度</td>
+<td>🔴 持续稀释</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Lynch
+提醒：<strong>不要因为股价跌就卖（水草理论）</strong>，只看"故事是否还成立"。对
+AAOI，故事成立的关键证据是：① 经营亏损率持续收窄→转正；② Digicomm DSO
+不再拉长；③ 亚马逊第二批权证开始 vest（$4B
+故事从期权变现金）。任一持续恶化 = 故事破。</p>
+</blockquote>
+<hr />
+<h2 id="总结lynch-会怎么看-aaoi">总结：Lynch 会怎么看 AAOI？</h2>
+<p><strong>一句话</strong>：AAOI 是一只**"披着 AI 快速增长外衣的周期股 +
+故事股"<strong>，13 条准则只满足 ~1.5 条，PEG
+因无盈利而失效，两分钟独白三段全卡壳，且</strong>同时违反 Lynch
+最在意的两条**——它是价格战行业的<strong>生产者</strong>（第 11
+条），且在<strong>大幅稀释</strong>而非回购（第 13 条）。</p>
+<p><strong>Lynch
+大概率会"放下这只票"</strong>，归入他说的"超出能力圈/看不懂怎么定价"的一类，并给出他的经典告诫：</p>
+<ul>
+<li>"不要用对待快速增长股的方式对待周期股"——AAOI 的 2017
+暴涨暴跌就是前车之鉴。</li>
+<li>"只为已经发生的现金流付费，不为故事溢价"——亚马逊 $4B
+是故事，不是现金流。</li>
+<li>"回购是回报股东最好的方式"——而 AAOI 在反向操作（稀释）。</li>
+</ul>
+<p><strong>但 Lynch 不会全盘否定</strong>，他会承认两个真实亮点：①
+公司<strong>死不了</strong>（净现金为正）；② <strong>CEO
+是净买入者</strong>（第 12 条唯一的强信号）。在 Lynch
+框架里，这两点意味着"可以放进观察名单，等它要么证明能盈利（变真正的快速增长股）、要么跌到周期底部（反
+PE 规则买点）再说"——但<strong>现在不是 Lynch
+会出手的时点与类型</strong>。</p>
+<hr />
+<h2 id="与严谨财务报告的衔接">与严谨财务报告的衔接</h2>
+<ul>
+<li>本 Lynch 视角是对 <code>02_FINAL_REPORT.md</code>（严谨财务版）和
+<code>18_plain_explainer.md</code>（通俗科普版）的<strong>第三种棱镜</strong>：前者讲"财务事实"，后者讲"讲懂公司"，本文讲"一个传奇基金经理的选股纪律会怎么过滤它"。</li>
+<li>三者结论一致、互相印证：<strong>真实拐点 +
+结构性风险（客户集中、稀释、无盈利）并存；最特殊处是双巨头绑定但兑现未至。</strong></li>
+</ul>
+<p><em>免责声明：本文基于 SEC 公开文件与 Peter Lynch
+公开著作方法论，纯属学习研究，不构成任何投资建议。Lynch
+框架本身不提供目标价。请独立判断并咨询持牌顾问。</em></p>
+<p class="disc">免责声明：本文基于 SEC EDGAR 公开文件，纯属个人学习研究，不构成任何投资建议。
+来源标注 ★SEC直接披露 ◆公式计算 ◇第三方 ▽推算。数据可能过时，请以最新 filing 为准。</p>
+</main></body></html>
